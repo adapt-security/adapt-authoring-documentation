@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Mono);
+
+#dark-mode {
+  position: fixed;
+  display: block;
+  z-index: 5000;
+  width: 40px;
+  text-align: center;
+  height: 36px;
+  background-color: var(--theme-color);
+  color: white;
+}
+#dark-mode i {
+  font-size: 24px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1, h2, h3, h4, h5, h6, 
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300 !important;
+}
+
+summary {
+  font-size: 1.15rem;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+i.material-icons {
+  top: 5px;
+  position: relative;
+}
+
+nav.app-nav {
+  margin-top: 15px;
+  color: white;
+}
+nav.app-nav a {
+  font-size: 14px;
+}
+nav.app-nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+section.cover {
+  background: linear-gradient(to left bottom, #00dd95 0%,#34bee0 100%) !important;
+  color: white;
+}
+section.cover h2 {
+  font-size: 70px;
+}
+section.cover .anchor span {
+  color: white;
+}
+section.cover .cover-main > p:last-child a,
+section.cover .cover-main > p:last-child a:last-child {
+  color: white;
+  border-color: white;
+  background: transparent;
+}
+section.cover .cover-main > p:last-child a:hover,
+  section.cover .cover-main > p:last-child a:last-child:hover {
+  background: white;
+  color: #34bee0;
+}
+
+.sidebar {
+  font-weight: bold;
+  width: 350px;
+}
+.sidebar ul li {
+  margin: 3px 10px;
+}
+.sidebar ul li a {
+  font-weight: normal;
+  font-size: 14px;
+}
+.sidebar ul.header {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.sidebar ul.header li {
+  margin-left: 0;
+}
+
+.sidebar .app-name {
+  margin-bottom: 25px;
+}
+.sidebar .app-name .logo {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+.sidebar h1.app-name {
+  font-size: 18px;
+}
+.sidebar .app-name h2 {
+  margin-top: 5px;
+}
+
+section.content {
+  left: 350px;
+}
+
+.markdown-section code,
+.token.boolean, 
+.token.function, 
+.token.keyword,
+.token.number {
+  color: #00dd95;
+}
+
+.markdown-section blockquote {
+  background: #e7fdf6;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border-top: 1px solid #92f2d3;
+  border-right: 1px solid #92f2d3;
+  border-bottom: 1px solid #92f2d3;
+  border-radius: 0 5px 5px 0;
+  border-left-color: #00dd95;
+}
+
+ul.toc {
+  margin-bottom: 3rem;
+}
+body.size-xl ul.toc {
+  columns: 4;
+}
+body.size-l ul.toc {
+  columns: 3;
+}
+body.size-m ul.toc {
+  columns: 2;
+}
+ul.toc > li {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  list-style-position: inside;
+}
+
+/**
+ * Navbar width
+ */
+ @media only screen and (min-width: 767px) {
+  .sidebar {
+    padding-left: 25px;
+  }
+}
+
+/**
+* Reusable schema styles
+*/
+.options {
+  padding-left: 15px;
+  border-left: 3px solid #00dd95;
+}
+.attribute {
+  margin-bottom: 15px;
+}
+.attribute .inner {
+  padding-left: 15px;
+}
+.attribute .title {
+  margin-bottom: 10px;
+}
+.attribute .title .main {
+  font-weight: bold;
+  font-size: 16px;
+}
+.attribute .description {
+  margin: 5px 0;
+}
+.attribute .default .label {
+  font-weight: bold;
+}
+.attribute .default pre {
+  display: inline;
+  padding: 0 5px;
+}
+.markdown-section table.schema {
+  margin-top: 25px;
+}
+.markdown-section table.schema pre {
+  padding: 0.25rem 1rem;
+  text-align: center;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.markdown-section .required {
+  font-weight: bold;
+}
+.markdown-section .desc {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.markdown-section .extension {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/**
+ * Dark mode overrides
+ */
+body.dark strong,
+body.dark em {
+  color: inherit;
+}
+
+body.dark .markdown-section tr:nth-child(2n) {
+  background-color: #606060;
+}
+
+body.dark .markdown-section blockquote {
+  background: #004a32;
+  color: inherit;
+}

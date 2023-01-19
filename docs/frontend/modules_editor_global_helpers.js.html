@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>modules/editor/global/helpers.js - Adapt authoring tool front-end documentation</title>
+    
+    <meta name="description" content="Adapt authoring tool front-end documentation" />
+    
+        <meta name="keywords" content="v1.0.0-rc.2" />
+        <meta name="keyword" content="v1.0.0-rc.2" />
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h2><a class="menu-title" ><img class="logo" src="assets/logo-colour.png" />Adapt authoring tool front-end documentation<br><span class="version">vundefined</span></a></h2><h2><a href="index.html" target="_self" class="menu-item" id="home_link" >Home</a></h2><h2><a href="https://www.adaptlearning.org/" target="_blank" class="menu-item" id="website_link" >Project Website</a></h2><h2><a href="https://community.adaptlearning.org/mod/forum/view.php?id=4" target="_blank" class="menu-item" id="forum_link" >Technical Discussion Forum</a></h2><h3>Classes</h3><ul><li><a href="ApiCollection.html">ApiCollection</a><ul class='methods'><li data-type='method' style='display: none;'><a href="ApiCollection.html#buildQuery">buildQuery</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#buildQueryParams">buildQueryParams</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#fetch">fetch</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#fetchNextPage">fetchNextPage</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#fetchPrevPage">fetchPrevPage</a></li></ul></li><li><a href="Origin.html">Origin</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Origin.html#hasInitialized">hasInitialized</a></li><li data-type='method' style='display: none;'><a href="Origin.html#initialize">initialize</a></li><li data-type='method' style='display: none;'><a href="Origin.html#loadUtilities">loadUtilities</a></li><li data-type='method' style='display: none;'><a href="Origin.html#removeViews">removeViews</a></li><li data-type='method' style='display: none;'><a href="Origin.html#tap">tap</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/editor/global/helpers.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>define(function(require) {
+  var Handlebars = require('handlebars');
+  var Origin = require('core/origin');
+
+  var Helpers = {
+    /**
+    * set the page title based on location
+    * expects backbone model
+    */
+    setPageTitle: function(model) {
+      getNearestPage(model, function(page) {
+        var data = {
+          model: model || {},
+          page: page,
+          langString: Origin.l10n.t('app.' + getLangKey())
+        };
+        Origin.trigger('location:title:update', {
+          breadcrumbs: generateBreadcrumbs(data),
+          title: getTitleForModel(data)
+        });
+      });
+    }
+  }
+
+  /**
+  * Private functons
+  */
+
+  function getType() {
+    return Origin.location.route2 || Origin.location.route1;
+  }
+
+  function getAction() {
+    if(Origin.location.route2 === 'component' &amp;&amp; Origin.location.route3 === 'new') {
+      return 'edit';
+    }
+    return Origin.location.route4;
+  }
+
+  function generateBreadcrumbs(data) {
+    var type = getType();
+    var action = getAction();
+    var isMenu = type === 'menu';
+    var isEditor = action === 'edit';
+    var crumbs = ['dashboard'];
+
+    if (!isMenu || isEditor) {
+      crumbs.push('course');
+    }
+    if (!isMenu &amp;&amp; isEditor) {
+      crumbs.push({
+        title: Origin.l10n.t('app.editorpage'),
+        url: '#/editor/' + data.page.get('_courseId') + '/page/' + data.page.get('_id')
+      });
+    }
+    crumbs.push({ title: data.langString });
+    return crumbs;
+  }
+
+  function getTitleForModel(data) {
+    var modelTitle = data.model.title || data.model.get &amp;&amp; data.model.get('title');
+    return modelTitle || Origin.editor.data.course.get('title');
+  }
+
+  function getLangKey() {
+    var type = getType();
+    var action = getAction();
+
+    if ((type === 'page' || type === 'menu') &amp;&amp; action === 'edit') {
+      return 'editorpagesettings';
+    }
+    return 'editor' + type;
+  }
+
+  function getNearestPage(model, cb) {
+    var _recurse = function(model) {
+      var type = model.get('_type');
+      
+      if(!type || type === 'course' || type === 'config') {
+        return cb(); // pages don't apply here, so just return
+      }
+      if (type === 'page' || type === 'menu') {
+        return cb(model); // we're at the top of the hierarchy
+      }
+      _recurse(Origin.editor.data.content.findWhere({ _id: model.get('_parentId') }));
+    };
+    // start recursion
+    _recurse(model);
+  }
+
+  function getComponentDisplayName(name) {
+    const plugin = Origin.editor.data.componentTypes.findWhere({ name });
+    return plugin ? plugin.get('displayName') : '';
+  }
+
+  Handlebars.registerHelper('getComponentDisplayName', getComponentDisplayName);
+
+  return Helpers;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Thu Jan 19 2023 16:46:59 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+    <link type="text/css" rel="stylesheet" href="styles/adapt.css">
+    
+    <script src="scripts/adapt.js"></script>
+    
+</body>
+</html>
