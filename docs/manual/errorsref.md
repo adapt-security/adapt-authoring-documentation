@@ -33,6 +33,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=CONTENTPLUGIN_INCOMPAT_FW">CONTENTPLUGIN_INCOMPAT_FW</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_INSTALL_FAILED">CONTENTPLUGIN_INSTALL_FAILED</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_INVALID_ZIP">CONTENTPLUGIN_INVALID_ZIP</a></li>
+<li><a href="#/errorsref?id=CONTENTPLUGIN_IN_USE">CONTENTPLUGIN_IN_USE</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_NEWER_INSTALLED">CONTENTPLUGIN_NEWER_INSTALLED</a></li>
 <li><a href="#/errorsref?id=COURSE_NOT_FOUND">COURSE_NOT_FOUND</a></li>
 <li><a href="#/errorsref?id=DESTROY_SESSION_FAIL">DESTROY_SESSION_FAIL</a></li>
@@ -59,7 +60,9 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=IMPORT_INVALID">IMPORT_INVALID</a></li>
 <li><a href="#/errorsref?id=IMPORT_PLUGINS_FAILED">IMPORT_PLUGINS_FAILED</a></li>
 <li><a href="#/errorsref?id=INCORRECT_PASSWORD">INCORRECT_PASSWORD</a></li>
+<li><a href="#/errorsref?id=INVALID_ASSET_URL">INVALID_ASSET_URL</a></li>
 <li><a href="#/errorsref?id=INVALID_COURSE">INVALID_COURSE</a></li>
+<li><a href="#/errorsref?id=INVALID_LOGIN_DETAILS">INVALID_LOGIN_DETAILS</a></li>
 <li><a href="#/errorsref?id=INVALID_OBJECTID">INVALID_OBJECTID</a></li>
 <li><a href="#/errorsref?id=INVALID_PARAMS">INVALID_PARAMS</a></li>
 <li><a href="#/errorsref?id=INVALID_PARENT">INVALID_PARENT</a></li>
@@ -133,6 +136,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `CONTENTPLUGIN_INCOMPAT_FW` | Plugin ${name}@${version} incompatible with installed framework (requires ${requiredFramework}, found ${installedFramework}) | 400 | <ul><li>`installedFramework`: Version of the framework which is installed</li><li>`name`: Name of content plugin</li><li>`requiredFramework`: Version of the framework which is required</li><li>`version`: Version of content plugin</li></ul> |
 | `CONTENTPLUGIN_INSTALL_FAILED` | Installation of plugins failed | 500 | <ul><li>`errors`: List of errors</li></ul> |
 | `CONTENTPLUGIN_INVALID_ZIP` | Invalid plugin data provided | 400 | <ul></ul> |
+| `CONTENTPLUGIN_IN_USE` | Content plugin is in use in existing courses | 400 | <ul><li>`courses`: List of courses using the content plugin</li></ul> |
 | `CONTENTPLUGIN_NEWER_INSTALLED` | Plugin ${name}@${newVersion} already exists at a higher version (${existingVersion}) | 400 | <ul><li>`existingVersion`: Installed version</li><li>`name`: Name of content plugin</li><li>`newVersion`: Version to install</li></ul> |
 | `COURSE_NOT_FOUND` | Requested course could not be found | 404 | <ul></ul> |
 | `DESTROY_SESSION_FAIL` | Failed to terminate user session | 500 | <ul><li>`error`: The error message</li></ul> |
@@ -159,8 +163,10 @@ Supplemental data can be used at the point that errors are translated to provide
 | `IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul></ul> |
 | `IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
 | `INCORRECT_PASSWORD` | Provided password does not match that stored | 401 | <ul></ul> |
+| `INVALID_ASSET_URL` | Invalid URL has been specified for external asset | 400 | <ul><li>`url`: The asset URL</li></ul> |
 | `INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
-| `INVALID_OBJECTID` | Not a valid ObjectId | 400 | <ul></ul> |
+| `INVALID_LOGIN_DETAILS` | Invalid login details were provided | 401 | <ul></ul> |
+| `INVALID_OBJECTID` | Not a valid ObjectId | 400 | <ul><li>`value`: The value</li></ul> |
 | `INVALID_PARAMS` | Invalid parameters have been provided | 400 | <ul><li>`params`: The invalid params</li></ul> |
 | `INVALID_PARENT` | Specified item is not a valid content item Invalid parent itemparent | 500 | <ul><li>`parentId`: _id of the parent item</li></ul> |
 | `INVALID_PASSWORD` | Password failed validation | 401 | <ul><li>`errors`: The validation errors</li></ul> |
@@ -199,6 +205,6 @@ Supplemental data can be used at the point that errors are translated to provide
 | `UNEXPECTED_FILE_TYPES` | Recieved unexpected file types | 400 | <ul><li>`expectedFileTypes`: The list of expected file types</li><li>`invalidFiles`: The list of invalid files</li></ul> |
 | `UNKNOWN_AUTH_TYPE` | Request is attempting to use an unknown authentication type | 401 | <ul><li>`authType`: Authentication type</li></ul> |
 | `UNKNOWN_LANG` | unknown language | 400 | <ul><li>`lang`: language</li></ul> |
-| `UNKNOWN_SCHEMA_NAME` | Failed to determine schema name | 500 | <ul></ul> |
+| `UNKNOWN_SCHEMA_NAME` | Failed to determine schema name | 500 | <ul><li>`_id`: The database _id</li><li>`_type`: The _type value</li><li>`_component`: The _component value</li></ul> |
 | `USER_REG_FAILED` | User registration failed | 400 | <ul></ul> |
 | `VALIDATION_FAILED` | Data validation failed | 400 | <ul><li>`data`: the data failing validation</li><li>`errors`: all validation errors</li><li>`schemaName`: Schema name</li></ul> |

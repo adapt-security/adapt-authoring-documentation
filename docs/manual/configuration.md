@@ -22,7 +22,6 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-middleware">adapt-authoring-middleware</a></li>
 <li><a href="#/configuration?id=adapt-authoring-ratelimiter">adapt-authoring-ratelimiter</a></li>
 <li><a href="#/configuration?id=adapt-authoring-browserslist">adapt-authoring-browserslist</a></li>
-<li><a href="#/configuration?id=adapt-authoring-contentplugin">adapt-authoring-contentplugin</a></li>
 <li><a href="#/configuration?id=adapt-authoring-mongodblogger">adapt-authoring-mongodblogger</a></li>
 <li><a href="#/configuration?id=adapt-authoring-adaptframework">adapt-authoring-adaptframework</a></li>
 </ul>
@@ -202,10 +201,6 @@ export default {
     runOnBuild: true, // boolean, optional
     // The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.
     updateInterval: "0", // string, optional
-  },
-  'adapt-authoring-contentplugin': {
-    // Directory that custom plugins are installed
-    pluginInstallDir: "$DATA/framework-plugins", // string, optional
   },
   'adapt-authoring-mongodblogger': {
     // Whether errors in the MongoDBLoggerModule module should be logged using the default logger. Can cause mass logs in some cases.
@@ -778,18 +773,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.</div>
 <div class="default"><span class="label">Default</span>: <pre>"0"</pre></div>
-</div>
-</div>
-</div>
-
-<h3 id="adapt-authoring-contentplugin" class="dep">adapt-authoring-contentplugin</h3>
-
-<div class="options">
-<div class="attribute">
-<div class="title"><span class="main">pluginInstallDir</span> (string, optional)</div>
-<div class="inner">
-<div class="description">Directory that custom plugins are installed</div>
-<div class="default"><span class="label">Default</span>: <pre>"$DATA/framework-plugins"</pre></div>
 </div>
 </div>
 </div>
