@@ -1656,8 +1656,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/felixge/node-combined-stream" target="_blank">combined-stream</a></td><td>1.0.8</td><td>MIT</td><td>A stream that emits multiple other streams one after another.</tr>
 <tr><td>commander</td><td>8.3.0</td><td>MIT</td><td>the complete solution for node.js command-line programs</tr>
 <tr><td><a href="https://github.com/syavorsky/comment-parser" target="_blank">comment-parser</a></td><td>1.3.1</td><td>MIT</td><td>Generic JSDoc-like comment parser</tr>
-<tr><td>component-emitter</td><td>1.3.0</td><td>MIT</td><td>Event emitter</tr>
 <tr><td>compressible</td><td>2.0.18</td><td>MIT</td><td>Compressible Content-Type / mime checking</tr>
+<tr><td>component-emitter</td><td>1.3.0</td><td>MIT</td><td>Event emitter</tr>
 <tr><td>compression</td><td>1.7.4</td><td>MIT</td><td>Node.js compression middleware</tr>
 <tr><td>concat-map</td><td>0.0.1</td><td>MIT</td><td>concatenative mapdashery</tr>
 <tr><td>concat-stream</td><td>2.0.0</td><td>MIT</td><td>writable stream that concatenates strings or binary data and calls a callback with the result</tr>
@@ -1749,8 +1749,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>finalhandler</td><td>1.1.2</td><td>MIT</td><td>Node.js final http responder</tr>
 <tr><td>find-up</td><td>6.3.0</td><td>MIT</td><td>Find a file or directory by walking up parent directories</tr>
 <tr><td><a href="https://github.com/hughsk/flat" target="_blank">flat</a></td><td>5.0.2</td><td>BSD-3-Clause</td><td>Take a nested Javascript object and flatten it, or unflatten an object with delimited keys</tr>
-<tr><td>fluent-ffmpeg</td><td>2.1.2</td><td>MIT</td><td>A fluent API to FFMPEG (http://www.ffmpeg.org)</tr>
 <tr><td><a href="https://github.com/follow-redirects/follow-redirects" target="_blank">follow-redirects</a></td><td>1.15.2</td><td>MIT</td><td>HTTP and HTTPS modules that follow redirects.</tr>
+<tr><td>fluent-ffmpeg</td><td>2.1.2</td><td>MIT</td><td>A fluent API to FFMPEG (http://www.ffmpeg.org)</tr>
 <tr><td><a href="https://github.com/FuturesJS/forEachAsync" target="_blank">foreachasync</a></td><td>3.0.0</td><td>Apache2</td><td>A node- and browser-ready async counterpart of Array.prototype.forEach</tr>
 <tr><td>form-data</td><td>4.0.0</td><td>MIT</td><td>A library to create readable "multipart/form-data" streams. Can be used to submit forms and file uploads to other web applications.</tr>
 <tr><td><a href="https://github.com/jimmywarting/FormData#readme" target="_blank">formdata-polyfill</a></td><td>4.0.10</td><td>MIT</td><td>HTML5 `FormData` for Browsers and Node.</tr>
@@ -1811,8 +1811,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>ini</td><td>1.3.8</td><td>ISC</td><td>An ini encoder/decoder for node</tr>
 <tr><td>inquirer</td><td>7.3.3</td><td>MIT</td><td>A collection of common interactive command line user interfaces.</tr>
 <tr><td>into-stream</td><td>3.1.0</td><td>MIT</td><td>Convert a buffer/string/array/object/iterable/promise into a stream</tr>
-<tr><td><a href="https://github.com/indutny/node-ip" target="_blank">ip</a></td><td>2.0.0</td><td>MIT</td><td>undefined</tr>
 <tr><td>ipaddr.js</td><td>1.9.1</td><td>MIT</td><td>A library for manipulating IPv4 and IPv6 addresses in JavaScript.</tr>
+<tr><td><a href="https://github.com/indutny/node-ip" target="_blank">ip</a></td><td>2.0.0</td><td>MIT</td><td>undefined</tr>
 <tr><td>is-binary-path</td><td>2.1.0</td><td>MIT</td><td>Check if a file path is a binary file</tr>
 <tr><td><a href="https://github.com/watson/is-ci" target="_blank">is-ci</a></td><td>2.0.0</td><td>MIT</td><td>Detect if the current environment is a CI server</tr>
 <tr><td><a href="https://github.com/inspect-js/is-core-module" target="_blank">is-core-module</a></td><td>2.11.0</td><td>MIT</td><td>Is this specifier a node.js core module?</tr>
@@ -1953,8 +1953,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>prismjs</td><td>1.29.0</td><td>MIT</td><td>Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.</tr>
 <tr><td><a href="https://github.com/calvinmetcalf/process-nextick-args" target="_blank">process-nextick-args</a></td><td>2.0.1</td><td>MIT</td><td>process.nextTick but always with args</tr>
 <tr><td>progress</td><td>2.0.3</td><td>MIT</td><td>Flexible ascii progress bar</tr>
-<tr><td>prompts</td><td>2.4.2</td><td>MIT</td><td>Lightweight, beautiful and user-friendly prompts</tr>
 <tr><td>proto-list</td><td>1.2.4</td><td>ISC</td><td>A utility for managing a prototype chain</tr>
+<tr><td>prompts</td><td>2.4.2</td><td>MIT</td><td>Lightweight, beautiful and user-friendly prompts</tr>
 <tr><td>proxy-addr</td><td>2.0.7</td><td>MIT</td><td>Determine address of proxied request</tr>
 <tr><td><a href="https://github.com/Rob--W/proxy-from-env#readme" target="_blank">proxy-from-env</a></td><td>1.1.0</td><td>MIT</td><td>Offers getProxyForUrl to get the proxy URL for a URL, respecting the *_PROXY (e.g. HTTP_PROXY) and NO_PROXY environment variables.</tr>
 <tr><td><a href="https://github.com/rvagg/prr" target="_blank">prr</a></td><td>1.0.1</td><td>MIT</td><td>A better Object.defineProperty()</tr>
@@ -2056,7 +2056,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>trim-repeated</td><td>1.0.0</td><td>MIT</td><td>Trim a consecutively repeated substring: foo--bar---baz → foo-bar-baz</tr>
 <tr><td><a href="https://www.typescriptlang.org/" target="_blank">tslib</a></td><td>1.14.1</td><td>0BSD</td><td>Runtime library for TypeScript helper functions</tr>
 <tr><td>tunnel-agent</td><td>0.6.0</td><td>Apache-2.0</td><td>HTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.</tr>
-<tr><td>tweezer.js</td><td>1.5.0</td><td>MIT</td><td>A small, dependency-free, ES6 tweening library for smooth animations</tr>
+<tr><td><a href="http://feross.org" target="_blank">typedarray-to-buffer</a></td><td>3.1.5</td><td>MIT</td><td>Convert a typed array to a Buffer without a copy</tr>
+<tr><td>type-fest</td><td>0.21.3</td><td>(MIT OR CC0-1.0)</td><td>A collection of essential TypeScript types</tr>
 <tr><td><a href="https://github.com/substack/typedarray" target="_blank">typedarray</a></td><td>0.0.6</td><td>MIT</td><td>TypedArray polyfill for old browsers</tr>
 <tr><td>uc.micro</td><td>1.0.6</td><td>MIT</td><td>Micro subset of unicode data files for markdown-it projects.</tr>
 <tr><td>uglify-js</td><td>3.17.4</td><td>BSD-2-Clause</td><td>JavaScript parser, mangler/compressor and beautifier toolkit</tr>
@@ -2084,8 +2085,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://git.coolaj86.com/coolaj86/fs-walk.js" target="_blank">walk</a></td><td>2.3.15</td><td>(MIT OR Apache-2.0)</td><td>A node port of python's os.walk</tr>
 <tr><td><a href="https://github.com/MattiasBuelens/web-streams-polyfill#readme" target="_blank">web-streams-polyfill</a></td><td>3.2.1</td><td>MIT</td><td>Web Streams, based on the WHATWG spec reference implementation</tr>
 <tr><td>webidl-conversions</td><td>7.0.0</td><td>BSD-2-Clause</td><td>Implements the WebIDL algorithms for converting to and from JavaScript values</tr>
-<tr><td>whatwg-encoding</td><td>2.0.0</td><td>MIT</td><td>Decode strings according to the WHATWG Encoding Standard</tr>
 <tr><td>whatwg-url</td><td>11.0.0</td><td>MIT</td><td>An implementation of the WHATWG URL Standard's URL API and parsing machinery</tr>
+<tr><td>whatwg-encoding</td><td>2.0.0</td><td>MIT</td><td>Decode strings according to the WHATWG Encoding Standard</tr>
 <tr><td><a href="https://github.com/nexdrew/which-module#readme" target="_blank">which-module</a></td><td>2.0.0</td><td>ISC</td><td>Find the module object for something that was require()d</tr>
 <tr><td>which</td><td>1.3.1</td><td>ISC</td><td>Like which(1) unix command. Find the first instance of an executable in the PATH.</tr>
 <tr><td>widest-line</td><td>3.1.0</td><td>MIT</td><td>Get the visual width of the widest line in a string - the number of columns required to display it</tr>
@@ -2110,8 +2111,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>yocto-queue</td><td>1.0.0</td><td>MIT</td><td>Tiny queue data structure</tr>
 <tr><td><a href="https://github.com/taylortom/zipper" target="_blank">zipper</a></td><td>1.0.0</td><td>undefined</td><td>Module for zipping/unzipping files</tr>
 <tr><td>type-is</td><td>1.6.18</td><td>MIT</td><td>Infer the content-type of a request.</tr>
-<tr><td>type-fest</td><td>0.21.3</td><td>(MIT OR CC0-1.0)</td><td>A collection of essential TypeScript types</tr>
-<tr><td><a href="http://feross.org" target="_blank">typedarray-to-buffer</a></td><td>3.1.5</td><td>MIT</td><td>Convert a typed array to a Buffer without a copy</tr>
+<tr><td>tweezer.js</td><td>1.5.0</td><td>MIT</td><td>A small, dependency-free, ES6 tweening library for smooth animations</tr>
 </table>
 </details>
 
