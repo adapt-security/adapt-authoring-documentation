@@ -1657,24 +1657,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Add tags by entering one or more words, separated with a comma (,)</td>
 </tr>
 <tr class="">
-<td>_trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._logState</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Trickle extension logs its state to the browser console.</td>
-</tr>
-<tr class="">
-<td>_trickle._completionAttribute</td>
-<td>string</td>
-<td><pre>"_isComplete"</pre></td>
-<td>Set which attribute is used to determine completion</td>
-</tr>
-<tr class="">
 <td>_languagePicker</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1733,6 +1715,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._logState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Trickle extension logs its state to the browser console.</td>
+</tr>
+<tr class="">
+<td>_trickle._completionAttribute</td>
+<td>string</td>
+<td><pre>"_isComplete"</pre></td>
+<td>Set which attribute is used to determine completion</td>
 </tr>
 <tr class="">
 <td>_spoor</td>
@@ -2429,18 +2429,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_globals._narrative</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2462,6 +2450,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._narrative.next</td>
 <td>string</td>
 <td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2513,18 +2513,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._accordion</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._accordion.ariaRegion</td>
-<td>string</td>
-<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_globals._gmcq</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2537,6 +2525,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._accordion</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accordion.ariaRegion</td>
+<td>string</td>
+<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._mcq</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2546,6 +2546,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._mcq.ariaRegion</td>
 <td>string</td>
 <td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.navigationBarLabel</td>
+<td>string</td>
+<td><pre>"Select course language"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.languageSelector</td>
+<td>string</td>
+<td><pre>"Language selector"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2636,60 +2654,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._textinput.ariaRegion</td>
 <td>string</td>
 <td><pre>"Text input. Type your answer and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._languagePicker</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._languagePicker.navigationBarLabel</td>
-<td>string</td>
-<td><pre>"Select course language"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._languagePicker.languageSelector</td>
-<td>string</td>
-<td><pre>"Language selector"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider.ariaRegion</td>
-<td>string</td>
-<td><pre>"Slider. Respond to the question by selecting a value on the scale and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider.labelStart</td>
-<td>string</td>
-<td><pre>"Start of the scale"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider.labelEnd</td>
-<td>string</td>
-<td><pre>"End of the scale"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._resources</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._resources.resources</td>
-<td>string</td>
-<td><pre>"Additional resources."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2819,28 +2783,40 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_assessment</td>
+<td>_globals._resources</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_assessment._isPercentageBased</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness</td>
+<td>_globals._resources.resources</td>
+<td>string</td>
+<td><pre>"Additional resources."</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_assessment._scoreToPass</td>
-<td>number</td>
-<td><pre>60</pre></td>
-<td>The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based</td>
+<td>_globals._slider</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_assessment._correctToPass</td>
-<td>number</td>
-<td><pre>60</pre></td>
-<td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
+<td>_globals._slider.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slider. Respond to the question by selecting a value on the scale and then submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._slider.labelStart</td>
+<td>string</td>
+<td><pre>"Start of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._slider.labelEnd</td>
+<td>string</td>
+<td><pre>"End of the scale"</pre></td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_bookmarking</td>
@@ -2895,6 +2871,30 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"No"</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_assessment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._isPercentageBased</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness</td>
+</tr>
+<tr class="">
+<td>_assessment._scoreToPass</td>
+<td>number</td>
+<td><pre>60</pre></td>
+<td>The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based</td>
+</tr>
+<tr class="">
+<td>_assessment._correctToPass</td>
+<td>number</td>
+<td><pre>60</pre></td>
+<td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
 </tr>
 <tr class="">
 <td>_pageLevelProgress</td>
@@ -3089,6 +3089,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
 </tr>
 <tr class="">
+<td>_spoor</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._messages</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
+</tr>
+<tr class="">
 <td>_resources</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -3183,18 +3195,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td></td>
 <td> </td>
-</tr>
-<tr class="">
-<td>_spoor</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._messages</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
 </tr>
 </table>
       
