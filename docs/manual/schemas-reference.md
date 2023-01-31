@@ -7,7 +7,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <ul class="toc">
 <li><a href="#/schemas-reference?id=accordion-component">accordion-component</a></li>
 <li><a href="#/schemas-reference?id=accordion-course">accordion-course</a></li>
-<li><a href="#/schemas-reference?id=undefined">undefined</a></li>
+<li><a href="#/schemas-reference?id=adaptbuild">adaptbuild</a></li>
 <li><a href="#/schemas-reference?id=article">article</a></li>
 <li><a href="#/schemas-reference?id=assessment-article">assessment-article</a></li>
 <li><a href="#/schemas-reference?id=assessment-block">assessment-block</a></li>
@@ -146,13 +146,25 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>createdBy</td>
 <td>string</td>
 <td></td>
-<td>User which initiated the build</td>
+<td>Author of the data</td>
 </tr>
 <tr class="">
 <td>versions</td>
 <td>object</td>
 <td></td>
 <td>Versions of framework and plugins used in the build</td>
+</tr>
+<tr class="required">
+<td>createdAt</td>
+<td>string</td>
+<td></td>
+<td>Date that the data was created</td>
+</tr>
+<tr class="required">
+<td>updatedAt</td>
+<td>string</td>
+<td></td>
+<td>Date that the data was last modified</td>
 </tr>
 </table>
       
@@ -315,24 +327,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allows the user to view the 'model answer' should they answer the question incorrectly</td>
 </tr>
 <tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -490,6 +484,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 <tr class="">
 <td>_trickle._stepLocking._isLockedOnRevisit</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
@@ -863,24 +875,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use</td>
 </tr>
 <tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1038,6 +1032,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 <tr class="">
 <td>_trickle._stepLocking._isLockedOnRevisit</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
@@ -2429,6 +2441,30 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._narrative</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slide show. Select the next button to progress."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._hotgraphic</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2465,27 +2501,15 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
 </tr>
 <tr class="">
-<td>_globals._narrative</td>
+<td>_globals._assessmentResults</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._narrative.ariaRegion</td>
+<td>_globals._assessmentResults.ariaRegion</td>
 <td>string</td>
-<td><pre>"Slide show. Select the next button to progress."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td><pre>"Assessment results."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2522,6 +2546,30 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._mcq.ariaRegion</td>
 <td>string</td>
 <td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching.ariaRegion</td>
+<td>string</td>
+<td><pre>"Matching. Select from lists and then submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._trickle.incompleteContent</td>
+<td>string</td>
+<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2567,30 +2615,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._matching</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._matching.ariaRegion</td>
-<td>string</td>
-<td><pre>"Matching. Select from lists and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._textinput</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._textinput.ariaRegion</td>
-<td>string</td>
-<td><pre>"Text input. Type your answer and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_globals._boxMenu</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2603,27 +2627,15 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._assessmentResults</td>
+<td>_globals._textinput</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._assessmentResults.ariaRegion</td>
+<td>_globals._textinput.ariaRegion</td>
 <td>string</td>
-<td><pre>"Assessment results."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle.incompleteContent</td>
-<td>string</td>
-<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
+<td><pre>"Text input. Type your answer and then submit."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2666,6 +2678,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._slider.labelEnd</td>
 <td>string</td>
 <td><pre>"End of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._resources.resources</td>
+<td>string</td>
+<td><pre>"Additional resources."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2792,18 +2816,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._media.progessHelpText</td>
 <td>string</td>
 <td><pre>"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._resources</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._resources.resources</td>
-<td>string</td>
-<td><pre>"Additional resources."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
