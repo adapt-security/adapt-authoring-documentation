@@ -327,6 +327,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allows the user to view the 'model answer' should they answer the question incorrectly</td>
 </tr>
 <tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -484,24 +502,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 <tr class="">
 <td>_trickle._stepLocking._isLockedOnRevisit</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
@@ -875,6 +875,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use</td>
 </tr>
 <tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1032,24 +1050,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 <tr class="">
 <td>_trickle._stepLocking._isLockedOnRevisit</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
@@ -1675,66 +1675,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Set which attribute is used to determine completion</td>
 </tr>
 <tr class="">
-<td>_languagePicker</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Language Picker extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_languagePicker.title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
-</tr>
-<tr class="">
-<td>_languagePicker.displayTitle</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Header text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker.body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Introductory or explanatory text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker._showOnCourseLoad</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Language Picker should be displayed on course load or not</td>
-</tr>
-<tr class="">
-<td>_languagePicker._languagePickerIconClass</td>
-<td>string</td>
-<td><pre>"icon-language-2"</pre></td>
-<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
-</tr>
-<tr class="">
-<td>_languagePicker._restoreStateOnLanguageChange</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
-</tr>
-<tr class="">
-<td>_languagePicker._classes</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._languages</td>
-<td>array</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_spoor</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1883,6 +1823,66 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).</td>
+</tr>
+<tr class="">
+<td>_languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Language Picker extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_languagePicker.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
+</tr>
+<tr class="">
+<td>_languagePicker.displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Header text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker.body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Introductory or explanatory text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker._showOnCourseLoad</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Language Picker should be displayed on course load or not</td>
+</tr>
+<tr class="">
+<td>_languagePicker._languagePickerIconClass</td>
+<td>string</td>
+<td><pre>"icon-language-2"</pre></td>
+<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
+</tr>
+<tr class="">
+<td>_languagePicker._restoreStateOnLanguageChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
+</tr>
+<tr class="">
+<td>_languagePicker._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._languages</td>
+<td>array</td>
+<td></td>
+<td> </td>
 </tr>
 </table>
       
@@ -2081,18 +2081,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course</td>
 </tr>
 <tr class="">
-<td>_boxMenu</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._renderAsGroup</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
-</tr>
-<tr class="">
 <td>_pageLevelProgress</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2121,6 +2109,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>Controls whether the progress calculations will include assessments</td>
+</tr>
+<tr class="">
+<td>_boxMenu</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._renderAsGroup</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
 </tr>
 <tr class="">
 <td>_resources</td>
@@ -2417,42 +2417,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._narrative</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.ariaRegion</td>
-<td>string</td>
-<td><pre>"Slide show. Select the next button to progress."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_globals._text</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2462,54 +2426,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._text.ariaRegion</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._assessmentResults</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._assessmentResults.ariaRegion</td>
-<td>string</td>
-<td><pre>"Assessment results."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._mcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._mcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle.incompleteContent</td>
-<td>string</td>
-<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2549,21 +2465,39 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
 </tr>
 <tr class="">
-<td>_globals._languagePicker</td>
+<td>_globals._narrative</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._languagePicker.navigationBarLabel</td>
+<td>_globals._narrative.ariaRegion</td>
 <td>string</td>
-<td><pre>"Select course language"</pre></td>
+<td><pre>"Slide show. Select the next button to progress."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._languagePicker.languageSelector</td>
+<td>_globals._narrative.previous</td>
 <td>string</td>
-<td><pre>"Language selector"</pre></td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2579,15 +2513,15 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._boxMenu</td>
+<td>_globals._assessmentResults</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._boxMenu.durationLabel</td>
+<td>_globals._assessmentResults.ariaRegion</td>
 <td>string</td>
-<td><pre>"Duration:"</pre></td>
+<td><pre>"Assessment results."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2633,6 +2567,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._trickle.incompleteContent</td>
+<td>string</td>
+<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._matching</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2645,15 +2591,57 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._textinput</td>
+<td>_globals._gmcq</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._textinput.ariaRegion</td>
+<td>_globals._gmcq.ariaRegion</td>
 <td>string</td>
-<td><pre>"Text input. Type your answer and then submit."</pre></td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._mcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._mcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.navigationBarLabel</td>
+<td>string</td>
+<td><pre>"Select course language"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.languageSelector</td>
+<td>string</td>
+<td><pre>"Language selector"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._boxMenu</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._boxMenu.durationLabel</td>
+<td>string</td>
+<td><pre>"Duration:"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2678,6 +2666,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._slider.labelEnd</td>
 <td>string</td>
 <td><pre>"End of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._textinput</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._textinput.ariaRegion</td>
+<td>string</td>
+<td><pre>"Text input. Type your answer and then submit."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2897,6 +2897,54 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._showPageCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isShownInNavigationBar</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._showAtCourseLevel</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
+</tr>
+<tr class="">
+<td>_spoor</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._messages</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
+</tr>
+<tr class="">
 <td>_boxMenu</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -3051,54 +3099,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>number</td>
 <td><pre>0</pre></td>
 <td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._showPageCompletion</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isShownInNavigationBar</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._showAtCourseLevel</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
-</tr>
-<tr class="">
-<td>_spoor</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._messages</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
 </tr>
 <tr class="">
 <td>_resources</td>
