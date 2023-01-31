@@ -14,6 +14,7 @@
   <a href="docs/manual">Developer guides</a>
   <a href="docs/backend">Back-end API Reference</a>
   <a href="docs/frontend">Front-end API Reference</a>
+  <div class="update-age">Docs updated <span id="age"></span> ago.</div>
 </body>
 <style>
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Mono);
@@ -51,5 +52,48 @@
     background: white;
     color: #14647b;
   }
+  .update-age {
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    font-size: 90%;
+  }
 </style>
+<script>
+  async function getUpdateDate() {
+    try {
+      const res = await fetch('https://api.github.com/repos/adapt-security/adapt-authoring-documentation/commits/master');
+      if(res.status > 299) {
+        throw new Error(res.statusText);
+      }
+      const data = await res.json();
+      const age = getAge(data.commit.committer.date);
+      document.getElementById('age').innerHTML = `${age.diff} ${age.unit}`;
+    } catch(e) {
+      console.error(e);
+    }
+  }
+  function getAge(timestamp) {
+    const diffMs = new Date() - new Date(timestamp);
+    let divider = 1000;
+    const units = [
+      { duration: 1, unit: 'second' },
+      { duration: 60, unit: 'minute' },
+      { duration: 60, unit: 'hour' },
+      { duration: 24, unit: 'day' },
+      { duration: 30, unit: 'week' },
+      { duration: 12, unit: 'month' }
+    ];
+    return units.reduce((memo, data) => {
+      divider *= data.duration;
+      data.rawDiff = diffMs/divider;
+      data.diff = Math.ceil(data.rawDiff);
+      if(data.diff > 1) data.unit += 's';
+      return data.rawDiff > 1 ? data : memo;
+    }, {});
+  }
+  getUpdateDate();
+</script>
 </html>
