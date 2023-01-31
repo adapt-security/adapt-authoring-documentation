@@ -89,7 +89,7 @@
     return units.reduce((memo, data) => {
       divider *= data.duration;
       data.rawDiff = diffMs/divider;
-      data.diff = Math.ceil(data.rawDiff);
+      data.diff = Math.round(data.rawDiff);
       if(data.diff > 1) data.unit += 's';
       return data.rawDiff > 1 ? data : memo;
     }, {});
