@@ -75,6 +75,7 @@ Registers a super user account
 #### Options
 
 - `-e --super-email <email>`: The admin user email address
+- `--ignore-prereqs`: Whether to skip the prerequisites check. Warning this could result in expected errors
 - `-p --pipe-passwd`: Whether the admin password will be piped into the script
 
 

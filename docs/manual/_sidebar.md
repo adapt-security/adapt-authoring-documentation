@@ -20,6 +20,7 @@
   - [The temp folder](temp-folder.md)
   - [Using MongoDB](using-mongodb.md)
   - [Writing a module](writing-a-module.md)
+  - [Writing a schema](writing-a-schema.md)
   - [Writing an API](writing-an-api.md)
 
 
@@ -55,4 +56,5 @@
   - [Core module list](coremodules.md)
   - [Errors Reference](errorsref.md)
   - [Licensing](licensing.md)
+  - [Schema examples](schema-examples.md)
   - [Schemas reference](schemas-reference.md)
