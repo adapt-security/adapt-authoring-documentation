@@ -165,156 +165,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Unique identifier</td>
 </tr>
 <tr class="">
-<td>_assessment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._id</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Unique name for the assessment. This is required by other plugins such as the 'Assessment Results' component to identify the assessment and display its variables</td>
-</tr>
-<tr class="">
-<td>_assessment._attempts</td>
-<td>number</td>
-<td><pre>-1</pre></td>
-<td>Controls the number of attempts the user is allowed to have on this assessment. Set to -1 (or 0) to allow infinite attempts</td>
-</tr>
-<tr class="">
-<td>_assessment._isPercentageBased</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness</td>
-</tr>
-<tr class="">
-<td>_assessment._scoreToPass</td>
-<td>number</td>
-<td><pre>60</pre></td>
-<td>The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based</td>
-</tr>
-<tr class="">
-<td>_assessment._correctToPass</td>
-<td>number</td>
-<td><pre>60</pre></td>
-<td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
-</tr>
-<tr class="">
-<td>_assessment._includeInTotalScore</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Determines if the score from this assessment should be sent to the LMS. The score sent is a percentage according to 'Assessment weight'</td>
-</tr>
-<tr class="">
-<td>_assessment._assessmentWeight</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>If there are multiple assessments in the course, this value controls the proportion of the LMS score which is attributed to this assessment, i.e. 1 equals 100%, 0.5 is 50%, etc.</td>
-</tr>
-<tr class="">
-<td>_assessment._suppressMarking</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Determines whether question marking should be delayed until completion of the assessment or until all attempts have been exhausted</td>
-</tr>
-<tr class="">
-<td>_assessment._isResetOnRevisit</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the assessment should be reset automatically (up to the number of available attempts) when a user revisits the page</td>
-</tr>
-<tr class="">
-<td>_assessment._allowResetIfPassed</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the assessment may be reset after it has been passed (whilst there are attempts remaining)</td>
-</tr>
-<tr class="">
-<td>_assessment._scrollToOnReset</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether to scroll to the assessment after reset or to stay at the top of the assessment page</td>
-</tr>
-<tr class="">
-<td>_assessment._randomisation</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._randomisation._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If randomisation is enabled, a specified number of blocks will be displayed to the user in a random order</td>
-</tr>
-<tr class="">
-<td>_assessment._randomisation._blockCount</td>
-<td>number</td>
-<td><pre>-1</pre></td>
-<td>The number of blocks to present to the learner. Set to -1 (or 0) to display all blocks</td>
-</tr>
-<tr class="">
-<td>_assessment._banks</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._banks._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Enables associating blocks of question components with a 'bank', allowing questions to be grouped then rendered via the 'Question counts' property</td>
-</tr>
-<tr class="">
-<td>_assessment._banks._split</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>This is a comma-separated list of numbers corresponding to the number of questions to be drawn from each question bank. The position of the number in the list corresponds to the 'Bank ID' assigned, e.g. "3,2" would display three questions from Bank 1 and two from Bank 2</td>
-</tr>
-<tr class="">
-<td>_assessment._banks._randomisation</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the questions will be displayed in a random order</td>
-</tr>
-<tr class="">
-<td>_assessment._questions</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._questions._resetType</td>
-<td>string</td>
-<td><pre>"hard"</pre></td>
-<td>Determines whether the question will register as completed when reset. When assigned a value of 'soft', the learner may continue to interact with it, but the complete attribute remains set to true. When assigned 'hard', complete is set to false, and the learner will be forced to complete it again if it is reset. For 'soft', when using trickle, please set the trickle Completion Attribute to `_isInteractionComplete'.</td>
-</tr>
-<tr class="">
-<td>_assessment._questions._canShowFeedback</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Allows the user to view feedback on their answer</td>
-</tr>
-<tr class="">
-<td>_assessment._questions._canShowMarking</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Displays ticks and crosses on question completion</td>
-</tr>
-<tr class="">
-<td>_assessment._questions._canShowModelAnswer</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Allows the user to view the 'model answer' should they answer the question incorrectly</td>
-</tr>
-<tr class="">
 <td>_trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -475,6 +325,156 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_assessment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._id</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Unique name for the assessment. This is required by other plugins such as the 'Assessment Results' component to identify the assessment and display its variables</td>
+</tr>
+<tr class="">
+<td>_assessment._attempts</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>Controls the number of attempts the user is allowed to have on this assessment. Set to -1 (or 0) to allow infinite attempts</td>
+</tr>
+<tr class="">
+<td>_assessment._isPercentageBased</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness</td>
+</tr>
+<tr class="">
+<td>_assessment._scoreToPass</td>
+<td>number</td>
+<td><pre>60</pre></td>
+<td>The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based</td>
+</tr>
+<tr class="">
+<td>_assessment._correctToPass</td>
+<td>number</td>
+<td><pre>60</pre></td>
+<td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
+</tr>
+<tr class="">
+<td>_assessment._includeInTotalScore</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Determines if the score from this assessment should be sent to the LMS. The score sent is a percentage according to 'Assessment weight'</td>
+</tr>
+<tr class="">
+<td>_assessment._assessmentWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>If there are multiple assessments in the course, this value controls the proportion of the LMS score which is attributed to this assessment, i.e. 1 equals 100%, 0.5 is 50%, etc.</td>
+</tr>
+<tr class="">
+<td>_assessment._suppressMarking</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Determines whether question marking should be delayed until completion of the assessment or until all attempts have been exhausted</td>
+</tr>
+<tr class="">
+<td>_assessment._isResetOnRevisit</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the assessment should be reset automatically (up to the number of available attempts) when a user revisits the page</td>
+</tr>
+<tr class="">
+<td>_assessment._allowResetIfPassed</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the assessment may be reset after it has been passed (whilst there are attempts remaining)</td>
+</tr>
+<tr class="">
+<td>_assessment._scrollToOnReset</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether to scroll to the assessment after reset or to stay at the top of the assessment page</td>
+</tr>
+<tr class="">
+<td>_assessment._randomisation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._randomisation._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If randomisation is enabled, a specified number of blocks will be displayed to the user in a random order</td>
+</tr>
+<tr class="">
+<td>_assessment._randomisation._blockCount</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of blocks to present to the learner. Set to -1 (or 0) to display all blocks</td>
+</tr>
+<tr class="">
+<td>_assessment._banks</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._banks._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enables associating blocks of question components with a 'bank', allowing questions to be grouped then rendered via the 'Question counts' property</td>
+</tr>
+<tr class="">
+<td>_assessment._banks._split</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is a comma-separated list of numbers corresponding to the number of questions to be drawn from each question bank. The position of the number in the list corresponds to the 'Bank ID' assigned, e.g. "3,2" would display three questions from Bank 1 and two from Bank 2</td>
+</tr>
+<tr class="">
+<td>_assessment._banks._randomisation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the questions will be displayed in a random order</td>
+</tr>
+<tr class="">
+<td>_assessment._questions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._questions._resetType</td>
+<td>string</td>
+<td><pre>"hard"</pre></td>
+<td>Determines whether the question will register as completed when reset. When assigned a value of 'soft', the learner may continue to interact with it, but the complete attribute remains set to true. When assigned 'hard', complete is set to false, and the learner will be forced to complete it again if it is reset. For 'soft', when using trickle, please set the trickle Completion Attribute to `_isInteractionComplete'.</td>
+</tr>
+<tr class="">
+<td>_assessment._questions._canShowFeedback</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows the user to view feedback on their answer</td>
+</tr>
+<tr class="">
+<td>_assessment._questions._canShowMarking</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Displays ticks and crosses on question completion</td>
+</tr>
+<tr class="">
+<td>_assessment._questions._canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows the user to view the 'model answer' should they answer the question incorrectly</td>
 </tr>
 <tr class="">
 <td>_pageLevelProgress</td>
@@ -851,18 +851,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Unique identifier</td>
 </tr>
 <tr class="">
-<td>_assessment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._quizBankID</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use</td>
-</tr>
-<tr class="">
 <td>_trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1023,6 +1011,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_assessment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._quizBankID</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use</td>
 </tr>
 <tr class="">
 <td>_pageLevelProgress</td>
@@ -2051,18 +2051,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Unique identifier</td>
 </tr>
 <tr class="">
-<td>_boxMenu</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._renderAsGroup</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
-</tr>
-<tr class="">
 <td>_bookmarking</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2081,22 +2069,16 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course</td>
 </tr>
 <tr class="">
-<td>_resources</td>
+<td>_boxMenu</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_resources._isEnabled</td>
+<td>_boxMenu._renderAsGroup</td>
 <td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Resources extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_resources._resourcesItems</td>
-<td>array</td>
-<td></td>
-<td> </td>
+<td><pre>false</pre></td>
+<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
 </tr>
 <tr class="">
 <td>_pageLevelProgress</td>
@@ -2127,6 +2109,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>Controls whether the progress calculations will include assessments</td>
+</tr>
+<tr class="">
+<td>_resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Resources extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_resources._resourcesItems</td>
+<td>array</td>
+<td></td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_vanilla</td>
@@ -2405,30 +2405,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._narrative</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.ariaRegion</td>
-<td>string</td>
-<td><pre>"Slide show. Select the next button to progress."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_globals._text</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2438,6 +2414,42 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._text.ariaRegion</td>
 <td>string</td>
 <td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accordion</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accordion.ariaRegion</td>
+<td>string</td>
+<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2477,54 +2489,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
 </tr>
 <tr class="">
-<td>_globals._accordion</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._accordion.ariaRegion</td>
-<td>string</td>
-<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle.incompleteContent</td>
-<td>string</td>
-<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_globals._mcq</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2537,27 +2501,15 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._matching</td>
+<td>_globals._trickle</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._matching.ariaRegion</td>
+<td>_globals._trickle.incompleteContent</td>
 <td>string</td>
-<td><pre>"Matching. Select from lists and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._assessmentResults</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._assessmentResults.ariaRegion</td>
-<td>string</td>
-<td><pre>"Assessment results."</pre></td>
+<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2579,6 +2531,42 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._narrative</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slide show. Select the next button to progress."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._assessmentResults</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._assessmentResults.ariaRegion</td>
+<td>string</td>
+<td><pre>"Assessment results."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._boxMenu</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2591,6 +2579,48 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgress</td>
+<td>string</td>
+<td><pre>"Page sections"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgressIndicatorBar</td>
+<td>string</td>
+<td><pre>"Page progress. Use this to listen to the list of regions in this topic and whether they're completed. You can jump directly to any that are incomplete or which sound particularly interesting. {{percentageComplete}}%"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgressMenuBar</td>
+<td>string</td>
+<td><pre>"Page completion {{percentageComplete}}%"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgressEnd</td>
+<td>string</td>
+<td><pre>"You have reached the end of the list of page sections."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.optionalContent</td>
+<td>string</td>
+<td><pre>"Optional content"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress._navOrder</td>
+<td>number</td>
+<td><pre>90</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._textinput</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2600,6 +2630,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._textinput.ariaRegion</td>
 <td>string</td>
 <td><pre>"Text input. Type your answer and then submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching.ariaRegion</td>
+<td>string</td>
+<td><pre>"Matching. Select from lists and then submit."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2624,6 +2666,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._slider.labelEnd</td>
 <td>string</td>
 <td><pre>"End of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._resources.resources</td>
+<td>string</td>
+<td><pre>"Additional resources."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2753,57 +2807,57 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._resources</td>
+<td>_bookmarking</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._resources.resources</td>
+<td>_bookmarking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_bookmarking._level</td>
 <td>string</td>
-<td><pre>"Additional resources."</pre></td>
+<td><pre>"component"</pre></td>
+<td>Allows you to set whether Bookmarking is done at page, block or component level</td>
+</tr>
+<tr class="">
+<td>_bookmarking._showPrompt</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
+</tr>
+<tr class="">
+<td>_bookmarking.title</td>
+<td>string</td>
+<td><pre>"Bookmarking"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._pageLevelProgress</td>
+<td>_bookmarking.body</td>
+<td>string</td>
+<td><pre>"Would you like to continue where you left off?"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgress</td>
+<td>_bookmarking._buttons.yes</td>
 <td>string</td>
-<td><pre>"Page sections"</pre></td>
+<td><pre>"Yes"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgressIndicatorBar</td>
+<td>_bookmarking._buttons.no</td>
 <td>string</td>
-<td><pre>"Page progress. Use this to listen to the list of regions in this topic and whether they're completed. You can jump directly to any that are incomplete or which sound particularly interesting. {{percentageComplete}}%"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgressMenuBar</td>
-<td>string</td>
-<td><pre>"Page completion {{percentageComplete}}%"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgressEnd</td>
-<td>string</td>
-<td><pre>"You have reached the end of the list of page sections."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.optionalContent</td>
-<td>string</td>
-<td><pre>"Optional content"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress._navOrder</td>
-<td>number</td>
-<td><pre>90</pre></td>
+<td><pre>"No"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2987,70 +3041,40 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
 </tr>
 <tr class="">
-<td>_bookmarking</td>
+<td>_pageLevelProgress</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_bookmarking._isEnabled</td>
+<td>_pageLevelProgress._isEnabled</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>Controls whether the Bookmarking extension is enabled or disabled</td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_bookmarking._level</td>
-<td>string</td>
-<td><pre>"component"</pre></td>
-<td>Allows you to set whether Bookmarking is done at page, block or component level</td>
-</tr>
-<tr class="">
-<td>_bookmarking._showPrompt</td>
+<td>_pageLevelProgress._showPageCompletion</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
+<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
 </tr>
 <tr class="">
-<td>_bookmarking.title</td>
-<td>string</td>
-<td><pre>"Bookmarking"</pre></td>
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_bookmarking.body</td>
-<td>string</td>
-<td><pre>"Would you like to continue where you left off?"</pre></td>
+<td>_pageLevelProgress._isShownInNavigationBar</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_bookmarking._buttons</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons.yes</td>
-<td>string</td>
-<td><pre>"Yes"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons.no</td>
-<td>string</td>
-<td><pre>"No"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._messages</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
+<td>_pageLevelProgress._showAtCourseLevel</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
 </tr>
 <tr class="">
 <td>_resources</td>
@@ -3149,40 +3173,16 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_pageLevelProgress</td>
+<td>_spoor</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._showPageCompletion</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isShownInNavigationBar</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._showAtCourseLevel</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
+<td>_spoor._messages</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
 </tr>
 </table>
       
