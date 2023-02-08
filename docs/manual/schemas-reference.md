@@ -5,8 +5,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 ### Quick navigation
 
 <ul class="toc">
-<li><a href="#/schemas-reference?id=accordion-component">accordion-component</a></li>
-<li><a href="#/schemas-reference?id=accordion-course">accordion-course</a></li>
 <li><a href="#/schemas-reference?id=adaptbuild">adaptbuild</a></li>
 <li><a href="#/schemas-reference?id=article">article</a></li>
 <li><a href="#/schemas-reference?id=assessment-article">assessment-article</a></li>
@@ -86,27 +84,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </ul>
 
 
-<h3 id="accordion-component" class="dep">accordion-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="accordion-course" class="dep">accordion-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="adaptbuild" class="dep">adaptbuild</h3>
+<h3 id="adaptbuild" class="dep">adaptbuild</h3>
       
       <div class="desc">An Adapt course build instance</div>
 
@@ -2051,6 +2029,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Unique identifier</td>
 </tr>
 <tr class="">
+<td>_bookmarking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether Bookmarking is enabled or disabled for this page of the course</td>
+</tr>
+<tr class="">
+<td>_bookmarking._level</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course</td>
+</tr>
+<tr class="">
 <td>_pageLevelProgress</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2081,22 +2077,16 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Controls whether the progress calculations will include assessments</td>
 </tr>
 <tr class="">
-<td>_bookmarking</td>
+<td>_boxMenu</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_bookmarking._isEnabled</td>
+<td>_boxMenu._renderAsGroup</td>
 <td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether Bookmarking is enabled or disabled for this page of the course</td>
-</tr>
-<tr class="">
-<td>_bookmarking._level</td>
-<td>string</td>
-<td><pre>"inherit"</pre></td>
-<td>Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course</td>
+<td><pre>false</pre></td>
+<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
 </tr>
 <tr class="">
 <td>_resources</td>
@@ -2115,18 +2105,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td></td>
 <td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._renderAsGroup</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
 </tr>
 <tr class="">
 <td>_vanilla</td>
@@ -2417,6 +2395,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._narrative</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2441,54 +2431,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.ariaRegion</td>
-<td>string</td>
-<td><pre>"Image with selectable areas. Select each button to show more information."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.item</td>
-<td>string</td>
-<td><pre>"Item {{{itemNumber}}} of {{{totalItems}}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.popupPagination</td>
-<td>string</td>
-<td><pre>"{{itemNumber}} / {{totalItems}}"</pre></td>
-<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
-</tr>
-<tr class="">
 <td>_globals._assessmentResults</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2498,18 +2440,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._assessmentResults.ariaRegion</td>
 <td>string</td>
 <td><pre>"Assessment results."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2597,6 +2527,54 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._gmcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.ariaRegion</td>
+<td>string</td>
+<td><pre>"Image with selectable areas. Select each button to show more information."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.item</td>
+<td>string</td>
+<td><pre>"Item {{{itemNumber}}} of {{{totalItems}}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.popupPagination</td>
+<td>string</td>
+<td><pre>"{{itemNumber}} / {{totalItems}}"</pre></td>
+<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
+</tr>
+<tr class="">
 <td>_globals._matching</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2606,18 +2584,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._matching.ariaRegion</td>
 <td>string</td>
 <td><pre>"Matching. Select from lists and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._accordion</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._accordion.ariaRegion</td>
-<td>string</td>
-<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2654,6 +2620,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._slider.labelEnd</td>
 <td>string</td>
 <td><pre>"End of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._boxMenu</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._boxMenu.durationLabel</td>
+<td>string</td>
+<td><pre>"Duration:"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2795,15 +2773,57 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._boxMenu</td>
+<td>_bookmarking</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._boxMenu.durationLabel</td>
+<td>_bookmarking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_bookmarking._level</td>
 <td>string</td>
-<td><pre>"Duration:"</pre></td>
+<td><pre>"component"</pre></td>
+<td>Allows you to set whether Bookmarking is done at page, block or component level</td>
+</tr>
+<tr class="">
+<td>_bookmarking._showPrompt</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
+</tr>
+<tr class="">
+<td>_bookmarking.title</td>
+<td>string</td>
+<td><pre>"Bookmarking"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking.body</td>
+<td>string</td>
+<td><pre>"Would you like to continue where you left off?"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons.yes</td>
+<td>string</td>
+<td><pre>"Yes"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons.no</td>
+<td>string</td>
+<td><pre>"No"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2865,168 +2885,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
-</tr>
-<tr class="">
-<td>_bookmarking</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Bookmarking extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_bookmarking._level</td>
-<td>string</td>
-<td><pre>"component"</pre></td>
-<td>Allows you to set whether Bookmarking is done at page, block or component level</td>
-</tr>
-<tr class="">
-<td>_bookmarking._showPrompt</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
-</tr>
-<tr class="">
-<td>_bookmarking.title</td>
-<td>string</td>
-<td><pre>"Bookmarking"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking.body</td>
-<td>string</td>
-<td><pre>"Would you like to continue where you left off?"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons.yes</td>
-<td>string</td>
-<td><pre>"Yes"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons.no</td>
-<td>string</td>
-<td><pre>"No"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._messages</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
-</tr>
-<tr class="">
-<td>_resources</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Resources extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_resources._drawerOrder</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>The order in which this extension should appear as a drawer item</td>
-</tr>
-<tr class="">
-<td>_resources.title</td>
-<td>string</td>
-<td><pre>"Resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources.description</td>
-<td>string</td>
-<td><pre>"Select here to view resources for this course"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.all</td>
-<td>string</td>
-<td><pre>"All"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.document</td>
-<td>string</td>
-<td><pre>"Documents"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.media</td>
-<td>string</td>
-<td><pre>"Media"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.link</td>
-<td>string</td>
-<td><pre>"Links"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.allAria</td>
-<td>string</td>
-<td><pre>"View all resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.documentAria</td>
-<td>string</td>
-<td><pre>"View document resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.mediaAria</td>
-<td>string</td>
-<td><pre>"View media resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.linkAria</td>
-<td>string</td>
-<td><pre>"View resource links"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._resourcesItems</td>
-<td>array</td>
-<td></td>
-<td> </td>
 </tr>
 <tr class="">
 <td>_boxMenu</td>
@@ -3183,6 +3041,114 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>number</td>
 <td><pre>0</pre></td>
 <td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
+</tr>
+<tr class="">
+<td>_resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Resources extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_resources._drawerOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>The order in which this extension should appear as a drawer item</td>
+</tr>
+<tr class="">
+<td>_resources.title</td>
+<td>string</td>
+<td><pre>"Resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources.description</td>
+<td>string</td>
+<td><pre>"Select here to view resources for this course"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.all</td>
+<td>string</td>
+<td><pre>"All"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.document</td>
+<td>string</td>
+<td><pre>"Documents"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.media</td>
+<td>string</td>
+<td><pre>"Media"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.link</td>
+<td>string</td>
+<td><pre>"Links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.allAria</td>
+<td>string</td>
+<td><pre>"View all resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.documentAria</td>
+<td>string</td>
+<td><pre>"View document resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.mediaAria</td>
+<td>string</td>
+<td><pre>"View media resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.linkAria</td>
+<td>string</td>
+<td><pre>"View resource links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._resourcesItems</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._messages</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
 </tr>
 </table>
       
