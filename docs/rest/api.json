@@ -18,25 +18,6 @@
           }
         }
       },
-      "authtoken": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "authtoken",
-        "description": "An authorisation token",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "signature",
-          "userId",
-          "createdAt",
-          "authType"
-        ]
-      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -60,6 +41,25 @@
             }
           }
         }
+      },
+      "authtoken": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "authtoken",
+        "description": "An authorisation token",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "signature",
+          "userId",
+          "createdAt",
+          "authType"
+        ]
       },
       "tag": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2238,6 +2238,213 @@
           }
         }
       },
+      "trickle-block": {
+        "$anchor": "trickle-block",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "block"
+          },
+          "with": {
+            "properties": {
+              "_trickle": {
+                "type": "object",
+                "title": "Trickle",
+                "default": {},
+                "required": [
+                  "_scrollDuration"
+                ],
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Enable Trickle",
+                    "default": false
+                  },
+                  "_isInherited": {
+                    "type": "boolean",
+                    "title": "Inherit settings from parent article",
+                    "default": false
+                  },
+                  "_autoScroll": {
+                    "type": "boolean",
+                    "title": "Scroll automatically",
+                    "default": false
+                  },
+                  "_scrollDuration": {
+                    "type": "number",
+                    "title": "Scroll duration",
+                    "description": "Duration of the scroll animation in milliseconds",
+                    "default": 500
+                  },
+                  "_scrollTo": {
+                    "type": "string",
+                    "title": "Scroll target",
+                    "description": "Set how trickle scrolls",
+                    "default": "@block +1"
+                  },
+                  "_completionAttribute": {
+                    "type": "string",
+                    "title": "Completion attribute",
+                    "description": "Set which attribute is used to determine completion",
+                    "default": "_isComplete",
+                    "enum": [
+                      "_isInteractionComplete",
+                      "_isComplete"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_button": {
+                    "type": "object",
+                    "title": "Button",
+                    "default": {},
+                    "properties": {
+                      "_isEnabled": {
+                        "type": "boolean",
+                        "title": "Add Trickle button",
+                        "default": true
+                      },
+                      "_styleBeforeCompletion": {
+                        "type": "string",
+                        "title": "Visibility before completion",
+                        "default": "hidden",
+                        "enum": [
+                          "hidden",
+                          "visible",
+                          "disabled"
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_styleAfterClick": {
+                        "type": "string",
+                        "title": "Visibility after completion",
+                        "default": "hidden",
+                        "enum": [
+                          "hidden",
+                          "visible",
+                          "disabled"
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_isFullWidth": {
+                        "type": "boolean",
+                        "title": "Make full width",
+                        "default": true
+                      },
+                      "_autoHide": {
+                        "type": "boolean",
+                        "title": "Hide button when no longer in view",
+                        "description": "Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible",
+                        "default": false
+                      },
+                      "_showEndOfPage": {
+                        "type": "boolean",
+                        "title": "Show end of page button",
+                        "default": true
+                      },
+                      "_className": {
+                        "type": "string",
+                        "title": "Custom classes",
+                        "default": ""
+                      },
+                      "_hasIcon": {
+                        "type": "boolean",
+                        "title": "Enable icon",
+                        "description": "Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow",
+                        "default": false
+                      },
+                      "text": {
+                        "type": "string",
+                        "title": "Default button text",
+                        "default": "Continue",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "ariaLabel": {
+                        "type": "string",
+                        "title": "Default button ARIA label",
+                        "default": "Continue",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "startText": {
+                        "type": "string",
+                        "title": "First button text",
+                        "description": "Only on articles when 'Enable on child blocks' set to true",
+                        "default": "Begin",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "startAriaLabel": {
+                        "type": "string",
+                        "title": "First button ARIA label",
+                        "description": "Only on articles when 'Enable on child blocks' set to true",
+                        "default": "Begin",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "finalText": {
+                        "type": "string",
+                        "title": "Final button text",
+                        "description": "Only on articles when 'Enable on child blocks' set to true",
+                        "default": "Finish",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "finalAriaLabel": {
+                        "type": "string",
+                        "title": "Final button ARIA label",
+                        "description": "Only on articles when 'Enable on child blocks' set to true",
+                        "default": "Finish",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "_component": {
+                        "type": "string",
+                        "title": "Trickle plugin",
+                        "default": "trickle-button"
+                      }
+                    }
+                  },
+                  "_stepLocking": {
+                    "type": "object",
+                    "title": "Step locking",
+                    "default": {},
+                    "properties": {
+                      "_isEnabled": {
+                        "type": "boolean",
+                        "title": "Hide subsequent content",
+                        "default": true
+                      },
+                      "_isCompletionRequired": {
+                        "type": "boolean",
+                        "title": "Require content to be completed",
+                        "default": true
+                      },
+                      "_isLockedOnRevisit": {
+                        "type": "boolean",
+                        "title": "Reset state on revisit",
+                        "default": false
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "_id": {
+              "description": "Unique identifier",
+              "type": "string",
+              "isObjectId": true
+            }
+          }
+        }
+      },
       "trickle-article": {
         "$anchor": "trickle-article",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2450,13 +2657,13 @@
           }
         }
       },
-      "trickle-block": {
-        "$anchor": "trickle-block",
+      "trickle-config": {
+        "$anchor": "trickle-config",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "$patch": {
           "source": {
-            "$ref": "block"
+            "$ref": "config"
           },
           "with": {
             "properties": {
@@ -2464,36 +2671,12 @@
                 "type": "object",
                 "title": "Trickle",
                 "default": {},
-                "required": [
-                  "_scrollDuration"
-                ],
                 "properties": {
-                  "_isEnabled": {
+                  "_logState": {
                     "type": "boolean",
-                    "title": "Enable Trickle",
-                    "default": false
-                  },
-                  "_isInherited": {
-                    "type": "boolean",
-                    "title": "Inherit settings from parent article",
-                    "default": false
-                  },
-                  "_autoScroll": {
-                    "type": "boolean",
-                    "title": "Scroll automatically",
-                    "default": false
-                  },
-                  "_scrollDuration": {
-                    "type": "number",
-                    "title": "Scroll duration",
-                    "description": "Duration of the scroll animation in milliseconds",
-                    "default": 500
-                  },
-                  "_scrollTo": {
-                    "type": "string",
-                    "title": "Scroll target",
-                    "description": "Set how trickle scrolls",
-                    "default": "@block +1"
+                    "title": "Log state",
+                    "default": false,
+                    "description": "Controls whether the Trickle extension logs its state to the browser console."
                   },
                   "_completionAttribute": {
                     "type": "string",
@@ -2505,146 +2688,6 @@
                       "_isComplete"
                     ],
                     "_backboneForms": "Select"
-                  },
-                  "_button": {
-                    "type": "object",
-                    "title": "Button",
-                    "default": {},
-                    "properties": {
-                      "_isEnabled": {
-                        "type": "boolean",
-                        "title": "Add Trickle button",
-                        "default": true
-                      },
-                      "_styleBeforeCompletion": {
-                        "type": "string",
-                        "title": "Visibility before completion",
-                        "default": "hidden",
-                        "enum": [
-                          "hidden",
-                          "visible",
-                          "disabled"
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_styleAfterClick": {
-                        "type": "string",
-                        "title": "Visibility after completion",
-                        "default": "hidden",
-                        "enum": [
-                          "hidden",
-                          "visible",
-                          "disabled"
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_isFullWidth": {
-                        "type": "boolean",
-                        "title": "Make full width",
-                        "default": true
-                      },
-                      "_autoHide": {
-                        "type": "boolean",
-                        "title": "Hide button when no longer in view",
-                        "description": "Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible",
-                        "default": false
-                      },
-                      "_showEndOfPage": {
-                        "type": "boolean",
-                        "title": "Show end of page button",
-                        "default": true
-                      },
-                      "_className": {
-                        "type": "string",
-                        "title": "Custom classes",
-                        "default": ""
-                      },
-                      "_hasIcon": {
-                        "type": "boolean",
-                        "title": "Enable icon",
-                        "description": "Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow",
-                        "default": false
-                      },
-                      "text": {
-                        "type": "string",
-                        "title": "Default button text",
-                        "default": "Continue",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "ariaLabel": {
-                        "type": "string",
-                        "title": "Default button ARIA label",
-                        "default": "Continue",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "startText": {
-                        "type": "string",
-                        "title": "First button text",
-                        "description": "Only on articles when 'Enable on child blocks' set to true",
-                        "default": "Begin",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "startAriaLabel": {
-                        "type": "string",
-                        "title": "First button ARIA label",
-                        "description": "Only on articles when 'Enable on child blocks' set to true",
-                        "default": "Begin",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "finalText": {
-                        "type": "string",
-                        "title": "Final button text",
-                        "description": "Only on articles when 'Enable on child blocks' set to true",
-                        "default": "Finish",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "finalAriaLabel": {
-                        "type": "string",
-                        "title": "Final button ARIA label",
-                        "description": "Only on articles when 'Enable on child blocks' set to true",
-                        "default": "Finish",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "_component": {
-                        "type": "string",
-                        "title": "Trickle plugin",
-                        "default": "trickle-button"
-                      }
-                    }
-                  },
-                  "_stepLocking": {
-                    "type": "object",
-                    "title": "Step locking",
-                    "default": {},
-                    "properties": {
-                      "_isEnabled": {
-                        "type": "boolean",
-                        "title": "Hide subsequent content",
-                        "default": true
-                      },
-                      "_isCompletionRequired": {
-                        "type": "boolean",
-                        "title": "Require content to be completed",
-                        "default": true
-                      },
-                      "_isLockedOnRevisit": {
-                        "type": "boolean",
-                        "title": "Reset state on revisit",
-                        "default": false
-                      }
-                    }
                   }
                 }
               }
@@ -2696,49 +2739,6 @@
           }
         }
       },
-      "trickle-config": {
-        "$anchor": "trickle-config",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "config"
-          },
-          "with": {
-            "properties": {
-              "_trickle": {
-                "type": "object",
-                "title": "Trickle",
-                "default": {},
-                "properties": {
-                  "_logState": {
-                    "type": "boolean",
-                    "title": "Log state",
-                    "default": false,
-                    "description": "Controls whether the Trickle extension logs its state to the browser console."
-                  },
-                  "_completionAttribute": {
-                    "type": "string",
-                    "title": "Completion attribute",
-                    "description": "Set which attribute is used to determine completion",
-                    "default": "_isComplete",
-                    "enum": [
-                      "_isInteractionComplete",
-                      "_isComplete"
-                    ],
-                    "_backboneForms": "Select"
-                  }
-                }
-              }
-            },
-            "_id": {
-              "description": "Unique identifier",
-              "type": "string",
-              "isObjectId": true
-            }
-          }
-        }
-      },
       "boxMenu-contentobject": {
         "$anchor": "boxMenu-contentobject",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2758,212 +2758,6 @@
                     "type": "boolean",
                     "title": "Make this a parent group of menu items",
                     "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
-                    "default": false
-                  }
-                }
-              }
-            },
-            "_id": {
-              "description": "Unique identifier",
-              "type": "string",
-              "isObjectId": true
-            }
-          }
-        }
-      },
-      "spoor-config": {
-        "$anchor": "spoor-config",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "config"
-          },
-          "with": {
-            "properties": {
-              "_spoor": {
-                "type": "object",
-                "title": "Spoor (SCORM)",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Enable SCORM support",
-                    "description": "If enabled, the plugin will try to find and track to a SCORM conformant LMS. Uncheck to switch off SCORM tracking",
-                    "default": true
-                  },
-                  "_tracking": {
-                    "type": "object",
-                    "title": "Tracking",
-                    "default": {},
-                    "properties": {
-                      "_shouldStoreResponses": {
-                        "type": "boolean",
-                        "title": "Store question state",
-                        "description": "If enabled, the user's responses to questions will be saved and restored in each session. Note: this setting should be enabled in the majority of cases",
-                        "default": true
-                      },
-                      "_shouldStoreAttempts": {
-                        "type": "boolean",
-                        "title": "Store question attempt states",
-                        "description": "If enabled, a history of the user's responses to questions will be saved and restored in each session. Note: this setting should be disabled in the majority of cases",
-                        "default": false
-                      },
-                      "_shouldRecordInteractions": {
-                        "type": "boolean",
-                        "title": "Record interactions",
-                        "description": "If enabled, the course will record the user's responses to questions to the cmi.interactions SCORM data fields",
-                        "default": true
-                      }
-                    }
-                  },
-                  "_reporting": {
-                    "type": "object",
-                    "title": "Reporting",
-                    "default": {},
-                    "properties": {
-                      "_onTrackingCriteriaMet": {
-                        "type": "string",
-                        "title": "Tracking success status",
-                        "description": "What status to report back to the LMS when the tracking criteria are met",
-                        "default": "completed",
-                        "enum": [
-                          "completed",
-                          "passed",
-                          "failed",
-                          "incomplete"
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_onAssessmentFailure": {
-                        "type": "string",
-                        "title": "Assessment failure status",
-                        "description": "What status to report back to the LMS when the assessment is failed",
-                        "default": "incomplete",
-                        "enum": [
-                          "completed",
-                          "failed",
-                          "incomplete"
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_resetStatusOnLanguageChange": {
-                        "type": "boolean",
-                        "title": "Reset status on language change",
-                        "description": "If enabled, the the course status will be reset to 'incomplete' when the user changes the course language",
-                        "default": false
-                      }
-                    }
-                  },
-                  "_advancedSettings": {
-                    "type": "object",
-                    "title": "Advanced settings",
-                    "default": {},
-                    "required": [
-                      "_manifestIdentifier"
-                    ],
-                    "properties": {
-                      "_scormVersion": {
-                        "type": "string",
-                        "title": "SCORM version",
-                        "description": "The SCORM standard to use - SCORM 1.2 or SCORM 2004 4th Edition",
-                        "default": "1.2",
-                        "enum": [
-                          "1.2",
-                          "2004"
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_showDebugWindow": {
-                        "type": "boolean",
-                        "title": "Enable SCORM debug window",
-                        "description": "If enabled, a popup window will be shown on course launch that gives detailed information about what SCORM calls are being made. This can be very useful for debugging SCORM issues. Note that this popup window will appear automatically if the SCORM code encounters an error, even if this is set to false",
-                        "default": false
-                      },
-                      "_commitOnStatusChange": {
-                        "type": "boolean",
-                        "title": "Commit data on status change",
-                        "description": "If enabled, a 'commit' call will be made any time the lesson_status is changed",
-                        "default": true
-                      },
-                      "_commitOnAnyChange": {
-                        "type": "boolean",
-                        "title": "Commit data on any change",
-                        "description": "If enabled, a 'commit' (save all data) call will be made any time a value is changed. Note that enabling this setting may have a detrimental impact on the server and should only be used if absolutely necessary and only after careful load testing. Consider trying a lower value for 'Frequency of automatic commits' before changing this setting",
-                        "default": false
-                      },
-                      "_timedCommitFrequency": {
-                        "type": "number",
-                        "title": "Frequency of automatic commits",
-                        "description": "The frequency (in minutes) at which a 'commit' call should be made automatically. Set to 0 to disable automatic commits altogether",
-                        "default": 10
-                      },
-                      "_maxCommitRetries": {
-                        "type": "number",
-                        "title": "Maximum number of commit retries",
-                        "description": "If a 'commit' call fails, this setting controls how many times it should be retried before giving up and throwing an error",
-                        "default": 5
-                      },
-                      "_commitRetryDelay": {
-                        "type": "number",
-                        "title": "Commit retry delay",
-                        "description": "How much of a delay (in milliseconds) to leave between commit retries",
-                        "default": 2000
-                      },
-                      "_suppressErrors": {
-                        "type": "boolean",
-                        "title": "Supress LMS errors",
-                        "description": "If enabled, error messages will not be displayed when SCORM tracking problems occur",
-                        "default": false
-                      },
-                      "_commitOnVisibilityChangeHidden": {
-                        "type": "boolean",
-                        "title": "Commit when browser tab is hidden",
-                        "description": "If enabled, a 'commit' call will be made whenever the course window is hidden/minimised. Requires a browser that supports the 'visibilitychange' event",
-                        "default": true
-                      },
-                      "_manifestIdentifier": {
-                        "type": "string",
-                        "title": "Manifest identifier",
-                        "description": "Sets the 'identifier' attribute in the imsmanifest.xml",
-                        "default": "adapt_manifest"
-                      },
-                      "_exitStateIfIncomplete": {
-                        "type": "string",
-                        "title": "Incomplete course exit status",
-                        "default": "auto",
-                        "enum": [
-                          "auto",
-                          "suspend",
-                          "normal",
-                          ""
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_exitStateIfComplete": {
-                        "type": "string",
-                        "title": "Complete course exit status",
-                        "default": "auto",
-                        "enum": [
-                          "auto",
-                          "suspend",
-                          "normal",
-                          ""
-                        ],
-                        "_backboneForms": "Select"
-                      },
-                      "_setCompletedWhenFailed": {
-                        "type": "boolean",
-                        "title": "Completed when failed",
-                        "description": "If enabled, `cmi.completion_status` will be set to \"completed\" if the assessment is \"failed\". Only valid for SCORM 2004, where the logic for completion and success is separate.",
-                        "default": true
-                      }
-                    }
-                  },
-                  "_showCookieLmsResetButton": {
-                    "type": "boolean",
-                    "title": "Show reset button (scorm_test_harness.html only)",
-                    "description": "If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).",
                     "default": false
                   }
                 }
@@ -3281,13 +3075,13 @@
           }
         }
       },
-      "spoor-course": {
-        "$anchor": "spoor-course",
+      "spoor-config": {
+        "$anchor": "spoor-config",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "$patch": {
           "source": {
-            "$ref": "course"
+            "$ref": "config"
           },
           "with": {
             "properties": {
@@ -3296,15 +3090,185 @@
                 "title": "Spoor (SCORM)",
                 "default": {},
                 "properties": {
-                  "_messages": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Enable SCORM support",
+                    "description": "If enabled, the plugin will try to find and track to a SCORM conformant LMS. Uncheck to switch off SCORM tracking",
+                    "default": true
+                  },
+                  "_tracking": {
                     "type": "object",
-                    "title": "Error messages",
-                    "description": "Optional object that can be used to amend/translate the error messages shown by the spoor extension",
+                    "title": "Tracking",
                     "default": {},
-                    "_backboneForms": {
-                      "type": "CodeEditor",
-                      "mode": "json"
+                    "properties": {
+                      "_shouldStoreResponses": {
+                        "type": "boolean",
+                        "title": "Store question state",
+                        "description": "If enabled, the user's responses to questions will be saved and restored in each session. Note: this setting should be enabled in the majority of cases",
+                        "default": true
+                      },
+                      "_shouldStoreAttempts": {
+                        "type": "boolean",
+                        "title": "Store question attempt states",
+                        "description": "If enabled, a history of the user's responses to questions will be saved and restored in each session. Note: this setting should be disabled in the majority of cases",
+                        "default": false
+                      },
+                      "_shouldRecordInteractions": {
+                        "type": "boolean",
+                        "title": "Record interactions",
+                        "description": "If enabled, the course will record the user's responses to questions to the cmi.interactions SCORM data fields",
+                        "default": true
+                      }
                     }
+                  },
+                  "_reporting": {
+                    "type": "object",
+                    "title": "Reporting",
+                    "default": {},
+                    "properties": {
+                      "_onTrackingCriteriaMet": {
+                        "type": "string",
+                        "title": "Tracking success status",
+                        "description": "What status to report back to the LMS when the tracking criteria are met",
+                        "default": "completed",
+                        "enum": [
+                          "completed",
+                          "passed",
+                          "failed",
+                          "incomplete"
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_onAssessmentFailure": {
+                        "type": "string",
+                        "title": "Assessment failure status",
+                        "description": "What status to report back to the LMS when the assessment is failed",
+                        "default": "incomplete",
+                        "enum": [
+                          "completed",
+                          "failed",
+                          "incomplete"
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_resetStatusOnLanguageChange": {
+                        "type": "boolean",
+                        "title": "Reset status on language change",
+                        "description": "If enabled, the the course status will be reset to 'incomplete' when the user changes the course language",
+                        "default": false
+                      }
+                    }
+                  },
+                  "_advancedSettings": {
+                    "type": "object",
+                    "title": "Advanced settings",
+                    "default": {},
+                    "required": [
+                      "_manifestIdentifier"
+                    ],
+                    "properties": {
+                      "_scormVersion": {
+                        "type": "string",
+                        "title": "SCORM version",
+                        "description": "The SCORM standard to use - SCORM 1.2 or SCORM 2004 4th Edition",
+                        "default": "1.2",
+                        "enum": [
+                          "1.2",
+                          "2004"
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_showDebugWindow": {
+                        "type": "boolean",
+                        "title": "Enable SCORM debug window",
+                        "description": "If enabled, a popup window will be shown on course launch that gives detailed information about what SCORM calls are being made. This can be very useful for debugging SCORM issues. Note that this popup window will appear automatically if the SCORM code encounters an error, even if this is set to false",
+                        "default": false
+                      },
+                      "_commitOnStatusChange": {
+                        "type": "boolean",
+                        "title": "Commit data on status change",
+                        "description": "If enabled, a 'commit' call will be made any time the lesson_status is changed",
+                        "default": true
+                      },
+                      "_commitOnAnyChange": {
+                        "type": "boolean",
+                        "title": "Commit data on any change",
+                        "description": "If enabled, a 'commit' (save all data) call will be made any time a value is changed. Note that enabling this setting may have a detrimental impact on the server and should only be used if absolutely necessary and only after careful load testing. Consider trying a lower value for 'Frequency of automatic commits' before changing this setting",
+                        "default": false
+                      },
+                      "_timedCommitFrequency": {
+                        "type": "number",
+                        "title": "Frequency of automatic commits",
+                        "description": "The frequency (in minutes) at which a 'commit' call should be made automatically. Set to 0 to disable automatic commits altogether",
+                        "default": 10
+                      },
+                      "_maxCommitRetries": {
+                        "type": "number",
+                        "title": "Maximum number of commit retries",
+                        "description": "If a 'commit' call fails, this setting controls how many times it should be retried before giving up and throwing an error",
+                        "default": 5
+                      },
+                      "_commitRetryDelay": {
+                        "type": "number",
+                        "title": "Commit retry delay",
+                        "description": "How much of a delay (in milliseconds) to leave between commit retries",
+                        "default": 2000
+                      },
+                      "_suppressErrors": {
+                        "type": "boolean",
+                        "title": "Supress LMS errors",
+                        "description": "If enabled, error messages will not be displayed when SCORM tracking problems occur",
+                        "default": false
+                      },
+                      "_commitOnVisibilityChangeHidden": {
+                        "type": "boolean",
+                        "title": "Commit when browser tab is hidden",
+                        "description": "If enabled, a 'commit' call will be made whenever the course window is hidden/minimised. Requires a browser that supports the 'visibilitychange' event",
+                        "default": true
+                      },
+                      "_manifestIdentifier": {
+                        "type": "string",
+                        "title": "Manifest identifier",
+                        "description": "Sets the 'identifier' attribute in the imsmanifest.xml",
+                        "default": "adapt_manifest"
+                      },
+                      "_exitStateIfIncomplete": {
+                        "type": "string",
+                        "title": "Incomplete course exit status",
+                        "default": "auto",
+                        "enum": [
+                          "auto",
+                          "suspend",
+                          "normal",
+                          ""
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_exitStateIfComplete": {
+                        "type": "string",
+                        "title": "Complete course exit status",
+                        "default": "auto",
+                        "enum": [
+                          "auto",
+                          "suspend",
+                          "normal",
+                          ""
+                        ],
+                        "_backboneForms": "Select"
+                      },
+                      "_setCompletedWhenFailed": {
+                        "type": "boolean",
+                        "title": "Completed when failed",
+                        "description": "If enabled, `cmi.completion_status` will be set to \"completed\" if the assessment is \"failed\". Only valid for SCORM 2004, where the logic for completion and success is separate.",
+                        "default": true
+                      }
+                    }
+                  },
+                  "_showCookieLmsResetButton": {
+                    "type": "boolean",
+                    "title": "Show reset button (scorm_test_harness.html only)",
+                    "description": "If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).",
+                    "default": false
                   }
                 }
               }
@@ -4831,6 +4795,42 @@
           }
         }
       },
+      "spoor-course": {
+        "$anchor": "spoor-course",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "course"
+          },
+          "with": {
+            "properties": {
+              "_spoor": {
+                "type": "object",
+                "title": "Spoor (SCORM)",
+                "default": {},
+                "properties": {
+                  "_messages": {
+                    "type": "object",
+                    "title": "Error messages",
+                    "description": "Optional object that can be used to amend/translate the error messages shown by the spoor extension",
+                    "default": {},
+                    "_backboneForms": {
+                      "type": "CodeEditor",
+                      "mode": "json"
+                    }
+                  }
+                }
+              }
+            },
+            "_id": {
+              "description": "Unique identifier",
+              "type": "string",
+              "isObjectId": true
+            }
+          }
+        }
+      },
       "user": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": "user",
@@ -4884,60 +4884,10 @@
             "description": "The asset description",
             "type": "string"
           },
-          "duration": {
-            "description": "The asset file's duration",
-            "type": "number",
-            "isReadyOnly": true,
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
-          "hasThumb": {
-            "title": "Has thumbnail",
-            "description": "Whether the asset has a thumbnail",
-            "type": "boolean",
-            "isReadyOnly": true,
-            "default": false,
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
-          "resolution": {
-            "description": "The asset file's resolution",
-            "type": "string",
-            "isReadyOnly": true,
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
-          "size": {
-            "description": "The size of the asset",
-            "type": "number",
-            "isReadyOnly": true,
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
-          "subtype": {
-            "description": "The asset subtype (identifies the exact kind of data of the specified type)",
-            "type": "string",
-            "isReadyOnly": true,
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
           "title": {
             "title": "Title",
             "description": "The asset title",
             "type": "string"
-          },
-          "type": {
-            "description": "The asset type (audio, video, image etc)",
-            "type": "string",
-            "isReadyOnly": true,
-            "_backboneForms": {
-              "showInUi": false
-            }
           },
           "url": {
             "title": "URL",
@@ -8772,287 +8722,6 @@
           "_component"
         ]
       },
-      "blank-component": {
-        "$anchor": "blank-component",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": false
-            },
-            "_backboneForms": {
-              "type": "DisplayTitle",
-              "showInUi": false
-            }
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": false
-            },
-            "_backboneForms": {
-              "type": "TextArea",
-              "showInUi": false
-            }
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Is this optional?",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            },
-            "isSetting": true,
-            "inputType": "Checkbox",
-            "validators": [],
-            "help": "An optional component does not have to be completed by the user."
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "both",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component"
-        ]
-      },
       "gmcq-component": {
         "$anchor": "gmcq-component",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9699,6 +9368,287 @@
           "_component",
           "_attempts",
           "_selectable"
+        ]
+      },
+      "blank-component": {
+        "$anchor": "blank-component",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": false
+            },
+            "_backboneForms": {
+              "type": "DisplayTitle",
+              "showInUi": false
+            }
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": false
+            },
+            "_backboneForms": {
+              "type": "TextArea",
+              "showInUi": false
+            }
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": {
+              "showInUi": false
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Is this optional?",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            },
+            "isSetting": true,
+            "inputType": "Checkbox",
+            "validators": [],
+            "help": "An optional component does not have to be completed by the user."
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "both",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component"
         ]
       },
       "graphic-component": {
@@ -11154,604 +11104,6 @@
           "_component",
           "_attempts",
           "placeholder"
-        ]
-      },
-      "mcq-component": {
-        "$anchor": "mcq-component",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "half-width",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "ariaQuestion": {
-            "type": "string",
-            "title": "ARIA question",
-            "description": "This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_items": {
-            "type": "array",
-            "title": "Items",
-            "description": "The possible answers available to the learner",
-            "items": {
-              "type": "object",
-              "properties": {
-                "text": {
-                  "type": "string",
-                  "title": "Text",
-                  "description": "This text will display as the answer text",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  }
-                },
-                "_shouldBeSelected": {
-                  "type": "boolean",
-                  "title": "Mark this option as correct",
-                  "default": false
-                },
-                "_isPartlyCorrect": {
-                  "type": "boolean",
-                  "title": "Mark this option as partly correct",
-                  "default": false
-                },
-                "feedback": {
-                  "type": "string",
-                  "title": "Answer-specific feedback",
-                  "description": "When 'Selectable items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  },
-                  "_backboneForms": "TextArea"
-                },
-                "_score": {
-                  "type": "number",
-                  "title": "Score",
-                  "description": "If item scoring is enabled, selected item scores are summed to give the question score",
-                  "default": 0
-                }
-              }
-            }
-          },
-          "_attempts": {
-            "type": "number",
-            "title": "Allowed attempts",
-            "description": "How many attempts the learner is allowed",
-            "default": 1
-          },
-          "_canShowModelAnswer": {
-            "type": "boolean",
-            "title": "Enable correct answer toggle",
-            "description": "Allow the user to view the 'model answer' if they answer the question incorrectly",
-            "default": true
-          },
-          "_canShowFeedback": {
-            "type": "boolean",
-            "title": "Enable feedback",
-            "default": true
-          },
-          "_canShowMarking": {
-            "type": "boolean",
-            "title": "Enable marking",
-            "default": true
-          },
-          "_shouldDisplayAttempts": {
-            "type": "boolean",
-            "title": "Show number of remaining attempts",
-            "default": false
-          },
-          "_isRandom": {
-            "type": "boolean",
-            "title": "Randomise answers",
-            "default": false
-          },
-          "_recordInteraction": {
-            "type": "boolean",
-            "title": "Record interaction",
-            "description": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only",
-            "default": true
-          },
-          "_hasItemScoring": {
-            "type": "boolean",
-            "title": "Enable item scoring",
-            "description": "When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options",
-            "default": false
-          },
-          "_questionWeight": {
-            "type": "number",
-            "title": "Question weight",
-            "description": "When item scoring is disabled, this is the question score for a correct response",
-            "default": 1
-          },
-          "_selectable": {
-            "type": "number",
-            "title": "Selectable items",
-            "description": "How many items are selectable",
-            "default": 1
-          },
-          "_feedback": {
-            "type": "object",
-            "title": "Feedback",
-            "default": {},
-            "properties": {
-              "title": {
-                "type": "string",
-                "title": "Title",
-                "description": "Leave blank to have the component's title shown instead",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "correct": {
-                "type": "string",
-                "title": "Correct feedback",
-                "description": "Correct answer feedback for this question",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                },
-                "_backboneForms": "TextArea"
-              },
-              "_incorrect": {
-                "type": "object",
-                "title": "Incorrect",
-                "default": {},
-                "properties": {
-                  "final": {
-                    "type": "string",
-                    "title": "Default incorrect feedback",
-                    "description": "Incorrect answer feedback for the final attempt",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  },
-                  "notFinal": {
-                    "type": "string",
-                    "title": "Retry feedback",
-                    "description": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  }
-                }
-              },
-              "_partlyCorrect": {
-                "type": "object",
-                "title": "Partly correct",
-                "default": {},
-                "properties": {
-                  "final": {
-                    "type": "string",
-                    "title": "Default partly correct feedback",
-                    "description": "Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  },
-                  "notFinal": {
-                    "type": "string",
-                    "title": "Retry feedback",
-                    "description": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  }
-                }
-              }
-            }
-          },
-          "_buttons": {
-            "type": "object",
-            "title": "Button overrides",
-            "default": {},
-            "properties": {
-              "_submit": {
-                "type": "object",
-                "title": "Submit",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_reset": {
-                "type": "object",
-                "title": "Reset",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_showCorrectAnswer": {
-                "type": "object",
-                "title": "Show correct answer",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_hideCorrectAnswer": {
-                "type": "object",
-                "title": "Hide correct answer",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_showFeedback": {
-                "type": "object",
-                "title": "Show feedback",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "remainingAttemptsText": {
-                "type": "string",
-                "title": "Remaining attempts label",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "remainingAttemptText": {
-                "type": "string",
-                "title": "Final attempt label",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              }
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component",
-          "_attempts",
-          "_selectable"
         ]
       },
       "media-component": {
@@ -13238,6 +12590,604 @@
           "_attempts",
           "_scaleStart",
           "_scaleEnd"
+        ]
+      },
+      "mcq-component": {
+        "$anchor": "mcq-component",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "half-width",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "ariaQuestion": {
+            "type": "string",
+            "title": "ARIA question",
+            "description": "This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_items": {
+            "type": "array",
+            "title": "Items",
+            "description": "The possible answers available to the learner",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "title": "Text",
+                  "description": "This text will display as the answer text",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_shouldBeSelected": {
+                  "type": "boolean",
+                  "title": "Mark this option as correct",
+                  "default": false
+                },
+                "_isPartlyCorrect": {
+                  "type": "boolean",
+                  "title": "Mark this option as partly correct",
+                  "default": false
+                },
+                "feedback": {
+                  "type": "string",
+                  "title": "Answer-specific feedback",
+                  "description": "When 'Selectable items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  },
+                  "_backboneForms": "TextArea"
+                },
+                "_score": {
+                  "type": "number",
+                  "title": "Score",
+                  "description": "If item scoring is enabled, selected item scores are summed to give the question score",
+                  "default": 0
+                }
+              }
+            }
+          },
+          "_attempts": {
+            "type": "number",
+            "title": "Allowed attempts",
+            "description": "How many attempts the learner is allowed",
+            "default": 1
+          },
+          "_canShowModelAnswer": {
+            "type": "boolean",
+            "title": "Enable correct answer toggle",
+            "description": "Allow the user to view the 'model answer' if they answer the question incorrectly",
+            "default": true
+          },
+          "_canShowFeedback": {
+            "type": "boolean",
+            "title": "Enable feedback",
+            "default": true
+          },
+          "_canShowMarking": {
+            "type": "boolean",
+            "title": "Enable marking",
+            "default": true
+          },
+          "_shouldDisplayAttempts": {
+            "type": "boolean",
+            "title": "Show number of remaining attempts",
+            "default": false
+          },
+          "_isRandom": {
+            "type": "boolean",
+            "title": "Randomise answers",
+            "default": false
+          },
+          "_recordInteraction": {
+            "type": "boolean",
+            "title": "Record interaction",
+            "description": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only",
+            "default": true
+          },
+          "_hasItemScoring": {
+            "type": "boolean",
+            "title": "Enable item scoring",
+            "description": "When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options",
+            "default": false
+          },
+          "_questionWeight": {
+            "type": "number",
+            "title": "Question weight",
+            "description": "When item scoring is disabled, this is the question score for a correct response",
+            "default": 1
+          },
+          "_selectable": {
+            "type": "number",
+            "title": "Selectable items",
+            "description": "How many items are selectable",
+            "default": 1
+          },
+          "_feedback": {
+            "type": "object",
+            "title": "Feedback",
+            "default": {},
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "description": "Leave blank to have the component's title shown instead",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "correct": {
+                "type": "string",
+                "title": "Correct feedback",
+                "description": "Correct answer feedback for this question",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                },
+                "_backboneForms": "TextArea"
+              },
+              "_incorrect": {
+                "type": "object",
+                "title": "Incorrect",
+                "default": {},
+                "properties": {
+                  "final": {
+                    "type": "string",
+                    "title": "Default incorrect feedback",
+                    "description": "Incorrect answer feedback for the final attempt",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  },
+                  "notFinal": {
+                    "type": "string",
+                    "title": "Retry feedback",
+                    "description": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  }
+                }
+              },
+              "_partlyCorrect": {
+                "type": "object",
+                "title": "Partly correct",
+                "default": {},
+                "properties": {
+                  "final": {
+                    "type": "string",
+                    "title": "Default partly correct feedback",
+                    "description": "Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  },
+                  "notFinal": {
+                    "type": "string",
+                    "title": "Retry feedback",
+                    "description": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  }
+                }
+              }
+            }
+          },
+          "_buttons": {
+            "type": "object",
+            "title": "Button overrides",
+            "default": {},
+            "properties": {
+              "_submit": {
+                "type": "object",
+                "title": "Submit",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_reset": {
+                "type": "object",
+                "title": "Reset",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_showCorrectAnswer": {
+                "type": "object",
+                "title": "Show correct answer",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_hideCorrectAnswer": {
+                "type": "object",
+                "title": "Hide correct answer",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_showFeedback": {
+                "type": "object",
+                "title": "Show feedback",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "remainingAttemptsText": {
+                "type": "string",
+                "title": "Remaining attempts label",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "remainingAttemptText": {
+                "type": "string",
+                "title": "Final attempt label",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component",
+          "_attempts",
+          "_selectable"
         ]
       },
       "text-component": {
