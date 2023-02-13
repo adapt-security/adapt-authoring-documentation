@@ -18,6 +18,25 @@
           }
         }
       },
+      "authtoken": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "authtoken",
+        "description": "An authorisation token",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "signature",
+          "userId",
+          "createdAt",
+          "authType"
+        ]
+      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -41,25 +60,6 @@
             }
           }
         }
-      },
-      "authtoken": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "authtoken",
-        "description": "An authorisation token",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "signature",
-          "userId",
-          "createdAt",
-          "authType"
-        ]
       },
       "tag": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2238,13 +2238,13 @@
           }
         }
       },
-      "trickle-block": {
-        "$anchor": "trickle-block",
+      "trickle-article": {
+        "$anchor": "trickle-article",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "$patch": {
           "source": {
-            "$ref": "block"
+            "$ref": "article"
           },
           "with": {
             "properties": {
@@ -2261,11 +2261,6 @@
                     "title": "Enable Trickle",
                     "default": false
                   },
-                  "_isInherited": {
-                    "type": "boolean",
-                    "title": "Inherit settings from parent article",
-                    "default": false
-                  },
                   "_autoScroll": {
                     "type": "boolean",
                     "title": "Scroll automatically",
@@ -2276,6 +2271,12 @@
                     "title": "Scroll duration",
                     "description": "Duration of the scroll animation in milliseconds",
                     "default": 500
+                  },
+                  "_onChildren": {
+                    "type": "boolean",
+                    "title": "Enable on child blocks",
+                    "description": "Set to false on the article to use trickle at article level",
+                    "default": false
                   },
                   "_scrollTo": {
                     "type": "string",
@@ -2298,11 +2299,15 @@
                     "type": "object",
                     "title": "Button",
                     "default": {},
+                    "required": [
+                      "_styleBeforeCompletion",
+                      "_styleAfterClick"
+                    ],
                     "properties": {
                       "_isEnabled": {
                         "type": "boolean",
                         "title": "Add Trickle button",
-                        "default": true
+                        "default": false
                       },
                       "_styleBeforeCompletion": {
                         "type": "string",
@@ -2445,13 +2450,13 @@
           }
         }
       },
-      "trickle-article": {
-        "$anchor": "trickle-article",
+      "trickle-block": {
+        "$anchor": "trickle-block",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "$patch": {
           "source": {
-            "$ref": "article"
+            "$ref": "block"
           },
           "with": {
             "properties": {
@@ -2468,6 +2473,11 @@
                     "title": "Enable Trickle",
                     "default": false
                   },
+                  "_isInherited": {
+                    "type": "boolean",
+                    "title": "Inherit settings from parent article",
+                    "default": false
+                  },
                   "_autoScroll": {
                     "type": "boolean",
                     "title": "Scroll automatically",
@@ -2478,12 +2488,6 @@
                     "title": "Scroll duration",
                     "description": "Duration of the scroll animation in milliseconds",
                     "default": 500
-                  },
-                  "_onChildren": {
-                    "type": "boolean",
-                    "title": "Enable on child blocks",
-                    "description": "Set to false on the article to use trickle at article level",
-                    "default": false
                   },
                   "_scrollTo": {
                     "type": "string",
@@ -2506,15 +2510,11 @@
                     "type": "object",
                     "title": "Button",
                     "default": {},
-                    "required": [
-                      "_styleBeforeCompletion",
-                      "_styleAfterClick"
-                    ],
                     "properties": {
                       "_isEnabled": {
                         "type": "boolean",
                         "title": "Add Trickle button",
-                        "default": false
+                        "default": true
                       },
                       "_styleBeforeCompletion": {
                         "type": "string",
@@ -3269,6 +3269,42 @@
                     "title": "Show reset button (scorm_test_harness.html only)",
                     "description": "If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).",
                     "default": false
+                  }
+                }
+              }
+            },
+            "_id": {
+              "description": "Unique identifier",
+              "type": "string",
+              "isObjectId": true
+            }
+          }
+        }
+      },
+      "spoor-course": {
+        "$anchor": "spoor-course",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "course"
+          },
+          "with": {
+            "properties": {
+              "_spoor": {
+                "type": "object",
+                "title": "Spoor (SCORM)",
+                "default": {},
+                "properties": {
+                  "_messages": {
+                    "type": "object",
+                    "title": "Error messages",
+                    "description": "Optional object that can be used to amend/translate the error messages shown by the spoor extension",
+                    "default": {},
+                    "_backboneForms": {
+                      "type": "CodeEditor",
+                      "mode": "json"
+                    }
                   }
                 }
               }
@@ -4792,42 +4828,6 @@
             "description": "Unique identifier",
             "type": "string",
             "isObjectId": true
-          }
-        }
-      },
-      "spoor-course": {
-        "$anchor": "spoor-course",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "course"
-          },
-          "with": {
-            "properties": {
-              "_spoor": {
-                "type": "object",
-                "title": "Spoor (SCORM)",
-                "default": {},
-                "properties": {
-                  "_messages": {
-                    "type": "object",
-                    "title": "Error messages",
-                    "description": "Optional object that can be used to amend/translate the error messages shown by the spoor extension",
-                    "default": {},
-                    "_backboneForms": {
-                      "type": "CodeEditor",
-                      "mode": "json"
-                    }
-                  }
-                }
-              }
-            },
-            "_id": {
-              "description": "Unique identifier",
-              "type": "string",
-              "isObjectId": true
-            }
           }
         }
       },
@@ -8722,6 +8722,287 @@
           "_component"
         ]
       },
+      "blank-component": {
+        "$anchor": "blank-component",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": false
+            },
+            "_backboneForms": {
+              "type": "DisplayTitle",
+              "showInUi": false
+            }
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": false
+            },
+            "_backboneForms": {
+              "type": "TextArea",
+              "showInUi": false
+            }
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": {
+              "showInUi": false
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Is this optional?",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            },
+            "isSetting": true,
+            "inputType": "Checkbox",
+            "validators": [],
+            "help": "An optional component does not have to be completed by the user."
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "both",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component"
+        ]
+      },
       "gmcq-component": {
         "$anchor": "gmcq-component",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9368,287 +9649,6 @@
           "_component",
           "_attempts",
           "_selectable"
-        ]
-      },
-      "blank-component": {
-        "$anchor": "blank-component",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": false
-            },
-            "_backboneForms": {
-              "type": "DisplayTitle",
-              "showInUi": false
-            }
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": false
-            },
-            "_backboneForms": {
-              "type": "TextArea",
-              "showInUi": false
-            }
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": {
-              "showInUi": false
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Is this optional?",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            },
-            "isSetting": true,
-            "inputType": "Checkbox",
-            "validators": [],
-            "help": "An optional component does not have to be completed by the user."
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "both",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component"
         ]
       },
       "graphic-component": {
@@ -11104,6 +11104,604 @@
           "_component",
           "_attempts",
           "placeholder"
+        ]
+      },
+      "mcq-component": {
+        "$anchor": "mcq-component",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "half-width",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "ariaQuestion": {
+            "type": "string",
+            "title": "ARIA question",
+            "description": "This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_items": {
+            "type": "array",
+            "title": "Items",
+            "description": "The possible answers available to the learner",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "title": "Text",
+                  "description": "This text will display as the answer text",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_shouldBeSelected": {
+                  "type": "boolean",
+                  "title": "Mark this option as correct",
+                  "default": false
+                },
+                "_isPartlyCorrect": {
+                  "type": "boolean",
+                  "title": "Mark this option as partly correct",
+                  "default": false
+                },
+                "feedback": {
+                  "type": "string",
+                  "title": "Answer-specific feedback",
+                  "description": "When 'Selectable items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  },
+                  "_backboneForms": "TextArea"
+                },
+                "_score": {
+                  "type": "number",
+                  "title": "Score",
+                  "description": "If item scoring is enabled, selected item scores are summed to give the question score",
+                  "default": 0
+                }
+              }
+            }
+          },
+          "_attempts": {
+            "type": "number",
+            "title": "Allowed attempts",
+            "description": "How many attempts the learner is allowed",
+            "default": 1
+          },
+          "_canShowModelAnswer": {
+            "type": "boolean",
+            "title": "Enable correct answer toggle",
+            "description": "Allow the user to view the 'model answer' if they answer the question incorrectly",
+            "default": true
+          },
+          "_canShowFeedback": {
+            "type": "boolean",
+            "title": "Enable feedback",
+            "default": true
+          },
+          "_canShowMarking": {
+            "type": "boolean",
+            "title": "Enable marking",
+            "default": true
+          },
+          "_shouldDisplayAttempts": {
+            "type": "boolean",
+            "title": "Show number of remaining attempts",
+            "default": false
+          },
+          "_isRandom": {
+            "type": "boolean",
+            "title": "Randomise answers",
+            "default": false
+          },
+          "_recordInteraction": {
+            "type": "boolean",
+            "title": "Record interaction",
+            "description": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only",
+            "default": true
+          },
+          "_hasItemScoring": {
+            "type": "boolean",
+            "title": "Enable item scoring",
+            "description": "When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options",
+            "default": false
+          },
+          "_questionWeight": {
+            "type": "number",
+            "title": "Question weight",
+            "description": "When item scoring is disabled, this is the question score for a correct response",
+            "default": 1
+          },
+          "_selectable": {
+            "type": "number",
+            "title": "Selectable items",
+            "description": "How many items are selectable",
+            "default": 1
+          },
+          "_feedback": {
+            "type": "object",
+            "title": "Feedback",
+            "default": {},
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "description": "Leave blank to have the component's title shown instead",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "correct": {
+                "type": "string",
+                "title": "Correct feedback",
+                "description": "Correct answer feedback for this question",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                },
+                "_backboneForms": "TextArea"
+              },
+              "_incorrect": {
+                "type": "object",
+                "title": "Incorrect",
+                "default": {},
+                "properties": {
+                  "final": {
+                    "type": "string",
+                    "title": "Default incorrect feedback",
+                    "description": "Incorrect answer feedback for the final attempt",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  },
+                  "notFinal": {
+                    "type": "string",
+                    "title": "Retry feedback",
+                    "description": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  }
+                }
+              },
+              "_partlyCorrect": {
+                "type": "object",
+                "title": "Partly correct",
+                "default": {},
+                "properties": {
+                  "final": {
+                    "type": "string",
+                    "title": "Default partly correct feedback",
+                    "description": "Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  },
+                  "notFinal": {
+                    "type": "string",
+                    "title": "Retry feedback",
+                    "description": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    },
+                    "_backboneForms": "TextArea"
+                  }
+                }
+              }
+            }
+          },
+          "_buttons": {
+            "type": "object",
+            "title": "Button overrides",
+            "default": {},
+            "properties": {
+              "_submit": {
+                "type": "object",
+                "title": "Submit",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_reset": {
+                "type": "object",
+                "title": "Reset",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_showCorrectAnswer": {
+                "type": "object",
+                "title": "Show correct answer",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_hideCorrectAnswer": {
+                "type": "object",
+                "title": "Hide correct answer",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_showFeedback": {
+                "type": "object",
+                "title": "Show feedback",
+                "default": {},
+                "properties": {
+                  "buttonText": {
+                    "type": "string",
+                    "title": "Button text",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA label",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "remainingAttemptsText": {
+                "type": "string",
+                "title": "Remaining attempts label",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "remainingAttemptText": {
+                "type": "string",
+                "title": "Final attempt label",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component",
+          "_attempts",
+          "_selectable"
         ]
       },
       "media-component": {
@@ -12592,604 +13190,6 @@
           "_scaleEnd"
         ]
       },
-      "mcq-component": {
-        "$anchor": "mcq-component",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "half-width",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "ariaQuestion": {
-            "type": "string",
-            "title": "ARIA question",
-            "description": "This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_items": {
-            "type": "array",
-            "title": "Items",
-            "description": "The possible answers available to the learner",
-            "items": {
-              "type": "object",
-              "properties": {
-                "text": {
-                  "type": "string",
-                  "title": "Text",
-                  "description": "This text will display as the answer text",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  }
-                },
-                "_shouldBeSelected": {
-                  "type": "boolean",
-                  "title": "Mark this option as correct",
-                  "default": false
-                },
-                "_isPartlyCorrect": {
-                  "type": "boolean",
-                  "title": "Mark this option as partly correct",
-                  "default": false
-                },
-                "feedback": {
-                  "type": "string",
-                  "title": "Answer-specific feedback",
-                  "description": "When 'Selectable items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  },
-                  "_backboneForms": "TextArea"
-                },
-                "_score": {
-                  "type": "number",
-                  "title": "Score",
-                  "description": "If item scoring is enabled, selected item scores are summed to give the question score",
-                  "default": 0
-                }
-              }
-            }
-          },
-          "_attempts": {
-            "type": "number",
-            "title": "Allowed attempts",
-            "description": "How many attempts the learner is allowed",
-            "default": 1
-          },
-          "_canShowModelAnswer": {
-            "type": "boolean",
-            "title": "Enable correct answer toggle",
-            "description": "Allow the user to view the 'model answer' if they answer the question incorrectly",
-            "default": true
-          },
-          "_canShowFeedback": {
-            "type": "boolean",
-            "title": "Enable feedback",
-            "default": true
-          },
-          "_canShowMarking": {
-            "type": "boolean",
-            "title": "Enable marking",
-            "default": true
-          },
-          "_shouldDisplayAttempts": {
-            "type": "boolean",
-            "title": "Show number of remaining attempts",
-            "default": false
-          },
-          "_isRandom": {
-            "type": "boolean",
-            "title": "Randomise answers",
-            "default": false
-          },
-          "_recordInteraction": {
-            "type": "boolean",
-            "title": "Record interaction",
-            "description": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only",
-            "default": true
-          },
-          "_hasItemScoring": {
-            "type": "boolean",
-            "title": "Enable item scoring",
-            "description": "When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options",
-            "default": false
-          },
-          "_questionWeight": {
-            "type": "number",
-            "title": "Question weight",
-            "description": "When item scoring is disabled, this is the question score for a correct response",
-            "default": 1
-          },
-          "_selectable": {
-            "type": "number",
-            "title": "Selectable items",
-            "description": "How many items are selectable",
-            "default": 1
-          },
-          "_feedback": {
-            "type": "object",
-            "title": "Feedback",
-            "default": {},
-            "properties": {
-              "title": {
-                "type": "string",
-                "title": "Title",
-                "description": "Leave blank to have the component's title shown instead",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "correct": {
-                "type": "string",
-                "title": "Correct feedback",
-                "description": "Correct answer feedback for this question",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                },
-                "_backboneForms": "TextArea"
-              },
-              "_incorrect": {
-                "type": "object",
-                "title": "Incorrect",
-                "default": {},
-                "properties": {
-                  "final": {
-                    "type": "string",
-                    "title": "Default incorrect feedback",
-                    "description": "Incorrect answer feedback for the final attempt",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  },
-                  "notFinal": {
-                    "type": "string",
-                    "title": "Retry feedback",
-                    "description": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  }
-                }
-              },
-              "_partlyCorrect": {
-                "type": "object",
-                "title": "Partly correct",
-                "default": {},
-                "properties": {
-                  "final": {
-                    "type": "string",
-                    "title": "Default partly correct feedback",
-                    "description": "Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  },
-                  "notFinal": {
-                    "type": "string",
-                    "title": "Retry feedback",
-                    "description": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    },
-                    "_backboneForms": "TextArea"
-                  }
-                }
-              }
-            }
-          },
-          "_buttons": {
-            "type": "object",
-            "title": "Button overrides",
-            "default": {},
-            "properties": {
-              "_submit": {
-                "type": "object",
-                "title": "Submit",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_reset": {
-                "type": "object",
-                "title": "Reset",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_showCorrectAnswer": {
-                "type": "object",
-                "title": "Show correct answer",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_hideCorrectAnswer": {
-                "type": "object",
-                "title": "Hide correct answer",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_showFeedback": {
-                "type": "object",
-                "title": "Show feedback",
-                "default": {},
-                "properties": {
-                  "buttonText": {
-                    "type": "string",
-                    "title": "Button text",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "ARIA label",
-                    "default": "",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "remainingAttemptsText": {
-                "type": "string",
-                "title": "Remaining attempts label",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "remainingAttemptText": {
-                "type": "string",
-                "title": "Final attempt label",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              }
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component",
-          "_attempts",
-          "_selectable"
-        ]
-      },
       "text-component": {
         "$anchor": "text-component",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -14054,6 +14054,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Course _id",
             "required": true
           }
         ],
@@ -14061,6 +14062,19 @@
           "roles": [
             "export:adapt"
           ]
+        },
+        "summary": "Create an export zip of an Adapt course",
+        "responses": {
+          "200": {
+            "description": "The Adapt build data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/adaptbuild"
+                }
+              }
+            }
+          }
         }
       },
       "get": {
@@ -14072,6 +14086,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Build _id",
             "required": true
           }
         ],
@@ -14079,6 +14094,15 @@
           "roles": [
             "export:adapt"
           ]
+        },
+        "summary": "Retrieve an Adapt course export zip",
+        "responses": {
+          "200": {
+            "description": "Course build zip file",
+            "content": {
+              "application/zip": {}
+            }
+          }
         }
       }
     },
@@ -14093,6 +14117,130 @@
           "roles": [
             "import:adapt"
           ]
+        },
+        "summary": "Import an Adapt course",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "isDryRun": {
+                    "type": "Boolean",
+                    "default": false
+                  },
+                  "importContent": {
+                    "type": "Boolean",
+                    "default": true
+                  },
+                  "importPlugins": {
+                    "type": "Boolean",
+                    "default": true
+                  },
+                  "updatePlugins": {
+                    "type": "Boolean",
+                    "default": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "courseId": {
+                      "type": "string"
+                    },
+                    "versions": {
+                      "type": "object"
+                    },
+                    "content": {
+                      "type": "object",
+                      "properties": {
+                        "course": {
+                          "type": "number"
+                        },
+                        "config": {
+                          "type": "number"
+                        },
+                        "menu": {
+                          "type": "number"
+                        },
+                        "page": {
+                          "type": "number"
+                        },
+                        "article": {
+                          "type": "number"
+                        },
+                        "block": {
+                          "type": "number"
+                        },
+                        "component": {
+                          "type": "number"
+                        }
+                      }
+                    },
+                    "statusReport": {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "code": {
+                                "type": "string"
+                              },
+                              "data": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "warn": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "code": {
+                                "type": "string"
+                              },
+                              "data": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "info": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "code": {
+                                "type": "string"
+                              },
+                              "data": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -14106,6 +14254,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Course _id",
             "required": true
           }
         ],
@@ -14113,6 +14262,19 @@
           "roles": [
             "preview:adapt"
           ]
+        },
+        "summary": "Build a preview of an Adapt course",
+        "responses": {
+          "200": {
+            "description": "The Adapt build data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/adaptbuild"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -14126,6 +14288,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Course _id",
             "required": true
           }
         ],
@@ -14133,6 +14296,19 @@
           "roles": [
             "publish:adapt"
           ]
+        },
+        "summary": "Create a publish zip of an Adapt course",
+        "responses": {
+          "200": {
+            "description": "The Adapt build data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/adaptbuild"
+                }
+              }
+            }
+          }
         }
       },
       "get": {
@@ -14144,6 +14320,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Build _id",
             "required": true
           }
         ],
@@ -14151,6 +14328,15 @@
           "roles": [
             "publish:adapt"
           ]
+        },
+        "summary": "Retrieve an Adapt course publish zip",
+        "responses": {
+          "200": {
+            "description": "Course build zip file",
+            "content": {
+              "application/zip": {}
+            }
+          }
         }
       }
     },
@@ -14160,13 +14346,12 @@
           "assets"
         ],
         "description": "Required scopes: <span>write:assets</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "write:assets"
           ]
         },
-        "summary": "Create a new asset",
+        "summary": "Insert a new asset document",
         "requestBody": {
           "description": "The asset data",
           "content": {
@@ -14212,10 +14397,10 @@
             "read:assets"
           ]
         },
-        "summary": "Retrieve all assets",
+        "summary": "Retrieve all assets documents",
         "responses": {
           "200": {
-            "description": "List of assets",
+            "description": "The asset data",
             "content": {
               "application/json": {
                 "schema": {
@@ -14236,13 +14421,6 @@
           "assets"
         ],
         "description": "Required scopes: <span>write:assets</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:assets"
@@ -14277,19 +14455,13 @@
           "assets"
         ],
         "description": "Required scopes: <span>read:assets</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "read:assets"
           ]
         },
-        "summary": "Retrieve a single asset document",
+        "summary": "Retrieve an existing asset document",
+        "requestBody": {},
         "responses": {
           "200": {
             "description": "The asset data",
@@ -14308,13 +14480,6 @@
           "assets"
         ],
         "description": "Required scopes: <span>write:assets</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:assets"
@@ -14349,21 +14514,24 @@
           "assets"
         ],
         "description": "Required scopes: <span>write:assets</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:assets"
           ]
         },
         "summary": "Delete an existing asset document",
+        "requestBody": {},
         "responses": {
-          "204": {}
+          "204": {
+            "description": "The asset data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/asset"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -14393,7 +14561,7 @@
         "summary": "Query all assets",
         "responses": {
           "200": {
-            "description": "List of assets",
+            "description": "The asset data",
             "content": {
               "application/json": {
                 "schema": {
@@ -14414,7 +14582,6 @@
           "assets"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
@@ -14633,13 +14800,12 @@
           "content"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "write:content"
           ]
         },
-        "summary": "Create a new content",
+        "summary": "Insert a new content document",
         "requestBody": {
           "description": "The content data",
           "content": {
@@ -14685,10 +14851,10 @@
             "read:content"
           ]
         },
-        "summary": "Retrieve all content",
+        "summary": "Retrieve all content documents",
         "responses": {
           "200": {
-            "description": "List of content",
+            "description": "The content data",
             "content": {
               "application/json": {
                 "schema": {
@@ -14709,13 +14875,6 @@
           "content"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:content"
@@ -14750,19 +14909,13 @@
           "content"
         ],
         "description": "Required scopes: <span>read:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "read:content"
           ]
         },
-        "summary": "Retrieve a single content document",
+        "summary": "Retrieve an existing content document",
+        "requestBody": {},
         "responses": {
           "200": {
             "description": "The content data",
@@ -14781,13 +14934,6 @@
           "content"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:content"
@@ -14822,21 +14968,24 @@
           "content"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:content"
           ]
         },
         "summary": "Delete an existing content document",
+        "requestBody": {},
         "responses": {
-          "204": {}
+          "204": {
+            "description": "The content data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -14894,7 +15043,7 @@
         "summary": "Query all content",
         "responses": {
           "200": {
-            "description": "List of content",
+            "description": "The content data",
             "content": {
               "application/json": {
                 "schema": {
@@ -14915,7 +15064,6 @@
           "content"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
@@ -14924,41 +15072,130 @@
         "summary": "Retrieve content schema"
       }
     },
-    "/api/contentplugins/:_id": {
-      "patch": {
+    "/api/contentplugins": {
+      "get": {
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>write:contentplugin</apan>",
+        "description": "Required scopes: <span>read:contentplugins</apan>",
         "parameters": [
           {
-            "name": "_id",
-            "in": "path",
-            "required": true
+            "name": "limit",
+            "in": "query",
+            "description": "How many results should be returned Default value is 100 (max value is 250)"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return (determined from the limit value)"
           }
         ],
         "security": {
           "roles": [
-            "write:contentplugin"
+            "read:contentplugins"
           ]
+        },
+        "summary": "Retrieve all contentplugins documents",
+        "responses": {
+          "200": {
+            "description": "The contentplugin data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/contentplugin"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/contentplugins/:_id": {
+      "get": {
+        "tags": [
+          "contentplugins"
+        ],
+        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "security": {
+          "roles": [
+            "read:contentplugins"
+          ]
+        },
+        "summary": "Retrieve an existing contentplugin document",
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "The contentplugin data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/contentplugin"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "contentplugins"
+        ],
+        "description": "Required scopes: <span>write:contentplugins</apan>",
+        "security": {
+          "roles": [
+            "write:contentplugins"
+          ]
+        },
+        "summary": "Update an existing contentplugin document",
+        "requestBody": {
+          "description": "The contentplugin data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/contentplugin"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The contentplugin data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/contentplugin"
+                }
+              }
+            }
+          }
         }
       },
       "delete": {
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>write:contentplugin</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
+        "description": "Required scopes: <span>write:contentplugins</apan>",
         "security": {
           "roles": [
-            "write:contentplugin"
+            "write:contentplugins"
           ]
+        },
+        "summary": "Delete an existing contentplugin document",
+        "requestBody": {},
+        "responses": {
+          "204": {
+            "description": "The contentplugin data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/contentplugin"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -15002,26 +15239,6 @@
         }
       }
     },
-    "/api/contentplugins/:_id?": {
-      "get": {
-        "tags": [
-          "contentplugins"
-        ],
-        "description": "Required scopes: <span>read:contentplugin</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": false
-          }
-        ],
-        "security": {
-          "roles": [
-            "read:contentplugin"
-          ]
-        }
-      }
-    },
     "/api/contentplugins/install": {
       "post": {
         "tags": [
@@ -15041,12 +15258,39 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>read:contentplugin</apan>",
-        "parameters": [],
+        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results should be returned Default value is 100 (max value is 250)"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return (determined from the limit value)"
+          }
+        ],
         "security": {
           "roles": [
-            "read:contentplugin"
+            "read:contentplugins"
           ]
+        },
+        "summary": "Query all contentplugins",
+        "responses": {
+          "200": {
+            "description": "The contentplugin data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/contentplugin"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -15056,12 +15300,12 @@
           "contentplugins"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
           ]
-        }
+        },
+        "summary": "Retrieve contentplugin schema"
       }
     },
     "/api/coursethemepresets": {
@@ -15070,13 +15314,12 @@
           "coursethemepresets"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "write:content"
           ]
         },
-        "summary": "Create a new coursethemepreset",
+        "summary": "Insert a new coursethemepreset document",
         "requestBody": {
           "description": "The coursethemepreset data",
           "content": {
@@ -15122,10 +15365,10 @@
             "read:content"
           ]
         },
-        "summary": "Retrieve all coursethemepresets",
+        "summary": "Retrieve all coursethemepresets documents",
         "responses": {
           "200": {
-            "description": "List of coursethemepresets",
+            "description": "The coursethemepreset data",
             "content": {
               "application/json": {
                 "schema": {
@@ -15146,13 +15389,6 @@
           "coursethemepresets"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:content"
@@ -15187,19 +15423,13 @@
           "coursethemepresets"
         ],
         "description": "Required scopes: <span>read:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "read:content"
           ]
         },
-        "summary": "Retrieve a single coursethemepreset document",
+        "summary": "Retrieve an existing coursethemepreset document",
+        "requestBody": {},
         "responses": {
           "200": {
             "description": "The coursethemepreset data",
@@ -15218,13 +15448,6 @@
           "coursethemepresets"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:content"
@@ -15259,21 +15482,24 @@
           "coursethemepresets"
         ],
         "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:content"
           ]
         },
         "summary": "Delete an existing coursethemepreset document",
+        "requestBody": {},
         "responses": {
-          "204": {}
+          "204": {
+            "description": "The coursethemepreset data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/coursethemepreset"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -15353,7 +15579,7 @@
         "summary": "Query all coursethemepresets",
         "responses": {
           "200": {
-            "description": "List of coursethemepresets",
+            "description": "The coursethemepreset data",
             "content": {
               "application/json": {
                 "schema": {
@@ -15374,7 +15600,6 @@
           "coursethemepresets"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
@@ -15453,13 +15678,12 @@
           "roles"
         ],
         "description": "Required scopes: <span>write:roles</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "write:roles"
           ]
         },
-        "summary": "Create a new role",
+        "summary": "Insert a new role document",
         "requestBody": {
           "description": "The role data",
           "content": {
@@ -15505,10 +15729,10 @@
             "read:roles"
           ]
         },
-        "summary": "Retrieve all roles",
+        "summary": "Retrieve all roles documents",
         "responses": {
           "200": {
-            "description": "List of roles",
+            "description": "The role data",
             "content": {
               "application/json": {
                 "schema": {
@@ -15529,13 +15753,6 @@
           "roles"
         ],
         "description": "Required scopes: <span>write:roles</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:roles"
@@ -15570,19 +15787,13 @@
           "roles"
         ],
         "description": "Required scopes: <span>read:roles</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "read:roles"
           ]
         },
-        "summary": "Retrieve a single role document",
+        "summary": "Retrieve an existing role document",
+        "requestBody": {},
         "responses": {
           "200": {
             "description": "The role data",
@@ -15601,13 +15812,6 @@
           "roles"
         ],
         "description": "Required scopes: <span>write:roles</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:roles"
@@ -15642,21 +15846,24 @@
           "roles"
         ],
         "description": "Required scopes: <span>write:roles</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:roles"
           ]
         },
         "summary": "Delete an existing role document",
+        "requestBody": {},
         "responses": {
-          "204": {}
+          "204": {
+            "description": "The role data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/role"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -15686,7 +15893,7 @@
         "summary": "Query all roles",
         "responses": {
           "200": {
-            "description": "List of roles",
+            "description": "The role data",
             "content": {
               "application/json": {
                 "schema": {
@@ -15707,7 +15914,6 @@
           "roles"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
@@ -15742,13 +15948,12 @@
           "tags"
         ],
         "description": "Required scopes: <span>write:tags</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "write:tags"
           ]
         },
-        "summary": "Create a new tag",
+        "summary": "Insert a new tag document",
         "requestBody": {
           "description": "The tag data",
           "content": {
@@ -15794,10 +15999,10 @@
             "read:tags"
           ]
         },
-        "summary": "Retrieve all tags",
+        "summary": "Retrieve all tags documents",
         "responses": {
           "200": {
-            "description": "List of tags",
+            "description": "The tag data",
             "content": {
               "application/json": {
                 "schema": {
@@ -15818,13 +16023,6 @@
           "tags"
         ],
         "description": "Required scopes: <span>write:tags</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:tags"
@@ -15859,19 +16057,13 @@
           "tags"
         ],
         "description": "Required scopes: <span>read:tags</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "read:tags"
           ]
         },
-        "summary": "Retrieve a single tag document",
+        "summary": "Retrieve an existing tag document",
+        "requestBody": {},
         "responses": {
           "200": {
             "description": "The tag data",
@@ -15890,13 +16082,6 @@
           "tags"
         ],
         "description": "Required scopes: <span>write:tags</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:tags"
@@ -15931,21 +16116,24 @@
           "tags"
         ],
         "description": "Required scopes: <span>write:tags</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:tags"
           ]
         },
         "summary": "Delete an existing tag document",
+        "requestBody": {},
         "responses": {
-          "204": {}
+          "204": {
+            "description": "The tag data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tag"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -15989,7 +16177,7 @@
         "summary": "Query all tags",
         "responses": {
           "200": {
-            "description": "List of tags",
+            "description": "The tag data",
             "content": {
               "application/json": {
                 "schema": {
@@ -16010,7 +16198,6 @@
           "tags"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
@@ -16042,10 +16229,10 @@
             "read:users"
           ]
         },
-        "summary": "Retrieve all users",
+        "summary": "Retrieve all users documents",
         "responses": {
           "200": {
-            "description": "List of users",
+            "description": "The user data",
             "content": {
               "application/json": {
                 "schema": {
@@ -16066,13 +16253,6 @@
           "users"
         ],
         "description": "Required scopes: <span>write:users</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:users"
@@ -16107,19 +16287,13 @@
           "users"
         ],
         "description": "Required scopes: <span>read:users</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "read:users"
           ]
         },
-        "summary": "Retrieve a single user document",
+        "summary": "Retrieve an existing user document",
+        "requestBody": {},
         "responses": {
           "200": {
             "description": "The user data",
@@ -16138,13 +16312,6 @@
           "users"
         ],
         "description": "Required scopes: <span>write:users</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:users"
@@ -16179,21 +16346,24 @@
           "users"
         ],
         "description": "Required scopes: <span>write:users</apan>",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true
-          }
-        ],
         "security": {
           "roles": [
             "write:users"
           ]
         },
         "summary": "Delete an existing user document",
+        "requestBody": {},
         "responses": {
-          "204": {}
+          "204": {
+            "description": "The user data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/user"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -16261,7 +16431,7 @@
         "summary": "Query all users",
         "responses": {
           "200": {
-            "description": "List of users",
+            "description": "The user data",
             "content": {
               "application/json": {
                 "schema": {
@@ -16282,7 +16452,6 @@
           "users"
         ],
         "description": "Required scopes: <span>read:schema</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:schema"
