@@ -2,7 +2,8 @@
 The following modules are included in Adapt authoring v1.0.0-rc.2 core package of modules, and are supported by the core dev team.
 
 | Name | Version | Description |
-| - | :-: | - || [adapt-authoring-adaptframework](https://github.com/adaptlearning/adapt-authoring-adaptframework) | 0.0.1 | Adapt framework integration for the Adapt authoring tool |
+| - | :-: | - |
+| [adapt-authoring-adaptframework](https://github.com/adaptlearning/adapt-authoring-adaptframework) | 0.0.1 | Adapt framework integration for the Adapt authoring tool |
 | [adapt-authoring-api](https://github.com/adaptlearning/adapt-authoring-api) | 0.0.1 | Abstract module for creating APIs |
 | [adapt-authoring-assets](https://github.com/adapt-security/adapt-authoring-assets) | 0.0.1 | Assets API for Adapt Authoring Tool |
 | [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 0.0.1 | Authentication + authorisation module for the Adapt authoring tool |
@@ -36,4 +37,3 @@ The following modules are included in Adapt authoring v1.0.0-rc.2 core package o
 | [adapt-authoring-ui](https://github.com/adaptlearning/adapt-authoring-ui) | 0.0.1 | Front-end application for the Adapt authoring tool |
 | [adapt-authoring-users](https://github.com/adapt-security/adapt-authoring-users) | 0.0.1 | Module for managing users |
 | [at-utils](https://github.com/adapt-security/at-utils#readme) | 0.4.5 | A collection of CLI helper utilities for maintaining installations of the Adapt authoring tool. |
-

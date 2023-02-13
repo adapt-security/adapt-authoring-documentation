@@ -64,8 +64,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=slider-course">slider-course</a></li>
 <li><a href="#/schemas-reference?id=spoor-config">spoor-config</a></li>
 <li><a href="#/schemas-reference?id=spoor-course">spoor-course</a></li>
-<li><a href="#/schemas-reference?id=spoorcontent">spoorcontent</a></li>
-<li><a href="#/schemas-reference?id=spoorcourse">spoorcourse</a></li>
 <li><a href="#/schemas-reference?id=tag">tag</a></li>
 <li><a href="#/schemas-reference?id=tags">tags</a></li>
 <li><a href="#/schemas-reference?id=text-component">text-component</a></li>
@@ -88,21 +86,65 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 
 <h3 id="accordion-component" class="dep">accordion-component</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
 <td>string</td>
+<td><pre>"full-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Select the headings to find out more."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the accordion items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
 <td></td>
-<td>Unique identifier</td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
 </tr>
 </table>
       
       <h3 id="accordion-course" class="dep">accordion-course</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accordion</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accordion.ariaRegion</td>
 <td>string</td>
-<td></td>
-<td>Unique identifier</td>
+<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
+<td> </td>
 </tr>
 </table>
       
@@ -112,13 +154,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 
 <div class="required">Fields in bold are required.</div>
 
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
 <td>action</td>
 <td>string</td>
 <td></td>
@@ -154,17 +190,29 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td></td>
 <td>Versions of framework and plugins used in the build</td>
 </tr>
-</table>
-      
-      <h3 id="article" class="dep">article</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<tr class="">
 <td>_id</td>
 <td>string</td>
 <td></td>
 <td>Unique identifier</td>
 </tr>
-<tr class="">
+</table>
+      
+      <h3 id="article" class="dep">article</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of blocks within this article the learner must complete in order for this article to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+</table>
+      
+      <h3 id="assessment-article" class="dep">assessment-article</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=article">article</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>_assessment</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -314,337 +362,149 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>false</pre></td>
 <td>Allows the user to view the 'model answer' should they answer the question incorrectly</td>
 </tr>
-<tr class="">
-<td>_trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._autoScroll</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._scrollDuration</td>
-<td>number</td>
-<td><pre>500</pre></td>
-<td>Duration of the scroll animation in milliseconds</td>
-</tr>
-<tr class="">
-<td>_trickle._onChildren</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Set to false on the article to use trickle at article level</td>
-</tr>
-<tr class="">
-<td>_trickle._scrollTo</td>
-<td>string</td>
-<td><pre>"@block +1"</pre></td>
-<td>Set how trickle scrolls</td>
-</tr>
-<tr class="">
-<td>_trickle._completionAttribute</td>
-<td>string</td>
-<td><pre>"_isComplete"</pre></td>
-<td>Set which attribute is used to determine completion</td>
-</tr>
-<tr class="">
-<td>_trickle._button</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._styleBeforeCompletion</td>
-<td>string</td>
-<td><pre>"hidden"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._styleAfterClick</td>
-<td>string</td>
-<td><pre>"hidden"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._isFullWidth</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._autoHide</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible</td>
-</tr>
-<tr class="">
-<td>_trickle._button._showEndOfPage</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._className</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._hasIcon</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow</td>
-</tr>
-<tr class="">
-<td>_trickle._button.text</td>
-<td>string</td>
-<td><pre>"Continue"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button.ariaLabel</td>
-<td>string</td>
-<td><pre>"Continue"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button.startText</td>
-<td>string</td>
-<td><pre>"Begin"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button.startAriaLabel</td>
-<td>string</td>
-<td><pre>"Begin"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button.finalText</td>
-<td>string</td>
-<td><pre>"Finish"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button.finalAriaLabel</td>
-<td>string</td>
-<td><pre>"Finish"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button._component</td>
-<td>string</td>
-<td><pre>"trickle-button"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking._isCompletionRequired</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking._isLockedOnRevisit</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the article title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the article body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the article instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage._large</td>
-<td>string</td>
-<td></td>
-<td>Large background image - used on desktop</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage._medium</td>
-<td>string</td>
-<td></td>
-<td>Medium background image - used on tablet</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage._small</td>
-<td>string</td>
-<td></td>
-<td>Small background image - used on mobile</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles._backgroundRepeat</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles._backgroundSize</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles._backgroundPosition</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>The first value is the horizontal position and the second value is the vertical</td>
-</tr>
-<tr class="">
-<td>_vanilla._responsiveClasses</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._responsiveClasses._large</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Large CSS class - used on desktop</td>
-</tr>
-<tr class="">
-<td>_vanilla._responsiveClasses._medium</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Medium CSS class - used on tablet</td>
-</tr>
-<tr class="">
-<td>_vanilla._responsiveClasses._small</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Small CSS class - used on mobile</td>
-</tr>
-</table>
-      
-      <h3 id="assessment-article" class="dep">assessment-article</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
 </table>
       
       <h3 id="assessment-block" class="dep">assessment-block</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=block">block</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_assessment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._quizBankID</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use</td>
 </tr>
 </table>
       
       <h3 id="assessment-course" class="dep">assessment-course</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_assessment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_assessment._isPercentageBased</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness</td>
+</tr>
+<tr class="">
+<td>_assessment._scoreToPass</td>
+<td>number</td>
+<td><pre>60</pre></td>
+<td>The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based</td>
+</tr>
+<tr class="">
+<td>_assessment._correctToPass</td>
+<td>number</td>
+<td><pre>60</pre></td>
+<td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
 </tr>
 </table>
       
       <h3 id="assessmentresults-component" class="dep">assessmentResults-component</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
 <td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"inview"</pre></td>
+<td>Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
 <td></td>
-<td>Unique identifier</td>
+<td> </td>
 </tr>
 </table>
       
       <h3 id="assessmentresults-course" class="dep">assessmentResults-course</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._assessmentResults</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._assessmentResults.ariaRegion</td>
 <td>string</td>
-<td></td>
-<td>Unique identifier</td>
+<td><pre>"Assessment results."</pre></td>
+<td> </td>
 </tr>
 </table>
       
@@ -654,13 +514,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 
 <div class="required">Fields in bold are required.</div>
 
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
 <td>description</td>
 <td>string</td>
 <td></td>
@@ -726,6 +580,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td></td>
 <td>If using an external asset, this should be the URL to the asset</td>
 </tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
 <tr class="required">
 <td>createdAt</td>
 <td>string</td>
@@ -756,11 +616,27 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <div class="desc">Adds properties relating to authoring</div>
 
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+<div class="extension">This is a merge schema</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>createdAt</td>
 <td>string</td>
 <td></td>
-<td>Unique identifier</td>
+<td>Date that the data was created</td>
+</tr>
+<tr class="required">
+<td>createdBy</td>
+<td>string</td>
+<td></td>
+<td>Author of the data</td>
+</tr>
+<tr class="required">
+<td>updatedAt</td>
+<td>string</td>
+<td></td>
+<td>Date that the data was last modified</td>
 </tr>
 </table>
       
@@ -770,13 +646,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 
 <div class="required">Fields in bold are required.</div>
 
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
 <td>signature</td>
 <td>string</td>
 <td></td>
@@ -806,17 +676,27 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td></td>
 <td>Type of authentication used with this token</td>
 </tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
 </table>
       
       <h3 id="authuser" class="dep">authuser</h3>
       
       <div class="desc">Extra user properties related to auth</div>
 
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+<div class="extension">This is a merge schema</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>authType</td>
 <td>string</td>
 <td></td>
-<td>Unique identifier</td>
+<td>Types of authentication used with this user</td>
 </tr>
 </table>
       
@@ -834,461 +714,373 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="blank-component" class="dep">blank-component</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
 <td>string</td>
-<td></td>
-<td>Unique identifier</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
 </tr>
 </table>
       
       <h3 id="block" class="dep">block</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
-<td>_assessment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._quizBankID</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use</td>
-</tr>
-<tr class="">
-<td>_trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._isInherited</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._autoScroll</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._scrollDuration</td>
-<td>number</td>
-<td><pre>500</pre></td>
-<td>Duration of the scroll animation in milliseconds</td>
-</tr>
-<tr class="">
-<td>_trickle._scrollTo</td>
-<td>string</td>
-<td><pre>"@block +1"</pre></td>
-<td>Set how trickle scrolls</td>
-</tr>
-<tr class="">
-<td>_trickle._completionAttribute</td>
-<td>string</td>
-<td><pre>"_isComplete"</pre></td>
-<td>Set which attribute is used to determine completion</td>
-</tr>
-<tr class="">
-<td>_trickle._button</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._styleBeforeCompletion</td>
-<td>string</td>
-<td><pre>"hidden"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._styleAfterClick</td>
-<td>string</td>
-<td><pre>"hidden"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._isFullWidth</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._autoHide</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible</td>
-</tr>
-<tr class="">
-<td>_trickle._button._showEndOfPage</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._className</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button._hasIcon</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow</td>
-</tr>
-<tr class="">
-<td>_trickle._button.text</td>
-<td>string</td>
-<td><pre>"Continue"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button.ariaLabel</td>
-<td>string</td>
-<td><pre>"Continue"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._button.startText</td>
-<td>string</td>
-<td><pre>"Begin"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button.startAriaLabel</td>
-<td>string</td>
-<td><pre>"Begin"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button.finalText</td>
-<td>string</td>
-<td><pre>"Finish"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button.finalAriaLabel</td>
-<td>string</td>
-<td><pre>"Finish"</pre></td>
-<td>Only on articles when 'Enable on child blocks' set to true</td>
-</tr>
-<tr class="">
-<td>_trickle._button._component</td>
-<td>string</td>
-<td><pre>"trickle-button"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking._isCompletionRequired</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._stepLocking._isLockedOnRevisit</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the block title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the block body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage._large</td>
-<td>string</td>
-<td></td>
-<td>Large background image - used on desktop</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage._medium</td>
-<td>string</td>
-<td></td>
-<td>Medium background image - used on tablet</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundImage._small</td>
-<td>string</td>
-<td></td>
-<td>Small background image - used on mobile</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles._backgroundRepeat</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles._backgroundSize</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container</td>
-</tr>
-<tr class="">
-<td>_vanilla._backgroundStyles._backgroundPosition</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>The first value is the horizontal position and the second value is the vertical</td>
-</tr>
-<tr class="">
-<td>_vanilla._minimumHeights</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._minimumHeights._large</td>
+      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_trackingId</td>
 <td>number</td>
 <td><pre>0</pre></td>
-<td>Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_vanilla._minimumHeights._medium</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_vanilla._minimumHeights._small</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_vanilla._responsiveClasses</td>
-<td>object</td>
-<td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_vanilla._responsiveClasses._large</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Large CSS class - used on desktop</td>
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_vanilla._responsiveClasses._medium</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Medium CSS class - used on tablet</td>
-</tr>
-<tr class="">
-<td>_vanilla._responsiveClasses._small</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Small CSS class - used on mobile</td>
-</tr>
-<tr class="">
-<td>_vanilla._isDividerBlock</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, applies a divider class to the block</td>
-</tr>
-<tr class="">
-<td>_vanilla._paddingTop</td>
-<td>string</td>
-<td><pre>"standard"</pre></td>
-<td>Changes the value of the blocks top spacing. Double: Doubles the blocks top spacing. Standard: Retains the standard blocks top spacing. Half: Halves the blocks top spacing. Remove: Removes the blocks top spacing. The default value is `standard`.</td>
-</tr>
-<tr class="">
-<td>_vanilla._paddingBottom</td>
-<td>string</td>
-<td><pre>"standard"</pre></td>
-<td>Changes the value of the blocks bottom spacing. Double: Doubles the blocks bottom spacing. Standard: Retains the standard blocks bottom spacing. Half: Halves the blocks bottom spacing. Remove: Removes the blocks bottom spacing. The default value is `standard`.</td>
-</tr>
-<tr class="">
-<td>_vanilla._componentVerticalAlignment</td>
-<td>string</td>
-<td><pre>"top"</pre></td>
-<td>Defines the vertical alignment of the child component(s) in relation to the block. Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block. The default alignment is `top`.</td>
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed</td>
 </tr>
 </table>
       
       <h3 id="bookmarking-contentobject" class="dep">bookmarking-contentobject</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=contentobject">contentobject</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_bookmarking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether Bookmarking is enabled or disabled for this page of the course</td>
+</tr>
+<tr class="">
+<td>_bookmarking._level</td>
 <td>string</td>
-<td></td>
-<td>Unique identifier</td>
+<td><pre>"inherit"</pre></td>
+<td>Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course</td>
 </tr>
 </table>
       
       <h3 id="bookmarking-course" class="dep">bookmarking-course</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_bookmarking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_bookmarking._level</td>
 <td>string</td>
-<td></td>
-<td>Unique identifier</td>
+<td><pre>"component"</pre></td>
+<td>Allows you to set whether Bookmarking is done at page, block or component level</td>
+</tr>
+<tr class="">
+<td>_bookmarking._showPrompt</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
+</tr>
+<tr class="">
+<td>_bookmarking.title</td>
+<td>string</td>
+<td><pre>"Bookmarking"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking.body</td>
+<td>string</td>
+<td><pre>"Would you like to continue where you left off?"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons.yes</td>
+<td>string</td>
+<td><pre>"Yes"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_bookmarking._buttons.no</td>
+<td>string</td>
+<td><pre>"No"</pre></td>
+<td> </td>
 </tr>
 </table>
       
       <h3 id="boxmenu-contentobject" class="dep">boxMenu-contentobject</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=contentobject">contentobject</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_boxMenu</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._renderAsGroup</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
 </tr>
 </table>
       
       <h3 id="boxmenu-course" class="dep">boxMenu-course</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._boxMenu</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._boxMenu.durationLabel</td>
+<td>string</td>
+<td><pre>"Duration:"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundImage</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundImage._large</td>
 <td>string</td>
 <td></td>
-<td>Unique identifier</td>
+<td>Large background image - used on desktop</td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundImage._medium</td>
+<td>string</td>
+<td></td>
+<td>Medium background image - used on tablet</td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundImage._small</td>
+<td>string</td>
+<td></td>
+<td>Small background image - used on mobile</td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundStyles</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundStyles._backgroundRepeat</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundStyles._backgroundSize</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible</td>
+</tr>
+<tr class="">
+<td>_boxMenu._backgroundStyles._backgroundPosition</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._textAlignment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._textAlignment._title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the menu title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._textAlignment._body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the menu body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._textAlignment._instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the menu instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundImage</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundImage._large</td>
+<td>string</td>
+<td></td>
+<td>Large background image - used on desktop</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundImage._medium</td>
+<td>string</td>
+<td></td>
+<td>Medium background image - used on tablet</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundImage._small</td>
+<td>string</td>
+<td></td>
+<td>Small background image - used on mobile</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundStyles</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundStyles._backgroundRepeat</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundStyles._backgroundSize</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._backgroundStyles._backgroundPosition</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._minimumHeights</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._minimumHeights._large</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._minimumHeights._medium</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
+</tr>
+<tr class="">
+<td>_boxMenu._menuHeader._minimumHeights._small</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
 </tr>
 </table>
       
       <h3 id="component" class="dep">component</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
+      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>_component</td>
 <td>string</td>
 <td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
-<td> </td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
 </tr>
 <tr class="">
-<td>_vanilla</td>
+<td>properties</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_vanilla._textAlignment._instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
 </tr>
 </table>
       
@@ -1297,12 +1089,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
 <td>_type</td>
 <td>string</td>
 <td><pre>"config"</pre></td>
@@ -1620,6 +1406,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>""</pre></td>
 <td>Set the browsers that are supported. Overwrites the framework defaults if not empty. Current defaults are: 'last 2 chrome versions, last 2 firefox versions, last 2 safari versions, last 2 edge versions, last 2 ios_saf versions, last 2 and_chr versions, firefox esr'</td>
 </tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
 <tr class="required">
 <td>createdAt</td>
 <td>string</td>
@@ -1879,12 +1671,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
 <td>_type</td>
 <td>string</td>
 <td></td>
@@ -2016,6 +1802,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>""</pre></td>
 <td> </td>
 </tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
 <tr class="required">
 <td>createdAt</td>
 <td>string</td>
@@ -2044,31 +1836,2439 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="contentobject" class="dep">contentobject</h3>
       
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing a menu/page - this is the subtitle that will be displayed on the menu/page</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this CSS class/es will be applied to the <html> element whenever this is the active page in the course. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used. To be used only on submenus</td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of articles within this page the learner must complete in order for this page to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="contentplugin" class="dep">contentplugin</h3>
+      
+      <div class="desc">An Adapt framework plugin</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>Unique name for the plugin</td>
+</tr>
+<tr class="">
+<td>displayName</td>
+<td>string</td>
+<td></td>
+<td>User-friendly name for the plugin</td>
+</tr>
+<tr class="required">
+<td>version</td>
+<td>string</td>
+<td></td>
+<td>Version number for the plugin</td>
+</tr>
+<tr class="required">
+<td>framework</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>isLocalInstall</td>
+<td>boolean</td>
+<td></td>
+<td>Whether the plugin has been installed locally (as opposed to with the CLI)</td>
+</tr>
+<tr class="">
+<td>isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>targetAttribute</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>pluginDependencies</td>
+<td>object</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_id</td>
 <td>string</td>
 <td></td>
 <td>Unique identifier</td>
 </tr>
 <tr class="">
-<td>_bookmarking</td>
+<td>isAddedByDefault</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the plugin should be added by default for new courses</td>
+</tr>
+</table>
+      
+      <h3 id="course" class="dep">course</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_bookmarking._isEnabled</td>
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>"Submit"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>"Submit"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>"Reset"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>"Reset"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>"Show correct answer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>"Show correct answer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>"Show your answer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>"Show your answer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>"Show feedback"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>"Show feedback"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>"attempts remaining"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>"final attempt"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="courseasset" class="dep">courseasset</h3>
+      
+      <div class="desc">Metadata related to where an asset is used in a course</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>courseId</td>
+<td>string</td>
+<td></td>
+<td>Course record unique ID</td>
+</tr>
+<tr class="required">
+<td>contentId</td>
+<td>string</td>
+<td></td>
+<td>The ID for the content record that uses this asset</td>
+</tr>
+<tr class="required">
+<td>assetId</td>
+<td>string</td>
+<td></td>
+<td>Asset record unique ID</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="coursethemepreset" class="dep">coursethemepreset</h3>
+      
+      <div class="desc">A reusable collection of theme settings</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>displayName</td>
+<td>string</td>
+<td></td>
+<td>User-friendly name for the settings</td>
+</tr>
+<tr class="required">
+<td>parentTheme</td>
+<td>string</td>
+<td></td>
+<td>Name of the theme these settings should be applied to</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td></td>
+<td>The theme settings</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="defaultplugins" class="dep">defaultplugins</h3>
+      
+      <div class="desc">Defines whether plugins should be added as default</div>
+
+<div class="extension">Patches <a href="#/schemas-reference?id=contentplugin">contentplugin</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>isAddedByDefault</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the plugin should be added by default for new courses</td>
+</tr>
+</table>
+      
+      <h3 id="gmcq-component" class="dep">gmcq-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>Controls whether Bookmarking is enabled or disabled for this page of the course</td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
 </tr>
 <tr class="">
-<td>_bookmarking._level</td>
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>When item scoring is disabled, this is the question score for a correct response</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
 <td>string</td>
-<td><pre>"inherit"</pre></td>
-<td>Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
 </tr>
 <tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="gmcq-course" class="dep">gmcq-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="graphic-component" class="dep">graphic-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+</table>
+      
+      <h3 id="graphic-course" class="dep">graphic-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="hotgraphic-component" class="dep">hotgraphic-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"full-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This instruction text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="hotgraphic-course" class="dep">hotgraphic-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.ariaRegion</td>
+<td>string</td>
+<td><pre>"Image with selectable areas. Select each button to show more information."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.item</td>
+<td>string</td>
+<td><pre>"Item {{{itemNumber}}} of {{{totalItems}}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._hotgraphic.popupPagination</td>
+<td>string</td>
+<td><pre>"{{itemNumber}} / {{totalItems}}"</pre></td>
+<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
+</tr>
+</table>
+      
+      <h3 id="languagepicker-config" class="dep">languagePicker-config</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=config">config</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Language Picker extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_languagePicker.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
+</tr>
+<tr class="">
+<td>_languagePicker.displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Header text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker.body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Introductory or explanatory text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker._showOnCourseLoad</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Language Picker should be displayed on course load or not</td>
+</tr>
+<tr class="">
+<td>_languagePicker._languagePickerIconClass</td>
+<td>string</td>
+<td><pre>"icon-language-2"</pre></td>
+<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
+</tr>
+<tr class="">
+<td>_languagePicker._restoreStateOnLanguageChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
+</tr>
+<tr class="">
+<td>_languagePicker._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._languages</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="languagepicker-course" class="dep">languagePicker-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.navigationBarLabel</td>
+<td>string</td>
+<td><pre>"Select course language"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.languageSelector</td>
+<td>string</td>
+<td><pre>"Language selector"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="localauthuser" class="dep">localauthuser</h3>
+      
+      <div class="desc">Extra user properties related to local auth</div>
+
+<div class="extension">Merges with <a href="#/schemas-reference?id=user">user</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>isTempLocked</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the user account has been temporarily locked</td>
+</tr>
+<tr class="">
+<td>isPermLocked</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the user account has been permanently locked</td>
+</tr>
+<tr class="">
+<td>password</td>
+<td>string</td>
+<td></td>
+<td>Password for the user</td>
+</tr>
+<tr class="">
+<td>failedLoginAttempts</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>The number of failed login attempts</td>
+</tr>
+<tr class="">
+<td>lastFailedLoginAttempt</td>
+<td>string</td>
+<td></td>
+<td>Timestamp of the last failed login attempt</td>
+</tr>
+</table>
+      
+      <h3 id="log" class="dep">log</h3>
+      
+      <div class="desc">A system log message</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>level</td>
+<td>string</td>
+<td></td>
+<td>The priority level of the log message</td>
+</tr>
+<tr class="">
+<td>module</td>
+<td>string</td>
+<td></td>
+<td>Module responsible for creating the log</td>
+</tr>
+<tr class="">
+<td>timestamp</td>
+<td>string</td>
+<td></td>
+<td>Time log was created</td>
+</tr>
+<tr class="">
+<td>data</td>
+<td>array</td>
+<td></td>
+<td>The data to be logged</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="matching-component" class="dep">matching-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"half-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Choose an option from each dropdown list and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="matching-course" class="dep">matching-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching.ariaRegion</td>
+<td>string</td>
+<td><pre>"Matching. Select from lists and then submit."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="mcq-component" class="dep">mcq-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"half-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>When item scoring is disabled, this is the question score for a correct response</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="mcq-course" class="dep">mcq-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._mcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._mcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="media-component" class="dep">media-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Select the play button to start the video."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"play"</pre></td>
+<td>Defines what media event should trigger completion of this component</td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+</table>
+      
+      <h3 id="media-course" class="dep">media-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.ariaRegion</td>
+<td>string</td>
+<td><pre>"Media player{{#any _transcript._inlineTranscript _transcript._externalTranscript}} and transcript{{/any}}."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.skipToTranscript</td>
+<td>string</td>
+<td><pre>"Skip to transcript"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.playText</td>
+<td>string</td>
+<td><pre>"Play"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.pauseText</td>
+<td>string</td>
+<td><pre>"Pause"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.stopText</td>
+<td>string</td>
+<td><pre>"Stop"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.audioPlayerText</td>
+<td>string</td>
+<td><pre>"Audio Player"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.videoPlayerText</td>
+<td>string</td>
+<td><pre>"Video Player"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.tracksText</td>
+<td>string</td>
+<td><pre>"Captions/Subtitles"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.timeSliderText</td>
+<td>string</td>
+<td><pre>"Time Slider"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.muteText</td>
+<td>string</td>
+<td><pre>"Mute Toggle"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.unmuteStatusText</td>
+<td>string</td>
+<td><pre>"Unmute"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.muteStatusText</td>
+<td>string</td>
+<td><pre>"Mute"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.volumeSliderText</td>
+<td>string</td>
+<td><pre>"Volume Slider"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.fullscreenText</td>
+<td>string</td>
+<td><pre>"Fullscreen"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.goFullscreenText</td>
+<td>string</td>
+<td><pre>"Go Fullscreen"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.turnOffFullscreenText</td>
+<td>string</td>
+<td><pre>"Turn off Fullscreen"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.noneText</td>
+<td>string</td>
+<td><pre>"None"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.skipBackText</td>
+<td>string</td>
+<td><pre>"Skip back %1 seconds"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.allyVolumeControlText</td>
+<td>string</td>
+<td><pre>"Use Up/Down Arrow keys to increase or decrease volume."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._media.progessHelpText</td>
+<td>string</td>
+<td><pre>"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="narrative-component" class="dep">narrative-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"full-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="narrative-course" class="dep">narrative-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slide show. Select the next button to progress."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="pagelevelprogress-article" class="dep">pageLevelProgress-article</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=article">article</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="pagelevelprogress-block" class="dep">pageLevelProgress-block</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=block">block</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="pagelevelprogress-component" class="dep">pageLevelProgress-component</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=component">component</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="pagelevelprogress-contentobject" class="dep">pageLevelProgress-contentobject</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=contentobject">contentobject</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>_pageLevelProgress</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2098,19 +4298,99 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>false</pre></td>
 <td>Controls whether the progress calculations will include assessments</td>
 </tr>
-<tr class="">
-<td>_boxMenu</td>
+</table>
+      
+      <h3 id="pagelevelprogress-course" class="dep">pageLevelProgress-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_boxMenu._renderAsGroup</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text</td>
+<td>_globals._pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
 </tr>
 <tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgress</td>
+<td>string</td>
+<td><pre>"Page sections"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgressIndicatorBar</td>
+<td>string</td>
+<td><pre>"Page progress. Use this to listen to the list of regions in this topic and whether they're completed. You can jump directly to any that are incomplete or which sound particularly interesting. {{percentageComplete}}%"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgressMenuBar</td>
+<td>string</td>
+<td><pre>"Page completion {{percentageComplete}}%"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.pageLevelProgressEnd</td>
+<td>string</td>
+<td><pre>"You have reached the end of the list of page sections."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress.optionalContent</td>
+<td>string</td>
+<td><pre>"Optional content"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._pageLevelProgress._navOrder</td>
+<td>number</td>
+<td><pre>90</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._showPageCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._isShownInNavigationBar</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._showAtCourseLevel</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
+</tr>
+</table>
+      
+      <h3 id="resources-contentobject" class="dep">resources-contentobject</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=contentobject">contentobject</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>_resources</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2128,7 +4408,1737 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td></td>
 <td> </td>
 </tr>
+</table>
+      
+      <h3 id="resources-course" class="dep">resources-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
 <tr class="">
+<td>_globals._resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._resources.resources</td>
+<td>string</td>
+<td><pre>"Additional resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Resources extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_resources._drawerOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>The order in which this extension should appear as a drawer item</td>
+</tr>
+<tr class="">
+<td>_resources.title</td>
+<td>string</td>
+<td><pre>"Resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources.description</td>
+<td>string</td>
+<td><pre>"Select here to view resources for this course"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.all</td>
+<td>string</td>
+<td><pre>"All"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.document</td>
+<td>string</td>
+<td><pre>"Documents"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.media</td>
+<td>string</td>
+<td><pre>"Media"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.link</td>
+<td>string</td>
+<td><pre>"Links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.allAria</td>
+<td>string</td>
+<td><pre>"View all resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.documentAria</td>
+<td>string</td>
+<td><pre>"View document resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.mediaAria</td>
+<td>string</td>
+<td><pre>"View media resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.linkAria</td>
+<td>string</td>
+<td><pre>"View resource links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._resourcesItems</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="role" class="dep">role</h3>
+      
+      <div class="desc">A user role</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>shortName</td>
+<td>string</td>
+<td></td>
+<td>Short name for the role</td>
+</tr>
+<tr class="required">
+<td>displayName</td>
+<td>string</td>
+<td></td>
+<td>Human-readable representation of the role</td>
+</tr>
+<tr class="">
+<td>extends</td>
+<td>string</td>
+<td></td>
+<td>The parent role that this role should inherit scopes from</td>
+</tr>
+<tr class="required">
+<td>scopes</td>
+<td>array</td>
+<td></td>
+<td>Scopes relevant to this role</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="slider-component" class="dep">slider-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Drag the slider to make your choice and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="slider-course" class="dep">slider-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._slider</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._slider.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slider. Respond to the question by selecting a value on the scale and then submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._slider.labelStart</td>
+<td>string</td>
+<td><pre>"Start of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._slider.labelEnd</td>
+<td>string</td>
+<td><pre>"End of the scale"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="spoor-config" class="dep">spoor-config</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=config">config</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_spoor</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, the plugin will try to find and track to a SCORM conformant LMS. Uncheck to switch off SCORM tracking</td>
+</tr>
+<tr class="">
+<td>_spoor._tracking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._tracking._shouldStoreResponses</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, the user's responses to questions will be saved and restored in each session. Note: this setting should be enabled in the majority of cases</td>
+</tr>
+<tr class="">
+<td>_spoor._tracking._shouldStoreAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a history of the user's responses to questions will be saved and restored in each session. Note: this setting should be disabled in the majority of cases</td>
+</tr>
+<tr class="">
+<td>_spoor._tracking._shouldRecordInteractions</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, the course will record the user's responses to questions to the cmi.interactions SCORM data fields</td>
+</tr>
+<tr class="">
+<td>_spoor._reporting</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._reporting._onTrackingCriteriaMet</td>
+<td>string</td>
+<td><pre>"completed"</pre></td>
+<td>What status to report back to the LMS when the tracking criteria are met</td>
+</tr>
+<tr class="">
+<td>_spoor._reporting._onAssessmentFailure</td>
+<td>string</td>
+<td><pre>"incomplete"</pre></td>
+<td>What status to report back to the LMS when the assessment is failed</td>
+</tr>
+<tr class="">
+<td>_spoor._reporting._resetStatusOnLanguageChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the the course status will be reset to 'incomplete' when the user changes the course language</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._scormVersion</td>
+<td>string</td>
+<td><pre>"1.2"</pre></td>
+<td>The SCORM standard to use - SCORM 1.2 or SCORM 2004 4th Edition</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._showDebugWindow</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a popup window will be shown on course launch that gives detailed information about what SCORM calls are being made. This can be very useful for debugging SCORM issues. Note that this popup window will appear automatically if the SCORM code encounters an error, even if this is set to false</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._commitOnStatusChange</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, a 'commit' call will be made any time the lesson_status is changed</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._commitOnAnyChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 'commit' (save all data) call will be made any time a value is changed. Note that enabling this setting may have a detrimental impact on the server and should only be used if absolutely necessary and only after careful load testing. Consider trying a lower value for 'Frequency of automatic commits' before changing this setting</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._timedCommitFrequency</td>
+<td>number</td>
+<td><pre>10</pre></td>
+<td>The frequency (in minutes) at which a 'commit' call should be made automatically. Set to 0 to disable automatic commits altogether</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._maxCommitRetries</td>
+<td>number</td>
+<td><pre>5</pre></td>
+<td>If a 'commit' call fails, this setting controls how many times it should be retried before giving up and throwing an error</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._commitRetryDelay</td>
+<td>number</td>
+<td><pre>2000</pre></td>
+<td>How much of a delay (in milliseconds) to leave between commit retries</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._suppressErrors</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, error messages will not be displayed when SCORM tracking problems occur</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._commitOnVisibilityChangeHidden</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, a 'commit' call will be made whenever the course window is hidden/minimised. Requires a browser that supports the 'visibilitychange' event</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._manifestIdentifier</td>
+<td>string</td>
+<td><pre>"adapt_manifest"</pre></td>
+<td>Sets the 'identifier' attribute in the imsmanifest.xml</td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._exitStateIfIncomplete</td>
+<td>string</td>
+<td><pre>"auto"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._exitStateIfComplete</td>
+<td>string</td>
+<td><pre>"auto"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._advancedSettings._setCompletedWhenFailed</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, `cmi.completion_status` will be set to "completed" if the assessment is "failed". Only valid for SCORM 2004, where the logic for completion and success is separate.</td>
+</tr>
+<tr class="">
+<td>_spoor._showCookieLmsResetButton</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).</td>
+</tr>
+</table>
+      
+      <h3 id="spoor-course" class="dep">spoor-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_spoor</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_spoor._messages</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
+</tr>
+</table>
+      
+      <h3 id="tag" class="dep">tag</h3>
+      
+      <div class="desc">Tag metadata applied to other objects</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>title</td>
+<td>string</td>
+<td></td>
+<td>The tag title</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="tags" class="dep">tags</h3>
+      
+      <div class="desc">Extra properties to define tags</div>
+
+<div class="extension">This is a merge schema</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>tags</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>Add tags by entering one or more words, separated with a comma (,)</td>
+</tr>
+</table>
+      
+      <h3 id="text-component" class="dep">text-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="text-course" class="dep">text-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._text</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._text.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="textinput-component" class="dep">textinput-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="textinput-course" class="dep">textinput-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._textinput</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._textinput.ariaRegion</td>
+<td>string</td>
+<td><pre>"Text input. Type your answer and then submit."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="trickle-article" class="dep">trickle-article</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=article">article</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._autoScroll</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._scrollDuration</td>
+<td>number</td>
+<td><pre>500</pre></td>
+<td>Duration of the scroll animation in milliseconds</td>
+</tr>
+<tr class="">
+<td>_trickle._onChildren</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Set to false on the article to use trickle at article level</td>
+</tr>
+<tr class="">
+<td>_trickle._scrollTo</td>
+<td>string</td>
+<td><pre>"@block +1"</pre></td>
+<td>Set how trickle scrolls</td>
+</tr>
+<tr class="">
+<td>_trickle._completionAttribute</td>
+<td>string</td>
+<td><pre>"_isComplete"</pre></td>
+<td>Set which attribute is used to determine completion</td>
+</tr>
+<tr class="">
+<td>_trickle._button</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._styleBeforeCompletion</td>
+<td>string</td>
+<td><pre>"hidden"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._styleAfterClick</td>
+<td>string</td>
+<td><pre>"hidden"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._isFullWidth</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._autoHide</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible</td>
+</tr>
+<tr class="">
+<td>_trickle._button._showEndOfPage</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._className</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._hasIcon</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow</td>
+</tr>
+<tr class="">
+<td>_trickle._button.text</td>
+<td>string</td>
+<td><pre>"Continue"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button.ariaLabel</td>
+<td>string</td>
+<td><pre>"Continue"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button.startText</td>
+<td>string</td>
+<td><pre>"Begin"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button.startAriaLabel</td>
+<td>string</td>
+<td><pre>"Begin"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button.finalText</td>
+<td>string</td>
+<td><pre>"Finish"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button.finalAriaLabel</td>
+<td>string</td>
+<td><pre>"Finish"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button._component</td>
+<td>string</td>
+<td><pre>"trickle-button"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking._isCompletionRequired</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking._isLockedOnRevisit</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="trickle-block" class="dep">trickle-block</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=block">block</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._isInherited</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._autoScroll</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._scrollDuration</td>
+<td>number</td>
+<td><pre>500</pre></td>
+<td>Duration of the scroll animation in milliseconds</td>
+</tr>
+<tr class="">
+<td>_trickle._scrollTo</td>
+<td>string</td>
+<td><pre>"@block +1"</pre></td>
+<td>Set how trickle scrolls</td>
+</tr>
+<tr class="">
+<td>_trickle._completionAttribute</td>
+<td>string</td>
+<td><pre>"_isComplete"</pre></td>
+<td>Set which attribute is used to determine completion</td>
+</tr>
+<tr class="">
+<td>_trickle._button</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._styleBeforeCompletion</td>
+<td>string</td>
+<td><pre>"hidden"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._styleAfterClick</td>
+<td>string</td>
+<td><pre>"hidden"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._isFullWidth</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._autoHide</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible</td>
+</tr>
+<tr class="">
+<td>_trickle._button._showEndOfPage</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._className</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button._hasIcon</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow</td>
+</tr>
+<tr class="">
+<td>_trickle._button.text</td>
+<td>string</td>
+<td><pre>"Continue"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button.ariaLabel</td>
+<td>string</td>
+<td><pre>"Continue"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button.startText</td>
+<td>string</td>
+<td><pre>"Begin"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button.startAriaLabel</td>
+<td>string</td>
+<td><pre>"Begin"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button.finalText</td>
+<td>string</td>
+<td><pre>"Finish"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button.finalAriaLabel</td>
+<td>string</td>
+<td><pre>"Finish"</pre></td>
+<td>Only on articles when 'Enable on child blocks' set to true</td>
+</tr>
+<tr class="">
+<td>_trickle._button._component</td>
+<td>string</td>
+<td><pre>"trickle-button"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking._isCompletionRequired</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._stepLocking._isLockedOnRevisit</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="trickle-config" class="dep">trickle-config</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=config">config</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._logState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Trickle extension logs its state to the browser console.</td>
+</tr>
+<tr class="">
+<td>_trickle._completionAttribute</td>
+<td>string</td>
+<td><pre>"_isComplete"</pre></td>
+<td>Set which attribute is used to determine completion</td>
+</tr>
+</table>
+      
+      <h3 id="trickle-course" class="dep">trickle-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._trickle.incompleteContent</td>
+<td>string</td>
+<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="user" class="dep">user</h3>
+      
+      <div class="desc">A system user</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>email</td>
+<td>string</td>
+<td></td>
+<td>Email address for the user</td>
+</tr>
+<tr class="">
+<td>firstName</td>
+<td>string</td>
+<td><pre>"Adapt"</pre></td>
+<td>First name of the user</td>
+</tr>
+<tr class="">
+<td>lastName</td>
+<td>string</td>
+<td><pre>"User"</pre></td>
+<td>Last name of the user</td>
+</tr>
+<tr class="">
+<td>isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Whether the user is able to access the system</td>
+</tr>
+<tr class="">
+<td>lastAccess</td>
+<td>string</td>
+<td></td>
+<td>Timestamp of the last access</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="">
+<td>roles</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>Roles assigned to this user</td>
+</tr>
+<tr class="required">
+<td>authType</td>
+<td>string</td>
+<td></td>
+<td>Types of authentication used with this user</td>
+</tr>
+</table>
+      
+      <h3 id="userroles" class="dep">userroles</h3>
+      
+      <div class="desc">Extra user properties for specifying roles</div>
+
+<div class="extension">Patches <a href="#/schemas-reference?id=user">user</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>roles</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>Roles assigned to this user</td>
+</tr>
+</table>
+      
+      <h3 id="vanilla-article" class="dep">vanilla-article</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=article">article</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_vanilla</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the article title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the article body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the article instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage._large</td>
+<td>string</td>
+<td></td>
+<td>Large background image - used on desktop</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage._medium</td>
+<td>string</td>
+<td></td>
+<td>Medium background image - used on tablet</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage._small</td>
+<td>string</td>
+<td></td>
+<td>Small background image - used on mobile</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles._backgroundRepeat</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles._backgroundSize</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles._backgroundPosition</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses._large</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Large CSS class - used on desktop</td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses._medium</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Medium CSS class - used on tablet</td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses._small</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Small CSS class - used on mobile</td>
+</tr>
+</table>
+      
+      <h3 id="vanilla-block" class="dep">vanilla-block</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=block">block</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_vanilla</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the block title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the block body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage._large</td>
+<td>string</td>
+<td></td>
+<td>Large background image - used on desktop</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage._medium</td>
+<td>string</td>
+<td></td>
+<td>Medium background image - used on tablet</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundImage._small</td>
+<td>string</td>
+<td></td>
+<td>Small background image - used on mobile</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles._backgroundRepeat</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles._backgroundSize</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container</td>
+</tr>
+<tr class="">
+<td>_vanilla._backgroundStyles._backgroundPosition</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_vanilla._minimumHeights</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._minimumHeights._large</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped</td>
+</tr>
+<tr class="">
+<td>_vanilla._minimumHeights._medium</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped</td>
+</tr>
+<tr class="">
+<td>_vanilla._minimumHeights._small</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped</td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses._large</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Large CSS class - used on desktop</td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses._medium</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Medium CSS class - used on tablet</td>
+</tr>
+<tr class="">
+<td>_vanilla._responsiveClasses._small</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Small CSS class - used on mobile</td>
+</tr>
+<tr class="">
+<td>_vanilla._isDividerBlock</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, applies a divider class to the block</td>
+</tr>
+<tr class="">
+<td>_vanilla._paddingTop</td>
+<td>string</td>
+<td><pre>"standard"</pre></td>
+<td>Changes the value of the blocks top spacing. Double: Doubles the blocks top spacing. Standard: Retains the standard blocks top spacing. Half: Halves the blocks top spacing. Remove: Removes the blocks top spacing. The default value is `standard`.</td>
+</tr>
+<tr class="">
+<td>_vanilla._paddingBottom</td>
+<td>string</td>
+<td><pre>"standard"</pre></td>
+<td>Changes the value of the blocks bottom spacing. Double: Doubles the blocks bottom spacing. Standard: Retains the standard blocks bottom spacing. Half: Halves the blocks bottom spacing. Remove: Removes the blocks bottom spacing. The default value is `standard`.</td>
+</tr>
+<tr class="">
+<td>_vanilla._componentVerticalAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>Defines the vertical alignment of the child component(s) in relation to the block. Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block. The default alignment is `top`.</td>
+</tr>
+</table>
+      
+      <h3 id="vanilla-component" class="dep">vanilla-component</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=component">component</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_vanilla</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+<tr class="">
+<td>_vanilla._textAlignment._instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
+</tr>
+</table>
+      
+      <h3 id="vanilla-contentobject" class="dep">vanilla-contentobject</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=contentobject">contentobject</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>_vanilla</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -2310,1569 +6320,9 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 </table>
       
-      <h3 id="contentplugin" class="dep">contentplugin</h3>
-      
-      <div class="desc">An Adapt framework plugin</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>name</td>
-<td>string</td>
-<td></td>
-<td>Unique name for the plugin</td>
-</tr>
-<tr class="">
-<td>displayName</td>
-<td>string</td>
-<td></td>
-<td>User-friendly name for the plugin</td>
-</tr>
-<tr class="required">
-<td>version</td>
-<td>string</td>
-<td></td>
-<td>Version number for the plugin</td>
-</tr>
-<tr class="required">
-<td>framework</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="required">
-<td>isLocalInstall</td>
-<td>boolean</td>
-<td></td>
-<td>Whether the plugin has been installed locally (as opposed to with the CLI)</td>
-</tr>
-<tr class="">
-<td>isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="required">
-<td>type</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>targetAttribute</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>description</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>pluginDependencies</td>
-<td>object</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>isAddedByDefault</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Whether the plugin should be added by default for new courses</td>
-</tr>
-</table>
-      
-      <h3 id="course" class="dep">course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
-<td>_globals</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._text</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._text.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.ariaRegion</td>
-<td>string</td>
-<td><pre>"Image with selectable areas. Select each button to show more information."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.item</td>
-<td>string</td>
-<td><pre>"Item {{{itemNumber}}} of {{{totalItems}}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._hotgraphic.popupPagination</td>
-<td>string</td>
-<td><pre>"{{itemNumber}} / {{totalItems}}"</pre></td>
-<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
-</tr>
-<tr class="">
-<td>_globals._graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.ariaRegion</td>
-<td>string</td>
-<td><pre>"Slide show. Select the next button to progress."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._assessmentResults</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._assessmentResults.ariaRegion</td>
-<td>string</td>
-<td><pre>"Assessment results."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._accordion</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._accordion.ariaRegion</td>
-<td>string</td>
-<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._gmcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._trickle.incompleteContent</td>
-<td>string</td>
-<td><pre>"There is incomplete content above. You must complete this before you can proceed through the course."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._matching</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._matching.ariaRegion</td>
-<td>string</td>
-<td><pre>"Matching. Select from lists and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgress</td>
-<td>string</td>
-<td><pre>"Page sections"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgressIndicatorBar</td>
-<td>string</td>
-<td><pre>"Page progress. Use this to listen to the list of regions in this topic and whether they're completed. You can jump directly to any that are incomplete or which sound particularly interesting. {{percentageComplete}}%"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgressMenuBar</td>
-<td>string</td>
-<td><pre>"Page completion {{percentageComplete}}%"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.pageLevelProgressEnd</td>
-<td>string</td>
-<td><pre>"You have reached the end of the list of page sections."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress.optionalContent</td>
-<td>string</td>
-<td><pre>"Optional content"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._pageLevelProgress._navOrder</td>
-<td>number</td>
-<td><pre>90</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._languagePicker</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._languagePicker.navigationBarLabel</td>
-<td>string</td>
-<td><pre>"Select course language"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._languagePicker.languageSelector</td>
-<td>string</td>
-<td><pre>"Language selector"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._mcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._mcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._textinput</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._textinput.ariaRegion</td>
-<td>string</td>
-<td><pre>"Text input. Type your answer and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider.ariaRegion</td>
-<td>string</td>
-<td><pre>"Slider. Respond to the question by selecting a value on the scale and then submit."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider.labelStart</td>
-<td>string</td>
-<td><pre>"Start of the scale"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._slider.labelEnd</td>
-<td>string</td>
-<td><pre>"End of the scale"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._boxMenu</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._boxMenu.durationLabel</td>
-<td>string</td>
-<td><pre>"Duration:"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._resources</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._resources.resources</td>
-<td>string</td>
-<td><pre>"Additional resources."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.ariaRegion</td>
-<td>string</td>
-<td><pre>"Media player{{#any _transcript._inlineTranscript _transcript._externalTranscript}} and transcript{{/any}}."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.skipToTranscript</td>
-<td>string</td>
-<td><pre>"Skip to transcript"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.playText</td>
-<td>string</td>
-<td><pre>"Play"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.pauseText</td>
-<td>string</td>
-<td><pre>"Pause"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.stopText</td>
-<td>string</td>
-<td><pre>"Stop"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.audioPlayerText</td>
-<td>string</td>
-<td><pre>"Audio Player"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.videoPlayerText</td>
-<td>string</td>
-<td><pre>"Video Player"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.tracksText</td>
-<td>string</td>
-<td><pre>"Captions/Subtitles"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.timeSliderText</td>
-<td>string</td>
-<td><pre>"Time Slider"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.muteText</td>
-<td>string</td>
-<td><pre>"Mute Toggle"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.unmuteStatusText</td>
-<td>string</td>
-<td><pre>"Unmute"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.muteStatusText</td>
-<td>string</td>
-<td><pre>"Mute"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.volumeSliderText</td>
-<td>string</td>
-<td><pre>"Volume Slider"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.fullscreenText</td>
-<td>string</td>
-<td><pre>"Fullscreen"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.goFullscreenText</td>
-<td>string</td>
-<td><pre>"Go Fullscreen"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.turnOffFullscreenText</td>
-<td>string</td>
-<td><pre>"Turn off Fullscreen"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.noneText</td>
-<td>string</td>
-<td><pre>"None"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.skipBackText</td>
-<td>string</td>
-<td><pre>"Skip back %1 seconds"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.allyVolumeControlText</td>
-<td>string</td>
-<td><pre>"Use Up/Down Arrow keys to increase or decrease volume."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._media.progessHelpText</td>
-<td>string</td>
-<td><pre>"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_assessment._isPercentageBased</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness</td>
-</tr>
-<tr class="">
-<td>_assessment._scoreToPass</td>
-<td>number</td>
-<td><pre>60</pre></td>
-<td>The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based</td>
-</tr>
-<tr class="">
-<td>_assessment._correctToPass</td>
-<td>number</td>
-<td><pre>60</pre></td>
-<td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
-</tr>
-<tr class="">
-<td>_bookmarking</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Bookmarking extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_bookmarking._level</td>
-<td>string</td>
-<td><pre>"component"</pre></td>
-<td>Allows you to set whether Bookmarking is done at page, block or component level</td>
-</tr>
-<tr class="">
-<td>_bookmarking._showPrompt</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
-</tr>
-<tr class="">
-<td>_bookmarking.title</td>
-<td>string</td>
-<td><pre>"Bookmarking"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking.body</td>
-<td>string</td>
-<td><pre>"Would you like to continue where you left off?"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons.yes</td>
-<td>string</td>
-<td><pre>"Yes"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_bookmarking._buttons.no</td>
-<td>string</td>
-<td><pre>"No"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._showPageCompletion</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._isShownInNavigationBar</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_pageLevelProgress._showAtCourseLevel</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
-</tr>
-<tr class="">
-<td>_spoor</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._messages</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td>Optional object that can be used to amend/translate the error messages shown by the spoor extension</td>
-</tr>
-<tr class="">
-<td>_boxMenu</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundImage</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundImage._large</td>
-<td>string</td>
-<td></td>
-<td>Large background image - used on desktop</td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundImage._medium</td>
-<td>string</td>
-<td></td>
-<td>Medium background image - used on tablet</td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundImage._small</td>
-<td>string</td>
-<td></td>
-<td>Small background image - used on mobile</td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundStyles</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundStyles._backgroundRepeat</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundStyles._backgroundSize</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible</td>
-</tr>
-<tr class="">
-<td>_boxMenu._backgroundStyles._backgroundPosition</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>The first value is the horizontal position and the second value is the vertical</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._textAlignment</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._textAlignment._title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the menu title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._textAlignment._body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the menu body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._textAlignment._instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Set the alignment of the menu instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundImage</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundImage._large</td>
-<td>string</td>
-<td></td>
-<td>Large background image - used on desktop</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundImage._medium</td>
-<td>string</td>
-<td></td>
-<td>Medium background image - used on tablet</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundImage._small</td>
-<td>string</td>
-<td></td>
-<td>Small background image - used on mobile</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundStyles</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundStyles._backgroundRepeat</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundStyles._backgroundSize</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._backgroundStyles._backgroundPosition</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>The first value is the horizontal position and the second value is the vertical</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._minimumHeights</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._minimumHeights._large</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._minimumHeights._medium</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_boxMenu._menuHeader._minimumHeights._small</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>Minimum height should only be used in instances where the menu header height needs to be greater than the content e.g. to prevent a background image being cropped</td>
-</tr>
-<tr class="">
-<td>_resources</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Resources extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_resources._drawerOrder</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>The order in which this extension should appear as a drawer item</td>
-</tr>
-<tr class="">
-<td>_resources.title</td>
-<td>string</td>
-<td><pre>"Resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources.description</td>
-<td>string</td>
-<td><pre>"Select here to view resources for this course"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.all</td>
-<td>string</td>
-<td><pre>"All"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.document</td>
-<td>string</td>
-<td><pre>"Documents"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.media</td>
-<td>string</td>
-<td><pre>"Media"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterButtons.link</td>
-<td>string</td>
-<td><pre>"Links"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.allAria</td>
-<td>string</td>
-<td><pre>"View all resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.documentAria</td>
-<td>string</td>
-<td><pre>"View document resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.mediaAria</td>
-<td>string</td>
-<td><pre>"View media resources"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._filterAria.linkAria</td>
-<td>string</td>
-<td><pre>"View resource links"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_resources._resourcesItems</td>
-<td>array</td>
-<td></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="courseasset" class="dep">courseasset</h3>
-      
-      <div class="desc">Metadata related to where an asset is used in a course</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>courseId</td>
-<td>string</td>
-<td></td>
-<td>Course record unique ID</td>
-</tr>
-<tr class="required">
-<td>contentId</td>
-<td>string</td>
-<td></td>
-<td>The ID for the content record that uses this asset</td>
-</tr>
-<tr class="required">
-<td>assetId</td>
-<td>string</td>
-<td></td>
-<td>Asset record unique ID</td>
-</tr>
-</table>
-      
-      <h3 id="coursethemepreset" class="dep">coursethemepreset</h3>
-      
-      <div class="desc">A reusable collection of theme settings</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>displayName</td>
-<td>string</td>
-<td></td>
-<td>User-friendly name for the settings</td>
-</tr>
-<tr class="required">
-<td>parentTheme</td>
-<td>string</td>
-<td></td>
-<td>Name of the theme these settings should be applied to</td>
-</tr>
-<tr class="">
-<td>properties</td>
-<td>object</td>
-<td></td>
-<td>The theme settings</td>
-</tr>
-</table>
-      
-      <h3 id="defaultplugins" class="dep">defaultplugins</h3>
-      
-      <div class="desc">Defines whether plugins should be added as default</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="gmcq-component" class="dep">gmcq-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="gmcq-course" class="dep">gmcq-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="graphic-component" class="dep">graphic-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="graphic-course" class="dep">graphic-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="hotgraphic-component" class="dep">hotgraphic-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="hotgraphic-course" class="dep">hotgraphic-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="languagepicker-config" class="dep">languagePicker-config</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="languagepicker-course" class="dep">languagePicker-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="localauthuser" class="dep">localauthuser</h3>
-      
-      <div class="desc">Extra user properties related to local auth</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="log" class="dep">log</h3>
-      
-      <div class="desc">A system log message</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>level</td>
-<td>string</td>
-<td></td>
-<td>The priority level of the log message</td>
-</tr>
-<tr class="">
-<td>module</td>
-<td>string</td>
-<td></td>
-<td>Module responsible for creating the log</td>
-</tr>
-<tr class="">
-<td>timestamp</td>
-<td>string</td>
-<td></td>
-<td>Time log was created</td>
-</tr>
-<tr class="">
-<td>data</td>
-<td>array</td>
-<td></td>
-<td>The data to be logged</td>
-</tr>
-</table>
-      
-      <h3 id="matching-component" class="dep">matching-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="matching-course" class="dep">matching-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="mcq-component" class="dep">mcq-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="mcq-course" class="dep">mcq-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="media-component" class="dep">media-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="media-course" class="dep">media-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="narrative-component" class="dep">narrative-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="narrative-course" class="dep">narrative-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="pagelevelprogress-article" class="dep">pageLevelProgress-article</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="pagelevelprogress-block" class="dep">pageLevelProgress-block</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="pagelevelprogress-component" class="dep">pageLevelProgress-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="pagelevelprogress-contentobject" class="dep">pageLevelProgress-contentobject</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="pagelevelprogress-course" class="dep">pageLevelProgress-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="resources-contentobject" class="dep">resources-contentobject</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="resources-course" class="dep">resources-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="role" class="dep">role</h3>
-      
-      <div class="desc">A user role</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>shortName</td>
-<td>string</td>
-<td></td>
-<td>Short name for the role</td>
-</tr>
-<tr class="required">
-<td>displayName</td>
-<td>string</td>
-<td></td>
-<td>Human-readable representation of the role</td>
-</tr>
-<tr class="">
-<td>extends</td>
-<td>string</td>
-<td></td>
-<td>The parent role that this role should inherit scopes from</td>
-</tr>
-<tr class="required">
-<td>scopes</td>
-<td>array</td>
-<td></td>
-<td>Scopes relevant to this role</td>
-</tr>
-</table>
-      
-      <h3 id="slider-component" class="dep">slider-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="slider-course" class="dep">slider-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="spoor-config" class="dep">spoor-config</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="spoor-course" class="dep">spoor-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="spoorcontent" class="dep">spoorcontent</h3>
-      
-      <div class="desc">Extra properties related to spoor</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="spoorcourse" class="dep">spoorcourse</h3>
-      
-      <div class="desc">Extra properties related to spoor</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="tag" class="dep">tag</h3>
-      
-      <div class="desc">Tag metadata applied to other objects</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>title</td>
-<td>string</td>
-<td></td>
-<td>The tag title</td>
-</tr>
-</table>
-      
-      <h3 id="tags" class="dep">tags</h3>
-      
-      <div class="desc">Extra properties to define tags</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="text-component" class="dep">text-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="text-course" class="dep">text-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="textinput-component" class="dep">textinput-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="textinput-course" class="dep">textinput-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="trickle-article" class="dep">trickle-article</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="trickle-block" class="dep">trickle-block</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="trickle-config" class="dep">trickle-config</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="trickle-course" class="dep">trickle-course</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="user" class="dep">user</h3>
-      
-      <div class="desc">A system user</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>email</td>
-<td>string</td>
-<td></td>
-<td>Email address for the user</td>
-</tr>
-<tr class="">
-<td>firstName</td>
-<td>string</td>
-<td><pre>"Adapt"</pre></td>
-<td>First name of the user</td>
-</tr>
-<tr class="">
-<td>lastName</td>
-<td>string</td>
-<td><pre>"User"</pre></td>
-<td>Last name of the user</td>
-</tr>
-<tr class="">
-<td>isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Whether the user is able to access the system</td>
-</tr>
-<tr class="">
-<td>lastAccess</td>
-<td>string</td>
-<td></td>
-<td>Timestamp of the last access</td>
-</tr>
-<tr class="">
-<td>roles</td>
-<td>array</td>
-<td><pre>[]</pre></td>
-<td>Roles assigned to this user</td>
-</tr>
-<tr class="required">
-<td>authType</td>
-<td>string</td>
-<td></td>
-<td>Types of authentication used with this user</td>
-</tr>
-</table>
-      
-      <h3 id="userroles" class="dep">userroles</h3>
-      
-      <div class="desc">Extra user properties for specifying roles</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="vanilla-article" class="dep">vanilla-article</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="vanilla-block" class="dep">vanilla-block</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="vanilla-component" class="dep">vanilla-component</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="vanilla-contentobject" class="dep">vanilla-contentobject</h3>
-      
-      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
       <h3 id="vanilla-theme" class="dep">vanilla-theme</h3>
       
       <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
 <td>_global</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -4477,6 +6927,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"#FFFFFF"</pre></td>
 <td>Defines the shadow text/icon colour. Should be a colour that provides good contrast against the shadow colour</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
 </tr>
 </table>
       
