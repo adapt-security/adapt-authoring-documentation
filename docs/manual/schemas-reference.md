@@ -1455,66 +1455,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Set which attribute is used to determine completion</td>
 </tr>
 <tr class="">
-<td>_languagePicker</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Language Picker extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_languagePicker.title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
-</tr>
-<tr class="">
-<td>_languagePicker.displayTitle</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Header text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker.body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Introductory or explanatory text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker._showOnCourseLoad</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Language Picker should be displayed on course load or not</td>
-</tr>
-<tr class="">
-<td>_languagePicker._languagePickerIconClass</td>
-<td>string</td>
-<td><pre>"icon-language-2"</pre></td>
-<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
-</tr>
-<tr class="">
-<td>_languagePicker._restoreStateOnLanguageChange</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
-</tr>
-<tr class="">
-<td>_languagePicker._classes</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._languages</td>
-<td>array</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
 <td>_spoor</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1663,6 +1603,66 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).</td>
+</tr>
+<tr class="">
+<td>_languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Language Picker extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_languagePicker.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
+</tr>
+<tr class="">
+<td>_languagePicker.displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Header text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker.body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Introductory or explanatory text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker._showOnCourseLoad</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Language Picker should be displayed on course load or not</td>
+</tr>
+<tr class="">
+<td>_languagePicker._languagePickerIconClass</td>
+<td>string</td>
+<td><pre>"icon-language-2"</pre></td>
+<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
+</tr>
+<tr class="">
+<td>_languagePicker._restoreStateOnLanguageChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
+</tr>
+<tr class="">
+<td>_languagePicker._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._languages</td>
+<td>array</td>
+<td></td>
+<td> </td>
 </tr>
 </table>
       

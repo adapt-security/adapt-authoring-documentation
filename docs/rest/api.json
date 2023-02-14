@@ -37,6 +37,26 @@
           "authType"
         ]
       },
+      "tag": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "tag",
+        "description": "Tag metadata applied to other objects",
+        "type": "object",
+        "properties": {
+          "title": {
+            "description": "The tag title",
+            "type": "string"
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -60,26 +80,6 @@
             }
           }
         }
-      },
-      "tag": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tag",
-        "description": "Tag metadata applied to other objects",
-        "type": "object",
-        "properties": {
-          "title": {
-            "description": "The tag title",
-            "type": "string"
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "title"
-        ]
       },
       "tags": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1330,54 +1330,6 @@
           }
         }
       },
-      "bookmarking-contentobject": {
-        "$anchor": "bookmarking-contentobject",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "contentobject"
-          },
-          "with": {
-            "properties": {
-              "_bookmarking": {
-                "type": "object",
-                "title": "Bookmarking",
-                "default": {},
-                "required": [
-                  "_level"
-                ],
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Enable Bookmarking",
-                    "description": "Controls whether Bookmarking is enabled or disabled for this page of the course",
-                    "default": true
-                  },
-                  "_level": {
-                    "type": "string",
-                    "title": "Level",
-                    "description": "Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course",
-                    "default": "inherit",
-                    "enum": [
-                      "inherit",
-                      "page",
-                      "block",
-                      "component"
-                    ],
-                    "_backboneForms": "Select"
-                  }
-                }
-              }
-            },
-            "_id": {
-              "description": "Unique identifier",
-              "type": "string",
-              "isObjectId": true
-            }
-          }
-        }
-      },
       "bookmarking-course": {
         "$anchor": "bookmarking-course",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1458,6 +1410,54 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            },
+            "_id": {
+              "description": "Unique identifier",
+              "type": "string",
+              "isObjectId": true
+            }
+          }
+        }
+      },
+      "bookmarking-contentobject": {
+        "$anchor": "bookmarking-contentobject",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "contentobject"
+          },
+          "with": {
+            "properties": {
+              "_bookmarking": {
+                "type": "object",
+                "title": "Bookmarking",
+                "default": {},
+                "required": [
+                  "_level"
+                ],
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Enable Bookmarking",
+                    "description": "Controls whether Bookmarking is enabled or disabled for this page of the course",
+                    "default": true
+                  },
+                  "_level": {
+                    "type": "string",
+                    "title": "Level",
+                    "description": "Whether you want to inherit the 'Level' setting from Project settings or override it for this page of the course",
+                    "default": "inherit",
+                    "enum": [
+                      "inherit",
+                      "page",
+                      "block",
+                      "component"
+                    ],
+                    "_backboneForms": "Select"
                   }
                 }
               }
@@ -2450,6 +2450,49 @@
           }
         }
       },
+      "trickle-config": {
+        "$anchor": "trickle-config",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "config"
+          },
+          "with": {
+            "properties": {
+              "_trickle": {
+                "type": "object",
+                "title": "Trickle",
+                "default": {},
+                "properties": {
+                  "_logState": {
+                    "type": "boolean",
+                    "title": "Log state",
+                    "default": false,
+                    "description": "Controls whether the Trickle extension logs its state to the browser console."
+                  },
+                  "_completionAttribute": {
+                    "type": "string",
+                    "title": "Completion attribute",
+                    "description": "Set which attribute is used to determine completion",
+                    "default": "_isComplete",
+                    "enum": [
+                      "_isInteractionComplete",
+                      "_isComplete"
+                    ],
+                    "_backboneForms": "Select"
+                  }
+                }
+              }
+            },
+            "_id": {
+              "description": "Unique identifier",
+              "type": "string",
+              "isObjectId": true
+            }
+          }
+        }
+      },
       "trickle-block": {
         "$anchor": "trickle-block",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2657,37 +2700,26 @@
           }
         }
       },
-      "trickle-config": {
-        "$anchor": "trickle-config",
+      "boxMenu-contentobject": {
+        "$anchor": "boxMenu-contentobject",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "$patch": {
           "source": {
-            "$ref": "config"
+            "$ref": "contentobject"
           },
           "with": {
             "properties": {
-              "_trickle": {
+              "_boxMenu": {
                 "type": "object",
-                "title": "Trickle",
+                "title": "Box Menu",
                 "default": {},
                 "properties": {
-                  "_logState": {
+                  "_renderAsGroup": {
                     "type": "boolean",
-                    "title": "Log state",
-                    "default": false,
-                    "description": "Controls whether the Trickle extension logs its state to the browser console."
-                  },
-                  "_completionAttribute": {
-                    "type": "string",
-                    "title": "Completion attribute",
-                    "description": "Set which attribute is used to determine completion",
-                    "default": "_isComplete",
-                    "enum": [
-                      "_isInteractionComplete",
-                      "_isComplete"
-                    ],
-                    "_backboneForms": "Select"
+                    "title": "Make this a parent group of menu items",
+                    "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
+                    "default": false
                   }
                 }
               }
@@ -2727,38 +2759,6 @@
                         }
                       }
                     }
-                  }
-                }
-              }
-            },
-            "_id": {
-              "description": "Unique identifier",
-              "type": "string",
-              "isObjectId": true
-            }
-          }
-        }
-      },
-      "boxMenu-contentobject": {
-        "$anchor": "boxMenu-contentobject",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "contentobject"
-          },
-          "with": {
-            "properties": {
-              "_boxMenu": {
-                "type": "object",
-                "title": "Box Menu",
-                "default": {},
-                "properties": {
-                  "_renderAsGroup": {
-                    "type": "boolean",
-                    "title": "Make this a parent group of menu items",
-                    "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
-                    "default": false
                   }
                 }
               }
@@ -5473,132 +5473,6 @@
               }
             }
           },
-          "_languagePicker": {
-            "type": "object",
-            "title": "Language Picker",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Language Picker",
-                "description": "Controls whether the Language Picker extension is enabled or disabled",
-                "default": false
-              },
-              "title": {
-                "type": "string",
-                "title": "Browser window title",
-                "description": "Text to be shown in the browser's title bar when the language picker is displayed",
-                "default": ""
-              },
-              "displayTitle": {
-                "type": "string",
-                "title": "Language Picker title",
-                "description": "Header text for the Language Picker",
-                "default": ""
-              },
-              "body": {
-                "type": "string",
-                "title": "Language Picker body",
-                "description": "Introductory or explanatory text for the Language Picker",
-                "default": ""
-              },
-              "_showOnCourseLoad": {
-                "type": "boolean",
-                "title": "Show on course load",
-                "description": "Controls whether the Language Picker should be displayed on course load or not",
-                "default": true
-              },
-              "_languagePickerIconClass": {
-                "type": "string",
-                "title": "Icon class",
-                "description": "Your default options here are: icon-globe, icon-language-1, icon-language-2",
-                "default": "icon-language-2"
-              },
-              "_restoreStateOnLanguageChange": {
-                "type": "boolean",
-                "title": "Restore course state on language change",
-                "description": "Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this",
-                "default": false
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Custom classes",
-                "description": "",
-                "default": ""
-              },
-              "_languages": {
-                "type": "array",
-                "title": "Languages",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "_language": {
-                      "type": "string",
-                      "title": "Language code",
-                      "description": "This text must match the name of the language-specific folder located in the course root, e.g. en, fr, es",
-                      "default": ""
-                    },
-                    "_direction": {
-                      "type": "string",
-                      "title": "Text direction",
-                      "description": "",
-                      "default": "ltr",
-                      "enum": [
-                        "ltr",
-                        "rtl"
-                      ],
-                      "_backboneForms": "Select"
-                    },
-                    "_isDisabled": {
-                      "type": "boolean",
-                      "title": "Disable selection of this language",
-                      "description": "Allows you to disable selection of this language. This can be useful in situations where localisation into a particular language has not yet been completed",
-                      "default": false
-                    },
-                    "displayName": {
-                      "type": "string",
-                      "title": "Language name",
-                      "description": "A user friendly name for the language, e.g. English, Français, Español",
-                      "default": ""
-                    },
-                    "warningTitle": {
-                      "type": "string",
-                      "title": "Confirm Title",
-                      "description": "This text appears as the header of the dialog confirming the learner's intent to change languages",
-                      "default": ""
-                    },
-                    "warningMessage": {
-                      "type": "string",
-                      "title": "Confirm body",
-                      "description": "This text appears as the body of the dialog confirming the learner's intent to change languages.  Note: the warning message should indicate that any progress will be lost when the language is switched",
-                      "default": ""
-                    },
-                    "_buttons": {
-                      "type": "object",
-                      "title": "Prompt buttons",
-                      "default": {},
-                      "required": [
-                        "yes",
-                        "no"
-                      ],
-                      "properties": {
-                        "yes": {
-                          "type": "string",
-                          "title": "Confirm button text",
-                          "default": "Yes"
-                        },
-                        "no": {
-                          "type": "string",
-                          "title": "Cancel button text",
-                          "default": "No"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "_spoor": {
             "type": "object",
             "title": "Spoor (SCORM)",
@@ -5783,6 +5657,132 @@
                 "title": "Show reset button (scorm_test_harness.html only)",
                 "description": "If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).",
                 "default": false
+              }
+            }
+          },
+          "_languagePicker": {
+            "type": "object",
+            "title": "Language Picker",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Language Picker",
+                "description": "Controls whether the Language Picker extension is enabled or disabled",
+                "default": false
+              },
+              "title": {
+                "type": "string",
+                "title": "Browser window title",
+                "description": "Text to be shown in the browser's title bar when the language picker is displayed",
+                "default": ""
+              },
+              "displayTitle": {
+                "type": "string",
+                "title": "Language Picker title",
+                "description": "Header text for the Language Picker",
+                "default": ""
+              },
+              "body": {
+                "type": "string",
+                "title": "Language Picker body",
+                "description": "Introductory or explanatory text for the Language Picker",
+                "default": ""
+              },
+              "_showOnCourseLoad": {
+                "type": "boolean",
+                "title": "Show on course load",
+                "description": "Controls whether the Language Picker should be displayed on course load or not",
+                "default": true
+              },
+              "_languagePickerIconClass": {
+                "type": "string",
+                "title": "Icon class",
+                "description": "Your default options here are: icon-globe, icon-language-1, icon-language-2",
+                "default": "icon-language-2"
+              },
+              "_restoreStateOnLanguageChange": {
+                "type": "boolean",
+                "title": "Restore course state on language change",
+                "description": "Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this",
+                "default": false
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Custom classes",
+                "description": "",
+                "default": ""
+              },
+              "_languages": {
+                "type": "array",
+                "title": "Languages",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "_language": {
+                      "type": "string",
+                      "title": "Language code",
+                      "description": "This text must match the name of the language-specific folder located in the course root, e.g. en, fr, es",
+                      "default": ""
+                    },
+                    "_direction": {
+                      "type": "string",
+                      "title": "Text direction",
+                      "description": "",
+                      "default": "ltr",
+                      "enum": [
+                        "ltr",
+                        "rtl"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_isDisabled": {
+                      "type": "boolean",
+                      "title": "Disable selection of this language",
+                      "description": "Allows you to disable selection of this language. This can be useful in situations where localisation into a particular language has not yet been completed",
+                      "default": false
+                    },
+                    "displayName": {
+                      "type": "string",
+                      "title": "Language name",
+                      "description": "A user friendly name for the language, e.g. English, Français, Español",
+                      "default": ""
+                    },
+                    "warningTitle": {
+                      "type": "string",
+                      "title": "Confirm Title",
+                      "description": "This text appears as the header of the dialog confirming the learner's intent to change languages",
+                      "default": ""
+                    },
+                    "warningMessage": {
+                      "type": "string",
+                      "title": "Confirm body",
+                      "description": "This text appears as the body of the dialog confirming the learner's intent to change languages.  Note: the warning message should indicate that any progress will be lost when the language is switched",
+                      "default": ""
+                    },
+                    "_buttons": {
+                      "type": "object",
+                      "title": "Prompt buttons",
+                      "default": {},
+                      "required": [
+                        "yes",
+                        "no"
+                      ],
+                      "properties": {
+                        "yes": {
+                          "type": "string",
+                          "title": "Confirm button text",
+                          "default": "Yes"
+                        },
+                        "no": {
+                          "type": "string",
+                          "title": "Cancel button text",
+                          "default": "No"
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -10008,516 +10008,6 @@
           "_component"
         ]
       },
-      "hotgraphic-component": {
-        "$anchor": "hotgraphic-component",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "full-width",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_setCompletionOn": {
-            "type": "string",
-            "title": "Completion criteria",
-            "description": "Whether completion is based on the learner having viewed all the items - or just having viewed the component",
-            "default": "allItems",
-            "enum": [
-              "inview",
-              "allItems"
-            ],
-            "_backboneForms": "Select"
-          },
-          "_graphic": {
-            "type": "object",
-            "title": "Main graphic",
-            "default": {},
-            "properties": {
-              "src": {
-                "type": "string",
-                "isObjectId": true,
-                "title": "Source",
-                "description": "This is the image that appears behind the pins",
-                "_backboneForms": {
-                  "type": "Asset",
-                  "media": "image"
-                }
-              },
-              "alt": {
-                "type": "string",
-                "title": "Alternative text",
-                "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "attribution": {
-                "type": "string",
-                "title": "Attribution",
-                "description": "Text to be displayed as an attribution",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              }
-            }
-          },
-          "mobileBody": {
-            "type": "string",
-            "title": "Mobile body",
-            "description": "This body text is displayed on mobile devices when this component turns into a Narrative",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "mobileInstruction": {
-            "type": "string",
-            "title": "Mobile instruction",
-            "description": "This instruction text is displayed on mobile devices when this component turns into a Narrative",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "_hidePagination": {
-            "type": "boolean",
-            "title": "Hide pagination",
-            "description": "If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar",
-            "default": false
-          },
-          "_canCycleThroughPagination": {
-            "type": "boolean",
-            "title": "Loop items",
-            "description": "If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)",
-            "default": false
-          },
-          "_isNarrativeOnMobile": {
-            "type": "boolean",
-            "title": "Replace with Narrative component on mobile",
-            "description": "If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction",
-            "default": true
-          },
-          "_useNumberedPins": {
-            "type": "boolean",
-            "title": "Use numbered pins",
-            "description": "If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process",
-            "default": false
-          },
-          "_useGraphicsAsPins": {
-            "type": "boolean",
-            "title": "Use grid layout",
-            "description": "If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes",
-            "default": false
-          },
-          "_isRound": {
-            "type": "boolean",
-            "title": "Use circular popup item images",
-            "description": "If enabled, a 50% border radius will be applied to the items pop up images",
-            "default": false
-          },
-          "_items": {
-            "type": "array",
-            "title": "Items",
-            "items": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "description": "Title displayed in the popup",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  }
-                },
-                "_ariaLevel": {
-                  "type": "number",
-                  "title": "Title ARIA level",
-                  "description": "ARIA level to assign to the popup title. Leave set to 0 to default to the Notify ARIA level (set via the Accessibility section of the course configuration)",
-                  "default": 0
-                },
-                "body": {
-                  "type": "string",
-                  "title": "Body",
-                  "description": "Body text displayed in the popup",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  },
-                  "_backboneForms": "TextArea"
-                },
-                "strapline": {
-                  "type": "string",
-                  "title": "Strapline",
-                  "description": "Strapline - displayed on mobile version only",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  }
-                },
-                "_imageAlignment": {
-                  "type": "string",
-                  "title": "Image alignment",
-                  "description": "Defines the horizontal alignment of the item image in the pop up. Left: Image aligned to the left of the text area. Right: Image aligned to the right of the text area. The default alignment is `right`",
-                  "default": "right",
-                  "enum": [
-                    "left",
-                    "right"
-                  ],
-                  "_backboneForms": "Select"
-                },
-                "_graphic": {
-                  "type": "object",
-                  "title": "Graphic",
-                  "default": {},
-                  "required": [
-                    "src"
-                  ],
-                  "properties": {
-                    "src": {
-                      "type": "string",
-                      "isObjectId": true,
-                      "title": "Source",
-                      "description": "Image to be displayed in a popup when this item is selected",
-                      "_backboneForms": {
-                        "type": "Asset",
-                        "media": "image"
-                      }
-                    },
-                    "alt": {
-                      "type": "string",
-                      "title": "Alternative text",
-                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
-                      "default": "",
-                      "_adapt": {
-                        "translatable": true
-                      }
-                    },
-                    "attribution": {
-                      "type": "string",
-                      "title": "Attribution",
-                      "description": "Text to be displayed as an attribution for the popup image",
-                      "default": "",
-                      "_adapt": {
-                        "translatable": true
-                      }
-                    },
-                    "_classes": {
-                      "type": "string",
-                      "title": "Pin custom classes",
-                      "description": "Allows you to specify custom CSS classes to be applied to the hotgraphic pin or, alternatively, to the hotspot tile when _useGraphicsAsPins is set to true",
-                      "default": ""
-                    }
-                  }
-                },
-                "_pin": {
-                  "type": "object",
-                  "title": "Pin",
-                  "default": {},
-                  "properties": {
-                    "src": {
-                      "type": "string",
-                      "isObjectId": true,
-                      "title": "Source",
-                      "description": "This is the pin image, leave blank for default",
-                      "_backboneForms": {
-                        "type": "Asset",
-                        "media": "image"
-                      }
-                    },
-                    "alt": {
-                      "type": "string",
-                      "title": "Alternative text",
-                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
-                      "default": "",
-                      "_adapt": {
-                        "translatable": true
-                      }
-                    }
-                  }
-                },
-                "_classes": {
-                  "type": "string",
-                  "title": "Popup item custom classes",
-                  "description": "Allows you to specify custom CSS classes to be applied to the popup item. Supported classes are 'align-image-left', 'hide-desktop-image', and 'hide-popup-image' which aligns the item image to the left, hides the pop up image in desktop view, and hides the pop up image for all screen sizes respectively",
-                  "default": ""
-                },
-                "_left": {
-                  "type": "number",
-                  "title": "Pin horizontal position (%)",
-                  "default": 0
-                },
-                "_top": {
-                  "type": "number",
-                  "title": "Pin vertical position (%)",
-                  "default": 0
-                }
-              }
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component"
-        ]
-      },
       "matching-component": {
         "$anchor": "matching-component",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -11104,6 +10594,516 @@
           "_component",
           "_attempts",
           "placeholder"
+        ]
+      },
+      "hotgraphic-component": {
+        "$anchor": "hotgraphic-component",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "full-width",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_setCompletionOn": {
+            "type": "string",
+            "title": "Completion criteria",
+            "description": "Whether completion is based on the learner having viewed all the items - or just having viewed the component",
+            "default": "allItems",
+            "enum": [
+              "inview",
+              "allItems"
+            ],
+            "_backboneForms": "Select"
+          },
+          "_graphic": {
+            "type": "object",
+            "title": "Main graphic",
+            "default": {},
+            "properties": {
+              "src": {
+                "type": "string",
+                "isObjectId": true,
+                "title": "Source",
+                "description": "This is the image that appears behind the pins",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "image"
+                }
+              },
+              "alt": {
+                "type": "string",
+                "title": "Alternative text",
+                "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "attribution": {
+                "type": "string",
+                "title": "Attribution",
+                "description": "Text to be displayed as an attribution",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              }
+            }
+          },
+          "mobileBody": {
+            "type": "string",
+            "title": "Mobile body",
+            "description": "This body text is displayed on mobile devices when this component turns into a Narrative",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "mobileInstruction": {
+            "type": "string",
+            "title": "Mobile instruction",
+            "description": "This instruction text is displayed on mobile devices when this component turns into a Narrative",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "_hidePagination": {
+            "type": "boolean",
+            "title": "Hide pagination",
+            "description": "If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar",
+            "default": false
+          },
+          "_canCycleThroughPagination": {
+            "type": "boolean",
+            "title": "Loop items",
+            "description": "If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)",
+            "default": false
+          },
+          "_isNarrativeOnMobile": {
+            "type": "boolean",
+            "title": "Replace with Narrative component on mobile",
+            "description": "If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction",
+            "default": true
+          },
+          "_useNumberedPins": {
+            "type": "boolean",
+            "title": "Use numbered pins",
+            "description": "If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process",
+            "default": false
+          },
+          "_useGraphicsAsPins": {
+            "type": "boolean",
+            "title": "Use grid layout",
+            "description": "If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes",
+            "default": false
+          },
+          "_isRound": {
+            "type": "boolean",
+            "title": "Use circular popup item images",
+            "description": "If enabled, a 50% border radius will be applied to the items pop up images",
+            "default": false
+          },
+          "_items": {
+            "type": "array",
+            "title": "Items",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                  "description": "Title displayed in the popup",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_ariaLevel": {
+                  "type": "number",
+                  "title": "Title ARIA level",
+                  "description": "ARIA level to assign to the popup title. Leave set to 0 to default to the Notify ARIA level (set via the Accessibility section of the course configuration)",
+                  "default": 0
+                },
+                "body": {
+                  "type": "string",
+                  "title": "Body",
+                  "description": "Body text displayed in the popup",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  },
+                  "_backboneForms": "TextArea"
+                },
+                "strapline": {
+                  "type": "string",
+                  "title": "Strapline",
+                  "description": "Strapline - displayed on mobile version only",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_imageAlignment": {
+                  "type": "string",
+                  "title": "Image alignment",
+                  "description": "Defines the horizontal alignment of the item image in the pop up. Left: Image aligned to the left of the text area. Right: Image aligned to the right of the text area. The default alignment is `right`",
+                  "default": "right",
+                  "enum": [
+                    "left",
+                    "right"
+                  ],
+                  "_backboneForms": "Select"
+                },
+                "_graphic": {
+                  "type": "object",
+                  "title": "Graphic",
+                  "default": {},
+                  "required": [
+                    "src"
+                  ],
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "isObjectId": true,
+                      "title": "Source",
+                      "description": "Image to be displayed in a popup when this item is selected",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alternative text",
+                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                      "default": "",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    },
+                    "attribution": {
+                      "type": "string",
+                      "title": "Attribution",
+                      "description": "Text to be displayed as an attribution for the popup image",
+                      "default": "",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    },
+                    "_classes": {
+                      "type": "string",
+                      "title": "Pin custom classes",
+                      "description": "Allows you to specify custom CSS classes to be applied to the hotgraphic pin or, alternatively, to the hotspot tile when _useGraphicsAsPins is set to true",
+                      "default": ""
+                    }
+                  }
+                },
+                "_pin": {
+                  "type": "object",
+                  "title": "Pin",
+                  "default": {},
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "isObjectId": true,
+                      "title": "Source",
+                      "description": "This is the pin image, leave blank for default",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alternative text",
+                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                      "default": "",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    }
+                  }
+                },
+                "_classes": {
+                  "type": "string",
+                  "title": "Popup item custom classes",
+                  "description": "Allows you to specify custom CSS classes to be applied to the popup item. Supported classes are 'align-image-left', 'hide-desktop-image', and 'hide-popup-image' which aligns the item image to the left, hides the pop up image in desktop view, and hides the pop up image for all screen sizes respectively",
+                  "default": ""
+                },
+                "_left": {
+                  "type": "number",
+                  "title": "Pin horizontal position (%)",
+                  "default": 0
+                },
+                "_top": {
+                  "type": "number",
+                  "title": "Pin vertical position (%)",
+                  "default": 0
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component"
         ]
       },
       "mcq-component": {
@@ -14046,11 +14046,13 @@
   "paths": {
     "/api/adapt/export/:id": {
       "post": {
-        "tags": [
-          "adapt"
-        ],
-        "description": "Required scopes: <span>export:adapt</apan>",
+        "summary": "Create an export zip of an Adapt course",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
           {
             "name": "id",
             "in": "path",
@@ -14058,12 +14060,6 @@
             "required": true
           }
         ],
-        "security": {
-          "roles": [
-            "export:adapt"
-          ]
-        },
-        "summary": "Create an export zip of an Adapt course",
         "responses": {
           "200": {
             "description": "The Adapt build data",
@@ -14075,14 +14071,25 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "adapt"
         ],
         "description": "Required scopes: <span>export:adapt</apan>",
+        "security": {
+          "roles": [
+            "export:adapt"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an Adapt course export zip",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
           {
             "name": "id",
             "in": "path",
@@ -14090,12 +14097,6 @@
             "required": true
           }
         ],
-        "security": {
-          "roles": [
-            "export:adapt"
-          ]
-        },
-        "summary": "Retrieve an Adapt course export zip",
         "responses": {
           "200": {
             "description": "Course build zip file",
@@ -14103,21 +14104,20 @@
               "application/zip": {}
             }
           }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>export:adapt</apan>",
+        "security": {
+          "roles": [
+            "export:adapt"
+          ]
         }
       }
     },
     "/api/adapt/import": {
       "post": {
-        "tags": [
-          "adapt"
-        ],
-        "description": "Required scopes: <span>import:adapt</apan>",
-        "parameters": [],
-        "security": {
-          "roles": [
-            "import:adapt"
-          ]
-        },
         "summary": "Import an Adapt course",
         "requestBody": {
           "content": {
@@ -14241,16 +14241,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>import:adapt</apan>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "import:adapt"
+          ]
         }
       }
     },
     "/api/adapt/preview/:id": {
       "post": {
-        "tags": [
-          "adapt"
-        ],
-        "description": "Required scopes: <span>preview:adapt</apan>",
+        "summary": "Build a preview of an Adapt course",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
           {
             "name": "id",
             "in": "path",
@@ -14258,12 +14270,6 @@
             "required": true
           }
         ],
-        "security": {
-          "roles": [
-            "preview:adapt"
-          ]
-        },
-        "summary": "Build a preview of an Adapt course",
         "responses": {
           "200": {
             "description": "The Adapt build data",
@@ -14275,16 +14281,27 @@
               }
             }
           }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>preview:adapt</apan>",
+        "security": {
+          "roles": [
+            "preview:adapt"
+          ]
         }
       }
     },
     "/api/adapt/publish/:id": {
       "post": {
-        "tags": [
-          "adapt"
-        ],
-        "description": "Required scopes: <span>publish:adapt</apan>",
+        "summary": "Create a publish zip of an Adapt course",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
           {
             "name": "id",
             "in": "path",
@@ -14292,12 +14309,6 @@
             "required": true
           }
         ],
-        "security": {
-          "roles": [
-            "publish:adapt"
-          ]
-        },
-        "summary": "Create a publish zip of an Adapt course",
         "responses": {
           "200": {
             "description": "The Adapt build data",
@@ -14309,14 +14320,25 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "adapt"
         ],
         "description": "Required scopes: <span>publish:adapt</apan>",
+        "security": {
+          "roles": [
+            "publish:adapt"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an Adapt course publish zip",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
           {
             "name": "id",
             "in": "path",
@@ -14324,12 +14346,6 @@
             "required": true
           }
         ],
-        "security": {
-          "roles": [
-            "publish:adapt"
-          ]
-        },
-        "summary": "Retrieve an Adapt course publish zip",
         "responses": {
           "200": {
             "description": "Course build zip file",
@@ -14337,21 +14353,22 @@
               "application/zip": {}
             }
           }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>publish:adapt</apan>",
+        "security": {
+          "roles": [
+            "publish:adapt"
+          ]
         }
       }
     },
     "/api/assets": {
       "post": {
-        "tags": [
-          "assets"
-        ],
-        "description": "Required scopes: <span>write:assets</apan>",
-        "security": {
-          "roles": [
-            "write:assets"
-          ]
-        },
         "summary": "Insert a new asset document",
+        "parameters": [],
         "requestBody": {
           "description": "The asset data",
           "content": {
@@ -14373,13 +14390,19 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "description": "Required scopes: <span>write:assets</apan>",
+        "security": {
+          "roles": [
+            "write:assets"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all assets documents",
         "parameters": [
           {
             "name": "limit",
@@ -14392,12 +14415,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:assets"
-          ]
-        },
-        "summary": "Retrieve all assets documents",
         "responses": {
           "200": {
             "description": "The asset data",
@@ -14412,21 +14429,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:assets</apan>",
+        "security": {
+          "roles": [
+            "read:assets"
+          ]
         }
       }
     },
     "/api/assets/:_id": {
       "put": {
-        "tags": [
-          "assets"
-        ],
-        "description": "Required scopes: <span>write:assets</apan>",
-        "security": {
-          "roles": [
-            "write:assets"
-          ]
-        },
         "summary": "Replace an existing asset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The asset data",
           "content": {
@@ -14448,19 +14472,26 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "description": "Required scopes: <span>write:assets</apan>",
         "security": {
           "roles": [
-            "read:assets"
+            "write:assets"
           ]
-        },
+        }
+      },
+      "get": {
         "summary": "Retrieve an existing asset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -14473,19 +14504,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>write:assets</apan>",
+        "description": "Required scopes: <span>read:assets</apan>",
         "security": {
           "roles": [
-            "write:assets"
+            "read:assets"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing asset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The asset data",
           "content": {
@@ -14507,9 +14545,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "assets"
         ],
@@ -14518,8 +14554,17 @@
           "roles": [
             "write:assets"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing asset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -14532,15 +14577,21 @@
               }
             }
           }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>write:assets</apan>",
+        "security": {
+          "roles": [
+            "write:assets"
+          ]
         }
       }
     },
     "/api/assets/query": {
       "post": {
-        "tags": [
-          "assets"
-        ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "summary": "Query all assets",
         "parameters": [
           {
             "name": "limit",
@@ -14553,12 +14604,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:assets"
-          ]
-        },
-        "summary": "Query all assets",
         "responses": {
           "200": {
             "description": "The asset data",
@@ -14573,11 +14618,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:assets</apan>",
+        "security": {
+          "roles": [
+            "read:assets"
+          ]
         }
       }
     },
     "/api/assets/schema": {
       "get": {
+        "summary": "Retrieve asset schema",
+        "parameters": [],
         "tags": [
           "assets"
         ],
@@ -14586,23 +14642,41 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve asset schema"
+        }
       }
     },
     "/api/assets/serve/:_id": {
       "get": {
-        "tags": [
-          "assets"
-        ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "summary": "Retrieve an asset file",
         "parameters": [
           {
             "name": "_id",
             "in": "path",
             "required": true
+          },
+          {
+            "name": "thumb",
+            "in": "query",
+            "description": "Whether the thumbnail should be sent",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "true",
+                "false"
+              ],
+              "default": "false"
+            }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "The asset file"
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:assets</apan>",
         "security": {
           "roles": [
             "read:assets"
@@ -14796,16 +14870,8 @@
     },
     "/api/content": {
       "post": {
-        "tags": [
-          "content"
-        ],
-        "description": "Required scopes: <span>write:content</apan>",
-        "security": {
-          "roles": [
-            "write:content"
-          ]
-        },
         "summary": "Insert a new content document",
+        "parameters": [],
         "requestBody": {
           "description": "The content data",
           "content": {
@@ -14827,13 +14893,19 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>write:content</apan>",
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all content documents",
         "parameters": [
           {
             "name": "limit",
@@ -14846,12 +14918,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:content"
-          ]
-        },
-        "summary": "Retrieve all content documents",
         "responses": {
           "200": {
             "description": "The content data",
@@ -14866,21 +14932,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>read:content</apan>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
         }
       }
     },
     "/api/content/:_id": {
       "put": {
-        "tags": [
-          "content"
-        ],
-        "description": "Required scopes: <span>write:content</apan>",
-        "security": {
-          "roles": [
-            "write:content"
-          ]
-        },
         "summary": "Replace an existing content document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The content data",
           "content": {
@@ -14902,19 +14975,26 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>write:content</apan>",
         "security": {
           "roles": [
-            "read:content"
+            "write:content"
           ]
-        },
+        }
+      },
+      "get": {
         "summary": "Retrieve an existing content document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -14927,19 +15007,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>read:content</apan>",
         "security": {
           "roles": [
-            "write:content"
+            "read:content"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing content document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The content data",
           "content": {
@@ -14961,9 +15048,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "content"
         ],
@@ -14972,8 +15057,17 @@
           "roles": [
             "write:content"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing content document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -14986,6 +15080,15 @@
               }
             }
           }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>write:content</apan>",
+        "security": {
+          "roles": [
+            "write:content"
+          ]
         }
       }
     },
@@ -15019,10 +15122,7 @@
     },
     "/api/content/query": {
       "post": {
-        "tags": [
-          "content"
-        ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "summary": "Query all content",
         "parameters": [
           {
             "name": "limit",
@@ -15035,12 +15135,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:content"
-          ]
-        },
-        "summary": "Query all content",
         "responses": {
           "200": {
             "description": "The content data",
@@ -15055,11 +15149,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>read:content</apan>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
         }
       }
     },
     "/api/content/schema": {
       "get": {
+        "summary": "Retrieve content schema",
+        "parameters": [],
         "tags": [
           "content"
         ],
@@ -15068,16 +15173,12 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve content schema"
+        }
       }
     },
     "/api/contentplugins": {
       "get": {
-        "tags": [
-          "contentplugins"
-        ],
-        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "summary": "Retrieve all contentplugins documents",
         "parameters": [
           {
             "name": "limit",
@@ -15090,12 +15191,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:contentplugins"
-          ]
-        },
-        "summary": "Retrieve all contentplugins documents",
         "responses": {
           "200": {
             "description": "The contentplugin data",
@@ -15110,11 +15205,7 @@
               }
             }
           }
-        }
-      }
-    },
-    "/api/contentplugins/:_id": {
-      "get": {
+        },
         "tags": [
           "contentplugins"
         ],
@@ -15123,8 +15214,19 @@
           "roles": [
             "read:contentplugins"
           ]
-        },
+        }
+      }
+    },
+    "/api/contentplugins/:_id": {
+      "get": {
         "summary": "Retrieve an existing contentplugin document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -15137,19 +15239,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>write:contentplugins</apan>",
+        "description": "Required scopes: <span>read:contentplugins</apan>",
         "security": {
           "roles": [
-            "write:contentplugins"
+            "read:contentplugins"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing contentplugin document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The contentplugin data",
           "content": {
@@ -15171,9 +15280,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "contentplugins"
         ],
@@ -15182,8 +15289,17 @@
           "roles": [
             "write:contentplugins"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing contentplugin document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -15196,6 +15312,15 @@
               }
             }
           }
+        },
+        "tags": [
+          "contentplugins"
+        ],
+        "description": "Required scopes: <span>write:contentplugins</apan>",
+        "security": {
+          "roles": [
+            "write:contentplugins"
+          ]
         }
       }
     },
@@ -15255,10 +15380,7 @@
     },
     "/api/contentplugins/query": {
       "post": {
-        "tags": [
-          "contentplugins"
-        ],
-        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "summary": "Query all contentplugins",
         "parameters": [
           {
             "name": "limit",
@@ -15271,12 +15393,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:contentplugins"
-          ]
-        },
-        "summary": "Query all contentplugins",
         "responses": {
           "200": {
             "description": "The contentplugin data",
@@ -15291,11 +15407,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "contentplugins"
+        ],
+        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "security": {
+          "roles": [
+            "read:contentplugins"
+          ]
         }
       }
     },
     "/api/contentplugins/schema": {
       "get": {
+        "summary": "Retrieve contentplugin schema",
+        "parameters": [],
         "tags": [
           "contentplugins"
         ],
@@ -15304,22 +15431,13 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve contentplugin schema"
+        }
       }
     },
     "/api/coursethemepresets": {
       "post": {
-        "tags": [
-          "coursethemepresets"
-        ],
-        "description": "Required scopes: <span>write:content</apan>",
-        "security": {
-          "roles": [
-            "write:content"
-          ]
-        },
         "summary": "Insert a new coursethemepreset document",
+        "parameters": [],
         "requestBody": {
           "description": "The coursethemepreset data",
           "content": {
@@ -15341,13 +15459,19 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>write:content</apan>",
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all coursethemepresets documents",
         "parameters": [
           {
             "name": "limit",
@@ -15360,12 +15484,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:content"
-          ]
-        },
-        "summary": "Retrieve all coursethemepresets documents",
         "responses": {
           "200": {
             "description": "The coursethemepreset data",
@@ -15380,21 +15498,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>read:content</apan>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
         }
       }
     },
     "/api/coursethemepresets/:_id": {
       "put": {
-        "tags": [
-          "coursethemepresets"
-        ],
-        "description": "Required scopes: <span>write:content</apan>",
-        "security": {
-          "roles": [
-            "write:content"
-          ]
-        },
         "summary": "Replace an existing coursethemepreset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The coursethemepreset data",
           "content": {
@@ -15416,19 +15541,26 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>write:content</apan>",
         "security": {
           "roles": [
-            "read:content"
+            "write:content"
           ]
-        },
+        }
+      },
+      "get": {
         "summary": "Retrieve an existing coursethemepreset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -15441,19 +15573,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>read:content</apan>",
         "security": {
           "roles": [
-            "write:content"
+            "read:content"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing coursethemepreset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The coursethemepreset data",
           "content": {
@@ -15475,9 +15614,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "coursethemepresets"
         ],
@@ -15486,8 +15623,17 @@
           "roles": [
             "write:content"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing coursethemepreset document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -15500,6 +15646,15 @@
               }
             }
           }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>write:content</apan>",
+        "security": {
+          "roles": [
+            "write:content"
+          ]
         }
       }
     },
@@ -15555,10 +15710,7 @@
     },
     "/api/coursethemepresets/query": {
       "post": {
-        "tags": [
-          "coursethemepresets"
-        ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "summary": "Query all coursethemepresets",
         "parameters": [
           {
             "name": "limit",
@@ -15571,12 +15723,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:content"
-          ]
-        },
-        "summary": "Query all coursethemepresets",
         "responses": {
           "200": {
             "description": "The coursethemepreset data",
@@ -15591,11 +15737,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>read:content</apan>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
         }
       }
     },
     "/api/coursethemepresets/schema": {
       "get": {
+        "summary": "Retrieve coursethemepreset schema",
+        "parameters": [],
         "tags": [
           "coursethemepresets"
         ],
@@ -15604,8 +15761,7 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve coursethemepreset schema"
+        }
       }
     },
     "/api/lang/:lang?": {
@@ -15674,16 +15830,8 @@
     },
     "/api/roles": {
       "post": {
-        "tags": [
-          "roles"
-        ],
-        "description": "Required scopes: <span>write:roles</apan>",
-        "security": {
-          "roles": [
-            "write:roles"
-          ]
-        },
         "summary": "Insert a new role document",
+        "parameters": [],
         "requestBody": {
           "description": "The role data",
           "content": {
@@ -15705,13 +15853,19 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>read:roles</apan>",
+        "description": "Required scopes: <span>write:roles</apan>",
+        "security": {
+          "roles": [
+            "write:roles"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all roles documents",
         "parameters": [
           {
             "name": "limit",
@@ -15724,12 +15878,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:roles"
-          ]
-        },
-        "summary": "Retrieve all roles documents",
         "responses": {
           "200": {
             "description": "The role data",
@@ -15744,21 +15892,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>read:roles</apan>",
+        "security": {
+          "roles": [
+            "read:roles"
+          ]
         }
       }
     },
     "/api/roles/:_id": {
       "put": {
-        "tags": [
-          "roles"
-        ],
-        "description": "Required scopes: <span>write:roles</apan>",
-        "security": {
-          "roles": [
-            "write:roles"
-          ]
-        },
         "summary": "Replace an existing role document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The role data",
           "content": {
@@ -15780,19 +15935,26 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>read:roles</apan>",
+        "description": "Required scopes: <span>write:roles</apan>",
         "security": {
           "roles": [
-            "read:roles"
+            "write:roles"
           ]
-        },
+        }
+      },
+      "get": {
         "summary": "Retrieve an existing role document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -15805,19 +15967,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>write:roles</apan>",
+        "description": "Required scopes: <span>read:roles</apan>",
         "security": {
           "roles": [
-            "write:roles"
+            "read:roles"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing role document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The role data",
           "content": {
@@ -15839,9 +16008,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "roles"
         ],
@@ -15850,8 +16017,17 @@
           "roles": [
             "write:roles"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing role document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -15864,15 +16040,21 @@
               }
             }
           }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>write:roles</apan>",
+        "security": {
+          "roles": [
+            "write:roles"
+          ]
         }
       }
     },
     "/api/roles/query": {
       "post": {
-        "tags": [
-          "roles"
-        ],
-        "description": "Required scopes: <span>read:roles</apan>",
+        "summary": "Query all roles",
         "parameters": [
           {
             "name": "limit",
@@ -15885,12 +16067,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:roles"
-          ]
-        },
-        "summary": "Query all roles",
         "responses": {
           "200": {
             "description": "The role data",
@@ -15905,11 +16081,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>read:roles</apan>",
+        "security": {
+          "roles": [
+            "read:roles"
+          ]
         }
       }
     },
     "/api/roles/schema": {
       "get": {
+        "summary": "Retrieve role schema",
+        "parameters": [],
         "tags": [
           "roles"
         ],
@@ -15918,8 +16105,7 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve role schema"
+        }
       }
     },
     "/api/spoortracking/reset/:_courseId": {
@@ -15944,16 +16130,8 @@
     },
     "/api/tags": {
       "post": {
-        "tags": [
-          "tags"
-        ],
-        "description": "Required scopes: <span>write:tags</apan>",
-        "security": {
-          "roles": [
-            "write:tags"
-          ]
-        },
         "summary": "Insert a new tag document",
+        "parameters": [],
         "requestBody": {
           "description": "The tag data",
           "content": {
@@ -15975,13 +16153,19 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:tags</apan>",
+        "description": "Required scopes: <span>write:tags</apan>",
+        "security": {
+          "roles": [
+            "write:tags"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all tags documents",
         "parameters": [
           {
             "name": "limit",
@@ -15994,12 +16178,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:tags"
-          ]
-        },
-        "summary": "Retrieve all tags documents",
         "responses": {
           "200": {
             "description": "The tag data",
@@ -16014,21 +16192,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>read:tags</apan>",
+        "security": {
+          "roles": [
+            "read:tags"
+          ]
         }
       }
     },
     "/api/tags/:_id": {
       "put": {
-        "tags": [
-          "tags"
-        ],
-        "description": "Required scopes: <span>write:tags</apan>",
-        "security": {
-          "roles": [
-            "write:tags"
-          ]
-        },
         "summary": "Replace an existing tag document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The tag data",
           "content": {
@@ -16050,19 +16235,26 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:tags</apan>",
+        "description": "Required scopes: <span>write:tags</apan>",
         "security": {
           "roles": [
-            "read:tags"
+            "write:tags"
           ]
-        },
+        }
+      },
+      "get": {
         "summary": "Retrieve an existing tag document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -16075,19 +16267,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>write:tags</apan>",
+        "description": "Required scopes: <span>read:tags</apan>",
         "security": {
           "roles": [
-            "write:tags"
+            "read:tags"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing tag document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The tag data",
           "content": {
@@ -16109,9 +16308,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "tags"
         ],
@@ -16120,8 +16317,17 @@
           "roles": [
             "write:tags"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing tag document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -16134,6 +16340,15 @@
               }
             }
           }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>write:tags</apan>",
+        "security": {
+          "roles": [
+            "write:tags"
+          ]
         }
       }
     },
@@ -16153,10 +16368,7 @@
     },
     "/api/tags/query": {
       "post": {
-        "tags": [
-          "tags"
-        ],
-        "description": "Required scopes: <span>read:tags</apan>",
+        "summary": "Query all tags",
         "parameters": [
           {
             "name": "limit",
@@ -16169,12 +16381,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:tags"
-          ]
-        },
-        "summary": "Query all tags",
         "responses": {
           "200": {
             "description": "The tag data",
@@ -16189,11 +16395,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>read:tags</apan>",
+        "security": {
+          "roles": [
+            "read:tags"
+          ]
         }
       }
     },
     "/api/tags/schema": {
       "get": {
+        "summary": "Retrieve tag schema",
+        "parameters": [],
         "tags": [
           "tags"
         ],
@@ -16202,16 +16419,12 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve tag schema"
+        }
       }
     },
     "/api/users": {
       "get": {
-        "tags": [
-          "users"
-        ],
-        "description": "Required scopes: <span>read:users</apan>",
+        "summary": "Retrieve all users documents",
         "parameters": [
           {
             "name": "limit",
@@ -16224,12 +16437,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:users"
-          ]
-        },
-        "summary": "Retrieve all users documents",
         "responses": {
           "200": {
             "description": "The user data",
@@ -16244,21 +16451,28 @@
               }
             }
           }
+        },
+        "tags": [
+          "users"
+        ],
+        "description": "Required scopes: <span>read:users</apan>",
+        "security": {
+          "roles": [
+            "read:users"
+          ]
         }
       }
     },
     "/api/users/:_id": {
       "put": {
-        "tags": [
-          "users"
-        ],
-        "description": "Required scopes: <span>write:users</apan>",
-        "security": {
-          "roles": [
-            "write:users"
-          ]
-        },
         "summary": "Replace an existing user document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The user data",
           "content": {
@@ -16280,19 +16494,26 @@
               }
             }
           }
-        }
-      },
-      "get": {
+        },
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>read:users</apan>",
+        "description": "Required scopes: <span>write:users</apan>",
         "security": {
           "roles": [
-            "read:users"
+            "write:users"
           ]
-        },
+        }
+      },
+      "get": {
         "summary": "Retrieve an existing user document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "200": {
@@ -16305,19 +16526,26 @@
               }
             }
           }
-        }
-      },
-      "patch": {
+        },
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>write:users</apan>",
+        "description": "Required scopes: <span>read:users</apan>",
         "security": {
           "roles": [
-            "write:users"
+            "read:users"
           ]
-        },
+        }
+      },
+      "patch": {
         "summary": "Update an existing user document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {
           "description": "The user data",
           "content": {
@@ -16339,9 +16567,7 @@
               }
             }
           }
-        }
-      },
-      "delete": {
+        },
         "tags": [
           "users"
         ],
@@ -16350,8 +16576,17 @@
           "roles": [
             "write:users"
           ]
-        },
+        }
+      },
+      "delete": {
         "summary": "Delete an existing user document",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "requestBody": {},
         "responses": {
           "204": {
@@ -16364,6 +16599,15 @@
               }
             }
           }
+        },
+        "tags": [
+          "users"
+        ],
+        "description": "Required scopes: <span>write:users</apan>",
+        "security": {
+          "roles": [
+            "write:users"
+          ]
         }
       }
     },
@@ -16407,10 +16651,7 @@
     },
     "/api/users/query": {
       "post": {
-        "tags": [
-          "users"
-        ],
-        "description": "Required scopes: <span>read:users</apan>",
+        "summary": "Query all users",
         "parameters": [
           {
             "name": "limit",
@@ -16423,12 +16664,6 @@
             "description": "The page of results to return (determined from the limit value)"
           }
         ],
-        "security": {
-          "roles": [
-            "read:users"
-          ]
-        },
-        "summary": "Query all users",
         "responses": {
           "200": {
             "description": "The user data",
@@ -16443,11 +16678,22 @@
               }
             }
           }
+        },
+        "tags": [
+          "users"
+        ],
+        "description": "Required scopes: <span>read:users</apan>",
+        "security": {
+          "roles": [
+            "read:users"
+          ]
         }
       }
     },
     "/api/users/schema": {
       "get": {
+        "summary": "Retrieve user schema",
+        "parameters": [],
         "tags": [
           "users"
         ],
@@ -16456,8 +16702,7 @@
           "roles": [
             "read:schema"
           ]
-        },
-        "summary": "Retrieve user schema"
+        }
       }
     }
   }
