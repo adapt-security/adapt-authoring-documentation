@@ -206,5 +206,5 @@ Supplemental data can be used at the point that errors are translated to provide
 | `UNKNOWN_AUTH_TYPE` | Request is attempting to use an unknown authentication type | 401 | <ul><li>`authType`: Authentication type</li></ul> |
 | `UNKNOWN_LANG` | unknown language | 400 | <ul><li>`lang`: language</li></ul> |
 | `UNKNOWN_SCHEMA_NAME` | Failed to determine schema name | 500 | <ul><li>`_id`: The database _id</li><li>`_type`: The _type value</li><li>`_component`: The _component value</li></ul> |
-| `USER_REG_FAILED` | User registration failed | 400 | <ul></ul> |
+| `USER_REG_FAILED` | User registration failed | 400 | <ul><li>`error`: The error</li></ul> |
 | `VALIDATION_FAILED` | Data validation failed | 400 | <ul><li>`data`: the data failing validation</li><li>`errors`: all validation errors</li><li>`schemaName`: Schema name</li></ul> |

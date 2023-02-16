@@ -44,14 +44,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=languagePicker-course">languagePicker-course</a></li>
 <li><a href="#/schemas-reference?id=localauthuser">localauthuser</a></li>
 <li><a href="#/schemas-reference?id=log">log</a></li>
+<li><a href="#/schemas-reference?id=maildata">maildata</a></li>
 <li><a href="#/schemas-reference?id=matching-component">matching-component</a></li>
 <li><a href="#/schemas-reference?id=matching-course">matching-course</a></li>
 <li><a href="#/schemas-reference?id=mcq-component">mcq-component</a></li>
 <li><a href="#/schemas-reference?id=mcq-course">mcq-course</a></li>
 <li><a href="#/schemas-reference?id=media-component">media-component</a></li>
 <li><a href="#/schemas-reference?id=media-course">media-course</a></li>
-<li><a href="#/schemas-reference?id=narrative-component">narrative-component</a></li>
-<li><a href="#/schemas-reference?id=narrative-course">narrative-course</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-article">pageLevelProgress-article</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-block">pageLevelProgress-block</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-component">pageLevelProgress-component</a></li>
@@ -1455,6 +1454,66 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Set which attribute is used to determine completion</td>
 </tr>
 <tr class="">
+<td>_languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Language Picker extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_languagePicker.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
+</tr>
+<tr class="">
+<td>_languagePicker.displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Header text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker.body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Introductory or explanatory text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker._showOnCourseLoad</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Language Picker should be displayed on course load or not</td>
+</tr>
+<tr class="">
+<td>_languagePicker._languagePickerIconClass</td>
+<td>string</td>
+<td><pre>"icon-language-2"</pre></td>
+<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
+</tr>
+<tr class="">
+<td>_languagePicker._restoreStateOnLanguageChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
+</tr>
+<tr class="">
+<td>_languagePicker._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._languages</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_spoor</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1603,66 +1662,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).</td>
-</tr>
-<tr class="">
-<td>_languagePicker</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Language Picker extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_languagePicker.title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
-</tr>
-<tr class="">
-<td>_languagePicker.displayTitle</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Header text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker.body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Introductory or explanatory text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker._showOnCourseLoad</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Language Picker should be displayed on course load or not</td>
-</tr>
-<tr class="">
-<td>_languagePicker._languagePickerIconClass</td>
-<td>string</td>
-<td><pre>"icon-language-2"</pre></td>
-<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
-</tr>
-<tr class="">
-<td>_languagePicker._restoreStateOnLanguageChange</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
-</tr>
-<tr class="">
-<td>_languagePicker._classes</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._languages</td>
-<td>array</td>
-<td></td>
-<td> </td>
 </tr>
 </table>
       
@@ -3234,6 +3233,50 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 </table>
       
+      <h3 id="maildata" class="dep">maildata</h3>
+      
+      <div class="desc">Email data</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>to</td>
+<td>string</td>
+<td></td>
+<td>Recipient email address</td>
+</tr>
+<tr class="required">
+<td>from</td>
+<td>string</td>
+<td></td>
+<td>Sender email address</td>
+</tr>
+<tr class="required">
+<td>subject</td>
+<td>string</td>
+<td></td>
+<td>Email subject</td>
+</tr>
+<tr class="required">
+<td>text</td>
+<td>string</td>
+<td></td>
+<td>Email text content</td>
+</tr>
+<tr class="">
+<td>html</td>
+<td>string</td>
+<td></td>
+<td>Email HTML content</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
       <h3 id="matching-component" class="dep">matching-component</h3>
       
       <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
@@ -4106,96 +4149,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._media.progessHelpText</td>
 <td>string</td>
 <td><pre>"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="narrative-component" class="dep">narrative-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"full-width"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>mobileInstruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>This is the mobile only instruction text</td>
-</tr>
-<tr class="">
-<td>_isTextBelowImage</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, the text area drops below the image instead of being beside it</td>
-</tr>
-<tr class="">
-<td>_isMobileTextBelowImage</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
-</tr>
-<tr class="">
-<td>_hasNavigationInTextArea</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, all navigation elements will be moved to the text area</td>
-</tr>
-<tr class="">
-<td>_setCompletionOn</td>
-<td>string</td>
-<td><pre>"allItems"</pre></td>
-<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
-</tr>
-<tr class="">
-<td>_items</td>
-<td>array</td>
-<td></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="narrative-course" class="dep">narrative-course</h3>
-      
-      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_globals</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.ariaRegion</td>
-<td>string</td>
-<td><pre>"Slide show. Select the next button to progress."</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.previous</td>
-<td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._narrative.next</td>
-<td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
 <td> </td>
 </tr>
 </table>
