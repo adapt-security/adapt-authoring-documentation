@@ -51,6 +51,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=mcq-course">mcq-course</a></li>
 <li><a href="#/schemas-reference?id=media-component">media-component</a></li>
 <li><a href="#/schemas-reference?id=media-course">media-course</a></li>
+<li><a href="#/schemas-reference?id=narrative-component">narrative-component</a></li>
+<li><a href="#/schemas-reference?id=narrative-course">narrative-course</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-article">pageLevelProgress-article</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-block">pageLevelProgress-block</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-component">pageLevelProgress-component</a></li>
@@ -4149,6 +4151,96 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._media.progessHelpText</td>
 <td>string</td>
 <td><pre>"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="narrative-component" class="dep">narrative-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"full-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="narrative-course" class="dep">narrative-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slide show. Select the next button to progress."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._narrative.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
 <td> </td>
 </tr>
 </table>
