@@ -1438,24 +1438,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Add tags by entering one or more words, separated with a comma (,)</td>
 </tr>
 <tr class="">
-<td>_trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._logState</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Trickle extension logs its state to the browser console.</td>
-</tr>
-<tr class="">
-<td>_trickle._completionAttribute</td>
-<td>string</td>
-<td><pre>"_isComplete"</pre></td>
-<td>Set which attribute is used to determine completion</td>
-</tr>
-<tr class="">
 <td>_languagePicker</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1514,6 +1496,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_trickle</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trickle._logState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Trickle extension logs its state to the browser console.</td>
+</tr>
+<tr class="">
+<td>_trickle._completionAttribute</td>
+<td>string</td>
+<td><pre>"_isComplete"</pre></td>
+<td>Set which attribute is used to determine completion</td>
 </tr>
 <tr class="">
 <td>_spoor</td>
