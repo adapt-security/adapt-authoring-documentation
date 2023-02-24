@@ -46,75 +46,6 @@
           "invokePostHook": true
         }
       },
-      "contentplugin": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentplugin",
-        "description": "An Adapt framework plugin",
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "Unique name for the plugin",
-            "type": "string"
-          },
-          "displayName": {
-            "description": "User-friendly name for the plugin",
-            "type": "string"
-          },
-          "version": {
-            "description": "Version number for the plugin",
-            "type": "string"
-          },
-          "framework": {
-            "description": "",
-            "type": "string"
-          },
-          "isLocalInstall": {
-            "description": "Whether the plugin has been installed locally (as opposed to with the CLI)",
-            "type": "boolean"
-          },
-          "isEnabled": {
-            "description": "",
-            "type": "boolean",
-            "default": true
-          },
-          "type": {
-            "description": "",
-            "type": "string"
-          },
-          "targetAttribute": {
-            "description": "",
-            "type": "string"
-          },
-          "description": {
-            "description": "",
-            "type": "string"
-          },
-          "pluginDependencies": {
-            "description": "",
-            "type": "object"
-          },
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "framework",
-          "name",
-          "type",
-          "version",
-          "isLocalInstall"
-        ],
-        "adaptOpts": {
-          "ignoreRequired": true,
-          "useDefaults": true,
-          "schemaName": "contentplugin",
-          "collectionName": "contentplugins",
-          "validate": true,
-          "invokePostHook": true
-        }
-      },
       "base": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "base",
@@ -782,192 +713,6 @@
           }
         }
       },
-      "media-course": {
-        "$anchor": "media-course",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "course"
-          },
-          "with": {
-            "properties": {
-              "_globals": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "_media": {
-                    "type": "object",
-                    "default": {},
-                    "properties": {
-                      "ariaRegion": {
-                        "type": "string",
-                        "title": "ARIA region",
-                        "default": "Media player{{#any _transcript._inlineTranscript _transcript._externalTranscript}} and transcript{{/any}}.",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "skipToTranscript": {
-                        "type": "string",
-                        "title": "Skip to transcript",
-                        "default": "Skip to transcript",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "playText": {
-                        "type": "string",
-                        "title": "Play",
-                        "default": "Play",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "pauseText": {
-                        "type": "string",
-                        "title": "Pause",
-                        "default": "Pause",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "stopText": {
-                        "type": "string",
-                        "title": "Stop",
-                        "default": "Stop",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "audioPlayerText": {
-                        "type": "string",
-                        "title": "Audio Player",
-                        "default": "Audio Player",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "videoPlayerText": {
-                        "type": "string",
-                        "title": "Video Player",
-                        "default": "Video Player",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "tracksText": {
-                        "type": "string",
-                        "title": "Captions/Subtitles",
-                        "default": "Captions/Subtitles",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "timeSliderText": {
-                        "type": "string",
-                        "title": "Time Slider",
-                        "default": "Time Slider",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "muteText": {
-                        "type": "string",
-                        "title": "Mute Toggle",
-                        "default": "Mute Toggle",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "unmuteStatusText": {
-                        "type": "string",
-                        "title": "Unmute",
-                        "default": "Unmute",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "muteStatusText": {
-                        "type": "string",
-                        "title": "Mute",
-                        "default": "Mute",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "volumeSliderText": {
-                        "type": "string",
-                        "title": "Volume Slider",
-                        "default": "Volume Slider",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "fullscreenText": {
-                        "type": "string",
-                        "title": "Fullscreen",
-                        "default": "Fullscreen",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "goFullscreenText": {
-                        "type": "string",
-                        "title": "Go Fullscreen",
-                        "default": "Go Fullscreen",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "turnOffFullscreenText": {
-                        "type": "string",
-                        "title": "Turn off Fullscreen",
-                        "default": "Turn off Fullscreen",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "noneText": {
-                        "type": "string",
-                        "title": "None",
-                        "default": "None",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "skipBackText": {
-                        "type": "string",
-                        "title": "Skip back %1 seconds",
-                        "default": "Skip back %1 seconds",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "allyVolumeControlText": {
-                        "type": "string",
-                        "title": "Use Up/Down Arrow keys to increase or decrease volume.",
-                        "default": "Use Up/Down Arrow keys to increase or decrease volume.",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "progessHelpText": {
-                        "type": "string",
-                        "title": "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.",
-                        "default": "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "narrative-course": {
         "$anchor": "narrative-course",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1423,6 +1168,93 @@
           }
         }
       },
+      "bookmarking-course": {
+        "$anchor": "bookmarking-course",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "course"
+          },
+          "with": {
+            "properties": {
+              "_bookmarking": {
+                "type": "object",
+                "title": "Bookmarking",
+                "default": {},
+                "required": [
+                  "_level"
+                ],
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Enable Bookmarking",
+                    "description": "Controls whether the Bookmarking extension is enabled or disabled",
+                    "default": true
+                  },
+                  "_level": {
+                    "type": "string",
+                    "title": "Level",
+                    "description": "Allows you to set whether Bookmarking is done at page, block or component level",
+                    "default": "component",
+                    "enum": [
+                      "page",
+                      "block",
+                      "component"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_showPrompt": {
+                    "type": "boolean",
+                    "title": "Enable prompt",
+                    "description": "Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically",
+                    "default": true
+                  },
+                  "title": {
+                    "type": "string",
+                    "title": "Prompt title",
+                    "default": "Bookmarking",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "body": {
+                    "type": "string",
+                    "title": "Prompt body",
+                    "default": "Would you like to continue where you left off?",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "_buttons": {
+                    "type": "object",
+                    "title": "Prompt buttons",
+                    "default": {},
+                    "properties": {
+                      "yes": {
+                        "type": "string",
+                        "title": "Confirm button text",
+                        "default": "Yes",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "no": {
+                        "type": "string",
+                        "title": "Cancel button text",
+                        "default": "No",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "languagePicker-config": {
         "$anchor": "languagePicker-config",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1563,93 +1395,6 @@
           }
         }
       },
-      "bookmarking-course": {
-        "$anchor": "bookmarking-course",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "course"
-          },
-          "with": {
-            "properties": {
-              "_bookmarking": {
-                "type": "object",
-                "title": "Bookmarking",
-                "default": {},
-                "required": [
-                  "_level"
-                ],
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Enable Bookmarking",
-                    "description": "Controls whether the Bookmarking extension is enabled or disabled",
-                    "default": true
-                  },
-                  "_level": {
-                    "type": "string",
-                    "title": "Level",
-                    "description": "Allows you to set whether Bookmarking is done at page, block or component level",
-                    "default": "component",
-                    "enum": [
-                      "page",
-                      "block",
-                      "component"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_showPrompt": {
-                    "type": "boolean",
-                    "title": "Enable prompt",
-                    "description": "Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically",
-                    "default": true
-                  },
-                  "title": {
-                    "type": "string",
-                    "title": "Prompt title",
-                    "default": "Bookmarking",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "body": {
-                    "type": "string",
-                    "title": "Prompt body",
-                    "default": "Would you like to continue where you left off?",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "_buttons": {
-                    "type": "object",
-                    "title": "Prompt buttons",
-                    "default": {},
-                    "properties": {
-                      "yes": {
-                        "type": "string",
-                        "title": "Confirm button text",
-                        "default": "Yes",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      },
-                      "no": {
-                        "type": "string",
-                        "title": "Cancel button text",
-                        "default": "No",
-                        "_adapt": {
-                          "translatable": true
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "languagePicker-course": {
         "$anchor": "languagePicker-course",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1680,6 +1425,192 @@
                         "type": "string",
                         "title": "Language selector",
                         "default": "Language selector",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "media-course": {
+        "$anchor": "media-course",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "course"
+          },
+          "with": {
+            "properties": {
+              "_globals": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "_media": {
+                    "type": "object",
+                    "default": {},
+                    "properties": {
+                      "ariaRegion": {
+                        "type": "string",
+                        "title": "ARIA region",
+                        "default": "Media player{{#any _transcript._inlineTranscript _transcript._externalTranscript}} and transcript{{/any}}.",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "skipToTranscript": {
+                        "type": "string",
+                        "title": "Skip to transcript",
+                        "default": "Skip to transcript",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "playText": {
+                        "type": "string",
+                        "title": "Play",
+                        "default": "Play",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "pauseText": {
+                        "type": "string",
+                        "title": "Pause",
+                        "default": "Pause",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "stopText": {
+                        "type": "string",
+                        "title": "Stop",
+                        "default": "Stop",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "audioPlayerText": {
+                        "type": "string",
+                        "title": "Audio Player",
+                        "default": "Audio Player",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "videoPlayerText": {
+                        "type": "string",
+                        "title": "Video Player",
+                        "default": "Video Player",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "tracksText": {
+                        "type": "string",
+                        "title": "Captions/Subtitles",
+                        "default": "Captions/Subtitles",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "timeSliderText": {
+                        "type": "string",
+                        "title": "Time Slider",
+                        "default": "Time Slider",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "muteText": {
+                        "type": "string",
+                        "title": "Mute Toggle",
+                        "default": "Mute Toggle",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "unmuteStatusText": {
+                        "type": "string",
+                        "title": "Unmute",
+                        "default": "Unmute",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "muteStatusText": {
+                        "type": "string",
+                        "title": "Mute",
+                        "default": "Mute",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "volumeSliderText": {
+                        "type": "string",
+                        "title": "Volume Slider",
+                        "default": "Volume Slider",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "fullscreenText": {
+                        "type": "string",
+                        "title": "Fullscreen",
+                        "default": "Fullscreen",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "goFullscreenText": {
+                        "type": "string",
+                        "title": "Go Fullscreen",
+                        "default": "Go Fullscreen",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "turnOffFullscreenText": {
+                        "type": "string",
+                        "title": "Turn off Fullscreen",
+                        "default": "Turn off Fullscreen",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "noneText": {
+                        "type": "string",
+                        "title": "None",
+                        "default": "None",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "skipBackText": {
+                        "type": "string",
+                        "title": "Skip back %1 seconds",
+                        "default": "Skip back %1 seconds",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "allyVolumeControlText": {
+                        "type": "string",
+                        "title": "Use Up/Down Arrow keys to increase or decrease volume.",
+                        "default": "Use Up/Down Arrow keys to increase or decrease volume.",
+                        "_adapt": {
+                          "translatable": true
+                        }
+                      },
+                      "progessHelpText": {
+                        "type": "string",
+                        "title": "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.",
+                        "default": "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.",
                         "_adapt": {
                           "translatable": true
                         }
@@ -2680,33 +2611,6 @@
           }
         }
       },
-      "boxMenu-contentobject": {
-        "$anchor": "boxMenu-contentobject",
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "$patch": {
-          "source": {
-            "$ref": "contentobject"
-          },
-          "with": {
-            "properties": {
-              "_boxMenu": {
-                "type": "object",
-                "title": "Box Menu",
-                "default": {},
-                "properties": {
-                  "_renderAsGroup": {
-                    "type": "boolean",
-                    "title": "Make this a parent group of menu items",
-                    "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
-                    "default": false
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "trickle-course": {
         "$anchor": "trickle-course",
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -2734,6 +2638,33 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "boxMenu-contentobject": {
+        "$anchor": "boxMenu-contentobject",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "$patch": {
+          "source": {
+            "$ref": "contentobject"
+          },
+          "with": {
+            "properties": {
+              "_boxMenu": {
+                "type": "object",
+                "title": "Box Menu",
+                "default": {},
+                "properties": {
+                  "_renderAsGroup": {
+                    "type": "boolean",
+                    "title": "Make this a parent group of menu items",
+                    "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
+                    "default": false
                   }
                 }
               }
@@ -4796,6 +4727,67 @@
         },
         "required": [
           "email"
+        ]
+      },
+      "contentplugin": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentplugin",
+        "description": "An Adapt framework plugin",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Unique name for the plugin",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "User-friendly name for the plugin",
+            "type": "string"
+          },
+          "version": {
+            "description": "Version number for the plugin",
+            "type": "string"
+          },
+          "framework": {
+            "description": "",
+            "type": "string"
+          },
+          "isLocalInstall": {
+            "description": "Whether the plugin has been installed locally (as opposed to with the CLI)",
+            "type": "boolean"
+          },
+          "isEnabled": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+          },
+          "type": {
+            "description": "",
+            "type": "string"
+          },
+          "targetAttribute": {
+            "description": "",
+            "type": "string"
+          },
+          "description": {
+            "description": "",
+            "type": "string"
+          },
+          "pluginDependencies": {
+            "description": "",
+            "type": "object"
+          },
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "framework",
+          "name",
+          "type",
+          "version",
+          "isLocalInstall"
         ]
       },
       "config": {
