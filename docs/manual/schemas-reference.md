@@ -5,53 +5,53 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 ### Quick navigation
 
 <ul class="toc">
-<li><a href="#/schemas-reference?id=accordion-component">accordion-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=accordion-course">accordion-course</a></li>
 <li><a href="#/schemas-reference?id=adaptbuild">adaptbuild</a></li>
-<li><a href="#/schemas-reference?id=article">article</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=assessment-article">assessment-article</a></li>
 <li><a href="#/schemas-reference?id=assessment-block">assessment-block</a></li>
 <li><a href="#/schemas-reference?id=assessment-course">assessment-course</a></li>
-<li><a href="#/schemas-reference?id=assessmentResults-component">assessmentResults-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=assessmentResults-course">assessmentResults-course</a></li>
 <li><a href="#/schemas-reference?id=asset">asset</a></li>
 <li><a href="#/schemas-reference?id=authored">authored</a></li>
 <li><a href="#/schemas-reference?id=authtoken">authtoken</a></li>
 <li><a href="#/schemas-reference?id=authuser">authuser</a></li>
 <li><a href="#/schemas-reference?id=base">base</a></li>
-<li><a href="#/schemas-reference?id=blank-component">blank-component</a></li>
-<li><a href="#/schemas-reference?id=block">block</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=bookmarking-contentobject">bookmarking-contentobject</a></li>
 <li><a href="#/schemas-reference?id=bookmarking-course">bookmarking-course</a></li>
 <li><a href="#/schemas-reference?id=boxMenu-contentobject">boxMenu-contentobject</a></li>
 <li><a href="#/schemas-reference?id=boxMenu-course">boxMenu-course</a></li>
-<li><a href="#/schemas-reference?id=component">component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=config">config</a></li>
-<li><a href="#/schemas-reference?id=content">content</a></li>
-<li><a href="#/schemas-reference?id=contentobject">contentobject</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=contentplugin">contentplugin</a></li>
-<li><a href="#/schemas-reference?id=course">course</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=courseasset">courseasset</a></li>
 <li><a href="#/schemas-reference?id=coursethemepreset">coursethemepreset</a></li>
 <li><a href="#/schemas-reference?id=defaultplugins">defaultplugins</a></li>
-<li><a href="#/schemas-reference?id=gmcq-component">gmcq-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=gmcq-course">gmcq-course</a></li>
-<li><a href="#/schemas-reference?id=graphic-component">graphic-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=graphic-course">graphic-course</a></li>
-<li><a href="#/schemas-reference?id=hotgraphic-component">hotgraphic-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=hotgraphic-course">hotgraphic-course</a></li>
 <li><a href="#/schemas-reference?id=languagePicker-config">languagePicker-config</a></li>
 <li><a href="#/schemas-reference?id=languagePicker-course">languagePicker-course</a></li>
 <li><a href="#/schemas-reference?id=localauthuser">localauthuser</a></li>
 <li><a href="#/schemas-reference?id=log">log</a></li>
 <li><a href="#/schemas-reference?id=maildata">maildata</a></li>
-<li><a href="#/schemas-reference?id=matching-component">matching-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=matching-course">matching-course</a></li>
-<li><a href="#/schemas-reference?id=mcq-component">mcq-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=mcq-course">mcq-course</a></li>
-<li><a href="#/schemas-reference?id=media-component">media-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=media-course">media-course</a></li>
-<li><a href="#/schemas-reference?id=narrative-component">narrative-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=narrative-course">narrative-course</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-article">pageLevelProgress-article</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-block">pageLevelProgress-block</a></li>
@@ -61,13 +61,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=resources-contentobject">resources-contentobject</a></li>
 <li><a href="#/schemas-reference?id=resources-course">resources-course</a></li>
 <li><a href="#/schemas-reference?id=role">role</a></li>
-<li><a href="#/schemas-reference?id=slider-component">slider-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=slider-course">slider-course</a></li>
 <li><a href="#/schemas-reference?id=spoor-config">spoor-config</a></li>
 <li><a href="#/schemas-reference?id=spoor-course">spoor-course</a></li>
 <li><a href="#/schemas-reference?id=tag">tag</a></li>
 <li><a href="#/schemas-reference?id=tags">tags</a></li>
-<li><a href="#/schemas-reference?id=text-component">text-component</a></li>
+<li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=text-course">text-course</a></li>
 <li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
 <li><a href="#/schemas-reference?id=textinput-course">textinput-course</a></li>
@@ -75,7 +75,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=trickle-block">trickle-block</a></li>
 <li><a href="#/schemas-reference?id=trickle-config">trickle-config</a></li>
 <li><a href="#/schemas-reference?id=trickle-course">trickle-course</a></li>
-<li><a href="#/schemas-reference?id=user">user</a></li>
+<li><a href="#/schemas-reference?id=localauthuser">localauthuser</a></li>
 <li><a href="#/schemas-reference?id=userroles">userroles</a></li>
 <li><a href="#/schemas-reference?id=vanilla-article">vanilla-article</a></li>
 <li><a href="#/schemas-reference?id=vanilla-block">vanilla-block</a></li>
@@ -87,31 +87,193 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 
 <h3 id="accordion-component" class="dep">accordion-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
+<td>_type</td>
 <td>string</td>
-<td><pre>"full-width"</pre></td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>instruction</td>
 <td>string</td>
-<td><pre>"Select the headings to find out more."</pre></td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_setCompletionOn</td>
 <td>string</td>
 <td><pre>"allItems"</pre></td>
-<td>Whether completion is based on the learner having viewed all the accordion items - or just having viewed the component</td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
 </tr>
 <tr class="">
 <td>_items</td>
 <td>array</td>
 <td></td>
-<td> </td>
+<td>The possible answers available to the learner</td>
 </tr>
 <tr class="">
 <td>_shouldCollapseItems</td>
@@ -121,6 +283,1086 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 <tr class="">
 <td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
@@ -201,13 +1443,1285 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="article" class="dep">article</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_requireCompletionOf</td>
 <td>number</td>
 <td><pre>-1</pre></td>
-<td>The number of blocks within this article the learner must complete in order for this article to be set as completed. A value of -1 requires all of them to be completed</td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
 </tr>
 </table>
       
@@ -411,31 +2925,217 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="assessmentresults-component" class="dep">assessmentResults-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_supportedLayout</td>
 <td>string</td>
 <td><pre>"both"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>instruction</td>
+<td>_setCompletionOn</td>
 <td>string</td>
-<td><pre>""</pre></td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
 </tr>
 <tr class="">
 <td>_isVisibleBeforeCompletion</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
 <td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
-</tr>
-<tr class="">
-<td>_setCompletionOn</td>
-<td>string</td>
-<td><pre>"inview"</pre></td>
-<td>Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment</td>
 </tr>
 <tr class="">
 <td>_resetType</td>
@@ -485,6 +3185,1026 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td></td>
 <td> </td>
 </tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
 </table>
       
       <h3 id="assessmentresults-course" class="dep">assessmentResults-course</h3>
@@ -511,7 +4231,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="asset" class="dep">asset</h3>
       
-      <div class="desc">An Adapt assets.json file</div>
+      <div class="desc">Asset metadata</div>
 
 <div class="required">Fields in bold are required.</div>
 
@@ -586,30 +4306,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td></td>
 <td>Unique identifier</td>
-</tr>
-<tr class="required">
-<td>createdAt</td>
-<td>string</td>
-<td></td>
-<td>Date that the data was created</td>
-</tr>
-<tr class="required">
-<td>createdBy</td>
-<td>string</td>
-<td></td>
-<td>Author of the data</td>
-</tr>
-<tr class="required">
-<td>updatedAt</td>
-<td>string</td>
-<td></td>
-<td>Date that the data was last modified</td>
-</tr>
-<tr class="">
-<td>tags</td>
-<td>array</td>
-<td><pre>[]</pre></td>
-<td>Add tags by entering one or more words, separated with a comma (,)</td>
 </tr>
 </table>
       
@@ -715,18 +4411,36 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="blank-component" class="dep">blank-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_isOptional</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
+<td>_type</td>
+<td>string</td>
+<td></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_supportedLayout</td>
+<td>_friendlyId</td>
 <td>string</td>
-<td><pre>"both"</pre></td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -744,16 +4458,220 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>instruction</td>
 <td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
 <td><pre>""</pre></td>
 <td> </td>
 </tr>
-</table>
-      
-      <h3 id="block" class="dep">block</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_trackingId</td>
 <td>number</td>
 <td><pre>0</pre></td>
@@ -766,10 +4684,2296 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="block" class="dep">block</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_requireCompletionOf</td>
 <td>number</td>
 <td><pre>-1</pre></td>
-<td>The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed</td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
 </tr>
 </table>
       
@@ -1049,11 +7253,147 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="component" class="dep">component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
+      <div class="required">Fields in bold are required.</div>
 
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
 <td>_component</td>
 <td>string</td>
 <td></td>
@@ -1083,13 +7423,1121 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
 </table>
       
       <h3 id="config" class="dep">config</h3>
       
-      <div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+      <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>_type</td>
 <td>string</td>
 <td><pre>"config"</pre></td>
@@ -1413,258 +8861,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td></td>
 <td>Unique identifier</td>
 </tr>
-<tr class="required">
-<td>createdAt</td>
-<td>string</td>
-<td></td>
-<td>Date that the data was created</td>
-</tr>
-<tr class="required">
-<td>createdBy</td>
-<td>string</td>
-<td></td>
-<td>Author of the data</td>
-</tr>
-<tr class="required">
-<td>updatedAt</td>
-<td>string</td>
-<td></td>
-<td>Date that the data was last modified</td>
-</tr>
-<tr class="">
-<td>tags</td>
-<td>array</td>
-<td><pre>[]</pre></td>
-<td>Add tags by entering one or more words, separated with a comma (,)</td>
-</tr>
-<tr class="">
-<td>_languagePicker</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._isEnabled</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Language Picker extension is enabled or disabled</td>
-</tr>
-<tr class="">
-<td>_languagePicker.title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
-</tr>
-<tr class="">
-<td>_languagePicker.displayTitle</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Header text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker.body</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Introductory or explanatory text for the Language Picker</td>
-</tr>
-<tr class="">
-<td>_languagePicker._showOnCourseLoad</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the Language Picker should be displayed on course load or not</td>
-</tr>
-<tr class="">
-<td>_languagePicker._languagePickerIconClass</td>
-<td>string</td>
-<td><pre>"icon-language-2"</pre></td>
-<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
-</tr>
-<tr class="">
-<td>_languagePicker._restoreStateOnLanguageChange</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
-</tr>
-<tr class="">
-<td>_languagePicker._classes</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_languagePicker._languages</td>
-<td>array</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_trickle._logState</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the Trickle extension logs its state to the browser console.</td>
-</tr>
-<tr class="">
-<td>_trickle._completionAttribute</td>
-<td>string</td>
-<td><pre>"_isComplete"</pre></td>
-<td>Set which attribute is used to determine completion</td>
-</tr>
-<tr class="">
-<td>_spoor</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If enabled, the plugin will try to find and track to a SCORM conformant LMS. Uncheck to switch off SCORM tracking</td>
-</tr>
-<tr class="">
-<td>_spoor._tracking</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._tracking._shouldStoreResponses</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If enabled, the user's responses to questions will be saved and restored in each session. Note: this setting should be enabled in the majority of cases</td>
-</tr>
-<tr class="">
-<td>_spoor._tracking._shouldStoreAttempts</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, a history of the user's responses to questions will be saved and restored in each session. Note: this setting should be disabled in the majority of cases</td>
-</tr>
-<tr class="">
-<td>_spoor._tracking._shouldRecordInteractions</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If enabled, the course will record the user's responses to questions to the cmi.interactions SCORM data fields</td>
-</tr>
-<tr class="">
-<td>_spoor._reporting</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._reporting._onTrackingCriteriaMet</td>
-<td>string</td>
-<td><pre>"completed"</pre></td>
-<td>What status to report back to the LMS when the tracking criteria are met</td>
-</tr>
-<tr class="">
-<td>_spoor._reporting._onAssessmentFailure</td>
-<td>string</td>
-<td><pre>"incomplete"</pre></td>
-<td>What status to report back to the LMS when the assessment is failed</td>
-</tr>
-<tr class="">
-<td>_spoor._reporting._resetStatusOnLanguageChange</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, the the course status will be reset to 'incomplete' when the user changes the course language</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._scormVersion</td>
-<td>string</td>
-<td><pre>"1.2"</pre></td>
-<td>The SCORM standard to use - SCORM 1.2 or SCORM 2004 4th Edition</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._showDebugWindow</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, a popup window will be shown on course launch that gives detailed information about what SCORM calls are being made. This can be very useful for debugging SCORM issues. Note that this popup window will appear automatically if the SCORM code encounters an error, even if this is set to false</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._commitOnStatusChange</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If enabled, a 'commit' call will be made any time the lesson_status is changed</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._commitOnAnyChange</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, a 'commit' (save all data) call will be made any time a value is changed. Note that enabling this setting may have a detrimental impact on the server and should only be used if absolutely necessary and only after careful load testing. Consider trying a lower value for 'Frequency of automatic commits' before changing this setting</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._timedCommitFrequency</td>
-<td>number</td>
-<td><pre>10</pre></td>
-<td>The frequency (in minutes) at which a 'commit' call should be made automatically. Set to 0 to disable automatic commits altogether</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._maxCommitRetries</td>
-<td>number</td>
-<td><pre>5</pre></td>
-<td>If a 'commit' call fails, this setting controls how many times it should be retried before giving up and throwing an error</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._commitRetryDelay</td>
-<td>number</td>
-<td><pre>2000</pre></td>
-<td>How much of a delay (in milliseconds) to leave between commit retries</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._suppressErrors</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, error messages will not be displayed when SCORM tracking problems occur</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._commitOnVisibilityChangeHidden</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If enabled, a 'commit' call will be made whenever the course window is hidden/minimised. Requires a browser that supports the 'visibilitychange' event</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._manifestIdentifier</td>
-<td>string</td>
-<td><pre>"adapt_manifest"</pre></td>
-<td>Sets the 'identifier' attribute in the imsmanifest.xml</td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._exitStateIfIncomplete</td>
-<td>string</td>
-<td><pre>"auto"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._exitStateIfComplete</td>
-<td>string</td>
-<td><pre>"auto"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_spoor._advancedSettings._setCompletedWhenFailed</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If enabled, `cmi.completion_status` will be set to "completed" if the assessment is "failed". Only valid for SCORM 2004, where the logic for completion and success is separate.</td>
-</tr>
-<tr class="">
-<td>_spoor._showCookieLmsResetButton</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>If enabled, a reset button will be available to relaunch the course and optionally clear tracking data (scorm_test_harness.html only).</td>
-</tr>
 </table>
       
       <h3 id="content" class="dep">content</h3>
@@ -1716,7 +8912,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>instruction</td>
 <td>string</td>
-<td><pre>""</pre></td>
+<td><pre>"Input your answer and select Submit."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -1728,7 +8924,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_isOptional</td>
 <td>boolean</td>
-<td><pre>false</pre></td>
+<td><pre>true</pre></td>
 <td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
 </tr>
 <tr class="">
@@ -1810,40 +9006,142 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Unique identifier</td>
 </tr>
 <tr class="required">
-<td>createdAt</td>
+<td>_component</td>
 <td>string</td>
 <td></td>
-<td>Date that the data was created</td>
-</tr>
-<tr class="required">
-<td>createdBy</td>
-<td>string</td>
-<td></td>
-<td>Author of the data</td>
-</tr>
-<tr class="required">
-<td>updatedAt</td>
-<td>string</td>
-<td></td>
-<td>Date that the data was last modified</td>
+<td> </td>
 </tr>
 <tr class="">
-<td>tags</td>
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
 <td>array</td>
 <td><pre>[]</pre></td>
-<td>Add tags by entering one or more words, separated with a comma (,)</td>
+<td> </td>
 </tr>
-</table>
-      
-      <h3 id="contentobject" class="dep">contentobject</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<tr class="">
 <td>subtitle</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>When viewing a menu/page - this is the subtitle that will be displayed on the menu/page</td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
 </tr>
 <tr class="">
 <td>pageBody</td>
@@ -1855,7 +9153,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_htmlClasses</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>If set, this CSS class/es will be applied to the <html> element whenever this is the active page in the course. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
 </tr>
 <tr class="">
 <td>_graphic</td>
@@ -1873,7 +9171,43 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_graphic.src</td>
 <td>string</td>
 <td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
 </tr>
 <tr class="">
 <td>linkText</td>
@@ -1897,13 +9231,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_lockType</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines which (if any) locking mechanism will be used. To be used only on submenus</td>
-</tr>
-<tr class="">
-<td>_requireCompletionOf</td>
-<td>number</td>
-<td><pre>-1</pre></td>
-<td>The number of articles within this page the learner must complete in order for this page to be set as completed. A value of -1 requires all of them to be completed</td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
 </tr>
 <tr class="">
 <td>menuSettings</td>
@@ -1911,115 +9239,17 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
-</table>
-      
-      <h3 id="contentplugin" class="dep">contentplugin</h3>
-      
-      <div class="desc">An Adapt framework plugin</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
-<td>name</td>
-<td>string</td>
-<td></td>
-<td>Unique name for the plugin</td>
-</tr>
 <tr class="">
-<td>displayName</td>
-<td>string</td>
-<td></td>
-<td>User-friendly name for the plugin</td>
-</tr>
-<tr class="required">
-<td>version</td>
-<td>string</td>
-<td></td>
-<td>Version number for the plugin</td>
-</tr>
-<tr class="required">
-<td>framework</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="required">
-<td>isLocalInstall</td>
-<td>boolean</td>
-<td></td>
-<td>Whether the plugin has been installed locally (as opposed to with the CLI)</td>
-</tr>
-<tr class="">
-<td>isEnabled</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="required">
-<td>type</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>targetAttribute</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>description</td>
-<td>string</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>pluginDependencies</td>
-<td>object</td>
-<td></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-<tr class="">
-<td>isAddedByDefault</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Whether the plugin should be added by default for new courses</td>
-</tr>
-</table>
-      
-      <h3 id="course" class="dep">course</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>heroImage</td>
 <td>string</td>
 <td></td>
 <td>The image that will be shown in the dashboard for this course</td>
 </tr>
 <tr class="">
-<td>subtitle</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>This is the subtitle that will be displayed on the course's main menu</td>
-</tr>
-<tr class="">
 <td>description</td>
 <td>string</td>
 <td><pre>""</pre></td>
 <td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
-</tr>
-<tr class="">
-<td>_htmlClasses</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
 </tr>
 <tr class="">
 <td>_latestTrackingId</td>
@@ -2270,13 +9500,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_buttons._submit.buttonText</td>
 <td>string</td>
-<td><pre>"Submit"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons._submit.ariaLabel</td>
 <td>string</td>
-<td><pre>"Submit"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2288,13 +9518,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_buttons._reset.buttonText</td>
 <td>string</td>
-<td><pre>"Reset"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons._reset.ariaLabel</td>
 <td>string</td>
-<td><pre>"Reset"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2306,13 +9536,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_buttons._showCorrectAnswer.buttonText</td>
 <td>string</td>
-<td><pre>"Show correct answer"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons._showCorrectAnswer.ariaLabel</td>
 <td>string</td>
-<td><pre>"Show correct answer"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2324,13 +9554,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_buttons._hideCorrectAnswer.buttonText</td>
 <td>string</td>
-<td><pre>"Show your answer"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons._hideCorrectAnswer.ariaLabel</td>
 <td>string</td>
-<td><pre>"Show your answer"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2342,25 +9572,25 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_buttons._showFeedback.buttonText</td>
 <td>string</td>
-<td><pre>"Show feedback"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons._showFeedback.ariaLabel</td>
 <td>string</td>
-<td><pre>"Show feedback"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons.remainingAttemptsText</td>
 <td>string</td>
-<td><pre>"attempts remaining"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_buttons.remainingAttemptText</td>
 <td>string</td>
-<td><pre>"final attempt"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2400,12 +9630,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
 </tr>
 <tr class="">
-<td>_requireCompletionOf</td>
-<td>number</td>
-<td><pre>-1</pre></td>
-<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
-</tr>
-<tr class="">
 <td>_isSelected</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -2436,18 +9660,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>menuSettings</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_lockType</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Defines which (if any) locking mechanism will be used for menu items</td>
-</tr>
-<tr class="">
 <td>customStyle</td>
 <td>string</td>
 <td><pre>""</pre></td>
@@ -2459,113 +9671,11 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
-</table>
-      
-      <h3 id="courseasset" class="dep">courseasset</h3>
-      
-      <div class="desc">Metadata related to where an asset is used in a course</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
-<td>courseId</td>
-<td>string</td>
-<td></td>
-<td>Course record unique ID</td>
-</tr>
-<tr class="required">
-<td>contentId</td>
-<td>string</td>
-<td></td>
-<td>The ID for the content record that uses this asset</td>
-</tr>
-<tr class="required">
-<td>assetId</td>
-<td>string</td>
-<td></td>
-<td>Asset record unique ID</td>
-</tr>
-<tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="coursethemepreset" class="dep">coursethemepreset</h3>
-      
-      <div class="desc">A reusable collection of theme settings</div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
-<td>displayName</td>
-<td>string</td>
-<td></td>
-<td>User-friendly name for the settings</td>
-</tr>
-<tr class="required">
-<td>parentTheme</td>
-<td>string</td>
-<td></td>
-<td>Name of the theme these settings should be applied to</td>
-</tr>
-<tr class="">
-<td>properties</td>
-<td>object</td>
-<td></td>
-<td>The theme settings</td>
-</tr>
-<tr class="">
-<td>_id</td>
-<td>string</td>
-<td></td>
-<td>Unique identifier</td>
-</tr>
-</table>
-      
-      <h3 id="defaultplugins" class="dep">defaultplugins</h3>
-      
-      <div class="desc">Defines whether plugins should be added as default</div>
-
-<div class="extension">Patches <a href="#/schemas-reference?id=contentplugin">contentplugin</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>isAddedByDefault</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td>Whether the plugin should be added by default for new courses</td>
-</tr>
-</table>
-      
-      <h3 id="gmcq-component" class="dep">gmcq-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"both"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>instruction</td>
-<td>string</td>
-<td><pre>"Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit."</pre></td>
-<td> </td>
-</tr>
 <tr class="">
 <td>ariaQuestion</td>
 <td>string</td>
 <td><pre>""</pre></td>
 <td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
-</tr>
-<tr class="">
-<td>_items</td>
-<td>array</td>
-<td></td>
-<td> </td>
 </tr>
 <tr class="">
 <td>_attempts</td>
@@ -2613,7 +9723,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_questionWeight</td>
 <td>number</td>
 <td><pre>1</pre></td>
-<td>When item scoring is disabled, this is the question score for a correct response</td>
+<td>How much this question is worth</td>
 </tr>
 <tr class="">
 <td>_recordInteraction</td>
@@ -2686,6 +9796,978 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>""</pre></td>
 <td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="contentobject" class="dep">contentobject</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_buttons</td>
@@ -2795,93 +10877,209 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>""</pre></td>
 <td> </td>
 </tr>
-</table>
-      
-      <h3 id="gmcq-course" class="dep">gmcq-course</h3>
-      
-      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_globals</td>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
 <td>object</td>
 <td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._gmcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._gmcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="graphic-component" class="dep">graphic-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"both"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_graphic.alt</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
-</tr>
-<tr class="">
-<td>_graphic.longdescription</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="required">
-<td>_graphic.large</td>
-<td>string</td>
+<td>tags</td>
+<td>array</td>
 <td></td>
-<td>The large sized image for desktop devices</td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
 </tr>
-<tr class="required">
-<td>_graphic.small</td>
-<td>string</td>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
 <td></td>
-<td>The small sized image for mobile devices</td>
+<td>Defines which individual users are able to edit this course</td>
 </tr>
 <tr class="">
-<td>_graphic.attribution</td>
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Text to be displayed as an attribution</td>
+<td>Add any custom CSS or valid Less code here</td>
 </tr>
 <tr class="">
-<td>_graphic._url</td>
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>When the graphic is selected this is the url it will follow.</td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
 </tr>
 <tr class="">
-<td>_graphic._target</td>
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
 <td>string</td>
-<td><pre>"_blank"</pre></td>
-<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
 </tr>
 <tr class="">
 <td>_isScrollable</td>
@@ -2895,76 +11093,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>0</pre></td>
 <td>0 is left most, 50 is in the middle, 100 is right most.</td>
 </tr>
-</table>
-      
-      <h3 id="graphic-course" class="dep">graphic-course</h3>
-      
-      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_globals</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._graphic.ariaRegion</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="hotgraphic-component" class="dep">hotgraphic-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"full-width"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>instruction</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_setCompletionOn</td>
-<td>string</td>
-<td><pre>"allItems"</pre></td>
-<td>Whether completion is based on the learner having viewed all the items - or just having viewed the component</td>
-</tr>
-<tr class="">
-<td>_graphic</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_graphic.src</td>
-<td>string</td>
-<td></td>
-<td>This is the image that appears behind the pins</td>
-</tr>
-<tr class="">
-<td>_graphic.alt</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
-</tr>
-<tr class="">
-<td>_graphic.attribution</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Text to be displayed as an attribution</td>
-</tr>
 <tr class="">
 <td>mobileBody</td>
 <td>string</td>
@@ -2975,7 +11103,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>mobileInstruction</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>This instruction text is displayed on mobile devices when this component turns into a Narrative</td>
+<td>This is the mobile only instruction text</td>
 </tr>
 <tr class="">
 <td>_hidePagination</td>
@@ -3014,9 +11142,5621 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>If enabled, a 50% border radius will be applied to the items pop up images</td>
 </tr>
 <tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="contentplugin" class="dep">contentplugin</h3>
+      
+      <div class="desc">An Adapt framework plugin</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>Unique name for the plugin</td>
+</tr>
+<tr class="">
+<td>displayName</td>
+<td>string</td>
+<td></td>
+<td>User-friendly name for the plugin</td>
+</tr>
+<tr class="required">
+<td>version</td>
+<td>string</td>
+<td></td>
+<td>Version number for the plugin</td>
+</tr>
+<tr class="required">
+<td>framework</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>isLocalInstall</td>
+<td>boolean</td>
+<td></td>
+<td>Whether the plugin has been installed locally (as opposed to with the CLI)</td>
+</tr>
+<tr class="">
+<td>isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>targetAttribute</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>pluginDependencies</td>
+<td>object</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="course" class="dep">course</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
 <td>_items</td>
 <td>array</td>
 <td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="courseasset" class="dep">courseasset</h3>
+      
+      <div class="desc">Metadata related to where an asset is used in a course</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>courseId</td>
+<td>string</td>
+<td></td>
+<td>Course record unique ID</td>
+</tr>
+<tr class="required">
+<td>contentId</td>
+<td>string</td>
+<td></td>
+<td>The ID for the content record that uses this asset</td>
+</tr>
+<tr class="required">
+<td>assetId</td>
+<td>string</td>
+<td></td>
+<td>Asset record unique ID</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="coursethemepreset" class="dep">coursethemepreset</h3>
+      
+      <div class="desc">A reusable collection of theme settings</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>displayName</td>
+<td>string</td>
+<td></td>
+<td>User-friendly name for the settings</td>
+</tr>
+<tr class="required">
+<td>parentTheme</td>
+<td>string</td>
+<td></td>
+<td>Name of the theme these settings should be applied to</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td></td>
+<td>The theme settings</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+</table>
+      
+      <h3 id="defaultplugins" class="dep">defaultplugins</h3>
+      
+      <div class="desc">Defines whether plugins should be added as default</div>
+
+<div class="extension">Patches <a href="#/schemas-reference?id=contentplugin">contentplugin</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>isAddedByDefault</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the plugin should be added by default for new courses</td>
+</tr>
+</table>
+      
+      <h3 id="gmcq-component" class="dep">gmcq-component</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="gmcq-course" class="dep">gmcq-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._gmcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="graphic-component" class="dep">graphic-component</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="graphic-course" class="dep">graphic-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._graphic.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="hotgraphic-component" class="dep">hotgraphic-component</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 </table>
@@ -3163,9 +16903,45 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <div class="desc">Extra user properties related to local auth</div>
 
-<div class="extension">Merges with <a href="#/schemas-reference?id=user">user</a></div>
+<div class="required">Fields in bold are required.</div>
 
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="required">
+<td>email</td>
+<td>string</td>
+<td></td>
+<td>Email address for the user</td>
+</tr>
+<tr class="">
+<td>firstName</td>
+<td>string</td>
+<td><pre>"Adapt"</pre></td>
+<td>First name of the user</td>
+</tr>
+<tr class="">
+<td>lastName</td>
+<td>string</td>
+<td><pre>"User"</pre></td>
+<td>Last name of the user</td>
+</tr>
+<tr class="">
+<td>isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Whether the user is able to access the system</td>
+</tr>
+<tr class="">
+<td>lastAccess</td>
+<td>string</td>
+<td></td>
+<td>Timestamp of the last access</td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="">
 <td>isTempLocked</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -3281,141 +17057,625 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="matching-component" class="dep">matching-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
+<td>_type</td>
 <td>string</td>
-<td><pre>"half-width"</pre></td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>instruction</td>
 <td>string</td>
-<td><pre>"Choose an option from each dropdown list and select Submit."</pre></td>
+<td><pre>"Input your answer and select Submit."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_attempts</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>How many attempts the learner is allowed</td>
-</tr>
-<tr class="">
-<td>_canShowModelAnswer</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
-</tr>
-<tr class="">
-<td>_canShowFeedback</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_canShowMarking</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_shouldResetAllAnswers</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
-</tr>
-<tr class="">
-<td>_shouldDisplayAttempts</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_isRandom</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_questionWeight</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>How much this question is worth</td>
-</tr>
-<tr class="">
-<td>_recordInteraction</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
-</tr>
-<tr class="">
-<td>placeholder</td>
+<td>_classes</td>
 <td>string</td>
-<td><pre>"Please select an option"</pre></td>
-<td>Text that will be displayed at the top of each list of options</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
 </tr>
 <tr class="">
 <td>_items</td>
 <td>array</td>
 <td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback</td>
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback.title</td>
+<td>_retry.button</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Leave blank to have the component's title shown instead</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_feedback.correct</td>
+<td>_retry.feedback</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Correct answer feedback for this question</td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect</td>
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect.final</td>
+<td>_graphic.alt</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Incorrect answer feedback for the final attempt</td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect.notFinal</td>
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
 </tr>
 <tr class="">
-<td>_feedback._partlyCorrect</td>
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback._partlyCorrect.final</td>
+<td>heroImage</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
 </tr>
 <tr class="">
-<td>_feedback._partlyCorrect.notFinal</td>
+<td>description</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_buttons</td>
@@ -3525,46 +17785,82 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>""</pre></td>
 <td> </td>
 </tr>
-</table>
-      
-      <h3 id="matching-course" class="dep">matching-course</h3>
-      
-      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_globals</td>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._matching</td>
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
 <td>object</td>
 <td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._matching.ariaRegion</td>
-<td>string</td>
-<td><pre>"Matching. Select from lists and then submit."</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="mcq-component" class="dep">mcq-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"half-width"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>instruction</td>
-<td>string</td>
-<td><pre>"Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit."</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -3572,12 +17868,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>""</pre></td>
 <td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
-</tr>
-<tr class="">
-<td>_items</td>
-<td>array</td>
-<td></td>
-<td>The possible answers available to the learner</td>
 </tr>
 <tr class="">
 <td>_attempts</td>
@@ -3616,12 +17906,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_recordInteraction</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
-</tr>
-<tr class="">
 <td>_hasItemScoring</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -3631,7 +17915,19 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_questionWeight</td>
 <td>number</td>
 <td><pre>1</pre></td>
-<td>When item scoring is disabled, this is the question score for a correct response</td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
 </tr>
 <tr class="">
 <td>_selectable</td>
@@ -3694,154 +17990,76 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
 </tr>
 <tr class="">
-<td>_buttons</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
 </tr>
 <tr class="">
-<td>_buttons._submit</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
 </tr>
 <tr class="">
-<td>_buttons._submit.buttonText</td>
+<td>mobileBody</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td> </td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
 </tr>
 <tr class="">
-<td>_buttons._submit.ariaLabel</td>
+<td>mobileInstruction</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td> </td>
+<td>This is the mobile only instruction text</td>
 </tr>
 <tr class="">
-<td>_buttons._reset</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
 </tr>
 <tr class="">
-<td>_buttons._reset.buttonText</td>
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._reset.ariaLabel</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._showCorrectAnswer</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._showCorrectAnswer.buttonText</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._showCorrectAnswer.ariaLabel</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._hideCorrectAnswer</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._hideCorrectAnswer.buttonText</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._hideCorrectAnswer.ariaLabel</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._showFeedback</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._showFeedback.buttonText</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons._showFeedback.ariaLabel</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons.remainingAttemptsText</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_buttons.remainingAttemptText</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="mcq-course" class="dep">mcq-course</h3>
-      
-      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_globals</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._mcq</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._mcq.ariaRegion</td>
-<td>string</td>
-<td><pre>"Multiple choice question"</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="media-component" class="dep">media-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"both"</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>instruction</td>
-<td>string</td>
-<td><pre>"Select the play button to start the video."</pre></td>
-<td> </td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
 </tr>
 <tr class="">
 <td>_media</td>
@@ -3896,12 +18114,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td></td>
 <td> </td>
-</tr>
-<tr class="">
-<td>_setCompletionOn</td>
-<td>string</td>
-<td><pre>"play"</pre></td>
-<td>Defines what media event should trigger completion of this component</td>
 </tr>
 <tr class="">
 <td>_useClosedCaptions</td>
@@ -4016,6 +18228,2726 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>object</td>
 <td><pre>{}</pre></td>
 <td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="matching-course" class="dep">matching-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._matching.ariaRegion</td>
+<td>string</td>
+<td><pre>"Matching. Select from lists and then submit."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="mcq-component" class="dep">mcq-component</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="mcq-course" class="dep">mcq-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._mcq</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._mcq.ariaRegion</td>
+<td>string</td>
+<td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="media-component" class="dep">media-component</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
 </tr>
 </table>
       
@@ -4157,27 +21089,1177 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="narrative-component" class="dep">narrative-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
+<td>_type</td>
 <td>string</td>
-<td><pre>"full-width"</pre></td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>instruction</td>
 <td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
 <td><pre>""</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
 </tr>
 <tr class="">
 <td>mobileInstruction</td>
 <td>string</td>
 <td><pre>""</pre></td>
 <td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
 </tr>
 <tr class="">
 <td>_isTextBelowImage</td>
@@ -4198,15 +22280,93 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>If enabled, all navigation elements will be moved to the text area</td>
 </tr>
 <tr class="">
-<td>_setCompletionOn</td>
+<td>labelStart</td>
 <td>string</td>
-<td><pre>"allItems"</pre></td>
-<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+<td><pre>""</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_items</td>
-<td>array</td>
-<td></td>
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 </table>
@@ -4613,177 +22773,625 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="slider-component" class="dep">slider-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_supportedLayout</td>
 <td>string</td>
 <td><pre>"both"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>instruction</td>
+<td>_setCompletionOn</td>
 <td>string</td>
-<td><pre>"Drag the slider to make your choice and select Submit."</pre></td>
-<td> </td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
 </tr>
 <tr class="">
-<td>_attempts</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>How many attempts the learner is allowed</td>
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
 </tr>
 <tr class="">
-<td>_canShowModelAnswer</td>
+<td>_shouldCollapseItems</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
 </tr>
 <tr class="">
-<td>_canShowFeedback</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_canShowMarking</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_shouldDisplayAttempts</td>
+<td>_shouldExpandFirstItem</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_questionWeight</td>
+<td>_requireCompletionOf</td>
 <td>number</td>
-<td><pre>1</pre></td>
-<td>How much this question is worth</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
 </tr>
 <tr class="">
-<td>_recordInteraction</td>
+<td>_isVisibleBeforeCompletion</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
 </tr>
 <tr class="">
-<td>labelStart</td>
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td> </td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
 </tr>
 <tr class="">
-<td>labelEnd</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_scaleStart</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_scaleEnd</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_scaleStep</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>The amount the scale should increment by</td>
-</tr>
-<tr class="">
-<td>_correctAnswer</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Correct answer on the scale</td>
-</tr>
-<tr class="">
-<td>_correctRange</td>
+<td>_retry</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_correctRange._bottom</td>
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
 <td>number</td>
 <td><pre>0</pre></td>
-<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_correctRange._top</td>
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
 <td>number</td>
 <td><pre>0</pre></td>
-<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_showScaleIndicator</td>
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
 <td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether a position indicator on the scale should be shown or not</td>
+<td><pre>false</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_showNumber</td>
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
 <td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the position number on the indicator should be shown or not</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
 </tr>
 <tr class="">
-<td>_showScale</td>
+<td>_start._isMenuDisabled</td>
 <td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether to show the lines and numbers of the scale or not</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
 </tr>
 <tr class="">
-<td>_showScaleNumbers</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether the numbers on the scale should be shown or not</td>
-</tr>
-<tr class="">
-<td>_feedback</td>
+<td>_globals</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback.title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Leave blank to have the component's title shown instead</td>
-</tr>
-<tr class="">
-<td>_feedback.correct</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Correct answer feedback for this question</td>
-</tr>
-<tr class="">
-<td>_feedback._incorrect</td>
+<td>_globals._accessibility</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect.final</td>
+<td>_globals._accessibility.skipNavigationText</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Incorrect answer feedback for the final attempt</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect.notFinal</td>
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_buttons</td>
@@ -4891,6 +23499,558 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_buttons.remainingAttemptText</td>
 <td>string</td>
 <td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 </table>
@@ -5135,54 +24295,48 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="text-component" class="dep">text-component</h3>
       
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+      <div class="required">Fields in bold are required.</div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
+<td>_type</td>
 <td>string</td>
-<td><pre>"both"</pre></td>
+<td></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>instruction</td>
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="text-course" class="dep">text-course</h3>
-      
-      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_globals</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
 </tr>
 <tr class="">
-<td>_globals._text</td>
-<td>object</td>
-<td><pre>{}</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_globals._text.ariaRegion</td>
+<td>body</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td> </td>
-</tr>
-</table>
-      
-      <h3 id="textinput-component" class="dep">textinput-component</h3>
-      
-      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
-
-<div class="required">Fields in bold are required.</div>
-
-<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
-<td>_supportedLayout</td>
-<td>string</td>
-<td><pre>"both"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -5192,124 +24346,574 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
 <td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
 <td>array</td>
 <td></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_attempts</td>
+<td>_trackingId</td>
 <td>number</td>
-<td><pre>1</pre></td>
-<td>How many attempts the learner is allowed</td>
-</tr>
-<tr class="">
-<td>_canShowModelAnswer</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
-</tr>
-<tr class="">
-<td>_canShowFeedback</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
+<td><pre>0</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_canShowMarking</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_shouldDisplayAttempts</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_isRandom</td>
-<td>boolean</td>
-<td><pre>false</pre></td>
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_recordInteraction</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
 </tr>
 <tr class="">
-<td>_questionWeight</td>
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
 <td>number</td>
-<td><pre>1</pre></td>
-<td>How much this question is worth</td>
+<td><pre>0</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_allowsAnyCase</td>
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
-<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_allowsPunctuation</td>
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
-<td> </td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
 </tr>
 <tr class="">
-<td>_feedback</td>
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback.title</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Leave blank to have the component's title shown instead</td>
-</tr>
-<tr class="">
-<td>_feedback.correct</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Correct answer feedback for this question</td>
-</tr>
-<tr class="">
-<td>_feedback._incorrect</td>
+<td>_globals._accessibility</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect.final</td>
+<td>_globals._accessibility.skipNavigationText</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Incorrect answer feedback for the final attempt</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_feedback._incorrect.notFinal</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
-</tr>
-<tr class="">
-<td>_feedback._partlyCorrect</td>
+<td>_globals._accessibility._ariaLabels</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_feedback._partlyCorrect.final</td>
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
 </tr>
 <tr class="">
-<td>_feedback._partlyCorrect.notFinal</td>
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
 <td>string</td>
-<td><pre>""</pre></td>
-<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_buttons</td>
@@ -5417,6 +25021,1864 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_buttons.remainingAttemptText</td>
 <td>string</td>
 <td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="text-course" class="dep">text-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._text</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._text.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="textinput-component" class="dep">textinput-component</h3>
+      
+      <div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_type</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_friendlyId</td>
+<td>string</td>
+<td></td>
+<td>A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course.</td>
+</tr>
+<tr class="">
+<td>_parentId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_courseId</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>title</td>
+<td>string</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When viewing an element - this is the title that will be displayed on the page</td>
+</tr>
+<tr class="">
+<td>body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Input your answer and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_isOptional</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>An optional element does not have to be completed, nor do any of the elements contained within it</td>
+</tr>
+<tr class="">
+<td>_isAvailable</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this element and its contents are available in the course or not</td>
+</tr>
+<tr class="">
+<td>_isHidden</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Enabling this is equivalent to applying the CSS 'display:none' to the element</td>
+</tr>
+<tr class="">
+<td>_isVisible</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
+</tr>
+<tr class="">
+<td>_ariaLevel</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_onScreen</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view</td>
+</tr>
+<tr class="">
+<td>_onScreen._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_onScreen._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The CSS class(es) to add to the element</td>
+</tr>
+<tr class="">
+<td>_onScreen._percentInviewVertical</td>
+<td>number</td>
+<td><pre>50</pre></td>
+<td>Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added</td>
+</tr>
+<tr class="">
+<td>_extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_sortOrder</td>
+<td>number</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>themeSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_colorLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_id</td>
+<td>string</td>
+<td></td>
+<td>Unique identifier</td>
+</tr>
+<tr class="required">
+<td>_component</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_layout</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isResetOnRevisit</td>
+<td>string</td>
+<td><pre>"false"</pre></td>
+<td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
+</tr>
+<tr class="">
+<td>_disableAccessibilityState</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+</tr>
+<tr class="">
+<td>properties</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_requireCompletionOf</td>
+<td>number</td>
+<td><pre>-1</pre></td>
+<td>The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed</td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_trackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>layoutOptions</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>subtitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the subtitle that will be displayed on the course's main menu</td>
+</tr>
+<tr class="">
+<td>pageBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this text will be shown instead of the body text when this page is viewed</td>
+</tr>
+<tr class="">
+<td>_htmlClasses</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.longdescription</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="required">
+<td>_graphic.large</td>
+<td>string</td>
+<td></td>
+<td>The large sized image for desktop devices</td>
+</tr>
+<tr class="required">
+<td>_graphic.small</td>
+<td>string</td>
+<td></td>
+<td>The small sized image for mobile devices</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>_graphic._url</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>When the graphic is selected this is the url it will follow.</td>
+</tr>
+<tr class="">
+<td>_graphic._target</td>
+<td>string</td>
+<td><pre>"_blank"</pre></td>
+<td>This targets where to open the link. Acceptable values are '_blank' (opens the linked document in a new window or tab), '_parent' (opens the linked document in the parent frame), '_top' (opens the linked document in the full body of the window) or '_self' (opens the linked document in the same frame as it was selected. If no value is set, the default is '_blank'.</td>
+</tr>
+<tr class="">
+<td>linkText</td>
+<td>string</td>
+<td><pre>"View"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>duration</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Indicates how long this page or section should take to complete</td>
+</tr>
+<tr class="">
+<td>_lockedBy</td>
+<td>array</td>
+<td><pre>[]</pre></td>
+<td>If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked</td>
+</tr>
+<tr class="">
+<td>_lockType</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines which (if any) locking mechanism will be used for menu items</td>
+</tr>
+<tr class="">
+<td>menuSettings</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>heroImage</td>
+<td>string</td>
+<td></td>
+<td>The image that will be shown in the dashboard for this course</td>
+</tr>
+<tr class="">
+<td>description</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course</td>
+</tr>
+<tr class="">
+<td>_latestTrackingId</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu</td>
+</tr>
+<tr class="">
+<td>_start._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._startIds</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_start._force</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the routing will be forced to the appropriate start page, regardless of the URL</td>
+</tr>
+<tr class="">
+<td>_start._isMenuDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allows you to prevent the user from seeing - or navigating to - the main menu</td>
+</tr>
+<tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility.skipNavigationText</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredIncorrectly</td>
+<td>string</td>
+<td><pre>"You answered incorrectly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.answeredCorrectly</td>
+<td>string</td>
+<td><pre>"You answered correctly"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.selectedAnswer</td>
+<td>string</td>
+<td><pre>"selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.unselectedAnswer</td>
+<td>string</td>
+<td><pre>"not selected"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.skipNavigation</td>
+<td>string</td>
+<td><pre>"Skip navigation"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.previous</td>
+<td>string</td>
+<td><pre>"Back"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.navigationDrawer</td>
+<td>string</td>
+<td><pre>"Open course resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.close</td>
+<td>string</td>
+<td><pre>"Close"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeDrawer</td>
+<td>string</td>
+<td><pre>"Close Drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closeResources</td>
+<td>string</td>
+<td><pre>"Close resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.drawer</td>
+<td>string</td>
+<td><pre>"Top of side drawer"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.closePopup</td>
+<td>string</td>
+<td><pre>"Close popup"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.next</td>
+<td>string</td>
+<td><pre>"Next"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.done</td>
+<td>string</td>
+<td><pre>"Done"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.complete</td>
+<td>string</td>
+<td><pre>"Completed"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incomplete</td>
+<td>string</td>
+<td><pre>"Incomplete"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.incorrect</td>
+<td>string</td>
+<td><pre>"Incorrect"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.correct</td>
+<td>string</td>
+<td><pre>"Correct"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.locked</td>
+<td>string</td>
+<td><pre>"Locked"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.visited</td>
+<td>string</td>
+<td><pre>"Visited"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navOrder</td>
+<td>number</td>
+<td><pre>100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._skipButton._navOrder</td>
+<td>number</td>
+<td><pre>-100</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backButton._navOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._spacers</td>
+<td>array</td>
+<td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>"This button is disabled at the moment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>The navigation settings allow you to control the behaviour of the navigation bar.</td>
+</tr>
+<tr class="">
+<td>_navigation._isDefaultNavigationDisabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._navigationAlignment</td>
+<td>string</td>
+<td><pre>"top"</pre></td>
+<td>The CSS selector that determines where the navigation bar is displayed. Must be a selector targeting the HTML element.</td>
+</tr>
+<tr class="">
+<td>_navigation._isBottomOnTouchDevices</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>tags</td>
+<td>array</td>
+<td></td>
+<td>Add tags to your course by entering one or more words, separated with a comma (,)</td>
+</tr>
+<tr class="">
+<td>_isSelected</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasPreview</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isShared</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Defines whether this course will be editable by all users</td>
+</tr>
+<tr class="">
+<td>_shareWithUsers</td>
+<td>array</td>
+<td></td>
+<td>Defines which individual users are able to edit this course</td>
+</tr>
+<tr class="">
+<td>themeVariables</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>customStyle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Add any custom CSS or valid Less code here</td>
+</tr>
+<tr class="">
+<td>externalReferences</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>_columns</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Set the number of columns. If value is '0', component uses the default layout</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Leave blank to have the component's title shown instead</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_isScrollable</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_defaultScrollPercent</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>0 is left most, 50 is in the middle, 100 is right most.</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the mobile only instruction text</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+<tr class="">
+<td>_isTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the text area drops below the image instead of being beside it</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button</td>
+</tr>
+<tr class="">
+<td>_hasNavigationInTextArea</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, all navigation elements will be moved to the text area</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_allowsAnyCase</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Should the check of the user's answer(s) be case-insensitive or case-sensitive?</td>
+</tr>
+<tr class="">
+<td>_allowsPunctuation</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
 <td> </td>
 </tr>
 </table>
@@ -5821,7 +27283,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       
       <h3 id="user" class="dep">user</h3>
       
-      <div class="desc">A system user</div>
+      <div class="desc">Extra user properties related to local auth</div>
 
 <div class="required">Fields in bold are required.</div>
 
@@ -5862,16 +27324,34 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Unique identifier</td>
 </tr>
 <tr class="">
-<td>roles</td>
-<td>array</td>
-<td><pre>[]</pre></td>
-<td>Roles assigned to this user</td>
+<td>isTempLocked</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the user account has been temporarily locked</td>
 </tr>
-<tr class="required">
-<td>authType</td>
+<tr class="">
+<td>isPermLocked</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Whether the user account has been permanently locked</td>
+</tr>
+<tr class="">
+<td>password</td>
 <td>string</td>
 <td></td>
-<td>Types of authentication used with this user</td>
+<td>Password for the user</td>
+</tr>
+<tr class="">
+<td>failedLoginAttempts</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>The number of failed login attempts</td>
+</tr>
+<tr class="">
+<td>lastFailedLoginAttempt</td>
+<td>string</td>
+<td></td>
+<td>Timestamp of the last failed login attempt</td>
 </tr>
 </table>
       

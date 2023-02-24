@@ -72,6 +72,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=INVALID_PASSWORD_NUMBER">INVALID_PASSWORD_NUMBER</a></li>
 <li><a href="#/errorsref?id=INVALID_PASSWORD_SPECIAL">INVALID_PASSWORD_SPECIAL</a></li>
 <li><a href="#/errorsref?id=INVALID_PASSWORD_UPPERCASE">INVALID_PASSWORD_UPPERCASE</a></li>
+<li><a href="#/errorsref?id=LOAD_ERROR">LOAD_ERROR</a></li>
 <li><a href="#/errorsref?id=MAIL_NOT_ENABLED">MAIL_NOT_ENABLED</a></li>
 <li><a href="#/errorsref?id=MAIL_SEND_FAILED">MAIL_SEND_FAILED</a></li>
 <li><a href="#/errorsref?id=MISSING_ASSETS">MISSING_ASSETS</a></li>
@@ -175,6 +176,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `INVALID_PASSWORD_NUMBER` | Password must contain at least one number | 401 | <ul></ul> |
 | `INVALID_PASSWORD_SPECIAL` | Password must contain at least one special character (#?!@$%^&*-) | 401 | <ul></ul> |
 | `INVALID_PASSWORD_UPPERCASE` | Password must contain at least one uppercase character | 401 | <ul></ul> |
+| `LOAD_ERROR` | Config failed to load | 500 | <ul></ul> |
 | `MAIL_NOT_ENABLED` | Email functionality is not enabled | 500 | <ul></ul> |
 | `MAIL_SEND_FAILED` | Failed to send error email | 500 | <ul></ul> |
 | `MISSING_ASSETS` | Assets are missing | 500 | <ul><li>`errors`: The errors</li></ul> |

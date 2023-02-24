@@ -56,7 +56,7 @@ export default {
     // File types allowed for upload
     expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","video/mp4"], // array, optional
     // Maximum file upload size
-    maxFileUploadSize: "50mb", // string, optional
+    maxFileSize: "50mb", // string, optional
     // Location of local thumbs dir
     thumbnailDir: "$TEMP/asset-thumbs", // string, optional
     // File extension for thumbnails
@@ -99,6 +99,10 @@ export default {
     manualSections: {"getting-started":{"title":"Getting started"},"basics":{"title":"The basics"},"advanced":{"title":"Advanced topics"},"ui":{"title":"Front-end app"},"other-guides":{"title":"Other guides","default":true},"contributing":{"title":"Contributing"},"reference":{"title":"Reference"}}, // object, optional
   },
   'adapt-authoring-jsonschema': {
+    // Whether schema data should be cached
+    enableCache: true, // boolean, optional
+    // The amount of time a cached schema should remain valid
+    cacheLifespan: "30s", // string, optional
     // Custom RegExp overrides for Ajv string formats
     formatOverrides: {}, // object, optional
     // Attributes which should be whitelisted when run through the XSS sanitiser
@@ -301,7 +305,7 @@ See below for a full list of available configuration options.
 </div>
 </div>
 <div class="attribute">
-<div class="title"><span class="main">maxFileUploadSize</span> (string, optional)</div>
+<div class="title"><span class="main">maxFileSize</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Maximum file upload size</div>
 <div class="default"><span class="label">Default</span>: <pre>"50mb"</pre></div>
@@ -443,6 +447,20 @@ See below for a full list of available configuration options.
 <h3 id="adapt-authoring-jsonschema" class="dep">adapt-authoring-jsonschema</h3>
 
 <div class="options">
+<div class="attribute">
+<div class="title"><span class="main">enableCache</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">Whether schema data should be cached</div>
+<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">cacheLifespan</span> (string, optional)</div>
+<div class="inner">
+<div class="description">The amount of time a cached schema should remain valid</div>
+<div class="default"><span class="label">Default</span>: <pre>"30s"</pre></div>
+</div>
+</div>
 <div class="attribute">
 <div class="title"><span class="main">formatOverrides</span> (object, optional)</div>
 <div class="inner">
