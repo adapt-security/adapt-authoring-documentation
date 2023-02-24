@@ -12,7 +12,9 @@
   <h1>Adapt authoring tool</h1>
   <h2>Documentation</h2>
   <div class="link-container">
-    <a href="manual">Developer guides</a>
+    <a class="huge" href="manual">Developer guides</a>
+  </div>
+  <div class="link-container">
     <a href="rest">REST API Reference</a>
     <a href="backend">Server Code Reference</a>
     <a href="frontend">UI Code Reference</a>
@@ -39,8 +41,11 @@
     font-size: 5em;
     font-weight: 300;
   }
+  .link-container {
+    margin-bottom: 2rem;
+  }
   a {
-    border-radius: 2rem;
+    border-radius: 3rem;
     border: 1px solid white;
     box-sizing: border-box;
     color: white;
@@ -50,6 +55,9 @@
     padding: .75em 2rem;
     text-decoration: none;
     transition: all .15s ease;
+  }
+  a.big {
+    font-size: 1.4rem;;
   }
   a:hover {
     background: white;
