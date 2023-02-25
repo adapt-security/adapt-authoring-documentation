@@ -43,6 +43,8 @@ export default {
     frameworkRepository: undefined, // string, optional
   },
   'adapt-authoring-api': {
+    // Default lifespan of data cache
+    defaultCacheLifespan: "5s", // string, optional
     // Default size of page
     defaultPageSize: 100, // number, optional
     // Maximum page size
@@ -264,6 +266,13 @@ See below for a full list of available configuration options.
 <h3 id="adapt-authoring-api" class="dep">adapt-authoring-api</h3>
 
 <div class="options">
+<div class="attribute">
+<div class="title"><span class="main">defaultCacheLifespan</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Default lifespan of data cache</div>
+<div class="default"><span class="label">Default</span>: <pre>"5s"</pre></div>
+</div>
+</div>
 <div class="attribute">
 <div class="title"><span class="main">defaultPageSize</span> (number, optional)</div>
 <div class="inner">

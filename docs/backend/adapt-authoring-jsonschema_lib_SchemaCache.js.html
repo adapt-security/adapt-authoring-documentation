@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>defaultplugins - Adapt authoring tool UI documentation</title>
+    <title>adapt-authoring-jsonschema/lib/SchemaCache.js - Adapt authoring tool UI documentation</title>
     
     <meta name="description" content="Adapt authoring tool UI documentation" />
     
@@ -40,112 +40,64 @@
 
 <div id="main">
     
-    <h1 class="page-title">defaultplugins</h1>
+    <h1 class="page-title">adapt-authoring-jsonschema/lib/SchemaCache.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>
-        defaultplugins
-        </h2>
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { App } from 'adapt-authoring-core';
+/**
+ * Time-limited schema cache
+ * @memberof jsonschema
+ */
+class SchemaCache {
+  /** @override */
+  constructor() {
+    this.isEnabled = false;
+    this.lifespan = 0;
+    App.instance.config.onReady().then(() => {
+      this.isEnabled = App.instance.jsonschema.getConfig('enableCache');
+      this.lifespan = App.instance.jsonschema.getConfig('cacheLifespan');
+    })
+    this.cache = {};
+  }
+  /**
+   * Retrieve a cached schema
+   * @param {String} schemaName 
+   * @returns {Object} The schema
+   */
+  get(schemaName) {
+    this.prune();
+    if(this.cache[schemaName]) return this.cache[schemaName].schema;
+  }
+  /**
+   * Cache a schema
+   * @param {Object} schema The schema to cache 
+   */
+  set(schema) {
+    this.cache[schema.$anchor] = { schema, timestamp: Date.now() };
+  }
+  /**
+   * Removes invalid cache data
+   */
+  prune() {
+    Object.keys(this.cache).forEach(s => {
+      const cache = this.cache[s];
+      if(Date.now() > (cache.timestamp + this.lifespan)) {
+        delete this.cache[s];
+      }
+    });
+  }
+}
 
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="adapt-authoring-defaultplugins_index.js.html">adapt-authoring-defaultplugins/index.js</a>, <a href="adapt-authoring-defaultplugins_index.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-            
-                <div class="description usertext">Ability to add default plugins on course creation</div>
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="defaultplugins.DefaultPluginsModule.html">DefaultPluginsModule</a></dt>
-            <dd></dd>
-        </dl>
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+export default SchemaCache;</code></pre>
+        </article>
+    </section>
 
 
 
