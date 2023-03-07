@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>ExpressRouter - Adapt authoring tool UI documentation</title>
+    <title>adapt-authoring-jsonschema/lib/JsonSchema.js - Adapt authoring tool UI documentation</title>
     
     <meta name="description" content="Adapt authoring tool UI documentation" />
     
@@ -40,114 +40,278 @@
 
 <div id="main">
     
-    <h1 class="page-title">ExpressRouter</h1>
+    <h1 class="page-title">adapt-authoring-jsonschema/lib/JsonSchema.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>
-            <span class="ancestors"><a href="server.html">server</a>.</span>
-        
-        ExpressRouter
-        </h2>
-        
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import _ from 'lodash';
+import { App, Hook } from 'adapt-authoring-core';
+import fs from 'fs/promises';
+import xss from 'xss';
+
+/** @ignore */ const BASE_SCHEMA_NAME = 'base';
+
+class JsonSchema {
+  constructor({ enableCache, filePath, validator, xssWhitelist }) {
+    /**
+     * The raw built JSON schema
+     * @type {Object}
+     */
+    this.built;
+    /**
+     * The compiled schema validation function
+     * @type {function}
+     */
+    this.compiled;
+    /**
+     * Whether caching is enabled for this schema
+     * @type {Boolean}
+     */
+    this.enableCache = enableCache;
+    /**
+     * List of extensions for this schema
+     * @type {Array&lt;String>}
+     */
+    this.extensions = [];
+    /**
+     * File path to the schema
+     * @type {String}
+     */
+    this.filePath = filePath;
+    /**
+     * Whether the schema is currently building
+     * @type {Boolean}
+     */
+    this.isBuilding = false;
+    /**
+     * The last build time (in milliseconds)
+     * @type {Number}
+     */
+    this.lastBuildTime;
+    /**
+     * The raw schema data for this schema (with no inheritance/extensions)
+     * @type {Object}
+     */
+    this.raw;
+    /**
+     * Reference to the Ajv validator instance
+     * @type {external:Ajv}
+     */
+    this.validator = validator;
+    /**
+     * Attributes whitelisted for XSS sanitisation
+     * @type {Object}
+     */
+    this.xssWhitelist = xssWhitelist;
+    /**
+     * Hook which invokes every time the schema is built
+     * @type {Hook}
+     */
+    this.buildHook = new Hook();
+  }
+  /**
+   * Determines whether the current schema build is valid using last modification timestamp
+   * @returns {Boolean}
+   */
+  async isBuildValid() {
+    if(!this.built) return false;
+    let schema = this;
+    while(schema) {
+      const { mtimeMs } = await fs.stat(schema.filePath);
+      if(mtimeMs > this.lastBuildTime) return false;
+      schema = await schema.getParent();
+    }
+    return true;
+  }
+  /**
+   * Returs the parent schema if $merge is defined (or the base schema if a root schema)
+   * @returns {JsonSchema}
+   */
+  async getParent() {
+    if(this.name === BASE_SCHEMA_NAME) return;
+    const jsonschema = await App.instance.waitForModule('jsonschema');
+    const mergeRef = this.raw?.$merge?.source?.$ref;
+    try {
+      return await jsonschema.getSchema(mergeRef ?? BASE_SCHEMA_NAME);
+    } catch(e) {}
+  }
+  /**
+   * Loads the schema file
+   * @returns {JsonSchema} This instance
+   */
+  async load() {
+    try {
+      this.raw = JSON.parse((await fs.readFile(this.filePath)).toString());
+      this.name = this.raw.$anchor;
+    } catch(e) {
+      throw App.instance.errors?.SCHEMA_LOAD_FAILED?.setData({ schemaName: this.filePath }) ?? e;
+    }
+    if(this.validator.validateSchema(this.raw)?.errors) {
+      const errors = this.validator.errors.map(e => e.instancePath ? `${e.instancePath} ${e.message}` : e.message);
+      if(errors.length) {
+        throw App.instance.errors.INVALID_SCHEMA
+          .setData({ schemaName: this.name, errors: errors.join(', ') });
+      }
+    }
+    return this;
+  }
+  /**
+   * Builds and compiles the schema from the $merge and $patch schemas
+   * @param {SchemaBuildOptions}
+   * @return {JsonSchema}
+   */
+  async build(options = {}) {
+    if(options.useCache !== false &amp;&amp; this.enableCache &amp;&amp; await this.isBuildValid()) {
+      return this;
+    }
+    if(this.isBuilding) {
+      return new Promise(resolve => this.buildHook.tap(() => resolve(this)));
+    }
+    this.isBuilding = true;
+
+    const jsonschema = await App.instance.waitForModule('jsonschema');
+    const { applyExtensions, extensionFilter } = options;
     
-</header>
-
-<article>
+    let built = _.cloneDeep(this.raw);
+    let parent = await this.getParent();
     
-        <div class="container-overview">
-        
-            
+    while(parent) {
+      const parentBuilt = _.cloneDeep((await parent.build(options)).built);
+      built = await this.patch(parentBuilt, built, { strict: !parent.name === BASE_SCHEMA_NAME });
+      parent = await parent.getParent();
+    }
+    if(this.extensions.length) {
+      await Promise.all(this.extensions.map(async s => {
+        const applyPatch = typeof extensionFilter === 'function' ? extensionFilter(s) : applyExtensions !== false;
+        if(applyPatch) {
+          const extSchema = await jsonschema.getSchema(s);
+          this.patch(built, extSchema.raw, { extendAnnotations: false });
+        }
+      }));
+    }
+    this.built = built;
+    this.compiled = await this.validator.compileAsync(built);
+    this.isBuilding = false;
+    this.lastBuildTime = Date.now();
 
-<dl class="details">
+    this.buildHook.invoke(this);
+    return this;
+  }
+  /**
+   * Applies a patch schema to another schema
+   * @param {Object} baseSchema The base schema to apply the patch
+   * @param {Object} patchSchema The patch schema to apply to the base
+   * @param {ApplyPatchOptions} options
+   * @return {Object} The base schema
+   */
+  async patch(baseSchema, patchSchema, options = {}) {
+    const opts = _.defaults(options, { 
+      extendAnnotations: patchSchema.$anchor !== BASE_SCHEMA_NAME, 
+      overwriteProperties: false, 
+      strict: true 
+    });
+    const patchData = patchSchema.$patch?.with ?? patchSchema.$merge?.with ?? (!opts.strict &amp;&amp; patchSchema);
+    if(!patchData) {
+      throw App.instance.errors.INVALID_SCHEMA.setData({ schemaName: patchSchema.$anchor });
+    }
+    if(opts.extendAnnotations) {
+      ['$anchor', 'title', 'description'].forEach(p => {
+        if(patchSchema[p]) baseSchema[p] = patchSchema[p];
+      });
+    }
+    if(patchData.properties) {
+      const mergeFunc = opts.overwriteProperties ? _.merge : _.defaultsDeep;
+      mergeFunc(baseSchema.properties, patchData.properties);
+    }
+    ['allOf','anyOf','oneOf'].forEach(p => {
+      if(patchData[p]?.length) baseSchema[p] = (baseSchema[p] ?? []).concat(_.cloneDeep(patchData[p]));
+    });
+    if(patchData.required) {
+      baseSchema.required = _.uniq([...(baseSchema.required ?? []), ...patchData.required]);
+    }
+    return baseSchema;
+  }
+  /**
+   * Checks passed data against the specified schema (if it exists)
+   * @param {Object} dataToValidate The data to be validated
+   * @param {SchemaValidateOptions} options
+   * @return {Promise} Resolves with the validated data
+   */
+  async validate(dataToValidate, options) {
+    const opts = _.defaults(options, { useDefaults: true, ignoreRequired: false });
 
+    await this.build();
+
+    const data = _.defaultsDeep(_.cloneDeep(dataToValidate), opts.useDefaults ? this.getObjectDefaults() : {});
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="adapt-authoring-server_lib_typedefs.js.html">adapt-authoring-server/lib/typedefs.js</a>, <a href="adapt-authoring-server_lib_typedefs.js.html#line16">line 16</a>
-    </li></ul></dd>
+    this.compiled(data);
+
+    const errors = this.compiled.errors &amp;&amp; this.compiled.errors
+      .filter(e => e.keyword === 'required' ? !opts.ignoreRequired : true)
+      .map(e => e.instancePath ? `${e.instancePath} ${e.message}` : e.message)
+      .reduce((s, e) => s+= `${e}, `, '');
     
-
+    if(errors?.length) 
+      throw App.instance.errors.VALIDATION_FAILED.setData({ schemaName: this.name, errors, data })
     
+    return data;
+  }
+  /**
+   * Sanitises data by removing attributes according to the context (provided by options)
+   * @param {Object} dataToValidate The data to be sanitised
+   * @param {SchemaSanitiseOptions} options
+   * @return {Object} The sanitised data
+   */
+  async sanitise(dataToSanitise, options = {}, schema) {
+    const opts = _.defaults(options, { isInternal: false, isReadOnly: false, sanitiseHtml: true, strict: true });
+    schema = schema ?? (await this.build()).built;
+    const sanitised = {};
+    for (const prop in schema.properties) {
+      const schemaData = schema.properties[prop];
+      const value = dataToSanitise[prop];
+      const ignore = (opts.isInternal &amp;&amp; schemaData.isInternal) || (opts.isReadOnly &amp;&amp; schemaData.isReadOnly);
+      if(value === undefined || (ignore &amp;&amp; !opts.strict)) {
+        continue;
+      }
+      if(ignore &amp;&amp; opts.strict) {
+        throw App.instance.errors.MODIFY_PROTECTED_ATTR.setData({ attribute: prop, value: value });
+      }
+      sanitised[prop] = 
+        schemaData.type === 'object' &amp;&amp; schemaData.properties ? await this.sanitise(value, opts, schemaData) : 
+        schemaData.type === 'string' &amp;&amp; opts.sanitiseHtml ? xss(value, this.xssWhitelist) :
+        value;
+    }
+    return sanitised;
+  }
+  /**
+   * Adds an extension schema
+   * @param {String} extSchemaName 
+   */
+  addExtension(extSchemaName) {
+    !this.extensions.includes(extSchemaName) &amp;&amp; this.extensions.push(extSchemaName);
+  }
+  /**
+   * Returns all schema defaults as a correctly structured object
+   * @param {Object} schema
+   * @param {Object} memo For recursion
+   * @returns {Object} The defaults object
+   */
+  getObjectDefaults(schema) {
+    schema = schema ?? this.built;
+    const props = schema.properties ?? schema.$merge?.with?.properties ?? schema.$patch?.with?.properties;
+    return _.mapValues(props, s => s.properties ? this.getObjectDefaults(s) : s.default);
+  }
+}
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://expressjs.com/en/4x/api.html#router">https://expressjs.com/en/4x/api.html#router</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-
-
-            
-                <div class="description usertext">Express.js HTTP router</div>
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+export default JsonSchema;</code></pre>
+        </article>
+    </section>
 
 
 
@@ -159,7 +323,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Tue Mar 07 2023 13:04:00 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Tue Mar 07 2023 13:03:59 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

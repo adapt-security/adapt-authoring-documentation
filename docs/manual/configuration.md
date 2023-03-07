@@ -103,8 +103,6 @@ export default {
   'adapt-authoring-jsonschema': {
     // Whether schema data should be cached
     enableCache: true, // boolean, optional
-    // The amount of time a cached schema should remain valid
-    cacheLifespan: "30s", // string, optional
     // Custom RegExp overrides for Ajv string formats
     formatOverrides: {}, // object, optional
     // Attributes which should be whitelisted when run through the XSS sanitiser
@@ -461,13 +459,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">Whether schema data should be cached</div>
 <div class="default"><span class="label">Default</span>: <pre>true</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">cacheLifespan</span> (string, optional)</div>
-<div class="inner">
-<div class="description">The amount of time a cached schema should remain valid</div>
-<div class="default"><span class="label">Default</span>: <pre>"30s"</pre></div>
 </div>
 </div>
 <div class="attribute">
