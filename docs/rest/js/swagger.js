@@ -570,7 +570,7 @@ addEventListener("load", () => (0, _swaggerUi.default)({
   dom_id: '#swagger'
 }));
 
-},{"swagger-ui":930}],79:[function(require,module,exports){
+},{"swagger-ui":932}],79:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8424,7 +8424,7 @@ function copy(text, options) {
 
 module.exports = copy;
 
-},{"toggle-selection":931}],115:[function(require,module,exports){
+},{"toggle-selection":933}],115:[function(require,module,exports){
 var parent = require('../../stable/instance/bind');
 
 module.exports = parent;
@@ -43697,7 +43697,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":792,"./utils":796,"side-channel":887}],796:[function(require,module,exports){
+},{"./formats":792,"./utils":796,"side-channel":889}],796:[function(require,module,exports){
 'use strict';
 
 var formats = require('./formats');
@@ -44513,7 +44513,7 @@ module.exports = class RandExp {
   }
 };
 
-},{"drange":535,"ret":875}],802:[function(require,module,exports){
+},{"drange":535,"ret":877}],802:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -44628,7 +44628,7 @@ _defineProperty(CopyToClipboard, "defaultProps", {
   onCopy: undefined,
   options: undefined
 });
-},{"copy-to-clipboard":114,"react":861}],803:[function(require,module,exports){
+},{"copy-to-clipboard":114,"react":863}],803:[function(require,module,exports){
 "use strict";
 
 var _require = require('./Component'),
@@ -44925,7 +44925,7 @@ _defineProperty(DebounceInput, "defaultProps", {
   forceNotifyOnBlur: true,
   inputRef: undefined
 });
-},{"lodash.debounce":563,"react":861}],805:[function(require,module,exports){
+},{"lodash.debounce":563,"react":863}],805:[function(require,module,exports){
 "use strict";
 
 var _require = require('./Component'),
@@ -49224,7 +49224,7 @@ if(navigator.userAgent.indexOf('Chrome')>-1&&navigator.userAgent.indexOf('Edge')
 if(/^(https?|file):$/.test(protocol)){// eslint-disable-next-line react-internal/no-production-logging
 console.info('%cDownload the React DevTools '+'for a better development experience: '+'https://reactjs.org/link/react-devtools'+(protocol==='file:'?'\nYou might need to use a local HTTP server (instead of file://): '+'https://reactjs.org/link/react-devtools-faq':''),'font-weight:bold');}}}}exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=Internals;exports.createPortal=createPortal$1;exports.findDOMNode=findDOMNode;exports.flushSync=flushSync;exports.hydrate=hydrate;exports.render=render;exports.unmountComponentAtNode=unmountComponentAtNode;exports.unstable_batchedUpdates=batchedUpdates$1;exports.unstable_createPortal=unstable_createPortal;exports.unstable_renderSubtreeIntoContainer=renderSubtreeIntoContainer;exports.version=ReactVersion;})();}
 
-},{"object-assign":782,"react":861,"scheduler":884,"scheduler/tracing":885}],807:[function(require,module,exports){
+},{"object-assign":782,"react":863,"scheduler":886,"scheduler/tracing":887}],807:[function(require,module,exports){
 /** @license React v17.0.2
  * react-dom.production.min.js
  *
@@ -49523,7 +49523,7 @@ exports.findDOMNode=function(a){if(null==a)return null;if(1===a.nodeType)return 
 exports.render=function(a,b,c){if(!rk(b))throw Error(y(200));return tk(null,a,b,!1,c)};exports.unmountComponentAtNode=function(a){if(!rk(a))throw Error(y(40));return a._reactRootContainer?(Xj(function(){tk(null,null,a,!1,function(){a._reactRootContainer=null;a[ff]=null})}),!0):!1};exports.unstable_batchedUpdates=Wj;exports.unstable_createPortal=function(a,b){return uk(a,b,2<arguments.length&&void 0!==arguments[2]?arguments[2]:null)};
 exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!rk(c))throw Error(y(200));if(null==a||void 0===a._reactInternals)throw Error(y(38));return tk(a,b,c,!1,d)};exports.version="17.0.2";
 
-},{"object-assign":782,"react":861,"scheduler":884}],808:[function(require,module,exports){
+},{"object-assign":782,"react":863,"scheduler":886}],808:[function(require,module,exports){
 'use strict';
 
 function checkDCE() {
@@ -50056,7 +50056,7 @@ function immutableMemo(Component, updateOnProps) {
 var _default = ImmutablePureComponent;
 exports.default = _default;
 
-},{"immutable":559,"react":861}],811:[function(require,module,exports){
+},{"immutable":559,"react":863}],811:[function(require,module,exports){
 (function (process){(function (){
 /** @license React v16.13.1
  * react-is.development.js
@@ -50270,23 +50270,24 @@ if (process.env.NODE_ENV === 'production') {
 
 }).call(this)}).call(this,require('_process'))
 },{"./cjs/react-is.development.js":811,"./cjs/react-is.production.min.js":812,"_process":784}],814:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.ReactReduxContext = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var ReactReduxContext = /*#__PURE__*/_react.default.createContext(null);
+var _react = require("react");
+const ReactReduxContext = /*#__PURE__*/(0, _react.createContext)(null);
 exports.ReactReduxContext = ReactReduxContext;
-if ("production" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   ReactReduxContext.displayName = 'ReactRedux';
 }
 var _default = ReactReduxContext;
 exports.default = _default;
 
-},{"react":861}],815:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"_process":784,"react":863}],815:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -50294,124 +50295,136 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
 var _Context = require("./Context");
 var _Subscription = require("../utils/Subscription");
 var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function Provider(_ref) {
-  var store = _ref.store,
-    context = _ref.context,
-    children = _ref.children;
-  var contextValue = (0, _react.useMemo)(function () {
-    var subscription = (0, _Subscription.createSubscription)(store);
+function Provider({
+  store,
+  context,
+  children,
+  serverState
+}) {
+  const contextValue = (0, _react.useMemo)(() => {
+    const subscription = (0, _Subscription.createSubscription)(store);
     return {
-      store: store,
-      subscription: subscription
+      store,
+      subscription,
+      getServerState: serverState ? () => serverState : undefined
     };
-  }, [store]);
-  var previousState = (0, _react.useMemo)(function () {
-    return store.getState();
-  }, [store]);
-  (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(function () {
-    var subscription = contextValue.subscription;
+  }, [store, serverState]);
+  const previousState = (0, _react.useMemo)(() => store.getState(), [store]);
+  (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(() => {
+    const {
+      subscription
+    } = contextValue;
     subscription.onStateChange = subscription.notifyNestedSubs;
     subscription.trySubscribe();
     if (previousState !== store.getState()) {
       subscription.notifyNestedSubs();
     }
-    return function () {
+    return () => {
       subscription.tryUnsubscribe();
-      subscription.onStateChange = null;
+      subscription.onStateChange = undefined;
     };
   }, [contextValue, previousState]);
-  var Context = context || _Context.ReactReduxContext;
+  const Context = context || _Context.ReactReduxContext; // @ts-ignore 'AnyAction' is assignable to the constraint of type 'A', but 'A' could be instantiated with a different subtype
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: contextValue
   }, children);
 }
-if ("production" !== 'production') {
-  Provider.propTypes = {
-    store: _propTypes.default.shape({
-      subscribe: _propTypes.default.func.isRequired,
-      dispatch: _propTypes.default.func.isRequired,
-      getState: _propTypes.default.func.isRequired
-    }),
-    context: _propTypes.default.object,
-    children: _propTypes.default.any
-  };
-}
 var _default = Provider;
 exports.default = _default;
 
-},{"../utils/Subscription":830,"../utils/useIsomorphicLayoutEffect":836,"./Context":814,"prop-types":788,"react":861}],816:[function(require,module,exports){
+},{"../utils/Subscription":831,"../utils/useIsomorphicLayoutEffect":837,"./Context":814,"react":863}],816:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = connectAdvanced;
+exports.initializeConnect = exports.default = void 0;
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
 var _hoistNonReactStatics = _interopRequireDefault(require("hoist-non-react-statics"));
 var _react = _interopRequireWildcard(require("react"));
 var _reactIs = require("react-is");
+var _selectorFactory = _interopRequireDefault(require("../connect/selectorFactory"));
+var _mapDispatchToProps = require("../connect/mapDispatchToProps");
+var _mapStateToProps = require("../connect/mapStateToProps");
+var _mergeProps = require("../connect/mergeProps");
 var _Subscription = require("../utils/Subscription");
 var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
+var _shallowEqual = _interopRequireDefault(require("../utils/shallowEqual"));
+var _warning = _interopRequireDefault(require("../utils/warning"));
 var _Context = require("./Context");
+var _useSyncExternalStore = require("../utils/useSyncExternalStore");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var _excluded = ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"],
-  _excluded2 = ["reactReduxForwardedRef"];
-// Define some constant arrays just to avoid re-creating these
+const _excluded = ["reactReduxForwardedRef"];
 
-var EMPTY_ARRAY = [];
-var NO_SUBSCRIPTION_ARRAY = [null, null];
-var stringifyComponent = function stringifyComponent(Comp) {
+/* eslint-disable valid-jsdoc, @typescript-eslint/no-unused-vars */
+
+let useSyncExternalStore = _useSyncExternalStore.notInitialized;
+const initializeConnect = fn => {
+  useSyncExternalStore = fn;
+}; // Define some constant arrays just to avoid re-creating these
+exports.initializeConnect = initializeConnect;
+const EMPTY_ARRAY = [null, 0];
+const NO_SUBSCRIPTION_ARRAY = [null, null]; // Attempts to stringify whatever not-really-a-component value we were given
+// for logging in an error message
+
+const stringifyComponent = Comp => {
   try {
     return JSON.stringify(Comp);
   } catch (err) {
     return String(Comp);
   }
 };
-function storeStateUpdatesReducer(state, action) {
-  var updateCount = state[1];
-  return [action.payload, updateCount + 1];
-}
+
+// This is "just" a `useLayoutEffect`, but with two modifications:
+// - we need to fall back to `useEffect` in SSR to avoid annoying warnings
+// - we extract this to a separate function to avoid closing over values
+//   and causing memory leaks
 function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
-  (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(function () {
-    return effectFunc.apply(void 0, effectArgs);
-  }, dependencies);
-}
-function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
+  (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(() => effectFunc(...effectArgs), dependencies);
+} // Effect callback, extracted: assign the latest props values to refs for later usage
+
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps,
+// actualChildProps: unknown,
+childPropsFromStoreUpdate, notifyNestedSubs) {
   // We want to capture the wrapper props and child props we used for later comparisons
   lastWrapperProps.current = wrapperProps;
-  lastChildProps.current = actualChildProps;
   renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
 
   if (childPropsFromStoreUpdate.current) {
     childPropsFromStoreUpdate.current = null;
     notifyNestedSubs();
   }
-}
-function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
+} // Effect callback, extracted: subscribe to the Redux store or nearest connected ancestor,
+// check for updates after dispatched actions, and trigger re-renders.
+
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs,
+// forceComponentUpdateDispatch: React.Dispatch<any>,
+additionalSubscribeListener) {
   // If we're not subscribed to the store, nothing to do here
-  if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
+  if (!shouldHandleStateChanges) return () => {}; // Capture values for checking if and when this component unmounts
 
-  var didUnsubscribe = false;
-  var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
+  let didUnsubscribe = false;
+  let lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
 
-  var checkForUpdates = function checkForUpdates() {
-    if (didUnsubscribe) {
+  const checkForUpdates = () => {
+    if (didUnsubscribe || !isMounted.current) {
       // Don't run stale listeners.
       // Redux doesn't guarantee unsubscriptions happen until next dispatch.
       return;
-    }
-    var latestStoreState = store.getState();
-    var newChildProps, error;
+    } // TODO We're currently calling getState ourselves here, rather than letting `uSES` do it
+
+    const latestStoreState = store.getState();
+    let newChildProps, error;
     try {
       // Actually run the selector with the most recent store state and wrapper props
       // to determine what the child props should be
@@ -50435,14 +50448,10 @@ function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPr
       // forcing another re-render, which we don't want.
       lastChildProps.current = newChildProps;
       childPropsFromStoreUpdate.current = newChildProps;
-      renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
+      renderIsScheduled.current = true; // TODO This is hacky and not how `uSES` is meant to be used
+      // Trigger the React `useSyncExternalStore` subscriber
 
-      forceComponentUpdateDispatch({
-        type: 'STORE_UPDATED',
-        payload: {
-          error: error
-        }
-      });
+      additionalSubscribeListener();
     }
   }; // Actually subscribe to the nearest connected ancestor (or store)
 
@@ -50451,7 +50460,7 @@ function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPr
   // changed since we began.
 
   checkForUpdates();
-  var unsubscribeWrapper = function unsubscribeWrapper() {
+  const unsubscribeWrapper = () => {
     didUnsubscribe = true;
     subscription.tryUnsubscribe();
     subscription.onStateChange = null;
@@ -50465,147 +50474,134 @@ function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPr
     }
   };
   return unsubscribeWrapper;
-}
-var initStateUpdates = function initStateUpdates() {
-  return [null, 0];
-};
-function connectAdvanced(
-/*
-  selectorFactory is a func that is responsible for returning the selector function used to
-  compute new props from state, props, and dispatch. For example:
-      export default connectAdvanced((dispatch, options) => (state, props) => ({
-      thing: state.things[props.thingId],
-      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
-    }))(YourComponent)
-    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
-  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
-  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
-    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
-  props. Do not use connectAdvanced directly without memoizing results between calls to your
-  selector, otherwise the Connect component will re-render on every state or props change.
-*/
-selectorFactory,
-// options object:
-_ref) {
-  if (_ref === void 0) {
-    _ref = {};
-  }
-  var _ref2 = _ref,
-    _ref2$getDisplayName = _ref2.getDisplayName,
-    getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
-      return "ConnectAdvanced(" + name + ")";
-    } : _ref2$getDisplayName,
-    _ref2$methodName = _ref2.methodName,
-    methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
-    _ref2$renderCountProp = _ref2.renderCountProp,
-    renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
-    _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
-    shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
-    _ref2$storeKey = _ref2.storeKey,
-    storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
-    _ref2$withRef = _ref2.withRef,
-    withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
-    _ref2$forwardRef = _ref2.forwardRef,
-    forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
-    _ref2$context = _ref2.context,
-    context = _ref2$context === void 0 ? _Context.ReactReduxContext : _ref2$context,
-    connectOptions = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
-  if ("production" !== 'production') {
-    if (renderCountProp !== undefined) {
-      throw new Error("renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
-    }
-    if (withRef) {
-      throw new Error('withRef is removed. To access the wrapped instance, use a ref on the connected component');
-    }
-    var customStoreWarningMessage = 'To use a custom Redux store for specific components, create a custom React context with ' + "React.createContext(), and pass the context object to React Redux's Provider and specific components" + ' like: <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. ' + 'You may also pass a {context : MyContext} option to connect';
-    if (storeKey !== 'store') {
-      throw new Error('storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
-    }
-  }
-  var Context = context;
-  return function wrapWithConnect(WrappedComponent) {
-    if ("production" !== 'production' && !(0, _reactIs.isValidElementType)(WrappedComponent)) {
-      throw new Error("You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
-    }
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
-    var displayName = getDisplayName(wrappedComponentName);
-    var selectorFactoryOptions = (0, _extends2.default)({}, connectOptions, {
-      getDisplayName: getDisplayName,
-      methodName: methodName,
-      renderCountProp: renderCountProp,
-      shouldHandleStateChanges: shouldHandleStateChanges,
-      storeKey: storeKey,
-      displayName: displayName,
-      wrappedComponentName: wrappedComponentName,
-      WrappedComponent: WrappedComponent
-    });
-    var pure = connectOptions.pure;
-    function createChildSelector(store) {
-      return selectorFactory(store.dispatch, selectorFactoryOptions);
-    } // If we aren't running in "pure" mode, we don't want to memoize values.
-    // To avoid conditionally calling hooks, we fall back to a tiny wrapper
-    // that just executes the given callback immediately.
+} // Reducer initial state creation for our update reducer
 
-    var usePureOnlyMemo = pure ? _react.useMemo : function (callback) {
-      return callback();
+const initStateUpdates = () => EMPTY_ARRAY;
+function strictEqual(a, b) {
+  return a === b;
+}
+/**
+ * Infers the type of props that a connector will inject into a component.
+ */
+
+let hasWarnedAboutDeprecatedPureOption = false;
+/**
+ * Connects a React component to a Redux store.
+ *
+ * - Without arguments, just wraps the component, without changing the behavior / props
+ *
+ * - If 2 params are passed (3rd param, mergeProps, is skipped), default behavior
+ * is to override ownProps (as stated in the docs), so what remains is everything that's
+ * not a state or dispatch prop
+ *
+ * - When 3rd param is passed, we don't know if ownProps propagate and whether they
+ * should be valid component props, because it depends on mergeProps implementation.
+ * As such, it is the user's responsibility to extend ownProps interface from state or
+ * dispatch props or both when applicable
+ *
+ * @param mapStateToProps A function that extracts values from state
+ * @param mapDispatchToProps Setup for dispatching actions
+ * @param mergeProps Optional callback to merge state and dispatch props together
+ * @param options Options for configuring the connection
+ *
+ */
+
+function connect(mapStateToProps, mapDispatchToProps, mergeProps, {
+  // The `pure` option has been removed, so TS doesn't like us destructuring this to check its existence.
+  // @ts-ignore
+  pure,
+  areStatesEqual = strictEqual,
+  areOwnPropsEqual = _shallowEqual.default,
+  areStatePropsEqual = _shallowEqual.default,
+  areMergedPropsEqual = _shallowEqual.default,
+  // use React's forwardRef to expose a ref of the wrapped component
+  forwardRef = false,
+  // the context consumer to use
+  context = _Context.ReactReduxContext
+} = {}) {
+  if (process.env.NODE_ENV !== 'production') {
+    if (pure !== undefined && !hasWarnedAboutDeprecatedPureOption) {
+      hasWarnedAboutDeprecatedPureOption = true;
+      (0, _warning.default)('The `pure` option has been removed. `connect` is now always a "pure/memoized" component');
+    }
+  }
+  const Context = context;
+  const initMapStateToProps = (0, _mapStateToProps.mapStateToPropsFactory)(mapStateToProps);
+  const initMapDispatchToProps = (0, _mapDispatchToProps.mapDispatchToPropsFactory)(mapDispatchToProps);
+  const initMergeProps = (0, _mergeProps.mergePropsFactory)(mergeProps);
+  const shouldHandleStateChanges = Boolean(mapStateToProps);
+  const wrapWithConnect = WrappedComponent => {
+    if (process.env.NODE_ENV !== 'production' && !(0, _reactIs.isValidElementType)(WrappedComponent)) {
+      throw new Error(`You must pass a component to the function returned by connect. Instead received ${stringifyComponent(WrappedComponent)}`);
+    }
+    const wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    const displayName = `Connect(${wrappedComponentName})`;
+    const selectorFactoryOptions = {
+      shouldHandleStateChanges,
+      displayName,
+      wrappedComponentName,
+      WrappedComponent,
+      // @ts-ignore
+      initMapStateToProps,
+      // @ts-ignore
+      initMapDispatchToProps,
+      initMergeProps,
+      areStatesEqual,
+      areStatePropsEqual,
+      areOwnPropsEqual,
+      areMergedPropsEqual
     };
     function ConnectFunction(props) {
-      var _useMemo = (0, _react.useMemo)(function () {
-          // Distinguish between actual "data" props that were passed to the wrapper component,
-          // and values needed to control behavior (forwarded refs, alternate context instances).
-          // To maintain the wrapperProps object reference, memoize this destructuring.
-          var reactReduxForwardedRef = props.reactReduxForwardedRef,
-            wrapperProps = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded2);
-          return [props.context, reactReduxForwardedRef, wrapperProps];
-        }, [props]),
-        propsContext = _useMemo[0],
-        reactReduxForwardedRef = _useMemo[1],
-        wrapperProps = _useMemo[2];
-      var ContextToUse = (0, _react.useMemo)(function () {
+      const [propsContext, reactReduxForwardedRef, wrapperProps] = (0, _react.useMemo)(() => {
+        // Distinguish between actual "data" props that were passed to the wrapper component,
+        // and values needed to control behavior (forwarded refs, alternate context instances).
+        // To maintain the wrapperProps object reference, memoize this destructuring.
+        const {
+            reactReduxForwardedRef
+          } = props,
+          wrapperProps = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
+        return [props.context, reactReduxForwardedRef, wrapperProps];
+      }, [props]);
+      const ContextToUse = (0, _react.useMemo)(() => {
         // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
         // Memoize the check that determines which context instance we should use.
-        return propsContext && propsContext.Consumer && (0, _reactIs.isContextConsumer)( /*#__PURE__*/_react.default.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+        return propsContext && propsContext.Consumer &&
+        // @ts-ignore
+        (0, _reactIs.isContextConsumer)( /*#__PURE__*/_react.default.createElement(propsContext.Consumer, null)) ? propsContext : Context;
       }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
 
-      var contextValue = (0, _react.useContext)(ContextToUse); // The store _must_ exist as either a prop or in context.
+      const contextValue = (0, _react.useContext)(ContextToUse); // The store _must_ exist as either a prop or in context.
       // We'll check to see if it _looks_ like a Redux store first.
       // This allows us to pass through a `store` prop that is just a plain value.
 
-      var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
-      var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
-      if ("production" !== 'production' && !didStoreComeFromProps && !didStoreComeFromContext) {
-        throw new Error("Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
+      const didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+      const didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+      if (process.env.NODE_ENV !== 'production' && !didStoreComeFromProps && !didStoreComeFromContext) {
+        throw new Error(`Could not find "store" in the context of ` + `"${displayName}". Either wrap the root component in a <Provider>, ` + `or pass a custom React context provider to <Provider> and the corresponding ` + `React context consumer to ${displayName} in connect options.`);
       } // Based on the previous check, one of these must be true
 
-      var store = didStoreComeFromProps ? props.store : contextValue.store;
-      var childPropsSelector = (0, _react.useMemo)(function () {
+      const store = didStoreComeFromProps ? props.store : contextValue.store;
+      const getServerState = didStoreComeFromContext ? contextValue.getServerState : store.getState;
+      const childPropsSelector = (0, _react.useMemo)(() => {
         // The child props selector needs the store reference as an input.
         // Re-create this selector whenever the store changes.
-        return createChildSelector(store);
+        return (0, _selectorFactory.default)(store.dispatch, selectorFactoryOptions);
       }, [store]);
-      var _useMemo2 = (0, _react.useMemo)(function () {
-          if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
-          // connected to the store via props shouldn't use subscription from context, or vice versa.
+      const [subscription, notifyNestedSubs] = (0, _react.useMemo)(() => {
+        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
+        // connected to the store via props shouldn't use subscription from context, or vice versa.
 
-          // This Subscription's source should match where store came from: props vs. context. A component
-          // connected to the store via props shouldn't use subscription from context, or vice versa.
-          var subscription = (0, _Subscription.createSubscription)(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
-          // the middle of the notification loop, where `subscription` will then be null. This can
-          // probably be avoided if Subscription's listeners logic is changed to not call listeners
-          // that have been unsubscribed in the  middle of the notification loop.
+        const subscription = (0, _Subscription.createSubscription)(store, didStoreComeFromProps ? undefined : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+        // the middle of the notification loop, where `subscription` will then be null. This can
+        // probably be avoided if Subscription's listeners logic is changed to not call listeners
+        // that have been unsubscribed in the  middle of the notification loop.
 
-          // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
-          // the middle of the notification loop, where `subscription` will then be null. This can
-          // probably be avoided if Subscription's listeners logic is changed to not call listeners
-          // that have been unsubscribed in the  middle of the notification loop.
-          var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
-          return [subscription, notifyNestedSubs];
-        }, [store, didStoreComeFromProps, contextValue]),
-        subscription = _useMemo2[0],
-        notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
+        const notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
+        return [subscription, notifyNestedSubs];
+      }, [store, didStoreComeFromProps, contextValue]); // Determine what {store, subscription} value should be put into nested context, if necessary,
       // and memoize that value to avoid unnecessary context updates.
 
-      var overriddenContextValue = (0, _react.useMemo)(function () {
+      const overriddenContextValue = (0, _react.useMemo)(() => {
         if (didStoreComeFromProps) {
           // This component is directly subscribed to a store from props.
           // We don't want descendants reading from this store - pass down whatever
@@ -50615,56 +50611,90 @@ _ref) {
         // connected descendants won't update until after this component is done
 
         return (0, _extends2.default)({}, contextValue, {
-          subscription: subscription
+          subscription
         });
-      }, [didStoreComeFromProps, contextValue, subscription]); // We need to force this wrapper component to re-render whenever a Redux store update
-      // causes a change to the calculated child component props (or we caught an error in mapState)
+      }, [didStoreComeFromProps, contextValue, subscription]); // Set up refs to coordinate values between the subscription effect and the render logic
 
-      var _useReducer = (0, _react.useReducer)(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates),
-        _useReducer$ = _useReducer[0],
-        previousStateUpdateResult = _useReducer$[0],
-        forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
+      const lastChildProps = (0, _react.useRef)();
+      const lastWrapperProps = (0, _react.useRef)(wrapperProps);
+      const childPropsFromStoreUpdate = (0, _react.useRef)();
+      const renderIsScheduled = (0, _react.useRef)(false);
+      const isProcessingDispatch = (0, _react.useRef)(false);
+      const isMounted = (0, _react.useRef)(false);
+      const latestSubscriptionCallbackError = (0, _react.useRef)();
+      (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(() => {
+        isMounted.current = true;
+        return () => {
+          isMounted.current = false;
+        };
+      }, []);
+      const actualChildPropsSelector = (0, _react.useMemo)(() => {
+        const selector = () => {
+          // Tricky logic here:
+          // - This render may have been triggered by a Redux store update that produced new child props
+          // - However, we may have gotten new wrapper props after that
+          // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
+          // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
+          // So, we'll use the child props from store update only if the wrapper props are the same as last time.
+          if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
+            return childPropsFromStoreUpdate.current;
+          } // TODO We're reading the store directly in render() here. Bad idea?
+          // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
+          // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
+          // to determine what the child props should be.
 
-      if (previousStateUpdateResult && previousStateUpdateResult.error) {
-        throw previousStateUpdateResult.error;
-      } // Set up refs to coordinate values between the subscription effect and the render logic
-
-      var lastChildProps = (0, _react.useRef)();
-      var lastWrapperProps = (0, _react.useRef)(wrapperProps);
-      var childPropsFromStoreUpdate = (0, _react.useRef)();
-      var renderIsScheduled = (0, _react.useRef)(false);
-      var actualChildProps = usePureOnlyMemo(function () {
-        // Tricky logic here:
-        // - This render may have been triggered by a Redux store update that produced new child props
-        // - However, we may have gotten new wrapper props after that
-        // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
-        // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
-        // So, we'll use the child props from store update only if the wrapper props are the same as last time.
-        if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
-          return childPropsFromStoreUpdate.current;
-        } // TODO We're reading the store directly in render() here. Bad idea?
-        // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
-        // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
-        // to determine what the child props should be.
-
-        return childPropsSelector(store.getState(), wrapperProps);
-      }, [store, previousStateUpdateResult, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
+          return childPropsSelector(store.getState(), wrapperProps);
+        };
+        return selector;
+      }, [store, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
       // about useLayoutEffect in SSR, so we try to detect environment and fall back to
       // just useEffect instead to avoid the warning, since neither will run anyway.
 
-      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs]); // Our re-subscribe logic only runs when the store/subscription setup changes
-
-      useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch], [store, subscription, childPropsSelector]); // Now that all that's done, we can finally try to actually render the child component.
+      const subscribeForReact = (0, _react.useMemo)(() => {
+        const subscribe = reactListener => {
+          if (!subscription) {
+            return () => {};
+          }
+          return subscribeUpdates(shouldHandleStateChanges, store, subscription,
+          // @ts-ignore
+          childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, reactListener);
+        };
+        return subscribe;
+      }, [subscription]);
+      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, childPropsFromStoreUpdate, notifyNestedSubs]);
+      let actualChildProps;
+      try {
+        actualChildProps = useSyncExternalStore(
+        // TODO We're passing through a big wrapper that does a bunch of extra side effects besides subscribing
+        subscribeForReact,
+        // TODO This is incredibly hacky. We've already processed the store update and calculated new child props,
+        // TODO and we're just passing that through so it triggers a re-render for us rather than relying on `uSES`.
+        actualChildPropsSelector, getServerState ? () => childPropsSelector(getServerState(), wrapperProps) : actualChildPropsSelector);
+      } catch (err) {
+        if (latestSubscriptionCallbackError.current) {
+          ;
+          err.message += `\nThe error may be correlated with this previous error:\n${latestSubscriptionCallbackError.current.stack}\n\n`;
+        }
+        throw err;
+      }
+      (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(() => {
+        latestSubscriptionCallbackError.current = undefined;
+        childPropsFromStoreUpdate.current = undefined;
+        lastChildProps.current = actualChildProps;
+      }); // Now that all that's done, we can finally try to actually render the child component.
       // We memoize the elements for the rendered child component as an optimization.
 
-      var renderedWrappedComponent = (0, _react.useMemo)(function () {
-        return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({}, actualChildProps, {
-          ref: reactReduxForwardedRef
-        }));
+      const renderedWrappedComponent = (0, _react.useMemo)(() => {
+        return /*#__PURE__*/(
+          // @ts-ignore
+          _react.default.createElement(WrappedComponent, (0, _extends2.default)({}, actualChildProps, {
+            ref: reactReduxForwardedRef
+          }))
+        );
       }, [reactReduxForwardedRef, WrappedComponent, actualChildProps]); // If React sees the exact same element reference as last time, it bails out of re-rendering
       // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
 
-      var renderedChild = (0, _react.useMemo)(function () {
+      const renderedChild = (0, _react.useMemo)(() => {
         if (shouldHandleStateChanges) {
           // If this component is subscribed to store updates, we need to pass its own
           // subscription instance down to our descendants. That means rendering the same
@@ -50676,257 +50706,149 @@ _ref) {
         return renderedWrappedComponent;
       }, [ContextToUse, renderedWrappedComponent, overriddenContextValue]);
       return renderedChild;
-    } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
+    }
+    const _Connect = _react.default.memo(ConnectFunction);
 
-    var Connect = pure ? _react.default.memo(ConnectFunction) : ConnectFunction;
+    // Add a hacky cast to get the right output type
+    const Connect = _Connect;
     Connect.WrappedComponent = WrappedComponent;
     Connect.displayName = ConnectFunction.displayName = displayName;
     if (forwardRef) {
-      var forwarded = _react.default.forwardRef(function forwardConnectRef(props, ref) {
+      const _forwarded = _react.default.forwardRef(function forwardConnectRef(props, ref) {
+        // @ts-ignore
         return /*#__PURE__*/_react.default.createElement(Connect, (0, _extends2.default)({}, props, {
           reactReduxForwardedRef: ref
         }));
       });
+      const forwarded = _forwarded;
       forwarded.displayName = displayName;
       forwarded.WrappedComponent = WrappedComponent;
       return (0, _hoistNonReactStatics.default)(forwarded, WrappedComponent);
     }
     return (0, _hoistNonReactStatics.default)(Connect, WrappedComponent);
   };
+  return wrapWithConnect;
 }
-
-},{"../utils/Subscription":830,"../utils/useIsomorphicLayoutEffect":836,"./Context":814,"@babel/runtime/helpers/esm/extends":61,"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":63,"hoist-non-react-statics":557,"react":861,"react-is":841}],817:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.createConnect = createConnect;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
-var _connectAdvanced = _interopRequireDefault(require("../components/connectAdvanced"));
-var _shallowEqual = _interopRequireDefault(require("../utils/shallowEqual"));
-var _mapDispatchToProps = _interopRequireDefault(require("./mapDispatchToProps"));
-var _mapStateToProps = _interopRequireDefault(require("./mapStateToProps"));
-var _mergeProps = _interopRequireDefault(require("./mergeProps"));
-var _selectorFactory = _interopRequireDefault(require("./selectorFactory"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var _excluded = ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"];
-/*
-  connect is a facade over connectAdvanced. It turns its args into a compatible
-  selectorFactory, which has the signature:
-
-    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
-  
-  connect passes its args to connectAdvanced as options, which will in turn pass them to
-  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
-
-  selectorFactory returns a final props selector from its mapStateToProps,
-  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
-  mergePropsFactories, and pure args.
-
-  The resulting final props selector is called by the Connect component instance whenever
-  it receives new props or store state.
- */
-
-function match(arg, factories, name) {
-  for (var i = factories.length - 1; i >= 0; i--) {
-    var result = factories[i](arg);
-    if (result) return result;
-  }
-  return function (dispatch, options) {
-    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
-  };
-}
-function strictEqual(a, b) {
-  return a === b;
-} // createConnect with default args builds the 'official' connect behavior. Calling it with
-// different options opens up some testing and extensibility scenarios
-
-function createConnect(_temp) {
-  var _ref = _temp === void 0 ? {} : _temp,
-    _ref$connectHOC = _ref.connectHOC,
-    connectHOC = _ref$connectHOC === void 0 ? _connectAdvanced.default : _ref$connectHOC,
-    _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
-    mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToProps.default : _ref$mapStateToPropsF,
-    _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
-    mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToProps.default : _ref$mapDispatchToPro,
-    _ref$mergePropsFactor = _ref.mergePropsFactories,
-    mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergeProps.default : _ref$mergePropsFactor,
-    _ref$selectorFactory = _ref.selectorFactory,
-    selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactory.default : _ref$selectorFactory;
-  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
-    if (_ref2 === void 0) {
-      _ref2 = {};
-    }
-    var _ref3 = _ref2,
-      _ref3$pure = _ref3.pure,
-      pure = _ref3$pure === void 0 ? true : _ref3$pure,
-      _ref3$areStatesEqual = _ref3.areStatesEqual,
-      areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
-      _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
-      areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _shallowEqual.default : _ref3$areOwnPropsEqua,
-      _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
-      areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _shallowEqual.default : _ref3$areStatePropsEq,
-      _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
-      areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _shallowEqual.default : _ref3$areMergedPropsE,
-      extraOptions = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded);
-    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
-    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
-    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
-    return connectHOC(selectorFactory, (0, _extends2.default)({
-      // used in error messages
-      methodName: 'connect',
-      // used to compute Connect's displayName from the wrapped component's displayName.
-      getDisplayName: function getDisplayName(name) {
-        return "Connect(" + name + ")";
-      },
-      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
-      shouldHandleStateChanges: Boolean(mapStateToProps),
-      // passed through to selectorFactory
-      initMapStateToProps: initMapStateToProps,
-      initMapDispatchToProps: initMapDispatchToProps,
-      initMergeProps: initMergeProps,
-      pure: pure,
-      areStatesEqual: areStatesEqual,
-      areOwnPropsEqual: areOwnPropsEqual,
-      areStatePropsEqual: areStatePropsEqual,
-      areMergedPropsEqual: areMergedPropsEqual
-    }, extraOptions));
-  };
-}
-var _default = /*#__PURE__*/createConnect();
+var _default = connect;
 exports.default = _default;
 
-},{"../components/connectAdvanced":816,"../utils/shallowEqual":835,"./mapDispatchToProps":818,"./mapStateToProps":819,"./mergeProps":820,"./selectorFactory":821,"@babel/runtime/helpers/esm/extends":61,"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":63}],818:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"../connect/mapDispatchToProps":818,"../connect/mapStateToProps":819,"../connect/mergeProps":820,"../connect/selectorFactory":821,"../utils/Subscription":831,"../utils/shallowEqual":836,"../utils/useIsomorphicLayoutEffect":837,"../utils/useSyncExternalStore":838,"../utils/warning":840,"./Context":814,"@babel/runtime/helpers/esm/extends":61,"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":63,"_process":784,"hoist-non-react-statics":557,"react":863,"react-is":843}],817:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-exports.whenMapDispatchToPropsIsFunction = whenMapDispatchToPropsIsFunction;
-exports.whenMapDispatchToPropsIsMissing = whenMapDispatchToPropsIsMissing;
-exports.whenMapDispatchToPropsIsObject = whenMapDispatchToPropsIsObject;
+exports.createInvalidArgFactory = createInvalidArgFactory;
+function createInvalidArgFactory(arg, name) {
+  return (dispatch, options) => {
+    throw new Error(`Invalid value of type ${typeof arg} for ${name} argument when connecting component ${options.wrappedComponentName}.`);
+  };
+}
+
+},{}],818:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapDispatchToPropsFactory = mapDispatchToPropsFactory;
 var _bindActionCreators = _interopRequireDefault(require("../utils/bindActionCreators"));
 var _wrapMapToProps = require("./wrapMapToProps");
+var _invalidArgFactory = require("./invalidArgFactory");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
-  return typeof mapDispatchToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+function mapDispatchToPropsFactory(mapDispatchToProps) {
+  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? (0, _wrapMapToProps.wrapMapToPropsConstant)(dispatch =>
+  // @ts-ignore
+  (0, _bindActionCreators.default)(mapDispatchToProps, dispatch)) : !mapDispatchToProps ? (0, _wrapMapToProps.wrapMapToPropsConstant)(dispatch => ({
+    dispatch
+  })) : typeof mapDispatchToProps === 'function' ?
+  // @ts-ignore
+  (0, _wrapMapToProps.wrapMapToPropsFunc)(mapDispatchToProps, 'mapDispatchToProps') : (0, _invalidArgFactory.createInvalidArgFactory)(mapDispatchToProps, 'mapDispatchToProps');
 }
-function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
-  return !mapDispatchToProps ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function (dispatch) {
-    return {
-      dispatch: dispatch
-    };
-  }) : undefined;
-}
-function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
-  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function (dispatch) {
-    return (0, _bindActionCreators.default)(mapDispatchToProps, dispatch);
-  }) : undefined;
-}
-var _default = [whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject];
-exports.default = _default;
 
-},{"../utils/bindActionCreators":832,"./wrapMapToProps":823}],819:[function(require,module,exports){
+},{"../utils/bindActionCreators":833,"./invalidArgFactory":817,"./wrapMapToProps":823}],819:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-exports.whenMapStateToPropsIsFunction = whenMapStateToPropsIsFunction;
-exports.whenMapStateToPropsIsMissing = whenMapStateToPropsIsMissing;
+exports.mapStateToPropsFactory = mapStateToPropsFactory;
 var _wrapMapToProps = require("./wrapMapToProps");
-function whenMapStateToPropsIsFunction(mapStateToProps) {
-  return typeof mapStateToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapStateToProps, 'mapStateToProps') : undefined;
+var _invalidArgFactory = require("./invalidArgFactory");
+function mapStateToPropsFactory(mapStateToProps) {
+  return !mapStateToProps ? (0, _wrapMapToProps.wrapMapToPropsConstant)(() => ({})) : typeof mapStateToProps === 'function' ?
+  // @ts-ignore
+  (0, _wrapMapToProps.wrapMapToPropsFunc)(mapStateToProps, 'mapStateToProps') : (0, _invalidArgFactory.createInvalidArgFactory)(mapStateToProps, 'mapStateToProps');
 }
-function whenMapStateToPropsIsMissing(mapStateToProps) {
-  return !mapStateToProps ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function () {
-    return {};
-  }) : undefined;
-}
-var _default = [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing];
-exports.default = _default;
 
-},{"./wrapMapToProps":823}],820:[function(require,module,exports){
+},{"./invalidArgFactory":817,"./wrapMapToProps":823}],820:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
 exports.defaultMergeProps = defaultMergeProps;
-exports.whenMergePropsIsFunction = whenMergePropsIsFunction;
-exports.whenMergePropsIsOmitted = whenMergePropsIsOmitted;
+exports.mergePropsFactory = mergePropsFactory;
 exports.wrapMergePropsFunc = wrapMergePropsFunc;
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
 var _verifyPlainObject = _interopRequireDefault(require("../utils/verifyPlainObject"));
+var _invalidArgFactory = require("./invalidArgFactory");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+  // @ts-ignore
   return (0, _extends2.default)({}, ownProps, stateProps, dispatchProps);
 }
 function wrapMergePropsFunc(mergeProps) {
-  return function initMergePropsProxy(dispatch, _ref) {
-    var displayName = _ref.displayName,
-      pure = _ref.pure,
-      areMergedPropsEqual = _ref.areMergedPropsEqual;
-    var hasRunOnce = false;
-    var mergedProps;
+  return function initMergePropsProxy(dispatch, {
+    displayName,
+    areMergedPropsEqual
+  }) {
+    let hasRunOnce = false;
+    let mergedProps;
     return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
-      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+      const nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
       if (hasRunOnce) {
-        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+        if (!areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
       } else {
         hasRunOnce = true;
         mergedProps = nextMergedProps;
-        if ("production" !== 'production') (0, _verifyPlainObject.default)(mergedProps, displayName, 'mergeProps');
+        if (process.env.NODE_ENV !== 'production') (0, _verifyPlainObject.default)(mergedProps, displayName, 'mergeProps');
       }
       return mergedProps;
     };
   };
 }
-function whenMergePropsIsFunction(mergeProps) {
-  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
+function mergePropsFactory(mergeProps) {
+  return !mergeProps ? () => defaultMergeProps : typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : (0, _invalidArgFactory.createInvalidArgFactory)(mergeProps, 'mergeProps');
 }
-function whenMergePropsIsOmitted(mergeProps) {
-  return !mergeProps ? function () {
-    return defaultMergeProps;
-  } : undefined;
-}
-var _default = [whenMergePropsIsFunction, whenMergePropsIsOmitted];
-exports.default = _default;
 
-},{"../utils/verifyPlainObject":837,"@babel/runtime/helpers/esm/extends":61}],821:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"../utils/verifyPlainObject":839,"./invalidArgFactory":817,"@babel/runtime/helpers/esm/extends":61,"_process":784}],821:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = finalPropsSelectorFactory;
-exports.impureFinalPropsSelectorFactory = impureFinalPropsSelectorFactory;
 exports.pureFinalPropsSelectorFactory = pureFinalPropsSelectorFactory;
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
 var _verifySubselectors = _interopRequireDefault(require("./verifySubselectors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var _excluded = ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"];
-function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
-  return function impureFinalPropsSelector(state, ownProps) {
-    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
-  };
-}
-function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
-  var areStatesEqual = _ref.areStatesEqual,
-    areOwnPropsEqual = _ref.areOwnPropsEqual,
-    areStatePropsEqual = _ref.areStatePropsEqual;
-  var hasRunAtLeastOnce = false;
-  var state;
-  var ownProps;
-  var stateProps;
-  var dispatchProps;
-  var mergedProps;
+const _excluded = ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"];
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, {
+  areStatesEqual,
+  areOwnPropsEqual,
+  areStatePropsEqual
+}) {
+  let hasRunAtLeastOnce = false;
+  let state;
+  let ownProps;
+  let stateProps;
+  let dispatchProps;
+  let mergedProps;
   function handleFirstCall(firstState, firstOwnProps) {
     state = firstState;
     ownProps = firstOwnProps;
@@ -50949,15 +50871,15 @@ function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, merg
     return mergedProps;
   }
   function handleNewState() {
-    var nextStateProps = mapStateToProps(state, ownProps);
-    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+    const nextStateProps = mapStateToProps(state, ownProps);
+    const statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
     stateProps = nextStateProps;
     if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
     return mergedProps;
   }
   function handleSubsequentCalls(nextState, nextOwnProps) {
-    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
-    var stateChanged = !areStatesEqual(nextState, state, nextOwnProps, ownProps);
+    const propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+    const stateChanged = !areStatesEqual(nextState, state, nextOwnProps, ownProps);
     state = nextState;
     ownProps = nextOwnProps;
     if (propsChanged && stateChanged) return handleNewPropsAndNewState();
@@ -50968,28 +50890,29 @@ function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, merg
   return function pureFinalPropsSelector(nextState, nextOwnProps) {
     return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
   };
-} // TODO: Add more comments
-// If pure is true, the selector returned by selectorFactory will memoize its results,
-// allowing connectAdvanced's shouldComponentUpdate to return false if final
-// props have not changed. If false, the selector will always return a new
-// object and shouldComponentUpdate will always return true.
-
-function finalPropsSelectorFactory(dispatch, _ref2) {
-  var initMapStateToProps = _ref2.initMapStateToProps,
-    initMapDispatchToProps = _ref2.initMapDispatchToProps,
-    initMergeProps = _ref2.initMergeProps,
-    options = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
-  var mapStateToProps = initMapStateToProps(dispatch, options);
-  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
-  var mergeProps = initMergeProps(dispatch, options);
-  if ("production" !== 'production') {
-    (0, _verifySubselectors.default)(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
+}
+// TODO: Add more comments
+// The selector returned by selectorFactory will memoize its results,
+// allowing connect's shouldComponentUpdate to return false if final
+// props have not changed.
+function finalPropsSelectorFactory(dispatch, _ref) {
+  let {
+      initMapStateToProps,
+      initMapDispatchToProps,
+      initMergeProps
+    } = _ref,
+    options = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  const mapStateToProps = initMapStateToProps(dispatch, options);
+  const mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+  const mergeProps = initMergeProps(dispatch, options);
+  if (process.env.NODE_ENV !== 'production') {
+    (0, _verifySubselectors.default)(mapStateToProps, mapDispatchToProps, mergeProps);
   }
-  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
-  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+  return pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
 }
 
-},{"./verifySubselectors":822,"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":63}],822:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"./verifySubselectors":822,"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":63,"_process":784}],822:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -50998,22 +50921,23 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = verifySubselectors;
 var _warning = _interopRequireDefault(require("../utils/warning"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function verify(selector, methodName, displayName) {
+function verify(selector, methodName) {
   if (!selector) {
-    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
+    throw new Error(`Unexpected value for ${methodName} in connect.`);
   } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
     if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) {
-      (0, _warning.default)("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+      (0, _warning.default)(`The selector for ${methodName} of connect did not specify a value for dependsOnOwnProps.`);
     }
   }
 }
-function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
-  verify(mapStateToProps, 'mapStateToProps', displayName);
-  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
-  verify(mergeProps, 'mergeProps', displayName);
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps) {
+  verify(mapStateToProps, 'mapStateToProps');
+  verify(mapDispatchToProps, 'mapDispatchToProps');
+  verify(mergeProps, 'mergeProps');
 }
 
-},{"../utils/warning":838}],823:[function(require,module,exports){
+},{"../utils/warning":840}],823:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51024,9 +50948,15 @@ exports.wrapMapToPropsConstant = wrapMapToPropsConstant;
 exports.wrapMapToPropsFunc = wrapMapToPropsFunc;
 var _verifyPlainObject = _interopRequireDefault(require("../utils/verifyPlainObject"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function wrapMapToPropsConstant(getConstant) {
-  return function initConstantSelector(dispatch, options) {
-    var constant = getConstant(dispatch, options);
+function wrapMapToPropsConstant(
+// * Note:
+//  It seems that the dispatch argument
+//  could be a dispatch function in some cases (ex: whenMapDispatchToPropsIsMissing)
+//  and a state object in some others (ex: whenMapStateToPropsIsMissing)
+// eslint-disable-next-line no-unused-vars
+getConstant) {
+  return function initConstantSelector(dispatch) {
+    const constant = getConstant(dispatch);
     function constantSelector() {
       return constant;
     }
@@ -51040,9 +50970,10 @@ function wrapMapToPropsConstant(getConstant) {
 // A length of one signals that mapToProps does not depend on props from the parent component.
 // A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
 // therefore not reporting its length accurately..
+// TODO Can this get pulled out so that we can subscribe directly to the store if we don't need ownProps?
 
 function getDependsOnOwnProps(mapToProps) {
-  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+  return mapToProps.dependsOnOwnProps ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
 } // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
 // this function wraps mapToProps in a proxy function which does several things:
 //
@@ -51057,35 +50988,49 @@ function getDependsOnOwnProps(mapToProps) {
 //
 
 function wrapMapToPropsFunc(mapToProps, methodName) {
-  return function initProxySelector(dispatch, _ref) {
-    var displayName = _ref.displayName;
-    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
-      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+  return function initProxySelector(dispatch, {
+    displayName
+  }) {
+    const proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch, undefined);
     }; // allow detectFactoryAndVerify to get ownProps
 
     proxy.dependsOnOwnProps = true;
     proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
       proxy.mapToProps = mapToProps;
       proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
-      var props = proxy(stateOrDispatch, ownProps);
+      let props = proxy(stateOrDispatch, ownProps);
       if (typeof props === 'function') {
         proxy.mapToProps = props;
         proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
         props = proxy(stateOrDispatch, ownProps);
       }
-      if ("production" !== 'production') (0, _verifyPlainObject.default)(props, displayName, methodName);
+      if (process.env.NODE_ENV !== 'production') (0, _verifyPlainObject.default)(props, displayName, methodName);
       return props;
     };
     return proxy;
   };
 }
 
-},{"../utils/verifyPlainObject":837}],824:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"../utils/verifyPlainObject":839,"_process":784}],824:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var _exportNames = {
+  Provider: true,
+  connect: true,
+  ReactReduxContext: true,
+  useDispatch: true,
+  createDispatchHook: true,
+  useSelector: true,
+  createSelectorHook: true,
+  useStore: true,
+  createStoreHook: true,
+  shallowEqual: true
+};
 Object.defineProperty(exports, "Provider", {
   enumerable: true,
   get: function () {
@@ -51102,12 +51047,6 @@ Object.defineProperty(exports, "connect", {
   enumerable: true,
   get: function () {
     return _connect.default;
-  }
-});
-Object.defineProperty(exports, "connectAdvanced", {
-  enumerable: true,
-  get: function () {
-    return _connectAdvanced.default;
   }
 });
 Object.defineProperty(exports, "createDispatchHook", {
@@ -51153,16 +51092,27 @@ Object.defineProperty(exports, "useStore", {
   }
 });
 var _Provider = _interopRequireDefault(require("./components/Provider"));
-var _connectAdvanced = _interopRequireDefault(require("./components/connectAdvanced"));
+var _connect = _interopRequireDefault(require("./components/connect"));
 var _Context = require("./components/Context");
-var _connect = _interopRequireDefault(require("./connect/connect"));
 var _useDispatch = require("./hooks/useDispatch");
 var _useSelector = require("./hooks/useSelector");
 var _useStore = require("./hooks/useStore");
 var _shallowEqual = _interopRequireDefault(require("./utils/shallowEqual"));
+var _types = require("./types");
+Object.keys(_types).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _types[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _types[key];
+    }
+  });
+});
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./components/Context":814,"./components/Provider":815,"./components/connectAdvanced":816,"./connect/connect":817,"./hooks/useDispatch":825,"./hooks/useSelector":827,"./hooks/useStore":828,"./utils/shallowEqual":835}],825:[function(require,module,exports){
+},{"./components/Context":814,"./components/Provider":815,"./components/connect":816,"./hooks/useDispatch":825,"./hooks/useSelector":827,"./hooks/useStore":828,"./types":830,"./utils/shallowEqual":836}],825:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51179,13 +51129,13 @@ var _useStore = require("./useStore");
  * @returns {Function} A `useDispatch` hook bound to the specified context.
  */
 
-function createDispatchHook(context) {
-  if (context === void 0) {
-    context = _Context.ReactReduxContext;
-  }
-  var useStore = context === _Context.ReactReduxContext ? _useStore.useStore : (0, _useStore.createStoreHook)(context);
+function createDispatchHook(context = _Context.ReactReduxContext) {
+  const useStore =
+  // @ts-ignore
+  context === _Context.ReactReduxContext ? _useStore.useStore : (0, _useStore.createStoreHook)(context);
   return function useDispatch() {
-    var store = useStore();
+    const store = useStore(); // @ts-ignore
+
     return store.dispatch;
   };
 }
@@ -51211,10 +51161,11 @@ function createDispatchHook(context) {
  * }
  */
 
-var useDispatch = /*#__PURE__*/createDispatchHook();
+const useDispatch = /*#__PURE__*/createDispatchHook();
 exports.useDispatch = useDispatch;
 
 },{"../components/Context":814,"./useStore":828}],826:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51234,106 +51185,39 @@ var _Context = require("../components/Context");
  * import React from 'react'
  * import { useReduxContext } from 'react-redux'
  *
- * export const CounterComponent = ({ value }) => {
+ * export const CounterComponent = () => {
  *   const { store } = useReduxContext()
  *   return <div>{store.getState()}</div>
  * }
  */
-
 function useReduxContext() {
-  var contextValue = (0, _react.useContext)(_Context.ReactReduxContext);
-  if ("production" !== 'production' && !contextValue) {
+  const contextValue = (0, _react.useContext)(_Context.ReactReduxContext);
+  if (process.env.NODE_ENV !== 'production' && !contextValue) {
     throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');
   }
   return contextValue;
 }
 
-},{"../components/Context":814,"react":861}],827:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"../components/Context":814,"_process":784,"react":863}],827:[function(require,module,exports){
+(function (process){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createSelectorHook = createSelectorHook;
-exports.useSelector = void 0;
+exports.useSelector = exports.initializeUseSelector = void 0;
 var _react = require("react");
-var _useReduxContext2 = require("./useReduxContext");
-var _Subscription = require("../utils/Subscription");
-var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
+var _useReduxContext = require("./useReduxContext");
 var _Context = require("../components/Context");
-var refEquality = function refEquality(a, b) {
-  return a === b;
+var _useSyncExternalStore = require("../utils/useSyncExternalStore");
+let useSyncExternalStoreWithSelector = _useSyncExternalStore.notInitialized;
+const initializeUseSelector = fn => {
+  useSyncExternalStoreWithSelector = fn;
 };
-function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
-  var _useReducer = (0, _react.useReducer)(function (s) {
-      return s + 1;
-    }, 0),
-    forceRender = _useReducer[1];
-  var subscription = (0, _react.useMemo)(function () {
-    return (0, _Subscription.createSubscription)(store, contextSub);
-  }, [store, contextSub]);
-  var latestSubscriptionCallbackError = (0, _react.useRef)();
-  var latestSelector = (0, _react.useRef)();
-  var latestStoreState = (0, _react.useRef)();
-  var latestSelectedState = (0, _react.useRef)();
-  var storeState = store.getState();
-  var selectedState;
-  try {
-    if (selector !== latestSelector.current || storeState !== latestStoreState.current || latestSubscriptionCallbackError.current) {
-      var newSelectedState = selector(storeState); // ensure latest selected state is reused so that a custom equality function can result in identical references
-
-      if (latestSelectedState.current === undefined || !equalityFn(newSelectedState, latestSelectedState.current)) {
-        selectedState = newSelectedState;
-      } else {
-        selectedState = latestSelectedState.current;
-      }
-    } else {
-      selectedState = latestSelectedState.current;
-    }
-  } catch (err) {
-    if (latestSubscriptionCallbackError.current) {
-      err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
-    }
-    throw err;
-  }
-  (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(function () {
-    latestSelector.current = selector;
-    latestStoreState.current = storeState;
-    latestSelectedState.current = selectedState;
-    latestSubscriptionCallbackError.current = undefined;
-  });
-  (0, _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect)(function () {
-    function checkForUpdates() {
-      try {
-        var newStoreState = store.getState(); // Avoid calling selector multiple times if the store's state has not changed
-
-        if (newStoreState === latestStoreState.current) {
-          return;
-        }
-        var _newSelectedState = latestSelector.current(newStoreState);
-        if (equalityFn(_newSelectedState, latestSelectedState.current)) {
-          return;
-        }
-        latestSelectedState.current = _newSelectedState;
-        latestStoreState.current = newStoreState;
-      } catch (err) {
-        // we ignore all errors here, since when the component
-        // is re-rendered, the selectors are called again, and
-        // will throw again, if neither props nor store state
-        // changed
-        latestSubscriptionCallbackError.current = err;
-      }
-      forceRender();
-    }
-    subscription.onStateChange = checkForUpdates;
-    subscription.trySubscribe();
-    checkForUpdates();
-    return function () {
-      return subscription.tryUnsubscribe();
-    };
-  }, [store, subscription]);
-  return selectedState;
-}
+exports.initializeUseSelector = initializeUseSelector;
+const refEquality = (a, b) => a === b;
 /**
  * Hook factory, which creates a `useSelector` hook bound to a given context.
  *
@@ -51341,32 +51225,26 @@ function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contex
  * @returns {Function} A `useSelector` hook bound to the specified context.
  */
 
-function createSelectorHook(context) {
-  if (context === void 0) {
-    context = _Context.ReactReduxContext;
-  }
-  var useReduxContext = context === _Context.ReactReduxContext ? _useReduxContext2.useReduxContext : function () {
-    return (0, _react.useContext)(context);
-  };
-  return function useSelector(selector, equalityFn) {
-    if (equalityFn === void 0) {
-      equalityFn = refEquality;
-    }
-    if ("production" !== 'production') {
+function createSelectorHook(context = _Context.ReactReduxContext) {
+  const useReduxContext = context === _Context.ReactReduxContext ? _useReduxContext.useReduxContext : () => (0, _react.useContext)(context);
+  return function useSelector(selector, equalityFn = refEquality) {
+    if (process.env.NODE_ENV !== 'production') {
       if (!selector) {
-        throw new Error("You must pass a selector to useSelector");
+        throw new Error(`You must pass a selector to useSelector`);
       }
       if (typeof selector !== 'function') {
-        throw new Error("You must pass a function as a selector to useSelector");
+        throw new Error(`You must pass a function as a selector to useSelector`);
       }
       if (typeof equalityFn !== 'function') {
-        throw new Error("You must pass a function as an equality function to useSelector");
+        throw new Error(`You must pass a function as an equality function to useSelector`);
       }
     }
-    var _useReduxContext = useReduxContext(),
-      store = _useReduxContext.store,
-      contextSub = _useReduxContext.subscription;
-    var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
+    const {
+      store,
+      subscription,
+      getServerState
+    } = useReduxContext();
+    const selectedState = useSyncExternalStoreWithSelector(subscription.addNestedSub, store.getState, getServerState || store.getState, selector, equalityFn);
     (0, _react.useDebugValue)(selectedState);
     return selectedState;
   };
@@ -51395,10 +51273,11 @@ function createSelectorHook(context) {
  * }
  */
 
-var useSelector = /*#__PURE__*/createSelectorHook();
+const useSelector = /*#__PURE__*/createSelectorHook();
 exports.useSelector = useSelector;
 
-},{"../components/Context":814,"../utils/Subscription":830,"../utils/useIsomorphicLayoutEffect":836,"./useReduxContext":826,"react":861}],828:[function(require,module,exports){
+}).call(this)}).call(this,require('_process'))
+},{"../components/Context":814,"../utils/useSyncExternalStore":838,"./useReduxContext":826,"_process":784,"react":863}],828:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51408,7 +51287,7 @@ exports.createStoreHook = createStoreHook;
 exports.useStore = void 0;
 var _react = require("react");
 var _Context = require("../components/Context");
-var _useReduxContext2 = require("./useReduxContext");
+var _useReduxContext = require("./useReduxContext");
 /**
  * Hook factory, which creates a `useStore` hook bound to a given context.
  *
@@ -51416,16 +51295,15 @@ var _useReduxContext2 = require("./useReduxContext");
  * @returns {Function} A `useStore` hook bound to the specified context.
  */
 
-function createStoreHook(context) {
-  if (context === void 0) {
-    context = _Context.ReactReduxContext;
-  }
-  var useReduxContext = context === _Context.ReactReduxContext ? _useReduxContext2.useReduxContext : function () {
-    return (0, _react.useContext)(context);
-  };
+function createStoreHook(context = _Context.ReactReduxContext) {
+  const useReduxContext =
+  // @ts-ignore
+  context === _Context.ReactReduxContext ? _useReduxContext.useReduxContext : () => (0, _react.useContext)(context);
   return function useStore() {
-    var _useReduxContext = useReduxContext(),
-      store = _useReduxContext.store;
+    const {
+      store
+    } = useReduxContext(); // @ts-ignore
+
     return store;
   };
 }
@@ -51445,10 +51323,10 @@ function createStoreHook(context) {
  * }
  */
 
-var useStore = /*#__PURE__*/createStoreHook();
+const useStore = /*#__PURE__*/createStoreHook();
 exports.useStore = useStore;
 
-},{"../components/Context":814,"./useReduxContext":826,"react":861}],829:[function(require,module,exports){
+},{"../components/Context":814,"./useReduxContext":826,"react":863}],829:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51463,6 +51341,12 @@ Object.defineProperty(exports, "batch", {
     return _reactBatchedUpdates.unstable_batchedUpdates;
   }
 });
+var _shim = require("use-sync-external-store/shim");
+var _withSelector = require("use-sync-external-store/shim/with-selector");
+var _reactBatchedUpdates = require("./utils/reactBatchedUpdates");
+var _batch = require("./utils/batch");
+var _useSelector = require("./hooks/useSelector");
+var _connect = require("./components/connect");
 var _exports = require("./exports");
 Object.keys(_exports).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -51475,14 +51359,24 @@ Object.keys(_exports).forEach(function (key) {
     }
   });
 });
-var _reactBatchedUpdates = require("./utils/reactBatchedUpdates");
-var _batch = require("./utils/batch");
-// Enable batched updates in our subscriptions for use
+// The primary entry point assumes we're working with standard ReactDOM/RN, but
+// older versions that do not include `useSyncExternalStore` (React 16.9 - 17.x).
+// Because of that, the useSyncExternalStore compat shim is needed.
+
+(0, _useSelector.initializeUseSelector)(_withSelector.useSyncExternalStoreWithSelector);
+(0, _connect.initializeConnect)(_shim.useSyncExternalStore); // Enable batched updates in our subscriptions for use
 // with standard React renderers (ReactDOM, React Native)
 
 (0, _batch.setBatch)(_reactBatchedUpdates.unstable_batchedUpdates);
 
-},{"./exports":824,"./utils/batch":831,"./utils/reactBatchedUpdates":834}],830:[function(require,module,exports){
+},{"./components/connect":816,"./exports":824,"./hooks/useSelector":827,"./utils/batch":832,"./utils/reactBatchedUpdates":835,"use-sync-external-store/shim":942,"use-sync-external-store/shim/with-selector":943}],830:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+},{}],831:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51495,36 +51389,36 @@ var _batch = require("./batch");
 // ancestor components re-render before descendants
 
 function createListenerCollection() {
-  var batch = (0, _batch.getBatch)();
-  var first = null;
-  var last = null;
+  const batch = (0, _batch.getBatch)();
+  let first = null;
+  let last = null;
   return {
-    clear: function clear() {
+    clear() {
       first = null;
       last = null;
     },
-    notify: function notify() {
-      batch(function () {
-        var listener = first;
+    notify() {
+      batch(() => {
+        let listener = first;
         while (listener) {
           listener.callback();
           listener = listener.next;
         }
       });
     },
-    get: function get() {
-      var listeners = [];
-      var listener = first;
+    get() {
+      let listeners = [];
+      let listener = first;
       while (listener) {
         listeners.push(listener);
         listener = listener.next;
       }
       return listeners;
     },
-    subscribe: function subscribe(callback) {
-      var isSubscribed = true;
-      var listener = last = {
-        callback: callback,
+    subscribe(callback) {
+      let isSubscribed = true;
+      let listener = last = {
+        callback,
         next: null,
         prev: last
       };
@@ -51550,15 +51444,13 @@ function createListenerCollection() {
     }
   };
 }
-var nullListeners = {
-  notify: function notify() {},
-  get: function get() {
-    return [];
-  }
+const nullListeners = {
+  notify() {},
+  get: () => []
 };
 function createSubscription(store, parentSub) {
-  var unsubscribe;
-  var listeners = nullListeners;
+  let unsubscribe;
+  let listeners = nullListeners;
   function addNestedSub(listener) {
     trySubscribe();
     return listeners.subscribe(listener);
@@ -51588,21 +51480,19 @@ function createSubscription(store, parentSub) {
       listeners = nullListeners;
     }
   }
-  var subscription = {
-    addNestedSub: addNestedSub,
-    notifyNestedSubs: notifyNestedSubs,
-    handleChangeWrapper: handleChangeWrapper,
-    isSubscribed: isSubscribed,
-    trySubscribe: trySubscribe,
-    tryUnsubscribe: tryUnsubscribe,
-    getListeners: function getListeners() {
-      return listeners;
-    }
+  const subscription = {
+    addNestedSub,
+    notifyNestedSubs,
+    handleChangeWrapper,
+    isSubscribed,
+    trySubscribe,
+    tryUnsubscribe,
+    getListeners: () => listeners
   };
   return subscription;
 }
 
-},{"./batch":831}],831:[function(require,module,exports){
+},{"./batch":832}],832:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51613,18 +51503,14 @@ exports.setBatch = exports.getBatch = void 0;
 function defaultNoopBatch(callback) {
   callback();
 }
-var batch = defaultNoopBatch; // Allow injecting another batching function later
+let batch = defaultNoopBatch; // Allow injecting another batching function later
 
-var setBatch = function setBatch(newBatch) {
-  return batch = newBatch;
-}; // Supply a getter just to skip dealing with ESM bindings
+const setBatch = newBatch => batch = newBatch; // Supply a getter just to skip dealing with ESM bindings
 exports.setBatch = setBatch;
-var getBatch = function getBatch() {
-  return batch;
-};
+const getBatch = () => batch;
 exports.getBatch = getBatch;
 
-},{}],832:[function(require,module,exports){
+},{}],833:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51632,22 +51518,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = bindActionCreators;
 function bindActionCreators(actionCreators, dispatch) {
-  var boundActionCreators = {};
-  var _loop = function _loop(key) {
-    var actionCreator = actionCreators[key];
+  const boundActionCreators = {};
+  for (const key in actionCreators) {
+    const actionCreator = actionCreators[key];
     if (typeof actionCreator === 'function') {
-      boundActionCreators[key] = function () {
-        return dispatch(actionCreator.apply(void 0, arguments));
-      };
+      boundActionCreators[key] = (...args) => dispatch(actionCreator(...args));
     }
-  };
-  for (var key in actionCreators) {
-    _loop(key);
   }
   return boundActionCreators;
 }
 
-},{}],833:[function(require,module,exports){
+},{}],834:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51660,16 +51541,16 @@ exports.default = isPlainObject;
  */
 function isPlainObject(obj) {
   if (typeof obj !== 'object' || obj === null) return false;
-  var proto = Object.getPrototypeOf(obj);
+  let proto = Object.getPrototypeOf(obj);
   if (proto === null) return true;
-  var baseProto = proto;
+  let baseProto = proto;
   while (Object.getPrototypeOf(baseProto) !== null) {
     baseProto = Object.getPrototypeOf(baseProto);
   }
   return proto === baseProto;
 }
 
-},{}],834:[function(require,module,exports){
+},{}],835:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51683,7 +51564,7 @@ Object.defineProperty(exports, "unstable_batchedUpdates", {
 });
 var _reactDom = require("react-dom");
 
-},{"react-dom":808}],835:[function(require,module,exports){
+},{"react-dom":808}],836:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51702,10 +51583,10 @@ function shallowEqual(objA, objB) {
   if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
     return false;
   }
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
+  const keysA = Object.keys(objA);
+  const keysB = Object.keys(objB);
   if (keysA.length !== keysB.length) return false;
-  for (var i = 0; i < keysA.length; i++) {
+  for (let i = 0; i < keysA.length; i++) {
     if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
       return false;
     }
@@ -51713,13 +51594,13 @@ function shallowEqual(objA, objB) {
   return true;
 }
 
-},{}],836:[function(require,module,exports){
+},{}],837:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.useIsomorphicLayoutEffect = void 0;
+exports.useIsomorphicLayoutEffect = exports.canUseDOM = void 0;
 var _react = require("react");
 // React currently throws a warning when using useLayoutEffect on the server.
 // To get around it, we can conditionally useEffect on the server (no-op) and
@@ -51729,11 +51610,26 @@ var _react = require("react");
 // which may cause missed updates; we also must ensure the store subscription
 // is created synchronously, otherwise a store update may occur before the
 // subscription is created and an inconsistent state may be observed
+// Matches logic in React's `shared/ExecutionEnvironment` file
 
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;
+const canUseDOM = !!(typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined');
+exports.canUseDOM = canUseDOM;
+const useIsomorphicLayoutEffect = canUseDOM ? _react.useLayoutEffect : _react.useEffect;
 exports.useIsomorphicLayoutEffect = useIsomorphicLayoutEffect;
 
-},{"react":861}],837:[function(require,module,exports){
+},{"react":863}],838:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.notInitialized = void 0;
+const notInitialized = () => {
+  throw new Error('uSES not initialized!');
+};
+exports.notInitialized = notInitialized;
+
+},{}],839:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51745,11 +51641,11 @@ var _warning = _interopRequireDefault(require("./warning"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function verifyPlainObject(value, displayName, methodName) {
   if (!(0, _isPlainObject.default)(value)) {
-    (0, _warning.default)(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+    (0, _warning.default)(`${methodName}() in ${displayName} must return a plain object. Instead received ${value}.`);
   }
 }
 
-},{"./isPlainObject":833,"./warning":838}],838:[function(require,module,exports){
+},{"./isPlainObject":834,"./warning":840}],840:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -51779,9 +51675,10 @@ function warning(message) {
   /* eslint-enable no-empty */
 }
 
-},{}],839:[function(require,module,exports){
+},{}],841:[function(require,module,exports){
 (function (process){(function (){
-/** @license React v17.0.2
+/**
+ * @license React
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -51799,56 +51696,39 @@ if (process.env.NODE_ENV !== "production") {
 // ATTENTION
 // When adding new symbols to this file,
 // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
-// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-// nor polyfill, then a plain number is used for performance.
-var REACT_ELEMENT_TYPE = 0xeac7;
-var REACT_PORTAL_TYPE = 0xeaca;
-var REACT_FRAGMENT_TYPE = 0xeacb;
-var REACT_STRICT_MODE_TYPE = 0xeacc;
-var REACT_PROFILER_TYPE = 0xead2;
-var REACT_PROVIDER_TYPE = 0xeacd;
-var REACT_CONTEXT_TYPE = 0xeace;
-var REACT_FORWARD_REF_TYPE = 0xead0;
-var REACT_SUSPENSE_TYPE = 0xead1;
-var REACT_SUSPENSE_LIST_TYPE = 0xead8;
-var REACT_MEMO_TYPE = 0xead3;
-var REACT_LAZY_TYPE = 0xead4;
-var REACT_BLOCK_TYPE = 0xead9;
-var REACT_SERVER_BLOCK_TYPE = 0xeada;
-var REACT_FUNDAMENTAL_TYPE = 0xead5;
-var REACT_SCOPE_TYPE = 0xead7;
-var REACT_OPAQUE_ID_TYPE = 0xeae0;
-var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
-var REACT_OFFSCREEN_TYPE = 0xeae2;
-var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
+// The Symbol used to tag the ReactElement-like types.
+var REACT_ELEMENT_TYPE = Symbol.for('react.element');
+var REACT_PORTAL_TYPE = Symbol.for('react.portal');
+var REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
+var REACT_STRICT_MODE_TYPE = Symbol.for('react.strict_mode');
+var REACT_PROFILER_TYPE = Symbol.for('react.profiler');
+var REACT_PROVIDER_TYPE = Symbol.for('react.provider');
+var REACT_CONTEXT_TYPE = Symbol.for('react.context');
+var REACT_SERVER_CONTEXT_TYPE = Symbol.for('react.server_context');
+var REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
+var REACT_SUSPENSE_TYPE = Symbol.for('react.suspense');
+var REACT_SUSPENSE_LIST_TYPE = Symbol.for('react.suspense_list');
+var REACT_MEMO_TYPE = Symbol.for('react.memo');
+var REACT_LAZY_TYPE = Symbol.for('react.lazy');
+var REACT_OFFSCREEN_TYPE = Symbol.for('react.offscreen');
 
-if (typeof Symbol === 'function' && Symbol.for) {
-  var symbolFor = Symbol.for;
-  REACT_ELEMENT_TYPE = symbolFor('react.element');
-  REACT_PORTAL_TYPE = symbolFor('react.portal');
-  REACT_FRAGMENT_TYPE = symbolFor('react.fragment');
-  REACT_STRICT_MODE_TYPE = symbolFor('react.strict_mode');
-  REACT_PROFILER_TYPE = symbolFor('react.profiler');
-  REACT_PROVIDER_TYPE = symbolFor('react.provider');
-  REACT_CONTEXT_TYPE = symbolFor('react.context');
-  REACT_FORWARD_REF_TYPE = symbolFor('react.forward_ref');
-  REACT_SUSPENSE_TYPE = symbolFor('react.suspense');
-  REACT_SUSPENSE_LIST_TYPE = symbolFor('react.suspense_list');
-  REACT_MEMO_TYPE = symbolFor('react.memo');
-  REACT_LAZY_TYPE = symbolFor('react.lazy');
-  REACT_BLOCK_TYPE = symbolFor('react.block');
-  REACT_SERVER_BLOCK_TYPE = symbolFor('react.server.block');
-  REACT_FUNDAMENTAL_TYPE = symbolFor('react.fundamental');
-  REACT_SCOPE_TYPE = symbolFor('react.scope');
-  REACT_OPAQUE_ID_TYPE = symbolFor('react.opaque.id');
-  REACT_DEBUG_TRACING_MODE_TYPE = symbolFor('react.debug_trace_mode');
-  REACT_OFFSCREEN_TYPE = symbolFor('react.offscreen');
-  REACT_LEGACY_HIDDEN_TYPE = symbolFor('react.legacy_hidden');
-}
-
-// Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+// -----------------------------------------------------------------------------
 
 var enableScopeAPI = false; // Experimental Create Event Handle API.
+var enableCacheElement = false;
+var enableTransitionTracing = false; // No known bugs, but needs performance testing
+
+var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+// stuff. Intended to enable React core members to more easily debug scheduling
+// issues in DEV builds.
+
+var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+
+var REACT_MODULE_REFERENCE;
+
+{
+  REACT_MODULE_REFERENCE = Symbol.for('react.module.reference');
+}
 
 function isValidElementType(type) {
   if (typeof type === 'string' || typeof type === 'function') {
@@ -51856,12 +51736,16 @@ function isValidElementType(type) {
   } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
 
 
-  if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI ) {
+  if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing  || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden  || type === REACT_OFFSCREEN_TYPE || enableScopeAPI  || enableCacheElement  || enableTransitionTracing ) {
     return true;
   }
 
   if (typeof type === 'object' && type !== null) {
-    if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) {
+    if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+    // types supported by any Flight configuration anywhere since
+    // we don't know which Flight build this will end up being used
+    // with.
+    type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
       return true;
     }
   }
@@ -51889,6 +51773,7 @@ function typeOf(object) {
             var $$typeofType = type && type.$$typeof;
 
             switch ($$typeofType) {
+              case REACT_SERVER_CONTEXT_TYPE:
               case REACT_CONTEXT_TYPE:
               case REACT_FORWARD_REF_TYPE:
               case REACT_LAZY_TYPE:
@@ -51920,6 +51805,7 @@ var Portal = REACT_PORTAL_TYPE;
 var Profiler = REACT_PROFILER_TYPE;
 var StrictMode = REACT_STRICT_MODE_TYPE;
 var Suspense = REACT_SUSPENSE_TYPE;
+var SuspenseList = REACT_SUSPENSE_LIST_TYPE;
 var hasWarnedAboutDeprecatedIsAsyncMode = false;
 var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
 
@@ -51978,6 +51864,9 @@ function isStrictMode(object) {
 function isSuspense(object) {
   return typeOf(object) === REACT_SUSPENSE_TYPE;
 }
+function isSuspenseList(object) {
+  return typeOf(object) === REACT_SUSPENSE_LIST_TYPE;
+}
 
 exports.ContextConsumer = ContextConsumer;
 exports.ContextProvider = ContextProvider;
@@ -51990,6 +51879,7 @@ exports.Portal = Portal;
 exports.Profiler = Profiler;
 exports.StrictMode = StrictMode;
 exports.Suspense = Suspense;
+exports.SuspenseList = SuspenseList;
 exports.isAsyncMode = isAsyncMode;
 exports.isConcurrentMode = isConcurrentMode;
 exports.isContextConsumer = isContextConsumer;
@@ -52003,14 +51893,16 @@ exports.isPortal = isPortal;
 exports.isProfiler = isProfiler;
 exports.isStrictMode = isStrictMode;
 exports.isSuspense = isSuspense;
+exports.isSuspenseList = isSuspenseList;
 exports.isValidElementType = isValidElementType;
 exports.typeOf = typeOf;
   })();
 }
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":784}],840:[function(require,module,exports){
-/** @license React v17.0.2
+},{"_process":784}],842:[function(require,module,exports){
+/**
+ * @license React
  * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -52018,16 +51910,15 @@ exports.typeOf = typeOf;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-'use strict';var b=60103,c=60106,d=60107,e=60108,f=60114,g=60109,h=60110,k=60112,l=60113,m=60120,n=60115,p=60116,q=60121,r=60122,u=60117,v=60129,w=60131;
-if("function"===typeof Symbol&&Symbol.for){var x=Symbol.for;b=x("react.element");c=x("react.portal");d=x("react.fragment");e=x("react.strict_mode");f=x("react.profiler");g=x("react.provider");h=x("react.context");k=x("react.forward_ref");l=x("react.suspense");m=x("react.suspense_list");n=x("react.memo");p=x("react.lazy");q=x("react.block");r=x("react.server.block");u=x("react.fundamental");v=x("react.debug_trace_mode");w=x("react.legacy_hidden")}
-function y(a){if("object"===typeof a&&null!==a){var t=a.$$typeof;switch(t){case b:switch(a=a.type,a){case d:case f:case e:case l:case m:return a;default:switch(a=a&&a.$$typeof,a){case h:case k:case p:case n:case g:return a;default:return t}}case c:return t}}}var z=g,A=b,B=k,C=d,D=p,E=n,F=c,G=f,H=e,I=l;exports.ContextConsumer=h;exports.ContextProvider=z;exports.Element=A;exports.ForwardRef=B;exports.Fragment=C;exports.Lazy=D;exports.Memo=E;exports.Portal=F;exports.Profiler=G;exports.StrictMode=H;
-exports.Suspense=I;exports.isAsyncMode=function(){return!1};exports.isConcurrentMode=function(){return!1};exports.isContextConsumer=function(a){return y(a)===h};exports.isContextProvider=function(a){return y(a)===g};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===b};exports.isForwardRef=function(a){return y(a)===k};exports.isFragment=function(a){return y(a)===d};exports.isLazy=function(a){return y(a)===p};exports.isMemo=function(a){return y(a)===n};
-exports.isPortal=function(a){return y(a)===c};exports.isProfiler=function(a){return y(a)===f};exports.isStrictMode=function(a){return y(a)===e};exports.isSuspense=function(a){return y(a)===l};exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===d||a===f||a===v||a===e||a===l||a===m||a===w||"object"===typeof a&&null!==a&&(a.$$typeof===p||a.$$typeof===n||a.$$typeof===g||a.$$typeof===h||a.$$typeof===k||a.$$typeof===u||a.$$typeof===q||a[0]===r)?!0:!1};
-exports.typeOf=y;
+'use strict';var b=Symbol.for("react.element"),c=Symbol.for("react.portal"),d=Symbol.for("react.fragment"),e=Symbol.for("react.strict_mode"),f=Symbol.for("react.profiler"),g=Symbol.for("react.provider"),h=Symbol.for("react.context"),k=Symbol.for("react.server_context"),l=Symbol.for("react.forward_ref"),m=Symbol.for("react.suspense"),n=Symbol.for("react.suspense_list"),p=Symbol.for("react.memo"),q=Symbol.for("react.lazy"),t=Symbol.for("react.offscreen"),u;u=Symbol.for("react.module.reference");
+function v(a){if("object"===typeof a&&null!==a){var r=a.$$typeof;switch(r){case b:switch(a=a.type,a){case d:case f:case e:case m:case n:return a;default:switch(a=a&&a.$$typeof,a){case k:case h:case l:case q:case p:case g:return a;default:return r}}case c:return r}}}exports.ContextConsumer=h;exports.ContextProvider=g;exports.Element=b;exports.ForwardRef=l;exports.Fragment=d;exports.Lazy=q;exports.Memo=p;exports.Portal=c;exports.Profiler=f;exports.StrictMode=e;exports.Suspense=m;
+exports.SuspenseList=n;exports.isAsyncMode=function(){return!1};exports.isConcurrentMode=function(){return!1};exports.isContextConsumer=function(a){return v(a)===h};exports.isContextProvider=function(a){return v(a)===g};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===b};exports.isForwardRef=function(a){return v(a)===l};exports.isFragment=function(a){return v(a)===d};exports.isLazy=function(a){return v(a)===q};exports.isMemo=function(a){return v(a)===p};
+exports.isPortal=function(a){return v(a)===c};exports.isProfiler=function(a){return v(a)===f};exports.isStrictMode=function(a){return v(a)===e};exports.isSuspense=function(a){return v(a)===m};exports.isSuspenseList=function(a){return v(a)===n};
+exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===d||a===f||a===e||a===m||a===n||a===t||"object"===typeof a&&null!==a&&(a.$$typeof===q||a.$$typeof===p||a.$$typeof===g||a.$$typeof===h||a.$$typeof===l||a.$$typeof===u||void 0!==a.getModuleId)?!0:!1};exports.typeOf=v;
 
-},{}],841:[function(require,module,exports){
+},{}],843:[function(require,module,exports){
 arguments[4][813][0].apply(exports,arguments)
-},{"./cjs/react-is.development.js":839,"./cjs/react-is.production.min.js":840,"_process":784,"dup":813}],842:[function(require,module,exports){
+},{"./cjs/react-is.development.js":841,"./cjs/react-is.production.min.js":842,"_process":784,"dup":813}],844:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52040,7 +51931,7 @@ var _default = function _default(astGenerator, language) {
 };
 exports.default = _default;
 
-},{}],843:[function(require,module,exports){
+},{}],845:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52177,7 +52068,7 @@ function createElement(_ref) {
   }
 }
 
-},{"@babel/runtime/helpers/defineProperty":59,"@babel/runtime/helpers/extends":67,"react":861}],844:[function(require,module,exports){
+},{"@babel/runtime/helpers/defineProperty":59,"@babel/runtime/helpers/extends":67,"react":863}],846:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52573,7 +52464,7 @@ function _default(defaultAstGenerator, defaultStyle) {
   };
 }
 
-},{"./checkForListedLanguage":842,"./create-element":843,"@babel/runtime/helpers/defineProperty":59,"@babel/runtime/helpers/objectWithoutProperties":70,"@babel/runtime/helpers/toConsumableArray":72,"react":861}],845:[function(require,module,exports){
+},{"./checkForListedLanguage":844,"./create-element":845,"@babel/runtime/helpers/defineProperty":59,"@babel/runtime/helpers/objectWithoutProperties":70,"@babel/runtime/helpers/toConsumableArray":72,"react":863}],847:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52585,7 +52476,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _bash.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/bash":550}],846:[function(require,module,exports){
+},{"highlight.js/lib/languages/bash":550}],848:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52597,7 +52488,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _http.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/http":551}],847:[function(require,module,exports){
+},{"highlight.js/lib/languages/http":551}],849:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52609,7 +52500,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _javascript.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/javascript":552}],848:[function(require,module,exports){
+},{"highlight.js/lib/languages/javascript":552}],850:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52621,7 +52512,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _json.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/json":553}],849:[function(require,module,exports){
+},{"highlight.js/lib/languages/json":553}],851:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52633,7 +52524,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _powershell.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/powershell":554}],850:[function(require,module,exports){
+},{"highlight.js/lib/languages/powershell":554}],852:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52645,7 +52536,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _xml.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/xml":555}],851:[function(require,module,exports){
+},{"highlight.js/lib/languages/xml":555}],853:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52657,7 +52548,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = _yaml.default;
 exports.default = _default;
 
-},{"highlight.js/lib/languages/yaml":556}],852:[function(require,module,exports){
+},{"highlight.js/lib/languages/yaml":556}],854:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52672,7 +52563,7 @@ SyntaxHighlighter.registerLanguage = _core.default.registerLanguage;
 var _default = SyntaxHighlighter;
 exports.default = _default;
 
-},{"./highlight":844,"lowlight/lib/core":781}],853:[function(require,module,exports){
+},{"./highlight":846,"lowlight/lib/core":781}],855:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52780,7 +52671,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{}],854:[function(require,module,exports){
+},{}],856:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52889,7 +52780,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{}],855:[function(require,module,exports){
+},{}],857:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53012,7 +52903,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{}],856:[function(require,module,exports){
+},{}],858:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53257,7 +53148,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{}],857:[function(require,module,exports){
+},{}],859:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53383,7 +53274,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{}],858:[function(require,module,exports){
+},{}],860:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53488,7 +53379,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{}],859:[function(require,module,exports){
+},{}],861:[function(require,module,exports){
 /** @license React v17.0.2
  * react.development.js
  *
@@ -55529,7 +55420,7 @@ if ("production" !== "production") {
   })();
 }
 
-},{"object-assign":782}],860:[function(require,module,exports){
+},{"object-assign":782}],862:[function(require,module,exports){
 /** @license React v17.0.2
  * react.production.min.js
  *
@@ -55554,7 +55445,7 @@ key:d,ref:k,props:e,_owner:h}};exports.createContext=function(a,b){void 0===b&&(
 exports.lazy=function(a){return{$$typeof:v,_payload:{_status:-1,_result:a},_init:Q}};exports.memo=function(a,b){return{$$typeof:u,type:a,compare:void 0===b?null:b}};exports.useCallback=function(a,b){return S().useCallback(a,b)};exports.useContext=function(a,b){return S().useContext(a,b)};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return S().useEffect(a,b)};exports.useImperativeHandle=function(a,b,c){return S().useImperativeHandle(a,b,c)};
 exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.useMemo=function(a,b){return S().useMemo(a,b)};exports.useReducer=function(a,b,c){return S().useReducer(a,b,c)};exports.useRef=function(a){return S().useRef(a)};exports.useState=function(a){return S().useState(a)};exports.version="17.0.2";
 
-},{"object-assign":782}],861:[function(require,module,exports){
+},{"object-assign":782}],863:[function(require,module,exports){
 'use strict';
 
 if ("production" === 'production') {
@@ -55563,7 +55454,7 @@ if ("production" === 'production') {
   module.exports = require('./cjs/react.development.js');
 }
 
-},{"./cjs/react.development.js":859,"./cjs/react.production.min.js":860}],862:[function(require,module,exports){
+},{"./cjs/react.development.js":861,"./cjs/react.production.min.js":862}],864:[function(require,module,exports){
 (function (process){(function (){
 'use strict';
 
@@ -55616,7 +55507,7 @@ exports.default = function (reducers) {
 module.exports = exports['default'];
 
 }).call(this)}).call(this,require('_process'))
-},{"./utilities":866,"_process":784,"immutable":559}],863:[function(require,module,exports){
+},{"./utilities":868,"_process":784,"immutable":559}],865:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55632,7 +55523,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.combineReducers = _combineReducers3.default;
 
-},{"./combineReducers":862}],864:[function(require,module,exports){
+},{"./combineReducers":864}],866:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55645,7 +55536,7 @@ exports.default = function (action) {
 
 module.exports = exports['default'];
 
-},{}],865:[function(require,module,exports){
+},{}],867:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55688,7 +55579,7 @@ exports.default = function (state, reducers, action) {
 
 module.exports = exports['default'];
 
-},{"./getStateName":864,"immutable":559}],866:[function(require,module,exports){
+},{"./getStateName":866,"immutable":559}],868:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55714,7 +55605,7 @@ exports.getStateName = _getStateName3.default;
 exports.getUnexpectedInvocationParameterMessage = _getUnexpectedInvocationParameterMessage3.default;
 exports.validateNextState = _validateNextState3.default;
 
-},{"./getStateName":864,"./getUnexpectedInvocationParameterMessage":865,"./validateNextState":867}],867:[function(require,module,exports){
+},{"./getStateName":866,"./getUnexpectedInvocationParameterMessage":867,"./validateNextState":869}],869:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55730,7 +55621,7 @@ exports.default = function (nextState, reducerName, action) {
 
 module.exports = exports['default'];
 
-},{}],868:[function(require,module,exports){
+},{}],870:[function(require,module,exports){
 (function (process){(function (){
 "use strict";
 
@@ -56372,7 +56263,7 @@ function applyMiddleware() {
 }
 
 }).call(this)}).call(this,require('_process'))
-},{"@babel/runtime/helpers/esm/objectSpread2":62,"_process":784}],869:[function(require,module,exports){
+},{"@babel/runtime/helpers/esm/objectSpread2":62,"_process":784}],871:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -61359,7 +61250,7 @@ Remarkable.prototype.renderInline = function (str, env) {
 exports.Remarkable = Remarkable;
 exports.utils = utils;
 
-},{}],870:[function(require,module,exports){
+},{}],872:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -61526,7 +61417,7 @@ function linkify(md) {
   md.core.ruler.push('linkify', parseTokens);
 }
 
-},{"autolinker":83}],871:[function(require,module,exports){
+},{"autolinker":83}],873:[function(require,module,exports){
 /*!
  * repeat-string <https://github.com/jonschlinkert/repeat-string>
  *
@@ -61598,7 +61489,7 @@ function repeat(str, num) {
   return res;
 }
 
-},{}],872:[function(require,module,exports){
+},{}],874:[function(require,module,exports){
 'use strict';
 
 /**
@@ -61638,7 +61529,7 @@ module.exports = function required(port, protocol) {
   return port !== 0;
 };
 
-},{}],873:[function(require,module,exports){
+},{}],875:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -61774,7 +61665,7 @@ function defaultMemoize(func, equalityCheckOrOptions) {
   return memoized;
 }
 
-},{}],874:[function(require,module,exports){
+},{}],876:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -61912,7 +61803,7 @@ var createStructuredSelector = function createStructuredSelector(selectors, sele
 };
 exports.createStructuredSelector = createStructuredSelector;
 
-},{"./defaultMemoize":873}],875:[function(require,module,exports){
+},{"./defaultMemoize":875}],877:[function(require,module,exports){
 const util      = require('./util');
 const types     = require('./types');
 const sets      = require('./sets');
@@ -62196,14 +62087,14 @@ module.exports = (regexpStr) => {
 
 module.exports.types = types;
 
-},{"./positions":876,"./sets":877,"./types":878,"./util":879}],876:[function(require,module,exports){
+},{"./positions":878,"./sets":879,"./types":880,"./util":881}],878:[function(require,module,exports){
 const types = require('./types');
 exports.wordBoundary = () => ({ type: types.POSITION, value: 'b' });
 exports.nonWordBoundary = () => ({ type: types.POSITION, value: 'B' });
 exports.begin = () => ({ type: types.POSITION, value: '^' });
 exports.end = () => ({ type: types.POSITION, value: '$' });
 
-},{"./types":878}],877:[function(require,module,exports){
+},{"./types":880}],879:[function(require,module,exports){
 const types = require('./types');
 
 const INTS = () => [{ type: types.RANGE , from: 48, to: 57 }];
@@ -62254,7 +62145,7 @@ exports.whitespace = () => ({ type: types.SET, set: WHITESPACE(), not: false });
 exports.notWhitespace = () => ({ type: types.SET, set: WHITESPACE(), not: true });
 exports.anyChar = () => ({ type: types.SET, set: NOTANYCHAR(), not: true });
 
-},{"./types":878}],878:[function(require,module,exports){
+},{"./types":880}],880:[function(require,module,exports){
 module.exports = {
   ROOT       : 0,
   GROUP      : 1,
@@ -62266,7 +62157,7 @@ module.exports = {
   CHAR       : 7,
 };
 
-},{}],879:[function(require,module,exports){
+},{}],881:[function(require,module,exports){
 const types = require('./types');
 const sets  = require('./sets');
 
@@ -62376,7 +62267,7 @@ exports.error = (regexp, msg) => {
   throw new SyntaxError('Invalid regular expression: /' + regexp + '/: ' + msg);
 };
 
-},{"./sets":877,"./types":878}],880:[function(require,module,exports){
+},{"./sets":879,"./types":880}],882:[function(require,module,exports){
 /** @license React v0.20.2
  * scheduler-tracing.development.js
  *
@@ -62725,7 +62616,7 @@ exports.unstable_wrap = unstable_wrap;
   })();
 }
 
-},{}],881:[function(require,module,exports){
+},{}],883:[function(require,module,exports){
 /** @license React v0.20.2
  * scheduler-tracing.production.min.js
  *
@@ -62736,7 +62627,7 @@ exports.unstable_wrap = unstable_wrap;
  */
 'use strict';var b=0;exports.__interactionsRef=null;exports.__subscriberRef=null;exports.unstable_clear=function(a){return a()};exports.unstable_getCurrent=function(){return null};exports.unstable_getThreadID=function(){return++b};exports.unstable_subscribe=function(){};exports.unstable_trace=function(a,d,c){return c()};exports.unstable_unsubscribe=function(){};exports.unstable_wrap=function(a){return a};
 
-},{}],882:[function(require,module,exports){
+},{}],884:[function(require,module,exports){
 /** @license React v0.20.2
  * scheduler.development.js
  *
@@ -63384,7 +63275,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   })();
 }
 
-},{}],883:[function(require,module,exports){
+},{}],885:[function(require,module,exports){
 /** @license React v0.20.2
  * scheduler.production.min.js
  *
@@ -63406,7 +63297,7 @@ exports.unstable_next=function(a){switch(P){case 1:case 2:case 3:var b=3;break;d
 exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();"object"===typeof c&&null!==c?(c=c.delay,c="number"===typeof c&&0<c?d+c:d):c=d;switch(a){case 1:var e=-1;break;case 2:e=250;break;case 5:e=1073741823;break;case 4:e=1E4;break;default:e=5E3}e=c+e;a={id:N++,callback:b,priorityLevel:a,startTime:c,expirationTime:e,sortIndex:-1};c>d?(a.sortIndex=c,H(M,a),null===J(L)&&a===J(M)&&(S?h():S=!0,g(U,c-d))):(a.sortIndex=e,H(L,a),R||Q||(R=!0,f(V)));return a};
 exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;try{return a.apply(this,arguments)}finally{P=c}}};
 
-},{}],884:[function(require,module,exports){
+},{}],886:[function(require,module,exports){
 'use strict';
 
 if ("production" === 'production') {
@@ -63415,7 +63306,7 @@ if ("production" === 'production') {
   module.exports = require('./cjs/scheduler.development.js');
 }
 
-},{"./cjs/scheduler.development.js":882,"./cjs/scheduler.production.min.js":883}],885:[function(require,module,exports){
+},{"./cjs/scheduler.development.js":884,"./cjs/scheduler.production.min.js":885}],887:[function(require,module,exports){
 'use strict';
 
 if ("production" === 'production') {
@@ -63424,7 +63315,7 @@ if ("production" === 'production') {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
 
-},{"./cjs/scheduler-tracing.development.js":880,"./cjs/scheduler-tracing.production.min.js":881}],886:[function(require,module,exports){
+},{"./cjs/scheduler-tracing.development.js":882,"./cjs/scheduler-tracing.production.min.js":883}],888:[function(require,module,exports){
 (function (Buffer){(function (){
 'use strict';
 
@@ -63582,7 +63473,7 @@ module.exports = {
 };
 
 }).call(this)}).call(this,require("buffer").Buffer)
-},{"buffer":109}],887:[function(require,module,exports){
+},{"buffer":109}],889:[function(require,module,exports){
 'use strict';
 
 var GetIntrinsic = require('get-intrinsic');
@@ -63708,7 +63599,7 @@ module.exports = function getSideChannel() {
 	return channel;
 };
 
-},{"call-bind/callBound":110,"get-intrinsic":545,"object-inspect":783}],888:[function(require,module,exports){
+},{"call-bind/callBound":110,"get-intrinsic":545,"object-inspect":783}],890:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63719,7 +63610,7 @@ exports.ACCEPT_HEADER_VALUE_FOR_DOCUMENTS = void 0;
 const ACCEPT_HEADER_VALUE_FOR_DOCUMENTS = 'application/json, application/yaml';
 exports.ACCEPT_HEADER_VALUE_FOR_DOCUMENTS = ACCEPT_HEADER_VALUE_FOR_DOCUMENTS;
 
-},{}],889:[function(require,module,exports){
+},{}],891:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64087,7 +63978,7 @@ function swagger2BaseUrl(_ref3) {
   return res[res.length - 1] === '/' ? res.slice(0, -1) : res;
 }
 
-},{"../helpers/index.js":902,"../helpers/openapi-predicates.js":904,"../http/index.js":907,"../specmap/lib/create-error.js":924,"./oas3/build-request.js":890,"./oas3/parameter-builders.js":892,"./swagger2/build-request.js":894,"./swagger2/parameter-builders.js":895,"@babel/runtime-corejs3/helpers/objectSpread2":51,"@babel/runtime-corejs3/helpers/objectWithoutProperties":52,"cookie":113,"is-plain-object":560,"lodash/get":740,"url":934}],890:[function(require,module,exports){
+},{"../helpers/index.js":904,"../helpers/openapi-predicates.js":906,"../http/index.js":909,"../specmap/lib/create-error.js":926,"./oas3/build-request.js":892,"./oas3/parameter-builders.js":894,"./swagger2/build-request.js":896,"./swagger2/parameter-builders.js":897,"@babel/runtime-corejs3/helpers/objectSpread2":51,"@babel/runtime-corejs3/helpers/objectWithoutProperties":52,"cookie":113,"is-plain-object":560,"lodash/get":740,"url":936}],892:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64253,7 +64144,7 @@ function applySecurities(_ref3) {
   return result;
 }
 
-},{"../../helpers/btoa.node.js":896,"@babel/runtime-corejs3/helpers/objectSpread2":51,"is-plain-object":560,"lodash/get":740}],891:[function(require,module,exports){
+},{"../../helpers/btoa.node.js":898,"@babel/runtime-corejs3/helpers/objectSpread2":51,"is-plain-object":560,"lodash/get":740}],893:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64276,7 +64167,7 @@ function serialize(value, mediaType) {
   return value.toString();
 }
 
-},{}],892:[function(require,module,exports){
+},{}],894:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64328,7 +64219,14 @@ function query(_ref2) {
   req.query = req.query || {};
   if (parameter.content) {
     const effectiveMediaType = Object.keys(parameter.content)[0];
-    req.query[parameter.name] = (0, _contentSerializer.default)(value, effectiveMediaType);
+    const serializedValue = (0, _contentSerializer.default)(value, effectiveMediaType);
+    if (serializedValue) {
+      req.query[parameter.name] = serializedValue;
+    } else if (parameter.allowEmptyValue && value !== undefined) {
+      const paramName = parameter.name;
+      req.query[paramName] = req.query[paramName] || {};
+      req.query[paramName].allowEmptyValue = true;
+    }
     return;
   }
   if (value === false) {
@@ -64408,7 +64306,7 @@ function cookie(_ref4) {
   }
 }
 
-},{"./content-serializer.js":891,"./style-serializer.js":893}],893:[function(require,module,exports){
+},{"./content-serializer.js":893,"./style-serializer.js":895}],895:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64586,7 +64484,7 @@ function encodePrimitive(_ref3) {
   return undefined;
 }
 
-},{}],894:[function(require,module,exports){
+},{}],896:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64703,7 +64601,7 @@ function applySecurities(_ref) {
   return result;
 }
 
-},{"../../helpers/btoa.node.js":896,"@babel/runtime-corejs3/helpers/objectSpread2":51}],895:[function(require,module,exports){
+},{"../../helpers/btoa.node.js":898,"@babel/runtime-corejs3/helpers/objectSpread2":51}],897:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64794,7 +64692,7 @@ function queryBuilder(_ref5) {
   }
 }
 
-},{}],896:[function(require,module,exports){
+},{}],898:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64821,7 +64719,7 @@ const {
 var _default = btoa;
 exports.default = _default;
 
-},{}],897:[function(require,module,exports){
+},{}],899:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64867,7 +64765,7 @@ function eachOperation(spec, cb, find) {
   return undefined;
 }
 
-},{}],898:[function(require,module,exports){
+},{}],900:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64882,7 +64780,7 @@ function findOperation(spec, predicate) {
   return (0, _eachOperation.default)(spec, predicate, true) || null;
 }
 
-},{"./each-operation.js":897}],899:[function(require,module,exports){
+},{"./each-operation.js":899}],901:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64913,7 +64811,7 @@ function getOperationRaw(spec, id) {
   });
 }
 
-},{"./find-operation.js":898,"./id-from-path-method/legacy.js":901,"./op-id.js":903}],900:[function(require,module,exports){
+},{"./find-operation.js":900,"./id-from-path-method/legacy.js":903,"./op-id.js":905}],902:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64934,7 +64832,7 @@ function idFromPathMethod(pathName, method) {
   return `${method.toLowerCase()}${(0, _replaceSpecialCharsWithUnderscore.default)(pathName)}`;
 }
 
-},{"../replace-special-chars-with-underscore.js":905}],901:[function(require,module,exports){
+},{"../replace-special-chars-with-underscore.js":907}],903:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64945,7 +64843,7 @@ function idFromPathMethodLegacy(pathName, method) {
   return `${method.toLowerCase()}-${pathName}`;
 }
 
-},{}],902:[function(require,module,exports){
+},{}],904:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64995,7 +64893,7 @@ var _index = _interopRequireDefault(require("./id-from-path-method/index.js"));
 var _legacy = _interopRequireDefault(require("./id-from-path-method/legacy.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./each-operation.js":897,"./find-operation.js":898,"./get-operation-raw.js":899,"./id-from-path-method/index.js":900,"./id-from-path-method/legacy.js":901,"./op-id.js":903}],903:[function(require,module,exports){
+},{"./each-operation.js":899,"./find-operation.js":900,"./get-operation-raw.js":901,"./id-from-path-method/index.js":902,"./id-from-path-method/legacy.js":903,"./op-id.js":905}],905:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65022,7 +64920,7 @@ function opId(operation, pathName) {
   });
 }
 
-},{"./id-from-path-method/index.js":900,"./replace-special-chars-with-underscore.js":905}],904:[function(require,module,exports){
+},{"./id-from-path-method/index.js":902,"./replace-special-chars-with-underscore.js":907}],906:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65067,7 +64965,7 @@ const isOpenAPI3 = spec => isOpenAPI30(spec) || isOpenAPI31(spec);
 // backward compatibility export
 exports.isOpenAPI3 = isOpenAPI3;
 
-},{}],905:[function(require,module,exports){
+},{}],907:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65078,7 +64976,7 @@ const replaceSpecialCharsWithUnderscore = operationId => operationId.replace(/\W
 var _default = replaceSpecialCharsWithUnderscore;
 exports.default = _default;
 
-},{}],906:[function(require,module,exports){
+},{}],908:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65091,7 +64989,7 @@ const foldFormDataToRequest = (formdata, request) => {
 var _default = foldFormDataToRequest;
 exports.default = _default;
 
-},{}],907:[function(require,module,exports){
+},{}],909:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65544,7 +65442,7 @@ function makeHttp(httpFn, preFetch, postFetch) {
   };
 }
 
-},{"../execute/oas3/style-serializer.js":893,"./fold-formdata-to-request.node.js":906,"cross-fetch/polyfill":531,"formdata-node":542,"js-yaml":562,"qs":793}],908:[function(require,module,exports){
+},{"../execute/oas3/style-serializer.js":895,"./fold-formdata-to-request.node.js":908,"cross-fetch/polyfill":531,"formdata-node":542,"js-yaml":562,"qs":793}],910:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65588,7 +65486,7 @@ var _default = makeResolve({
 });
 exports.default = _default;
 
-},{"./strategies/generic/index.js":909,"./strategies/openapi-2/index.js":912,"./strategies/openapi-3-0/index.js":915,"./utils/index.js":918,"./utils/options.js":919,"@babel/runtime-corejs3/helpers/objectSpread2":51}],909:[function(require,module,exports){
+},{"./strategies/generic/index.js":911,"./strategies/openapi-2/index.js":914,"./strategies/openapi-3-0/index.js":917,"./utils/index.js":920,"./utils/options.js":921,"@babel/runtime-corejs3/helpers/objectSpread2":51}],911:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65626,7 +65524,7 @@ const genericStrategy = {
 var _default = genericStrategy;
 exports.default = _default;
 
-},{"../../../specmap/index.js":921,"./normalize.js":910,"./resolve.js":911}],910:[function(require,module,exports){
+},{"../../../specmap/index.js":923,"./normalize.js":912,"./resolve.js":913}],912:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65732,7 +65630,7 @@ function normalize(parsedSpec) {
   return parsedSpec;
 }
 
-},{"../../../helpers/op-id.js":903}],911:[function(require,module,exports){
+},{"../../../helpers/op-id.js":905}],913:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65802,7 +65700,7 @@ async function resolveGenericStrategy(options) {
   }
 }
 
-},{"../../../specmap/index.js":921,"../../utils/index.js":918,"../../utils/options.js":919,"./normalize.js":910}],912:[function(require,module,exports){
+},{"../../../specmap/index.js":923,"../../utils/index.js":920,"../../utils/options.js":921,"./normalize.js":912}],914:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65846,7 +65744,7 @@ const openApi2Strategy = {
 var _default = openApi2Strategy;
 exports.default = _default;
 
-},{"../../../helpers/openapi-predicates.js":904,"../generic/index.js":909,"./normalize.js":913,"./resolve.js":914}],913:[function(require,module,exports){
+},{"../../../helpers/openapi-predicates.js":906,"../generic/index.js":911,"./normalize.js":915,"./resolve.js":916}],915:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65861,7 +65759,7 @@ Object.defineProperty(exports, "default", {
 var _normalize = _interopRequireDefault(require("../generic/normalize.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"../generic/normalize.js":910}],914:[function(require,module,exports){
+},{"../generic/normalize.js":912}],916:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65874,7 +65772,7 @@ async function resolveOpenAPI2Strategy(options) {
   return (0, _resolve.default)(options);
 }
 
-},{"../generic/resolve.js":911}],915:[function(require,module,exports){
+},{"../generic/resolve.js":913}],917:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65918,9 +65816,9 @@ const openApi30Strategy = {
 var _default = openApi30Strategy;
 exports.default = _default;
 
-},{"../../../helpers/openapi-predicates.js":904,"../generic/index.js":909,"./normalize.js":916,"./resolve.js":917}],916:[function(require,module,exports){
-arguments[4][913][0].apply(exports,arguments)
-},{"../generic/normalize.js":910,"dup":913}],917:[function(require,module,exports){
+},{"../../../helpers/openapi-predicates.js":906,"../generic/index.js":911,"./normalize.js":918,"./resolve.js":919}],918:[function(require,module,exports){
+arguments[4][915][0].apply(exports,arguments)
+},{"../generic/normalize.js":912,"dup":915}],919:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65933,7 +65831,7 @@ async function resolveOpenAPI30Strategy(options) {
   return (0, _resolve.default)(options);
 }
 
-},{"../generic/resolve.js":911}],918:[function(require,module,exports){
+},{"../generic/resolve.js":913}],920:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65962,7 +65860,7 @@ function makeFetchJSON(http) {
   }).then(res => res.body);
 }
 
-},{"../../constants.js":888}],919:[function(require,module,exports){
+},{"../../constants.js":890}],921:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65994,7 +65892,7 @@ const httpClient = options => {
 };
 exports.httpClient = httpClient;
 
-},{"../../http/index.js":907}],920:[function(require,module,exports){
+},{"../../http/index.js":909}],922:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66060,7 +65958,7 @@ function absolutifyPointer(pointer, baseUrl) {
   return fragmentPart ? `${newRefUrlPart}#${fragmentPart}` : newRefUrlPart;
 }
 
-},{"traverse":932,"url":934}],921:[function(require,module,exports){
+},{"traverse":934,"url":936}],923:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66439,7 +66337,7 @@ const plugins = {
 };
 exports.plugins = plugins;
 
-},{"./lib/all-of.js":922,"./lib/context-tree.js":923,"./lib/index.js":925,"./lib/parameters.js":926,"./lib/properties.js":927,"./lib/refs.js":928,"@babel/runtime-corejs3/helpers/objectSpread2":51}],922:[function(require,module,exports){
+},{"./lib/all-of.js":924,"./lib/context-tree.js":925,"./lib/index.js":927,"./lib/parameters.js":928,"./lib/properties.js":929,"./lib/refs.js":930,"@babel/runtime-corejs3/helpers/objectSpread2":51}],924:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66532,7 +66430,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{"../helpers.js":920,"@babel/runtime-corejs3/helpers/objectSpread2":51}],923:[function(require,module,exports){
+},{"../helpers.js":922,"@babel/runtime-corejs3/helpers/objectSpread2":51}],925:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66622,7 +66520,7 @@ function updateNode(node, value, parent) {
   return node;
 }
 
-},{"@babel/runtime-corejs3/helpers/objectSpread2":51}],924:[function(require,module,exports){
+},{"@babel/runtime-corejs3/helpers/objectSpread2":51}],926:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66650,7 +66548,7 @@ function createErrorType(name, init) {
   return E;
 }
 
-},{}],925:[function(require,module,exports){
+},{}],927:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66957,7 +66855,7 @@ function getInByJsonPath(obj, jsonPath) {
   }
 }
 
-},{"@babel/runtime-corejs3/helpers/objectSpread2":51,"deepmerge":533,"fast-json-patch":536}],926:[function(require,module,exports){
+},{"@babel/runtime-corejs3/helpers/objectSpread2":51,"deepmerge":533,"fast-json-patch":536}],928:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66991,7 +66889,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{"./index.js":925,"@babel/runtime-corejs3/helpers/objectSpread2":51}],927:[function(require,module,exports){
+},{"./index.js":927,"@babel/runtime-corejs3/helpers/objectSpread2":51}],929:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -67022,7 +66920,7 @@ var _default = {
 };
 exports.default = _default;
 
-},{"./index.js":925,"@babel/runtime-corejs3/helpers/objectSpread2":51}],928:[function(require,module,exports){
+},{"./index.js":927,"@babel/runtime-corejs3/helpers/objectSpread2":51}],930:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -67498,7 +67396,7 @@ function patchValueAlreadyInPath(root, patch) {
   }
 }
 
-},{"../../constants.js":888,"../helpers.js":920,"./create-error.js":924,"./index.js":925,"cross-fetch/polyfill":531,"js-yaml":562,"url":934}],929:[function(require,module,exports){
+},{"../../constants.js":890,"../helpers.js":922,"./create-error.js":926,"./index.js":927,"cross-fetch/polyfill":531,"js-yaml":562,"url":936}],931:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -67581,7 +67479,7 @@ var _default = makeResolveSubtree({
 });
 exports.default = _default;
 
-},{"../resolver/index.js":908,"../resolver/strategies/generic/index.js":909,"../resolver/strategies/openapi-2/index.js":912,"../resolver/strategies/openapi-3-0/index.js":915,"@babel/runtime-corejs3/helpers/objectSpread2":51,"lodash/get":740}],930:[function(require,module,exports){
+},{"../resolver/index.js":910,"../resolver/strategies/generic/index.js":911,"../resolver/strategies/openapi-2/index.js":914,"../resolver/strategies/openapi-3-0/index.js":917,"@babel/runtime-corejs3/helpers/objectSpread2":51,"lodash/get":740}],932:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -83336,10 +83234,10 @@ var Ze = {};
     PACKAGE_VERSION: Fr,
     BUILD_TIME: $r
   } = {
-    PACKAGE_VERSION: "4.17.1",
-    GIT_COMMIT: "g51b45e7",
+    PACKAGE_VERSION: "4.18.0",
+    GIT_COMMIT: "g4751ab6",
     GIT_DIRTY: !0,
-    BUILD_TIME: "Mon, 06 Mar 2023 15:24:37 GMT"
+    BUILD_TIME: "Wed, 08 Mar 2023 09:06:47 GMT"
   };
   function Jr(e) {
     var t;
@@ -83466,7 +83364,7 @@ var Ze = {};
 var Ye = Ze.Z;
 exports.default = Ye;
 
-},{"@babel/runtime-corejs3/core-js-stable/array/from":1,"@babel/runtime-corejs3/core-js-stable/array/is-array":2,"@babel/runtime-corejs3/core-js-stable/date/now":3,"@babel/runtime-corejs3/core-js-stable/instance/bind":4,"@babel/runtime-corejs3/core-js-stable/instance/concat":5,"@babel/runtime-corejs3/core-js-stable/instance/entries":6,"@babel/runtime-corejs3/core-js-stable/instance/every":7,"@babel/runtime-corejs3/core-js-stable/instance/fill":8,"@babel/runtime-corejs3/core-js-stable/instance/filter":9,"@babel/runtime-corejs3/core-js-stable/instance/find":11,"@babel/runtime-corejs3/core-js-stable/instance/find-index":10,"@babel/runtime-corejs3/core-js-stable/instance/for-each":12,"@babel/runtime-corejs3/core-js-stable/instance/includes":13,"@babel/runtime-corejs3/core-js-stable/instance/index-of":14,"@babel/runtime-corejs3/core-js-stable/instance/keys":15,"@babel/runtime-corejs3/core-js-stable/instance/last-index-of":16,"@babel/runtime-corejs3/core-js-stable/instance/map":17,"@babel/runtime-corejs3/core-js-stable/instance/reduce":18,"@babel/runtime-corejs3/core-js-stable/instance/repeat":19,"@babel/runtime-corejs3/core-js-stable/instance/slice":20,"@babel/runtime-corejs3/core-js-stable/instance/some":21,"@babel/runtime-corejs3/core-js-stable/instance/sort":22,"@babel/runtime-corejs3/core-js-stable/instance/splice":23,"@babel/runtime-corejs3/core-js-stable/instance/starts-with":24,"@babel/runtime-corejs3/core-js-stable/instance/trim":25,"@babel/runtime-corejs3/core-js-stable/instance/values":26,"@babel/runtime-corejs3/core-js-stable/json/stringify":27,"@babel/runtime-corejs3/core-js-stable/map":28,"@babel/runtime-corejs3/core-js-stable/object/assign":29,"@babel/runtime-corejs3/core-js-stable/object/keys":30,"@babel/runtime-corejs3/core-js-stable/object/values":31,"@babel/runtime-corejs3/core-js-stable/promise":32,"@babel/runtime-corejs3/core-js-stable/set-timeout":33,"@babel/runtime-corejs3/core-js-stable/url":34,"@babel/runtime-corejs3/helpers/defineProperty":49,"@babel/runtime-corejs3/helpers/extends":50,"@braintree/sanitize-url":77,"base64-js":107,"classnames":112,"css.escape":532,"dompurify":534,"ieee754":558,"immutable":559,"js-file-download":561,"js-yaml":562,"lodash/camelCase":731,"lodash/debounce":734,"lodash/eq":736,"lodash/find":737,"lodash/get":740,"lodash/identity":742,"lodash/isEmpty":748,"lodash/isFunction":749,"lodash/isString":756,"lodash/memoize":762,"lodash/merge":763,"lodash/omit":765,"lodash/reduce":767,"lodash/set":768,"lodash/some":769,"lodash/toLower":774,"lodash/toString":777,"lodash/upperFirst":778,"lodash/zipObject":780,"prop-types":788,"randexp":801,"react":861,"react-copy-to-clipboard":803,"react-debounce-input":805,"react-dom":808,"react-immutable-proptypes":809,"react-immutable-pure-component":810,"react-redux":829,"react-syntax-highlighter/dist/esm/languages/hljs/bash":845,"react-syntax-highlighter/dist/esm/languages/hljs/http":846,"react-syntax-highlighter/dist/esm/languages/hljs/javascript":847,"react-syntax-highlighter/dist/esm/languages/hljs/json":848,"react-syntax-highlighter/dist/esm/languages/hljs/powershell":849,"react-syntax-highlighter/dist/esm/languages/hljs/xml":850,"react-syntax-highlighter/dist/esm/languages/hljs/yaml":851,"react-syntax-highlighter/dist/esm/light":852,"react-syntax-highlighter/dist/esm/styles/hljs/agate":853,"react-syntax-highlighter/dist/esm/styles/hljs/arta":854,"react-syntax-highlighter/dist/esm/styles/hljs/monokai":855,"react-syntax-highlighter/dist/esm/styles/hljs/nord":856,"react-syntax-highlighter/dist/esm/styles/hljs/obsidian":857,"react-syntax-highlighter/dist/esm/styles/hljs/tomorrow-night":858,"redux":868,"redux-immutable":863,"remarkable":869,"remarkable/linkify":870,"reselect":874,"serialize-error":886,"swagger-client/es/execute":889,"swagger-client/es/helpers":902,"swagger-client/es/http":907,"swagger-client/es/resolver":908,"swagger-client/es/subtree-resolver":929,"url-parse":933,"xml-but-prettier":936,"zenscroll":937}],931:[function(require,module,exports){
+},{"@babel/runtime-corejs3/core-js-stable/array/from":1,"@babel/runtime-corejs3/core-js-stable/array/is-array":2,"@babel/runtime-corejs3/core-js-stable/date/now":3,"@babel/runtime-corejs3/core-js-stable/instance/bind":4,"@babel/runtime-corejs3/core-js-stable/instance/concat":5,"@babel/runtime-corejs3/core-js-stable/instance/entries":6,"@babel/runtime-corejs3/core-js-stable/instance/every":7,"@babel/runtime-corejs3/core-js-stable/instance/fill":8,"@babel/runtime-corejs3/core-js-stable/instance/filter":9,"@babel/runtime-corejs3/core-js-stable/instance/find":11,"@babel/runtime-corejs3/core-js-stable/instance/find-index":10,"@babel/runtime-corejs3/core-js-stable/instance/for-each":12,"@babel/runtime-corejs3/core-js-stable/instance/includes":13,"@babel/runtime-corejs3/core-js-stable/instance/index-of":14,"@babel/runtime-corejs3/core-js-stable/instance/keys":15,"@babel/runtime-corejs3/core-js-stable/instance/last-index-of":16,"@babel/runtime-corejs3/core-js-stable/instance/map":17,"@babel/runtime-corejs3/core-js-stable/instance/reduce":18,"@babel/runtime-corejs3/core-js-stable/instance/repeat":19,"@babel/runtime-corejs3/core-js-stable/instance/slice":20,"@babel/runtime-corejs3/core-js-stable/instance/some":21,"@babel/runtime-corejs3/core-js-stable/instance/sort":22,"@babel/runtime-corejs3/core-js-stable/instance/splice":23,"@babel/runtime-corejs3/core-js-stable/instance/starts-with":24,"@babel/runtime-corejs3/core-js-stable/instance/trim":25,"@babel/runtime-corejs3/core-js-stable/instance/values":26,"@babel/runtime-corejs3/core-js-stable/json/stringify":27,"@babel/runtime-corejs3/core-js-stable/map":28,"@babel/runtime-corejs3/core-js-stable/object/assign":29,"@babel/runtime-corejs3/core-js-stable/object/keys":30,"@babel/runtime-corejs3/core-js-stable/object/values":31,"@babel/runtime-corejs3/core-js-stable/promise":32,"@babel/runtime-corejs3/core-js-stable/set-timeout":33,"@babel/runtime-corejs3/core-js-stable/url":34,"@babel/runtime-corejs3/helpers/defineProperty":49,"@babel/runtime-corejs3/helpers/extends":50,"@braintree/sanitize-url":77,"base64-js":107,"classnames":112,"css.escape":532,"dompurify":534,"ieee754":558,"immutable":559,"js-file-download":561,"js-yaml":562,"lodash/camelCase":731,"lodash/debounce":734,"lodash/eq":736,"lodash/find":737,"lodash/get":740,"lodash/identity":742,"lodash/isEmpty":748,"lodash/isFunction":749,"lodash/isString":756,"lodash/memoize":762,"lodash/merge":763,"lodash/omit":765,"lodash/reduce":767,"lodash/set":768,"lodash/some":769,"lodash/toLower":774,"lodash/toString":777,"lodash/upperFirst":778,"lodash/zipObject":780,"prop-types":788,"randexp":801,"react":863,"react-copy-to-clipboard":803,"react-debounce-input":805,"react-dom":808,"react-immutable-proptypes":809,"react-immutable-pure-component":810,"react-redux":829,"react-syntax-highlighter/dist/esm/languages/hljs/bash":847,"react-syntax-highlighter/dist/esm/languages/hljs/http":848,"react-syntax-highlighter/dist/esm/languages/hljs/javascript":849,"react-syntax-highlighter/dist/esm/languages/hljs/json":850,"react-syntax-highlighter/dist/esm/languages/hljs/powershell":851,"react-syntax-highlighter/dist/esm/languages/hljs/xml":852,"react-syntax-highlighter/dist/esm/languages/hljs/yaml":853,"react-syntax-highlighter/dist/esm/light":854,"react-syntax-highlighter/dist/esm/styles/hljs/agate":855,"react-syntax-highlighter/dist/esm/styles/hljs/arta":856,"react-syntax-highlighter/dist/esm/styles/hljs/monokai":857,"react-syntax-highlighter/dist/esm/styles/hljs/nord":858,"react-syntax-highlighter/dist/esm/styles/hljs/obsidian":859,"react-syntax-highlighter/dist/esm/styles/hljs/tomorrow-night":860,"redux":870,"redux-immutable":865,"remarkable":871,"remarkable/linkify":872,"reselect":876,"serialize-error":888,"swagger-client/es/execute":891,"swagger-client/es/helpers":904,"swagger-client/es/http":909,"swagger-client/es/resolver":910,"swagger-client/es/subtree-resolver":931,"url-parse":935,"xml-but-prettier":944,"zenscroll":945}],933:[function(require,module,exports){
 
 module.exports = function () {
   var selection = document.getSelection();
@@ -83507,7 +83405,7 @@ module.exports = function () {
   };
 };
 
-},{}],932:[function(require,module,exports){
+},{}],934:[function(require,module,exports){
 'use strict';
 
 // TODO: use call-bind, is-date, is-regex, is-string, is-boolean-object, is-number-object
@@ -83820,7 +83718,7 @@ forEach(objectKeys(Traverse.prototype), function (key) {
 
 module.exports = traverse;
 
-},{}],933:[function(require,module,exports){
+},{}],935:[function(require,module,exports){
 (function (global){(function (){
 'use strict';
 
@@ -84413,7 +84311,7 @@ Url.qs = qs;
 module.exports = Url;
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"querystringify":800,"requires-port":872}],934:[function(require,module,exports){
+},{"querystringify":800,"requires-port":874}],936:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -85147,7 +85045,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"./util":935,"punycode":791,"querystring":799}],935:[function(require,module,exports){
+},{"./util":937,"punycode":791,"querystring":799}],937:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -85165,7 +85063,468 @@ module.exports = {
   }
 };
 
-},{}],936:[function(require,module,exports){
+},{}],938:[function(require,module,exports){
+(function (process){(function (){
+/**
+ * @license React
+ * use-sync-external-store-shim.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+'use strict';
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+
+          'use strict';
+
+/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
+}
+          var React = require('react');
+
+var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+function error(format) {
+  {
+    {
+      for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        args[_key2 - 1] = arguments[_key2];
+      }
+
+      printWarning('error', format, args);
+    }
+  }
+}
+
+function printWarning(level, format, args) {
+  // When changing this logic, you might want to also
+  // update consoleWithStackDev.www.js as well.
+  {
+    var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+    var stack = ReactDebugCurrentFrame.getStackAddendum();
+
+    if (stack !== '') {
+      format += '%s';
+      args = args.concat([stack]);
+    } // eslint-disable-next-line react-internal/safe-string-coercion
+
+
+    var argsWithFormat = args.map(function (item) {
+      return String(item);
+    }); // Careful: RN currently depends on this prefix
+
+    argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+    // breaks IE9: https://github.com/facebook/react/issues/13610
+    // eslint-disable-next-line react-internal/no-production-logging
+
+    Function.prototype.apply.call(console[level], console, argsWithFormat);
+  }
+}
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var objectIs = typeof Object.is === 'function' ? Object.is : is;
+
+// dispatch for CommonJS interop named imports.
+
+var useState = React.useState,
+    useEffect = React.useEffect,
+    useLayoutEffect = React.useLayoutEffect,
+    useDebugValue = React.useDebugValue;
+var didWarnOld18Alpha = false;
+var didWarnUncachedGetSnapshot = false; // Disclaimer: This shim breaks many of the rules of React, and only works
+// because of a very particular set of implementation details and assumptions
+// -- change any one of them and it will break. The most important assumption
+// is that updates are always synchronous, because concurrent rendering is
+// only available in versions of React that also have a built-in
+// useSyncExternalStore API. And we only use this shim when the built-in API
+// does not exist.
+//
+// Do not assume that the clever hacks used by this hook also work in general.
+// The point of this shim is to replace the need for hacks by other libraries.
+
+function useSyncExternalStore(subscribe, getSnapshot, // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+// React do not expose a way to check if we're hydrating. So users of the shim
+// will need to track that themselves and return the correct value
+// from `getSnapshot`.
+getServerSnapshot) {
+  {
+    if (!didWarnOld18Alpha) {
+      if (React.startTransition !== undefined) {
+        didWarnOld18Alpha = true;
+
+        error('You are using an outdated, pre-release alpha of React 18 that ' + 'does not support useSyncExternalStore. The ' + 'use-sync-external-store shim will not work correctly. Upgrade ' + 'to a newer pre-release.');
+      }
+    }
+  } // Read the current snapshot from the store on every render. Again, this
+  // breaks the rules of React, and only works here because of specific
+  // implementation details, most importantly that updates are
+  // always synchronous.
+
+
+  var value = getSnapshot();
+
+  {
+    if (!didWarnUncachedGetSnapshot) {
+      var cachedValue = getSnapshot();
+
+      if (!objectIs(value, cachedValue)) {
+        error('The result of getSnapshot should be cached to avoid an infinite loop');
+
+        didWarnUncachedGetSnapshot = true;
+      }
+    }
+  } // Because updates are synchronous, we don't queue them. Instead we force a
+  // re-render whenever the subscribed state changes by updating an some
+  // arbitrary useState hook. Then, during render, we call getSnapshot to read
+  // the current value.
+  //
+  // Because we don't actually use the state returned by the useState hook, we
+  // can save a bit of memory by storing other stuff in that slot.
+  //
+  // To implement the early bailout, we need to track some things on a mutable
+  // object. Usually, we would put that in a useRef hook, but we can stash it in
+  // our useState hook instead.
+  //
+  // To force a re-render, we call forceUpdate({inst}). That works because the
+  // new object always fails an equality check.
+
+
+  var _useState = useState({
+    inst: {
+      value: value,
+      getSnapshot: getSnapshot
+    }
+  }),
+      inst = _useState[0].inst,
+      forceUpdate = _useState[1]; // Track the latest getSnapshot function with a ref. This needs to be updated
+  // in the layout phase so we can access it during the tearing check that
+  // happens on subscribe.
+
+
+  useLayoutEffect(function () {
+    inst.value = value;
+    inst.getSnapshot = getSnapshot; // Whenever getSnapshot or subscribe changes, we need to check in the
+    // commit phase if there was an interleaved mutation. In concurrent mode
+    // this can happen all the time, but even in synchronous mode, an earlier
+    // effect may have mutated the store.
+
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+  }, [subscribe, value, getSnapshot]);
+  useEffect(function () {
+    // Check for changes right before subscribing. Subsequent changes will be
+    // detected in the subscription handler.
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+
+    var handleStoreChange = function () {
+      // TODO: Because there is no cross-renderer API for batching updates, it's
+      // up to the consumer of this library to wrap their subscription event
+      // with unstable_batchedUpdates. Should we try to detect when this isn't
+      // the case and print a warning in development?
+      // The store changed. Check if the snapshot changed since the last time we
+      // read from the store.
+      if (checkIfSnapshotChanged(inst)) {
+        // Force a re-render.
+        forceUpdate({
+          inst: inst
+        });
+      }
+    }; // Subscribe to the store and return a clean-up function.
+
+
+    return subscribe(handleStoreChange);
+  }, [subscribe]);
+  useDebugValue(value);
+  return value;
+}
+
+function checkIfSnapshotChanged(inst) {
+  var latestGetSnapshot = inst.getSnapshot;
+  var prevValue = inst.value;
+
+  try {
+    var nextValue = latestGetSnapshot();
+    return !objectIs(prevValue, nextValue);
+  } catch (error) {
+    return true;
+  }
+}
+
+function useSyncExternalStore$1(subscribe, getSnapshot, getServerSnapshot) {
+  // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+  // React do not expose a way to check if we're hydrating. So users of the shim
+  // will need to track that themselves and return the correct value
+  // from `getSnapshot`.
+  return getSnapshot();
+}
+
+var canUseDOM = !!(typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined');
+
+var isServerEnvironment = !canUseDOM;
+
+var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore;
+var useSyncExternalStore$2 = React.useSyncExternalStore !== undefined ? React.useSyncExternalStore : shim;
+
+exports.useSyncExternalStore = useSyncExternalStore$2;
+          /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+}
+        
+  })();
+}
+
+}).call(this)}).call(this,require('_process'))
+},{"_process":784,"react":863}],939:[function(require,module,exports){
+/**
+ * @license React
+ * use-sync-external-store-shim.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+'use strict';var e=require("react");function h(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var k="function"===typeof Object.is?Object.is:h,l=e.useState,m=e.useEffect,n=e.useLayoutEffect,p=e.useDebugValue;function q(a,b){var d=b(),f=l({inst:{value:d,getSnapshot:b}}),c=f[0].inst,g=f[1];n(function(){c.value=d;c.getSnapshot=b;r(c)&&g({inst:c})},[a,d,b]);m(function(){r(c)&&g({inst:c});return a(function(){r(c)&&g({inst:c})})},[a]);p(d);return d}
+function r(a){var b=a.getSnapshot;a=a.value;try{var d=b();return!k(a,d)}catch(f){return!0}}function t(a,b){return b()}var u="undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement?t:q;exports.useSyncExternalStore=void 0!==e.useSyncExternalStore?e.useSyncExternalStore:u;
+
+},{"react":863}],940:[function(require,module,exports){
+(function (process){(function (){
+/**
+ * @license React
+ * use-sync-external-store-shim/with-selector.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+'use strict';
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+
+          'use strict';
+
+/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
+}
+          var React = require('react');
+var shim = require('use-sync-external-store/shim');
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var objectIs = typeof Object.is === 'function' ? Object.is : is;
+
+var useSyncExternalStore = shim.useSyncExternalStore;
+
+// for CommonJS interop.
+
+var useRef = React.useRef,
+    useEffect = React.useEffect,
+    useMemo = React.useMemo,
+    useDebugValue = React.useDebugValue; // Same as useSyncExternalStore, but supports selector and isEqual arguments.
+
+function useSyncExternalStoreWithSelector(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
+  // Use this to track the rendered snapshot.
+  var instRef = useRef(null);
+  var inst;
+
+  if (instRef.current === null) {
+    inst = {
+      hasValue: false,
+      value: null
+    };
+    instRef.current = inst;
+  } else {
+    inst = instRef.current;
+  }
+
+  var _useMemo = useMemo(function () {
+    // Track the memoized state using closure variables that are local to this
+    // memoized instance of a getSnapshot function. Intentionally not using a
+    // useRef hook, because that state would be shared across all concurrent
+    // copies of the hook/component.
+    var hasMemo = false;
+    var memoizedSnapshot;
+    var memoizedSelection;
+
+    var memoizedSelector = function (nextSnapshot) {
+      if (!hasMemo) {
+        // The first time the hook is called, there is no memoized result.
+        hasMemo = true;
+        memoizedSnapshot = nextSnapshot;
+
+        var _nextSelection = selector(nextSnapshot);
+
+        if (isEqual !== undefined) {
+          // Even if the selector has changed, the currently rendered selection
+          // may be equal to the new selection. We should attempt to reuse the
+          // current value if possible, to preserve downstream memoizations.
+          if (inst.hasValue) {
+            var currentSelection = inst.value;
+
+            if (isEqual(currentSelection, _nextSelection)) {
+              memoizedSelection = currentSelection;
+              return currentSelection;
+            }
+          }
+        }
+
+        memoizedSelection = _nextSelection;
+        return _nextSelection;
+      } // We may be able to reuse the previous invocation's result.
+
+
+      // We may be able to reuse the previous invocation's result.
+      var prevSnapshot = memoizedSnapshot;
+      var prevSelection = memoizedSelection;
+
+      if (objectIs(prevSnapshot, nextSnapshot)) {
+        // The snapshot is the same as last time. Reuse the previous selection.
+        return prevSelection;
+      } // The snapshot has changed, so we need to compute a new selection.
+
+
+      // The snapshot has changed, so we need to compute a new selection.
+      var nextSelection = selector(nextSnapshot); // If a custom isEqual function is provided, use that to check if the data
+      // has changed. If it hasn't, return the previous selection. That signals
+      // to React that the selections are conceptually equal, and we can bail
+      // out of rendering.
+
+      // If a custom isEqual function is provided, use that to check if the data
+      // has changed. If it hasn't, return the previous selection. That signals
+      // to React that the selections are conceptually equal, and we can bail
+      // out of rendering.
+      if (isEqual !== undefined && isEqual(prevSelection, nextSelection)) {
+        return prevSelection;
+      }
+
+      memoizedSnapshot = nextSnapshot;
+      memoizedSelection = nextSelection;
+      return nextSelection;
+    }; // Assigning this to a constant so that Flow knows it can't change.
+
+
+    // Assigning this to a constant so that Flow knows it can't change.
+    var maybeGetServerSnapshot = getServerSnapshot === undefined ? null : getServerSnapshot;
+
+    var getSnapshotWithSelector = function () {
+      return memoizedSelector(getSnapshot());
+    };
+
+    var getServerSnapshotWithSelector = maybeGetServerSnapshot === null ? undefined : function () {
+      return memoizedSelector(maybeGetServerSnapshot());
+    };
+    return [getSnapshotWithSelector, getServerSnapshotWithSelector];
+  }, [getSnapshot, getServerSnapshot, selector, isEqual]),
+      getSelection = _useMemo[0],
+      getServerSelection = _useMemo[1];
+
+  var value = useSyncExternalStore(subscribe, getSelection, getServerSelection);
+  useEffect(function () {
+    inst.hasValue = true;
+    inst.value = value;
+  }, [value]);
+  useDebugValue(value);
+  return value;
+}
+
+exports.useSyncExternalStoreWithSelector = useSyncExternalStoreWithSelector;
+          /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+}
+        
+  })();
+}
+
+}).call(this)}).call(this,require('_process'))
+},{"_process":784,"react":863,"use-sync-external-store/shim":942}],941:[function(require,module,exports){
+/**
+ * @license React
+ * use-sync-external-store-shim/with-selector.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+'use strict';var h=require("react"),n=require("use-sync-external-store/shim");function p(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var q="function"===typeof Object.is?Object.is:p,r=n.useSyncExternalStore,t=h.useRef,u=h.useEffect,v=h.useMemo,w=h.useDebugValue;
+exports.useSyncExternalStoreWithSelector=function(a,b,e,l,g){var c=t(null);if(null===c.current){var f={hasValue:!1,value:null};c.current=f}else f=c.current;c=v(function(){function a(a){if(!c){c=!0;d=a;a=l(a);if(void 0!==g&&f.hasValue){var b=f.value;if(g(b,a))return k=b}return k=a}b=k;if(q(d,a))return b;var e=l(a);if(void 0!==g&&g(b,e))return b;d=a;return k=e}var c=!1,d,k,m=void 0===e?null:e;return[function(){return a(b())},null===m?void 0:function(){return a(m())}]},[b,e,l,g]);var d=r(a,c[0],c[1]);
+u(function(){f.hasValue=!0;f.value=d},[d]);w(d);return d};
+
+},{"react":863,"use-sync-external-store/shim":942}],942:[function(require,module,exports){
+(function (process){(function (){
+'use strict';
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('../cjs/use-sync-external-store-shim.production.min.js');
+} else {
+  module.exports = require('../cjs/use-sync-external-store-shim.development.js');
+}
+
+}).call(this)}).call(this,require('_process'))
+},{"../cjs/use-sync-external-store-shim.development.js":938,"../cjs/use-sync-external-store-shim.production.min.js":939,"_process":784}],943:[function(require,module,exports){
+(function (process){(function (){
+'use strict';
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('../cjs/use-sync-external-store-shim/with-selector.production.min.js');
+} else {
+  module.exports = require('../cjs/use-sync-external-store-shim/with-selector.development.js');
+}
+
+}).call(this)}).call(this,require('_process'))
+},{"../cjs/use-sync-external-store-shim/with-selector.development.js":940,"../cjs/use-sync-external-store-shim/with-selector.production.min.js":941,"_process":784}],944:[function(require,module,exports){
 'use strict';
 
 var repeat = require('repeat-string');
@@ -85266,7 +85625,7 @@ function getType(str) {
 
   return 'Text';
 }
-},{"repeat-string":871}],937:[function(require,module,exports){
+},{"repeat-string":873}],945:[function(require,module,exports){
 /**
  * Zenscroll 4.0.2
  * https://github.com/zengabor/zenscroll/

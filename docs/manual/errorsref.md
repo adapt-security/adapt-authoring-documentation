@@ -57,6 +57,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=GENERATE_THUMB_FAIL">GENERATE_THUMB_FAIL</a></li>
 <li><a href="#/errorsref?id=HTTP_METHOD_NOT_SUPPORTED">HTTP_METHOD_NOT_SUPPORTED</a></li>
 <li><a href="#/errorsref?id=IMPORT_CONTENT_FAILED">IMPORT_CONTENT_FAILED</a></li>
+<li><a href="#/errorsref?id=IMPORT_FAILED">IMPORT_FAILED</a></li>
 <li><a href="#/errorsref?id=IMPORT_INVALID">IMPORT_INVALID</a></li>
 <li><a href="#/errorsref?id=IMPORT_PLUGINS_FAILED">IMPORT_PLUGINS_FAILED</a></li>
 <li><a href="#/errorsref?id=INCORRECT_PASSWORD">INCORRECT_PASSWORD</a></li>
@@ -162,6 +163,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `GENERATE_THUMB_FAIL` | Failed to generate asset thumbnail | 500 | <ul><li>`error`: Error message</li></ul> |
 | `HTTP_METHOD_NOT_SUPPORTED` | HTTP method for a given request is not supported | 404 | <ul><li>`method`: The invalid HTTP method</li></ul> |
 | `IMPORT_CONTENT_FAILED` | Import of framework content failed | 400 | <ul><li>`errors`: Accompanying errors</li></ul> |
+| `IMPORT_FAILED` | Import of framework course failed | 400 | <ul><li>`error`: The error</li></ul> |
 | `IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul></ul> |
 | `IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
 | `INCORRECT_PASSWORD` | Provided password does not match that stored | 401 | <ul></ul> |
