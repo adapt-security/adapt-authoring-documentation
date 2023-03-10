@@ -6629,6 +6629,707 @@
           "updatedAt"
         ]
       },
+      "block": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "block",
+        "description": "The base schema inherited by all other schemas",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_trackingId": {
+            "type": "number",
+            "title": "Tracking id",
+            "default": 0
+          },
+          "layoutOptions": {
+            "type": "array",
+            "title": "Layout options",
+            "default": [],
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_requireCompletionOf": {
+            "type": "number",
+            "title": "Number of components required for completion",
+            "description": "The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed",
+            "default": -1,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_assessment": {
+            "type": "object",
+            "title": "Assessment",
+            "default": {},
+            "properties": {
+              "_quizBankID": {
+                "type": "number",
+                "title": "Bank ID",
+                "description": "Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use",
+                "default": 1,
+                "_backboneForms": {
+                  "editorAttrs": {
+                    "step": 1,
+                    "min": 1
+                  }
+                }
+              }
+            }
+          },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": false
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              }
+            }
+          },
+          "_trickle": {
+            "type": "object",
+            "title": "Trickle",
+            "default": {},
+            "required": [
+              "_scrollDuration"
+            ],
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Trickle",
+                "default": false
+              },
+              "_isInherited": {
+                "type": "boolean",
+                "title": "Inherit settings from parent article",
+                "default": false
+              },
+              "_autoScroll": {
+                "type": "boolean",
+                "title": "Scroll automatically",
+                "default": false
+              },
+              "_scrollDuration": {
+                "type": "number",
+                "title": "Scroll duration",
+                "description": "Duration of the scroll animation in milliseconds",
+                "default": 500
+              },
+              "_scrollTo": {
+                "type": "string",
+                "title": "Scroll target",
+                "description": "Set how trickle scrolls",
+                "default": "@block +1"
+              },
+              "_completionAttribute": {
+                "type": "string",
+                "title": "Completion attribute",
+                "description": "Set which attribute is used to determine completion",
+                "default": "_isComplete",
+                "enum": [
+                  "_isInteractionComplete",
+                  "_isComplete"
+                ],
+                "_backboneForms": "Select"
+              },
+              "_button": {
+                "type": "object",
+                "title": "Button",
+                "default": {},
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Add Trickle button",
+                    "default": true
+                  },
+                  "_styleBeforeCompletion": {
+                    "type": "string",
+                    "title": "Visibility before completion",
+                    "default": "hidden",
+                    "enum": [
+                      "hidden",
+                      "visible",
+                      "disabled"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_styleAfterClick": {
+                    "type": "string",
+                    "title": "Visibility after completion",
+                    "default": "hidden",
+                    "enum": [
+                      "hidden",
+                      "visible",
+                      "disabled"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_isFullWidth": {
+                    "type": "boolean",
+                    "title": "Make full width",
+                    "default": true
+                  },
+                  "_autoHide": {
+                    "type": "boolean",
+                    "title": "Hide button when no longer in view",
+                    "description": "Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible",
+                    "default": false
+                  },
+                  "_showEndOfPage": {
+                    "type": "boolean",
+                    "title": "Show end of page button",
+                    "default": true
+                  },
+                  "_className": {
+                    "type": "string",
+                    "title": "Custom classes",
+                    "default": ""
+                  },
+                  "_hasIcon": {
+                    "type": "boolean",
+                    "title": "Enable icon",
+                    "description": "Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow",
+                    "default": false
+                  },
+                  "text": {
+                    "type": "string",
+                    "title": "Default button text",
+                    "default": "Continue",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "Default button ARIA label",
+                    "default": "Continue",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "startText": {
+                    "type": "string",
+                    "title": "First button text",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Begin",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "startAriaLabel": {
+                    "type": "string",
+                    "title": "First button ARIA label",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Begin",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "finalText": {
+                    "type": "string",
+                    "title": "Final button text",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Finish",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "finalAriaLabel": {
+                    "type": "string",
+                    "title": "Final button ARIA label",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Finish",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "_component": {
+                    "type": "string",
+                    "title": "Trickle plugin",
+                    "default": "trickle-button"
+                  }
+                }
+              },
+              "_stepLocking": {
+                "type": "object",
+                "title": "Step locking",
+                "default": {},
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Hide subsequent content",
+                    "default": true
+                  },
+                  "_isCompletionRequired": {
+                    "type": "boolean",
+                    "title": "Require content to be completed",
+                    "default": true
+                  },
+                  "_isLockedOnRevisit": {
+                    "type": "boolean",
+                    "title": "Reset state on revisit",
+                    "default": false
+                  }
+                }
+              }
+            }
+          },
+          "_vanilla": {
+            "type": "object",
+            "title": "Vanilla",
+            "default": {},
+            "properties": {
+              "_textAlignment": {
+                "type": "object",
+                "title": "Text alignment",
+                "default": {},
+                "properties": {
+                  "_title": {
+                    "type": "string",
+                    "title": "Title alignment",
+                    "description": "Set the alignment of the block title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_body": {
+                    "type": "string",
+                    "title": "Body alignment",
+                    "description": "Set the alignment of the block body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_instruction": {
+                    "type": "string",
+                    "title": "Instruction alignment",
+                    "description": "Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  }
+                }
+              },
+              "_backgroundImage": {
+                "type": "object",
+                "title": "Background image",
+                "default": {},
+                "properties": {
+                  "_large": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Large",
+                    "description": "Large background image - used on desktop",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  },
+                  "_medium": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Medium",
+                    "description": "Medium background image - used on tablet",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  },
+                  "_small": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Small",
+                    "description": "Small background image - used on mobile",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  }
+                }
+              },
+              "_backgroundStyles": {
+                "type": "object",
+                "title": "Background image styles",
+                "default": {},
+                "properties": {
+                  "_backgroundRepeat": {
+                    "type": "string",
+                    "title": "Repeat",
+                    "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "repeat",
+                      "repeat-x",
+                      "repeat-y",
+                      "no-repeat"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_backgroundSize": {
+                    "type": "string",
+                    "title": "Size",
+                    "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "auto",
+                      "cover",
+                      "contain",
+                      "100% 100%"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_backgroundPosition": {
+                    "type": "string",
+                    "title": "Position",
+                    "description": "The first value is the horizontal position and the second value is the vertical",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left top",
+                      "left center",
+                      "left bottom",
+                      "center top",
+                      "center center",
+                      "center bottom",
+                      "right top",
+                      "right center",
+                      "right bottom"
+                    ],
+                    "_backboneForms": "Select"
+                  }
+                }
+              },
+              "_minimumHeights": {
+                "type": "object",
+                "title": "Block minimum height",
+                "default": {},
+                "properties": {
+                  "_large": {
+                    "type": "number",
+                    "title": "Large",
+                    "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
+                    "default": 0
+                  },
+                  "_medium": {
+                    "type": "number",
+                    "title": "Medium",
+                    "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
+                    "default": 0
+                  },
+                  "_small": {
+                    "type": "number",
+                    "title": "Small",
+                    "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
+                    "default": 0
+                  }
+                }
+              },
+              "_responsiveClasses": {
+                "type": "object",
+                "title": "Responsive classes",
+                "default": {},
+                "properties": {
+                  "_large": {
+                    "type": "string",
+                    "title": "Large",
+                    "description": "Large CSS class - used on desktop",
+                    "default": ""
+                  },
+                  "_medium": {
+                    "type": "string",
+                    "title": "Medium",
+                    "description": "Medium CSS class - used on tablet",
+                    "default": ""
+                  },
+                  "_small": {
+                    "type": "string",
+                    "title": "Small",
+                    "description": "Small CSS class - used on mobile",
+                    "default": ""
+                  }
+                }
+              },
+              "_isDividerBlock": {
+                "type": "boolean",
+                "title": "Set this block as a divider",
+                "description": "If enabled, applies a divider class to the block",
+                "default": false
+              },
+              "_paddingTop": {
+                "type": "string",
+                "title": "Spacing top",
+                "description": "Changes the value of the blocks top spacing. Double: Doubles the blocks top spacing. Standard: Retains the standard blocks top spacing. Half: Halves the blocks top spacing. Remove: Removes the blocks top spacing. The default value is `standard`.",
+                "default": "standard",
+                "enum": [
+                  "double",
+                  "standard",
+                  "half",
+                  "remove"
+                ],
+                "_backboneForms": "Select"
+              },
+              "_paddingBottom": {
+                "type": "string",
+                "title": "Spacing bottom",
+                "description": "Changes the value of the blocks bottom spacing. Double: Doubles the blocks bottom spacing. Standard: Retains the standard blocks bottom spacing. Half: Halves the blocks bottom spacing. Remove: Removes the blocks bottom spacing. The default value is `standard`.",
+                "default": "standard",
+                "enum": [
+                  "double",
+                  "standard",
+                  "half",
+                  "remove"
+                ],
+                "_backboneForms": "Select"
+              },
+              "_componentVerticalAlignment": {
+                "type": "string",
+                "title": "Set the vertical alignment of the child component(s)",
+                "description": "Defines the vertical alignment of the child component(s) in relation to the block. Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block. The default alignment is `top`.",
+                "default": "top",
+                "enum": [
+                  "top",
+                  "center",
+                  "bottom"
+                ],
+                "_backboneForms": "Select"
+              }
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt"
+        ]
+      },
       "component": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "component",
@@ -7708,707 +8409,6 @@
           "updatedAt"
         ]
       },
-      "block": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "block",
-        "description": "The base schema inherited by all other schemas",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_trackingId": {
-            "type": "number",
-            "title": "Tracking id",
-            "default": 0
-          },
-          "layoutOptions": {
-            "type": "array",
-            "title": "Layout options",
-            "default": [],
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_requireCompletionOf": {
-            "type": "number",
-            "title": "Number of components required for completion",
-            "description": "The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed",
-            "default": -1,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_assessment": {
-            "type": "object",
-            "title": "Assessment",
-            "default": {},
-            "properties": {
-              "_quizBankID": {
-                "type": "number",
-                "title": "Bank ID",
-                "description": "Used to group blocks of question components into associated banks. This works in conjunction with the 'Question counts' property when question banks are in use",
-                "default": 1,
-                "_backboneForms": {
-                  "editorAttrs": {
-                    "step": 1,
-                    "min": 1
-                  }
-                }
-              }
-            }
-          },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": false
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
-              }
-            }
-          },
-          "_trickle": {
-            "type": "object",
-            "title": "Trickle",
-            "default": {},
-            "required": [
-              "_scrollDuration"
-            ],
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Trickle",
-                "default": false
-              },
-              "_isInherited": {
-                "type": "boolean",
-                "title": "Inherit settings from parent article",
-                "default": false
-              },
-              "_autoScroll": {
-                "type": "boolean",
-                "title": "Scroll automatically",
-                "default": false
-              },
-              "_scrollDuration": {
-                "type": "number",
-                "title": "Scroll duration",
-                "description": "Duration of the scroll animation in milliseconds",
-                "default": 500
-              },
-              "_scrollTo": {
-                "type": "string",
-                "title": "Scroll target",
-                "description": "Set how trickle scrolls",
-                "default": "@block +1"
-              },
-              "_completionAttribute": {
-                "type": "string",
-                "title": "Completion attribute",
-                "description": "Set which attribute is used to determine completion",
-                "default": "_isComplete",
-                "enum": [
-                  "_isInteractionComplete",
-                  "_isComplete"
-                ],
-                "_backboneForms": "Select"
-              },
-              "_button": {
-                "type": "object",
-                "title": "Button",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Add Trickle button",
-                    "default": true
-                  },
-                  "_styleBeforeCompletion": {
-                    "type": "string",
-                    "title": "Visibility before completion",
-                    "default": "hidden",
-                    "enum": [
-                      "hidden",
-                      "visible",
-                      "disabled"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_styleAfterClick": {
-                    "type": "string",
-                    "title": "Visibility after completion",
-                    "default": "hidden",
-                    "enum": [
-                      "hidden",
-                      "visible",
-                      "disabled"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_isFullWidth": {
-                    "type": "boolean",
-                    "title": "Make full width",
-                    "default": true
-                  },
-                  "_autoHide": {
-                    "type": "boolean",
-                    "title": "Hide button when no longer in view",
-                    "description": "Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible",
-                    "default": false
-                  },
-                  "_showEndOfPage": {
-                    "type": "boolean",
-                    "title": "Show end of page button",
-                    "default": true
-                  },
-                  "_className": {
-                    "type": "string",
-                    "title": "Custom classes",
-                    "default": ""
-                  },
-                  "_hasIcon": {
-                    "type": "boolean",
-                    "title": "Enable icon",
-                    "description": "Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow",
-                    "default": false
-                  },
-                  "text": {
-                    "type": "string",
-                    "title": "Default button text",
-                    "default": "Continue",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "Default button ARIA label",
-                    "default": "Continue",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "startText": {
-                    "type": "string",
-                    "title": "First button text",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Begin",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "startAriaLabel": {
-                    "type": "string",
-                    "title": "First button ARIA label",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Begin",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "finalText": {
-                    "type": "string",
-                    "title": "Final button text",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Finish",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "finalAriaLabel": {
-                    "type": "string",
-                    "title": "Final button ARIA label",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Finish",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "_component": {
-                    "type": "string",
-                    "title": "Trickle plugin",
-                    "default": "trickle-button"
-                  }
-                }
-              },
-              "_stepLocking": {
-                "type": "object",
-                "title": "Step locking",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Hide subsequent content",
-                    "default": true
-                  },
-                  "_isCompletionRequired": {
-                    "type": "boolean",
-                    "title": "Require content to be completed",
-                    "default": true
-                  },
-                  "_isLockedOnRevisit": {
-                    "type": "boolean",
-                    "title": "Reset state on revisit",
-                    "default": false
-                  }
-                }
-              }
-            }
-          },
-          "_vanilla": {
-            "type": "object",
-            "title": "Vanilla",
-            "default": {},
-            "properties": {
-              "_textAlignment": {
-                "type": "object",
-                "title": "Text alignment",
-                "default": {},
-                "properties": {
-                  "_title": {
-                    "type": "string",
-                    "title": "Title alignment",
-                    "description": "Set the alignment of the block title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_body": {
-                    "type": "string",
-                    "title": "Body alignment",
-                    "description": "Set the alignment of the block body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_instruction": {
-                    "type": "string",
-                    "title": "Instruction alignment",
-                    "description": "Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  }
-                }
-              },
-              "_backgroundImage": {
-                "type": "object",
-                "title": "Background image",
-                "default": {},
-                "properties": {
-                  "_large": {
-                    "type": "string",
-                    "isObjectId": true,
-                    "title": "Large",
-                    "description": "Large background image - used on desktop",
-                    "_backboneForms": {
-                      "type": "Asset",
-                      "media": "image"
-                    }
-                  },
-                  "_medium": {
-                    "type": "string",
-                    "isObjectId": true,
-                    "title": "Medium",
-                    "description": "Medium background image - used on tablet",
-                    "_backboneForms": {
-                      "type": "Asset",
-                      "media": "image"
-                    }
-                  },
-                  "_small": {
-                    "type": "string",
-                    "isObjectId": true,
-                    "title": "Small",
-                    "description": "Small background image - used on mobile",
-                    "_backboneForms": {
-                      "type": "Asset",
-                      "media": "image"
-                    }
-                  }
-                }
-              },
-              "_backgroundStyles": {
-                "type": "object",
-                "title": "Background image styles",
-                "default": {},
-                "properties": {
-                  "_backgroundRepeat": {
-                    "type": "string",
-                    "title": "Repeat",
-                    "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "repeat",
-                      "repeat-x",
-                      "repeat-y",
-                      "no-repeat"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_backgroundSize": {
-                    "type": "string",
-                    "title": "Size",
-                    "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "auto",
-                      "cover",
-                      "contain",
-                      "100% 100%"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_backgroundPosition": {
-                    "type": "string",
-                    "title": "Position",
-                    "description": "The first value is the horizontal position and the second value is the vertical",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left top",
-                      "left center",
-                      "left bottom",
-                      "center top",
-                      "center center",
-                      "center bottom",
-                      "right top",
-                      "right center",
-                      "right bottom"
-                    ],
-                    "_backboneForms": "Select"
-                  }
-                }
-              },
-              "_minimumHeights": {
-                "type": "object",
-                "title": "Block minimum height",
-                "default": {},
-                "properties": {
-                  "_large": {
-                    "type": "number",
-                    "title": "Large",
-                    "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
-                    "default": 0
-                  },
-                  "_medium": {
-                    "type": "number",
-                    "title": "Medium",
-                    "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
-                    "default": 0
-                  },
-                  "_small": {
-                    "type": "number",
-                    "title": "Small",
-                    "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
-                    "default": 0
-                  }
-                }
-              },
-              "_responsiveClasses": {
-                "type": "object",
-                "title": "Responsive classes",
-                "default": {},
-                "properties": {
-                  "_large": {
-                    "type": "string",
-                    "title": "Large",
-                    "description": "Large CSS class - used on desktop",
-                    "default": ""
-                  },
-                  "_medium": {
-                    "type": "string",
-                    "title": "Medium",
-                    "description": "Medium CSS class - used on tablet",
-                    "default": ""
-                  },
-                  "_small": {
-                    "type": "string",
-                    "title": "Small",
-                    "description": "Small CSS class - used on mobile",
-                    "default": ""
-                  }
-                }
-              },
-              "_isDividerBlock": {
-                "type": "boolean",
-                "title": "Set this block as a divider",
-                "description": "If enabled, applies a divider class to the block",
-                "default": false
-              },
-              "_paddingTop": {
-                "type": "string",
-                "title": "Spacing top",
-                "description": "Changes the value of the blocks top spacing. Double: Doubles the blocks top spacing. Standard: Retains the standard blocks top spacing. Half: Halves the blocks top spacing. Remove: Removes the blocks top spacing. The default value is `standard`.",
-                "default": "standard",
-                "enum": [
-                  "double",
-                  "standard",
-                  "half",
-                  "remove"
-                ],
-                "_backboneForms": "Select"
-              },
-              "_paddingBottom": {
-                "type": "string",
-                "title": "Spacing bottom",
-                "description": "Changes the value of the blocks bottom spacing. Double: Doubles the blocks bottom spacing. Standard: Retains the standard blocks bottom spacing. Half: Halves the blocks bottom spacing. Remove: Removes the blocks bottom spacing. The default value is `standard`.",
-                "default": "standard",
-                "enum": [
-                  "double",
-                  "standard",
-                  "half",
-                  "remove"
-                ],
-                "_backboneForms": "Select"
-              },
-              "_componentVerticalAlignment": {
-                "type": "string",
-                "title": "Set the vertical alignment of the child component(s)",
-                "description": "Defines the vertical alignment of the child component(s) in relation to the block. Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block. The default alignment is `top`.",
-                "default": "top",
-                "enum": [
-                  "top",
-                  "center",
-                  "bottom"
-                ],
-                "_backboneForms": "Select"
-              }
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt"
-        ]
-      },
       "course": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "course",
@@ -9210,36 +9210,6 @@
                   }
                 }
               },
-              "_slider": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Slider. Respond to the question by selecting a value on the scale and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "labelStart": {
-                    "type": "string",
-                    "title": "Scale start ARIA label",
-                    "default": "Start of the scale",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "labelEnd": {
-                    "type": "string",
-                    "title": "Scale end ARIA label",
-                    "default": "End of the scale",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
               "_hotgraphic": {
                 "type": "object",
                 "default": {},
@@ -9287,14 +9257,44 @@
                   }
                 }
               },
-              "_matching": {
+              "_slider": {
                 "type": "object",
                 "default": {},
                 "properties": {
                   "ariaRegion": {
                     "type": "string",
                     "title": "ARIA region",
-                    "default": "Matching. Select from lists and then submit.",
+                    "default": "Slider. Respond to the question by selecting a value on the scale and then submit.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "labelStart": {
+                    "type": "string",
+                    "title": "Scale start ARIA label",
+                    "default": "Start of the scale",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "labelEnd": {
+                    "type": "string",
+                    "title": "Scale end ARIA label",
+                    "default": "End of the scale",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_resources": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "resources": {
+                    "type": "string",
+                    "title": "Resources",
+                    "default": "Additional resources.",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9467,14 +9467,14 @@
                   }
                 }
               },
-              "_resources": {
+              "_matching": {
                 "type": "object",
                 "default": {},
                 "properties": {
-                  "resources": {
+                  "ariaRegion": {
                     "type": "string",
-                    "title": "Resources",
-                    "default": "Additional resources.",
+                    "title": "ARIA region",
+                    "default": "Matching. Select from lists and then submit.",
                     "_adapt": {
                       "translatable": true
                     }
@@ -10825,458 +10825,6 @@
           "_component"
         ]
       },
-      "assessmentResults-component": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "assessmentResults-component",
-        "description": "The base schema inherited by all other schemas",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": true
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
-              }
-            }
-          },
-          "_vanilla": {
-            "type": "object",
-            "title": "Vanilla",
-            "default": {},
-            "properties": {
-              "_textAlignment": {
-                "type": "object",
-                "title": "Text alignment",
-                "default": {},
-                "properties": {
-                  "_title": {
-                    "type": "string",
-                    "title": "Title alignment",
-                    "description": "Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_body": {
-                    "type": "string",
-                    "title": "Body alignment",
-                    "description": "Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_instruction": {
-                    "type": "string",
-                    "title": "Instruction alignment",
-                    "description": "Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  }
-                }
-              }
-            }
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "both",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "_isVisibleBeforeCompletion": {
-            "type": "boolean",
-            "title": "Show before assessment completion",
-            "description": "Controls whether this component will be visible or hidden prior to the assessment having been completed",
-            "default": true
-          },
-          "_setCompletionOn": {
-            "type": "string",
-            "title": "Completion criterion",
-            "description": "Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment",
-            "default": "inview",
-            "enum": [
-              "inview",
-              "pass"
-            ],
-            "_backboneForms": "Select"
-          },
-          "_resetType": {
-            "type": "string",
-            "title": "Reset type",
-            "description": "Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset",
-            "default": "inherit",
-            "enum": [
-              "inherit",
-              "hard",
-              "soft"
-            ],
-            "_backboneForms": "Select"
-          },
-          "_assessmentId": {
-            "type": "string",
-            "title": "Linked assessment ID",
-            "description": "This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank",
-            "default": ""
-          },
-          "_retry": {
-            "type": "object",
-            "title": "Retry",
-            "default": {},
-            "properties": {
-              "button": {
-                "type": "string",
-                "title": "Retry button text",
-                "default": "Retry Assessment",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "feedback": {
-                "type": "string",
-                "title": "Retry feedback",
-                "description": "This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                },
-                "_backboneForms": "TextArea"
-              },
-              "_routeToAssessment": {
-                "type": "boolean",
-                "title": "Redirect to assessment on retry",
-                "description": "When enabled, this will take the user back to the assessment when the \"Retry Assessment\" button is clicked",
-                "default": false
-              }
-            }
-          },
-          "_completionBody": {
-            "type": "string",
-            "title": "Default feedback",
-            "description": "This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "_bands": {
-            "type": "array",
-            "title": "Feedback bands",
-            "items": {
-              "type": "object",
-              "properties": {
-                "_score": {
-                  "type": "number",
-                  "title": "Minimum score",
-                  "description": "Enter a value representing the raw score or percentage for the start of the range",
-                  "default": 0
-                },
-                "feedback": {
-                  "type": "string",
-                  "title": "Feedback",
-                  "description": "This text will be displayed to the learner when the learner's score falls within this band's range",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  },
-                  "_backboneForms": "TextArea"
-                },
-                "_allowRetry": {
-                  "type": "boolean",
-                  "title": "Allow retry",
-                  "description": "Determines whether the learner will be allowed to re-attempt the assessment. If not set, the learner will not be allowed to retry the assessment regardless of any remaining attempts",
-                  "default": true
-                },
-                "_classes": {
-                  "type": "string",
-                  "title": "Custom article classes",
-                  "description": "Classes to be applied to the containing article. Allows for custom styling based on the band the learner's score falls into",
-                  "default": ""
-                }
-              }
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component"
-        ]
-      },
       "blank-component": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "blank-component",
@@ -12340,6 +11888,458 @@
           "_component",
           "_attempts",
           "_selectable"
+        ]
+      },
+      "assessmentResults-component": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "assessmentResults-component",
+        "description": "The base schema inherited by all other schemas",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": true
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              }
+            }
+          },
+          "_vanilla": {
+            "type": "object",
+            "title": "Vanilla",
+            "default": {},
+            "properties": {
+              "_textAlignment": {
+                "type": "object",
+                "title": "Text alignment",
+                "default": {},
+                "properties": {
+                  "_title": {
+                    "type": "string",
+                    "title": "Title alignment",
+                    "description": "Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_body": {
+                    "type": "string",
+                    "title": "Body alignment",
+                    "description": "Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_instruction": {
+                    "type": "string",
+                    "title": "Instruction alignment",
+                    "description": "Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  }
+                }
+              }
+            }
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "both",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "_isVisibleBeforeCompletion": {
+            "type": "boolean",
+            "title": "Show before assessment completion",
+            "description": "Controls whether this component will be visible or hidden prior to the assessment having been completed",
+            "default": true
+          },
+          "_setCompletionOn": {
+            "type": "string",
+            "title": "Completion criterion",
+            "description": "Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment",
+            "default": "inview",
+            "enum": [
+              "inview",
+              "pass"
+            ],
+            "_backboneForms": "Select"
+          },
+          "_resetType": {
+            "type": "string",
+            "title": "Reset type",
+            "description": "Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset",
+            "default": "inherit",
+            "enum": [
+              "inherit",
+              "hard",
+              "soft"
+            ],
+            "_backboneForms": "Select"
+          },
+          "_assessmentId": {
+            "type": "string",
+            "title": "Linked assessment ID",
+            "description": "This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank",
+            "default": ""
+          },
+          "_retry": {
+            "type": "object",
+            "title": "Retry",
+            "default": {},
+            "properties": {
+              "button": {
+                "type": "string",
+                "title": "Retry button text",
+                "default": "Retry Assessment",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "feedback": {
+                "type": "string",
+                "title": "Retry feedback",
+                "description": "This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                },
+                "_backboneForms": "TextArea"
+              },
+              "_routeToAssessment": {
+                "type": "boolean",
+                "title": "Redirect to assessment on retry",
+                "description": "When enabled, this will take the user back to the assessment when the \"Retry Assessment\" button is clicked",
+                "default": false
+              }
+            }
+          },
+          "_completionBody": {
+            "type": "string",
+            "title": "Default feedback",
+            "description": "This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "_bands": {
+            "type": "array",
+            "title": "Feedback bands",
+            "items": {
+              "type": "object",
+              "properties": {
+                "_score": {
+                  "type": "number",
+                  "title": "Minimum score",
+                  "description": "Enter a value representing the raw score or percentage for the start of the range",
+                  "default": 0
+                },
+                "feedback": {
+                  "type": "string",
+                  "title": "Feedback",
+                  "description": "This text will be displayed to the learner when the learner's score falls within this band's range",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  },
+                  "_backboneForms": "TextArea"
+                },
+                "_allowRetry": {
+                  "type": "boolean",
+                  "title": "Allow retry",
+                  "description": "Determines whether the learner will be allowed to re-attempt the assessment. If not set, the learner will not be allowed to retry the assessment regardless of any remaining attempts",
+                  "default": true
+                },
+                "_classes": {
+                  "type": "string",
+                  "title": "Custom article classes",
+                  "description": "Classes to be applied to the containing article. Allows for custom styling based on the band the learner's score falls into",
+                  "default": ""
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component"
         ]
       },
       "graphic-component": {
