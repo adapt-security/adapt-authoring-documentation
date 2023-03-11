@@ -2017,8 +2017,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/beatgammit/base64-js" target="_blank">base64-js</a></td><td>1.5.1</td><td>MIT</td><td>Base64 encoding/decoding in pure JS</tr>
 <tr><td>basic-auth</td><td>2.0.1</td><td>MIT</td><td>node.js basic auth parser</tr>
 <tr><td>bcryptjs</td><td>2.4.3</td><td>MIT</td><td>Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'.</tr>
-<tr><td><a href="https://github.com/rvagg/bl" target="_blank">bl</a></td><td>1.2.3</td><td>MIT</td><td>Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!</tr>
 <tr><td>binary-extensions</td><td>2.2.0</td><td>MIT</td><td>List of binary file extensions</tr>
+<tr><td><a href="https://github.com/rvagg/bl" target="_blank">bl</a></td><td>1.2.3</td><td>MIT</td><td>Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!</tr>
 <tr><td><a href="https://github.com/petkaantonov/bluebird" target="_blank">bluebird</a></td><td>3.7.2</td><td>MIT</td><td>Full featured Promises/A+ implementation with exceptionally good performance</tr>
 <tr><td><a href="https://github.com/indutny/bn.js" target="_blank">bn.js</a></td><td>5.2.1</td><td>MIT</td><td>Big number implementation in pure javascript</tr>
 <tr><td>body-parser</td><td>1.20.2</td><td>MIT</td><td>Node.js body parsing middleware</tr>
@@ -2037,8 +2037,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/crypto-browserify/browserify-des#readme" target="_blank">browserify-des</a></td><td>1.0.2</td><td>MIT</td><td></tr>
 <tr><td>browserify-rsa</td><td>4.1.0</td><td>MIT</td><td>RSA for browserify</tr>
 <tr><td>browserify-sign</td><td>4.2.1</td><td>ISC</td><td>adds node crypto signing for browsers</tr>
-<tr><td>browserify</td><td>17.0.0</td><td>MIT</td><td>browser-side require() the node way</tr>
 <tr><td><a href="https://github.com/devongovett/browserify-zlib" target="_blank">browserify-zlib</a></td><td>0.2.0</td><td>MIT</td><td>Full zlib module for the browser</tr>
+<tr><td>browserify</td><td>17.0.0</td><td>MIT</td><td>browser-side require() the node way</tr>
 <tr><td>browserslist</td><td>4.21.5</td><td>MIT</td><td>Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-env-preset</tr>
 <tr><td>bson</td><td>4.7.2</td><td>Apache-2.0</td><td>A bson parser for node.js and the browser</tr>
 <tr><td>buffer-alloc-unsafe</td><td>1.1.0</td><td>MIT</td><td>undefined</tr>
@@ -2046,8 +2046,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/brianloveswords/buffer-crc32" target="_blank">buffer-crc32</a></td><td>0.2.13</td><td>MIT</td><td>A pure javascript CRC32 algorithm that plays nice with binary data</tr>
 <tr><td>buffer-equal-constant-time</td><td>1.0.1</td><td>BSD-3-Clause</td><td>Constant-time comparison of Buffers</tr>
 <tr><td>buffer-fill</td><td>1.0.0</td><td>MIT</td><td>undefined</tr>
-<tr><td><a href="https://github.com/crypto-browserify/buffer-xor" target="_blank">buffer-xor</a></td><td>1.0.3</td><td>MIT</td><td>A simple module for bitwise-xor on buffers</tr>
 <tr><td>buffer-from</td><td>1.1.2</td><td>MIT</td><td>undefined</tr>
+<tr><td><a href="https://github.com/crypto-browserify/buffer-xor" target="_blank">buffer-xor</a></td><td>1.0.3</td><td>MIT</td><td>A simple module for bitwise-xor on buffers</tr>
 <tr><td><a href="https://github.com/feross/buffer" target="_blank">buffer</a></td><td>5.2.1</td><td>MIT</td><td>Node.js Buffer API, for the browser</tr>
 <tr><td>builtin-status-codes</td><td>3.0.0</td><td>MIT</td><td>The map of HTTP status codes from the builtin http module</tr>
 <tr><td>bytes</td><td>3.1.2</td><td>MIT</td><td>Utility to parse a string bytes to bytes and vice-versa</tr>
@@ -2125,25 +2125,25 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/goto-bus-stop/dash-ast" target="_blank">dash-ast</a></td><td>1.0.0</td><td>Apache-2.0</td><td>walk an AST, quickly</tr>
 <tr><td><a href="https://github.com/shahata/dasherize" target="_blank">dasherize</a></td><td>2.0.0</td><td>MIT</td><td>recursively transform key strings to dash-case</tr>
 <tr><td><a href="https://github.com/TooTallNate/node-data-uri-to-buffer" target="_blank">data-uri-to-buffer</a></td><td>4.0.1</td><td>MIT</td><td>Generate a Buffer instance from a Data URI string</tr>
-<tr><td>debug</td><td>4.3.4</td><td>MIT</td><td>Lightweight debugging utility for Node.js and the browser</tr>
 <tr><td>date-fns</td><td>2.29.3</td><td>MIT</td><td>Modern JavaScript date utility library</tr>
+<tr><td>debug</td><td>4.3.4</td><td>MIT</td><td>Lightweight debugging utility for Node.js and the browser</tr>
 <tr><td>decamelize</td><td>1.2.0</td><td>MIT</td><td>Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow</tr>
 <tr><td>decode-uri-component</td><td>0.2.2</td><td>MIT</td><td>A better decodeURIComponent</tr>
 <tr><td>decompress-response</td><td>3.3.0</td><td>MIT</td><td>Decompress a HTTP response if needed</tr>
 <tr><td>decompress-tar</td><td>4.1.1</td><td>MIT</td><td>decompress tar plugin</tr>
 <tr><td>decompress-tarbz2</td><td>4.1.1</td><td>MIT</td><td>decompress tar.bz2 plugin</tr>
-<tr><td>decompress-unzip</td><td>4.0.1</td><td>MIT</td><td>decompress zip plugin</tr>
 <tr><td>decompress-targz</td><td>4.1.1</td><td>MIT</td><td>decompress tar.gz plugin</tr>
+<tr><td>decompress-unzip</td><td>4.0.1</td><td>MIT</td><td>decompress zip plugin</tr>
 <tr><td>decompress</td><td>4.2.1</td><td>MIT</td><td>Extracting archives made easy</tr>
 <tr><td><a href="https://github.com/unclechu/node-deep-extend" target="_blank">deep-extend</a></td><td>0.6.0</td><td>MIT</td><td>Recursive object extending</tr>
-<tr><td><a href="https://github.com/szmarczak/defer-to-connect#readme" target="_blank">defer-to-connect</a></td><td>1.1.3</td><td>MIT</td><td>The safe way to handle the `connect` socket event</tr>
 <tr><td><a href="https://github.com/TehShrike/deepmerge" target="_blank">deepmerge</a></td><td>4.3.0</td><td>MIT</td><td>A library for deep (recursive) merging of Javascript objects</tr>
+<tr><td><a href="https://github.com/szmarczak/defer-to-connect#readme" target="_blank">defer-to-connect</a></td><td>1.1.3</td><td>MIT</td><td>The safe way to handle the `connect` socket event</tr>
 <tr><td><a href="https://github.com/inspect-js/defined" target="_blank">defined</a></td><td>1.0.1</td><td>MIT</td><td>return the first argument that is `!== undefined`</tr>
 <tr><td><a href="https://github.com/felixge/node-delayed-stream" target="_blank">delayed-stream</a></td><td>1.0.0</td><td>MIT</td><td>Buffers events from a stream until you are ready to handle them.</tr>
 <tr><td>delegates</td><td>1.0.0</td><td>MIT</td><td>delegate methods and accessors to another property</tr>
 <tr><td>depd</td><td>2.0.0</td><td>MIT</td><td>Deprecate all the things</tr>
-<tr><td><a href="https://github.com/indutny/des.js#readme" target="_blank">des.js</a></td><td>1.0.1</td><td>MIT</td><td>DES implementation</tr>
 <tr><td><a href="https://github.com/substack/deps-sort" target="_blank">deps-sort</a></td><td>2.0.1</td><td>MIT</td><td>sort module-deps output for deterministic browserify bundles</tr>
+<tr><td><a href="https://github.com/indutny/des.js#readme" target="_blank">des.js</a></td><td>1.0.1</td><td>MIT</td><td>DES implementation</tr>
 <tr><td>destroy</td><td>1.2.0</td><td>MIT</td><td>destroy a stream if possible</tr>
 <tr><td>detect-libc</td><td>1.0.3</td><td>Apache-2.0</td><td>Node.js module to detect the C standard library (libc) implementation family and version</tr>
 <tr><td>detective</td><td>5.2.1</td><td>MIT</td><td>find all require() calls by walking the AST</tr>
@@ -2165,7 +2165,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>duplexer3</td><td>0.1.5</td><td>BSD-3-Clause</td><td>Like duplexer but using streams3</tr>
 <tr><td><a href="https://github.com/Brightspace/node-ecdsa-sig-formatter#readme" target="_blank">ecdsa-sig-formatter</a></td><td>1.0.11</td><td>Apache-2.0</td><td>Translate ECDSA signatures between ASN.1/DER and JOSE-style concatenation</tr>
 <tr><td>ee-first</td><td>1.1.1</td><td>MIT</td><td>return the first event in a set of ee/event pairs</tr>
-<tr><td>electron-to-chromium</td><td>1.4.327</td><td>ISC</td><td>Provides a list of electron-to-chromium version mappings</tr>
+<tr><td>electron-to-chromium</td><td>1.4.328</td><td>ISC</td><td>Provides a list of electron-to-chromium version mappings</tr>
 <tr><td><a href="https://github.com/indutny/elliptic" target="_blank">elliptic</a></td><td>6.5.4</td><td>MIT</td><td>EC cryptography</tr>
 <tr><td><a href="https://mths.be/emoji-regex" target="_blank">emoji-regex</a></td><td>8.0.0</td><td>MIT</td><td>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</tr>
 <tr><td>encodeurl</td><td>1.0.2</td><td>MIT</td><td>Encode a URL to a percent-encoded form, excluding already-encoded sequences</tr>
@@ -2177,8 +2177,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>escalade</td><td>3.1.1</td><td>MIT</td><td>A tiny (183B to 210B) and fast utility to ascend parent directories</tr>
 <tr><td>escape-goat</td><td>2.1.1</td><td>MIT</td><td>Escape a string for use in HTML or the inverse</tr>
 <tr><td>escape-html</td><td>1.0.3</td><td>MIT</td><td>Escape string for use in HTML</tr>
-<tr><td><a href="https://github.com/mattdesl/esmify" target="_blank">esmify</a></td><td>2.1.1</td><td>MIT</td><td>parse and handle import/export for browserify</tr>
 <tr><td>escape-string-regexp</td><td>1.0.5</td><td>MIT</td><td>Escape RegExp special characters</tr>
+<tr><td><a href="https://github.com/mattdesl/esmify" target="_blank">esmify</a></td><td>2.1.1</td><td>MIT</td><td>parse and handle import/export for browserify</tr>
 <tr><td><a href="https://github.com/estools/esutils" target="_blank">esutils</a></td><td>2.0.3</td><td>BSD-2-Clause</td><td>utility box for ECMAScript language tools</tr>
 <tr><td>etag</td><td>1.8.1</td><td>MIT</td><td>Create simple HTTP ETags</tr>
 <tr><td>eventemitter3</td><td>4.0.7</td><td>MIT</td><td>EventEmitter3 focuses on performance while maintaining a Node.js AND browser compatible interface.</tr>
@@ -2189,8 +2189,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>express-session</td><td>1.17.0</td><td>MIT</td><td>Simple session middleware for Express</tr>
 <tr><td><a href="http://expressjs.com/" target="_blank">express</a></td><td>4.18.2</td><td>MIT</td><td>Fast, unopinionated, minimalist web framework</tr>
 <tr><td>ext-list</td><td>2.2.2</td><td>MIT</td><td>List of known file extensions and their MIME types</tr>
-<tr><td>extend</td><td>3.0.2</td><td>MIT</td><td>Port of jQuery.extend for node.js and the browser</tr>
 <tr><td>ext-name</td><td>5.0.0</td><td>MIT</td><td>Get the file extension and MIME type from a file</tr>
+<tr><td>extend</td><td>3.0.2</td><td>MIT</td><td>Port of jQuery.extend for node.js and the browser</tr>
 <tr><td><a href="https://github.com/mrkmg/node-external-editor#readme" target="_blank">external-editor</a></td><td>3.1.0</td><td>MIT</td><td>Edit a string with the users preferred text editor using $VISUAL or $ENVIRONMENT</tr>
 <tr><td><a href="https://github.com/epoberezkin/fast-deep-equal#readme" target="_blank">fast-deep-equal</a></td><td>3.1.3</td><td>MIT</td><td>Fast deep equal</tr>
 <tr><td><a href="https://github.com/Starcounter-Jack/JSON-Patch" target="_blank">fast-json-patch</a></td><td>3.1.1</td><td>MIT</td><td>Fast implementation of JSON-Patch (RFC-6902) with duplex (observe changes) capabilities</tr>
@@ -2271,8 +2271,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://helmetjs.github.io/docs/hide-powered-by/" target="_blank">hide-powered-by</a></td><td>1.1.0</td><td>MIT</td><td>Middleware to remove the X-Powered-By header</tr>
 <tr><td><a href="https://highlightjs.org/" target="_blank">highlight.js</a></td><td>10.7.3</td><td>BSD-3-Clause</td><td>Syntax highlighting with language autodetection.</tr>
 <tr><td><a href="https://github.com/indutny/hmac-drbg#readme" target="_blank">hmac-drbg</a></td><td>1.0.1</td><td>MIT</td><td>Deterministic random bit generator (hmac)</tr>
-<tr><td>hpkp</td><td>2.0.0</td><td>MIT</td><td>HTTP Public Key Pinning (HPKP) middleware</tr>
 <tr><td>hoist-non-react-statics</td><td>3.3.2</td><td>BSD-3-Clause</td><td>Copies non-react specific statics from a child component to a parent component</tr>
+<tr><td>hpkp</td><td>2.0.0</td><td>MIT</td><td>HTTP Public Key Pinning (HPKP) middleware</tr>
 <tr><td><a href="https://helmetjs.github.io/docs/hsts/" target="_blank">hsts</a></td><td>2.2.0</td><td>MIT</td><td>HTTP Strict Transport Security middleware.</tr>
 <tr><td>html-encoding-sniffer</td><td>3.0.0</td><td>MIT</td><td>Sniff the encoding from a HTML byte stream</tr>
 <tr><td><a href="https://github.com/zertosh/htmlescape" target="_blank">htmlescape</a></td><td>1.1.1</td><td>MIT</td><td>Properly escape JSON for usage as an object literal inside of a `<script>` tag</tr>
@@ -2288,8 +2288,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://helmetjs.github.io/docs/ienoopen/" target="_blank">ienoopen</a></td><td>1.1.0</td><td>MIT</td><td>Middleware for IE security. Set X-Download-Options to noopen.</tr>
 <tr><td><a href="https://github.com/novemberborn/ignore-by-default#readme" target="_blank">ignore-by-default</a></td><td>1.0.1</td><td>ISC</td><td>A list of directories you should ignore by default</tr>
 <tr><td>image-size</td><td>0.5.5</td><td>MIT</td><td>get dimensions of any image file</tr>
-<tr><td><a href="https://facebook.github.com/immutable-js" target="_blank">immutable</a></td><td>3.8.2</td><td>MIT</td><td>Immutable Data Collections</tr>
 <tr><td>immediate</td><td>3.0.6</td><td>MIT</td><td>A cross browser microtask library</tr>
+<tr><td><a href="https://facebook.github.com/immutable-js" target="_blank">immutable</a></td><td>3.8.2</td><td>MIT</td><td>Immutable Data Collections</tr>
 <tr><td>import-lazy</td><td>2.1.0</td><td>MIT</td><td>Import modules lazily</tr>
 <tr><td><a href="https://github.com/jensyt/imurmurhash-js" target="_blank">imurmurhash</a></td><td>0.1.4</td><td>MIT</td><td>An incremental implementation of MurmurHash3</tr>
 <tr><td><a href="https://github.com/isaacs/inflight" target="_blank">inflight</a></td><td>1.0.6</td><td>ISC</td><td>Add callbacks to requests in flight to avoid async duplication</tr>
@@ -2371,8 +2371,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.debounce</a></td><td>4.0.8</td><td>MIT</td><td>The lodash method `_.debounce` exported as a module.</tr>
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.includes</a></td><td>4.3.0</td><td>MIT</td><td>The lodash method `_.includes` exported as a module.</tr>
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.isboolean</a></td><td>3.0.3</td><td>MIT</td><td>The lodash method `_.isBoolean` exported as a module.</tr>
-<tr><td><a href="https://lodash.com/" target="_blank">lodash.isnumber</a></td><td>3.0.3</td><td>MIT</td><td>The lodash method `_.isNumber` exported as a module.</tr>
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.isinteger</a></td><td>4.0.4</td><td>MIT</td><td>The lodash method `_.isInteger` exported as a module.</tr>
+<tr><td><a href="https://lodash.com/" target="_blank">lodash.isnumber</a></td><td>3.0.3</td><td>MIT</td><td>The lodash method `_.isNumber` exported as a module.</tr>
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.isplainobject</a></td><td>4.0.6</td><td>MIT</td><td>The lodash method `_.isPlainObject` exported as a module.</tr>
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.isstring</a></td><td>4.0.1</td><td>MIT</td><td>The lodash method `_.isString` exported as a module.</tr>
 <tr><td><a href="https://lodash.com/" target="_blank">lodash.memoize</a></td><td>3.0.4</td><td>MIT</td><td>The modern build of lodash’s `_.memoize` as a module.</tr>
@@ -2426,7 +2426,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://helmetjs.github.io/docs/nocache/" target="_blank">nocache</a></td><td>2.1.0</td><td>MIT</td><td>Middleware to destroy caching</tr>
 <tr><td><a href="https://github.com/lgeiger/node-abi#readme" target="_blank">node-abi</a></td><td>2.30.1</td><td>MIT</td><td>Get the Node ABI for a given target and runtime, and vice versa.</tr>
 <tr><td><a href="https://github.com/jimmywarting/node-domexception#readme" target="_blank">node-domexception</a></td><td>1.0.0</td><td>MIT</td><td>An implementation of the DOMException class from NodeJS</tr>
-<tr><td><a href="https://github.com/node-fetch/node-fetch" target="_blank">node-fetch</a></td><td>3.3.0</td><td>MIT</td><td>A light-weight module that brings Fetch API to node.js</tr>
+<tr><td><a href="https://github.com/node-fetch/node-fetch" target="_blank">node-fetch</a></td><td>3.3.1</td><td>MIT</td><td>A light-weight module that brings Fetch API to node.js</tr>
 <tr><td>node-releases</td><td>2.0.10</td><td>MIT</td><td>Node.js releases data</tr>
 <tr><td><a href="https://nodemailer.com/" target="_blank">nodemailer</a></td><td>6.9.1</td><td>MIT</td><td>Easy as cake e-mail sending from your Node.js applications</tr>
 <tr><td><a href="https://nodemon.io" target="_blank">nodemon</a></td><td>2.0.21</td><td>MIT</td><td>Simple monitor script for use during development of a Node.js app.</tr>
@@ -2436,8 +2436,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>npm-conf</td><td>1.1.3</td><td>MIT</td><td>Get the npm config</tr>
 <tr><td>npmlog</td><td>4.1.2</td><td>ISC</td><td>logger for npm</tr>
 <tr><td>number-is-nan</td><td>1.0.1</td><td>MIT</td><td>ES2015 Number.isNaN() ponyfill</tr>
-<tr><td><a href="https://github.com/inspect-js/object-inspect" target="_blank">object-inspect</a></td><td>1.12.3</td><td>MIT</td><td>string representations of objects in node and the browser</tr>
 <tr><td>object-assign</td><td>4.1.1</td><td>MIT</td><td>ES2015 `Object.assign()` ponyfill</tr>
+<tr><td><a href="https://github.com/inspect-js/object-inspect" target="_blank">object-inspect</a></td><td>1.12.3</td><td>MIT</td><td>string representations of objects in node and the browser</tr>
 <tr><td>on-finished</td><td>2.4.1</td><td>MIT</td><td>Execute a callback when a request closes, finishes, or errors</tr>
 <tr><td>on-headers</td><td>1.0.2</td><td>MIT</td><td>Execute a listener when a response is about to write headers</tr>
 <tr><td>once</td><td>1.4.0</td><td>ISC</td><td>Run a function exactly one time</tr>
@@ -2447,7 +2447,6 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>opener</td><td>1.5.2</td><td>(WTFPL OR MIT)</td><td>Opens stuff, like webpages and files and executables, cross-platform</tr>
 <tr><td><a href="http://khtdr.com/opts" target="_blank">opts</a></td><td>2.0.2</td><td>BSD-2-Clause</td><td>Command line argument parser with automatic help text generation.</tr>
 <tr><td>os-browserify</td><td>0.3.0</td><td>MIT</td><td>undefined</tr>
-<tr><td>p-event</td><td>4.2.0</td><td>MIT</td><td>Promisify an event by waiting for it to be emitted</tr>
 <tr><td>p-finally</td><td>1.0.0</td><td>MIT</td><td>`Promise#finally()` ponyfill - Invoked when the promise is settled regardless of outcome</tr>
 <tr><td>p-is-promise</td><td>1.1.0</td><td>MIT</td><td>Check if something is a promise</tr>
 <tr><td>p-limit</td><td>4.0.0</td><td>MIT</td><td>Run multiple promise-returning & async functions with limited concurrency</tr>
@@ -2463,8 +2462,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>parse-entities</td><td>2.0.0</td><td>MIT</td><td>Parse HTML character references: fast, spec-compliant, positional information</tr>
 <tr><td><a href="https://github.com/jonschlinkert/parse-github-url" target="_blank">parse-github-url</a></td><td>1.0.2</td><td>MIT</td><td>Parse a github URL into an object.</tr>
 <tr><td>parseurl</td><td>1.3.3</td><td>MIT</td><td>parse a url with memoization</tr>
-<tr><td><a href="https://github.com/browserify/path-browserify" target="_blank">path-browserify</a></td><td>1.0.1</td><td>MIT</td><td>the path module from node core for browsers</tr>
 <tr><td>patch-package</td><td>6.5.1</td><td>MIT</td><td>Fix broken node modules with no fuss</tr>
+<tr><td><a href="https://github.com/browserify/path-browserify" target="_blank">path-browserify</a></td><td>1.0.1</td><td>MIT</td><td>the path module from node core for browsers</tr>
 <tr><td>path-exists</td><td>5.0.0</td><td>MIT</td><td>Check if a path exists</tr>
 <tr><td>path-is-absolute</td><td>1.0.1</td><td>MIT</td><td>Node.js 0.12 path.isAbsolute() ponyfill</tr>
 <tr><td>path-key</td><td>2.0.1</td><td>MIT</td><td>Get the PATH environment variable key cross-platform</tr>
@@ -2507,8 +2506,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://ramdajs.com/" target="_blank">ramda</a></td><td>0.28.0</td><td>MIT</td><td>A practical functional library for JavaScript programmers.</tr>
 <tr><td><a href="http://fent.github.io/randexp.js/" target="_blank">randexp</a></td><td>0.5.3</td><td>MIT</td><td>Create random strings that match a given regular expression.</tr>
 <tr><td>random-bytes</td><td>1.0.0</td><td>MIT</td><td>URL and cookie safe UIDs</tr>
-<tr><td><a href="https://github.com/crypto-browserify/randomfill" target="_blank">randomfill</a></td><td>1.0.4</td><td>MIT</td><td>random fill from browserify stand alone</tr>
 <tr><td><a href="https://github.com/crypto-browserify/randombytes" target="_blank">randombytes</a></td><td>2.1.0</td><td>MIT</td><td>random bytes from browserify stand alone</tr>
+<tr><td><a href="https://github.com/crypto-browserify/randomfill" target="_blank">randomfill</a></td><td>1.0.4</td><td>MIT</td><td>random fill from browserify stand alone</tr>
 <tr><td>range-parser</td><td>1.2.1</td><td>MIT</td><td>Range header field string parser</tr>
 <tr><td><a href="https://github.com/animir/node-rate-limiter-flexible#readme" target="_blank">rate-limiter-flexible</a></td><td>2.4.1</td><td>ISC</td><td>Node.js rate limiter by key and protection from DDoS and Brute-Force attacks in process Memory, Redis, MongoDb, Memcached, MySQL, PostgreSQL, Cluster or PM</tr>
 <tr><td>raw-body</td><td>2.5.2</td><td>MIT</td><td>Get and validate the raw body of a readable stream.</tr>
@@ -2518,27 +2517,27 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://reactjs.org/" target="_blank">react-dom</a></td><td>17.0.2</td><td>MIT</td><td>React package for working with the DOM.</tr>
 <tr><td><a href="https://github.com/HurricaneJames/react-immutable-proptypes" target="_blank">react-immutable-proptypes</a></td><td>2.2.0</td><td>MIT</td><td>PropType validators that work with Immutable.js.</tr>
 <tr><td>react-immutable-pure-component</td><td>2.2.2</td><td>MIT</td><td>React PureComponent implementation embracing Immutable.js</tr>
-<tr><td><a href="https://reactjs.org/" target="_blank">react-is</a></td><td>16.13.1</td><td>MIT</td><td>Brand checking of React Elements.</tr>
 <tr><td><a href="https://github.com/xyc/react-inspector" target="_blank">react-inspector</a></td><td>6.0.1</td><td>MIT</td><td>Power of Browser DevTools inspectors right inside your React app</tr>
+<tr><td><a href="https://reactjs.org/" target="_blank">react-is</a></td><td>16.13.1</td><td>MIT</td><td>Brand checking of React Elements.</tr>
 <tr><td><a href="https://github.com/reduxjs/react-redux" target="_blank">react-redux</a></td><td>8.0.5</td><td>MIT</td><td>Official React bindings for Redux</tr>
 <tr><td><a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter#readme" target="_blank">react-syntax-highlighter</a></td><td>15.5.0</td><td>MIT</td><td>syntax highlighting component for react with prismjs or highlightjs ast using inline styles</tr>
 <tr><td><a href="https://reactjs.org/" target="_blank">react</a></td><td>17.0.2</td><td>MIT</td><td>React is a JavaScript library for building user interfaces.</tr>
 <tr><td><a href="https://github.com/substack/read-only-stream" target="_blank">read-only-stream</a></td><td>2.0.0</td><td>MIT</td><td>wrap a readable/writable stream to be read-only</tr>
 <tr><td>readable-stream</td><td>2.3.8</td><td>MIT</td><td>Streams3, a user-land copy of the stream library from Node.js</tr>
 <tr><td>readable-web-to-node-stream</td><td>3.0.2</td><td>MIT</td><td>Converts a Web-API readable-stream into a Node readable-stream.</tr>
-<tr><td>redux-immutable</td><td>4.0.0</td><td>BSD-3-Clause</td><td>redux-immutable is used to create an equivalent function of Redux combineReducers that works with Immutable.js state.</tr>
 <tr><td><a href="https://github.com/paulmillr/readdirp" target="_blank">readdirp</a></td><td>3.6.0</td><td>MIT</td><td>Recursive version of fs.readdir with streaming API.</tr>
+<tr><td>redux-immutable</td><td>4.0.0</td><td>BSD-3-Clause</td><td>redux-immutable is used to create an equivalent function of Redux combineReducers that works with Immutable.js state.</tr>
 <tr><td><a href="http://redux.js.org" target="_blank">redux</a></td><td>4.2.1</td><td>MIT</td><td>Predictable state container for JavaScript apps</tr>
 <tr><td><a href="https://helmetjs.github.io/docs/referrer-policy/" target="_blank">referrer-policy</a></td><td>1.2.0</td><td>MIT</td><td>Middleware to set the Referrer-Policy HTTP header</tr>
 <tr><td>refractor</td><td>3.6.0</td><td>MIT</td><td>Lightweight, robust, elegant virtual syntax highlighting using Prism</tr>
 <tr><td><a href="https://github.com/mathiasbynens/regenerate-unicode-properties" target="_blank">regenerate-unicode-properties</a></td><td>10.1.0</td><td>MIT</td><td>Regenerate sets for Unicode properties and values.</tr>
 <tr><td><a href="https://mths.be/regenerate" target="_blank">regenerate</a></td><td>1.4.2</td><td>MIT</td><td>Generate JavaScript-compatible regular expressions based on a given set of Unicode symbols or code points.</tr>
-<tr><td>regenerator-transform</td><td>0.15.1</td><td>MIT</td><td>Explode async and generator functions into a state machine.</tr>
 <tr><td>regenerator-runtime</td><td>0.11.1</td><td>MIT</td><td>Runtime for Regenerator-compiled generator and async functions.</tr>
+<tr><td>regenerator-transform</td><td>0.15.1</td><td>MIT</td><td>Explode async and generator functions into a state machine.</tr>
 <tr><td><a href="https://github.com/DmitrySoshnikov/regexp-tree" target="_blank">regexp-tree</a></td><td>0.1.24</td><td>MIT</td><td>Regular Expressions parser in JavaScript</tr>
-<tr><td><a href="https://mths.be/regexpu" target="_blank">regexpu-core</a></td><td>5.3.1</td><td>MIT</td><td>regexpu’s core functionality (i.e. `rewritePattern(pattern, flag)`), capable of translating ES6 Unicode regular expressions to ES5.</tr>
-<tr><td>registry-url</td><td>5.1.0</td><td>MIT</td><td>Get the set npm registry URL</tr>
+<tr><td><a href="https://mths.be/regexpu" target="_blank">regexpu-core</a></td><td>5.3.2</td><td>MIT</td><td>regexpu’s core functionality (i.e. `rewritePattern(pattern, flag)`), capable of translating ES6 Unicode regular expressions to ES5.</tr>
 <tr><td><a href="https://github.com/rexxars/registry-auth-token#readme" target="_blank">registry-auth-token</a></td><td>4.2.2</td><td>MIT</td><td>Get the auth token set for an npm registry (if any)</tr>
+<tr><td>registry-url</td><td>5.1.0</td><td>MIT</td><td>Get the set npm registry URL</tr>
 <tr><td><a href="https://github.com/jviereck/regjsparser" target="_blank">regjsparser</a></td><td>0.9.1</td><td>BSD-2-Clause</td><td>undefined</tr>
 <tr><td><a href="https://github.com/jonschlinkert/remarkable" target="_blank">remarkable</a></td><td>2.0.1</td><td>MIT</td><td>Markdown parser, done right. 100% Commonmark support, extensions, syntax plugins, high speed - all in one.</tr>
 <tr><td><a href="https://github.com/jonschlinkert/repeat-string" target="_blank">repeat-string</a></td><td>1.6.1</td><td>MIT</td><td>Repeat the given string n times. Fastest implementation for repeating a string.</tr>
@@ -2566,8 +2565,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/vdemedes/secure-compare" target="_blank">secure-compare</a></td><td>3.0.1</td><td>MIT</td><td>Securely compare two strings, copied from cryptiles</tr>
 <tr><td>seek-bzip</td><td>1.0.6</td><td>MIT</td><td>a pure-JavaScript Node.JS module for random-access decoding bzip2 data</tr>
 <tr><td>semver-diff</td><td>3.1.1</td><td>MIT</td><td>Get the diff type of two semver versions: 0.0.1 0.0.2 → patch</tr>
-<tr><td>send</td><td>0.18.0</td><td>MIT</td><td>Better streaming static file server with Range and conditional-GET support</tr>
 <tr><td>semver</td><td>7.3.8</td><td>ISC</td><td>The semantic version parser used by npm.</tr>
+<tr><td>send</td><td>0.18.0</td><td>MIT</td><td>Better streaming static file server with Range and conditional-GET support</tr>
 <tr><td>serialize-error</td><td>8.1.0</td><td>MIT</td><td>Serialize/deserialize an error into a plain object</tr>
 <tr><td><a href="https://github.com/yahoo/serialize-javascript" target="_blank">serialize-javascript</a></td><td>6.0.0</td><td>BSD-3-Clause</td><td>Serialize JavaScript to a superset of JSON that includes regular expressions and functions.</tr>
 <tr><td>serve-static</td><td>1.15.0</td><td>MIT</td><td>Serve static files</tr>
@@ -2581,13 +2580,13 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/ljharb/shell-quote" target="_blank">shell-quote</a></td><td>1.8.0</td><td>MIT</td><td>quote and parse shell commands</tr>
 <tr><td><a href="https://shortunique.id" target="_blank">short-unique-id</a></td><td>4.4.4</td><td>Apache-2.0</td><td>Generate random or sequential UUID of any length</tr>
 <tr><td><a href="https://github.com/shouldjs/equal" target="_blank">should-equal</a></td><td>2.0.0</td><td>MIT</td><td>Deep comparison of 2 instances for should.js</tr>
-<tr><td><a href="https://github.com/shouldjs/type-adaptors#readme" target="_blank">should-type-adaptors</a></td><td>1.1.0</td><td>MIT</td><td>Small utility functions to use the same traversing etc code on different types</tr>
 <tr><td>should-format</td><td>3.0.3</td><td>MIT</td><td>Formatting of objects for should.js</tr>
+<tr><td><a href="https://github.com/shouldjs/type-adaptors#readme" target="_blank">should-type-adaptors</a></td><td>1.1.0</td><td>MIT</td><td>Small utility functions to use the same traversing etc code on different types</tr>
 <tr><td><a href="https://github.com/shouldjs/type" target="_blank">should-type</a></td><td>1.4.0</td><td>MIT</td><td>Simple module to get instance type. Like a bit more advanced version of typeof</tr>
 <tr><td><a href="https://github.com/shouldjs/util#readme" target="_blank">should-util</a></td><td>1.0.1</td><td>MIT</td><td>Utility functions</tr>
 <tr><td><a href="https://github.com/shouldjs/should.js" target="_blank">should</a></td><td>13.2.3</td><td>MIT</td><td>test framework agnostic BDD-style assertions</tr>
-<tr><td><a href="https://github.com/tapjs/signal-exit" target="_blank">signal-exit</a></td><td>3.0.7</td><td>ISC</td><td>when you want to fire an event no matter how a process exits.</tr>
 <tr><td><a href="https://github.com/ljharb/side-channel#readme" target="_blank">side-channel</a></td><td>1.0.4</td><td>MIT</td><td>Store information about any JS value in a side channel. Uses WeakMap if available.</tr>
+<tr><td><a href="https://github.com/tapjs/signal-exit" target="_blank">signal-exit</a></td><td>3.0.7</td><td>ISC</td><td>when you want to fire an event no matter how a process exits.</tr>
 <tr><td><a href="https://github.com/feross/simple-concat" target="_blank">simple-concat</a></td><td>1.0.1</td><td>MIT</td><td>Super-minimalist version of `concat-stream`. Less than 15 lines!</tr>
 <tr><td><a href="https://github.com/feross/simple-get" target="_blank">simple-get</a></td><td>3.1.1</td><td>MIT</td><td>Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in < 100 lines.</tr>
 <tr><td><a href="https://github.com/alexbrazier/simple-update-notifier.git" target="_blank">simple-update-notifier</a></td><td>1.1.0</td><td>MIT</td><td>Simple update notifier to check for npm updates for cli applications</tr>
@@ -2617,18 +2616,18 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>strip-json-comments</td><td>3.1.1</td><td>MIT</td><td>Strip comments from JSON. Lets you use comments in your JSON files!</tr>
 <tr><td>strip-outer</td><td>1.0.1</td><td>MIT</td><td>Strip a substring from the start/end of a string</tr>
 <tr><td>strnum</td><td>1.0.5</td><td>MIT</td><td>Parse String to Number based on configuration</tr>
-<tr><td><a href="https://github.com/substack/subarg" target="_blank">subarg</a></td><td>1.0.0</td><td>MIT</td><td>parse arguments with recursive contexts</tr>
 <tr><td>strtok3</td><td>7.0.0</td><td>MIT</td><td>A promise based streaming tokenizer</tr>
+<tr><td><a href="https://github.com/substack/subarg" target="_blank">subarg</a></td><td>1.0.0</td><td>MIT</td><td>parse arguments with recursive contexts</tr>
 <tr><td>superagent</td><td>3.8.3</td><td>MIT</td><td>elegant & feature rich browser / node HTTP with a fluent API</tr>
 <tr><td>supertest</td><td>4.0.2</td><td>MIT</td><td>SuperAgent driven library for testing HTTP servers</tr>
 <tr><td>supports-color</td><td>7.2.0</td><td>MIT</td><td>Detect whether a terminal supports color</tr>
 <tr><td><a href="https://github.com/inspect-js/node-supports-preserve-symlinks-flag#readme" target="_blank">supports-preserve-symlinks-flag</a></td><td>1.0.0</td><td>MIT</td><td>Determine if the current node version supports the `--preserve-symlinks` flag.</tr>
 <tr><td>swagger-client</td><td>3.19.1</td><td>Apache-2.0</td><td>SwaggerJS - a collection of interfaces for OAI specs</tr>
 <tr><td><a href="https://github.com/swagger-api/swagger-ui" target="_blank">swagger-ui</a></td><td>4.18.1</td><td>Apache-2.0</td><td>undefined</tr>
-<tr><td><a href="http://taffydb.com/" target="_blank">taffydb</a></td><td>2.6.2</td><td>undefined</td><td>TaffyDB is an opensouce library that brings database features into your JavaScript applications.</tr>
 <tr><td><a href="https://github.com/substack/node-syntax-error" target="_blank">syntax-error</a></td><td>1.4.0</td><td>MIT</td><td>detect and report syntax errors in source code strings</tr>
-<tr><td><a href="https://github.com/mafintosh/tar-stream" target="_blank">tar-stream</a></td><td>1.6.2</td><td>MIT</td><td>tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.</tr>
+<tr><td><a href="http://taffydb.com/" target="_blank">taffydb</a></td><td>2.6.2</td><td>undefined</td><td>TaffyDB is an opensouce library that brings database features into your JavaScript applications.</tr>
 <tr><td><a href="https://github.com/mafintosh/tar-fs" target="_blank">tar-fs</a></td><td>2.1.1</td><td>MIT</td><td>filesystem bindings for tar-stream</tr>
+<tr><td><a href="https://github.com/mafintosh/tar-stream" target="_blank">tar-stream</a></td><td>1.6.2</td><td>MIT</td><td>tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.</tr>
 <tr><td>term-size</td><td>2.2.1</td><td>MIT</td><td>Reliably get the terminal window size (columns & rows)</tr>
 <tr><td><a href="https://github.com/dominictarr/through" target="_blank">through</a></td><td>2.3.8</td><td>MIT</td><td>simplified stream construction</tr>
 <tr><td>through2</td><td>2.0.5</td><td>MIT</td><td>A tiny wrapper around Node streams2 Transform to avoid explicit subclassing noise</tr>
@@ -2640,21 +2639,21 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>to-fast-properties</td><td>2.0.0</td><td>MIT</td><td>Force V8 to use fast properties for an object</tr>
 <tr><td>to-readable-stream</td><td>1.0.0</td><td>MIT</td><td>Convert a string/Buffer/Uint8Array to a readable stream</tr>
 <tr><td><a href="https://github.com/micromatch/to-regex-range" target="_blank">to-regex-range</a></td><td>5.0.1</td><td>MIT</td><td>Pass two numbers, get a regex-compatible source string for matching ranges. Validated against more than 2.78 million test assertions.</tr>
-<tr><td>toidentifier</td><td>1.0.1</td><td>MIT</td><td>Convert a string of words to a JavaScript identifier</tr>
 <tr><td>toggle-selection</td><td>1.0.6</td><td>MIT</td><td>Toggle current selected content in browser</tr>
+<tr><td>toidentifier</td><td>1.0.1</td><td>MIT</td><td>Convert a string of words to a JavaScript identifier</tr>
 <tr><td>token-types</td><td>5.0.1</td><td>MIT</td><td>Common token types for decoding and encoding numeric and string values</tr>
 <tr><td>touch</td><td>3.1.0</td><td>ISC</td><td>like touch(1) in node</tr>
 <tr><td>tr46</td><td>3.0.0</td><td>MIT</td><td>An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing</tr>
-<tr><td>tree-sitter-json</td><td>0.20.0</td><td>MIT</td><td>JSON grammar for tree-sitter</tr>
 <tr><td><a href="https://github.com/ljharb/js-traverse" target="_blank">traverse</a></td><td>0.6.7</td><td>MIT</td><td>traverse and transform objects by visiting every node on a recursive walk</tr>
+<tr><td>tree-sitter-json</td><td>0.20.0</td><td>MIT</td><td>JSON grammar for tree-sitter</tr>
 <tr><td><a href="https://github.com/ikatyang/tree-sitter-yaml#readme" target="_blank">tree-sitter-yaml</a></td><td>0.5.0</td><td>MIT</td><td>YAML grammar for tree-sitter</tr>
 <tr><td>tree-sitter</td><td>0.20.1</td><td>MIT</td><td>Incremental parsers for node</tr>
-<tr><td><a href="https://github.com/millsp/ts-toolbelt" target="_blank">ts-toolbelt</a></td><td>6.15.5</td><td>Apache-2.0</td><td>Get the most out of TypeScript</tr>
 <tr><td>trim-repeated</td><td>1.0.0</td><td>MIT</td><td>Trim a consecutively repeated substring: foo--bar---baz → foo-bar-baz</tr>
+<tr><td><a href="https://github.com/millsp/ts-toolbelt" target="_blank">ts-toolbelt</a></td><td>6.15.5</td><td>Apache-2.0</td><td>Get the most out of TypeScript</tr>
 <tr><td><a href="https://www.typescriptlang.org/" target="_blank">tslib</a></td><td>1.14.1</td><td>0BSD</td><td>Runtime library for TypeScript helper functions</tr>
 <tr><td><a href="https://github.com/browserify/tty-browserify" target="_blank">tty-browserify</a></td><td>0.0.1</td><td>MIT</td><td>the tty module from node core for browsers</tr>
-<tr><td>tweezer.js</td><td>1.5.0</td><td>MIT</td><td>A small, dependency-free, ES6 tweening library for smooth animations</tr>
 <tr><td>tunnel-agent</td><td>0.6.0</td><td>Apache-2.0</td><td>HTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.</tr>
+<tr><td>tweezer.js</td><td>1.5.0</td><td>MIT</td><td>A small, dependency-free, ES6 tweening library for smooth animations</tr>
 <tr><td>type-fest</td><td>0.21.3</td><td>(MIT OR CC0-1.0)</td><td>A collection of essential TypeScript types</tr>
 <tr><td>type-is</td><td>1.6.18</td><td>MIT</td><td>Infer the content-type of a request.</tr>
 <tr><td><a href="http://feross.org" target="_blank">typedarray-to-buffer</a></td><td>3.1.5</td><td>MIT</td><td>Convert a typed array to a Buffer without a copy</tr>
@@ -2686,8 +2685,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>url</td><td>0.11.0</td><td>MIT</td><td>The core `url` packaged standalone for use with Browserify.</tr>
 <tr><td>use-sync-external-store</td><td>1.2.0</td><td>MIT</td><td>Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.</tr>
 <tr><td><a href="https://github.com/TooTallNate/util-deprecate" target="_blank">util-deprecate</a></td><td>1.0.2</td><td>MIT</td><td>The Node.js `util.deprecate()` function with browser support</tr>
-<tr><td>utils-merge</td><td>1.0.1</td><td>MIT</td><td>merge() utility function</tr>
 <tr><td><a href="https://github.com/browserify/node-util" target="_blank">util</a></td><td>0.12.5</td><td>MIT</td><td>Node.js's util module for all engines</tr>
+<tr><td>utils-merge</td><td>1.0.1</td><td>MIT</td><td>merge() utility function</tr>
 <tr><td>uuid</td><td>8.3.2</td><td>MIT</td><td>RFC4122 (v1, v4, and v5) UUIDs</tr>
 <tr><td>vary</td><td>1.1.2</td><td>MIT</td><td>Manipulate the HTTP Vary header</tr>
 <tr><td>vm-browserify</td><td>1.1.2</td><td>MIT</td><td>vm module for the browser</tr>
@@ -2719,15 +2718,16 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>yallist</td><td>3.1.1</td><td>ISC</td><td>Yet Another Linked List</tr>
 <tr><td><a href="https://eemeli.org/yaml/v1/" target="_blank">yaml</a></td><td>1.10.2</td><td>ISC</td><td>JavaScript parser and stringifier for YAML</tr>
 <tr><td><a href="https://github.com/nexdrew/yargonaut#readme" target="_blank">yargonaut</a></td><td>1.1.4</td><td>Apache-2.0</td><td>Decorate yargs content with chalk styles and figlet fonts</tr>
-<tr><td><a href="https://github.com/yargs/yargs-unparser" target="_blank">yargs-unparser</a></td><td>2.0.0</td><td>MIT</td><td>Converts back a yargs argv object to its original array form</tr>
 <tr><td>yargs-parser</td><td>20.2.4</td><td>ISC</td><td>the mighty option parser used by yargs</tr>
+<tr><td><a href="https://github.com/yargs/yargs-unparser" target="_blank">yargs-unparser</a></td><td>2.0.0</td><td>MIT</td><td>Converts back a yargs argv object to its original array form</tr>
 <tr><td><a href="https://yargs.js.org/" target="_blank">yargs</a></td><td>15.4.1</td><td>MIT</td><td>yargs the modern, pirate-themed, successor to optimist.</tr>
 <tr><td><a href="https://github.com/thejoshwolfe/yauzl" target="_blank">yauzl</a></td><td>2.10.0</td><td>MIT</td><td>yet another unzip library for node</tr>
 <tr><td>yocto-queue</td><td>1.0.0</td><td>MIT</td><td>Tiny queue data structure</tr>
 <tr><td><a href="https://zengabor.github.io/zenscroll/" target="_blank">zenscroll</a></td><td>4.0.2</td><td>Unlicense</td><td>A module to smooth-scroll web pages and scrollable elements (like DIVs)</tr>
 <tr><td><a href="https://github.com/taylortom/zipper" target="_blank">zipper</a></td><td>1.0.0</td><td>undefined</td><td>Module for zipping/unzipping files</tr>
-<tr><td>os-tmpdir</td><td>1.0.2</td><td>MIT</td><td>Node.js os.tmpdir() ponyfill</tr>
 <tr><td>p-cancelable</td><td>0.4.1</td><td>MIT</td><td>Create a promise that can be canceled</tr>
+<tr><td>os-tmpdir</td><td>1.0.2</td><td>MIT</td><td>Node.js os.tmpdir() ponyfill</tr>
+<tr><td>p-event</td><td>4.2.0</td><td>MIT</td><td>Promisify an event by waiting for it to be emitted</tr>
 </table>
 </details>
 
