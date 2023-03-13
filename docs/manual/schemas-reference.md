@@ -40,12 +40,14 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=graphic-course">graphic-course</a></li>
 <li><a href="#/schemas-reference?id=hotgraphic-component">hotgraphic-component</a></li>
 <li><a href="#/schemas-reference?id=hotgraphic-course">hotgraphic-course</a></li>
+<li><a href="#/schemas-reference?id=languagePicker-config">languagePicker-config</a></li>
+<li><a href="#/schemas-reference?id=languagePicker-course">languagePicker-course</a></li>
 <li><a href="#/schemas-reference?id=localauthuser">localauthuser</a></li>
 <li><a href="#/schemas-reference?id=localpassword">localpassword</a></li>
 <li><a href="#/schemas-reference?id=log">log</a></li>
 <li><a href="#/schemas-reference?id=maildata">maildata</a></li>
-<li><a href="#/schemas-reference?id=matching-component">matching-component</a></li>
-<li><a href="#/schemas-reference?id=matching-course">matching-course</a></li>
+<li><a href="#/schemas-reference?id=mcq-component">mcq-component</a></li>
+<li><a href="#/schemas-reference?id=mcq-course">mcq-course</a></li>
 <li><a href="#/schemas-reference?id=media-component">media-component</a></li>
 <li><a href="#/schemas-reference?id=media-course">media-course</a></li>
 <li><a href="#/schemas-reference?id=narrative-component">narrative-component</a></li>
@@ -2718,6 +2720,98 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 </table>
       
+      <h3 id="languagepicker-config" class="dep">languagePicker-config</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=config">config</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._isEnabled</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Controls whether the Language Picker extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_languagePicker.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be shown in the browser's title bar when the language picker is displayed</td>
+</tr>
+<tr class="">
+<td>_languagePicker.displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Header text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker.body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Introductory or explanatory text for the Language Picker</td>
+</tr>
+<tr class="">
+<td>_languagePicker._showOnCourseLoad</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Language Picker should be displayed on course load or not</td>
+</tr>
+<tr class="">
+<td>_languagePicker._languagePickerIconClass</td>
+<td>string</td>
+<td><pre>"icon-language-2"</pre></td>
+<td>Your default options here are: icon-globe, icon-language-1, icon-language-2</td>
+</tr>
+<tr class="">
+<td>_languagePicker._restoreStateOnLanguageChange</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>Determines whether or not the language picker will try to restore the 'state' of the course when the user changes language. It is advised that you only enable this setting if all course languages have exactly the same structure; if they do not, some loss of tracking data will occur. If this setting is disabled, tracking data will be cleared when the user switches language - the 'Confirm Message' should be used to warn the user of this</td>
+</tr>
+<tr class="">
+<td>_languagePicker._classes</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_languagePicker._languages</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="languagepicker-course" class="dep">languagePicker-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.navigationBarLabel</td>
+<td>string</td>
+<td><pre>"Select course language"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._languagePicker.languageSelector</td>
+<td>string</td>
+<td><pre>"Language selector"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
       <h3 id="localauthuser" class="dep">localauthuser</h3>
       
       <div class="desc">Local authentication user</div>
@@ -2842,7 +2936,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 </table>
       
-      <h3 id="matching-component" class="dep">matching-component</h3>
+      <h3 id="mcq-component" class="dep">mcq-component</h3>
       
       <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
 
@@ -2857,8 +2951,20 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>instruction</td>
 <td>string</td>
-<td><pre>"Choose an option from each dropdown list and select Submit."</pre></td>
+<td><pre>"Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit."</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td>The possible answers available to the learner</td>
 </tr>
 <tr class="">
 <td>_attempts</td>
@@ -2885,12 +2991,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_shouldResetAllAnswers</td>
-<td>boolean</td>
-<td><pre>true</pre></td>
-<td>Controls whether all - or just incorrect - answers should be reset when the question is reset</td>
-</tr>
-<tr class="">
 <td>_shouldDisplayAttempts</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -2903,28 +3003,28 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_questionWeight</td>
-<td>number</td>
-<td><pre>1</pre></td>
-<td>How much this question is worth</td>
-</tr>
-<tr class="">
 <td>_recordInteraction</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
 <td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
 </tr>
 <tr class="">
-<td>placeholder</td>
-<td>string</td>
-<td><pre>"Please select an option"</pre></td>
-<td>Text that will be displayed at the top of each list of options</td>
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options</td>
 </tr>
 <tr class="">
-<td>_items</td>
-<td>array</td>
-<td></td>
-<td> </td>
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>When item scoring is disabled, this is the question score for a correct response</td>
+</tr>
+<tr class="">
+<td>_selectable</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many items are selectable</td>
 </tr>
 <tr class="">
 <td>_feedback</td>
@@ -3090,7 +3190,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 </table>
       
-      <h3 id="matching-course" class="dep">matching-course</h3>
+      <h3 id="mcq-course" class="dep">mcq-course</h3>
       
       <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
 <td>_globals</td>
@@ -3099,15 +3199,15 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._matching</td>
+<td>_globals._mcq</td>
 <td>object</td>
 <td><pre>{}</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_globals._matching.ariaRegion</td>
+<td>_globals._mcq.ariaRegion</td>
 <td>string</td>
-<td><pre>"Matching. Select from lists and then submit."</pre></td>
+<td><pre>"Multiple choice question"</pre></td>
 <td> </td>
 </tr>
 </table>
