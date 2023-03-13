@@ -9046,6 +9046,28 @@
                   }
                 }
               },
+              "_languagePicker": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "navigationBarLabel": {
+                    "type": "string",
+                    "title": "Navigation bar label",
+                    "default": "Select course language",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "languageSelector": {
+                    "type": "string",
+                    "title": "Language selector",
+                    "default": "Language selector",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
               "_pageLevelProgress": {
                 "type": "object",
                 "default": {},
@@ -9102,28 +9124,6 @@
                   }
                 }
               },
-              "_languagePicker": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "navigationBarLabel": {
-                    "type": "string",
-                    "title": "Navigation bar label",
-                    "default": "Select course language",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "languageSelector": {
-                    "type": "string",
-                    "title": "Language selector",
-                    "default": "Language selector",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
               "_trickle": {
                 "type": "object",
                 "default": {},
@@ -9132,6 +9132,64 @@
                     "type": "string",
                     "title": "Incomplete content",
                     "default": "There is incomplete content above. You must complete this before you can proceed through the course.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_textinput": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Text input. Type your answer and then submit.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_gmcq": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Multiple choice question",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_slider": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Slider. Respond to the question by selecting a value on the scale and then submit.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "labelStart": {
+                    "type": "string",
+                    "title": "Scale start ARIA label",
+                    "default": "Start of the scale",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "labelEnd": {
+                    "type": "string",
+                    "title": "Scale end ARIA label",
+                    "default": "End of the scale",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9215,7 +9273,7 @@
                   }
                 }
               },
-              "_gmcq": {
+              "_mcq": {
                 "type": "object",
                 "default": {},
                 "properties": {
@@ -9237,50 +9295,6 @@
                     "type": "string",
                     "title": "ARIA region",
                     "default": "Matching. Select from lists and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_textinput": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Text input. Type your answer and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_slider": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Slider. Respond to the question by selecting a value on the scale and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "labelStart": {
-                    "type": "string",
-                    "title": "Scale start ARIA label",
-                    "default": "Start of the scale",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "labelEnd": {
-                    "type": "string",
-                    "title": "Scale end ARIA label",
-                    "default": "End of the scale",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9461,20 +9475,6 @@
                     "type": "string",
                     "title": "Resources",
                     "default": "Additional resources.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_mcq": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Multiple choice question",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9787,31 +9787,6 @@
             "title": "External references",
             "default": {}
           },
-          "_assessment": {
-            "type": "object",
-            "title": "Assessment",
-            "default": {},
-            "properties": {
-              "_isPercentageBased": {
-                "type": "boolean",
-                "title": "Set pass mark as percentage",
-                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
-                "default": true
-              },
-              "_scoreToPass": {
-                "type": "number",
-                "title": "Pass mark",
-                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
-                "default": 60
-              },
-              "_correctToPass": {
-                "type": "number",
-                "title": "Correct pass mark",
-                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
-                "default": 60
-              }
-            }
-          },
           "_bookmarking": {
             "type": "object",
             "title": "Bookmarking",
@@ -9882,6 +9857,31 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "_assessment": {
+            "type": "object",
+            "title": "Assessment",
+            "default": {},
+            "properties": {
+              "_isPercentageBased": {
+                "type": "boolean",
+                "title": "Set pass mark as percentage",
+                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
+                "default": true
+              },
+              "_scoreToPass": {
+                "type": "number",
+                "title": "Pass mark",
+                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
+                "default": 60
+              },
+              "_correctToPass": {
+                "type": "number",
+                "title": "Correct pass mark",
+                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
+                "default": 60
               }
             }
           },
@@ -15270,461 +15270,6 @@
           "_startVolume"
         ]
       },
-      "narrative-component": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "narrative-component",
-        "description": "The base schema inherited by all other schemas",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Custom ARIA level",
-            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "_component": {
-            "type": "string",
-            "title": "Component"
-          },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
-          },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
-            "_adapt": {
-              "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
-          },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": true
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
-              }
-            }
-          },
-          "_vanilla": {
-            "type": "object",
-            "title": "Vanilla",
-            "default": {},
-            "properties": {
-              "_textAlignment": {
-                "type": "object",
-                "title": "Text alignment",
-                "default": {},
-                "properties": {
-                  "_title": {
-                    "type": "string",
-                    "title": "Title alignment",
-                    "description": "Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_body": {
-                    "type": "string",
-                    "title": "Body alignment",
-                    "description": "Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_instruction": {
-                    "type": "string",
-                    "title": "Instruction alignment",
-                    "description": "Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
-                    "default": "",
-                    "enum": [
-                      "",
-                      "left",
-                      "center",
-                      "right"
-                    ],
-                    "_backboneForms": "Select"
-                  }
-                }
-              }
-            }
-          },
-          "_supportedLayout": {
-            "type": "string",
-            "title": "Supported layout",
-            "default": "full-width",
-            "enum": [
-              "full-width",
-              "half-width",
-              "both"
-            ],
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "mobileInstruction": {
-            "type": "string",
-            "title": "Mobile instruction",
-            "description": "This is the mobile only instruction text",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_isTextBelowImage": {
-            "type": "boolean",
-            "title": "Move text area below image",
-            "description": "If enabled, the text area drops below the image instead of being beside it",
-            "default": false
-          },
-          "_isMobileTextBelowImage": {
-            "type": "boolean",
-            "title": "Move text area below image on mobile",
-            "description": "If enabled, on mobile, the text area drops below the image instead of being behind the strapline button",
-            "default": false
-          },
-          "_hasNavigationInTextArea": {
-            "type": "boolean",
-            "title": "Move navigation to text area",
-            "description": "If enabled, all navigation elements will be moved to the text area",
-            "default": false
-          },
-          "_setCompletionOn": {
-            "type": "string",
-            "title": "Completion criteria",
-            "description": "Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component",
-            "default": "allItems",
-            "enum": [
-              "inview",
-              "allItems"
-            ],
-            "_backboneForms": "Select"
-          },
-          "_items": {
-            "type": "array",
-            "title": "Items",
-            "items": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "description": "",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  }
-                },
-                "_ariaLevel": {
-                  "type": "number",
-                  "title": "Title ARIA level",
-                  "default": 0
-                },
-                "body": {
-                  "type": "string",
-                  "title": "Body",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  },
-                  "_backboneForms": "TextArea"
-                },
-                "_graphic": {
-                  "type": "object",
-                  "title": "Graphic",
-                  "default": {},
-                  "required": [
-                    "src"
-                  ],
-                  "properties": {
-                    "src": {
-                      "type": "string",
-                      "isObjectId": true,
-                      "title": "Source",
-                      "_backboneForms": {
-                        "type": "Asset",
-                        "media": "image"
-                      }
-                    },
-                    "alt": {
-                      "type": "string",
-                      "title": "Alternative text",
-                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
-                      "default": "",
-                      "_adapt": {
-                        "translatable": true
-                      }
-                    },
-                    "attribution": {
-                      "type": "string",
-                      "title": "Attribution",
-                      "description": "Text to be displayed as an attribution",
-                      "default": "",
-                      "_adapt": {
-                        "translatable": true
-                      }
-                    }
-                  }
-                },
-                "strapline": {
-                  "type": "string",
-                  "title": "Strapline",
-                  "default": "",
-                  "_adapt": {
-                    "translatable": true
-                  }
-                }
-              }
-            }
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt",
-          "_component",
-          "_setCompletionOn"
-        ]
-      },
       "slider-component": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "slider-component",
@@ -16376,6 +15921,461 @@
           "_attempts",
           "_scaleStart",
           "_scaleEnd"
+        ]
+      },
+      "narrative-component": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "narrative-component",
+        "description": "The base schema inherited by all other schemas",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Custom ARIA level",
+            "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "_component": {
+            "type": "string",
+            "title": "Component"
+          },
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
+          },
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
+            "_adapt": {
+              "isSetting": true
+            },
+            "_backboneForms": "Select"
+          },
+          "_disableAccessibilityState": {
+            "type": "boolean",
+            "title": "Disable completion ARIA label",
+            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
+          },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": true
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              }
+            }
+          },
+          "_vanilla": {
+            "type": "object",
+            "title": "Vanilla",
+            "default": {},
+            "properties": {
+              "_textAlignment": {
+                "type": "object",
+                "title": "Text alignment",
+                "default": {},
+                "properties": {
+                  "_title": {
+                    "type": "string",
+                    "title": "Title alignment",
+                    "description": "Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_body": {
+                    "type": "string",
+                    "title": "Body alignment",
+                    "description": "Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_instruction": {
+                    "type": "string",
+                    "title": "Instruction alignment",
+                    "description": "Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                    "default": "",
+                    "enum": [
+                      "",
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "_backboneForms": "Select"
+                  }
+                }
+              }
+            }
+          },
+          "_supportedLayout": {
+            "type": "string",
+            "title": "Supported layout",
+            "default": "full-width",
+            "enum": [
+              "full-width",
+              "half-width",
+              "both"
+            ],
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "mobileInstruction": {
+            "type": "string",
+            "title": "Mobile instruction",
+            "description": "This is the mobile only instruction text",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_isTextBelowImage": {
+            "type": "boolean",
+            "title": "Move text area below image",
+            "description": "If enabled, the text area drops below the image instead of being beside it",
+            "default": false
+          },
+          "_isMobileTextBelowImage": {
+            "type": "boolean",
+            "title": "Move text area below image on mobile",
+            "description": "If enabled, on mobile, the text area drops below the image instead of being behind the strapline button",
+            "default": false
+          },
+          "_hasNavigationInTextArea": {
+            "type": "boolean",
+            "title": "Move navigation to text area",
+            "description": "If enabled, all navigation elements will be moved to the text area",
+            "default": false
+          },
+          "_setCompletionOn": {
+            "type": "string",
+            "title": "Completion criteria",
+            "description": "Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component",
+            "default": "allItems",
+            "enum": [
+              "inview",
+              "allItems"
+            ],
+            "_backboneForms": "Select"
+          },
+          "_items": {
+            "type": "array",
+            "title": "Items",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                  "description": "",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_ariaLevel": {
+                  "type": "number",
+                  "title": "Title ARIA level",
+                  "default": 0
+                },
+                "body": {
+                  "type": "string",
+                  "title": "Body",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  },
+                  "_backboneForms": "TextArea"
+                },
+                "_graphic": {
+                  "type": "object",
+                  "title": "Graphic",
+                  "default": {},
+                  "required": [
+                    "src"
+                  ],
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "isObjectId": true,
+                      "title": "Source",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alternative text",
+                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                      "default": "",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    },
+                    "attribution": {
+                      "type": "string",
+                      "title": "Attribution",
+                      "description": "Text to be displayed as an attribution",
+                      "default": "",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    }
+                  }
+                },
+                "strapline": {
+                  "type": "string",
+                  "title": "Strapline",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt",
+          "_component",
+          "_setCompletionOn"
         ]
       },
       "text-component": {
