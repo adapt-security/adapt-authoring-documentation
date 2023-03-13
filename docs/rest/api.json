@@ -2003,207 +2003,6 @@
           }
         }
       },
-      "trickle-block": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "trickle-block",
-        "description": "The base schema inherited by all other schemas",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "_trickle": {
-            "type": "object",
-            "title": "Trickle",
-            "default": {},
-            "required": [
-              "_scrollDuration"
-            ],
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Trickle",
-                "default": false
-              },
-              "_isInherited": {
-                "type": "boolean",
-                "title": "Inherit settings from parent article",
-                "default": false
-              },
-              "_autoScroll": {
-                "type": "boolean",
-                "title": "Scroll automatically",
-                "default": false
-              },
-              "_scrollDuration": {
-                "type": "number",
-                "title": "Scroll duration",
-                "description": "Duration of the scroll animation in milliseconds",
-                "default": 500
-              },
-              "_scrollTo": {
-                "type": "string",
-                "title": "Scroll target",
-                "description": "Set how trickle scrolls",
-                "default": "@block +1"
-              },
-              "_completionAttribute": {
-                "type": "string",
-                "title": "Completion attribute",
-                "description": "Set which attribute is used to determine completion",
-                "default": "_isComplete",
-                "enum": [
-                  "_isInteractionComplete",
-                  "_isComplete"
-                ],
-                "_backboneForms": "Select"
-              },
-              "_button": {
-                "type": "object",
-                "title": "Button",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Add Trickle button",
-                    "default": true
-                  },
-                  "_styleBeforeCompletion": {
-                    "type": "string",
-                    "title": "Visibility before completion",
-                    "default": "hidden",
-                    "enum": [
-                      "hidden",
-                      "visible",
-                      "disabled"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_styleAfterClick": {
-                    "type": "string",
-                    "title": "Visibility after completion",
-                    "default": "hidden",
-                    "enum": [
-                      "hidden",
-                      "visible",
-                      "disabled"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_isFullWidth": {
-                    "type": "boolean",
-                    "title": "Make full width",
-                    "default": true
-                  },
-                  "_autoHide": {
-                    "type": "boolean",
-                    "title": "Hide button when no longer in view",
-                    "description": "Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible",
-                    "default": false
-                  },
-                  "_showEndOfPage": {
-                    "type": "boolean",
-                    "title": "Show end of page button",
-                    "default": true
-                  },
-                  "_className": {
-                    "type": "string",
-                    "title": "Custom classes",
-                    "default": ""
-                  },
-                  "_hasIcon": {
-                    "type": "boolean",
-                    "title": "Enable icon",
-                    "description": "Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow",
-                    "default": false
-                  },
-                  "text": {
-                    "type": "string",
-                    "title": "Default button text",
-                    "default": "Continue",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "ariaLabel": {
-                    "type": "string",
-                    "title": "Default button ARIA label",
-                    "default": "Continue",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "startText": {
-                    "type": "string",
-                    "title": "First button text",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Begin",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "startAriaLabel": {
-                    "type": "string",
-                    "title": "First button ARIA label",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Begin",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "finalText": {
-                    "type": "string",
-                    "title": "Final button text",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Finish",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "finalAriaLabel": {
-                    "type": "string",
-                    "title": "Final button ARIA label",
-                    "description": "Only on articles when 'Enable on child blocks' set to true",
-                    "default": "Finish",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "_component": {
-                    "type": "string",
-                    "title": "Trickle plugin",
-                    "default": "trickle-button"
-                  }
-                }
-              },
-              "_stepLocking": {
-                "type": "object",
-                "title": "Step locking",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Hide subsequent content",
-                    "default": true
-                  },
-                  "_isCompletionRequired": {
-                    "type": "boolean",
-                    "title": "Require content to be completed",
-                    "default": true
-                  },
-                  "_isLockedOnRevisit": {
-                    "type": "boolean",
-                    "title": "Reset state on revisit",
-                    "default": false
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "trickle-article": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "trickle-article",
@@ -2410,6 +2209,207 @@
           }
         }
       },
+      "trickle-block": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "trickle-block",
+        "description": "The base schema inherited by all other schemas",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "_trickle": {
+            "type": "object",
+            "title": "Trickle",
+            "default": {},
+            "required": [
+              "_scrollDuration"
+            ],
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Trickle",
+                "default": false
+              },
+              "_isInherited": {
+                "type": "boolean",
+                "title": "Inherit settings from parent article",
+                "default": false
+              },
+              "_autoScroll": {
+                "type": "boolean",
+                "title": "Scroll automatically",
+                "default": false
+              },
+              "_scrollDuration": {
+                "type": "number",
+                "title": "Scroll duration",
+                "description": "Duration of the scroll animation in milliseconds",
+                "default": 500
+              },
+              "_scrollTo": {
+                "type": "string",
+                "title": "Scroll target",
+                "description": "Set how trickle scrolls",
+                "default": "@block +1"
+              },
+              "_completionAttribute": {
+                "type": "string",
+                "title": "Completion attribute",
+                "description": "Set which attribute is used to determine completion",
+                "default": "_isComplete",
+                "enum": [
+                  "_isInteractionComplete",
+                  "_isComplete"
+                ],
+                "_backboneForms": "Select"
+              },
+              "_button": {
+                "type": "object",
+                "title": "Button",
+                "default": {},
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Add Trickle button",
+                    "default": true
+                  },
+                  "_styleBeforeCompletion": {
+                    "type": "string",
+                    "title": "Visibility before completion",
+                    "default": "hidden",
+                    "enum": [
+                      "hidden",
+                      "visible",
+                      "disabled"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_styleAfterClick": {
+                    "type": "string",
+                    "title": "Visibility after completion",
+                    "default": "hidden",
+                    "enum": [
+                      "hidden",
+                      "visible",
+                      "disabled"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_isFullWidth": {
+                    "type": "boolean",
+                    "title": "Make full width",
+                    "default": true
+                  },
+                  "_autoHide": {
+                    "type": "boolean",
+                    "title": "Hide button when no longer in view",
+                    "description": "Hides the button when it scrolls from view; not recommended for use in courses that need to be screenreader compatible",
+                    "default": false
+                  },
+                  "_showEndOfPage": {
+                    "type": "boolean",
+                    "title": "Show end of page button",
+                    "default": true
+                  },
+                  "_className": {
+                    "type": "string",
+                    "title": "Custom classes",
+                    "default": ""
+                  },
+                  "_hasIcon": {
+                    "type": "boolean",
+                    "title": "Enable icon",
+                    "description": "Displays an icon alongside, or in place of, the Trickle button text. Default icon is a small downwards arrow",
+                    "default": false
+                  },
+                  "text": {
+                    "type": "string",
+                    "title": "Default button text",
+                    "default": "Continue",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "Default button ARIA label",
+                    "default": "Continue",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "startText": {
+                    "type": "string",
+                    "title": "First button text",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Begin",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "startAriaLabel": {
+                    "type": "string",
+                    "title": "First button ARIA label",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Begin",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "finalText": {
+                    "type": "string",
+                    "title": "Final button text",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Finish",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "finalAriaLabel": {
+                    "type": "string",
+                    "title": "Final button ARIA label",
+                    "description": "Only on articles when 'Enable on child blocks' set to true",
+                    "default": "Finish",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "_component": {
+                    "type": "string",
+                    "title": "Trickle plugin",
+                    "default": "trickle-button"
+                  }
+                }
+              },
+              "_stepLocking": {
+                "type": "object",
+                "title": "Step locking",
+                "default": {},
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Hide subsequent content",
+                    "default": true
+                  },
+                  "_isCompletionRequired": {
+                    "type": "boolean",
+                    "title": "Require content to be completed",
+                    "default": true
+                  },
+                  "_isLockedOnRevisit": {
+                    "type": "boolean",
+                    "title": "Reset state on revisit",
+                    "default": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "trickle-config": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "trickle-config",
@@ -2447,32 +2447,6 @@
           }
         }
       },
-      "boxMenu-contentobject": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "boxMenu-contentobject",
-        "description": "The base schema inherited by all other schemas",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "_boxMenu": {
-            "type": "object",
-            "title": "Box Menu",
-            "default": {},
-            "properties": {
-              "_renderAsGroup": {
-                "type": "boolean",
-                "title": "Make this a parent group of menu items",
-                "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
-                "default": false
-              }
-            }
-          }
-        }
-      },
       "trickle-course": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "trickle-course",
@@ -2501,6 +2475,32 @@
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+      },
+      "boxMenu-contentobject": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "boxMenu-contentobject",
+        "description": "The base schema inherited by all other schemas",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "_boxMenu": {
+            "type": "object",
+            "title": "Box Menu",
+            "default": {},
+            "properties": {
+              "_renderAsGroup": {
+                "type": "boolean",
+                "title": "Make this a parent group of menu items",
+                "description": "Enable this option to render items into a group on the menu. Groups can display a title, body, and instruction text",
+                "default": false
               }
             }
           }
@@ -6243,6 +6243,23 @@
               }
             }
           },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": false
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              }
+            }
+          },
           "_trickle": {
             "type": "object",
             "title": "Trickle",
@@ -6433,23 +6450,6 @@
                     "default": false
                   }
                 }
-              }
-            }
-          },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": false
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
               }
             }
           },
@@ -6880,6 +6880,23 @@
               }
             }
           },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": false
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              }
+            }
+          },
           "_trickle": {
             "type": "object",
             "title": "Trickle",
@@ -7065,23 +7082,6 @@
                     "default": false
                   }
                 }
-              }
-            }
-          },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": false
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
               }
             }
           },
@@ -9046,42 +9046,6 @@
                   }
                 }
               },
-              "_languagePicker": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "navigationBarLabel": {
-                    "type": "string",
-                    "title": "Navigation bar label",
-                    "default": "Select course language",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "languageSelector": {
-                    "type": "string",
-                    "title": "Language selector",
-                    "default": "Language selector",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_trickle": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "incompleteContent": {
-                    "type": "string",
-                    "title": "Incomplete content",
-                    "default": "There is incomplete content above. You must complete this before you can proceed through the course.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
               "_pageLevelProgress": {
                 "type": "object",
                 "default": {},
@@ -9138,58 +9102,36 @@
                   }
                 }
               },
-              "_narrative": {
+              "_languagePicker": {
                 "type": "object",
                 "default": {},
                 "properties": {
-                  "ariaRegion": {
+                  "navigationBarLabel": {
                     "type": "string",
-                    "title": "ARIA region",
-                    "default": "Slide show. Select the next button to progress.",
+                    "title": "Navigation bar label",
+                    "default": "Select course language",
                     "_adapt": {
                       "translatable": true
                     }
                   },
-                  "previous": {
+                  "languageSelector": {
                     "type": "string",
-                    "title": "Previous",
-                    "default": "{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "next": {
-                    "type": "string",
-                    "title": "Next",
-                    "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
+                    "title": "Language selector",
+                    "default": "Language selector",
                     "_adapt": {
                       "translatable": true
                     }
                   }
                 }
               },
-              "_textinput": {
+              "_trickle": {
                 "type": "object",
                 "default": {},
                 "properties": {
-                  "ariaRegion": {
+                  "incompleteContent": {
                     "type": "string",
-                    "title": "ARIA region",
-                    "default": "Text input. Type your answer and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_gmcq": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Multiple choice question",
+                    "title": "Incomplete content",
+                    "default": "There is incomplete content above. You must complete this before you can proceed through the course.",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9243,6 +9185,78 @@
                   }
                 }
               },
+              "_narrative": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Slide show. Select the next button to progress.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "previous": {
+                    "type": "string",
+                    "title": "Previous",
+                    "default": "{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "next": {
+                    "type": "string",
+                    "title": "Next",
+                    "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_gmcq": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Multiple choice question",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_matching": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Matching. Select from lists and then submit.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_textinput": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Text input. Type your answer and then submit.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
               "_slider": {
                 "type": "object",
                 "default": {},
@@ -9267,34 +9281,6 @@
                     "type": "string",
                     "title": "Scale end ARIA label",
                     "default": "End of the scale",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_mcq": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Multiple choice question",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_resources": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "resources": {
-                    "type": "string",
-                    "title": "Resources",
-                    "default": "Additional resources.",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9467,14 +9453,28 @@
                   }
                 }
               },
-              "_matching": {
+              "_resources": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "resources": {
+                    "type": "string",
+                    "title": "Resources",
+                    "default": "Additional resources.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_mcq": {
                 "type": "object",
                 "default": {},
                 "properties": {
                   "ariaRegion": {
                     "type": "string",
                     "title": "ARIA region",
-                    "default": "Matching. Select from lists and then submit.",
+                    "default": "Multiple choice question",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9787,6 +9787,31 @@
             "title": "External references",
             "default": {}
           },
+          "_assessment": {
+            "type": "object",
+            "title": "Assessment",
+            "default": {},
+            "properties": {
+              "_isPercentageBased": {
+                "type": "boolean",
+                "title": "Set pass mark as percentage",
+                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
+                "default": true
+              },
+              "_scoreToPass": {
+                "type": "number",
+                "title": "Pass mark",
+                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
+                "default": 60
+              },
+              "_correctToPass": {
+                "type": "number",
+                "title": "Correct pass mark",
+                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
+                "default": 60
+              }
+            }
+          },
           "_bookmarking": {
             "type": "object",
             "title": "Bookmarking",
@@ -9857,31 +9882,6 @@
                     }
                   }
                 }
-              }
-            }
-          },
-          "_assessment": {
-            "type": "object",
-            "title": "Assessment",
-            "default": {},
-            "properties": {
-              "_isPercentageBased": {
-                "type": "boolean",
-                "title": "Set pass mark as percentage",
-                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
-                "default": true
-              },
-              "_scoreToPass": {
-                "type": "number",
-                "title": "Pass mark",
-                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
-                "default": 60
-              },
-              "_correctToPass": {
-                "type": "number",
-                "title": "Correct pass mark",
-                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
-                "default": 60
               }
             }
           },
