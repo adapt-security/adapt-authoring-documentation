@@ -1101,10 +1101,16 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_completionCriteria._submitOnEveryAssessmentAttempt</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled and the course completion criteria is met, the completion status will be reported every time the assessment is completed (regardless of whether the user passes or fails)</td>
+</tr>
+<tr class="">
 <td>_completionCriteria._shouldSubmitScore</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
-<td>If enabled, the score attained in any assessment will be reported (regardless of whether the user passes or fails the assessment)</td>
+<td>If enabled, the score attained in any assessment attempt will be reported (regardless of whether the user passes or fails)</td>
 </tr>
 <tr class="">
 <td>_defaultLanguage</td>

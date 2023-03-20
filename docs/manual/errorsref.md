@@ -96,6 +96,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=RATE_LIMIT_EXCEEDED">RATE_LIMIT_EXCEEDED</a></li>
 <li><a href="#/errorsref?id=REPO_NOT_FOUND">REPO_NOT_FOUND</a></li>
 <li><a href="#/errorsref?id=RESOURCE_IN_USE">RESOURCE_IN_USE</a></li>
+<li><a href="#/errorsref?id=SCHEMA_EXISTS">SCHEMA_EXISTS</a></li>
 <li><a href="#/errorsref?id=SCHEMA_LOAD_FAILED">SCHEMA_LOAD_FAILED</a></li>
 <li><a href="#/errorsref?id=SERVER_ERROR">SERVER_ERROR</a></li>
 <li><a href="#/errorsref?id=SERVER_START">SERVER_START</a></li>
@@ -202,6 +203,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `RATE_LIMIT_EXCEEDED` | API rate limit has been exceeded | 429 | <ul></ul> |
 | `REPO_NOT_FOUND` | The requested asset repository doesn't exist | 500 | <ul><li>`name`: Repo name</li></ul> |
 | `RESOURCE_IN_USE` | Resource is currently being using in courses | 400 | <ul><li>`type`: Type of resource</li><li>`courses`: Courses using the resource</li></ul> |
+| `SCHEMA_EXISTS` | A schema already exists with the specified name | 400 | <ul><li>`filepath`: File path to the schema</li><li>`schemaName`: Schema name</li></ul> |
 | `SCHEMA_LOAD_FAILED` | Failed to load a JSON schema | 500 | <ul><li>`schemaName`: Schema name</li></ul> |
 | `SERVER_ERROR` | Generic server error | 500 | <ul><li>`error`: The original error</li></ul> |
 | `SERVER_START` | Failed to start server | 500 | <ul><li>`error`: The error</li></ul> |
