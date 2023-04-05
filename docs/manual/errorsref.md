@@ -23,9 +23,6 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=AUTH_TYPE_DEF_MISSING">AUTH_TYPE_DEF_MISSING</a></li>
 <li><a href="#/errorsref?id=BODY_PARSE_FAILED">BODY_PARSE_FAILED</a></li>
 <li><a href="#/errorsref?id=BROWSERSLIST_UPDATE_FAILED">BROWSERSLIST_UPDATE_FAILED</a></li>
-<li><a href="#/errorsref?id=BUILD_DATA_RETRIEVAL_FAILED">BUILD_DATA_RETRIEVAL_FAILED</a></li>
-<li><a href="#/errorsref?id=BUILD_NOT_FOUND">BUILD_NOT_FOUND</a></li>
-<li><a href="#/errorsref?id=CLI_BUILD_FAILED">CLI_BUILD_FAILED</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_ALREADY_EXISTS">CONTENTPLUGIN_ALREADY_EXISTS</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_ATTR_CLASH">CONTENTPLUGIN_ATTR_CLASH</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_ATTR_MISSING">CONTENTPLUGIN_ATTR_MISSING</a></li>
@@ -35,7 +32,6 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=CONTENTPLUGIN_INVALID_ZIP">CONTENTPLUGIN_INVALID_ZIP</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_IN_USE">CONTENTPLUGIN_IN_USE</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_NEWER_INSTALLED">CONTENTPLUGIN_NEWER_INSTALLED</a></li>
-<li><a href="#/errorsref?id=COURSE_NOT_FOUND">COURSE_NOT_FOUND</a></li>
 <li><a href="#/errorsref?id=DESTROY_SESSION_FAIL">DESTROY_SESSION_FAIL</a></li>
 <li><a href="#/errorsref?id=DUPL_AUTHORED_MODULE_NAME">DUPL_AUTHORED_MODULE_NAME</a></li>
 <li><a href="#/errorsref?id=DUPL_AUTH_PLUGIN_REG">DUPL_AUTH_PLUGIN_REG</a></li>
@@ -52,17 +48,21 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=FUNC_DISABLED">FUNC_DISABLED</a></li>
 <li><a href="#/errorsref?id=FUNC_NOT_OVERRIDDEN">FUNC_NOT_OVERRIDDEN</a></li>
 <li><a href="#/errorsref?id=FW_BUILD_NOT_FOUND">FW_BUILD_NOT_FOUND</a></li>
-<li><a href="#/errorsref?id=FW_INCOMPAT">FW_INCOMPAT</a></li>
+<li><a href="#/errorsref?id=FW_CLI_BUILD_FAILED">FW_CLI_BUILD_FAILED</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_CONTENT_FAILED">FW_IMPORT_CONTENT_FAILED</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_FAILED">FW_IMPORT_FAILED</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_INCOMPAT">FW_IMPORT_INCOMPAT</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_INVALID">FW_IMPORT_INVALID</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_INVALID_COURSE">FW_IMPORT_INVALID_COURSE</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_MISSING_PLUGINS">FW_IMPORT_MISSING_PLUGINS</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_PLUGINS_FAILED">FW_IMPORT_PLUGINS_FAILED</a></li>
+<li><a href="#/errorsref?id=FW_INCOMPAT_PLUGIN_DEP">FW_INCOMPAT_PLUGIN_DEP</a></li>
 <li><a href="#/errorsref?id=FW_INSTALL_FAILED">FW_INSTALL_FAILED</a></li>
+<li><a href="#/errorsref?id=FW_MISSING_PLUGIN_DEP">FW_MISSING_PLUGIN_DEP</a></li>
 <li><a href="#/errorsref?id=GENERATE_THUMB_FAIL">GENERATE_THUMB_FAIL</a></li>
 <li><a href="#/errorsref?id=HTTP_METHOD_NOT_SUPPORTED">HTTP_METHOD_NOT_SUPPORTED</a></li>
-<li><a href="#/errorsref?id=IMPORT_CONTENT_FAILED">IMPORT_CONTENT_FAILED</a></li>
-<li><a href="#/errorsref?id=IMPORT_FAILED">IMPORT_FAILED</a></li>
-<li><a href="#/errorsref?id=IMPORT_INVALID">IMPORT_INVALID</a></li>
-<li><a href="#/errorsref?id=IMPORT_PLUGINS_FAILED">IMPORT_PLUGINS_FAILED</a></li>
 <li><a href="#/errorsref?id=INCORRECT_PASSWORD">INCORRECT_PASSWORD</a></li>
 <li><a href="#/errorsref?id=INVALID_ASSET_URL">INVALID_ASSET_URL</a></li>
-<li><a href="#/errorsref?id=INVALID_COURSE">INVALID_COURSE</a></li>
 <li><a href="#/errorsref?id=INVALID_LOGIN_DETAILS">INVALID_LOGIN_DETAILS</a></li>
 <li><a href="#/errorsref?id=INVALID_OBJECTID">INVALID_OBJECTID</a></li>
 <li><a href="#/errorsref?id=INVALID_PARAMS">INVALID_PARAMS</a></li>
@@ -79,7 +79,6 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=MAIL_SEND_FAILED">MAIL_SEND_FAILED</a></li>
 <li><a href="#/errorsref?id=MISSING_ASSETS">MISSING_ASSETS</a></li>
 <li><a href="#/errorsref?id=MISSING_AUTH_HEADER">MISSING_AUTH_HEADER</a></li>
-<li><a href="#/errorsref?id=MISSING_PLUGINS">MISSING_PLUGINS</a></li>
 <li><a href="#/errorsref?id=MISSING_SCHEMA_NAME">MISSING_SCHEMA_NAME</a></li>
 <li><a href="#/errorsref?id=MODIFY_PROTECTED_ATTR">MODIFY_PROTECTED_ATTR</a></li>
 <li><a href="#/errorsref?id=MODULE_NOT_FOUND">MODULE_NOT_FOUND</a></li>
@@ -130,9 +129,6 @@ Supplemental data can be used at the point that errors are translated to provide
 | `AUTH_TYPE_DEF_MISSING` | Auth type is not defined | 500 | <ul></ul> |
 | `BODY_PARSE_FAILED` | Failed to parse request body data | 400 | <ul><li>`error`: The error message</li></ul> |
 | `BROWSERSLIST_UPDATE_FAILED` | Failed to update browserslist DB | 500 | <ul><li>`error`: The error message</li></ul> |
-| `BUILD_DATA_RETRIEVAL_FAILED` | Failed to retrieve build data from the database | 500 | <ul><li>`error`: The error message</li></ul> |
-| `BUILD_NOT_FOUND` | Framework build data cannot be found | 404 | <ul></ul> |
-| `CLI_BUILD_FAILED` | Framework build using the adapt-cli failed | 500 | <ul><li>`cmd`: The command that caused the error</li><li>`message`: A detailed error message passed from adapt-cli</li></ul> |
 | `CONTENTPLUGIN_ALREADY_EXISTS` | Plugin ${name}@${version} already exists | 400 | <ul><li>`name`: Name of content plugin</li><li>`version`: Version of content plugin</li></ul> |
 | `CONTENTPLUGIN_ATTR_CLASH` | Target attribute '${targetAttribute}' already exists in ${name} | 400 | <ul><li>`name`: Name of content plugin</li><li>`targetAttribute`: Offending target attribute</li></ul> |
 | `CONTENTPLUGIN_ATTR_MISSING` | Plugin ${name} is missing a targetAttribute value | 400 | <ul><li>`name`: Name of content plugin</li></ul> |
@@ -142,7 +138,6 @@ Supplemental data can be used at the point that errors are translated to provide
 | `CONTENTPLUGIN_INVALID_ZIP` | Invalid plugin data provided | 400 | <ul></ul> |
 | `CONTENTPLUGIN_IN_USE` | Content plugin is in use in existing courses | 400 | <ul><li>`courses`: List of courses using the content plugin</li></ul> |
 | `CONTENTPLUGIN_NEWER_INSTALLED` | Plugin ${name}@${newVersion} already exists at a higher version (${existingVersion}) | 400 | <ul><li>`existingVersion`: Installed version</li><li>`name`: Name of content plugin</li><li>`newVersion`: Version to install</li></ul> |
-| `COURSE_NOT_FOUND` | Requested course could not be found | 404 | <ul></ul> |
 | `DESTROY_SESSION_FAIL` | Failed to terminate user session | 500 | <ul><li>`error`: The error message</li></ul> |
 | `DUPL_AUTHORED_MODULE_NAME` | Function must be overridden in child class | 500 | <ul></ul> |
 | `DUPL_AUTH_PLUGIN_REG` | An auth plugin is already registered with the same name | 500 | <ul></ul> |
@@ -159,17 +154,21 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FUNC_DISABLED` | Function has been disabled | 500 | <ul><li>`name`: The name of the function</li></ul> |
 | `FUNC_NOT_OVERRIDDEN` | Function must be overridden in child class | 500 | <ul><li>`name`: The name of the function</li></ul> |
 | `FW_BUILD_NOT_FOUND` | Framework build could not be found in the database | 404 | <ul><li>`_id`: Database document _id value for the missing course build</li></ul> |
-| `FW_INCOMPAT` | Course for import uses a framework version incompatible with that installed | 400 | <ul><li>`import`: Framework version used in import course</li><li>`installed`: Framework version currently installed on the server</li></ul> |
+| `FW_CLI_BUILD_FAILED` | Framework build using the adapt-cli failed | 500 | <ul><li>`cmd`: The command that caused the error</li><li>`message`: A detailed error message passed from adapt-cli</li></ul> |
+| `FW_IMPORT_CONTENT_FAILED` | Import of framework content failed | 400 | <ul><li>`errors`: Accompanying errors</li></ul> |
+| `FW_IMPORT_FAILED` | Import of framework course failed | 400 | <ul><li>`error`: The error</li></ul> |
+| `FW_IMPORT_INCOMPAT` | Course for import uses a framework version incompatible with that installed | 400 | <ul><li>`import`: Framework version used in import course</li><li>`installed`: Framework version currently installed on the server</li></ul> |
+| `FW_IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul></ul> |
+| `FW_IMPORT_INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
+| `FW_IMPORT_MISSING_PLUGINS` | Course for import uses plugins which are missing from the server | 400 | <ul></ul> |
+| `FW_IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
+| `FW_INCOMPAT_PLUGIN_DEP` | Plugin is incompatible | 500 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
 | `FW_INSTALL_FAILED` | Installation of the framework failed | 500 | <ul></ul> |
+| `FW_MISSING_PLUGIN_DEP` | Plugin is missing a dependency | 500 | <ul><li>`name`: Missing plugin name</li></ul> |
 | `GENERATE_THUMB_FAIL` | Failed to generate asset thumbnail | 500 | <ul><li>`error`: Error message</li></ul> |
 | `HTTP_METHOD_NOT_SUPPORTED` | HTTP method for a given request is not supported | 404 | <ul><li>`method`: The invalid HTTP method</li></ul> |
-| `IMPORT_CONTENT_FAILED` | Import of framework content failed | 400 | <ul><li>`errors`: Accompanying errors</li></ul> |
-| `IMPORT_FAILED` | Import of framework course failed | 400 | <ul><li>`error`: The error</li></ul> |
-| `IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul></ul> |
-| `IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
 | `INCORRECT_PASSWORD` | Provided password does not match that stored | 401 | <ul></ul> |
 | `INVALID_ASSET_URL` | Invalid URL has been specified for external asset | 400 | <ul><li>`url`: The asset URL</li></ul> |
-| `INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
 | `INVALID_LOGIN_DETAILS` | Invalid login details were provided | 401 | <ul></ul> |
 | `INVALID_OBJECTID` | Not a valid ObjectId | 400 | <ul><li>`value`: The value</li></ul> |
 | `INVALID_PARAMS` | Invalid parameters have been provided | 400 | <ul><li>`params`: The invalid params</li></ul> |
@@ -186,7 +185,6 @@ Supplemental data can be used at the point that errors are translated to provide
 | `MAIL_SEND_FAILED` | Failed to send error email | 500 | <ul></ul> |
 | `MISSING_ASSETS` | Assets are missing | 500 | <ul><li>`errors`: The errors</li></ul> |
 | `MISSING_AUTH_HEADER` | Authorization headers are missing from request | 401 | <ul></ul> |
-| `MISSING_PLUGINS` | Course for import uses plugins which are missing from the server | 400 | <ul></ul> |
 | `MISSING_SCHEMA_NAME` | Schema name is not defined | 400 | <ul></ul> |
 | `MODIFY_PROTECTED_ATTR` | Attempted to modify a protected data attribute | 400 | <ul><li>`attribute`: The protected attribute</li></ul> |
 | `MODULE_NOT_FOUND` | A module file could not be resolved while attempting a require() or import operation | 500 | <ul></ul> |
