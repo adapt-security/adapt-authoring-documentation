@@ -12298,10 +12298,10 @@ var store = require('../internals/shared-store');
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.30.0',
+  version: '3.30.1',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2014-2023 Denis Pushkarev (zloirock.ru)',
-  license: 'https://github.com/zloirock/core-js/blob/v3.30.0/LICENSE',
+  license: 'https://github.com/zloirock/core-js/blob/v3.30.1/LICENSE',
   source: 'https://github.com/zloirock/core-js'
 });
 
@@ -15873,15 +15873,23 @@ arguments[4][414][0].apply(exports,arguments)
 
 var $ = require('../internals/export');
 var getBuiltIn = require('../internals/get-built-in');
+var fails = require('../internals/fails');
 var validateArgumentsLength = require('../internals/validate-arguments-length');
 var toString = require('../internals/to-string');
+var USE_NATIVE_URL = require('../internals/url-constructor-detection');
 var URL = getBuiltIn('URL');
+
+// https://github.com/nodejs/node/issues/47505
+var THROWS_WITHOUT_ARGUMENTS = USE_NATIVE_URL && fails(function () {
+  URL.canParse();
+});
 
 // `URL.canParse` method
 // https://url.spec.whatwg.org/#dom-url-canparse
 $({
   target: 'URL',
-  stat: true
+  stat: true,
+  forced: !THROWS_WITHOUT_ARGUMENTS
 }, {
   canParse: function canParse(url) {
     var length = validateArgumentsLength(arguments.length, 1);
@@ -15895,7 +15903,7 @@ $({
   }
 });
 
-},{"../internals/export":279,"../internals/get-built-in":291,"../internals/to-string":380,"../internals/validate-arguments-length":386}],482:[function(require,module,exports){
+},{"../internals/export":279,"../internals/fails":280,"../internals/get-built-in":291,"../internals/to-string":380,"../internals/url-constructor-detection":383,"../internals/validate-arguments-length":386}],482:[function(require,module,exports){
 'use strict';
 
 // TODO: in core-js@4, move /modules/ dependencies to public entries for better optimization by tools like `preset-env`

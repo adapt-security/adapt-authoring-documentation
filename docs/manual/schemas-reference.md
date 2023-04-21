@@ -1745,7 +1745,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_globals._accessibility.skipNavigationText</td>
 <td>string</td>
-<td><pre>"Skip navigation"</pre></td>
+<td><pre>"Skip to main content"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
