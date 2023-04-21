@@ -2035,8 +2035,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/micromatch/braces" target="_blank">braces</a></td><td>3.0.2</td><td>MIT</td><td>Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.</tr>
 <tr><td><a href="https://github.com/indutny/brorand" target="_blank">brorand</a></td><td>1.1.0</td><td>MIT</td><td>Random number generator for browsers and node.js</tr>
 <tr><td><a href="https://github.com/browserify/browser-pack" target="_blank">browser-pack</a></td><td>6.1.0</td><td>MIT</td><td>pack node-style source files from a json stream into a browser bundle</tr>
-<tr><td>browser-resolve</td><td>2.0.0</td><td>MIT</td><td>resolve which handles browser field support in package.json</tr>
 <tr><td>browser-stdout</td><td>1.3.1</td><td>ISC</td><td></tr>
+<tr><td>browser-resolve</td><td>2.0.0</td><td>MIT</td><td>resolve which handles browser field support in package.json</tr>
 <tr><td><a href="https://github.com/crypto-browserify/browserify-aes" target="_blank">browserify-aes</a></td><td>1.2.0</td><td>MIT</td><td>aes, for browserify</tr>
 <tr><td>browserify-cipher</td><td>1.0.1</td><td>MIT</td><td>ciphers for the browser</tr>
 <tr><td><a href="https://github.com/crypto-browserify/browserify-des#readme" target="_blank">browserify-des</a></td><td>1.0.2</td><td>MIT</td><td></tr>
@@ -2088,8 +2088,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/thlorenz/combine-source-map" target="_blank">combine-source-map</a></td><td>0.8.0</td><td>MIT</td><td>Add source maps of multiple files, offset them and then combine them into one source map</tr>
 <tr><td><a href="https://github.com/felixge/node-combined-stream" target="_blank">combined-stream</a></td><td>1.0.8</td><td>MIT</td><td>A stream that emits multiple other streams one after another.</tr>
 <tr><td>comma-separated-tokens</td><td>1.0.8</td><td>MIT</td><td>Parse and stringify comma-separated tokens</tr>
-<tr><td><a href="https://github.com/syavorsky/comment-parser" target="_blank">comment-parser</a></td><td>1.3.1</td><td>MIT</td><td>Generic JSDoc-like comment parser</tr>
 <tr><td>commander</td><td>8.3.0</td><td>MIT</td><td>the complete solution for node.js command-line programs</tr>
+<tr><td><a href="https://github.com/syavorsky/comment-parser" target="_blank">comment-parser</a></td><td>1.3.1</td><td>MIT</td><td>Generic JSDoc-like comment parser</tr>
 <tr><td>component-emitter</td><td>1.3.0</td><td>MIT</td><td>Event emitter</tr>
 <tr><td>compressible</td><td>2.0.18</td><td>MIT</td><td>Compressible Content-Type / mime checking</tr>
 <tr><td>compression</td><td>1.7.4</td><td>MIT</td><td>Node.js compression middleware</tr>
@@ -2308,8 +2308,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/crypto-browserify/hash-base" target="_blank">hash-base</a></td><td>3.1.0</td><td>MIT</td><td>abstract base class for hash-streams</tr>
 <tr><td><a href="https://github.com/indutny/hash.js" target="_blank">hash.js</a></td><td>1.1.7</td><td>MIT</td><td>Various hash functions that could be run by both browser and node</tr>
 <tr><td>hast-util-parse-selector</td><td>2.2.5</td><td>MIT</td><td>hast utility to create an element from a simple CSS selector</tr>
-<tr><td>hastscript</td><td>6.0.0</td><td>MIT</td><td>hast utility to create trees</tr>
 <tr><td>hbs</td><td>4.2.0</td><td>MIT</td><td>Express.js template engine plugin for Handlebars</tr>
+<tr><td>hastscript</td><td>6.0.0</td><td>MIT</td><td>hast utility to create trees</tr>
 <tr><td><a href="https://mths.be/he" target="_blank">he</a></td><td>1.2.0</td><td>MIT</td><td>A robust HTML entities encoder/decoder with full Unicode support.</tr>
 <tr><td><a href="https://helmetjs.github.io/docs/crossdomain/" target="_blank">helmet-crossdomain</a></td><td>0.4.0</td><td>MIT</td><td>Set the X-Permitted-Cross-Domain-Policies header in Express apps</tr>
 <tr><td><a href="https://helmetjs.github.io/docs/csp/" target="_blank">helmet-csp</a></td><td>2.9.4</td><td>MIT</td><td>Content Security Policy middleware.</tr>
@@ -2360,8 +2360,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>is-binary-path</td><td>2.1.0</td><td>MIT</td><td>Check if a file path is a binary file</tr>
 <tr><td>is-boolean-object</td><td>1.1.2</td><td>MIT</td><td>Is this value a JS Boolean? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</tr>
 <tr><td>is-buffer</td><td>1.1.6</td><td>MIT</td><td>Determine if an object is a Buffer</tr>
-<tr><td>is-callable</td><td>1.2.7</td><td>MIT</td><td>Is this JS value callable? Works with Functions and GeneratorFunctions, despite ES6 @@toStringTag.</tr>
 <tr><td><a href="https://github.com/watson/is-ci" target="_blank">is-ci</a></td><td>2.0.0</td><td>MIT</td><td>Detect if the current environment is a CI server</tr>
+<tr><td>is-callable</td><td>1.2.7</td><td>MIT</td><td>Is this JS value callable? Works with Functions and GeneratorFunctions, despite ES6 @@toStringTag.</tr>
 <tr><td><a href="https://github.com/inspect-js/is-core-module" target="_blank">is-core-module</a></td><td>2.12.0</td><td>MIT</td><td>Is this specifier a node.js core module?</tr>
 <tr><td>is-date-object</td><td>1.0.5</td><td>MIT</td><td>Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</tr>
 <tr><td>is-decimal</td><td>1.0.4</td><td>MIT</td><td>Check if a character is decimal</tr>
@@ -2379,8 +2379,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/jonschlinkert/is-number" target="_blank">is-number</a></td><td>7.0.0</td><td>MIT</td><td>Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc.</tr>
 <tr><td>is-obj</td><td>2.0.0</td><td>MIT</td><td>Check if a value is an object</tr>
 <tr><td><a href="https://github.com/inspect-js/is-object" target="_blank">is-object</a></td><td>1.0.2</td><td>MIT</td><td>Checks whether a value is an object</tr>
-<tr><td>is-path-inside</td><td>3.0.3</td><td>MIT</td><td>Check if a path is inside another path</tr>
 <tr><td>is-plain-obj</td><td>1.1.0</td><td>MIT</td><td>Check if a value is a plain object</tr>
+<tr><td>is-path-inside</td><td>3.0.3</td><td>MIT</td><td>Check if a path is inside another path</tr>
 <tr><td><a href="https://github.com/jonschlinkert/is-plain-object" target="_blank">is-plain-object</a></td><td>5.0.0</td><td>MIT</td><td>Returns true if an object was created by the `Object` constructor, or Object.create(null).</tr>
 <tr><td><a href="https://github.com/inspect-js/is-regex" target="_blank">is-regex</a></td><td>1.1.4</td><td>MIT</td><td>Is this value a JS regex? Works cross-realm/iframe, and despite ES6 @@toStringTag</tr>
 <tr><td>is-retry-allowed</td><td>1.2.0</td><td>MIT</td><td>Is retry allowed for Error?</tr>
@@ -2546,8 +2546,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/micromatch/picomatch" target="_blank">picomatch</a></td><td>2.3.1</td><td>MIT</td><td>Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.</tr>
 <tr><td>pify</td><td>2.3.0</td><td>MIT</td><td>Promisify a callback-style function</tr>
 <tr><td>pinkie-promise</td><td>2.0.1</td><td>MIT</td><td>ES2015 Promise ponyfill</tr>
-<tr><td>pinkie</td><td>2.0.4</td><td>MIT</td><td>Itty bitty little widdle twinkie pinkie ES2015 Promise implementation</tr>
 <tr><td>pkg-conf</td><td>3.1.0</td><td>MIT</td><td>Get namespaced config from the closest package.json</tr>
+<tr><td>pinkie</td><td>2.0.4</td><td>MIT</td><td>Itty bitty little widdle twinkie pinkie ES2015 Promise implementation</tr>
 <tr><td>portfinder</td><td>1.0.32</td><td>MIT</td><td>A simple tool to find an open port on the current machine</tr>
 <tr><td><a href="https://github.com/prebuild/prebuild-install" target="_blank">prebuild-install</a></td><td>6.1.4</td><td>MIT</td><td>A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform</tr>
 <tr><td><a href="http://preludels.com" target="_blank">prelude-ls</a></td><td>1.2.1</td><td>MIT</td><td>prelude.ls is a functionally oriented utility library. It is powerful and flexible. Almost all of its functions are curried. It is written in, and is the recommended base library for, LiveScript.</tr>
@@ -2783,7 +2783,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>whatwg-encoding</td><td>2.0.0</td><td>MIT</td><td>Decode strings according to the WHATWG Encoding Standard</tr>
 <tr><td>whatwg-url</td><td>11.0.0</td><td>MIT</td><td>An implementation of the WHATWG URL Standard's URL API and parsing machinery</tr>
 <tr><td><a href="https://github.com/inspect-js/which-boxed-primitive#readme" target="_blank">which-boxed-primitive</a></td><td>1.0.2</td><td>MIT</td><td>Which kind of boxed JS primitive is this?</tr>
-<tr><td><a href="https://github.com/nexdrew/which-module#readme" target="_blank">which-module</a></td><td>2.0.0</td><td>ISC</td><td>Find the module object for something that was require()d</tr>
+<tr><td><a href="https://github.com/nexdrew/which-module#readme" target="_blank">which-module</a></td><td>2.0.1</td><td>ISC</td><td>Find the module object for something that was require()d</tr>
 <tr><td>which-typed-array</td><td>1.1.9</td><td>MIT</td><td>Which kind of Typed Array is this JavaScript value? Works cross-realm, without `instanceof`, and despite Symbol.toStringTag.</tr>
 <tr><td>which</td><td>2.0.2</td><td>ISC</td><td>Like which(1) unix command. Find the first instance of an executable in the PATH.</tr>
 <tr><td>wide-align</td><td>1.1.5</td><td>ISC</td><td>A wide-character aware text alignment function for use on the console or with fixed width fonts.</tr>
@@ -2813,9 +2813,9 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>yocto-queue</td><td>1.0.0</td><td>MIT</td><td>Tiny queue data structure</tr>
 <tr><td><a href="https://zengabor.github.io/zenscroll/" target="_blank">zenscroll</a></td><td>4.0.2</td><td>Unlicense</td><td>A module to smooth-scroll web pages and scrollable elements (like DIVs)</tr>
 <tr><td><a href="https://github.com/taylortom/zipper" target="_blank">zipper</a></td><td>1.0.0</td><td>undefined</td><td>Module for zipping/unzipping files</tr>
+<tr><td>mdurl</td><td>1.0.1</td><td>MIT</td><td>URL utilities for markdown-it</tr>
 <tr><td><a href="https://github.com/crypto-browserify/md5.js" target="_blank">md5.js</a></td><td>1.3.5</td><td>MIT</td><td>node style md5 on pure JavaScript</tr>
 <tr><td><a href="https://marked.js.org" target="_blank">marked</a></td><td>1.2.9</td><td>MIT</td><td>A markdown parser built for speed</tr>
-<tr><td>mdurl</td><td>1.0.1</td><td>MIT</td><td>URL utilities for markdown-it</tr>
 </table>
 </details>
 
