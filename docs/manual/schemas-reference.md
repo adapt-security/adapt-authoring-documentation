@@ -1223,20 +1223,26 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>screenSize.small</td>
 <td>number</td>
-<td><pre>520</pre></td>
-<td>Pixel width for the small breakpoint, e.g. cellphones</td>
+<td><pre>0</pre></td>
+<td>Pixel width for the start of the small breakpoint, e.g. cellphones</td>
 </tr>
 <tr class="">
 <td>screenSize.medium</td>
 <td>number</td>
-<td><pre>760</pre></td>
-<td>Pixel width for the medium breakpoint, e.g. tablet devices</td>
+<td><pre>720</pre></td>
+<td>Pixel width for the start of the medium breakpoint, e.g. tablet devices</td>
 </tr>
 <tr class="">
 <td>screenSize.large</td>
 <td>number</td>
-<td><pre>900</pre></td>
-<td>Pixel width for the large breakpoint, e.g. laptop/desktop computers</td>
+<td><pre>960</pre></td>
+<td>Pixel width for the start of the large breakpoint, e.g. laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>screenSize.xlarge</td>
+<td>number</td>
+<td><pre>1280</pre></td>
+<td>Pixel width for the start of the extra large breakpoint, e.g. hd laptop/desktop computers</td>
 </tr>
 <tr class="">
 <td>_questionWeight</td>
@@ -1407,7 +1413,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>displayTitle</td>
 <td>string</td>
-<td><pre>""</pre></td>
+<td><pre>"Untitled"</pre></td>
 <td>When viewing an element - this is the title that will be displayed on the page</td>
 </tr>
 <tr class="">
@@ -1893,6 +1899,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
 </tr>
 <tr class="">
+<td>_globals._extensions._drawer._navTooltip</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navTooltip._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._drawer._navTooltip.text</td>
+<td>string</td>
+<td><pre>"{{ariaLabel}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._extensions._navigation</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -1923,9 +1947,39 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.</td>
 </tr>
 <tr class="">
+<td>_globals._extensions._navigation._backNavTooltip</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backNavTooltip._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._navigation._backNavTooltip.text</td>
+<td>string</td>
+<td><pre>"{{ariaLabel}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._extensions._navigation._spacers</td>
 <td>array</td>
 <td><pre>[{"_navOrder":0}]</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_tooltips</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_tooltips._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -2065,6 +2119,24 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_navigation._showLabel</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_navigation._showLabelAtWidth</td>
+<td>string</td>
+<td><pre>"medium"</pre></td>
+<td>When the user's browser window is at least this wide, the labels will be shown. Options refer to the standard Adapt breakpoints. The 'any' option will show the label at any size.</td>
+</tr>
+<tr class="">
+<td>_navigation._labelPosition</td>
+<td>string</td>
+<td><pre>"auto"</pre></td>
+<td>Where to show the label in relation to the button icons</td>
 </tr>
 <tr class="">
 <td>tags</td>

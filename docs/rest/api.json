@@ -4999,20 +4999,26 @@
               "small": {
                 "type": "number",
                 "title": "Small",
-                "description": "Pixel width for the small breakpoint, e.g. cellphones",
-                "default": 520
+                "description": "Pixel width for the start of the small breakpoint, e.g. cellphones",
+                "default": 0
               },
               "medium": {
                 "type": "number",
                 "title": "Medium",
-                "description": "Pixel width for the medium breakpoint, e.g. tablet devices",
-                "default": 760
+                "description": "Pixel width for the start of the medium breakpoint, e.g. tablet devices",
+                "default": 720
               },
               "large": {
                 "type": "number",
                 "title": "Large",
-                "description": "Pixel width for the large breakpoint, e.g. laptop/desktop computers",
-                "default": 900
+                "description": "Pixel width for the start of the large breakpoint, e.g. laptop/desktop computers",
+                "default": 960
+              },
+              "xlarge": {
+                "type": "number",
+                "title": "Extra Large",
+                "description": "Pixel width for the start of the extra large breakpoint, e.g. hd laptop/desktop computers",
+                "default": 1280
               }
             }
           },
@@ -5653,7 +5659,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -5917,7 +5923,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -6089,6 +6095,164 @@
             "default": -1,
             "_adapt": {
               "isSetting": true
+            }
+          },
+          "_assessment": {
+            "type": "object",
+            "title": "Assessment",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Make this article an assessment",
+                "default": false
+              },
+              "_id": {
+                "type": "string",
+                "title": "Assessment ID",
+                "description": "Unique name for the assessment. This is required by other plugins such as the 'Assessment Results' component to identify the assessment and display its variables",
+                "default": ""
+              },
+              "_attempts": {
+                "type": "number",
+                "title": "Allowed attempts",
+                "description": "Controls the number of attempts the user is allowed to have on this assessment. Set to -1 (or 0) to allow infinite attempts",
+                "default": -1
+              },
+              "_isPercentageBased": {
+                "type": "boolean",
+                "title": "Set pass mark as percentage",
+                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
+                "default": true
+              },
+              "_scoreToPass": {
+                "type": "number",
+                "title": "Pass mark",
+                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
+                "default": 60
+              },
+              "_correctToPass": {
+                "type": "number",
+                "title": "Correct pass mark",
+                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
+                "default": 60
+              },
+              "_includeInTotalScore": {
+                "type": "boolean",
+                "title": "Include score in course total",
+                "description": "Determines if the score from this assessment should be sent to the LMS. The score sent is a percentage according to 'Assessment weight'",
+                "default": true
+              },
+              "_assessmentWeight": {
+                "type": "number",
+                "title": "Assessment weight",
+                "description": "If there are multiple assessments in the course, this value controls the proportion of the LMS score which is attributed to this assessment, i.e. 1 equals 100%, 0.5 is 50%, etc.",
+                "default": 1
+              },
+              "_suppressMarking": {
+                "type": "boolean",
+                "title": "Suppress marking until complete",
+                "description": "Determines whether question marking should be delayed until completion of the assessment or until all attempts have been exhausted",
+                "default": false
+              },
+              "_isResetOnRevisit": {
+                "type": "boolean",
+                "title": "Reset state on revisit",
+                "description": "Controls whether the assessment should be reset automatically (up to the number of available attempts) when a user revisits the page",
+                "default": false
+              },
+              "_allowResetIfPassed": {
+                "type": "boolean",
+                "title": "Allow retry once passed",
+                "description": "Controls whether the assessment may be reset after it has been passed (whilst there are attempts remaining)",
+                "default": false
+              },
+              "_scrollToOnReset": {
+                "type": "boolean",
+                "title": "Scroll to assessment article on reset",
+                "description": "Controls whether to scroll to the assessment after reset or to stay at the top of the assessment page",
+                "default": false
+              },
+              "_randomisation": {
+                "type": "object",
+                "title": "Randomised blocks",
+                "default": {},
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Enable",
+                    "description": "If randomisation is enabled, a specified number of blocks will be displayed to the user in a random order",
+                    "default": false
+                  },
+                  "_blockCount": {
+                    "type": "number",
+                    "title": "Block count",
+                    "description": "The number of blocks to present to the learner. Set to -1 (or 0) to display all blocks",
+                    "default": -1
+                  }
+                }
+              },
+              "_banks": {
+                "type": "object",
+                "title": "Question banks",
+                "default": {},
+                "properties": {
+                  "_isEnabled": {
+                    "type": "boolean",
+                    "title": "Enable",
+                    "description": "Enables associating blocks of question components with a 'bank', allowing questions to be grouped then rendered via the 'Question counts' property",
+                    "default": false
+                  },
+                  "_split": {
+                    "type": "string",
+                    "title": "Question counts",
+                    "description": "This is a comma-separated list of numbers corresponding to the number of questions to be drawn from each question bank. The position of the number in the list corresponds to the 'Bank ID' assigned, e.g. \"3,2\" would display three questions from Bank 1 and two from Bank 2",
+                    "default": ""
+                  },
+                  "_randomisation": {
+                    "type": "boolean",
+                    "title": "Randomise question banks",
+                    "description": "Controls whether the questions will be displayed in a random order",
+                    "default": false
+                  }
+                }
+              },
+              "_questions": {
+                "type": "object",
+                "title": "Question overrides",
+                "default": {},
+                "properties": {
+                  "_resetType": {
+                    "type": "string",
+                    "title": "Reset type",
+                    "description": "Determines whether the question will register as completed when reset. When assigned a value of 'soft', the learner may continue to interact with it, but the complete attribute remains set to true. When assigned 'hard', complete is set to false, and the learner will be forced to complete it again if it is reset. For 'soft', when using trickle, please set the trickle Completion Attribute to `_isInteractionComplete'.",
+                    "default": "hard",
+                    "enum": [
+                      "soft",
+                      "hard"
+                    ],
+                    "_backboneForms": "Select"
+                  },
+                  "_canShowFeedback": {
+                    "type": "boolean",
+                    "title": "Enable feedback",
+                    "description": "Allows the user to view feedback on their answer",
+                    "default": false
+                  },
+                  "_canShowMarking": {
+                    "type": "boolean",
+                    "title": "Enable marking",
+                    "description": "Displays ticks and crosses on question completion",
+                    "default": false
+                  },
+                  "_canShowModelAnswer": {
+                    "type": "boolean",
+                    "title": "Enable correct answer toggle",
+                    "description": "Allows the user to view the 'model answer' should they answer the question incorrectly",
+                    "default": false
+                  }
+                }
+              }
             }
           },
           "_trickle": {
@@ -6278,164 +6442,6 @@
                   "_isLockedOnRevisit": {
                     "type": "boolean",
                     "title": "Reset state on revisit",
-                    "default": false
-                  }
-                }
-              }
-            }
-          },
-          "_assessment": {
-            "type": "object",
-            "title": "Assessment",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Make this article an assessment",
-                "default": false
-              },
-              "_id": {
-                "type": "string",
-                "title": "Assessment ID",
-                "description": "Unique name for the assessment. This is required by other plugins such as the 'Assessment Results' component to identify the assessment and display its variables",
-                "default": ""
-              },
-              "_attempts": {
-                "type": "number",
-                "title": "Allowed attempts",
-                "description": "Controls the number of attempts the user is allowed to have on this assessment. Set to -1 (or 0) to allow infinite attempts",
-                "default": -1
-              },
-              "_isPercentageBased": {
-                "type": "boolean",
-                "title": "Set pass mark as percentage",
-                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
-                "default": true
-              },
-              "_scoreToPass": {
-                "type": "number",
-                "title": "Pass mark",
-                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
-                "default": 60
-              },
-              "_correctToPass": {
-                "type": "number",
-                "title": "Correct pass mark",
-                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
-                "default": 60
-              },
-              "_includeInTotalScore": {
-                "type": "boolean",
-                "title": "Include score in course total",
-                "description": "Determines if the score from this assessment should be sent to the LMS. The score sent is a percentage according to 'Assessment weight'",
-                "default": true
-              },
-              "_assessmentWeight": {
-                "type": "number",
-                "title": "Assessment weight",
-                "description": "If there are multiple assessments in the course, this value controls the proportion of the LMS score which is attributed to this assessment, i.e. 1 equals 100%, 0.5 is 50%, etc.",
-                "default": 1
-              },
-              "_suppressMarking": {
-                "type": "boolean",
-                "title": "Suppress marking until complete",
-                "description": "Determines whether question marking should be delayed until completion of the assessment or until all attempts have been exhausted",
-                "default": false
-              },
-              "_isResetOnRevisit": {
-                "type": "boolean",
-                "title": "Reset state on revisit",
-                "description": "Controls whether the assessment should be reset automatically (up to the number of available attempts) when a user revisits the page",
-                "default": false
-              },
-              "_allowResetIfPassed": {
-                "type": "boolean",
-                "title": "Allow retry once passed",
-                "description": "Controls whether the assessment may be reset after it has been passed (whilst there are attempts remaining)",
-                "default": false
-              },
-              "_scrollToOnReset": {
-                "type": "boolean",
-                "title": "Scroll to assessment article on reset",
-                "description": "Controls whether to scroll to the assessment after reset or to stay at the top of the assessment page",
-                "default": false
-              },
-              "_randomisation": {
-                "type": "object",
-                "title": "Randomised blocks",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Enable",
-                    "description": "If randomisation is enabled, a specified number of blocks will be displayed to the user in a random order",
-                    "default": false
-                  },
-                  "_blockCount": {
-                    "type": "number",
-                    "title": "Block count",
-                    "description": "The number of blocks to present to the learner. Set to -1 (or 0) to display all blocks",
-                    "default": -1
-                  }
-                }
-              },
-              "_banks": {
-                "type": "object",
-                "title": "Question banks",
-                "default": {},
-                "properties": {
-                  "_isEnabled": {
-                    "type": "boolean",
-                    "title": "Enable",
-                    "description": "Enables associating blocks of question components with a 'bank', allowing questions to be grouped then rendered via the 'Question counts' property",
-                    "default": false
-                  },
-                  "_split": {
-                    "type": "string",
-                    "title": "Question counts",
-                    "description": "This is a comma-separated list of numbers corresponding to the number of questions to be drawn from each question bank. The position of the number in the list corresponds to the 'Bank ID' assigned, e.g. \"3,2\" would display three questions from Bank 1 and two from Bank 2",
-                    "default": ""
-                  },
-                  "_randomisation": {
-                    "type": "boolean",
-                    "title": "Randomise question banks",
-                    "description": "Controls whether the questions will be displayed in a random order",
-                    "default": false
-                  }
-                }
-              },
-              "_questions": {
-                "type": "object",
-                "title": "Question overrides",
-                "default": {},
-                "properties": {
-                  "_resetType": {
-                    "type": "string",
-                    "title": "Reset type",
-                    "description": "Determines whether the question will register as completed when reset. When assigned a value of 'soft', the learner may continue to interact with it, but the complete attribute remains set to true. When assigned 'hard', complete is set to false, and the learner will be forced to complete it again if it is reset. For 'soft', when using trickle, please set the trickle Completion Attribute to `_isInteractionComplete'.",
-                    "default": "hard",
-                    "enum": [
-                      "soft",
-                      "hard"
-                    ],
-                    "_backboneForms": "Select"
-                  },
-                  "_canShowFeedback": {
-                    "type": "boolean",
-                    "title": "Enable feedback",
-                    "description": "Allows the user to view feedback on their answer",
-                    "default": false
-                  },
-                  "_canShowMarking": {
-                    "type": "boolean",
-                    "title": "Enable marking",
-                    "description": "Displays ticks and crosses on question completion",
-                    "default": false
-                  },
-                  "_canShowModelAnswer": {
-                    "type": "boolean",
-                    "title": "Enable correct answer toggle",
-                    "description": "Allows the user to view the 'model answer' should they answer the question incorrectly",
                     "default": false
                   }
                 }
@@ -6680,7 +6686,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -7381,7 +7387,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -7707,7 +7713,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -8003,35 +8009,6 @@
               }
             }
           },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": true
-              },
-              "_showPageCompletion": {
-                "type": "boolean",
-                "title": "Include overall page completion",
-                "description": "Controls whether the progress calculations for this page are based on all components and the overall page - or only the components that are set to be displayed in Page Level Progress",
-                "default": true
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
-              },
-              "_excludeAssessments": {
-                "type": "boolean",
-                "title": "Exclude assessment completion",
-                "description": "Controls whether the progress calculations will include assessments",
-                "default": false
-              }
-            }
-          },
           "_resources": {
             "type": "object",
             "title": "Resources",
@@ -8100,6 +8077,35 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": true
+              },
+              "_showPageCompletion": {
+                "type": "boolean",
+                "title": "Include overall page completion",
+                "description": "Controls whether the progress calculations for this page are based on all components and the overall page - or only the components that are set to be displayed in Page Level Progress",
+                "default": true
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              },
+              "_excludeAssessments": {
+                "type": "boolean",
+                "title": "Exclude assessment completion",
+                "description": "Controls whether the progress calculations will include assessments",
+                "default": false
               }
             }
           },
@@ -8460,7 +8466,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -8615,7 +8621,7 @@
           },
           "tags": {
             "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "description": "Add tags to your course by entering one or more words, separated with a comma (,)",
             "type": "array",
             "default": [],
             "uniqueItems": true,
@@ -8938,6 +8944,26 @@
                         "title": "Navigation bar order",
                         "description": "Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.",
                         "default": 100
+                      },
+                      "_navTooltip": {
+                        "type": "object",
+                        "title": "Navigation tooltip",
+                        "default": {},
+                        "properties": {
+                          "_isEnabled": {
+                            "type": "boolean",
+                            "title": "Enabled",
+                            "default": true
+                          },
+                          "text": {
+                            "type": "string",
+                            "title": "",
+                            "default": "{{ariaLabel}}",
+                            "_adapt": {
+                              "translatable": true
+                            }
+                          }
+                        }
                       }
                     }
                   },
@@ -8969,6 +8995,26 @@
                             "title": "Navigation bar order",
                             "description": "Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.",
                             "default": 0
+                          }
+                        }
+                      },
+                      "_backNavTooltip": {
+                        "type": "object",
+                        "title": "Back tooltip",
+                        "default": {},
+                        "properties": {
+                          "_isEnabled": {
+                            "type": "boolean",
+                            "title": "Enabled",
+                            "default": true
+                          },
+                          "text": {
+                            "type": "string",
+                            "title": "",
+                            "default": "{{ariaLabel}}",
+                            "_adapt": {
+                              "translatable": true
+                            }
                           }
                         }
                       },
@@ -9102,6 +9148,48 @@
                   }
                 }
               },
+              "_resources": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "resources": {
+                    "type": "string",
+                    "title": "Resources",
+                    "default": "Additional resources.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_gmcq": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Multiple choice question",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_mcq": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Multiple choice question",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
               "_pageLevelProgress": {
                 "type": "object",
                 "default": {},
@@ -9155,109 +9243,6 @@
                     "default": 90,
                     "inputType": "Text",
                     "validators": []
-                  }
-                }
-              },
-              "_resources": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "resources": {
-                    "type": "string",
-                    "title": "Resources",
-                    "default": "Additional resources.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_gmcq": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Multiple choice question",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_hotgraphic": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Image with selectable areas. Select each button to show more information.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "item": {
-                    "type": "string",
-                    "title": "Item",
-                    "default": "Item {{{itemNumber}}} of {{{totalItems}}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "previous": {
-                    "type": "string",
-                    "title": "Previous",
-                    "default": "{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "next": {
-                    "type": "string",
-                    "title": "Next",
-                    "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "popupPagination": {
-                    "type": "string",
-                    "title": "Popup pagination",
-                    "description": "This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total",
-                    "default": "{{itemNumber}} / {{totalItems}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_matching": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Matching. Select from lists and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_boxMenu": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "durationLabel": {
-                    "type": "string",
-                    "title": "Duration label",
-                    "default": "Duration:",
-                    "_adapt": {
-                      "translatable": true
-                    }
                   }
                 }
               },
@@ -9427,44 +9412,14 @@
                   }
                 }
               },
-              "_narrative": {
+              "_matching": {
                 "type": "object",
                 "default": {},
                 "properties": {
                   "ariaRegion": {
                     "type": "string",
                     "title": "ARIA region",
-                    "default": "Slide show. Select the next button to progress.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "previous": {
-                    "type": "string",
-                    "title": "Previous",
-                    "default": "{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  },
-                  "next": {
-                    "type": "string",
-                    "title": "Next",
-                    "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_mcq": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Multiple choice question",
+                    "default": "Matching. Select from lists and then submit.",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9500,6 +9455,109 @@
                     }
                   }
                 }
+              },
+              "_narrative": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Slide show. Select the next button to progress.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "previous": {
+                    "type": "string",
+                    "title": "Previous",
+                    "default": "{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "next": {
+                    "type": "string",
+                    "title": "Next",
+                    "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_boxMenu": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "durationLabel": {
+                    "type": "string",
+                    "title": "Duration label",
+                    "default": "Duration:",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_hotgraphic": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Image with selectable areas. Select each button to show more information.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "item": {
+                    "type": "string",
+                    "title": "Item",
+                    "default": "Item {{{itemNumber}}} of {{{totalItems}}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "previous": {
+                    "type": "string",
+                    "title": "Previous",
+                    "default": "{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "next": {
+                    "type": "string",
+                    "title": "Next",
+                    "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "popupPagination": {
+                    "type": "string",
+                    "title": "Popup pagination",
+                    "description": "This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total",
+                    "default": "{{itemNumber}} / {{totalItems}}",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_tooltips": {
+            "type": "object",
+            "title": "Tooltips",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enabled",
+                "default": true
               }
             }
           },
@@ -9707,6 +9765,47 @@
                 "_adapt": {
                   "editorOnly": true
                 }
+              },
+              "_showLabel": {
+                "type": "boolean",
+                "title": "Show navigation button labels",
+                "default": false,
+                "_adapt": {
+                  "editorOnly": true
+                }
+              },
+              "_showLabelAtWidth": {
+                "type": "string",
+                "title": "Show label at this breakpoint and higher",
+                "description": "When the user's browser window is at least this wide, the labels will be shown. Options refer to the standard Adapt breakpoints. The 'any' option will show the label at any size.",
+                "default": "medium",
+                "enum": [
+                  "any",
+                  "small",
+                  "medium",
+                  "large"
+                ],
+                "_backboneForms": "Select",
+                "_adapt": {
+                  "editorOnly": true
+                }
+              },
+              "_labelPosition": {
+                "type": "string",
+                "title": "Label position",
+                "description": "Where to show the label in relation to the button icons",
+                "default": "auto",
+                "enum": [
+                  "auto",
+                  "top",
+                  "bottom",
+                  "left",
+                  "right"
+                ],
+                "_backboneForms": "Select",
+                "_adapt": {
+                  "editorOnly": true
+                }
               }
             }
           },
@@ -9891,40 +9990,6 @@
               }
             }
           },
-          "_pageLevelProgress": {
-            "type": "object",
-            "title": "Page Level Progress",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Enable Page Level Progress",
-                "default": true
-              },
-              "_showPageCompletion": {
-                "type": "boolean",
-                "title": "Include overall page completion",
-                "description": "Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress",
-                "default": true
-              },
-              "_isCompletionIndicatorEnabled": {
-                "type": "boolean",
-                "title": "Show inline completion indicator",
-                "default": false
-              },
-              "_isShownInNavigationBar": {
-                "type": "boolean",
-                "title": "Show progress in the navigation bar",
-                "default": true
-              },
-              "_showAtCourseLevel": {
-                "type": "boolean",
-                "title": "Display all content objects and the current page components",
-                "description": "Controls whether to display all content objects and the current page components together, or just the current page components",
-                "default": false
-              }
-            }
-          },
           "_resources": {
             "type": "object",
             "title": "Resources",
@@ -10098,6 +10163,40 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "_pageLevelProgress": {
+            "type": "object",
+            "title": "Page Level Progress",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Enable Page Level Progress",
+                "default": true
+              },
+              "_showPageCompletion": {
+                "type": "boolean",
+                "title": "Include overall page completion",
+                "description": "Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress",
+                "default": true
+              },
+              "_isCompletionIndicatorEnabled": {
+                "type": "boolean",
+                "title": "Show inline completion indicator",
+                "default": false
+              },
+              "_isShownInNavigationBar": {
+                "type": "boolean",
+                "title": "Show progress in the navigation bar",
+                "default": true
+              },
+              "_showAtCourseLevel": {
+                "type": "boolean",
+                "title": "Display all content objects and the current page components",
+                "description": "Controls whether to display all content objects and the current page components together, or just the current page components",
+                "default": false
               }
             }
           },
@@ -10435,7 +10534,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -10453,7 +10552,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Select the headings to find out more.",
             "_adapt": {
               "translatable": true
             }
@@ -10876,7 +10975,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -11330,18 +11429,24 @@
             "description": "When viewing an element - this is the title that will be displayed on the page",
             "default": "",
             "_adapt": {
-              "translatable": true
+              "translatable": false
             },
-            "_backboneForms": "DisplayTitle"
+            "_backboneForms": {
+              "type": "DisplayTitle",
+              "showInUi": false
+            }
           },
           "body": {
             "type": "string",
             "title": "Body",
             "default": "",
             "_adapt": {
-              "translatable": true
+              "translatable": false
             },
-            "_backboneForms": "TextArea"
+            "_backboneForms": {
+              "type": "TextArea",
+              "showInUi": false
+            }
           },
           "instruction": {
             "type": "string",
@@ -11365,9 +11470,9 @@
           },
           "_isOptional": {
             "type": "boolean",
-            "title": "Make this element optional",
+            "title": "Is this optional?",
             "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
+            "default": true,
             "_adapt": {
               "isSetting": true
             },
@@ -11674,7 +11779,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -11692,7 +11797,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
             "_adapt": {
               "translatable": true
             }
@@ -12393,7 +12498,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -12821,7 +12926,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -13402,7 +13507,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -13420,7 +13525,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Choose an option from each dropdown list and select Submit.",
             "_adapt": {
               "translatable": true
             }
@@ -14061,7 +14166,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -14079,7 +14184,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
             "_adapt": {
               "translatable": true
             }
@@ -14730,7 +14835,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -14748,7 +14853,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Select the play button to start the video.",
             "_adapt": {
               "translatable": true
             }
@@ -15321,7 +15426,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -15776,7 +15881,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -15794,7 +15899,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Drag the slider to make your choice and select Submit.",
             "_adapt": {
               "translatable": true
             }
@@ -16429,7 +16534,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -16768,7 +16873,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -16786,7 +16891,7 @@
           "instruction": {
             "type": "string",
             "title": "Instruction",
-            "default": "",
+            "default": "Input your answer and select Submit.",
             "_adapt": {
               "translatable": true
             }
