@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "version": "1.0.0-rc.2"
+    "version": "1.0.0-rc.3"
   },
   "components": {
     "schemas": {
@@ -9148,20 +9148,6 @@
                   }
                 }
               },
-              "_resources": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "resources": {
-                    "type": "string",
-                    "title": "Resources",
-                    "default": "Additional resources.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
               "_gmcq": {
                 "type": "object",
                 "default": {},
@@ -9176,14 +9162,28 @@
                   }
                 }
               },
-              "_mcq": {
+              "_resources": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "resources": {
+                    "type": "string",
+                    "title": "Resources",
+                    "default": "Additional resources.",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_matching": {
                 "type": "object",
                 "default": {},
                 "properties": {
                   "ariaRegion": {
                     "type": "string",
                     "title": "ARIA region",
-                    "default": "Multiple choice question",
+                    "default": "Matching. Select from lists and then submit.",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9243,6 +9243,20 @@
                     "default": 90,
                     "inputType": "Text",
                     "validators": []
+                  }
+                }
+              },
+              "_mcq": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "ariaRegion": {
+                    "type": "string",
+                    "title": "ARIA region",
+                    "default": "Multiple choice question",
+                    "_adapt": {
+                      "translatable": true
+                    }
                   }
                 }
               },
@@ -9412,20 +9426,6 @@
                   }
                 }
               },
-              "_matching": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "ariaRegion": {
-                    "type": "string",
-                    "title": "ARIA region",
-                    "default": "Matching. Select from lists and then submit.",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
               "_slider": {
                 "type": "object",
                 "default": {},
@@ -9456,6 +9456,20 @@
                   }
                 }
               },
+              "_boxMenu": {
+                "type": "object",
+                "default": {},
+                "properties": {
+                  "durationLabel": {
+                    "type": "string",
+                    "title": "Duration label",
+                    "default": "Duration:",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
               "_narrative": {
                 "type": "object",
                 "default": {},
@@ -9480,20 +9494,6 @@
                     "type": "string",
                     "title": "Next",
                     "default": "{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}",
-                    "_adapt": {
-                      "translatable": true
-                    }
-                  }
-                }
-              },
-              "_boxMenu": {
-                "type": "object",
-                "default": {},
-                "properties": {
-                  "durationLabel": {
-                    "type": "string",
-                    "title": "Duration label",
-                    "default": "Duration:",
                     "_adapt": {
                       "translatable": true
                     }
@@ -9892,6 +9892,31 @@
             "title": "External references",
             "default": {}
           },
+          "_assessment": {
+            "type": "object",
+            "title": "Assessment",
+            "default": {},
+            "properties": {
+              "_isPercentageBased": {
+                "type": "boolean",
+                "title": "Set pass mark as percentage",
+                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
+                "default": true
+              },
+              "_scoreToPass": {
+                "type": "number",
+                "title": "Pass mark",
+                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
+                "default": 60
+              },
+              "_correctToPass": {
+                "type": "number",
+                "title": "Correct pass mark",
+                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
+                "default": 60
+              }
+            }
+          },
           "_bookmarking": {
             "type": "object",
             "title": "Bookmarking",
@@ -9962,31 +9987,6 @@
                     }
                   }
                 }
-              }
-            }
-          },
-          "_assessment": {
-            "type": "object",
-            "title": "Assessment",
-            "default": {},
-            "properties": {
-              "_isPercentageBased": {
-                "type": "boolean",
-                "title": "Set pass mark as percentage",
-                "description": "Determines whether the pass mark values should be treated as percentages (default) or as the raw score and correctness",
-                "default": true
-              },
-              "_scoreToPass": {
-                "type": "number",
-                "title": "Pass mark",
-                "description": "The minimum score required by the learner to pass the assessment or the minimum percentage score if percentage-based",
-                "default": 60
-              },
-              "_correctToPass": {
-                "type": "number",
-                "title": "Correct pass mark",
-                "description": "The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based",
-                "default": 60
               }
             }
           },
