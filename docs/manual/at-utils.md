@@ -47,6 +47,7 @@ Installs the application into destination directory
 - `--prerelease --include-prereleases`: Whether to include prereleases THIS COULD BE DANGEROUS
 - `--no-ui`: Run in CLI-only mode
 - `--tag <tag>`: A specific git tag to use
+- `--v --verbose`: Include extra debug messages
 - `-e --super-email <email>`: The admin user email address
 - `-p --pipe-passwd`: Whether the admin password will be piped into the script
 
@@ -60,6 +61,10 @@ Installs the application into destination directory
 ## `mail-test`
 
 Sends a test email
+
+#### Options
+
+- `--v --verbose`: Include extra debug messages
 
 #### Arguments
 
@@ -77,6 +82,7 @@ Registers a super user account
 - `-e --super-email <email>`: The admin user email address
 - `--ignore-prereqs`: Whether to skip the prerequisites check. Warning this could result in expected errors
 - `-p --pipe-passwd`: Whether the admin password will be piped into the script
+- `--v --verbose`: Include extra debug messages
 
 
 ***
@@ -94,6 +100,7 @@ Updates the application in destination directory
 - `--prerelease --include-prereleases`: Whether to include prereleases THIS COULD BE DANGEROUS
 - `--no-ui`: Run in CLI-only mode
 - `--tag <tag>`: A specific git tag to use
+- `--v --verbose`: Include extra debug messages
 - `-d --dry-run`: Check for update without performing any update actions
 
 #### Arguments

@@ -9,6 +9,7 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-assets">adapt-authoring-assets</a></li>
 <li><a href="#/configuration?id=adapt-authoring-auth">adapt-authoring-auth</a></li>
 <li><a href="#/configuration?id=adapt-authoring-browserslist">adapt-authoring-browserslist</a></li>
+<li><a href="#/configuration?id=adapt-authoring-contentplugin">adapt-authoring-contentplugin</a></li>
 <li><a href="#/configuration?id=adapt-authoring-core">adapt-authoring-core</a></li>
 <li><a href="#/configuration?id=adapt-authoring-docs">adapt-authoring-docs</a></li>
 <li><a href="#/configuration?id=adapt-authoring-jsonschema">adapt-authoring-jsonschema</a></li>
@@ -24,6 +25,7 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-server">adapt-authoring-server</a></li>
 <li><a href="#/configuration?id=adapt-authoring-sessions">adapt-authoring-sessions</a></li>
 <li><a href="#/configuration?id=adapt-authoring-ui">adapt-authoring-ui</a></li>
+<li><a href="#/configuration?id=adapt-authoring-users">adapt-authoring-users</a></li>
 </ul>
 
 
@@ -37,6 +39,8 @@ export default {
     buildDir: "$TEMP/framework-builds", // string, optional
     // How long a build should remain valid for. Expects an amount followed by a space and then the unit (e.g. 5 hours)
     buildLifespan: "7d", // string, optional
+    // Whether the Adapt framework can be updated via the REST API
+    enableUpdateApi: true, // boolean, optional
     // Path to the adapt_framework source folder
     frameworkDir: "$TEMP/adapt_framework", // string, optional
     // URL of the Adapt framework git repository to install
@@ -56,7 +60,7 @@ export default {
     // Default repository to use for asset storage
     defaultAssetRepository: "local", // string, optional
     // File types allowed for upload
-    expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","video/mp4"], // array, optional
+    expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","text/vtt","video/mp4"], // array, optional
     // Maximum file upload size
     maxFileSize: "50mb", // string, optional
     // Location of local thumbs dir
@@ -85,6 +89,10 @@ export default {
     runOnBuild: true, // boolean, optional
     // The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.
     updateInterval: "0", // string, optional
+  },
+  'adapt-authoring-contentplugin': {
+    // Location of locally installed plugins
+    pluginDir: "$DATA/contentplugins", // string, optional
   },
   'adapt-authoring-core': {
     // Whether this app configuration is a production environment
@@ -222,6 +230,10 @@ export default {
     // WYSIWYG editor configuration
     ckEditor: {}, // object, optional
   },
+  'adapt-authoring-users': {
+    // If true, all user emails will be converted to lower-case
+    forceLowerCaseEmail: true, // boolean, optional
+  },
 };
 ```
 
@@ -243,6 +255,13 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">How long a build should remain valid for. Expects an amount followed by a space and then the unit (e.g. 5 hours)</div>
 <div class="default"><span class="label">Default</span>: <pre>"7d"</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">enableUpdateApi</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">Whether the Adapt framework can be updated via the REST API</div>
+<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -308,7 +327,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">expectedFileTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">File types allowed for upload</div>
-<div class="default"><span class="label">Default</span>: <pre>["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","video/mp4"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","text/vtt","video/mp4"]</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -402,6 +421,18 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.</div>
 <div class="default"><span class="label">Default</span>: <pre>"0"</pre></div>
+</div>
+</div>
+</div>
+
+<h3 id="adapt-authoring-contentplugin" class="dep">adapt-authoring-contentplugin</h3>
+
+<div class="options">
+<div class="attribute">
+<div class="title"><span class="main">pluginDir</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Location of locally installed plugins</div>
+<div class="default"><span class="label">Default</span>: <pre>"$DATA/contentplugins"</pre></div>
 </div>
 </div>
 </div>
@@ -843,6 +874,18 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">WYSIWYG editor configuration</div>
 <div class="default"><span class="label">Default</span>: <pre>{}</pre></div>
+</div>
+</div>
+</div>
+
+<h3 id="adapt-authoring-users" class="dep">adapt-authoring-users</h3>
+
+<div class="options">
+<div class="attribute">
+<div class="title"><span class="main">forceLowerCaseEmail</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">If true, all user emails will be converted to lower-case</div>
+<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
 </div>
 </div>
 </div>
