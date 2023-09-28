@@ -77,287 +77,6 @@ SOFTWARE.
 </details>
 
 <details>
-<summary>Apache License 2.0 (Apache-2.0)</summary>
-<p>A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
-<p>This license allows the following:
-<ul><li>Commercial use</li>
-<li>Modifications</li>
-<li>Distribution</li>
-<li>Patent use</li>
-<li>Private use</li></ul></p>
-<p>The original license text is as follows:</p>
-<pre>                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
-
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright [yyyy] [name of copyright owner]
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-</pre>
-</details>
-
-<details>
-<summary>ISC License (ISC)</summary>
-<p>A permissive license lets people do anything with your code with proper attribution and without warranty. The ISC license is functionally equivalent to the <a href="/licenses/bsd-2-clause/">BSD 2-Clause</a> and <a href="/licenses/mit/">MIT</a> licenses, removing some language that is no longer necessary.</p>
-<p>This license allows the following:
-<ul><li>Commercial use</li>
-<li>Distribution</li>
-<li>Modifications</li>
-<li>Private use</li></ul></p>
-<p>The original license text is as follows:</p>
-<pre>ISC License
-
-Copyright (c) [year] [fullname]
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-</pre>
-</details>
-
-<details>
-<summary>BSD 3-Clause "New" or "Revised" License (BSD-3-Clause)</summary>
-<p>A permissive license similar to the <a href="/licenses/bsd-2-clause/">BSD 2-Clause License</a>, but with a 3rd clause that prohibits others from using the name of the copyright holder or its contributors to promote derived products without written consent.</p>
-<p>This license allows the following:
-<ul><li>Commercial use</li>
-<li>Modifications</li>
-<li>Distribution</li>
-<li>Private use</li></ul></p>
-<p>The original license text is as follows:</p>
-<pre>BSD 3-Clause License
-
-Copyright (c) [year], [fullname]
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
-
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</details>
-
-<details>
 <summary>GNU General Public License v3.0 (GPL-3.0)</summary>
 <p>Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.</p>
 <p>This license allows the following:
@@ -1041,6 +760,287 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+</pre>
+</details>
+
+<details>
+<summary>ISC License (ISC)</summary>
+<p>A permissive license lets people do anything with your code with proper attribution and without warranty. The ISC license is functionally equivalent to the <a href="/licenses/bsd-2-clause/">BSD 2-Clause</a> and <a href="/licenses/mit/">MIT</a> licenses, removing some language that is no longer necessary.</p>
+<p>This license allows the following:
+<ul><li>Commercial use</li>
+<li>Distribution</li>
+<li>Modifications</li>
+<li>Private use</li></ul></p>
+<p>The original license text is as follows:</p>
+<pre>ISC License
+
+Copyright (c) [year] [fullname]
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+</pre>
+</details>
+
+<details>
+<summary>Apache License 2.0 (Apache-2.0)</summary>
+<p>A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
+<p>This license allows the following:
+<ul><li>Commercial use</li>
+<li>Modifications</li>
+<li>Distribution</li>
+<li>Patent use</li>
+<li>Private use</li></ul></p>
+<p>The original license text is as follows:</p>
+<pre>                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre>
+</details>
+
+<details>
+<summary>BSD 3-Clause "New" or "Revised" License (BSD-3-Clause)</summary>
+<p>A permissive license similar to the <a href="/licenses/bsd-2-clause/">BSD 2-Clause License</a>, but with a 3rd clause that prohibits others from using the name of the copyright holder or its contributors to promote derived products without written consent.</p>
+<p>This license allows the following:
+<ul><li>Commercial use</li>
+<li>Modifications</li>
+<li>Distribution</li>
+<li>Private use</li></ul></p>
+<p>The original license text is as follows:</p>
+<pre>BSD 3-Clause License
+
+Copyright (c) [year], [fullname]
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
 </details>
 
@@ -2005,21 +2005,6 @@ Click the heading below to view a complete list of all third-party dependencies.
 <details>
 <summary>Module dependency list</summary>
 <table><tr><th>Name</th><th>Version</th><th>License</th><th>Description</th></tr>
-<tr><td>depd</td><td>2.0.0</td><td>MIT</td><td>Deprecate all the things</tr>
-<tr><td>destroy</td><td>1.2.0</td><td>MIT</td><td>destroy a stream if possible</tr>
-<tr><td>detect-libc</td><td>2.0.2</td><td>Apache-2.0</td><td>Node.js module to detect the C standard library (libc) implementation family and version</tr>
-<tr><td><a href="https://github.com/npm/dezalgo" target="_blank">dezalgo</a></td><td>1.0.4</td><td>ISC</td><td>Contain async insanity so that the dark pony lord doesn't eat souls</tr>
-<tr><td>diff</td><td>5.0.0</td><td>BSD-3-Clause</td><td>A javascript text diff implementation.</tr>
-<tr><td>fault</td><td>1.0.4</td><td>MIT</td><td>Functional errors with formatted output</tr>
-<tr><td>fd-slicer</td><td>1.1.0</td><td>MIT</td><td>safely create multiple ReadStream or WriteStream objects from the same file descriptor</tr>
-<tr><td><a href="https://github.com/node-fetch/fetch-blob#readme" target="_blank">fetch-blob</a></td><td>3.2.0</td><td>MIT</td><td>Blob & File implementation in Node.js, originally from node-fetch.</tr>
-<tr><td>ffmpeg-static</td><td>4.4.1</td><td>GPL-3.0-or-later</td><td>ffmpeg static binaries for Mac OSX and Linux and Windows</tr>
-<tr><td>ffprobe-static</td><td>3.1.0</td><td>MIT</td><td>Static binaries for ffprobe.</tr>
-<tr><td>figlet</td><td>1.6.0</td><td>MIT</td><td>Creates ASCII Art from text. A full implementation of the FIGfont spec.</tr>
-<tr><td>figures</td><td>3.2.0</td><td>MIT</td><td>Unicode symbols with Windows CMD fallbacks</tr>
-<tr><td>file-entry-cache</td><td>6.0.1</td><td>MIT</td><td>Super simple cache for file metadata, useful for process that work o a given series of files and that only need to repeat the job on the changed ones since the previous run of the process</tr>
-<tr><td>file-type</td><td>18.5.0</td><td>MIT</td><td>Detect the file type of a Buffer/Uint8Array/ArrayBuffer</tr>
-<tr><td>filename-reserved-regex</td><td>2.0.0</td><td>MIT</td><td>Regular expression for matching reserved filename characters</tr>
 <tr><td>accepts</td><td>1.3.8</td><td>MIT</td><td>Higher-level content negotiation</tr>
 <tr><td><a href="https://github.com/acornjs/acorn-jsx" target="_blank">acorn-jsx</a></td><td>5.3.2</td><td>MIT</td><td>Modern, fast React.js JSX parser</tr>
 <tr><td><a href="https://github.com/acornjs/acorn" target="_blank">acorn</a></td><td>8.10.0</td><td>MIT</td><td>ECMAScript parser</tr>
@@ -2095,8 +2080,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>chalk</td><td>4.1.2</td><td>MIT</td><td>Terminal string styling done right</tr>
 <tr><td>character-entities-legacy</td><td>1.1.4</td><td>MIT</td><td>HTML legacy character entity information</tr>
 <tr><td>character-entities</td><td>1.2.4</td><td>MIT</td><td>HTML character entity information</tr>
-<tr><td><a href="https://github.com/runk/node-chardet" target="_blank">chardet</a></td><td>0.7.0</td><td>MIT</td><td>Character detector</tr>
 <tr><td>character-reference-invalid</td><td>1.1.4</td><td>MIT</td><td>HTML invalid numeric character reference information</tr>
+<tr><td><a href="https://github.com/runk/node-chardet" target="_blank">chardet</a></td><td>0.7.0</td><td>MIT</td><td>Character detector</tr>
 <tr><td><a href="https://github.com/paulmillr/chokidar" target="_blank">chokidar</a></td><td>3.5.3</td><td>MIT</td><td>Minimal and efficient cross-platform file watching library</tr>
 <tr><td>chownr</td><td>1.1.4</td><td>ISC</td><td>like `chown -R`</tr>
 <tr><td><a href="https://github.com/watson/ci-info" target="_blank">ci-info</a></td><td>3.8.0</td><td>MIT</td><td>Get details about the current Continuous Integration environment</tr>
@@ -2106,8 +2091,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/knownasilya/cli-width" target="_blank">cli-width</a></td><td>3.0.0</td><td>ISC</td><td>Get stdout window width, with two fallbacks, tty and then a default.</tr>
 <tr><td>cliui</td><td>6.0.0</td><td>ISC</td><td>easily create complex multi-column command-line-interfaces</tr>
 <tr><td><a href="https://github.com/lukechilds/clone-response" target="_blank">clone-response</a></td><td>1.0.2</td><td>MIT</td><td>Clone a Node.js HTTP response stream</tr>
-<tr><td><a href="https://github.com/colorjs/color-name" target="_blank">color-name</a></td><td>1.1.4</td><td>MIT</td><td>A list of color names and its values</tr>
 <tr><td>color-convert</td><td>2.0.1</td><td>MIT</td><td>Plain color conversion functions</tr>
+<tr><td><a href="https://github.com/colorjs/color-name" target="_blank">color-name</a></td><td>1.1.4</td><td>MIT</td><td>A list of color names and its values</tr>
 <tr><td><a href="https://github.com/felixge/node-combined-stream" target="_blank">combined-stream</a></td><td>1.0.8</td><td>MIT</td><td>A stream that emits multiple other streams one after another.</tr>
 <tr><td>comma-separated-tokens</td><td>1.0.8</td><td>MIT</td><td>Parse and stringify comma-separated tokens</tr>
 <tr><td>commander</td><td>11.0.0</td><td>MIT</td><td>the complete solution for node.js command-line programs</tr>
@@ -2159,6 +2144,11 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/ljharb/define-data-property#readme" target="_blank">define-data-property</a></td><td>1.1.0</td><td>MIT</td><td>Define a data property on an object. Will fall back to assignment in an engine without descriptors.</tr>
 <tr><td>define-properties</td><td>1.2.1</td><td>MIT</td><td>Define multiple non-enumerable properties at once. Uses `Object.defineProperty` when available; falls back to standard assignment in older engines.</tr>
 <tr><td><a href="https://github.com/felixge/node-delayed-stream" target="_blank">delayed-stream</a></td><td>1.0.0</td><td>MIT</td><td>Buffers events from a stream until you are ready to handle them.</tr>
+<tr><td>depd</td><td>2.0.0</td><td>MIT</td><td>Deprecate all the things</tr>
+<tr><td>destroy</td><td>1.2.0</td><td>MIT</td><td>destroy a stream if possible</tr>
+<tr><td>detect-libc</td><td>2.0.2</td><td>Apache-2.0</td><td>Node.js module to detect the C standard library (libc) implementation family and version</tr>
+<tr><td><a href="https://github.com/npm/dezalgo" target="_blank">dezalgo</a></td><td>1.0.4</td><td>ISC</td><td>Contain async insanity so that the dark pony lord doesn't eat souls</tr>
+<tr><td>diff</td><td>5.0.0</td><td>BSD-3-Clause</td><td>A javascript text diff implementation.</tr>
 <tr><td>docdash</td><td>1.2.0</td><td>Apache-2.0</td><td>A clean, responsive documentation template theme for JSDoc 3 inspired by lodash and minami</tr>
 <tr><td><a href="https://github.com/docsifyjs/docsify-cli#readme" target="_blank">docsify-cli</a></td><td>4.4.4</td><td>MIT</td><td>A magical documentation generator.</tr>
 <tr><td><a href="https://docsify.js.org" target="_blank">docsify-server-renderer</a></td><td>4.13.1</td><td>MIT</td><td>docsify server renderer</tr>
@@ -2171,7 +2161,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>duplexer3</td><td>0.1.5</td><td>BSD-3-Clause</td><td>Like duplexer but using streams3</tr>
 <tr><td><a href="https://github.com/Brightspace/node-ecdsa-sig-formatter#readme" target="_blank">ecdsa-sig-formatter</a></td><td>1.0.11</td><td>Apache-2.0</td><td>Translate ECDSA signatures between ASN.1/DER and JOSE-style concatenation</tr>
 <tr><td>ee-first</td><td>1.1.1</td><td>MIT</td><td>return the first event in a set of ee/event pairs</tr>
-<tr><td>electron-to-chromium</td><td>1.4.532</td><td>ISC</td><td>Provides a list of electron-to-chromium version mappings</tr>
+<tr><td>electron-to-chromium</td><td>1.4.534</td><td>ISC</td><td>Provides a list of electron-to-chromium version mappings</tr>
 <tr><td><a href="https://mths.be/emoji-regex" target="_blank">emoji-regex</a></td><td>8.0.0</td><td>MIT</td><td>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</tr>
 <tr><td>encodeurl</td><td>1.0.2</td><td>MIT</td><td>Encode a URL to a percent-encoded form, excluding already-encoded sequences</tr>
 <tr><td><a href="https://github.com/mafintosh/end-of-stream" target="_blank">end-of-stream</a></td><td>1.4.4</td><td>MIT</td><td>Call a callback when a readable/writable/duplex stream has completed or failed.</tr>
@@ -2184,8 +2174,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/es-shims/iterator-helpers#readme" target="_blank">es-iterator-helpers</a></td><td>1.0.15</td><td>MIT</td><td>An ESnext spec-compliant iterator helpers shim/polyfill/replacement that works as far down as ES3.</tr>
 <tr><td><a href="https://github.com/es-shims/es-set-tostringtag#readme" target="_blank">es-set-tostringtag</a></td><td>2.0.1</td><td>MIT</td><td>A helper to optimistically set Symbol.toStringTag, when possible.</tr>
 <tr><td><a href="https://github.com/ljharb/es-shim-unscopables#readme" target="_blank">es-shim-unscopables</a></td><td>1.0.0</td><td>MIT</td><td>Helper package to shim a method into `Array.prototype[Symbol.unscopables]`</tr>
-<tr><td>escalade</td><td>3.1.1</td><td>MIT</td><td>A tiny (183B to 210B) and fast utility to ascend parent directories</tr>
 <tr><td>es-to-primitive</td><td>1.2.1</td><td>MIT</td><td>ECMAScript “ToPrimitive” algorithm. Provides ES5 and ES2015 versions.</tr>
+<tr><td>escalade</td><td>3.1.1</td><td>MIT</td><td>A tiny (183B to 210B) and fast utility to ascend parent directories</tr>
 <tr><td>escape-goat</td><td>2.1.1</td><td>MIT</td><td>Escape a string for use in HTML or the inverse</tr>
 <tr><td>escape-html</td><td>1.0.3</td><td>MIT</td><td>Escape string for use in HTML</tr>
 <tr><td>escape-string-regexp</td><td>4.0.0</td><td>MIT</td><td>Escape RegExp special characters</tr>
@@ -2222,6 +2212,16 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>fast-levenshtein</td><td>2.0.6</td><td>MIT</td><td>Efficient implementation of Levenshtein algorithm  with locale-specific collator support.</tr>
 <tr><td>fast-xml-parser</td><td>4.2.5</td><td>MIT</td><td>Validate XML, Parse XML, Build XML without C/C++ based libraries</tr>
 <tr><td><a href="https://github.com/mcollina/fastq#readme" target="_blank">fastq</a></td><td>1.15.0</td><td>ISC</td><td>Fast, in memory work queue</tr>
+<tr><td>fault</td><td>1.0.4</td><td>MIT</td><td>Functional errors with formatted output</tr>
+<tr><td>fd-slicer</td><td>1.1.0</td><td>MIT</td><td>safely create multiple ReadStream or WriteStream objects from the same file descriptor</tr>
+<tr><td><a href="https://github.com/node-fetch/fetch-blob#readme" target="_blank">fetch-blob</a></td><td>3.2.0</td><td>MIT</td><td>Blob & File implementation in Node.js, originally from node-fetch.</tr>
+<tr><td>ffmpeg-static</td><td>4.4.1</td><td>GPL-3.0-or-later</td><td>ffmpeg static binaries for Mac OSX and Linux and Windows</tr>
+<tr><td>ffprobe-static</td><td>3.1.0</td><td>MIT</td><td>Static binaries for ffprobe.</tr>
+<tr><td>figlet</td><td>1.6.0</td><td>MIT</td><td>Creates ASCII Art from text. A full implementation of the FIGfont spec.</tr>
+<tr><td>figures</td><td>3.2.0</td><td>MIT</td><td>Unicode symbols with Windows CMD fallbacks</tr>
+<tr><td>file-entry-cache</td><td>6.0.1</td><td>MIT</td><td>Super simple cache for file metadata, useful for process that work o a given series of files and that only need to repeat the job on the changed ones since the previous run of the process</tr>
+<tr><td>file-type</td><td>18.5.0</td><td>MIT</td><td>Detect the file type of a Buffer/Uint8Array/ArrayBuffer</tr>
+<tr><td>filename-reserved-regex</td><td>2.0.0</td><td>MIT</td><td>Regular expression for matching reserved filename characters</tr>
 <tr><td>filenamify</td><td>2.1.0</td><td>MIT</td><td>Convert a string to a valid safe filename</tr>
 <tr><td><a href="https://github.com/jonschlinkert/fill-range" target="_blank">fill-range</a></td><td>7.0.1</td><td>MIT</td><td>Fill in a range of numbers or letters, optionally passing an increment or `step` to use, or create a regex-compatible range with `options.toRegex`</tr>
 <tr><td>finalhandler</td><td>1.1.2</td><td>MIT</td><td>Node.js final http responder</tr>
@@ -2240,8 +2240,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/node-formidable/formidable" target="_blank">formidable</a></td><td>3.5.1</td><td>MIT</td><td>A node.js module for parsing form data, especially file uploads.</tr>
 <tr><td>forwarded</td><td>0.2.0</td><td>MIT</td><td>Parse HTTP X-Forwarded-For header</tr>
 <tr><td>fresh</td><td>0.5.2</td><td>MIT</td><td>HTTP response freshness testing</tr>
-<tr><td><a href="https://github.com/mafintosh/fs-constants" target="_blank">fs-constants</a></td><td>1.0.0</td><td>MIT</td><td>Require constants across node and the browser</tr>
 <tr><td><a href="https://github.com/hughsk/from2" target="_blank">from2</a></td><td>2.3.0</td><td>MIT</td><td>Convenience wrapper for ReadableStream, with an API lifted from "from" and "through2"</tr>
+<tr><td><a href="https://github.com/mafintosh/fs-constants" target="_blank">fs-constants</a></td><td>1.0.0</td><td>MIT</td><td>Require constants across node and the browser</tr>
 <tr><td><a href="https://github.com/jprichardson/node-fs-extra" target="_blank">fs-extra</a></td><td>9.0.1</td><td>MIT</td><td>fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as recursive mkdir, copy, and remove.</tr>
 <tr><td>fs.realpath</td><td>1.0.0</td><td>ISC</td><td>Use node's fs.realpath, but fall back to the JS implementation if the native one fails</tr>
 <tr><td><a href="https://github.com/Raynos/function-bind" target="_blank">function-bind</a></td><td>1.1.1</td><td>MIT</td><td>Implementation of Function.prototype.bind</tr>
@@ -2271,8 +2271,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>has-ansi</td><td>2.0.0</td><td>MIT</td><td>Check if a string has ANSI escape codes</tr>
 <tr><td><a href="https://github.com/ljharb/has-bigints#readme" target="_blank">has-bigints</a></td><td>1.0.2</td><td>MIT</td><td>Determine if the JS environment has BigInt support.</tr>
 <tr><td>has-flag</td><td>4.0.0</td><td>MIT</td><td>Check if argv has a specific flag</tr>
-<tr><td><a href="https://github.com/inspect-js/has-proto#readme" target="_blank">has-proto</a></td><td>1.0.1</td><td>MIT</td><td>Does this environment have the ability to get the [[Prototype]] of an object on creation with `__proto__`?</tr>
 <tr><td><a href="https://github.com/inspect-js/has-property-descriptors#readme" target="_blank">has-property-descriptors</a></td><td>1.0.0</td><td>MIT</td><td>Does the environment have full property descriptor support? Handles IE 8's broken defineProperty/gOPD.</tr>
+<tr><td><a href="https://github.com/inspect-js/has-proto#readme" target="_blank">has-proto</a></td><td>1.0.1</td><td>MIT</td><td>Does this environment have the ability to get the [[Prototype]] of an object on creation with `__proto__`?</tr>
 <tr><td><a href="https://github.com/Xotic750/has-symbol-support-x" target="_blank">has-symbol-support-x</a></td><td>1.4.2</td><td>MIT</td><td>Tests if ES6 Symbol is supported.</tr>
 <tr><td><a href="https://github.com/ljharb/has-symbols#readme" target="_blank">has-symbols</a></td><td>1.0.3</td><td>MIT</td><td>Determine if the JS environment has Symbol support. Supports spec, or shams.</tr>
 <tr><td><a href="https://github.com/Xotic750/has-to-string-tag-x" target="_blank">has-to-string-tag-x</a></td><td>1.4.1</td><td>MIT</td><td>Tests if ES6 @@toStringTag is supported.</tr>
@@ -2475,8 +2475,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>p-cancelable</td><td>0.4.1</td><td>MIT</td><td>Create a promise that can be canceled</tr>
 <tr><td>p-event</td><td>4.2.0</td><td>MIT</td><td>Promisify an event by waiting for it to be emitted</tr>
 <tr><td>p-finally</td><td>1.0.0</td><td>MIT</td><td>`Promise#finally()` ponyfill - Invoked when the promise is settled regardless of outcome</tr>
-<tr><td><a href="https://reactjs.org/" target="_blank">react-is</a></td><td>16.13.1</td><td>MIT</td><td>Brand checking of React Elements.</tr>
-<tr><td><a href="https://github.com/xyc/react-inspector" target="_blank">react-inspector</a></td><td>6.0.2</td><td>MIT</td><td>Power of Browser DevTools inspectors right inside your React app</tr>
+<tr><td><a href="https://github.com/reduxjs/react-redux" target="_blank">react-redux</a></td><td>8.1.2</td><td>MIT</td><td>Official React bindings for Redux</tr>
 <tr><td><a href="https://github.com/react-syntax-highlighter/react-syntax-highlighter#readme" target="_blank">react-syntax-highlighter</a></td><td>15.5.0</td><td>MIT</td><td>syntax highlighting component for react with prismjs or highlightjs ast using inline styles</tr>
 <tr><td><a href="https://reactjs.org/" target="_blank">react</a></td><td>17.0.2</td><td>MIT</td><td>React is a JavaScript library for building user interfaces.</tr>
 <tr><td>readable-stream</td><td>3.6.2</td><td>MIT</td><td>Streams3, a user-land copy of the stream library from Node.js</tr>
@@ -2502,15 +2501,15 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/troygoode/node-require-directory/" target="_blank">require-directory</a></td><td>2.1.1</td><td>MIT</td><td>Recursively iterates over specified directory, require()'ing each file, and returning a nested hash structure containing those modules.</tr>
 <tr><td>require-from-string</td><td>2.0.2</td><td>MIT</td><td>Require module from string</tr>
 <tr><td><a href="https://github.com/yargs/require-main-filename#readme" target="_blank">require-main-filename</a></td><td>2.0.0</td><td>ISC</td><td>shim for require.main.filename() that works in as many environments as possible</tr>
-<tr><td><a href="https://github.com/unshiftio/requires-port" target="_blank">requires-port</a></td><td>1.0.0</td><td>MIT</td><td>Check if a protocol requires a certain port number to be added to an URL.</tr>
 <tr><td><a href="http://github.com/jrburke/r.js" target="_blank">requirejs</a></td><td>2.3.6</td><td>MIT</td><td>Node adapter for RequireJS, for loading AMD modules. Includes RequireJS optimizer</tr>
+<tr><td><a href="https://github.com/unshiftio/requires-port" target="_blank">requires-port</a></td><td>1.0.0</td><td>MIT</td><td>Check if a protocol requires a certain port number to be added to an URL.</tr>
 <tr><td><a href="https://github.com/hegemonic/requizzle" target="_blank">requizzle</a></td><td>0.2.4</td><td>MIT</td><td>Swizzle a little something into your require() calls.</tr>
 <tr><td>reselect</td><td>4.1.8</td><td>MIT</td><td>Selectors for Redux.</tr>
+<tr><td>resolve-from</td><td>4.0.0</td><td>MIT</td><td>Resolve the path of a module like `require.resolve()` but from a given path</tr>
 <tr><td>resolve-pathname</td><td>3.0.0</td><td>MIT</td><td>Resolve URL pathnames using JavaScript</tr>
 <tr><td>resolve</td><td>1.22.6</td><td>MIT</td><td>resolve like require.resolve() on behalf of files asynchronously and synchronously</tr>
-<tr><td>resolve-from</td><td>4.0.0</td><td>MIT</td><td>Resolve the path of a module like `require.resolve()` but from a given path</tr>
-<tr><td>restore-cursor</td><td>3.1.0</td><td>MIT</td><td>Gracefully restore the CLI cursor on exit</tr>
 <tr><td>responselike</td><td>1.0.2</td><td>MIT</td><td>A response-like object for mocking a Node.js HTTP response stream</tr>
+<tr><td>restore-cursor</td><td>3.1.0</td><td>MIT</td><td>Gracefully restore the CLI cursor on exit</tr>
 <tr><td>ret</td><td>0.2.2</td><td>MIT</td><td>Tokenizes a string that represents a regular expression.</tr>
 <tr><td><a href="https://github.com/mcollina/reusify#readme" target="_blank">reusify</a></td><td>1.0.4</td><td>MIT</td><td>Reuse objects and functions with style</tr>
 <tr><td>rimraf</td><td>3.0.2</td><td>ISC</td><td>A deep deletion module for node (like `rm -rf`)</tr>
@@ -2566,12 +2565,12 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>statuses</td><td>2.0.1</td><td>MIT</td><td>HTTP status utility</tr>
 <tr><td>streamsearch</td><td>1.1.0</td><td>undefined</td><td>Streaming Boyer-Moore-Horspool searching for node.js</tr>
 <tr><td>strict-uri-encode</td><td>1.1.0</td><td>MIT</td><td>A stricter URI encode adhering to RFC 3986</tr>
-<tr><td>string-width</td><td>4.2.3</td><td>MIT</td><td>Get the visual width of a string - the number of columns required to display it</tr>
 <tr><td><a href="https://github.com/nodejs/string_decoder" target="_blank">string_decoder</a></td><td>1.3.0</td><td>MIT</td><td>The string_decoder module from Node core</tr>
+<tr><td>string-width</td><td>4.2.3</td><td>MIT</td><td>Get the visual width of a string - the number of columns required to display it</tr>
 <tr><td><a href="https://github.com/es-shims/String.prototype.matchAll#readme" target="_blank">string.prototype.matchall</a></td><td>4.0.10</td><td>MIT</td><td>Spec-compliant polyfill for String.prototype.matchAll</tr>
 <tr><td>string.prototype.trim</td><td>1.2.8</td><td>MIT</td><td>ES5 spec-compliant shim for String.prototype.trim</tr>
-<tr><td>string.prototype.trimstart</td><td>1.0.7</td><td>MIT</td><td>ES2019 spec-compliant String.prototype.trimStart shim.</tr>
 <tr><td>string.prototype.trimend</td><td>1.0.7</td><td>MIT</td><td>ES2019 spec-compliant String.prototype.trimEnd shim.</tr>
+<tr><td>string.prototype.trimstart</td><td>1.0.7</td><td>MIT</td><td>ES2019 spec-compliant String.prototype.trimStart shim.</tr>
 <tr><td>strip-ansi</td><td>6.0.1</td><td>MIT</td><td>Strip ANSI escape codes from a string</tr>
 <tr><td>strip-bom</td><td>3.0.0</td><td>MIT</td><td>Strip UTF-8 byte order mark (BOM) from a string</tr>
 <tr><td>strip-dirs</td><td>2.1.0</td><td>MIT</td><td>Remove leading directory components from a path, like tar's --strip-components option</tr>
@@ -2598,8 +2597,8 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/mafintosh/to-buffer" target="_blank">to-buffer</a></td><td>1.1.1</td><td>MIT</td><td>Pass in a string, get a buffer back. Pass in a buffer, get the same buffer back</tr>
 <tr><td>to-fast-properties</td><td>2.0.0</td><td>MIT</td><td>Force V8 to use fast properties for an object</tr>
 <tr><td>to-readable-stream</td><td>1.0.0</td><td>MIT</td><td>Convert a string/Buffer/Uint8Array to a readable stream</tr>
-<tr><td>toggle-selection</td><td>1.0.6</td><td>MIT</td><td>Toggle current selected content in browser</tr>
 <tr><td><a href="https://github.com/micromatch/to-regex-range" target="_blank">to-regex-range</a></td><td>5.0.1</td><td>MIT</td><td>Pass two numbers, get a regex-compatible source string for matching ranges. Validated against more than 2.78 million test assertions.</tr>
+<tr><td>toggle-selection</td><td>1.0.6</td><td>MIT</td><td>Toggle current selected content in browser</tr>
 <tr><td>toidentifier</td><td>1.0.1</td><td>MIT</td><td>Convert a string of words to a JavaScript identifier</tr>
 <tr><td>token-types</td><td>5.0.1</td><td>MIT</td><td>Common token types for decoding and encoding numeric and string values</tr>
 <tr><td>tr46</td><td>3.0.0</td><td>MIT</td><td>An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing</tr>
@@ -2663,10 +2662,10 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td><a href="https://github.com/inspect-js/which-collection#readme" target="_blank">which-collection</a></td><td>1.0.1</td><td>MIT</td><td>Which kind of Collection (Map, Set, WeakMap, WeakSet) is this JavaScript value? Works cross-realm, without `instanceof`, and despite Symbol.toStringTag.</tr>
 <tr><td><a href="https://github.com/nexdrew/which-module#readme" target="_blank">which-module</a></td><td>2.0.1</td><td>ISC</td><td>Find the module object for something that was require()d</tr>
 <tr><td>which-typed-array</td><td>1.1.11</td><td>MIT</td><td>Which kind of Typed Array is this JavaScript value? Works cross-realm, without `instanceof`, and despite Symbol.toStringTag.</tr>
-<tr><td>widest-line</td><td>3.1.0</td><td>MIT</td><td>Get the visual width of the widest line in a string - the number of columns required to display it</tr>
 <tr><td>which</td><td>2.0.2</td><td>ISC</td><td>Like which(1) unix command. Find the first instance of an executable in the PATH.</tr>
-<tr><td><a href="https://github.com/josdejong/workerpool" target="_blank">workerpool</a></td><td>6.2.0</td><td>Apache-2.0</td><td>Offload tasks to a pool of workers on node.js and in the browser</tr>
+<tr><td>widest-line</td><td>3.1.0</td><td>MIT</td><td>Get the visual width of the widest line in a string - the number of columns required to display it</tr>
 <tr><td>wordwrap</td><td>1.0.0</td><td>MIT</td><td>Wrap those words. Show them at what columns to start and stop.</tr>
+<tr><td><a href="https://github.com/josdejong/workerpool" target="_blank">workerpool</a></td><td>6.2.0</td><td>Apache-2.0</td><td>Offload tasks to a pool of workers on node.js and in the browser</tr>
 <tr><td>wrap-ansi</td><td>6.2.0</td><td>MIT</td><td>Wordwrap a string with ANSI escape codes</tr>
 <tr><td><a href="https://github.com/npm/wrappy" target="_blank">wrappy</a></td><td>1.0.2</td><td>ISC</td><td>Callback wrapping utility</tr>
 <tr><td><a href="https://github.com/npm/write-file-atomic" target="_blank">write-file-atomic</a></td><td>3.0.3</td><td>ISC</td><td>Write files in an atomic fashion w/configurable ownership</tr>
@@ -2688,8 +2687,9 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>yocto-queue</td><td>1.0.0</td><td>MIT</td><td>Tiny queue data structure</tr>
 <tr><td><a href="https://zengabor.github.io/zenscroll/" target="_blank">zenscroll</a></td><td>4.0.2</td><td>Unlicense</td><td>A module to smooth-scroll web pages and scrollable elements (like DIVs)</tr>
 <tr><td><a href="https://github.com/taylortom/zipper" target="_blank">zipper</a></td><td>1.0.0</td><td>undefined</td><td>Module for zipping/unzipping files</tr>
+<tr><td><a href="https://reactjs.org/" target="_blank">react-is</a></td><td>16.13.1</td><td>MIT</td><td>Brand checking of React Elements.</tr>
+<tr><td><a href="https://github.com/xyc/react-inspector" target="_blank">react-inspector</a></td><td>6.0.2</td><td>MIT</td><td>Power of Browser DevTools inspectors right inside your React app</tr>
 <tr><td>react-immutable-pure-component</td><td>2.2.2</td><td>MIT</td><td>React PureComponent implementation embracing Immutable.js</tr>
-<tr><td><a href="https://github.com/reduxjs/react-redux" target="_blank">react-redux</a></td><td>8.1.2</td><td>MIT</td><td>Official React bindings for Redux</tr>
 <tr><td>p-is-promise</td><td>1.1.0</td><td>MIT</td><td>Check if something is a promise</tr>
 <tr><td>p-limit</td><td>4.0.0</td><td>MIT</td><td>Run multiple promise-returning & async functions with limited concurrency</tr>
 <tr><td>p-locate</td><td>6.0.0</td><td>MIT</td><td>Get the first fulfilled promise that satisfies the provided testing function</tr>

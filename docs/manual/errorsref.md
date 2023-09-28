@@ -64,6 +64,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=INCORRECT_PASSWORD">INCORRECT_PASSWORD</a></li>
 <li><a href="#/errorsref?id=INVALID_ASSET_URL">INVALID_ASSET_URL</a></li>
 <li><a href="#/errorsref?id=INVALID_LOGIN_DETAILS">INVALID_LOGIN_DETAILS</a></li>
+<li><a href="#/errorsref?id=INVALID_METHOD">INVALID_METHOD</a></li>
 <li><a href="#/errorsref?id=INVALID_OBJECTID">INVALID_OBJECTID</a></li>
 <li><a href="#/errorsref?id=INVALID_PARAMS">INVALID_PARAMS</a></li>
 <li><a href="#/errorsref?id=INVALID_PARENT">INVALID_PARENT</a></li>
@@ -170,6 +171,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `INCORRECT_PASSWORD` | Provided password does not match that stored | 401 | <ul></ul> |
 | `INVALID_ASSET_URL` | Invalid URL has been specified for external asset | 400 | <ul><li>`url`: The asset URL</li></ul> |
 | `INVALID_LOGIN_DETAILS` | Invalid login details were provided | 401 | <ul></ul> |
+| `INVALID_METHOD` | HTTP method is not supported for endpoint | 405 | <ul><li>`endpoint`: The API endpoint</li><li>`method`: The HTTP method</li></ul> |
 | `INVALID_OBJECTID` | Not a valid ObjectId | 400 | <ul><li>`value`: The value</li></ul> |
 | `INVALID_PARAMS` | Invalid parameters have been provided | 400 | <ul><li>`params`: The invalid params</li></ul> |
 | `INVALID_PARENT` | Specified item is not a valid content item Invalid parent itemparent | 500 | <ul><li>`parentId`: _id of the parent item</li></ul> |
