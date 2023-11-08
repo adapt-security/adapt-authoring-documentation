@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Mono);
+.code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+h1.page-title {
+  font-size: 33px;
+  margin-bottom: 0;
+}
+.main-page-title {
+  background: #00dd95;
+  padding: 35px;
+}
+.main-page-title h1,
+.main-page-title h2 {
+  color: white;
+}
+.main-page-title h1 {
+  margin: 0;
+  font-size: 40px;
+}
+.main-page-title h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+
+#main .usertext h1,
+#main .usertext h2 {
+  font-family: inherit;
+  font-weight: 300;
+}
+#main .usertext h1 {
+  margin: 0 0 15px 0;
+  font-size: 40px;
+}
+#main .usertext h2 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+
+h4.name {
+  background: #34bee0;
+}
+h4.name a,
+.signature,
+.type-signature {
+  color: #263944;
+}
+.type-signature:last-child {
+  color: #3a7da4;
+}
+
+nav {
+  padding-left: 25px;
+  padding-bottom: 2rem;
+  background-color: #263944;
+}
+nav #nav-search {
+  background: rgba(255,255,255,0.1);
+  border: navajowhite;
+  margin-bottom: 1rem;
+  color: white;
+  outline: none;
+}
+nav h2 {
+  font-size: 14px;
+}
+nav h2:first-child {
+  display: none;
+}
+nav .menu-title {
+  display: block;
+  font-size: 18px !important;
+  font-weight: bold;
+  text-align: center;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+nav .menu-title img {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+nav .menu-title .version {
+  font-size: 14px !important;
+}
+nav h3 {
+  color: #34bee0;
+}
+nav a,
+nav > h2 > a {
+  font-family: 'Open Sans', sans-serif !important;
+  color: white !important;
+  font-size: 14px !important;
+}
+nav ul ul a {
+  border-left-color: #00dd95;
+  color: #b7b7b7 !important;
+  font-size: 13px !important;
+}
+
+section {
+  padding: 30px;
+}
+section.package {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+/**
+ * Navbar width
+ */
+@media only screen and (min-width: 681px) {
+  nav {
+    width: 300px;
+  }
+  nav #nav-search {
+    width: 240px;
+  }
+  #main {
+    width: calc(100% - 300px);
+  }
+  footer {
+    margin-left: 300px;
+  }
+}

@@ -18,26 +18,6 @@
           }
         }
       },
-      "tag": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tag",
-        "description": "Tag metadata applied to other objects",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "title": {
-            "description": "The tag title",
-            "type": "string"
-          }
-        },
-        "required": [
-          "title"
-        ]
-      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -219,6 +199,47 @@
           "assetId"
         ]
       },
+      "log": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "log",
+        "description": "A system log message",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "level": {
+            "description": "The priority level of the log message",
+            "type": "string",
+            "enum": [
+              "debug",
+              "info",
+              "success",
+              "warn",
+              "error",
+              "fatal"
+            ]
+          },
+          "module": {
+            "description": "Module responsible for creating the log",
+            "type": "string"
+          },
+          "timestamp": {
+            "description": "Time log was created",
+            "type": "string",
+            "format": "date-time"
+          },
+          "data": {
+            "description": "The data to be logged",
+            "type": "array"
+          }
+        },
+        "required": [
+          "level"
+        ]
+      },
       "adaptbuild": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "adaptbuild",
@@ -266,10 +287,10 @@
           "createdBy"
         ]
       },
-      "tags": {
+      "tag": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tags",
-        "description": "Extra properties to define tags",
+        "$anchor": "tag",
+        "description": "Tag metadata applied to other objects",
         "type": "object",
         "properties": {
           "_id": {
@@ -277,19 +298,14 @@
             "type": "string",
             "isObjectId": true
           },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
+          "title": {
+            "description": "The tag title",
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "title"
+        ]
       },
       "role": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -494,47 +510,6 @@
           "isLocalInstall"
         ]
       },
-      "log": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "log",
-        "description": "A system log message",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "level": {
-            "description": "The priority level of the log message",
-            "type": "string",
-            "enum": [
-              "debug",
-              "info",
-              "success",
-              "warn",
-              "error",
-              "fatal"
-            ]
-          },
-          "module": {
-            "description": "Module responsible for creating the log",
-            "type": "string"
-          },
-          "timestamp": {
-            "description": "Time log was created",
-            "type": "string",
-            "format": "date-time"
-          },
-          "data": {
-            "description": "The data to be logged",
-            "type": "array"
-          }
-        },
-        "required": [
-          "level"
-        ]
-      },
       "defaultplugins": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "defaultplugins",
@@ -550,6 +525,31 @@
             "description": "Whether the plugin should be added by default for new courses",
             "type": "boolean",
             "default": false
+          }
+        }
+      },
+      "tags": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "tags",
+        "description": "Extra properties to define tags",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
           }
         }
       },
@@ -1181,6 +1181,15 @@
               "isSetting": true
             }
           },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
           "_onScreen": {
             "type": "object",
             "title": "Animation classes",
@@ -1445,6 +1454,15 @@
               "isSetting": true
             }
           },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
           "_onScreen": {
             "type": "object",
             "title": "Animation classes",
@@ -1667,6 +1685,15 @@
             "title": "Custom ARIA level",
             "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
             "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
+            "default": true,
             "_adapt": {
               "isSetting": true
             }
@@ -1910,6 +1937,15 @@
               "isSetting": true
             }
           },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the component title that describes the completion state of the component.",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
           "_onScreen": {
             "type": "object",
             "title": "Animation classes",
@@ -2021,15 +2057,6 @@
               "isSetting": true
             },
             "_backboneForms": "Select"
-          },
-          "_disableAccessibilityState": {
-            "type": "boolean",
-            "title": "Disable completion ARIA label",
-            "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
           },
           "properties": {
             "type": "object",
@@ -2162,6 +2189,15 @@
             "title": "Custom ARIA level",
             "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
             "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
+            "default": true,
             "_adapt": {
               "isSetting": true
             }
@@ -2481,6 +2517,15 @@
             "title": "Custom ARIA level",
             "description": "If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0",
             "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
+            "default": true,
             "_adapt": {
               "isSetting": true
             }
@@ -3342,19 +3387,6 @@
     "/api/adapt/export/:id": {
       "post": {
         "summary": "Create an export zip of an Adapt course",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Course _id",
-            "required": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "The Adapt build data",
@@ -3370,7 +3402,14 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>export:adapt</apan>",
+        "description": "Required scopes: <span>export:adapt</span>",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "security": {
           "roles": [
             "export:adapt"
@@ -3379,19 +3418,6 @@
       },
       "get": {
         "summary": "Retrieve an Adapt course export zip",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Build _id",
-            "required": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "Course build zip file",
@@ -3403,7 +3429,14 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>export:adapt</apan>",
+        "description": "Required scopes: <span>export:adapt</span>",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "security": {
           "roles": [
             "export:adapt"
@@ -3540,7 +3573,7 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>import:adapt</apan>",
+        "description": "Required scopes: <span>import:adapt</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -3552,19 +3585,6 @@
     "/api/adapt/preview/:id": {
       "post": {
         "summary": "Build a preview of an Adapt course",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Course _id",
-            "required": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "The Adapt build data",
@@ -3580,7 +3600,14 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>preview:adapt</apan>",
+        "description": "Required scopes: <span>preview:adapt</span>",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "security": {
           "roles": [
             "preview:adapt"
@@ -3591,19 +3618,6 @@
     "/api/adapt/publish/:id": {
       "post": {
         "summary": "Create a publish zip of an Adapt course",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Course _id",
-            "required": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "The Adapt build data",
@@ -3619,7 +3633,14 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>publish:adapt</apan>",
+        "description": "Required scopes: <span>publish:adapt</span>",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "security": {
           "roles": [
             "publish:adapt"
@@ -3628,19 +3649,6 @@
       },
       "get": {
         "summary": "Retrieve an Adapt course publish zip",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Build _id",
-            "required": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "Course build zip file",
@@ -3652,7 +3660,14 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>publish:adapt</apan>",
+        "description": "Required scopes: <span>publish:adapt</span>",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "security": {
           "roles": [
             "publish:adapt"
@@ -3685,7 +3700,7 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>update:adapt</apan>",
+        "description": "Required scopes: <span>update:adapt</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -3694,10 +3709,32 @@
         }
       },
       "get": {
+        "summary": "Retrieve framework update data",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "canBeUpdated": {
+                      "type": "boolean"
+                    },
+                    "currentVersion": {
+                      "type": "string"
+                    },
+                    "latestCompatibleVersion": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>update:adapt</apan>",
+        "description": "Required scopes: <span>update:adapt</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -3735,7 +3772,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>write:assets</apan>",
+        "description": "Required scopes: <span>write:assets</span>",
         "security": {
           "roles": [
             "write:assets"
@@ -3774,7 +3811,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "description": "Required scopes: <span>read:assets</span>",
         "security": {
           "roles": [
             "read:assets"
@@ -3817,7 +3854,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>write:assets</apan>",
+        "description": "Required scopes: <span>write:assets</span>",
         "security": {
           "roles": [
             "write:assets"
@@ -3849,7 +3886,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "description": "Required scopes: <span>read:assets</span>",
         "security": {
           "roles": [
             "read:assets"
@@ -3890,7 +3927,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>write:assets</apan>",
+        "description": "Required scopes: <span>write:assets</span>",
         "security": {
           "roles": [
             "write:assets"
@@ -3906,7 +3943,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The asset data",
@@ -3922,7 +3958,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>write:assets</apan>",
+        "description": "Required scopes: <span>write:assets</span>",
         "security": {
           "roles": [
             "write:assets"
@@ -3963,7 +3999,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "description": "Required scopes: <span>read:assets</span>",
         "security": {
           "roles": [
             "read:assets"
@@ -3978,7 +4014,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"
@@ -4017,7 +4053,7 @@
         "tags": [
           "assets"
         ],
-        "description": "Required scopes: <span>read:assets</apan>",
+        "description": "Required scopes: <span>read:assets</span>",
         "security": {
           "roles": [
             "read:assets"
@@ -4027,10 +4063,58 @@
     },
     "/api/auth/check": {
       "get": {
+        "summary": "Checks current authentication status",
+        "description": "Route requires no authentication<br/><br/>A HTTP status code of 200 will be returned if request could be authenticated successfully, otherwise an error will be returned.",
+        "responses": {
+          "200": {
+            "description": "User authentication data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "scopes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "isSuper": {
+                      "type": "boolean"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "roles": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth"
         ],
-        "description": "Route requires no authentication",
         "parameters": [],
         "security": {
           "roles": []
@@ -4039,10 +4123,14 @@
     },
     "/api/auth/disavow": {
       "post": {
+        "summary": "De-authenticates the current user from the API",
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "auth"
         ],
-        "description": "Required scopes: <span>disavow:auth</apan>",
+        "description": "Required scopes: <span>disavow:auth</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4053,10 +4141,41 @@
     },
     "/api/auth/generatetoken": {
       "post": {
+        "summary": "Creates a new authentication token",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "lifespan": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth"
         ],
-        "description": "Required scopes: <span>generatetoken:auth</apan>",
+        "description": "Required scopes: <span>generatetoken:auth</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4067,6 +4186,33 @@
     },
     "/api/auth/local": {
       "post": {
+        "summary": "Authenticate with the API",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "persistSession": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "auth local"
         ],
@@ -4079,10 +4225,35 @@
     },
     "/api/auth/local/changepass": {
       "post": {
+        "summary": "Change the password of a user",
+        "description": "Route requires no authentication<br/><br/>Can be used with or without authentication. If authenticated, an email/password combination will be acepted. If unauthenticated, a valid reset token and password must be specified.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Route requires no authentication",
         "parameters": [],
         "security": {
           "roles": []
@@ -4091,10 +4262,29 @@
     },
     "/api/auth/local/disable": {
       "post": {
+        "summary": "Disable user account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Required scopes: <span>write:users</apan>",
+        "description": "Required scopes: <span>write:users</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4105,10 +4295,29 @@
     },
     "/api/auth/local/enable": {
       "post": {
+        "summary": "Enable user account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Required scopes: <span>write:users</apan>",
+        "description": "Required scopes: <span>write:users</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4119,10 +4328,43 @@
     },
     "/api/auth/local/forgotpass": {
       "post": {
+        "summary": "Trigger a password reset",
+        "description": "Route requires no authentication<br/><br/>Generates a password reset and emails this to the user with instructions on updating their password.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Route requires no authentication",
         "parameters": [],
         "security": {
           "roles": []
@@ -4131,10 +4373,29 @@
     },
     "/api/auth/local/invite": {
       "post": {
+        "summary": "Invite a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Required scopes: <span>register:users</apan>",
+        "description": "Required scopes: <span>register:users</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4145,10 +4406,56 @@
     },
     "/api/auth/local/register": {
       "post": {
+        "summary": "Register a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "firstName": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "roles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/localauthuser"
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Required scopes: <span>register:users</apan>",
+        "description": "Required scopes: <span>register:users</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4159,10 +4466,42 @@
     },
     "/api/auth/local/registersuper": {
       "post": {
+        "summary": "Register a new super user",
+        "description": "ROUTE IS ONLY ACCESSIBLE FROM LOCALHOST.<br/><br/>Route requires no authentication<br/><br/>Only one user can be registered in this way, and if a super user already exists the request will fail.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/localauthuser"
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth local"
         ],
-        "description": "ROUTE IS ONLY ACCESSIBLE FROM LOCALHOST.<br/><br/>Route requires no authentication",
         "parameters": [],
         "security": {
           "roles": []
@@ -4171,10 +4510,44 @@
     },
     "/api/auth/local/validatepass": {
       "post": {
+        "summary": "Validate password",
+        "description": "Required scopes: <span>read:me</span><br/><br/>Checks that a password passes the required complexity specified in the application's configuration settings.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth local"
         ],
-        "description": "Required scopes: <span>read:me</apan>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4185,10 +4558,38 @@
     },
     "/api/auth/tokens": {
       "get": {
+        "summary": "Retrieve all authentication tokens for current user",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "userId": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "string"
+                      },
+                      "usedAt": {
+                        "type": "string"
+                      },
+                      "authType": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "auth"
         ],
-        "description": "Required scopes: <span>read:me</apan>",
+        "description": "Required scopes: <span>read:me</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4199,6 +4600,19 @@
     },
     "/api/config": {
       "get": {
+        "summary": "Retrieve public config data",
+        "responses": {
+          "200": {
+            "description": "The public config item data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "config"
         ],
@@ -4238,7 +4652,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4277,7 +4691,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
             "read:content"
@@ -4320,7 +4734,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4352,7 +4766,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
             "read:content"
@@ -4393,7 +4807,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4409,7 +4823,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The content data",
@@ -4425,7 +4838,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4435,10 +4848,27 @@
     },
     "/api/content/clone": {
       "post": {
+        "summary": "Clones a content item",
+        "description": "Required scopes: <span>write:content</span><br/><br/>Duplicates a content item as well as all its children.",
+        "responses": {
+          "201": {
+            "description": "The newly cloned data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#components/schemas/content"
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4449,11 +4879,44 @@
     },
     "/api/content/insertrecusive": {
       "post": {
+        "summary": "Insert hierarchical content data",
+        "description": "Required scopes: <span>write:content</span><br/><br/>Recursively inserts content data",
+        "parameters": [
+          {
+            "name": "rootId",
+            "in": "path",
+            "description": "The parent content item _id",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#components/schemas/content"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The newly inserted data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#components/schemas/content"
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "write:content"
@@ -4494,7 +4957,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
             "read:content"
@@ -4509,7 +4972,7 @@
         "tags": [
           "content"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"
@@ -4550,7 +5013,7 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "description": "Required scopes: <span>read:contentplugins</span>",
         "security": {
           "roles": [
             "read:contentplugins"
@@ -4584,7 +5047,7 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "description": "Required scopes: <span>read:contentplugins</span>",
         "security": {
           "roles": [
             "read:contentplugins"
@@ -4625,7 +5088,7 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>write:contentplugins</apan>",
+        "description": "Required scopes: <span>write:contentplugins</span>",
         "security": {
           "roles": [
             "write:contentplugins"
@@ -4641,7 +5104,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The contentplugin data",
@@ -4657,7 +5119,7 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>write:contentplugins</apan>",
+        "description": "Required scopes: <span>write:contentplugins</span>",
         "security": {
           "roles": [
             "write:contentplugins"
@@ -4667,17 +5129,36 @@
     },
     "/api/contentplugins/:_id/update": {
       "post": {
-        "tags": [
-          "contentplugins"
-        ],
-        "description": "Required scopes: <span>update:contentplugin</apan>",
+        "summary": "Update a single content plugin",
         "parameters": [
           {
             "name": "_id",
             "in": "path",
             "required": true
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "description": "Content plugin _id",
+            "required": true
           }
         ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/contentplugin"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "contentplugins"
+        ],
+        "description": "Required scopes: <span>update:contentplugin</span>",
         "security": {
           "roles": [
             "update:contentplugin"
@@ -4687,17 +5168,39 @@
     },
     "/api/contentplugins/:_id/uses": {
       "get": {
-        "tags": [
-          "contentplugins"
-        ],
-        "description": "Required scopes: <span>read:contentplugin</apan>",
+        "summary": "Return courses using a single content plugin",
         "parameters": [
           {
             "name": "_id",
             "in": "path",
             "required": true
+          },
+          {
+            "name": "_id",
+            "in": "path",
+            "description": "Content plugin _id",
+            "required": true
           }
         ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#components/schemas/course"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "contentplugins"
+        ],
+        "description": "Required scopes: <span>read:contentplugin</span>",
         "security": {
           "roles": [
             "read:contentplugin"
@@ -4707,10 +5210,45 @@
     },
     "/api/contentplugins/install": {
       "post": {
+        "summary": "Import an Adapt course",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  },
+                  "force": {
+                    "type": "Boolean",
+                    "default": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/contentplugin"
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>install:contentplugin</apan>",
+        "description": "Required scopes: <span>install:contentplugin</span>",
         "parameters": [],
         "security": {
           "roles": [
@@ -4752,7 +5290,7 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>read:contentplugins</apan>",
+        "description": "Required scopes: <span>read:contentplugins</span>",
         "security": {
           "roles": [
             "read:contentplugins"
@@ -4767,7 +5305,7 @@
         "tags": [
           "contentplugins"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"
@@ -4804,7 +5342,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4843,7 +5381,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
             "read:content"
@@ -4886,7 +5424,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4918,7 +5456,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
             "read:content"
@@ -4959,7 +5497,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -4975,7 +5513,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The coursethemepreset data",
@@ -4991,7 +5528,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "security": {
           "roles": [
             "write:content"
@@ -5001,10 +5538,14 @@
     },
     "/api/coursethemepresets/:_id/apply/:courseId": {
       "post": {
+        "summary": "Apply theme preset to a course",
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "parameters": [
           {
             "name": "_id",
@@ -5026,10 +5567,14 @@
     },
     "/api/coursethemepresets/:_id/remove/:courseId": {
       "post": {
+        "summary": "Remove theme preset from a course",
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
+        "description": "Required scopes: <span>write:content</span>",
         "parameters": [
           {
             "name": "_id",
@@ -5082,7 +5627,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
             "read:content"
@@ -5097,7 +5642,7 @@
         "tags": [
           "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"
@@ -5107,6 +5652,15 @@
     },
     "/api/lang/:lang?": {
       "get": {
+        "summary": "Retrieve lang strings for single locale",
+        "responses": {
+          "200": {
+            "description": "Lang strings for the specified locale",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
         "tags": [
           "lang"
         ],
@@ -5125,10 +5679,6 @@
     },
     "/api/logs/:_id?": {
       "get": {
-        "tags": [
-          "logs"
-        ],
-        "description": "Required scopes: <span>read:logs</apan>",
         "parameters": [
           {
             "name": "_id",
@@ -5136,6 +5686,10 @@
             "required": false
           }
         ],
+        "tags": [
+          "logs"
+        ],
+        "description": "Required scopes: <span>read:logs</span>",
         "security": {
           "roles": [
             "read:logs"
@@ -5145,11 +5699,38 @@
     },
     "/api/logs/query": {
       "post": {
+        "summary": "Query all logs",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results should be returned Default value is 100 (max value is 250)"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return (determined from the limit value)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The log data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/log"
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "logs"
         ],
-        "description": "Required scopes: <span>read:logs</apan>",
-        "parameters": [],
+        "description": "Required scopes: <span>read:logs</span>",
         "security": {
           "roles": [
             "read:logs"
@@ -5159,6 +5740,10 @@
     },
     "/api/mailer/test": {
       "post": {
+        "summary": "Send test email",
+        "responses": {
+          "200": {}
+        },
         "tags": [
           "mailer"
         ],
@@ -5198,7 +5783,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>write:roles</apan>",
+        "description": "Required scopes: <span>write:roles</span>",
         "security": {
           "roles": [
             "write:roles"
@@ -5237,7 +5822,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>read:roles</apan>",
+        "description": "Required scopes: <span>read:roles</span>",
         "security": {
           "roles": [
             "read:roles"
@@ -5280,7 +5865,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>write:roles</apan>",
+        "description": "Required scopes: <span>write:roles</span>",
         "security": {
           "roles": [
             "write:roles"
@@ -5312,7 +5897,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>read:roles</apan>",
+        "description": "Required scopes: <span>read:roles</span>",
         "security": {
           "roles": [
             "read:roles"
@@ -5353,7 +5938,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>write:roles</apan>",
+        "description": "Required scopes: <span>write:roles</span>",
         "security": {
           "roles": [
             "write:roles"
@@ -5369,7 +5954,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The role data",
@@ -5385,7 +5969,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>write:roles</apan>",
+        "description": "Required scopes: <span>write:roles</span>",
         "security": {
           "roles": [
             "write:roles"
@@ -5426,7 +6010,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>read:roles</apan>",
+        "description": "Required scopes: <span>read:roles</span>",
         "security": {
           "roles": [
             "read:roles"
@@ -5441,7 +6025,7 @@
         "tags": [
           "roles"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"
@@ -5451,10 +6035,14 @@
     },
     "/api/spoortracking/reset/:_courseId": {
       "post": {
+        "summary": "Reset course tracking IDs",
+        "description": "Required scopes: <span>write:content</span><br/><br/>Fully resets all tracking IDs for a single course.",
+        "responses": {
+          "204": {}
+        },
         "tags": [
           "spoortracking"
         ],
-        "description": "Required scopes: <span>write:content</apan>",
         "parameters": [
           {
             "name": "_courseId",
@@ -5498,7 +6086,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>write:tags</apan>",
+        "description": "Required scopes: <span>write:tags</span>",
         "security": {
           "roles": [
             "write:tags"
@@ -5537,7 +6125,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:tags</apan>",
+        "description": "Required scopes: <span>read:tags</span>",
         "security": {
           "roles": [
             "read:tags"
@@ -5580,7 +6168,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>write:tags</apan>",
+        "description": "Required scopes: <span>write:tags</span>",
         "security": {
           "roles": [
             "write:tags"
@@ -5612,7 +6200,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:tags</apan>",
+        "description": "Required scopes: <span>read:tags</span>",
         "security": {
           "roles": [
             "read:tags"
@@ -5653,7 +6241,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>write:tags</apan>",
+        "description": "Required scopes: <span>write:tags</span>",
         "security": {
           "roles": [
             "write:tags"
@@ -5669,7 +6257,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The tag data",
@@ -5685,7 +6272,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>write:tags</apan>",
+        "description": "Required scopes: <span>write:tags</span>",
         "security": {
           "roles": [
             "write:tags"
@@ -5695,11 +6282,44 @@
     },
     "/api/tags/autocomplete": {
       "get": {
+        "summary": "Retrieve tags for UI autocomplete",
+        "description": "Required scopes: <span>read:content</span><br/><br/>A streamlined query API to allow searching of tag data.",
+        "parameters": [
+          {
+            "name": "term",
+            "in": "query",
+            "description": "Search term",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:content</apan>",
-        "parameters": [],
         "security": {
           "roles": [
             "read:content"
@@ -5740,7 +6360,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:tags</apan>",
+        "description": "Required scopes: <span>read:tags</span>",
         "security": {
           "roles": [
             "read:tags"
@@ -5755,7 +6375,7 @@
         "tags": [
           "tags"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"
@@ -5796,7 +6416,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>read:users</apan>",
+        "description": "Required scopes: <span>read:users</span>",
         "security": {
           "roles": [
             "read:users"
@@ -5839,7 +6459,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>write:users</apan>",
+        "description": "Required scopes: <span>write:users</span>",
         "security": {
           "roles": [
             "write:users"
@@ -5871,7 +6491,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>read:users</apan>",
+        "description": "Required scopes: <span>read:users</span>",
         "security": {
           "roles": [
             "read:users"
@@ -5912,7 +6532,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>write:users</apan>",
+        "description": "Required scopes: <span>write:users</span>",
         "security": {
           "roles": [
             "write:users"
@@ -5928,7 +6548,6 @@
             "required": true
           }
         ],
-        "requestBody": {},
         "responses": {
           "204": {
             "description": "The user data",
@@ -5944,7 +6563,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>write:users</apan>",
+        "description": "Required scopes: <span>write:users</span>",
         "security": {
           "roles": [
             "write:users"
@@ -5954,10 +6573,11 @@
     },
     "/api/users/me": {
       "get": {
+        "summary": "Retrieve your own user data",
+        "description": "Required scopes: <span>read:me</span><br/><br/>This endpoint is shorthand for `GET` `/api/users/:_id`, see the documentation for that endpoint for more details",
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>read:me</apan>",
         "parameters": [],
         "security": {
           "roles": [
@@ -5966,10 +6586,11 @@
         }
       },
       "put": {
+        "summary": "Replace your own user data",
+        "description": "Required scopes: <span>write:me</span><br/><br/>This endpoint is shorthand for `PUT` `/api/users/:_id`, see the documentation for that endpoint for more details",
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>write:me</apan>",
         "parameters": [],
         "security": {
           "roles": [
@@ -5978,10 +6599,11 @@
         }
       },
       "patch": {
+        "summary": "Update your own user data",
+        "description": "Required scopes: <span>write:me</span><br/><br/>This endpoint is shorthand for `PATCH` `/api/users/:_id`, see the documentation for that endpoint for more details",
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>write:me</apan>",
         "parameters": [],
         "security": {
           "roles": [
@@ -6023,7 +6645,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>read:users</apan>",
+        "description": "Required scopes: <span>read:users</span>",
         "security": {
           "roles": [
             "read:users"
@@ -6038,7 +6660,7 @@
         "tags": [
           "users"
         ],
-        "description": "Required scopes: <span>read:schema</apan>",
+        "description": "Required scopes: <span>read:schema</span>",
         "security": {
           "roles": [
             "read:schema"

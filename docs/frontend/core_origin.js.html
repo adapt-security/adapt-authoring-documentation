@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>core/origin.js - Adapt authoring tool front-end documentation</title>
+    
+    <meta name="description" content="Adapt authoring tool front-end documentation" />
+    
+        <meta name="keywords" content="v1.0.0-rc.4" />
+        <meta name="keyword" content="v1.0.0-rc.4" />
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a class="menu-title" ><img class="logo" src="assets/logo-outline-colour.png" />Adapt authoring tool front-end documentation<br><span class="version">v1.0.0-rc.4</span></a></h2><h2><a href="https://adapt-security.github.io/adapt-authoring-documentation/" target="_self" class="menu-item" id="home_link" >Documentation home</a></h2><h2><a href="https://www.adaptlearning.org/" target="_blank" class="menu-item" id="website_link" >Project Website</a></h2><h2><a href="https://community.adaptlearning.org/mod/forum/view.php?id=4" target="_blank" class="menu-item" id="forum_link" >Technical Discussion Forum</a></h2><h3>Classes</h3><ul><li><a href="ApiCollection.html">ApiCollection</a><ul class='methods'><li data-type='method' style='display: none;'><a href="ApiCollection.html#buildQuery">buildQuery</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#buildQueryParams">buildQueryParams</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#fetch">fetch</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#fetchNextPage">fetchNextPage</a></li><li data-type='method' style='display: none;'><a href="ApiCollection.html#fetchPrevPage">fetchPrevPage</a></li></ul></li><li><a href="Origin.html">Origin</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Origin.html#hasInitialized">hasInitialized</a></li><li data-type='method' style='display: none;'><a href="Origin.html#initialize">initialize</a></li><li data-type='method' style='display: none;'><a href="Origin.html#loadUtilities">loadUtilities</a></li><li data-type='method' style='display: none;'><a href="Origin.html#removeViews">removeViews</a></li><li data-type='method' style='display: none;'><a href="Origin.html#tap">tap</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">core/origin.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>define([
+  'underscore', 
+  'backbone', 
+  'core/l10n',
+  'core/router',
+  'core/browserStorage',
+  'core/models/sessionModel'
+], function(_, Backbone, l10n, Router, BrowserStorage, SessionModel) {
+  var initialized = false;
+  var eventTaps = [];
+  var $loading;
+  /**
+   * Global singleton class
+   * @class Origin
+   */
+  var Origin = _.extend({}, Backbone.Events, {
+    /**
+     * Flag used to determine if debug features should be enabled
+     * @member Origin#debug
+     * @type {Boolean}
+     */
+    debug: false,
+    /**
+     * Performs setup of the application, will only run once
+     * @function Origin#initialize
+     */
+    initialize: _.once(function(callback) {
+      listenToWindowEvents();
+      new Router(this);
+      initialized = true;
+      this.trigger('origin:dataReady');
+    }),
+    /**
+     * Initialises the application utilities
+     * @function Origin#loadUtilities
+     */
+    loadUtilities: _.once(async function(callback) {
+      try {
+        /**
+         * Reference to the constant attributes
+         * @member Origin#constants
+         * @type {Object}
+         */
+        this.constants = await $.get('/api/config');
+        /**
+         * Global reference to the l10n translation utilities
+         * @member Origin#l10n
+         * @type {l10n}
+         */
+        this.l10n = new l10n(this);
+        /**
+         * Global reference to the l10n translation utilities
+         * @member Origin#l10n
+         * @type {l10n}
+         */
+        this.browserStorage = new BrowserStorage(this);
+
+        await this.l10n.load();
+        callback();
+      } catch(e) {
+        console.error(e.message);
+      }
+    }),
+    /**
+     * Initialises the current session and caches for use
+     * @function Origin#
+     */
+    startSession: _.once(function(callback) {
+      initLoading();
+      this.loadUtilities((function() {
+        /**
+         * Current session instance
+         * @member Origin#sessionModel
+         * @type {SessionModel}
+         */
+        Origin.sessionModel = new SessionModel(this);
+        Origin.sessionModel.fetch({
+          success: () => callback(),
+          error: (m, jqXhr) => callback(new Error(jqXhr.responseJSON.message))
+        });
+      }).bind(this));
+    }),
+    /**
+     * Whether the Origin object has loaded
+     * @function Origin#hasInitialized
+     * @return {Boolean}
+     */
+    hasInitialized: function() {
+      return initialized;
+    },
+    /**
+     * Overrides Backbone.Events#trigger to allow for tapping and debug logging
+     * @function Origin#
+     */
+    trigger: function(eventName, data) {
+      var args = arguments;
+      callTaps(eventName, function() {
+        if(Origin.debug){
+          console.log('Origin.trigger:', eventName, (data ? data : ''));
+        }
+        Backbone.Events.trigger.apply(Origin, args);
+      });
+    },
+    /**
+     * Register a function to tap into a certain event before it fires
+     * @function Origin#tap
+     */
+    tap: function(event, callback) {
+      eventTaps.push({ event: event, callback: callback });
+    },
+    /**
+     * Tells views to clean themselves up
+     * @function Origin#removeViews
+     */
+    removeViews: function() {
+      Origin.trigger('remove:views');
+    }
+  });
+
+  // Private functions
+
+  function initLoading() {
+    $loading = $('.loading');
+    hideLoading();
+
+    Origin.on('origin:hideLoading', hideLoading, Origin);
+    Origin.on('origin:showLoading', showLoading, Origin);
+  }
+
+  // abstracted window events
+  function listenToWindowEvents() {
+    $(document).on('keydown', onKeyDown);
+    $(window).on('resize', onResize);
+    $(window).on('blur focus', onFocusBlur);
+  }
+
+  function showLoading(shouldHideTopBar) {
+    $loading
+      .removeClass('display-none fade-out')
+      .toggleClass('cover-top-bar', shouldHideTopBar);
+  }
+
+  function hideLoading() {
+    $loading.addClass('fade-out');
+    _.delay(_.bind(function() {
+      $loading
+        .addClass('display-none')
+        .removeClass('cover-top-bar');
+    }, this), 300);
+  }
+
+  // Calls all 'tapped' functions before continuing
+  function callTaps(event, callback) {
+    var taps = _.where(eventTaps, { event: event });
+    // recurse
+    function callTap() {
+      var tap = taps.pop();
+      if(!tap) return callback();
+      tap.callback.call(Origin, callTap);
+    }
+    callTap();
+  }
+
+  // Event handling
+
+  function onKeyDown(event) {
+    if($(event.target).is('input, textarea')) return;
+    Origin.trigger('key:down', event);
+  }
+
+  function onResize(event) {
+    var $window = $(this);
+    var windowWidth = $window.width();
+    var windowHeight = $window.height();
+    Origin.trigger('window:resize', windowWidth, windowHeight);
+  }
+
+  function onFocusBlur(event) {
+    var $win = $('window');
+    var prevType = $win.data("prevType");
+    // prevent double-firing
+    if(prevType === event.type) return;
+    // send out Origin events
+    var eventName = (event.type === 'focus') ? 'active' : 'inactive';
+    Origin.trigger('window:' + eventName, event);
+  }
+
+  return Origin;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Wed Nov 08 2023 15:42:39 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+    <link type="text/css" rel="stylesheet" href="styles/adapt.css">
+    
+    <script src="scripts/adapt.js"></script>
+    
+</body>
+</html>

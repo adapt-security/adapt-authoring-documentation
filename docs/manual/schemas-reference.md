@@ -307,10 +307,10 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset</td>
 </tr>
 <tr class="">
-<td>_disableAccessibilityState</td>
+<td>_isA11yCompletionDescriptionEnabled</td>
 <td>boolean</td>
-<td><pre>false</pre></td>
-<td>Controls whether the user can tab to a hidden label that describes the completion state of the component</td>
+<td><pre>true</pre></td>
+<td>Controls whether a hidden label is appended to the component title that describes the completion state of the component.</td>
 </tr>
 <tr class="">
 <td>properties</td>
@@ -739,6 +739,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>number</td>
 <td><pre>0</pre></td>
 <td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
+</tr>
+<tr class="">
+<td>_isA11yCompletionDescriptionEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a hidden label is appended to the element title that describes the completion state of the element.</td>
 </tr>
 <tr class="">
 <td>_onScreen</td>
