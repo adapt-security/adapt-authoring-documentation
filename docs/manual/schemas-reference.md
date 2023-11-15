@@ -735,12 +735,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element</td>
 </tr>
 <tr class="">
-<td>_ariaLevel</td>
-<td>number</td>
-<td><pre>0</pre></td>
-<td>If you need to override the default element ARIA level (as defined in Configuration Settings), set this to any number greater than 0</td>
-</tr>
-<tr class="">
 <td>_isA11yCompletionDescriptionEnabled</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
