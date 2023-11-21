@@ -55,5 +55,6 @@
   - [Configuration reference](configuration.md)
   - [Core module list](coremodules.md)
   - [Errors Reference](errorsref.md)
+  - [Licensing](licensing.md)
   - [Schema examples](schema-examples.md)
   - [Schemas reference](schemas-reference.md)
