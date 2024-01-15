@@ -134,7 +134,7 @@ export default {
     // The amount of time an invite password reset token remains valid for
     inviteTokenLifespan: "7d", // string, optional
     // Minimum password length
-    minPasswordLength: 12, // number, optional
+    minPasswordLength: 8, // number, optional
     // Whether the password must contain at least one number
     passwordMustHaveNumber: false, // boolean, optional
     // Whether the password must contain at least one uppercase character
@@ -146,7 +146,7 @@ export default {
   },
   'adapt-authoring-logger': {
     // Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).
-    levels: ["error","warn","success","info"], // array, optional
+    levels: ["error","warn","success","info","debug"], // array, optional
     // Whether to mute log messages
     mute: false, // boolean,string, optional
     // The date format to use
@@ -569,7 +569,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">minPasswordLength</span> (number, optional)</div>
 <div class="inner">
 <div class="description">Minimum password length</div>
-<div class="default"><span class="label">Default</span>: <pre>12</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>8</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -609,7 +609,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">levels</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).</div>
-<div class="default"><span class="label">Default</span>: <pre>["error","warn","success","info"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>["error","warn","success","info","debug"]</pre></div>
 </div>
 </div>
 <div class="attribute">
