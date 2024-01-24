@@ -12,6 +12,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=assessment-article">assessment-article</a></li>
 <li><a href="#/schemas-reference?id=assessment-block">assessment-block</a></li>
 <li><a href="#/schemas-reference?id=assessment-course">assessment-course</a></li>
+<li><a href="#/schemas-reference?id=assessmentResults-component">assessmentResults-component</a></li>
+<li><a href="#/schemas-reference?id=assessmentResults-course">assessmentResults-course</a></li>
 <li><a href="#/schemas-reference?id=asset">asset</a></li>
 <li><a href="#/schemas-reference?id=authored">authored</a></li>
 <li><a href="#/schemas-reference?id=authtoken">authtoken</a></li>
@@ -408,6 +410,112 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>number</td>
 <td><pre>60</pre></td>
 <td>The minimum number of correct questions required by the learner to pass the assessment or the minimum percentage correct if percentage-based</td>
+</tr>
+</table>
+      
+      <h3 id="assessmentresults-component" class="dep">assessmentResults-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isVisibleBeforeCompletion</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether this component will be visible or hidden prior to the assessment having been completed</td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"inview"</pre></td>
+<td>Set to 'pass' to have the component mark as completed only if the learner passed the associated assessment</td>
+</tr>
+<tr class="">
+<td>_resetType</td>
+<td>string</td>
+<td><pre>"inherit"</pre></td>
+<td>Set to 'inherit' to use the same reset type as the assessment. Set to 'hard' to have the component's completion reset when the assessment is reset, set to 'soft' if you don't want completion to be reset</td>
+</tr>
+<tr class="">
+<td>_assessmentId</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+</tr>
+<tr class="">
+<td>_retry</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.button</td>
+<td>string</td>
+<td><pre>"Retry Assessment"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_retry.feedback</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+</tr>
+<tr class="">
+<td>_retry._routeToAssessment</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, this will take the user back to the assessment when the "Retry Assessment" button is clicked</td>
+</tr>
+<tr class="">
+<td>_completionBody</td>
+<td>string</td>
+<td><pre>"This component you're reading is a results component.<br>You have finished the assessment.<br>You scored {{{score}}} out of {{{maxScore}}}. {{{feedback}}}"</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+</tr>
+<tr class="">
+<td>_bands</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="assessmentresults-course" class="dep">assessmentResults-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._assessmentResults</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._assessmentResults.ariaRegion</td>
+<td>string</td>
+<td><pre>"Assessment results."</pre></td>
+<td> </td>
 </tr>
 </table>
       

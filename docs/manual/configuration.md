@@ -113,8 +113,10 @@ export default {
     enableCache: true, // boolean, optional
     // Custom RegExp overrides for Ajv string formats
     formatOverrides: {}, // object, optional
-    // Attributes which should be whitelisted when run through the XSS sanitiser
-    xssWhitelist: undefined, // object, optional
+    // Attributes which should be whitelisted when run through the XSS sanitiser.
+    xssWhitelist: {}, // object, optional
+    // If set to false, the xssWhitelist value will EXTEND the default XSS whitelist. If set to true, it will REPLACE it.
+    xssWhitelistOverride: false, // boolean, optional
   },
   'adapt-authoring-lang': {
     // The default language used by the server
@@ -502,8 +504,15 @@ See below for a full list of available configuration options.
 <div class="attribute">
 <div class="title"><span class="main">xssWhitelist</span> (object, optional)</div>
 <div class="inner">
-<div class="description">Attributes which should be whitelisted when run through the XSS sanitiser</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="description">Attributes which should be whitelisted when run through the XSS sanitiser.</div>
+<div class="default"><span class="label">Default</span>: <pre>{}</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">xssWhitelistOverride</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">If set to false, the xssWhitelist value will EXTEND the default XSS whitelist. If set to true, it will REPLACE it.</div>
+<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
 </div>
 </div>
 </div>
