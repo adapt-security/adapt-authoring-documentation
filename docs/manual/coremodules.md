@@ -9,12 +9,17 @@ The following modules are included in Adapt authoring v1.0.0-rc.4 core package o
 | [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 0.0.1 | Authentication + authorisation module for the Adapt authoring tool |
 | [adapt-authoring-authored](https://github.com/adaptlearning/adapt-authoring-authored) | 0.0.1 | Adds extra authoring attributes to data |
 | [adapt-authoring-browserslist](https://github.com/adaptlearning/adapt-authoring-browserslist) | 0.0.1 | Handles updating of browserslist for the framework building process |
+| [adapt-authoring-collab](https://github.com/adapt-security/adapt-authoring-collab) | 0.0.1 | A template module for the Adapt authoring tool |
 | [adapt-authoring-config](https://github.com/adaptlearning/adapt-authoring-config) | 0.0.1 | A configuration module for the Adapt authoring tool. |
 | [adapt-authoring-content](https://github.com/adaptlearning/adapt-authoring-content) | 0.0.1 | Module for managing Adapt content |
 | [adapt-authoring-contentplugin](https://github.com/adapt-security/adapt-authoring-contentplugin) | 0.0.1 | Module for managing framework plugins |
 | [adapt-authoring-core](https://github.com/adaptlearning/adapt-authoring-core) | 0.0.1 | A bundle of reusable 'core' functionality |
 | [adapt-authoring-courseassets](https://github.com/deltanetdan/adapt-authoring-courseassets) | 0.0.1 | Module for managing courseassets |
 | [adapt-authoring-coursetheme](https://github.com/adaptlearning/adapt-authoring-coursetheme) | 0.0.1 | Module for managing course theming |
+| [adapt-authoring-debug](https://github.com/taylortom/adapt-authoring-debug) | 0.0.1 | Debug tools for the v1 UI |
+| [adapt-authoring-debug-adaptframework](https://github.com/taylortom/adapt-authoring-debug-adaptframework) | 0.0.1 | Debug tools for the installed Adapt framework |
+| [adapt-authoring-debug-logs](https://github.com/taylortom/adapt-authoring-debug-logs) | 0.0.1 | Debug logs |
+| [adapt-authoring-debug-schemas](https://github.com/taylortom/adapt-authoring-debug-schemas) | 0.0.1 | Debug schemas |
 | [adapt-authoring-defaultplugins](https://github.com/adaptlearning/adapt-authoring-defaultplugins) | 0.0.1 | Allows specified content plugins to be added to every new course by default |
 | [adapt-authoring-docs](https://github.com/adaptlearning/adapt-authoring-docs) | 0.0.1 | Tools for auto-generating documentation for the Adapt authoring tool |
 | [adapt-authoring-errors](https://github.com/adapt-security/adapt-authoring-errors) | 0.0.1 | Error handling for the Adapt authoring tool |

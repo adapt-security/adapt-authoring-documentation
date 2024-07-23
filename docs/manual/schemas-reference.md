@@ -46,6 +46,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=localpassword">localpassword</a></li>
 <li><a href="#/schemas-reference?id=log">log</a></li>
 <li><a href="#/schemas-reference?id=maildata">maildata</a></li>
+<li><a href="#/schemas-reference?id=matching-component">matching-component</a></li>
+<li><a href="#/schemas-reference?id=matching-course">matching-course</a></li>
 <li><a href="#/schemas-reference?id=mcq-component">mcq-component</a></li>
 <li><a href="#/schemas-reference?id=mcq-course">mcq-course</a></li>
 <li><a href="#/schemas-reference?id=media-component">media-component</a></li>
@@ -66,6 +68,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=spoor-course">spoor-course</a></li>
 <li><a href="#/schemas-reference?id=tag">tag</a></li>
 <li><a href="#/schemas-reference?id=tags">tags</a></li>
+<li><a href="#/schemas-reference?id=template">template</a></li>
 <li><a href="#/schemas-reference?id=text-component">text-component</a></li>
 <li><a href="#/schemas-reference?id=text-course">text-course</a></li>
 <li><a href="#/schemas-reference?id=textinput-component">textinput-component</a></li>
@@ -449,7 +452,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_assessmentId</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment you can leave this blank</td>
+<td>This is the unique name of the assessment for which results should be displayed. If you only have one assessment, you can leave this blank (the article's assessment ID must also be blank).</td>
 </tr>
 <tr class="">
 <td>_retry</td>
@@ -467,7 +470,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_retry.feedback</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}</td>
+<td>This text is displayed only when more attempts remain. You can use the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}</td>
 </tr>
 <tr class="">
 <td>_retry._routeToAssessment</td>
@@ -478,8 +481,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_completionBody</td>
 <td>string</td>
-<td><pre>"This component you're reading is a results component.<br>You have finished the assessment.<br>You scored {{{score}}} out of {{{maxScore}}}. {{{feedback}}}"</pre></td>
-<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{{score}}}, {{{maxScore}}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
+<td><pre>"This component you're reading is a results component.<br>You have finished the assessment.<br>You scored {{score}} out of {{maxScore}}. {{{feedback}}}"</pre></td>
+<td>This text overwrites the standard body attribute upon completion of the assessment. It may make use of the following variables: {{attemptsSpent}}, {{attempts}}, {{attemptsLeft}}, {{score}}, {{scoreAsPercent}} and {{maxScore}}. {{{feedback}}}, representing the feedback assigned to the appropriate band, is also allowed</td>
 </tr>
 <tr class="">
 <td>_bands</td>
@@ -770,6 +773,36 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       <h3 id="bookmarking-course" class="dep">bookmarking-course</h3>
       
       <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._bookmarking</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._bookmarking.resumeButtonText</td>
+<td>string</td>
+<td><pre>"Resume"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._bookmarking.resumeButtonAriaLabel</td>
+<td>string</td>
+<td><pre>"Navigate to your furthest point of progress."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_bookmarking</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -788,10 +821,22 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allows you to set whether Bookmarking is done at page, block or component level</td>
 </tr>
 <tr class="">
+<td>_bookmarking._location</td>
+<td>string</td>
+<td><pre>"previous"</pre></td>
+<td>Allows you to set whether Bookmarking takes learners back to their last previously visited location or your furthest incomplete location. The furthest option will pair best in a course with linear progression.</td>
+</tr>
+<tr class="">
 <td>_bookmarking._showPrompt</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
 <td>Controls whether the Bookmarking prompt is enabled or disabled. If not enabled, the user will be returned to their bookmarked position automatically</td>
+</tr>
+<tr class="">
+<td>_bookmarking._autoRestore</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Bookmarking will automatically restore if the prompt is disabled. If not enabled, the user will be not be automatically returned to their bookmarked position.</td>
 </tr>
 <tr class="">
 <td>_bookmarking.title</td>
@@ -1340,6 +1385,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"auto"</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_drawer._iconClass</td>
+<td>string</td>
+<td><pre>"icon-list"</pre></td>
+<td>CSS class name to be applied to the drawer sidebar icon.</td>
 </tr>
 <tr class="">
 <td>_generateSourcemap</td>
@@ -1942,6 +1993,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_globals._accessibility._ariaLabels.required</td>
+<td>string</td>
+<td><pre>"Required"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._accessibility._ariaLabels.optional</td>
+<td>string</td>
+<td><pre>"Optional"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_globals._accessibility.altFeedbackTitle</td>
 <td>string</td>
 <td><pre>"Feedback"</pre></td>
@@ -2428,6 +2491,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Set the number of columns. If value is '0', component uses the default layout</td>
 </tr>
 <tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the item images, making them round.</td>
+</tr>
+<tr class="">
 <td>_selectable</td>
 <td>number</td>
 <td><pre>1</pre></td>
@@ -2814,6 +2883,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
 </tr>
 <tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button. Only applies when the Hot Graphic is configured to render as a Narrative on mobile</td>
+</tr>
+<tr class="">
+<td>_isStackedOnMobile</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, text and images will be stacked vertically. No interaction will be required to view all items as the user will simply scroll down. Only applies when the Hot Graphic is configured to render as a Narrative on mobile</td>
+</tr>
+<tr class="">
 <td>_useNumberedPins</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -2826,10 +2907,22 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
 </tr>
 <tr class="">
+<td>_hasStaticTooltips</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, tooltips (if themselves enabled) will always be shown rather than only on hover.</td>
+</tr>
+<tr class="">
 <td>_isRound</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_pinOffsetOrigin</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If set to `true`, the pins origin point will be changed from `top left` to `center`. This option will enable the pin to remain stationary when viewing responsively. The default is `false`.</td>
 </tr>
 <tr class="">
 <td>_items</td>
@@ -2868,8 +2961,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_globals._components._hotgraphic.item</td>
 <td>string</td>
-<td><pre>"Item {{{itemNumber}}} of {{{totalItems}}}"</pre></td>
-<td> </td>
+<td><pre>"Item {{itemNumber}} of {{totalItems}}"</pre></td>
+<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
 </tr>
 <tr class="">
 <td>_globals._components._hotgraphic.previous</td>
@@ -2887,7 +2980,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._components._hotgraphic.popupPagination</td>
 <td>string</td>
 <td><pre>"{{itemNumber}} / {{totalItems}}"</pre></td>
-<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
+<td>This is the item count displayed in the popup. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
 </tr>
 </table>
       
@@ -3146,6 +3239,312 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td></td>
 <td>Email HTML content</td>
+</tr>
+</table>
+      
+      <h3 id="matching-component" class="dep">matching-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"half-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Choose an option from each dropdown list and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed. Defaults to `1` attempt.</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly. Defaults to true.</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldResetAllAnswers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether all - or just incorrect - answers should be reset when the question is reset. Defaults to true.</td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandom</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_isRandomQuestionOrder</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only. Defaults to true.</td>
+</tr>
+<tr class="">
+<td>placeholder</td>
+<td>string</td>
+<td><pre>"Please select an option"</pre></td>
+<td>Text that will be displayed at the top of each list of options</td>
+</tr>
+<tr class="">
+<td>_hasItemScoring</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, this question scores 0 for incorrect and 'Question Weight' for correct. When enabled, this question scores by summing the scores of the selected options. Defaults to false.</td>
+</tr>
+<tr class="">
+<td>_allowOnlyUniqueAnswers</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When disabled, multiple items can be selected with the same option text. Defaults to false.</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Title text for the feedback</td>
+</tr>
+<tr class="">
+<td>_feedback.altTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text read out by screen readers if no visual title is included</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_feedback._partlyCorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="matching-course" class="dep">matching-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._matching</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._matching.ariaRegion</td>
+<td>string</td>
+<td><pre>"Matching. Select from lists and then submit."</pre></td>
+<td> </td>
 </tr>
 </table>
       
@@ -3879,6 +4278,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>"{{#if title}}Forward to {{{title}}}{{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}} (item {{itemNumber}} of {{totalItems}})"</pre></td>
 <td> </td>
 </tr>
+<tr class="">
+<td>_globals._components._narrative.titleDialog</td>
+<td>string</td>
+<td><pre>"Item {{itemNumber}} of {{totalItems}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._narrative.titleStrapline</td>
+<td>string</td>
+<td><pre>"Find out more"</pre></td>
+<td> </td>
+</tr>
 </table>
       
       <h3 id="pagelevelprogress-article" class="dep">pageLevelProgress-article</h3>
@@ -3965,7 +4376,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_pageLevelProgress._showPageCompletion</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>Controls whether the progress calculations for this page are based on all components and the overall page - or only the components that are set to be displayed in Page Level Progress</td>
+<td>When enabled, the overall progress for this page will be calculated for all components. When disabled, only components that are set to be displayed in Page Level Progress will be included in the calculations. Defaults to enabled.</td>
 </tr>
 <tr class="">
 <td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
@@ -4080,10 +4491,16 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_pageLevelProgress.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Alternate title to display for the course</td>
+</tr>
+<tr class="">
 <td>_pageLevelProgress._showPageCompletion</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
-<td>Controls whether the progress calculations are based on all components - or only those that are set to be displayed in Page Level Progress</td>
+<td>When enabled, the overall course progress will be calculated for all components. When disabled, only components that are set to be displayed in Page Level Progress will be included in the calculations. Defaults to enabled.</td>
 </tr>
 <tr class="">
 <td>_pageLevelProgress._isCompletionIndicatorEnabled</td>
@@ -4102,6 +4519,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>Controls whether to display all content objects and the current page components together, or just the current page components</td>
+</tr>
+<tr class="">
+<td>_pageLevelProgress._useCourseProgressInNavigationButton</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the navigation button will show course-level progress rather than page-level progress. Defaults to disabled.</td>
 </tr>
 </table>
       
@@ -4206,6 +4629,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>""</pre></td>
 <td>The instruction text for the resources which displays at the top of the resources drawer.</td>
+</tr>
+<tr class="">
+<td>_resources._enableFilters</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Turns the filter buttons on and off. Note that the filter buttons will be automatically disabled if all resource items have the same Type value.</td>
 </tr>
 <tr class="">
 <td>_resources._filterButtons</td>
@@ -4520,7 +4949,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_scaleEnd</td>
 <td>number</td>
-<td><pre>1</pre></td>
+<td><pre>10</pre></td>
 <td> </td>
 </tr>
 <tr class="">
@@ -4820,6 +5249,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>If enabled, the course will record the user's responses to questions to the cmi.interactions SCORM data fields</td>
 </tr>
 <tr class="">
+<td>_spoor._tracking._shouldRecordObjectives</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If enabled, the course will be able to record the status and scores of the course objectives to the cmi.objectives SCORM data fields</td>
+</tr>
+<tr class="">
 <td>_spoor._reporting</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -5024,6 +5459,26 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td><pre>[]</pre></td>
 <td>Add tags by entering one or more words, separated with a comma (,)</td>
+</tr>
+</table>
+      
+      <h3 id="template" class="dep">template</h3>
+      
+      <div class="desc">Just a template</div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>mandatoryField</td>
+<td>string</td>
+<td></td>
+<td>This field is included in required, so is mandatory</td>
+</tr>
+<tr class="">
+<td>optionalField</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>This field is not included in required, so is optional</td>
 </tr>
 </table>
       
@@ -5472,6 +5927,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_trickle._button.disabledText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text can be shown while the button is disabled</td>
+</tr>
+<tr class="">
+<td>_trickle._button.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The aria label when 'Button text when disabled' is set</td>
+</tr>
+<tr class="">
 <td>_trickle._button.startText</td>
 <td>string</td>
 <td><pre>"Begin"</pre></td>
@@ -5636,6 +6103,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"Continue"</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_trickle._button.disabledText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This text can be shown while the button is disabled</td>
+</tr>
+<tr class="">
+<td>_trickle._button.disabledAriaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The aria label when 'Button text when disabled' is set</td>
 </tr>
 <tr class="">
 <td>_trickle._button.startText</td>
@@ -6724,6 +7203,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_menu.menu-header-subtitle-color</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_menu.menu-header-body-color</td>
 <td>string</td>
 <td><pre>""</pre></td>
@@ -7106,6 +7591,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>""</pre></td>
 <td>Defines the shadow text/icon colour. Should be a colour that provides good contrast against the shadow colour</td>
+</tr>
+<tr class="">
+<td>_misc.loading</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_misc.loading-inverted</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour</td>
 </tr>
 </table>
       

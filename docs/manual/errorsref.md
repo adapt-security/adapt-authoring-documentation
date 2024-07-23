@@ -32,6 +32,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=CONTENTPLUGIN_INVALID_ZIP">CONTENTPLUGIN_INVALID_ZIP</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_IN_USE">CONTENTPLUGIN_IN_USE</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_NEWER_INSTALLED">CONTENTPLUGIN_NEWER_INSTALLED</a></li>
+<li><a href="#/errorsref?id=CONTENTPLUGIN_VERSION_MISMATCH">CONTENTPLUGIN_VERSION_MISMATCH</a></li>
 <li><a href="#/errorsref?id=DESTROY_SESSION_FAIL">DESTROY_SESSION_FAIL</a></li>
 <li><a href="#/errorsref?id=DUPL_AUTHORED_MODULE_NAME">DUPL_AUTHORED_MODULE_NAME</a></li>
 <li><a href="#/errorsref?id=DUPL_AUTH_PLUGIN_REG">DUPL_AUTH_PLUGIN_REG</a></li>
@@ -56,6 +57,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=FW_IMPORT_INVALID_COURSE">FW_IMPORT_INVALID_COURSE</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_MISSING_PLUGINS">FW_IMPORT_MISSING_PLUGINS</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_PLUGINS_FAILED">FW_IMPORT_PLUGINS_FAILED</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_UNEXPECTED_STRUCTURE">FW_IMPORT_UNEXPECTED_STRUCTURE</a></li>
 <li><a href="#/errorsref?id=FW_INCOMPAT_PLUGIN_DEP">FW_INCOMPAT_PLUGIN_DEP</a></li>
 <li><a href="#/errorsref?id=FW_INSTALL_FAILED">FW_INSTALL_FAILED</a></li>
 <li><a href="#/errorsref?id=FW_MISSING_PLUGIN_DEP">FW_MISSING_PLUGIN_DEP</a></li>
@@ -138,6 +140,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `CONTENTPLUGIN_INVALID_ZIP` | Invalid plugin data provided | 400 | <ul></ul> |
 | `CONTENTPLUGIN_IN_USE` | Content plugin is in use in existing courses | 400 | <ul><li>`courses`: List of courses using the content plugin</li></ul> |
 | `CONTENTPLUGIN_NEWER_INSTALLED` | Plugin ${name}@${newVersion} already exists at a higher version (${existingVersion}) | 400 | <ul><li>`existingVersion`: Installed version</li><li>`name`: Name of content plugin</li><li>`newVersion`: Version to install</li></ul> |
+| `CONTENTPLUGIN_VERSION_MISMATCH` | The installed version of a plugin does not match the registered version | 400 | <ul><li>`registered`: Plugins that do not match their installed version</li></ul> |
 | `DESTROY_SESSION_FAIL` | Failed to terminate user session | 500 | <ul><li>`error`: The error message</li></ul> |
 | `DUPL_AUTHORED_MODULE_NAME` | Function must be overridden in child class | 500 | <ul></ul> |
 | `DUPL_AUTH_PLUGIN_REG` | An auth plugin is already registered with the same name | 500 | <ul></ul> |
@@ -154,7 +157,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FUNC_DISABLED` | Function has been disabled | 500 | <ul><li>`name`: The name of the function</li></ul> |
 | `FUNC_NOT_OVERRIDDEN` | Function must be overridden in child class | 500 | <ul><li>`name`: The name of the function</li></ul> |
 | `FW_BUILD_NOT_FOUND` | Framework build could not be found in the database | 404 | <ul><li>`_id`: Database document _id value for the missing course build</li></ul> |
-| `FW_CLI_BUILD_FAILED` | Framework build using the adapt-cli failed | 500 | <ul><li>`cmd`: The command that caused the error</li><li>`message`: A detailed error message passed from adapt-cli</li></ul> |
+| `FW_CLI_BUILD_FAILED` | Framework build using the adapt-cli failed | 500 | <ul><li>`cmd`: The command that caused the error</li><li>`raw`: The raw error output</li></ul> |
 | `FW_IMPORT_CONTENT_FAILED` | Import of framework content failed | 400 | <ul><li>`errors`: Accompanying errors</li></ul> |
 | `FW_IMPORT_FAILED` | Import of framework course failed | 400 | <ul><li>`error`: The error</li></ul> |
 | `FW_IMPORT_INCOMPAT` | Course for import uses a framework version incompatible with that installed | 400 | <ul><li>`import`: Framework version used in import course</li><li>`installed`: Framework version currently installed on the server</li></ul> |
@@ -162,6 +165,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FW_IMPORT_INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
 | `FW_IMPORT_MISSING_PLUGINS` | Course for import uses plugins which are missing from the server | 400 | <ul></ul> |
 | `FW_IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
+| `FW_IMPORT_UNEXPECTED_STRUCTURE` | Installation of the framework failed | 500 | <ul></ul> |
 | `FW_INCOMPAT_PLUGIN_DEP` | Plugin is incompatible | 500 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
 | `FW_INSTALL_FAILED` | Installation of the framework failed | 500 | <ul></ul> |
 | `FW_MISSING_PLUGIN_DEP` | Plugin is missing a dependency | 500 | <ul><li>`name`: Missing plugin name</li></ul> |
