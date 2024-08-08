@@ -165,7 +165,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FW_IMPORT_INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
 | `FW_IMPORT_MISSING_PLUGINS` | Course for import uses plugins which are missing from the server | 400 | <ul></ul> |
 | `FW_IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
-| `FW_IMPORT_UNEXPECTED_STRUCTURE` | Installation of the framework failed | 500 | <ul></ul> |
+| `FW_IMPORT_UNEXPECTED_STRUCTURE` | Unable to generate valid course structure from input JSON data | 500 | <ul></ul> |
 | `FW_INCOMPAT_PLUGIN_DEP` | Plugin is incompatible | 500 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
 | `FW_INSTALL_FAILED` | Installation of the framework failed | 500 | <ul></ul> |
 | `FW_MISSING_PLUGIN_DEP` | Plugin is missing a dependency | 500 | <ul><li>`name`: Missing plugin name</li></ul> |
