@@ -4269,13 +4269,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_globals._components._narrative.previous</td>
 <td>string</td>
-<td><pre>"{{#if title}}Back to {{{title}}}{{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}} (item {{itemNumber}} of {{totalItems}})"</pre></td>
+<td><pre>"{{#if isAtStart}}{{_globals._accessibility._ariaLabels.previous}}{{else}}{{#if title}}Back to {{{title}}}{{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}} (item {{itemNumber}} of {{totalItems}}){{/if}}"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
 <td>_globals._components._narrative.next</td>
 <td>string</td>
-<td><pre>"{{#if title}}Forward to {{{title}}}{{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}} (item {{itemNumber}} of {{totalItems}})"</pre></td>
+<td><pre>"{{#if isAtEnd}}{{_globals._accessibility._ariaLabels.next}}{{else}}{{#if title}}Forward to {{{title}}}{{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}} (item {{itemNumber}} of {{totalItems}}){{/if}}"</pre></td>
 <td> </td>
 </tr>
 <tr class="">
