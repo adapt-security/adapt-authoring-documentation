@@ -61,7 +61,7 @@ export default {
     // Default repository to use for asset storage
     defaultAssetRepository: "local", // string, optional
     // File types allowed for upload
-    expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","text/vtt","video/mp4"], // array, optional
+    expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/vtt","video/mp4"], // array, optional
     // Maximum file upload size
     maxFileSize: "50mb", // string, optional
     // Location of local thumbs dir
@@ -334,7 +334,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">expectedFileTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">File types allowed for upload</div>
-<div class="default"><span class="label">Default</span>: <pre>["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","text/vtt","video/mp4"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/vtt","video/mp4"]</pre></div>
 </div>
 </div>
 <div class="attribute">
