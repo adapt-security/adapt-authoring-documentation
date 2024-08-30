@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>adapt-authoring-sessions/lib/SessionsModule.js - Adapt authoring tool UI documentation</title>
+    <title>adapt-authoring-debug-purge/lib/DebugPurgeModule.js - Adapt authoring tool UI documentation</title>
     
     <meta name="description" content="Adapt authoring tool UI documentation" />
     
@@ -43,7 +43,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">adapt-authoring-sessions/lib/SessionsModule.js</h1>
+    <h1 class="page-title">adapt-authoring-debug-purge/lib/DebugPurgeModule.js</h1>
     
 
     
@@ -53,79 +53,45 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { AbstractModule } from 'adapt-authoring-core'
-import MongoDBStore from 'connect-mongo'
-import session from 'express-session'
+            <pre class="prettyprint source linenums"><code>import { AbstractModule } from 'adapt-authoring-core';
 /**
- * Module which implements user sessions
- * @memberof sessions
- * @extends {AbstractModule}
- */
-class SessionsModule extends AbstractModule {
+* Adds a nuclear purge function
+* @extends purge
+* @extends {AbstractModule}
+*/
+class DebugPurgeModule extends AbstractModule {
   /** @override */
-  async init () {
-    await super.init()
-
-    const [auth, mongodb, server] = await this.app.waitForModule('auth', 'mongodb', 'server')
-
-    server.expressApp.use(
-      session({
-        name: 'adapt.user_session',
-        resave: false,
-        rolling: this.getConfig('rolling'),
-        saveUninitialized: true,
-        secret: this.getConfig('secret'),
-        unset: 'destroy',
-        cookie: {
-          maxAge: this.getConfig('lifespan'),
-          sameSite: this.getConfig('sameSite'),
-          secure: this.getConfig('secure')
-        },
-        store: MongoDBStore.create({
-          client: mongodb.client,
-          collection: this.getConfig('collectionName'),
-          stringify: false
-        })
-      }),
-      this.storeAuthHeader
-    )
-    auth.secureRoute('/api/session/clear', 'post', ['clear:session'])
+  async init() {
+    const [auth, content, ui] = await this.app.waitForModule('auth', 'content', 'ui');
+    ui.addUiPlugin(`${this.rootDir}/ui-plugins`);
+    
+    content.router.addRoute({
+      route: '/purge',
+      handlers: { post: this.handlePurge.bind(this) }
+    });
+    auth.secureRoute(`${content.router.path}/purge`, 'POST', ['debug'])
   }
-
-  /**
-   * Stores the session token as an auth header if none present
-   * @param {external:ExpressRequest} req
-   * @param {external:ExpressResponse} res
-   * @param {function} next
-   */
-  storeAuthHeader (req, res, next) {
-    const token = req?.session?.token
-    if (token &amp;&amp; !req.headers.Authorization) {
-      req.headers.Authorization = `Bearer ${token}`
+  
+  async handlePurge(req, res, next) {
+    try {
+      const [assets, content, contentplugin, framework] = await this.app.waitForModule('assets', 'content', 'contentplugin', 'adaptframework');
+      // content
+      await content.deleteMany()
+      // assets
+      const allAssets = await assets.find();
+      await Promise.all(allAssets.map(a => assets.delete(a)));
+      // contentplugins
+      const plugins = await contentplugin.find({ includeUpdateInfo: false });
+      await Promise.all(plugins.map(p => contentplugin.delete(p)));
+      // reinstall framework
+      await framework.installFramework(`v${framework.version}`, true);
+    } catch(e) {
+      next(e);
     }
-    next()
-  }
-
-  /**
-   * Handles clearing of the current request session
-   * @param {external:ExpressRequest} req
-   * @return {Promise} Resolves when the session has been cleared
-   */
-  async clearSession (req) {
-    if (!req.session) {
-      return
-    }
-    return new Promise((resolve, reject) => {
-      req.session.destroy(e => {
-        if (e) return reject(this.app.errors.DESTROY_SESSION_FAIL.setData({ error: e.message }))
-        resolve()
-      })
-    })
   }
 }
 
-export default SessionsModule
-</code></pre>
+export default DebugPurgeModule;</code></pre>
         </article>
     </section>
 

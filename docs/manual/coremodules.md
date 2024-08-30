@@ -19,6 +19,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.4 core package o
 | [adapt-authoring-debug](https://github.com/taylortom/adapt-authoring-debug) | 0.0.1 | Debug tools for the v1 UI |
 | [adapt-authoring-debug-adaptframework](https://github.com/taylortom/adapt-authoring-debug-adaptframework) | 0.0.1 | Debug tools for the installed Adapt framework |
 | [adapt-authoring-debug-logs](https://github.com/taylortom/adapt-authoring-debug-logs) | 0.0.1 | Debug logs |
+| [adapt-authoring-debug-purge](https://github.com/taylortom/adapt-authoring-debug-purge) | 0.0.1 | Debug purge |
 | [adapt-authoring-debug-schemas](https://github.com/taylortom/adapt-authoring-debug-schemas) | 0.0.1 | Debug schemas |
 | [adapt-authoring-defaultplugins](https://github.com/adaptlearning/adapt-authoring-defaultplugins) | 0.0.1 | Allows specified content plugins to be added to every new course by default |
 | [adapt-authoring-docs](https://github.com/adaptlearning/adapt-authoring-docs) | 0.0.1 | Tools for auto-generating documentation for the Adapt authoring tool |
