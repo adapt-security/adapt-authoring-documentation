@@ -9,7 +9,6 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-assets">adapt-authoring-assets</a></li>
 <li><a href="#/configuration?id=adapt-authoring-auth">adapt-authoring-auth</a></li>
 <li><a href="#/configuration?id=adapt-authoring-browserslist">adapt-authoring-browserslist</a></li>
-<li><a href="#/configuration?id=adapt-authoring-collab">adapt-authoring-collab</a></li>
 <li><a href="#/configuration?id=adapt-authoring-contentplugin">adapt-authoring-contentplugin</a></li>
 <li><a href="#/configuration?id=adapt-authoring-core">adapt-authoring-core</a></li>
 <li><a href="#/configuration?id=adapt-authoring-docs">adapt-authoring-docs</a></li>
@@ -90,12 +89,6 @@ export default {
     runOnBuild: true, // boolean, optional
     // The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.
     updateInterval: "0", // string, optional
-  },
-  'adapt-authoring-collab': {
-    // Whether this module is a template
-    websocketURL: "ws://localhost:3000", // string, optional
-    // Time in minutes until a user is classed as inactive
-    idleTime: 1, // number, optional
   },
   'adapt-authoring-contentplugin': {
     // Location of locally installed plugins
@@ -428,25 +421,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.</div>
 <div class="default"><span class="label">Default</span>: <pre>"0"</pre></div>
-</div>
-</div>
-</div>
-
-<h3 id="adapt-authoring-collab" class="dep">adapt-authoring-collab</h3>
-
-<div class="options">
-<div class="attribute">
-<div class="title"><span class="main">websocketURL</span> (string, optional)</div>
-<div class="inner">
-<div class="description">Whether this module is a template</div>
-<div class="default"><span class="label">Default</span>: <pre>"ws://localhost:3000"</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">idleTime</span> (number, optional)</div>
-<div class="inner">
-<div class="description">Time in minutes until a user is classed as inactive</div>
-<div class="default"><span class="label">Default</span>: <pre>1</pre></div>
 </div>
 </div>
 </div>
