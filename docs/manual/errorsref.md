@@ -192,7 +192,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `MISSING_SCHEMA_NAME` | Schema name is not defined | 400 | <ul></ul> |
 | `MODIFY_PROTECTED_ATTR` | Attempted to modify a protected data attribute | 400 | <ul><li>`attribute`: The protected attribute</li></ul> |
 | `MODULE_NOT_FOUND` | A module file could not be resolved while attempting a require() or import operation | 500 | <ul></ul> |
-| `MONGO_CONN_FAILED` | An error occurred connecting to the MongoDB instance | 500 | <ul><li>`error`: The error message</li><li>`uri`: The connection URI</li></ul> |
+| `MONGO_CONN_FAILED` | An error occurred connecting to the MongoDB instance | 500 | <ul><li>`error`: The error message</li></ul> |
 | `MONGO_DUPL_INDEX` | A document already exists with the same indexed value | 400 | <ul><li>`action`: The action being performed on the database collection</li><li>`collectionName`: Name of the collection being processed</li><li>`error`: The error message</li></ul> |
 | `MONGO_ERROR` | An error occurred while performing a MongoDB action | 500 | <ul><li>`action`: The action being performed on the database collection</li><li>`collectionName`: Name of the collection being processed</li><li>`error`: The error message</li></ul> |
 | `MONGO_IMMUTABLE_FIELD` | Attempting to modify an immutable field | 400 | <ul><li>`action`: The action being performed on the database collection</li><li>`collectionName`: Name of the collection being processed</li><li>`error`: The error message</li></ul> |
