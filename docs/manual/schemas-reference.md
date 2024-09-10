@@ -59,6 +59,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=pageLevelProgress-component">pageLevelProgress-component</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-contentobject">pageLevelProgress-contentobject</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-course">pageLevelProgress-course</a></li>
+<li><a href="#/schemas-reference?id=resources-contentobject">resources-contentobject</a></li>
+<li><a href="#/schemas-reference?id=resources-course">resources-course</a></li>
 <li><a href="#/schemas-reference?id=role">role</a></li>
 <li><a href="#/schemas-reference?id=slider-component">slider-component</a></li>
 <li><a href="#/schemas-reference?id=slider-course">slider-course</a></li>
@@ -4523,6 +4525,302 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>false</pre></td>
 <td>When enabled, the navigation button will show course-level progress rather than page-level progress. Defaults to disabled.</td>
+</tr>
+</table>
+      
+      <h3 id="resources-contentobject" class="dep">resources-contentobject</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=contentobject">contentobject</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Resources extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_resources._resourcesItems</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="resources-course" class="dep">resources-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._resources.ariaRegion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._extensions._resources.resources</td>
+<td>string</td>
+<td><pre>"Additional resources."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Resources extension is enabled or disabled</td>
+</tr>
+<tr class="">
+<td>_resources._drawerOrder</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>The order in which this extension should appear as a drawer item</td>
+</tr>
+<tr class="">
+<td>_resources.title</td>
+<td>string</td>
+<td><pre>"Resources"</pre></td>
+<td>The title for the resources button which displays when more than one extension is using the drawer.</td>
+</tr>
+<tr class="">
+<td>_resources.description</td>
+<td>string</td>
+<td><pre>"Select here to view resources for this course"</pre></td>
+<td>The description text for the resources button which displays when more than one extension is using the drawer.</td>
+</tr>
+<tr class="">
+<td>_resources.displayTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The title for the resources which displays at the top of the resources drawer.</td>
+</tr>
+<tr class="">
+<td>_resources.body</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The body text for the resources which displays at the top of the resources drawer.</td>
+</tr>
+<tr class="">
+<td>_resources.instruction</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>The instruction text for the resources which displays at the top of the resources drawer.</td>
+</tr>
+<tr class="">
+<td>_resources._enableFilters</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Turns the filter buttons on and off. Note that the filter buttons will be automatically disabled if all resource items have the same Type value.</td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.all</td>
+<td>string</td>
+<td><pre>"All"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.document</td>
+<td>string</td>
+<td><pre>"Documents"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.media</td>
+<td>string</td>
+<td><pre>"Media"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.link</td>
+<td>string</td>
+<td><pre>"Links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom1</td>
+<td>string</td>
+<td><pre>"Custom type 1"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom2</td>
+<td>string</td>
+<td><pre>"Custom type 2"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom3</td>
+<td>string</td>
+<td><pre>"Custom type 3"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom4</td>
+<td>string</td>
+<td><pre>"Custom type 4"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom5</td>
+<td>string</td>
+<td><pre>"Custom type 5"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom6</td>
+<td>string</td>
+<td><pre>"Custom type 6"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom7</td>
+<td>string</td>
+<td><pre>"Custom type 7"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom8</td>
+<td>string</td>
+<td><pre>"Custom type 8"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom9</td>
+<td>string</td>
+<td><pre>"Custom type 9"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterButtons.custom10</td>
+<td>string</td>
+<td><pre>"Custom type 10"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.allAria</td>
+<td>string</td>
+<td><pre>"View all resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.documentAria</td>
+<td>string</td>
+<td><pre>"View document resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.mediaAria</td>
+<td>string</td>
+<td><pre>"View media resources"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.linkAria</td>
+<td>string</td>
+<td><pre>"View resource links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom1Aria</td>
+<td>string</td>
+<td><pre>"View custom type 1 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom2Aria</td>
+<td>string</td>
+<td><pre>"View custom type 2 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom3Aria</td>
+<td>string</td>
+<td><pre>"View custom type 3 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom4Aria</td>
+<td>string</td>
+<td><pre>"View custom type 4 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom5Aria</td>
+<td>string</td>
+<td><pre>"View custom type 5 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom6Aria</td>
+<td>string</td>
+<td><pre>"View custom type 6 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom7Aria</td>
+<td>string</td>
+<td><pre>"View custom type 7 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom8Aria</td>
+<td>string</td>
+<td><pre>"View custom type 8 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom9Aria</td>
+<td>string</td>
+<td><pre>"View custom type 9 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._filterAria.custom10Aria</td>
+<td>string</td>
+<td><pre>"View custom type 10 links"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_resources._resourcesItems</td>
+<td>array</td>
+<td></td>
+<td> </td>
 </tr>
 </table>
       
