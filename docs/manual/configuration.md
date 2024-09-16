@@ -8,14 +8,13 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-api">adapt-authoring-api</a></li>
 <li><a href="#/configuration?id=adapt-authoring-assets">adapt-authoring-assets</a></li>
 <li><a href="#/configuration?id=adapt-authoring-auth">adapt-authoring-auth</a></li>
+<li><a href="#/configuration?id=adapt-authoring-auth-local">adapt-authoring-auth-local</a></li>
 <li><a href="#/configuration?id=adapt-authoring-browserslist">adapt-authoring-browserslist</a></li>
-<li><a href="#/configuration?id=adapt-authoring-collab">adapt-authoring-collab</a></li>
 <li><a href="#/configuration?id=adapt-authoring-contentplugin">adapt-authoring-contentplugin</a></li>
 <li><a href="#/configuration?id=adapt-authoring-core">adapt-authoring-core</a></li>
 <li><a href="#/configuration?id=adapt-authoring-docs">adapt-authoring-docs</a></li>
 <li><a href="#/configuration?id=adapt-authoring-jsonschema">adapt-authoring-jsonschema</a></li>
 <li><a href="#/configuration?id=adapt-authoring-lang">adapt-authoring-lang</a></li>
-<li><a href="#/configuration?id=adapt-authoring-localauth">adapt-authoring-localauth</a></li>
 <li><a href="#/configuration?id=adapt-authoring-logger">adapt-authoring-logger</a></li>
 <li><a href="#/configuration?id=adapt-authoring-mailer">adapt-authoring-mailer</a></li>
 <li><a href="#/configuration?id=adapt-authoring-middleware">adapt-authoring-middleware</a></li>
@@ -85,17 +84,35 @@ export default {
     // The identity of the issuer of the token
     tokenIssuer: "adapt", // string, optional
   },
+  'adapt-authoring-auth-local': {
+    // The number of rounds performed when generating a password hash
+    saltRounds: 10, // number, optional
+    // The number of failed login attempts allowed before the account is locked for a short period of time
+    failsUntilTemporaryLock: 5, // number, optional
+    // The number of failed login attempts allowed before the account is permanently locked
+    failsUntilPermanentLock: 20, // number, optional
+    // The amount of time a locked user must wait before attempting to log in again
+    temporaryLockDuration: "1m", // string, optional
+    // The amount of time a password reset token remains valid for
+    resetTokenLifespan: "3h", // string, optional
+    // The amount of time an invite password reset token remains valid for
+    inviteTokenLifespan: "7d", // string, optional
+    // Minimum password length
+    minPasswordLength: 8, // number, optional
+    // Whether the password must contain at least one number
+    passwordMustHaveNumber: false, // boolean, optional
+    // Whether the password must contain at least one uppercase character
+    passwordMustHaveUppercase: false, // boolean, optional
+    // Whether the password must contain at least one lowercase character
+    passwordMustHaveLowercase: false, // boolean, optional
+    // Whether the password must contain at least one special character
+    passwordMustHaveSpecial: false, // boolean, optional
+  },
   'adapt-authoring-browserslist': {
     // Whether the browserslist DB should be updated prior to each framework build
     runOnBuild: true, // boolean, optional
     // The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.
     updateInterval: "0", // string, optional
-  },
-  'adapt-authoring-collab': {
-    // Whether this module is a template
-    websocketURL: "ws://localhost:3000", // string, optional
-    // Time in minutes until a user is classed as inactive
-    idleTime: 1, // number, optional
   },
   'adapt-authoring-contentplugin': {
     // Location of locally installed plugins
@@ -128,30 +145,6 @@ export default {
   'adapt-authoring-lang': {
     // The default language used by the server
     defaultLang: "en", // string, optional
-  },
-  'adapt-authoring-localauth': {
-    // The number of rounds performed when generating a password hash
-    saltRounds: 10, // number, optional
-    // The number of failed login attempts allowed before the account is locked for a short period of time
-    failsUntilTemporaryLock: 5, // number, optional
-    // The number of failed login attempts allowed before the account is permanently locked
-    failsUntilPermanentLock: 20, // number, optional
-    // The amount of time a locked user must wait before attempting to log in again
-    temporaryLockDuration: "1m", // string, optional
-    // The amount of time a password reset token remains valid for
-    resetTokenLifespan: "3h", // string, optional
-    // The amount of time an invite password reset token remains valid for
-    inviteTokenLifespan: "7d", // string, optional
-    // Minimum password length
-    minPasswordLength: 8, // number, optional
-    // Whether the password must contain at least one number
-    passwordMustHaveNumber: false, // boolean, optional
-    // Whether the password must contain at least one uppercase character
-    passwordMustHaveUppercase: false, // boolean, optional
-    // Whether the password must contain at least one lowercase character
-    passwordMustHaveLowercase: false, // boolean, optional
-    // Whether the password must contain at least one special character
-    passwordMustHaveSpecial: false, // boolean, optional
   },
   'adapt-authoring-logger': {
     // Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).
@@ -413,6 +406,88 @@ See below for a full list of available configuration options.
 </div>
 </div>
 
+<h3 id="adapt-authoring-auth-local" class="dep">adapt-authoring-auth-local</h3>
+
+<div class="options">
+<div class="attribute">
+<div class="title"><span class="main">saltRounds</span> (number, optional)</div>
+<div class="inner">
+<div class="description">The number of rounds performed when generating a password hash</div>
+<div class="default"><span class="label">Default</span>: <pre>10</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">failsUntilTemporaryLock</span> (number, optional)</div>
+<div class="inner">
+<div class="description">The number of failed login attempts allowed before the account is locked for a short period of time</div>
+<div class="default"><span class="label">Default</span>: <pre>5</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">failsUntilPermanentLock</span> (number, optional)</div>
+<div class="inner">
+<div class="description">The number of failed login attempts allowed before the account is permanently locked</div>
+<div class="default"><span class="label">Default</span>: <pre>20</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">temporaryLockDuration</span> (string, optional)</div>
+<div class="inner">
+<div class="description">The amount of time a locked user must wait before attempting to log in again</div>
+<div class="default"><span class="label">Default</span>: <pre>"1m"</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">resetTokenLifespan</span> (string, optional)</div>
+<div class="inner">
+<div class="description">The amount of time a password reset token remains valid for</div>
+<div class="default"><span class="label">Default</span>: <pre>"3h"</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">inviteTokenLifespan</span> (string, optional)</div>
+<div class="inner">
+<div class="description">The amount of time an invite password reset token remains valid for</div>
+<div class="default"><span class="label">Default</span>: <pre>"7d"</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">minPasswordLength</span> (number, optional)</div>
+<div class="inner">
+<div class="description">Minimum password length</div>
+<div class="default"><span class="label">Default</span>: <pre>8</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">passwordMustHaveNumber</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">Whether the password must contain at least one number</div>
+<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">passwordMustHaveUppercase</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">Whether the password must contain at least one uppercase character</div>
+<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">passwordMustHaveLowercase</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">Whether the password must contain at least one lowercase character</div>
+<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">passwordMustHaveSpecial</span> (boolean, optional)</div>
+<div class="inner">
+<div class="description">Whether the password must contain at least one special character</div>
+<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+</div>
+</div>
+</div>
+
 <h3 id="adapt-authoring-browserslist" class="dep">adapt-authoring-browserslist</h3>
 
 <div class="options">
@@ -428,25 +503,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.</div>
 <div class="default"><span class="label">Default</span>: <pre>"0"</pre></div>
-</div>
-</div>
-</div>
-
-<h3 id="adapt-authoring-collab" class="dep">adapt-authoring-collab</h3>
-
-<div class="options">
-<div class="attribute">
-<div class="title"><span class="main">websocketURL</span> (string, optional)</div>
-<div class="inner">
-<div class="description">Whether this module is a template</div>
-<div class="default"><span class="label">Default</span>: <pre>"ws://localhost:3000"</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">idleTime</span> (number, optional)</div>
-<div class="inner">
-<div class="description">Time in minutes until a user is classed as inactive</div>
-<div class="default"><span class="label">Default</span>: <pre>1</pre></div>
 </div>
 </div>
 </div>
@@ -549,88 +605,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">The default language used by the server</div>
 <div class="default"><span class="label">Default</span>: <pre>"en"</pre></div>
-</div>
-</div>
-</div>
-
-<h3 id="adapt-authoring-localauth" class="dep">adapt-authoring-localauth</h3>
-
-<div class="options">
-<div class="attribute">
-<div class="title"><span class="main">saltRounds</span> (number, optional)</div>
-<div class="inner">
-<div class="description">The number of rounds performed when generating a password hash</div>
-<div class="default"><span class="label">Default</span>: <pre>10</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">failsUntilTemporaryLock</span> (number, optional)</div>
-<div class="inner">
-<div class="description">The number of failed login attempts allowed before the account is locked for a short period of time</div>
-<div class="default"><span class="label">Default</span>: <pre>5</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">failsUntilPermanentLock</span> (number, optional)</div>
-<div class="inner">
-<div class="description">The number of failed login attempts allowed before the account is permanently locked</div>
-<div class="default"><span class="label">Default</span>: <pre>20</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">temporaryLockDuration</span> (string, optional)</div>
-<div class="inner">
-<div class="description">The amount of time a locked user must wait before attempting to log in again</div>
-<div class="default"><span class="label">Default</span>: <pre>"1m"</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">resetTokenLifespan</span> (string, optional)</div>
-<div class="inner">
-<div class="description">The amount of time a password reset token remains valid for</div>
-<div class="default"><span class="label">Default</span>: <pre>"3h"</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">inviteTokenLifespan</span> (string, optional)</div>
-<div class="inner">
-<div class="description">The amount of time an invite password reset token remains valid for</div>
-<div class="default"><span class="label">Default</span>: <pre>"7d"</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">minPasswordLength</span> (number, optional)</div>
-<div class="inner">
-<div class="description">Minimum password length</div>
-<div class="default"><span class="label">Default</span>: <pre>8</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">passwordMustHaveNumber</span> (boolean, optional)</div>
-<div class="inner">
-<div class="description">Whether the password must contain at least one number</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">passwordMustHaveUppercase</span> (boolean, optional)</div>
-<div class="inner">
-<div class="description">Whether the password must contain at least one uppercase character</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">passwordMustHaveLowercase</span> (boolean, optional)</div>
-<div class="inner">
-<div class="description">Whether the password must contain at least one lowercase character</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">passwordMustHaveSpecial</span> (boolean, optional)</div>
-<div class="inner">
-<div class="description">Whether the password must contain at least one special character</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
 </div>
 </div>
 </div>

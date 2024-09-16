@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>MongoDBFindOneAndReplaceOptions - Adapt authoring tool UI documentation</title>
+    <title>adapt-authoring-auth-local/index.js - Adapt authoring tool UI documentation</title>
     
     <meta name="description" content="Adapt authoring tool UI documentation" />
     
@@ -43,120 +43,25 @@
 
 <div id="main">
     
-    <h1 class="page-title">MongoDBFindOneAndReplaceOptions</h1>
+    <h1 class="page-title">adapt-authoring-auth-local/index.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>
-            <span class="ancestors"><a href="mongodb.html">mongodb</a>.</span>
-        
-        
-            MongoDBFindOneAndReplaceOptions
-        
-        </h2>
-        
-    
-</header>
-
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Options passed to the findOneAndReplace function</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="adapt-authoring-mongodb_lib_typedefs.js.html">adapt-authoring-mongodb/lib/typedefs.js</a>, <a href="adapt-authoring-mongodb_lib_typedefs.js.html#line22">line 22</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://mongodb.github.io/node-mongodb-native/4.2/interfaces/FindOneAndReplaceOptions.html">https://mongodb.github.io/node-mongodb-native/4.2/interfaces/FindOneAndReplaceOptions.html</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-
-
-            
-                <div class="description usertext">Options passed to the findOneAndReplace function</div>
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Local (username/password) authentication
+ * @namespace localauth
+ */
+export { default } from './lib/LocalAuthModule.js'
+export { default as PasswordUtils } from './lib/PasswordUtils.js'
+</code></pre>
+        </article>
+    </section>
 
 
 
