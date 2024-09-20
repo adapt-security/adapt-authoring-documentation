@@ -38,6 +38,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=gmcq-course">gmcq-course</a></li>
 <li><a href="#/schemas-reference?id=graphic-component">graphic-component</a></li>
 <li><a href="#/schemas-reference?id=graphic-course">graphic-course</a></li>
+<li><a href="#/schemas-reference?id=hotgraphic-component">hotgraphic-component</a></li>
+<li><a href="#/schemas-reference?id=hotgraphic-course">hotgraphic-course</a></li>
 <li><a href="#/schemas-reference?id=languagePicker-config">languagePicker-config</a></li>
 <li><a href="#/schemas-reference?id=languagePicker-course">languagePicker-course</a></li>
 <li><a href="#/schemas-reference?id=localauthuser">localauthuser</a></li>
@@ -60,6 +62,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=resources-contentobject">resources-contentobject</a></li>
 <li><a href="#/schemas-reference?id=resources-course">resources-course</a></li>
 <li><a href="#/schemas-reference?id=role">role</a></li>
+<li><a href="#/schemas-reference?id=slider-component">slider-component</a></li>
+<li><a href="#/schemas-reference?id=slider-course">slider-course</a></li>
 <li><a href="#/schemas-reference?id=spoor-config">spoor-config</a></li>
 <li><a href="#/schemas-reference?id=spoor-course">spoor-course</a></li>
 <li><a href="#/schemas-reference?id=tag">tag</a></li>
@@ -2801,6 +2805,184 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </tr>
 </table>
       
+      <h3 id="hotgraphic-component" class="dep">hotgraphic-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"full-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Select the icons to find out more."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_graphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_graphic.src</td>
+<td>string</td>
+<td></td>
+<td>This is the image that appears behind the pins</td>
+</tr>
+<tr class="">
+<td>_graphic.alt</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank</td>
+</tr>
+<tr class="">
+<td>_graphic.attribution</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text to be displayed as an attribution</td>
+</tr>
+<tr class="">
+<td>mobileBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This body text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>mobileInstruction</td>
+<td>string</td>
+<td><pre>"Select the plus icon followed by the next arrow to find out more."</pre></td>
+<td>This instruction text is displayed on mobile devices when this component turns into a Narrative</td>
+</tr>
+<tr class="">
+<td>_hidePagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the progress indicator and previous and next links will not be shown on the popup toolbar</td>
+</tr>
+<tr class="">
+<td>_canCycleThroughPagination</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the popup navigation buttons will cycle continuously through the popup items (i.e. clicking next whilst on the last item will cause the first item to be shown)</td>
+</tr>
+<tr class="">
+<td>_isNarrativeOnMobile</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, the Hotgraphic will render a scaled down 'desktop' version (pins over image / tiles) of the component in 'mobile' view instead of being replaced by a Narrative interaction</td>
+</tr>
+<tr class="">
+<td>_isMobileTextBelowImage</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, the text area drops below the image instead of being behind the strapline button. Only applies when the Hot Graphic is configured to render as a Narrative on mobile</td>
+</tr>
+<tr class="">
+<td>_isStackedOnMobile</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, on mobile, text and images will be stacked vertically. No interaction will be required to view all items as the user will simply scroll down. Only applies when the Hot Graphic is configured to render as a Narrative on mobile</td>
+</tr>
+<tr class="">
+<td>_useNumberedPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the pin icons will be replaced with the item number. Useful if you want pins to be visited in a set order or show steps in a process</td>
+</tr>
+<tr class="">
+<td>_useGraphicsAsPins</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the main graphic will be hidden and pins will be displayed as images which can be positioned using classes</td>
+</tr>
+<tr class="">
+<td>_hasStaticTooltips</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, tooltips (if themselves enabled) will always be shown rather than only on hover.</td>
+</tr>
+<tr class="">
+<td>_isRound</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, a 50% border radius will be applied to the items pop up images</td>
+</tr>
+<tr class="">
+<td>_pinOffsetOrigin</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If set to `true`, the pins origin point will be changed from `top left` to `center`. This option will enable the pin to remain stationary when viewing responsively. The default is `false`.</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="hotgraphic-course" class="dep">hotgraphic-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._hotgraphic</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._hotgraphic.ariaRegion</td>
+<td>string</td>
+<td><pre>"Image with selectable areas. Select each button to show more information."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._hotgraphic.item</td>
+<td>string</td>
+<td><pre>"Item {{itemNumber}} of {{totalItems}}"</pre></td>
+<td>This is the aria label for each item. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
+</tr>
+<tr class="">
+<td>_globals._components._hotgraphic.previous</td>
+<td>string</td>
+<td><pre>"{{#if title}}Back to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.previous}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._hotgraphic.next</td>
+<td>string</td>
+<td><pre>"{{#if title}}Forward to {{{title}}} (item {{itemNumber}} of {{totalItems}}){{else}}{{_globals._accessibility._ariaLabels.next}}{{/if}}"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._hotgraphic.popupPagination</td>
+<td>string</td>
+<td><pre>"{{itemNumber}} / {{totalItems}}"</pre></td>
+<td>This is the item count displayed in the popup. Use {{itemNumber}} and {{totalItems}} in your text to tell the user which item they are viewing and how many items there are in total</td>
+</tr>
+</table>
+      
       <h3 id="languagepicker-config" class="dep">languagePicker-config</h3>
       
       <div class="extension">Patches <a href="#/schemas-reference?id=config">config</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
@@ -4670,6 +4852,360 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>array</td>
 <td></td>
 <td>Scopes relevant to this role</td>
+</tr>
+</table>
+      
+      <h3 id="slider-component" class="dep">slider-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Drag the slider to make your choice and select Submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>ariaQuestion</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.</td>
+</tr>
+<tr class="">
+<td>ariaScaleName</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>This will be read out by screen readers when focusing on the scale input (slider handle). An appropriate name should give context to which the scale is a measurement of.</td>
+</tr>
+<tr class="">
+<td>_attempts</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How many attempts the learner is allowed</td>
+</tr>
+<tr class="">
+<td>_canShowModelAnswer</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowFeedback</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_canShowMarking</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldDisplayAttempts</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_questionWeight</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>How much this question is worth</td>
+</tr>
+<tr class="">
+<td>_recordInteraction</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only</td>
+</tr>
+<tr class="">
+<td>labelStart</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>labelEnd</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStart</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleEnd</td>
+<td>number</td>
+<td><pre>10</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_scaleStep</td>
+<td>number</td>
+<td><pre>1</pre></td>
+<td>The amount the scale should increment by</td>
+</tr>
+<tr class="">
+<td>scaleStepPrefix</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>For instance, a ' can be used as a prefix to indicate currency in dollars (ex. $100)</td>
+</tr>
+<tr class="">
+<td>scaleStepSuffix</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>For instance, a 'V' can be used as a suffix to indicate voltage (ex. 4V)</td>
+</tr>
+<tr class="">
+<td>_correctAnswer</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer on the scale</td>
+</tr>
+<tr class="">
+<td>_correctRange</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_correctRange._bottom</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct bottom range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_correctRange._top</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Correct top range answer on the scale -- ignored when 'Correct answer' is set</td>
+</tr>
+<tr class="">
+<td>_showScaleIndicator</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether a position indicator on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showNumber</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the position number on the indicator should be shown or not</td>
+</tr>
+<tr class="">
+<td>_showScale</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether to show the lines and numbers of the scale or not</td>
+</tr>
+<tr class="">
+<td>_showScaleNumbers</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the numbers on the scale should be shown or not</td>
+</tr>
+<tr class="">
+<td>_feedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback.title</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Title text for the feedback</td>
+</tr>
+<tr class="">
+<td>_feedback.altTitle</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Text read out by screen readers if no visual title is included</td>
+</tr>
+<tr class="">
+<td>_feedback.correct</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Correct answer feedback for this question</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.final</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for the final attempt</td>
+</tr>
+<tr class="">
+<td>_feedback._incorrect.notFinal</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead</td>
+</tr>
+<tr class="">
+<td>_buttons</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._submit.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._reset.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._hideCorrectAnswer.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.buttonText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons._showFeedback.ariaLabel</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptsText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.remainingAttemptText</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="slider-course" class="dep">slider-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._slider</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._slider.ariaRegion</td>
+<td>string</td>
+<td><pre>"Slider. Respond to the question by selecting a value on the scale and then submit."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._slider.labelStart</td>
+<td>string</td>
+<td><pre>"Start of the scale"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._slider.labelEnd</td>
+<td>string</td>
+<td><pre>"End of the scale"</pre></td>
+<td> </td>
 </tr>
 </table>
       
