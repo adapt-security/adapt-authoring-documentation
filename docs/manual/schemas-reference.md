@@ -5,6 +5,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 ### Quick navigation
 
 <ul class="toc">
+<li><a href="#/schemas-reference?id=accordion-component">accordion-component</a></li>
+<li><a href="#/schemas-reference?id=accordion-course">accordion-course</a></li>
 <li><a href="#/schemas-reference?id=adaptbuild">adaptbuild</a></li>
 <li><a href="#/schemas-reference?id=article">article</a></li>
 <li><a href="#/schemas-reference?id=assessment-article">assessment-article</a></li>
@@ -48,6 +50,8 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <li><a href="#/schemas-reference?id=matching-course">matching-course</a></li>
 <li><a href="#/schemas-reference?id=mcq-component">mcq-component</a></li>
 <li><a href="#/schemas-reference?id=mcq-course">mcq-course</a></li>
+<li><a href="#/schemas-reference?id=media-component">media-component</a></li>
+<li><a href="#/schemas-reference?id=media-course">media-course</a></li>
 <li><a href="#/schemas-reference?id=narrative-component">narrative-component</a></li>
 <li><a href="#/schemas-reference?id=narrative-course">narrative-course</a></li>
 <li><a href="#/schemas-reference?id=pageLevelProgress-article">pageLevelProgress-article</a></li>
@@ -85,7 +89,77 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 </ul>
 
 
-<h3 id="adaptbuild" class="dep">adaptbuild</h3>
+<h3 id="accordion-component" class="dep">accordion-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"full-width"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Select the headings to find out more."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"allItems"</pre></td>
+<td>Whether completion is based on the learner having viewed all the accordion items - or just having viewed the component</td>
+</tr>
+<tr class="">
+<td>_items</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_shouldCollapseItems</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>If disabled, upon expansion of an accordion item, any previously expanded items will not be collapsed</td>
+</tr>
+<tr class="">
+<td>_shouldExpandFirstItem</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="accordion-course" class="dep">accordion-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._accordion</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._accordion.ariaRegion</td>
+<td>string</td>
+<td><pre>"List of expandable sections. Select each button to expand the content."</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="adaptbuild" class="dep">adaptbuild</h3>
       
       <div class="desc">An Adapt course build instance</div>
 
@@ -3757,6 +3831,348 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_globals._components._mcq.ariaRegion</td>
 <td>string</td>
 <td><pre>"Multiple choice question"</pre></td>
+<td> </td>
+</tr>
+</table>
+      
+      <h3 id="media-component" class="dep">media-component</h3>
+      
+      <div class="extension">Merges with <a href="#/schemas-reference?id=component">component</a></div>
+
+<div class="required">Fields in bold are required.</div>
+
+<table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_supportedLayout</td>
+<td>string</td>
+<td><pre>"both"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>instruction</td>
+<td>string</td>
+<td><pre>"Select the play button to start the video."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp4</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.ogv</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.webm</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.mp3</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_media.source</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Enter an external link, such as a YouTube URL</td>
+</tr>
+<tr class="">
+<td>_media.type</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo</td>
+</tr>
+<tr class="">
+<td>_media.poster</td>
+<td>string</td>
+<td></td>
+<td>Image displayed before the video is played (except on Vimeo)</td>
+</tr>
+<tr class="">
+<td>_media.cc</td>
+<td>array</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_setCompletionOn</td>
+<td>string</td>
+<td><pre>"play"</pre></td>
+<td>Defines what media event should trigger completion of this component</td>
+</tr>
+<tr class="">
+<td>_useClosedCaptions</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_startLanguage</td>
+<td>string</td>
+<td><pre>"en"</pre></td>
+<td>Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages</td>
+</tr>
+<tr class="">
+<td>_showVolumeControl</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls</td>
+</tr>
+<tr class="">
+<td>_startVolume</td>
+<td>string</td>
+<td><pre>"80%"</pre></td>
+<td>Defines the default volume. On mobile devices the audio level is under the user's physical control</td>
+</tr>
+<tr class="">
+<td>_allowFullScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_aspectRatio</td>
+<td>string</td>
+<td><pre>"landscape"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_pauseWhenOffScreen</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playsinline</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above</td>
+</tr>
+<tr class="">
+<td>_preventForwardScrubbing</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, will attempt to prevent users from skipping ahead in audio/video</td>
+</tr>
+<tr class="">
+<td>_offsetMediaControls</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the media control bar will be respositioned below the media container to remove the standard overlap style.</td>
+</tr>
+<tr class="">
+<td>_transcript</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._setCompletionOnView</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._inlineTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript._externalTranscript</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptCloseButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.inlineTranscriptBody</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLinkButton</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_transcript.transcriptLink</td>
+<td>string</td>
+<td></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_playerOptions</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td>Optional object that can be used to customize the player</td>
+</tr>
+</table>
+      
+      <h3 id="media-course" class="dep">media-course</h3>
+      
+      <div class="extension">Patches <a href="#/schemas-reference?id=course">course</a></div><table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>_globals</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.ariaRegion</td>
+<td>string</td>
+<td><pre>"Media player{{#any _transcript._inlineTranscript _transcript._externalTranscript}} and transcript{{/any}}."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.skipToTranscript</td>
+<td>string</td>
+<td><pre>"Skip to transcript"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.playText</td>
+<td>string</td>
+<td><pre>"Play"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.pauseText</td>
+<td>string</td>
+<td><pre>"Pause"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.stopText</td>
+<td>string</td>
+<td><pre>"Stop"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.audioPlayerText</td>
+<td>string</td>
+<td><pre>"Audio Player"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.videoPlayerText</td>
+<td>string</td>
+<td><pre>"Video Player"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.tracksText</td>
+<td>string</td>
+<td><pre>"Captions/Subtitles"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.timeSliderText</td>
+<td>string</td>
+<td><pre>"Time Slider"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.muteText</td>
+<td>string</td>
+<td><pre>"Mute Toggle"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.unmuteStatusText</td>
+<td>string</td>
+<td><pre>"Unmute"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.muteStatusText</td>
+<td>string</td>
+<td><pre>"Mute"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.volumeSliderText</td>
+<td>string</td>
+<td><pre>"Volume Slider"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.fullscreenText</td>
+<td>string</td>
+<td><pre>"Fullscreen"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.goFullscreenText</td>
+<td>string</td>
+<td><pre>"Go Fullscreen"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.turnOffFullscreenText</td>
+<td>string</td>
+<td><pre>"Turn off Fullscreen"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.noneText</td>
+<td>string</td>
+<td><pre>"None"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.skipBackText</td>
+<td>string</td>
+<td><pre>"Skip back %1 seconds"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.allyVolumeControlText</td>
+<td>string</td>
+<td><pre>"Use Up/Down Arrow keys to increase or decrease volume."</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._media.progessHelpText</td>
+<td>string</td>
+<td><pre>"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."</pre></td>
 <td> </td>
 </tr>
 </table>

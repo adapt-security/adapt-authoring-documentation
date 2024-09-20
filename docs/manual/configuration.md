@@ -159,6 +159,8 @@ export default {
   'adapt-authoring-mailer': {
     // Whether the mailer module is enabled
     isEnabled: false, // boolean, optional
+    // Mail transport to use
+    transport: undefined, // string, optional
     // Connection URL for the SMTP service
     connectionUrl: undefined, // string, optional
     // Default email address to use as the sender
@@ -650,6 +652,13 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">Whether the mailer module is enabled</div>
 <div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">transport</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Mail transport to use</div>
+<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
 </div>
 </div>
 <div class="attribute">
