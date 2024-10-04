@@ -109,6 +109,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=UNKNOWN_LANG">UNKNOWN_LANG</a></li>
 <li><a href="#/errorsref?id=UNKNOWN_SCHEMA_NAME">UNKNOWN_SCHEMA_NAME</a></li>
 <li><a href="#/errorsref?id=USER_REG_FAILED">USER_REG_FAILED</a></li>
+<li><a href="#/errorsref?id=USER_SELF_DELETE_ILLEGAL">USER_SELF_DELETE_ILLEGAL</a></li>
 <li><a href="#/errorsref?id=VALIDATION_FAILED">VALIDATION_FAILED</a></li>
 </ul>
 
@@ -217,4 +218,5 @@ Supplemental data can be used at the point that errors are translated to provide
 | `UNKNOWN_LANG` | unknown language | 400 | <ul><li>`lang`: language</li></ul> |
 | `UNKNOWN_SCHEMA_NAME` | Failed to determine schema name | 500 | <ul><li>`_id`: The database _id</li><li>`_type`: The _type value</li><li>`_component`: The _component value</li></ul> |
 | `USER_REG_FAILED` | User registration failed | 400 | <ul><li>`error`: The error</li></ul> |
+| `USER_SELF_DELETE_ILLEGAL` | You cannot delete your own user account | 400 | <ul><li>`id`: _id of the user</li></ul> |
 | `VALIDATION_FAILED` | Data validation failed | 400 | <ul><li>`data`: the data failing validation</li><li>`errors`: all validation errors</li><li>`schemaName`: Schema name</li></ul> |

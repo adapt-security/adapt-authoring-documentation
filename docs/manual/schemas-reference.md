@@ -129,6 +129,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>false</pre></td>
 <td> </td>
 </tr>
+<tr class="">
+<td>_isCenterAligned</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, the layout of the item button child elements will be stacked on top of one another centrally.</td>
+</tr>
 </table>
       
       <h3 id="accordion-course" class="dep">accordion-course</h3>
@@ -1124,6 +1130,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>displayTitle</td>
+<td>undefined</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_layout</td>
 <td>string</td>
 <td><pre>""</pre></td>
@@ -1524,7 +1536,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>displayTitle</td>
 <td>string</td>
-<td><pre>"Untitled"</pre></td>
+<td><pre>""</pre></td>
 <td>When viewing an element - this is the title that will be displayed on the page</td>
 </tr>
 <tr class="">
@@ -1630,6 +1642,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>displayTitle</td>
+<td>undefined</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>subtitle</td>
 <td>string</td>
 <td><pre>""</pre></td>
@@ -1788,6 +1806,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
       <div class="extension">Merges with <a href="#/schemas-reference?id=content">content</a></div>
 
 <table class="schema"><tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr><tr class="">
+<td>displayTitle</td>
+<td>undefined</td>
+<td><pre>"Untitled"</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>heroImage</td>
 <td>string</td>
 <td></td>
