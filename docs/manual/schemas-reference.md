@@ -2466,6 +2466,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
 </tr>
 <tr class="">
+<td>_canShowCorrectness</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, this replaces the associated 'model answer' toggle button and displays correctness directly on the component items.</td>
+</tr>
+<tr class="">
 <td>_canShowFeedback</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
@@ -3612,6 +3618,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>boolean</td>
 <td><pre>true</pre></td>
 <td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
+</tr>
+<tr class="">
+<td>_canShowCorrectness</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, this replaces the associated 'model answer' toggle button and displays correctness directly on the component items.</td>
 </tr>
 <tr class="">
 <td>_canShowFeedback</td>
