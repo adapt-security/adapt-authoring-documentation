@@ -3308,6 +3308,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allow the user to view the 'model answer' if they answer the question incorrectly. Defaults to true.</td>
 </tr>
 <tr class="">
+<td>_canShowCorrectness</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, this replaces the associated 'model answer' toggle button and a comma separated list of correct options is displayed below the submitted question item</td>
+</tr>
+<tr class="">
 <td>_canShowFeedback</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
@@ -3574,6 +3580,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"Matching. Select from lists and then submit."</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._matching.correctAnswerPrefix</td>
+<td>string</td>
+<td><pre>"The correct answer is"</pre></td>
+<td>If _canShowCorrectness is enabled, this text provides a prefix for the correct option displayed below the submitted question item</td>
+</tr>
+<tr class="">
+<td>_globals._components._matching.correctAnswersPrefix</td>
+<td>string</td>
+<td><pre>"The correct answers are"</pre></td>
+<td>If _canShowCorrectness is enabled, this text provides a prefix for the comma separated list of correct options displayed below the submitted question item</td>
 </tr>
 </table>
       
@@ -4934,6 +4952,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
 </tr>
 <tr class="">
+<td>_canShowCorrectness</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, this replaces the associated 'model answer' toggle button and displays correctness directly on the component</td>
+</tr>
+<tr class="">
 <td>_canShowFeedback</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
@@ -5586,6 +5610,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Allow the user to view the 'model answer' if they answer the question incorrectly</td>
 </tr>
 <tr class="">
+<td>_canShowCorrectness</td>
+<td>boolean</td>
+<td><pre>false</pre></td>
+<td>If enabled, this replaces the associated 'model answer' toggle button and a comma separated list of correct options is displayed below the submitted text input</td>
+</tr>
+<tr class="">
 <td>_canShowFeedback</td>
 <td>boolean</td>
 <td><pre>true</pre></td>
@@ -5828,6 +5858,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"Text input. Type your answer and then submit."</pre></td>
 <td> </td>
+</tr>
+<tr class="">
+<td>_globals._components._textinput.correctAnswerPrefix</td>
+<td>string</td>
+<td><pre>"The correct answer is"</pre></td>
+<td>If _canShowCorrectness is enabled, this text provides a prefix for the correct option displayed below the submitted input</td>
+</tr>
+<tr class="">
+<td>_globals._components._textinput.correctAnswersPrefix</td>
+<td>string</td>
+<td><pre>"Accepted correct answers include"</pre></td>
+<td>If _canShowCorrectness is enabled, this text provides a prefix for the comma separated list of correct options displayed below the submitted input</td>
 </tr>
 </table>
       
