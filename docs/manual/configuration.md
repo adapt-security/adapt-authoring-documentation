@@ -45,6 +45,8 @@ export default {
     frameworkDir: "$TEMP/adapt_framework", // string, optional
     // URL of the Adapt framework git repository to install
     frameworkRepository: undefined, // string, optional
+    // Maximum file upload size for course imports
+    importMaxFileSize: "500mb", // string, optional
   },
   'adapt-authoring-api': {
     // Default lifespan of data cache
@@ -61,8 +63,8 @@ export default {
     defaultAssetRepository: "local", // string, optional
     // File types allowed for upload
     expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/vtt","video/mp4"], // array, optional
-    // Maximum file upload size
-    maxFileSize: "50mb", // string, optional
+    // Maximum asset file upload size
+    assetMaxFileSize: "50mb", // string, optional
     // Location of local thumbs dir
     thumbnailDir: "$TEMP/asset-thumbs", // string, optional
     // File extension for thumbnails
@@ -169,7 +171,7 @@ export default {
   'adapt-authoring-middleware': {
     // Content types the API accepts (may use MIME types or extension names)
     acceptedTypes: ["application/json"], // array, optional
-    // Limit the size of any uploaded file
+    // Default file size limit for uploaded files. Note that other modules may specify their own limits, please check full config documentation for details.
     fileUploadMaxFileSize: "50mb", // string, optional
     // Temporary directory for file uploads
     uploadTempDir: "$TEMP/file-uploads", // string, optional
@@ -192,7 +194,7 @@ export default {
   },
   'adapt-authoring-roles': {
     // List of defined roles to be loaded on app start
-    roleDefinitions: [{"shortName":"authuser","displayName":"Authenticated user","scopes":["clear:session","read:config","read:lang","read:me","write:me","disavow:auth"]},{"shortName":"contentcreator","displayName":"Content creator","extends":"authuser","scopes":["export:adapt","import:adapt","preview:adapt","publish:adapt","read:assets","write:assets","read:content","write:content","read:contentplugin","read:roles","read:schema","read:tags","write:tags","read:users"]},{"shortName":"superuser","displayName":"Super user","scopes":["*:*"]}], // array, optional
+    roleDefinitions: [{"shortName":"authuser","displayName":"Authenticated user","scopes":["clear:session","read:config","read:lang","read:me","write:me","disavow:auth"]},{"shortName":"contentcreator","displayName":"Content creator","extends":"authuser","scopes":["export:adapt","import:adapt","preview:adapt","publish:adapt","read:assets","write:assets","read:content","write:content","read:contentplugins","read:roles","read:schema","read:tags","write:tags","read:users"]},{"shortName":"superuser","displayName":"Super user","scopes":["*:*"]}], // array, optional
     // The roles which are applied by default to new users (expects role shortname)
     defaultRoles: ["authuser"], // array, optional
     // Same as defaultRoles, but allows different roles to be specified for different auth types
@@ -280,6 +282,13 @@ See below for a full list of available configuration options.
 <div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
 </div>
 </div>
+<div class="attribute">
+<div class="title"><span class="main">importMaxFileSize</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Maximum file upload size for course imports</div>
+<div class="default"><span class="label">Default</span>: <pre>"500mb"</pre></div>
+</div>
+</div>
 </div>
 
 <h3 id="adapt-authoring-api" class="dep">adapt-authoring-api</h3>
@@ -333,9 +342,9 @@ See below for a full list of available configuration options.
 </div>
 </div>
 <div class="attribute">
-<div class="title"><span class="main">maxFileSize</span> (string, optional)</div>
+<div class="title"><span class="main">assetMaxFileSize</span> (string, optional)</div>
 <div class="inner">
-<div class="description">Maximum file upload size</div>
+<div class="description">Maximum asset file upload size</div>
 <div class="default"><span class="label">Default</span>: <pre>"50mb"</pre></div>
 </div>
 </div>
@@ -690,7 +699,7 @@ See below for a full list of available configuration options.
 <div class="attribute">
 <div class="title"><span class="main">fileUploadMaxFileSize</span> (string, optional)</div>
 <div class="inner">
-<div class="description">Limit the size of any uploaded file</div>
+<div class="description">Default file size limit for uploaded files. Note that other modules may specify their own limits, please check full config documentation for details.</div>
 <div class="default"><span class="label">Default</span>: <pre>"50mb"</pre></div>
 </div>
 </div>
@@ -759,7 +768,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">roleDefinitions</span> (array, optional)</div>
 <div class="inner">
 <div class="description">List of defined roles to be loaded on app start</div>
-<div class="default"><span class="label">Default</span>: <pre>[{"shortName":"authuser","displayName":"Authenticated user","scopes":["clear:session","read:config","read:lang","read:me","write:me","disavow:auth"]},{"shortName":"contentcreator","displayName":"Content creator","extends":"authuser","scopes":["export:adapt","import:adapt","preview:adapt","publish:adapt","read:assets","write:assets","read:content","write:content","read:contentplugin","read:roles","read:schema","read:tags","write:tags","read:users"]},{"shortName":"superuser","displayName":"Super user","scopes":["*:*"]}]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>[{"shortName":"authuser","displayName":"Authenticated user","scopes":["clear:session","read:config","read:lang","read:me","write:me","disavow:auth"]},{"shortName":"contentcreator","displayName":"Content creator","extends":"authuser","scopes":["export:adapt","import:adapt","preview:adapt","publish:adapt","read:assets","write:assets","read:content","write:content","read:contentplugins","read:roles","read:schema","read:tags","write:tags","read:users"]},{"shortName":"superuser","displayName":"Super user","scopes":["*:*"]}]</pre></div>
 </div>
 </div>
 <div class="attribute">

@@ -16,8 +16,8 @@ Regardless of which installation method you choose, the Adapt authoring tool has
 
 - [git >=2](https://git-scm.com/downloads): for getting the latest code changes
 - [MongoDB 4+](https://www.mongodb.com/try/download/community): for storing all of your data
-- [Node.js 18 - 20](https://nodejs.org/en/download/): for running the code
-- [npm 8 - 10](https://nodejs.org/en/download/): for managing dependencies
+- [Node.js 22](https://nodejs.org/en/download/): for running the code
+- [npm 10](https://nodejs.org/en/download/): for managing dependencies
 
 > We strongly recommend using a version manager to install Node.js and npm like [nvm](https://github.com/nvm-sh/nvm) (Linux/Mac OS) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (Windows). This makes it very easy to switch versions later.
 

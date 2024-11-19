@@ -54,6 +54,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=FW_IMPORT_FAILED">FW_IMPORT_FAILED</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_INCOMPAT">FW_IMPORT_INCOMPAT</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_INVALID">FW_IMPORT_INVALID</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_INVALID_CONTENT">FW_IMPORT_INVALID_CONTENT</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_INVALID_COURSE">FW_IMPORT_INVALID_COURSE</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_MISSING_PLUGINS">FW_IMPORT_MISSING_PLUGINS</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_PLUGINS_FAILED">FW_IMPORT_PLUGINS_FAILED</a></li>
@@ -149,10 +150,10 @@ Supplemental data can be used at the point that errors are translated to provide
 | `EACCES` | An attempt was made to access a file in a way forbidden by its file access permissions | 500 | <ul></ul> |
 | `EADDRINUSE` | An attempt to bind a server to a local address failed due to another server on the local system already occupying that address | 500 | <ul></ul> |
 | `ECONNREFUSED` | No connection could be made because the target machine actively refused it | 500 | <ul></ul> |
-| `EEXIST` | An existing file was the target of an operation that required that the target not exist | 500 | <ul></ul> |
+| `EEXIST` | An existing file was the target of an operation that required that the target not exist | 500 | <ul><li>`path`: Path to target file or directory</li></ul> |
 | `ENDPOINT_NOT_FOUND` | API endpoint does not exist | 404 | <ul><li>`endpoint`: The missing endpoint</li><li>`method`: The HTTP method</li></ul> |
-| `ENOENT` | No entity (file or directory) could be found by the given path | 500 | <ul></ul> |
-| `ENOTEMPTY` | A directory with entries was the target of an operation that requires an empty directory | 500 | <ul></ul> |
+| `ENOENT` | No entity (file or directory) could be found by the given path | 500 | <ul><li>`path`: Path to target file or directory</li></ul> |
+| `ENOTEMPTY` | A directory with entries was the target of an operation that requires an empty directory | 500 | <ul><li>`path`: Path to target file or directory</li></ul> |
 | `FILE_EXCEEDS_MAX_SIZE` | Uploaded file exceeds the size limit | 413 | <ul><li>`maxSize`: The maximum file size</li><li>`size`: Size of file</li></ul> |
 | `FILE_SYNTAX_ERROR` | File contains a syntax error | 500 | <ul><li>`path`: Path to the invalid file</li><li>`message`: The error message</li></ul> |
 | `FUNC_DISABLED` | Function has been disabled | 500 | <ul><li>`name`: The name of the function</li></ul> |
@@ -163,6 +164,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FW_IMPORT_FAILED` | Import of framework course failed | 400 | <ul><li>`error`: The error</li></ul> |
 | `FW_IMPORT_INCOMPAT` | Course for import uses a framework version incompatible with that installed | 400 | <ul><li>`import`: Framework version used in import course</li><li>`installed`: Framework version currently installed on the server</li></ul> |
 | `FW_IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul></ul> |
+| `FW_IMPORT_INVALID_CONTENT` | An invalid content item has been found in import data | 400 | <ul><li>`item`: The invalid content item</li></ul> |
 | `FW_IMPORT_INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
 | `FW_IMPORT_MISSING_PLUGINS` | Course for import uses plugins which are missing from the server | 400 | <ul></ul> |
 | `FW_IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
