@@ -1404,6 +1404,18 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>CSS class name to be applied to the drawer sidebar icon.</td>
 </tr>
 <tr class="">
+<td>_notify</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify._duration</td>
+<td>number</td>
+<td><pre>400</pre></td>
+<td> </td>
+</tr>
+<tr class="">
 <td>_generateSourcemap</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -2830,7 +2842,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <tr class="">
 <td>_globals._components._graphic.ariaRegion</td>
 <td>string</td>
-<td><pre>"Graphic"</pre></td>
+<td><pre>""</pre></td>
 <td> </td>
 </tr>
 </table>
@@ -6238,6 +6250,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
+<td>_trickle._isEnabled</td>
+<td>boolean</td>
+<td><pre>true</pre></td>
+<td>Controls whether the Trickle extension is enabled or disabled globally.</td>
+</tr>
+<tr class="">
 <td>_trickle._logState</td>
 <td>boolean</td>
 <td><pre>false</pre></td>
@@ -7023,13 +7041,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_global.font-color</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Global body font colour</td>
+<td>Global body font colour.</td>
 </tr>
 <tr class="">
 <td>_global.font-color-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Global body font colour inverted. Either a lightened/darkened alternative to Font colour</td>
+<td>Global body font colour inverted. Either a lightened / darkened alternative to Font colour.</td>
 </tr>
 <tr class="">
 <td>_global.link</td>
@@ -7041,7 +7059,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_global.link-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Global link font colour inverted. Either a lightened/darkened alternative to Link colour</td>
+<td>Global link font colour inverted. Either a lightened / darkened alternative to Link colour.</td>
 </tr>
 <tr class="">
 <td>_global.link-hover</td>
@@ -7053,7 +7071,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_global.link-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Global link font colour when hovered over inverted. Either a lightened/darkened alternative to Link hover colour</td>
+<td>Global link font colour when hovered over inverted. Either a lightened / darkened alternative to Link hover colour.</td>
 </tr>
 <tr class="">
 <td>_global.heading-color</td>
@@ -7065,7 +7083,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_global.heading-color-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Global title colour inverted. Either a lightened/darkened alternative to Title colour</td>
+<td>Global title colour inverted. Either a lightened / darkened alternative to Title colour.</td>
 </tr>
 <tr class="">
 <td>_items</td>
@@ -7077,13 +7095,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_items.item-color</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the clickable areas or points of interest in components</td>
+<td>Defines the selectable areas or points of interest in components.</td>
 </tr>
 <tr class="">
 <td>_items.item-color-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the item text/icon colour. Should be a colour that provides good contrast against the item colour</td>
+<td>Defines the item text / icon colour. Should be a colour that provides good contrast against the item colour.</td>
 </tr>
 <tr class="">
 <td>_items.item-color-hover</td>
@@ -7095,7 +7113,19 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_items.item-color-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the item text/icon colour when hovered over. Should be a colour that provides good contrast against the item hover colour</td>
+<td>Defines the item text / icon colour when hovered over. Should be a colour that provides good contrast against the item hover colour.</td>
+</tr>
+<tr class="">
+<td>_items.item-color-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_items.item-color-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item text / icon colour when focused. Should be a colour that provides good contrast against the item focus colour.</td>
 </tr>
 <tr class="">
 <td>_items.item-color-selected</td>
@@ -7107,19 +7137,121 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_items.item-color-inverted-selected</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the item text/icon colour when selected. Should be a colour that provides good contrast against the Item selected colour</td>
+<td>Defines the item text / icon colour when selected. Should be a colour that provides good contrast against the item selected colour.</td>
 </tr>
 <tr class="">
 <td>_items.visited</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the item colour when it has been visited</td>
+<td> </td>
 </tr>
 <tr class="">
 <td>_items.visited-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the item text/icon colour when visited. Should be a colour that provides good contrast against the item visited colour</td>
+<td>Defines the item text / icon colour when visited. Should be a colour that provides good contrast against the item visited colour.</td>
+</tr>
+<tr class="">
+<td>_items.item-color-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_items.item-color-inverted-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item text / icon colour when disabled. Should be a colour that provides good contrast against the item disabled colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the selectable areas in components that don't contain course content.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour. Should be a colour that provides good contrast against the item UI colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-hover</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted-hover</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour when hovered over. Should be a colour that provides good contrast against the item UI hover colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour when focused. Should be a colour that provides good contrast against the item UI focus colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-selected</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted-selected</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour when selected. Should be a colour that provides good contrast against the item UI selected colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-visited</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted-visited</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour when visited. Should be a colour that provides good contrast against the item UI visited colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour when locked. Should be a colour that provides good contrast against the item UI locked colour.</td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_itemsUi.item-ui-color-inverted-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the item UI text / icon colour when disabled. Should be a colour that provides good contrast against the item UI disabled colour</td>
 </tr>
 <tr class="">
 <td>_buttons</td>
@@ -7131,13 +7263,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_buttons.btn-color</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines component question buttons and navigational elements</td>
+<td>Defines component question buttons and navigational elements.</td>
 </tr>
 <tr class="">
 <td>_buttons.btn-color-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the button text/icon colour. Should be a colour that provides good contrast against the button colour</td>
+<td>Defines the button text / icon colour. Should be a colour that provides good contrast against the button colour.</td>
 </tr>
 <tr class="">
 <td>_buttons.btn-color-hover</td>
@@ -7149,31 +7281,43 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_buttons.btn-color-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the button text/icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour</td>
+<td>Defines the button text / icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour.</td>
 </tr>
 <tr class="">
-<td>_buttons.btn-icon-color</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Defines the standardised icon button background colour</td>
-</tr>
-<tr class="">
-<td>_buttons.btn-icon-color-inverted</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Defines the button icon colour. Should be a colour that provides good contrast against the button colour</td>
-</tr>
-<tr class="">
-<td>_buttons.btn-icon-color-hover</td>
+<td>_buttons.btn-color-focus</td>
 <td>string</td>
 <td><pre>""</pre></td>
 <td> </td>
 </tr>
 <tr class="">
-<td>_buttons.btn-icon-color-inverted-hover</td>
+<td>_buttons.btn-color-inverted-focus</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the button icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour</td>
+<td>Defines the button text / icon colour when focused. Should be a colour that provides good contrast against the button focus colour.</td>
+</tr>
+<tr class="">
+<td>_buttons.btn-color-selected</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.btn-color-inverted-selected</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the button text / icon colour when selected. Should be a colour that provides good contrast against the button selected colour.</td>
+</tr>
+<tr class="">
+<td>_buttons.btn-color-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.btn-color-inverted-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the button text / icon colour when locked. Should be a colour that provides good contrast against the button locked colour.</td>
 </tr>
 <tr class="">
 <td>_buttons.disabled</td>
@@ -7185,7 +7329,49 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_buttons.disabled-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the button text/icon colour when it is disabled. Should be a colour that provides good contrast against the button disabled colour</td>
+<td>Defines the button text / icon colour when disabled. Should be a colour that provides good contrast against the button disabled colour.</td>
+</tr>
+<tr class="">
+<td>_buttons.btn-icon-color</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the standardised icon button background colour.</td>
+</tr>
+<tr class="">
+<td>_buttons.btn-icon-color-inverted</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the button icon colour. Should be a colour that provides good contrast against the button colour.</td>
+</tr>
+<tr class="">
+<td>_buttons.btn-icon-color-hover</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_buttons.btn-icon-color-inverted-hover</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the button icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour.</td>
+</tr>
+<tr class="">
+<td>_globalUi</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_globalUi.ui-color</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the global UI colour scheme for nav, notify, and drawer.</td>
+</tr>
+<tr class="">
+<td>_globalUi.ui-color-inverted</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the global UI text / icon colour. Should be a colour that provides good contrast against the global UI colour.</td>
 </tr>
 <tr class="">
 <td>_validation</td>
@@ -7197,25 +7383,25 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_validation.validation-success</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the question marking success colour</td>
+<td>Defines the question marking success colour.</td>
 </tr>
 <tr class="">
 <td>_validation.validation-success-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the question marking success text/icon colour. Should be a colour that provides good contrast against the question marking success colour</td>
+<td>Defines the question marking success text / icon colour. Should be a colour that provides good contrast against the question marking success colour.</td>
 </tr>
 <tr class="">
 <td>_validation.validation-error</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the question marking error colour</td>
+<td>Defines the question marking error colour.</td>
 </tr>
 <tr class="">
 <td>_validation.validation-error-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the question marking error text/icon colour. Should be a colour that provices good contrast against the question marking error colour</td>
+<td>Defines the question marking error text / icon colour. Should be a colour that provides good contrast against the question marking error colour.</td>
 </tr>
 <tr class="">
 <td>_progress</td>
@@ -7227,19 +7413,19 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_progress.progress</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the global progress width fill colour</td>
+<td>Defines the global progress width fill colour.</td>
 </tr>
 <tr class="">
 <td>_progress.progress-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the global progress fill background colour</td>
+<td>Defines the global progress fill background colour.</td>
 </tr>
 <tr class="">
 <td>_progress.progress-border</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the global border colour that appears around the progress fill bar</td>
+<td>Defines the global border colour that appears around the progress fill bar.</td>
 </tr>
 <tr class="">
 <td>_menu</td>
@@ -7287,7 +7473,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_menu.menu-item-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the menu item text colour. Should be a colour that provides good contrast against the menu item colour</td>
+<td>Defines the menu item text colour. Should be a colour that provides good contrast against the menu item colour.</td>
 </tr>
 <tr class="">
 <td>_menu.menu-item-border-color</td>
@@ -7299,13 +7485,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_menu.menu-item-progress</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the menu-item-specific progress width fill override colour</td>
+<td>Defines the menu-item-specific progress width fill override colour.</td>
 </tr>
 <tr class="">
 <td>_menu.menu-item-progress-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the menu-item-specific progress fill background override colour</td>
+<td>Defines the menu-item-specific progress fill background override colour.</td>
 </tr>
 <tr class="">
 <td>_menu.menu-item-progress-border</td>
@@ -7323,7 +7509,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_menu.menu-item-btn-color-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the menu item button text colour. Should be a colour that provides good contrast against the menu item button colour</td>
+<td>Defines the menu item button text colour. Should be a colour that provides good contrast against the menu item button colour.</td>
 </tr>
 <tr class="">
 <td>_menu.menu-item-btn-color-hover</td>
@@ -7335,7 +7521,31 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_menu.menu-item-btn-color-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the menu item button text colour when hovered over. Should be a colour that provides good contrast against the menu item button hover colour</td>
+<td>Defines the menu item button text colour when hovered over. Should be a colour that provides good contrast against the menu item button hover colour.</td>
+</tr>
+<tr class="">
+<td>_menu.menu-item-btn-color-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_menu.menu-item-btn-color-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the menu item button text colour when focused. Should be a colour that provides good contrast against the menu item button focus colour.</td>
+</tr>
+<tr class="">
+<td>_menu.menu-item-btn-color-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_menu.menu-item-btn-color-inverted-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the menu item button text colour when locked. Should be a colour that provides good contrast against the menu item button locked colour.</td>
 </tr>
 <tr class="">
 <td>_nav</td>
@@ -7353,7 +7563,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_nav.nav-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the general navigation inverted colour. Should be a colour that provides good contrast against the navigation colour</td>
+<td>Defines the general navigation inverted colour. Should be a colour that provides good contrast against the navigation colour.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-icon</td>
@@ -7365,7 +7575,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_nav.nav-icon-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the navigation button text/icon colour. Should be a colour that provides good contrast against the navigation button colour</td>
+<td>Defines the navigation button text / icon colour. Should be a colour that provides good contrast against the navigation button colour.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-icon-hover</td>
@@ -7377,19 +7587,55 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_nav.nav-icon-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the navigation button text/icon colour when hovered over. Should be a colour that provides good contrast against the navigation button hover colour</td>
+<td>Defines the navigation button text / icon colour when hovered over. Should be a colour that provides good contrast against the navigation button hover colour.</td>
+</tr>
+<tr class="">
+<td>_nav.nav-icon-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_nav.nav-icon-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the navigation button text / icon colour when focused. Should be a colour that provides good contrast against the navigation button focus colour,</td>
+</tr>
+<tr class="">
+<td>_nav.nav-icon-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_nav.nav-icon-inverted-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the navigation button text / icon colour when locked. Should be a colour that provides good contrast against the navigation button locked colour.</td>
+</tr>
+<tr class="">
+<td>_nav.nav-icon-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_nav.nav-icon-inverted-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the navigation button text / icon colour when disabled. Should be a colour that provides good contrast against the navigation button disabled colour.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-progress</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the navigation-specific progress width fill override colour</td>
+<td>Defines the navigation-specific progress width fill override colour.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-progress-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the navigation-specific progress fill background override colour</td>
+<td>Defines the navigation-specific progress fill background override colour.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-progress-border</td>
@@ -7401,13 +7647,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_nav.nav-progress-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the navigation-specific progress width fill override colour when hovered over</td>
+<td>Defines the navigation-specific progress width fill override colour when hovered over.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-progress-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the navigation-specific progress fill background override colour when hovered over</td>
+<td>Defines the navigation-specific progress fill background override colour when hovered over.</td>
 </tr>
 <tr class="">
 <td>_nav.nav-progress-border-hover</td>
@@ -7431,7 +7677,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_notify.notify-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the notify text colour. Should be a colour that provides good contrast against the notify colour</td>
+<td>Defines the notify text colour. Should be a colour that provides good contrast against the notify colour.</td>
 </tr>
 <tr class="">
 <td>_notify.notify-link</td>
@@ -7446,30 +7692,6 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td> </td>
 </tr>
 <tr class="">
-<td>_notify.notify-btn</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_notify.notify-btn-inverted</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Defines the notify button text/icon colour. Should be a colour that provides good contrast against the notify button colour</td>
-</tr>
-<tr class="">
-<td>_notify.notify-btn-hover</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td> </td>
-</tr>
-<tr class="">
-<td>_notify.notify-btn-inverted-hover</td>
-<td>string</td>
-<td><pre>""</pre></td>
-<td>Defines the notify button text/icon colour when hovered over. Should be a colour that provides good contrast against the notify button hover colour</td>
-</tr>
-<tr class="">
 <td>_notify.notify-icon</td>
 <td>string</td>
 <td><pre>""</pre></td>
@@ -7479,7 +7701,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_notify.notify-icon-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the notify icon inverse colour. Should be a colour that provides good contrast against the notify icon colour</td>
+<td>Defines the notify icon inverse colour. Should be a colour that provides good contrast against the notify icon colour.</td>
 </tr>
 <tr class="">
 <td>_notify.notify-icon-hover</td>
@@ -7491,7 +7713,103 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_notify.notify-icon-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the notify icon colour when hovered over. Should be a colour that provides good contrast against the notify icon colour</td>
+<td>Defines the notify icon colour when hovered over. Should be a colour that provides good contrast against the notify icon hover colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-icon-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-icon-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify icon colour when focused. Should be a colour that provides good contrast against the notify icon focus colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-icon-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-icon-inverted-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify icon colour when disabled. Should be a colour that provides good contrast against the notify icon disabled colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-inverted</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify button text / icon colour. Should be a colour that provides good contrast against the notify button colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-hover</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-inverted-hover</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify button text / icon colour when hovered over. Should be a colour that provides good contrast against the notify button hover colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify button text / icon colour when focused. Should be a colour that provides good contrast against the notify button focus colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-selected</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-inverted-selected</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify button text / icon colour when selected. Should be a colour that provides good contrast against the notify button selected colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-inverted-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify button text / icon colour when locked. Should be a colour that provides good contrast against the notify button locked colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_notify.notify-btn-inverted-disabled</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify button text / icon colour when disabled. Should be a colour that provides good contrast against the notify button disabled colour.</td>
 </tr>
 <tr class="">
 <td>_drawer</td>
@@ -7509,7 +7827,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_drawer.drawer-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer text colour. Should be a colour that provides good contrast against the drawer colour</td>
+<td>Defines the drawer text colour. Should be a colour that provides good contrast against the drawer colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-link</td>
@@ -7533,7 +7851,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_drawer.drawer-icon-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer icon button inverse colour. Should be a colour that provides good contrast against the drawer icon button colour</td>
+<td>Defines the drawer icon button inverse colour. Should be a colour that provides good contrast against the drawer icon button colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-icon-hover</td>
@@ -7545,7 +7863,19 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_drawer.drawer-icon-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer icon button inverse colour when hovered over. Should be a colour that provides good contrast against the drawer icon button hover colour</td>
+<td>Defines the drawer icon button inverse colour when hovered over. Should be a colour that provides good contrast against the drawer icon button hover colour.</td>
+</tr>
+<tr class="">
+<td>_drawer.drawer-icon-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_drawer.drawer-icon-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the drawer icon button inverse colour when focused. Should be a colour that provides good contrast against the drawer icon button focus colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-item</td>
@@ -7557,7 +7887,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_drawer.drawer-item-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer item text/icon colour. Should be a colour that provides good contrast against the drawer item colour</td>
+<td>Defines the drawer item text / icon colour. Should be a colour that provides good contrast against the drawer item colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-item-hover</td>
@@ -7569,7 +7899,19 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_drawer.drawer-item-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer item text/icon colour when hovered over. Should be a colour that provides good contrast against the drawer item hover colour</td>
+<td>Defines the drawer item text / icon colour when hovered over. Should be a colour that provides good contrast against the drawer item hover colour.</td>
+</tr>
+<tr class="">
+<td>_drawer.drawer-item-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_drawer.drawer-item-inverted-focus</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the drawer item text / icon colour when focused. Should be a colour that provides good contrast against the drawer item focus colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-item-selected</td>
@@ -7581,43 +7923,55 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_drawer.drawer-item-inverted-selected</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer item text/icon colour when selected. Should be a colour that provides good contrast against the drawer item selected colour</td>
+<td>Defines the drawer item text / icon colour when selected. Should be a colour that provides good contrast against the drawer item selected colour.</td>
+</tr>
+<tr class="">
+<td>_drawer.drawer-item-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_drawer.drawer-item-inverted-locked</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the drawer item text / icon colour when locked. Should be a colour that provides good contrast against the drawer item locked colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-progress</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer-specific progress width fill override colour</td>
+<td>Defines the drawer-specific progress width fill override colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-progress-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer-specific progress fill background override colour</td>
+<td>Defines the drawer-specific progress fill background override colour.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-progress-border</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer-specific border override colour that appears around the progress fill bar</td>
+<td>Defines the drawer-specific border override colour that appears around the progress fill bar.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-progress-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer-specific progress width fill override colour when hovered over</td>
+<td>Defines the drawer-specific progress width fill override colour when hovered over.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-progress-inverted-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer-specific progress fill background override colour when hovered over</td>
+<td>Defines the drawer-specific progress fill background override colour when hovered over.</td>
 </tr>
 <tr class="">
 <td>_drawer.drawer-progress-border-hover</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the drawer-specific border override colour that appears around the progress fill bar when hovered over</td>
+<td>Defines the drawer-specific border override colour that appears around the progress fill bar when hovered over.</td>
 </tr>
 <tr class="">
 <td>_misc</td>
@@ -7629,13 +7983,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_misc.background</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Sets the generic background colour</td>
+<td>Sets the generic background colour.</td>
 </tr>
 <tr class="">
 <td>_misc.background-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the background text/icon colour. Should be a colour that provides good contrast against the background colour</td>
+<td>Defines the background text / icon colour. Should be a colour that provides good contrast against the background colour.</td>
 </tr>
 <tr class="">
 <td>_misc.shadow</td>
@@ -7647,7 +8001,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_misc.shadow-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the shadow text/icon colour. Should be a colour that provides good contrast against the shadow colour</td>
+<td>Defines the shadow text / icon colour. Should be a colour that provides good contrast against the shadow colour.</td>
 </tr>
 <tr class="">
 <td>_misc.loading</td>
@@ -7659,7 +8013,7 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>_misc.loading-inverted</td>
 <td>string</td>
 <td><pre>""</pre></td>
-<td>Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour</td>
+<td>Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour.</td>
 </tr>
 </table>
       
