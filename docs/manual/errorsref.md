@@ -21,7 +21,6 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=AUTH_TOKEN_INVALID">AUTH_TOKEN_INVALID</a></li>
 <li><a href="#/errorsref?id=AUTH_TOKEN_NOT_BEFORE">AUTH_TOKEN_NOT_BEFORE</a></li>
 <li><a href="#/errorsref?id=AUTH_TYPE_DEF_MISSING">AUTH_TYPE_DEF_MISSING</a></li>
-<li><a href="#/errorsref?id=BLACKLISTED_PASSWORD_VALUE">BLACKLISTED_PASSWORD_VALUE</a></li>
 <li><a href="#/errorsref?id=BODY_PARSE_FAILED">BODY_PARSE_FAILED</a></li>
 <li><a href="#/errorsref?id=BROWSERSLIST_UPDATE_FAILED">BROWSERSLIST_UPDATE_FAILED</a></li>
 <li><a href="#/errorsref?id=CONTENTPLUGIN_ALREADY_EXISTS">CONTENTPLUGIN_ALREADY_EXISTS</a></li>
@@ -62,7 +61,6 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=FW_IMPORT_UNEXPECTED_STRUCTURE">FW_IMPORT_UNEXPECTED_STRUCTURE</a></li>
 <li><a href="#/errorsref?id=FW_INCOMPAT_PLUGIN_DEP">FW_INCOMPAT_PLUGIN_DEP</a></li>
 <li><a href="#/errorsref?id=FW_INSTALL_FAILED">FW_INSTALL_FAILED</a></li>
-<li><a href="#/errorsref?id=FW_INVALID_VERSION">FW_INVALID_VERSION</a></li>
 <li><a href="#/errorsref?id=FW_MISSING_PLUGIN_DEP">FW_MISSING_PLUGIN_DEP</a></li>
 <li><a href="#/errorsref?id=GENERATE_THUMB_FAIL">GENERATE_THUMB_FAIL</a></li>
 <li><a href="#/errorsref?id=HTTP_METHOD_NOT_SUPPORTED">HTTP_METHOD_NOT_SUPPORTED</a></li>
@@ -84,7 +82,6 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=MAIL_SEND_FAILED">MAIL_SEND_FAILED</a></li>
 <li><a href="#/errorsref?id=MISSING_ASSETS">MISSING_ASSETS</a></li>
 <li><a href="#/errorsref?id=MISSING_AUTH_HEADER">MISSING_AUTH_HEADER</a></li>
-<li><a href="#/errorsref?id=MISSING_SCHEMA">MISSING_SCHEMA</a></li>
 <li><a href="#/errorsref?id=MISSING_SCHEMA_NAME">MISSING_SCHEMA_NAME</a></li>
 <li><a href="#/errorsref?id=MODIFY_PROTECTED_ATTR">MODIFY_PROTECTED_ATTR</a></li>
 <li><a href="#/errorsref?id=MODULE_NOT_FOUND">MODULE_NOT_FOUND</a></li>
@@ -134,18 +131,17 @@ Supplemental data can be used at the point that errors are translated to provide
 | `AUTH_TOKEN_INVALID` | Auth token is not valid | 401 | <ul><li>`error`: The error message</li></ul> |
 | `AUTH_TOKEN_NOT_BEFORE` | The auth token nbf is after the current time, and the token is therefore not valid | 401 | <ul><li>`error`: The error message</li></ul> |
 | `AUTH_TYPE_DEF_MISSING` | Auth type is not defined | 500 | <ul></ul> |
-| `BLACKLISTED_PASSWORD_VALUE` | Password contains a blacklisted value | 400 | <ul></ul> |
 | `BODY_PARSE_FAILED` | Failed to parse request body data | 400 | <ul><li>`error`: The error message</li></ul> |
 | `BROWSERSLIST_UPDATE_FAILED` | Failed to update browserslist DB | 500 | <ul><li>`error`: The error message</li></ul> |
-| `CONTENTPLUGIN_ALREADY_EXISTS` | Plugin already exists with the same name and version | 400 | <ul><li>`name`: Name of content plugin</li><li>`version`: Version of content plugin</li></ul> |
-| `CONTENTPLUGIN_ATTR_CLASH` | Target attribute already used in another plugin | 400 | <ul><li>`name`: Name of content plugin</li><li>`targetAttribute`: Offending target attribute</li></ul> |
-| `CONTENTPLUGIN_ATTR_MISSING` | Pluginis missing targetAttribute value | 400 | <ul><li>`name`: Name of content plugin</li></ul> |
+| `CONTENTPLUGIN_ALREADY_EXISTS` | Plugin ${name}@${version} already exists | 400 | <ul><li>`name`: Name of content plugin</li><li>`version`: Version of content plugin</li></ul> |
+| `CONTENTPLUGIN_ATTR_CLASH` | Target attribute '${targetAttribute}' already exists in ${name} | 400 | <ul><li>`name`: Name of content plugin</li><li>`targetAttribute`: Offending target attribute</li></ul> |
+| `CONTENTPLUGIN_ATTR_MISSING` | Plugin ${name} is missing a targetAttribute value | 400 | <ul><li>`name`: Name of content plugin</li></ul> |
 | `CONTENTPLUGIN_CLI_INSTALL_FAILED` | Installation via adapt-cli failed | 500 | <ul><li>`name`: Name of content plugin</li></ul> |
-| `CONTENTPLUGIN_INCOMPAT_FW` | Plugin incompatible with the installed framework version | 400 | <ul><li>`installedFramework`: Version of the framework which is installed</li><li>`name`: Name of content plugin</li><li>`requiredFramework`: Version of the framework which is required</li><li>`version`: Version of content plugin</li></ul> |
+| `CONTENTPLUGIN_INCOMPAT_FW` | Plugin ${name}@${version} incompatible with installed framework (requires ${requiredFramework}, found ${installedFramework}) | 400 | <ul><li>`installedFramework`: Version of the framework which is installed</li><li>`name`: Name of content plugin</li><li>`requiredFramework`: Version of the framework which is required</li><li>`version`: Version of content plugin</li></ul> |
 | `CONTENTPLUGIN_INSTALL_FAILED` | Installation of plugins failed | 500 | <ul><li>`errors`: List of errors</li></ul> |
 | `CONTENTPLUGIN_INVALID_ZIP` | Invalid plugin data provided | 400 | <ul></ul> |
 | `CONTENTPLUGIN_IN_USE` | Content plugin is in use in existing courses | 400 | <ul><li>`courses`: List of courses using the content plugin</li></ul> |
-| `CONTENTPLUGIN_NEWER_INSTALLED` | Plugin already exists at a higher version | 400 | <ul><li>`existingVersion`: Installed version</li><li>`name`: Name of content plugin</li><li>`newVersion`: Version to install</li></ul> |
+| `CONTENTPLUGIN_NEWER_INSTALLED` | Plugin ${name}@${newVersion} already exists at a higher version (${existingVersion}) | 400 | <ul><li>`existingVersion`: Installed version</li><li>`name`: Name of content plugin</li><li>`newVersion`: Version to install</li></ul> |
 | `CONTENTPLUGIN_VERSION_MISMATCH` | The installed version of a plugin does not match the registered version | 400 | <ul><li>`registered`: Plugins that do not match their installed version</li></ul> |
 | `DESTROY_SESSION_FAIL` | Failed to terminate user session | 500 | <ul><li>`error`: The error message</li></ul> |
 | `DUPL_AUTHORED_MODULE_NAME` | Function must be overridden in child class | 500 | <ul></ul> |
@@ -175,7 +171,6 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FW_IMPORT_UNEXPECTED_STRUCTURE` | Unable to generate valid course structure from input JSON data | 500 | <ul></ul> |
 | `FW_INCOMPAT_PLUGIN_DEP` | Plugin is incompatible | 500 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
 | `FW_INSTALL_FAILED` | Installation of the framework failed | 500 | <ul></ul> |
-| `FW_INVALID_VERSION` | Invalid version specified | 400 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
 | `FW_MISSING_PLUGIN_DEP` | Plugin is missing a dependency | 500 | <ul><li>`name`: Missing plugin name</li></ul> |
 | `GENERATE_THUMB_FAIL` | Failed to generate asset thumbnail | 500 | <ul><li>`error`: Error message</li></ul> |
 | `HTTP_METHOD_NOT_SUPPORTED` | HTTP method for a given request is not supported | 404 | <ul><li>`method`: The invalid HTTP method</li></ul> |
@@ -185,19 +180,18 @@ Supplemental data can be used at the point that errors are translated to provide
 | `INVALID_OBJECTID` | Not a valid ObjectId | 400 | <ul><li>`value`: The value</li></ul> |
 | `INVALID_PARAMS` | Invalid parameters have been provided | 400 | <ul><li>`params`: The invalid params</li></ul> |
 | `INVALID_PARENT` | Specified item is not a valid content item Invalid parent itemparent | 500 | <ul><li>`parentId`: _id of the parent item</li></ul> |
-| `INVALID_PASSWORD` | Password failed validation | 400 | <ul><li>`errors`: The validation errors</li></ul> |
-| `INVALID_PASSWORD_LENGTH` | Password must be at least the required number of characters | 400 | <ul><li>`length`: the minimum required number of characters</li></ul> |
-| `INVALID_PASSWORD_LOWERCASE` | Password must contain at least one lowercase character | 400 | <ul></ul> |
-| `INVALID_PASSWORD_NUMBER` | Password must contain at least one number | 400 | <ul></ul> |
-| `INVALID_PASSWORD_SPECIAL` | Password must contain at least one special character (#?!@$%^&*-) | 400 | <ul></ul> |
-| `INVALID_PASSWORD_UPPERCASE` | Password must contain at least one uppercase character | 400 | <ul></ul> |
+| `INVALID_PASSWORD` | Password failed validation | 401 | <ul><li>`errors`: The validation errors</li></ul> |
+| `INVALID_PASSWORD_LENGTH` | Password must be at least the required number of characters | 401 | <ul><li>`length`: the minimum required number of characters</li></ul> |
+| `INVALID_PASSWORD_LOWERCASE` | Password must contain at least one lowercase character | 401 | <ul></ul> |
+| `INVALID_PASSWORD_NUMBER` | Password must contain at least one number | 401 | <ul></ul> |
+| `INVALID_PASSWORD_SPECIAL` | Password must contain at least one special character (#?!@$%^&*-) | 401 | <ul></ul> |
+| `INVALID_PASSWORD_UPPERCASE` | Password must contain at least one uppercase character | 401 | <ul></ul> |
 | `INVALID_SCHEMA` | Invalid schema | 400 | <ul><li>`errors`: all validation errors</li><li>`schemaName`: Schema name</li></ul> |
 | `LOAD_ERROR` | Config failed to load | 500 | <ul></ul> |
 | `MAIL_NOT_ENABLED` | Email functionality is not enabled | 500 | <ul></ul> |
 | `MAIL_SEND_FAILED` | Failed to send error email | 500 | <ul></ul> |
 | `MISSING_ASSETS` | Assets are missing | 500 | <ul><li>`errors`: The errors</li></ul> |
 | `MISSING_AUTH_HEADER` | Authorization headers are missing from request | 401 | <ul></ul> |
-| `MISSING_SCHEMA` | Schema is not registered in the cache | 500 | <ul><li>`schemaName`: Schema name</li></ul> |
 | `MISSING_SCHEMA_NAME` | Schema name is not defined | 400 | <ul></ul> |
 | `MODIFY_PROTECTED_ATTR` | Attempted to modify a protected data attribute | 400 | <ul><li>`attribute`: The protected attribute</li></ul> |
 | `MODULE_NOT_FOUND` | A module file could not be resolved while attempting a require() or import operation | 500 | <ul></ul> |
