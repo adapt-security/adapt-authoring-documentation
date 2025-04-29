@@ -46,7 +46,7 @@ export default {
     // URL of the Adapt framework git repository to install
     frameworkRepository: undefined, // string, optional
     // Maximum file upload size for course imports
-    importMaxFileSize: "500mb", // string, optional
+    importMaxFileSize: "1gb", // string, optional
   },
   'adapt-authoring-api': {
     // Default lifespan of data cache
@@ -286,7 +286,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">importMaxFileSize</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Maximum file upload size for course imports</div>
-<div class="default"><span class="label">Default</span>: <pre>"500mb"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>"1gb"</pre></div>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.4 core package o
 
 | Name | Version | Description |
 | - | :-: | - |
-| [adapt-authoring-adaptframework](https://github.com/adaptlearning/adapt-authoring-adaptframework) | 0.0.1 | Adapt framework integration for the Adapt authoring tool |
+| [adapt-authoring-adaptframework](https://github.com/adapt-security/adapt-authoring-adaptframework) | 0.0.1 | Adapt framework integration for the Adapt authoring tool |
 | [adapt-authoring-api](https://github.com/adaptlearning/adapt-authoring-api) | 0.0.1 | Abstract module for creating APIs |
 | [adapt-authoring-assets](https://github.com/adapt-security/adapt-authoring-assets) | 0.0.1 | Assets API for Adapt Authoring Tool |
 | [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 0.0.1 | Authentication + authorisation module for the Adapt authoring tool |
