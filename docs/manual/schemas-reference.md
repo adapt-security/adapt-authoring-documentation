@@ -2775,13 +2775,13 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td><pre>""</pre></td>
 <td> </td>
 </tr>
-<tr class="required">
+<tr class="">
 <td>_graphic.large</td>
 <td>string</td>
 <td></td>
 <td>The large sized image for desktop devices</td>
 </tr>
-<tr class="required">
+<tr class="">
 <td>_graphic.small</td>
 <td>string</td>
 <td></td>
