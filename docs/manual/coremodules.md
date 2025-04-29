@@ -36,4 +36,4 @@ The following modules are included in Adapt authoring v1.0.0-rc.4 core package o
 | [adapt-authoring-testing](https://github.com/adapt-security/adapt-authoring-testing) | 0.0.1 | Module for running automated tests on the Adapt authoring tool |
 | [adapt-authoring-ui](https://github.com/adaptlearning/adapt-authoring-ui) | 0.0.1 | Front-end application for the Adapt authoring tool |
 | [adapt-authoring-users](https://github.com/adapt-security/adapt-authoring-users) | 0.0.1 | Module for managing users |
-| [at-utils](https://github.com/adapt-security/at-utils#readme) | 0.7.0 | A collection of CLI helper utilities for maintaining installations of the Adapt authoring tool. |
+| [at-utils](https://github.com/adapt-security/at-utils#readme) | 0.10.0 | A collection of CLI helper utilities for maintaining installations of the Adapt authoring tool. |
