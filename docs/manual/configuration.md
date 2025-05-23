@@ -20,7 +20,6 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-middleware">adapt-authoring-middleware</a></li>
 <li><a href="#/configuration?id=adapt-authoring-mongodb">adapt-authoring-mongodb</a></li>
 <li><a href="#/configuration?id=adapt-authoring-mongodblogger">adapt-authoring-mongodblogger</a></li>
-<li><a href="#/configuration?id=adapt-authoring-ratelimiter">adapt-authoring-ratelimiter</a></li>
 <li><a href="#/configuration?id=adapt-authoring-roles">adapt-authoring-roles</a></li>
 <li><a href="#/configuration?id=adapt-authoring-server">adapt-authoring-server</a></li>
 <li><a href="#/configuration?id=adapt-authoring-sessions">adapt-authoring-sessions</a></li>
@@ -96,7 +95,7 @@ export default {
     // The amount of time a locked user must wait before attempting to log in again
     temporaryLockDuration: "1m", // string, optional
     // The amount of time a password reset token remains valid for
-    resetTokenLifespan: "3h", // string, optional
+    resetTokenLifespan: "24h", // string, optional
     // The amount of time an invite password reset token remains valid for
     inviteTokenLifespan: "7d", // string, optional
     // Minimum password length
@@ -109,6 +108,8 @@ export default {
     passwordMustHaveLowercase: false, // boolean, optional
     // Whether the password must contain at least one special character
     passwordMustHaveSpecial: false, // boolean, optional
+    // Values which cannot be used in passwords
+    blacklistedPasswordValues: [], // array, optional
   },
   'adapt-authoring-browserslist': {
     // Whether the browserslist DB should be updated prior to each framework build
@@ -171,6 +172,10 @@ export default {
   'adapt-authoring-middleware': {
     // Content types the API accepts (may use MIME types or extension names)
     acceptedTypes: ["application/json"], // array, optional
+    // The number of API requests allowed by a single IP within the specified time limit
+    apiRequestLimit: 50, // number, optional
+    // Amount of time before the request count is reset
+    apiRequestLimitDuration: "1s", // string, optional
     // Default file size limit for uploaded files. Note that other modules may specify their own limits, please check full config documentation for details.
     fileUploadMaxFileSize: "50mb", // string, optional
     // Temporary directory for file uploads
@@ -185,12 +190,6 @@ export default {
     logInternalErrors: false, // boolean, optional
     // The maximum number of logs stored at any one time (the oldest logs will be replaced first).
     maxLogCount: 5000, // number, optional
-  },
-  'adapt-authoring-ratelimiter': {
-    // The number of API requests allowed by a single IP within the specified time limit
-    apiRequestLimit: 50, // number, optional
-    // Amount of time before the request count is reset
-    apiRequestLimitDuration: "1s", // string, optional
   },
   'adapt-authoring-roles': {
     // List of defined roles to be loaded on app start
@@ -208,7 +207,7 @@ export default {
     // URL the server can be accessed from
     url: undefined, // string, required
     // Whether to trust the client's x-Forwarded-For header for the request IP address. Only enable if using your own trusted reverse proxy
-    trustProxy: false, // boolean, optional
+    trustProxy: 0, // number,boolean, optional
     // Will log the execution time of each request
     debugRequestTime: false, // boolean, optional
     // Whether to log errors in their entirety
@@ -452,7 +451,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">resetTokenLifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The amount of time a password reset token remains valid for</div>
-<div class="default"><span class="label">Default</span>: <pre>"3h"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>"24h"</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -495,6 +494,13 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">Whether the password must contain at least one special character</div>
 <div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">blacklistedPasswordValues</span> (array, optional)</div>
+<div class="inner">
+<div class="description">Values which cannot be used in passwords</div>
+<div class="default"><span class="label">Default</span>: <pre>[]</pre></div>
 </div>
 </div>
 </div>
@@ -697,6 +703,20 @@ See below for a full list of available configuration options.
 </div>
 </div>
 <div class="attribute">
+<div class="title"><span class="main">apiRequestLimit</span> (number, optional)</div>
+<div class="inner">
+<div class="description">The number of API requests allowed by a single IP within the specified time limit</div>
+<div class="default"><span class="label">Default</span>: <pre>50</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">apiRequestLimitDuration</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Amount of time before the request count is reset</div>
+<div class="default"><span class="label">Default</span>: <pre>"1s"</pre></div>
+</div>
+</div>
+<div class="attribute">
 <div class="title"><span class="main">fileUploadMaxFileSize</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Default file size limit for uploaded files. Note that other modules may specify their own limits, please check full config documentation for details.</div>
@@ -738,25 +758,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">The maximum number of logs stored at any one time (the oldest logs will be replaced first).</div>
 <div class="default"><span class="label">Default</span>: <pre>5000</pre></div>
-</div>
-</div>
-</div>
-
-<h3 id="adapt-authoring-ratelimiter" class="dep">adapt-authoring-ratelimiter</h3>
-
-<div class="options">
-<div class="attribute">
-<div class="title"><span class="main">apiRequestLimit</span> (number, optional)</div>
-<div class="inner">
-<div class="description">The number of API requests allowed by a single IP within the specified time limit</div>
-<div class="default"><span class="label">Default</span>: <pre>50</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">apiRequestLimitDuration</span> (string, optional)</div>
-<div class="inner">
-<div class="description">Amount of time before the request count is reset</div>
-<div class="default"><span class="label">Default</span>: <pre>"1s"</pre></div>
 </div>
 </div>
 </div>
@@ -809,10 +810,10 @@ See below for a full list of available configuration options.
 </div>
 </div>
 <div class="attribute">
-<div class="title"><span class="main">trustProxy</span> (boolean, optional)</div>
+<div class="title"><span class="main">trustProxy</span> (number,boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether to trust the client's x-Forwarded-For header for the request IP address. Only enable if using your own trusted reverse proxy</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>0</pre></div>
 </div>
 </div>
 <div class="attribute">
