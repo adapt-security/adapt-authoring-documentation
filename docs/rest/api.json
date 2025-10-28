@@ -73,10 +73,10 @@
           "authType"
         ]
       },
-      "localpassword": {
+      "userroles": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localpassword",
-        "description": "Local authentication password",
+        "$anchor": "userroles",
+        "description": "Extra user properties for specifying roles",
         "type": "object",
         "properties": {
           "_id": {
@@ -84,15 +84,16 @@
             "type": "string",
             "isObjectId": true
           },
-          "password": {
-            "description": "Password value",
-            "type": "string",
-            "password": "password"
+          "roles": {
+            "description": "Roles assigned to this user",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "default": []
           }
-        },
-        "required": [
-          "password"
-        ]
+        }
       },
       "maildata": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -133,10 +134,10 @@
           "text"
         ]
       },
-      "userroles": {
+      "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "userroles",
-        "description": "Extra user properties for specifying roles",
+        "$anchor": "localpassword",
+        "description": "Local authentication password",
         "type": "object",
         "properties": {
           "_id": {
@@ -144,16 +145,44 @@
             "type": "string",
             "isObjectId": true
           },
-          "roles": {
-            "description": "Roles assigned to this user",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "default": []
+          "password": {
+            "description": "Password value",
+            "type": "string",
+            "password": "password"
           }
-        }
+        },
+        "required": [
+          "password"
+        ]
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
+        ]
       },
       "courseasset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -186,35 +215,6 @@
           "courseId",
           "contentId",
           "assetId"
-        ]
-      },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
         ]
       },
       "log": {
@@ -306,31 +306,6 @@
           "createdBy"
         ]
       },
-      "tags": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tags",
-        "description": "Extra properties to define tags",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          }
-        }
-      },
       "role": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "role",
@@ -368,6 +343,31 @@
           "scopes"
         ]
       },
+      "tags": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "tags",
+        "description": "Extra properties to define tags",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          }
+        }
+      },
       "asset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "asset",
@@ -395,18 +395,6 @@
             "type": "string",
             "format": "uri"
           },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
           "createdAt": {
             "description": "Date that the data was created",
             "type": "string",
@@ -423,6 +411,18 @@
             "type": "string",
             "format": "date-time",
             "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
           }
         },
         "required": [
@@ -1841,6 +1841,333 @@
           "_component"
         ]
       },
+      "contentobject": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentobject",
+        "description": "The base schema inherited by all other schemas",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "_type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "_friendlyId": {
+            "type": "string",
+            "title": "Friendly id",
+            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
+          },
+          "_parentId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Parent id"
+          },
+          "_courseId": {
+            "type": "string",
+            "isObjectId": true,
+            "title": "Course id",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "displayTitle": {
+            "type": "string",
+            "title": "Display title",
+            "description": "When viewing an element - this is the title that will be displayed on the page",
+            "default": "Untitled",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "DisplayTitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "instruction": {
+            "type": "string",
+            "title": "Instruction",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "title": "Custom classes",
+            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": "",
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isOptional": {
+            "type": "boolean",
+            "title": "Make this element optional",
+            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isAvailable": {
+            "type": "boolean",
+            "title": "Make this element available",
+            "description": "Controls whether this element and its contents are available in the course or not",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isHidden": {
+            "type": "boolean",
+            "title": "Hide this element",
+            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
+            "default": false,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isVisible": {
+            "type": "boolean",
+            "title": "Make this element visible",
+            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_isA11yCompletionDescriptionEnabled": {
+            "type": "boolean",
+            "title": "Enable accessibility completion description",
+            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
+            "default": true,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_ariaLevel": {
+            "type": "number",
+            "title": "Aria level",
+            "description": "The aria-level attribute of the title used to determine the heading level. When set to 0 (default), the level will be automatically determined by the element type. Only override if content does not properly use the CO/A/B/C structure.",
+            "default": 0,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "_onScreen": {
+            "type": "object",
+            "title": "Animation classes",
+            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
+            "default": {},
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "title": "Add classes when this element is in view",
+                "default": false,
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "description": "The CSS class(es) to add to the element",
+                "default": "",
+                "_adapt": {
+                  "isSetting": true
+                }
+              },
+              "_percentInviewVertical": {
+                "type": "number",
+                "title": "Percent in view",
+                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
+                "default": 50,
+                "_adapt": {
+                  "isSetting": true
+                }
+              }
+            }
+          },
+          "_extensions": {
+            "type": "object",
+            "title": "Extensions",
+            "default": {}
+          },
+          "_sortOrder": {
+            "type": "number",
+            "title": "Sort order",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "themeSettings": {
+            "type": "object",
+            "title": "Theme settings",
+            "default": {}
+          },
+          "_colorLabel": {
+            "type": "string",
+            "title": "Color label",
+            "default": "",
+            "_adapt": {
+              "editorOnly": true
+            }
+          },
+          "createdAt": {
+            "description": "Date that the data was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "Author of the data",
+            "type": "string",
+            "isObjectId": true
+          },
+          "updatedAt": {
+            "description": "Date that the data was last modified",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          },
+          "subtitle": {
+            "type": "string",
+            "title": "Subtitle",
+            "description": "When viewing a menu/page - this is the subtitle that will be displayed on the menu/page",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "pageBody": {
+            "type": "string",
+            "title": "Custom page body",
+            "description": "If set, this text will be shown instead of the body text when this page is viewed",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            },
+            "_backboneForms": "TextArea"
+          },
+          "_htmlClasses": {
+            "type": "string",
+            "title": "Custom HTML classes",
+            "description": "If set, this CSS class/es will be applied to the <html> element whenever this is the active page in the course. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+            "default": ""
+          },
+          "_graphic": {
+            "type": "object",
+            "title": "Graphic",
+            "default": {},
+            "properties": {
+              "alt": {
+                "type": "string",
+                "title": "Alternative text",
+                "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "src": {
+                "type": "string",
+                "title": "Source",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "image"
+                }
+              }
+            }
+          },
+          "linkText": {
+            "type": "string",
+            "title": "Menu button text",
+            "default": "View",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "duration": {
+            "type": "string",
+            "title": "Duration",
+            "description": "Indicates how long this page or section should take to complete",
+            "default": "",
+            "_adapt": {
+              "translatable": true
+            }
+          },
+          "_lockedBy": {
+            "type": "array",
+            "title": "Elements to complete before this is unlocked",
+            "description": "If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked",
+            "default": [],
+            "_backboneForms": "List"
+          },
+          "_lockType": {
+            "type": "string",
+            "title": "Menu lock type",
+            "description": "Defines which (if any) locking mechanism will be used. To be used only on submenus",
+            "default": "",
+            "enum": [
+              "",
+              "custom",
+              "lockLast",
+              "sequential",
+              "unlockFirst"
+            ],
+            "_backboneForms": "Select"
+          },
+          "_requireCompletionOf": {
+            "type": "number",
+            "title": "Number of articles required for completion",
+            "description": "The number of articles within this page the learner must complete in order for this page to be set as completed. A value of -1 requires all of them to be completed",
+            "default": -1,
+            "_adapt": {
+              "isSetting": true
+            }
+          },
+          "menuSettings": {
+            "type": "object",
+            "title": "Menu settings",
+            "default": {}
+          }
+        },
+        "required": [
+          "createdAt",
+          "createdBy",
+          "updatedAt"
+        ]
+      },
       "block": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "block",
@@ -3118,333 +3445,6 @@
           "externalReferences": {
             "type": "object",
             "title": "External references",
-            "default": {}
-          }
-        },
-        "required": [
-          "createdAt",
-          "createdBy",
-          "updatedAt"
-        ]
-      },
-      "contentobject": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentobject",
-        "description": "The base schema inherited by all other schemas",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "_type": {
-            "type": "string",
-            "title": "Type"
-          },
-          "_friendlyId": {
-            "type": "string",
-            "title": "Friendly id",
-            "description": "A human-readable ID for this content object which will replace the standard _id field on course build (useful in instances where the _id must be specified in the config of an extension). Must be unique to this course."
-          },
-          "_parentId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Parent id"
-          },
-          "_courseId": {
-            "type": "string",
-            "isObjectId": true,
-            "title": "Course id",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "displayTitle": {
-            "type": "string",
-            "title": "Display title",
-            "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "Untitled",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "DisplayTitle"
-          },
-          "body": {
-            "type": "string",
-            "title": "Body",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "instruction": {
-            "type": "string",
-            "title": "Instruction",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_classes": {
-            "type": "string",
-            "title": "Custom classes",
-            "description": "Used to style or manipulate the look and feel of this element. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": "",
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isOptional": {
-            "type": "boolean",
-            "title": "Make this element optional",
-            "description": "An optional element does not have to be completed, nor do any of the elements contained within it",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isAvailable": {
-            "type": "boolean",
-            "title": "Make this element available",
-            "description": "Controls whether this element and its contents are available in the course or not",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isHidden": {
-            "type": "boolean",
-            "title": "Hide this element",
-            "description": "Enabling this is equivalent to applying the CSS 'display:none' to the element",
-            "default": false,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isVisible": {
-            "type": "boolean",
-            "title": "Make this element visible",
-            "description": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the element",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_isA11yCompletionDescriptionEnabled": {
-            "type": "boolean",
-            "title": "Enable accessibility completion description",
-            "description": "Controls whether a hidden label is appended to the element title that describes the completion state of the element.",
-            "default": true,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_ariaLevel": {
-            "type": "number",
-            "title": "Aria level",
-            "description": "The aria-level attribute of the title used to determine the heading level. When set to 0 (default), the level will be automatically determined by the element type. Only override if content does not properly use the CO/A/B/C structure.",
-            "default": 0,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "_onScreen": {
-            "type": "object",
-            "title": "Animation classes",
-            "description": "These settings allow you to attach classes to the element when it is within the browser's viewport; helpful for running CSS-based animations on elements as they scroll into view",
-            "default": {},
-            "properties": {
-              "_isEnabled": {
-                "type": "boolean",
-                "title": "Add classes when this element is in view",
-                "default": false,
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_classes": {
-                "type": "string",
-                "title": "Classes",
-                "description": "The CSS class(es) to add to the element",
-                "default": "",
-                "_adapt": {
-                  "isSetting": true
-                }
-              },
-              "_percentInviewVertical": {
-                "type": "number",
-                "title": "Percent in view",
-                "description": "Controls what percentage of the element's height needs to be in the viewport in order for the CSS class(es) to be added",
-                "default": 50,
-                "_adapt": {
-                  "isSetting": true
-                }
-              }
-            }
-          },
-          "_extensions": {
-            "type": "object",
-            "title": "Extensions",
-            "default": {}
-          },
-          "_sortOrder": {
-            "type": "number",
-            "title": "Sort order",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "themeSettings": {
-            "type": "object",
-            "title": "Theme settings",
-            "default": {}
-          },
-          "_colorLabel": {
-            "type": "string",
-            "title": "Color label",
-            "default": "",
-            "_adapt": {
-              "editorOnly": true
-            }
-          },
-          "createdAt": {
-            "description": "Date that the data was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "Author of the data",
-            "type": "string",
-            "isObjectId": true
-          },
-          "updatedAt": {
-            "description": "Date that the data was last modified",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          },
-          "subtitle": {
-            "type": "string",
-            "title": "Subtitle",
-            "description": "When viewing a menu/page - this is the subtitle that will be displayed on the menu/page",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "pageBody": {
-            "type": "string",
-            "title": "Custom page body",
-            "description": "If set, this text will be shown instead of the body text when this page is viewed",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            },
-            "_backboneForms": "TextArea"
-          },
-          "_htmlClasses": {
-            "type": "string",
-            "title": "Custom HTML classes",
-            "description": "If set, this CSS class/es will be applied to the <html> element whenever this is the active page in the course. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
-            "default": ""
-          },
-          "_graphic": {
-            "type": "object",
-            "title": "Graphic",
-            "default": {},
-            "properties": {
-              "alt": {
-                "type": "string",
-                "title": "Alternative text",
-                "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
-                "default": "",
-                "_adapt": {
-                  "translatable": true
-                }
-              },
-              "src": {
-                "type": "string",
-                "title": "Source",
-                "_backboneForms": {
-                  "type": "Asset",
-                  "media": "image"
-                }
-              }
-            }
-          },
-          "linkText": {
-            "type": "string",
-            "title": "Menu button text",
-            "default": "View",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "duration": {
-            "type": "string",
-            "title": "Duration",
-            "description": "Indicates how long this page or section should take to complete",
-            "default": "",
-            "_adapt": {
-              "translatable": true
-            }
-          },
-          "_lockedBy": {
-            "type": "array",
-            "title": "Elements to complete before this is unlocked",
-            "description": "If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked",
-            "default": [],
-            "_backboneForms": "List"
-          },
-          "_lockType": {
-            "type": "string",
-            "title": "Menu lock type",
-            "description": "Defines which (if any) locking mechanism will be used. To be used only on submenus",
-            "default": "",
-            "enum": [
-              "",
-              "custom",
-              "lockLast",
-              "sequential",
-              "unlockFirst"
-            ],
-            "_backboneForms": "Select"
-          },
-          "_requireCompletionOf": {
-            "type": "number",
-            "title": "Number of articles required for completion",
-            "description": "The number of articles within this page the learner must complete in order for this page to be set as completed. A value of -1 requires all of them to be completed",
-            "default": -1,
-            "_adapt": {
-              "isSetting": true
-            }
-          },
-          "menuSettings": {
-            "type": "object",
-            "title": "Menu settings",
             "default": {}
           }
         },
