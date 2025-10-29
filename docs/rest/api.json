@@ -38,22 +38,6 @@
           "title"
         ]
       },
-      "authuser": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "authuser",
-        "description": "Extra user properties related to auth",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "authType"
-        ]
-      },
       "authtoken": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authtoken",
@@ -70,6 +54,22 @@
           "signature",
           "userId",
           "createdAt",
+          "authType"
+        ]
+      },
+      "authuser": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "authuser",
+        "description": "Extra user properties related to auth",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
           "authType"
         ]
       },
@@ -94,6 +94,46 @@
             "default": []
           }
         }
+      },
+      "user": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "user",
+        "description": "A system user",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "email": {
+            "description": "Email address for the user",
+            "type": "string"
+          },
+          "firstName": {
+            "description": "First name of the user",
+            "type": "string",
+            "default": "Adapt"
+          },
+          "lastName": {
+            "description": "Last name of the user",
+            "type": "string",
+            "default": "User"
+          },
+          "roles": {
+            "description": "Roles assigned to this user",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "default": []
+          }
+        },
+        "required": [
+          "email",
+          "authType"
+        ]
       },
       "maildata": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -306,6 +346,31 @@
           "createdBy"
         ]
       },
+      "tags": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "tags",
+        "description": "Extra properties to define tags",
+        "type": "object",
+        "properties": {
+          "_id": {
+            "description": "Unique identifier",
+            "type": "string",
+            "isObjectId": true
+          },
+          "tags": {
+            "title": "Tags",
+            "description": "Add tags by entering one or more words, separated with a comma (,)",
+            "type": "array",
+            "default": [],
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "isObjectId": true
+            },
+            "_backboneForms": "Tags"
+          }
+        }
+      },
       "role": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "role",
@@ -342,31 +407,6 @@
           "displayName",
           "scopes"
         ]
-      },
-      "tags": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tags",
-        "description": "Extra properties to define tags",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "tags": {
-            "title": "Tags",
-            "description": "Add tags by entering one or more words, separated with a comma (,)",
-            "type": "array",
-            "default": [],
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "_backboneForms": "Tags"
-          }
-        }
       },
       "asset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -551,46 +591,6 @@
             "default": false
           }
         }
-      },
-      "user": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "user",
-        "description": "A system user",
-        "type": "object",
-        "properties": {
-          "_id": {
-            "description": "Unique identifier",
-            "type": "string",
-            "isObjectId": true
-          },
-          "email": {
-            "description": "Email address for the user",
-            "type": "string"
-          },
-          "firstName": {
-            "description": "First name of the user",
-            "type": "string",
-            "default": "Adapt"
-          },
-          "lastName": {
-            "description": "Last name of the user",
-            "type": "string",
-            "default": "User"
-          },
-          "roles": {
-            "description": "Roles assigned to this user",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "isObjectId": true
-            },
-            "default": []
-          }
-        },
-        "required": [
-          "email",
-          "authType"
-        ]
       },
       "config": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -1585,9 +1585,9 @@
           "updatedAt"
         ]
       },
-      "component": {
+      "block": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "component",
+        "$anchor": "block",
         "description": "The base schema inherited by all other schemas",
         "type": "object",
         "properties": {
@@ -1630,7 +1630,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "Untitled",
+            "default": "",
             "_adapt": {
               "translatable": true
             },
@@ -1804,41 +1804,33 @@
             },
             "_backboneForms": "Tags"
           },
-          "_component": {
-            "type": "string",
-            "title": "Component"
+          "_trackingId": {
+            "type": "number",
+            "title": "Tracking id",
+            "default": 0
           },
-          "_layout": {
-            "type": "string",
-            "title": "Layout",
-            "default": ""
+          "layoutOptions": {
+            "type": "array",
+            "title": "Layout options",
+            "default": [],
+            "_adapt": {
+              "editorOnly": true
+            }
           },
-          "_isResetOnRevisit": {
-            "type": "string",
-            "title": "Reset state on revisit",
-            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
-            "default": "false",
-            "enum": [
-              "false",
-              "soft",
-              "hard"
-            ],
+          "_requireCompletionOf": {
+            "type": "number",
+            "title": "Number of components required for completion",
+            "description": "The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed",
+            "default": -1,
             "_adapt": {
               "isSetting": true
-            },
-            "_backboneForms": "Select"
-          },
-          "properties": {
-            "type": "object",
-            "title": "Properties",
-            "default": {}
+            }
           }
         },
         "required": [
           "createdAt",
           "createdBy",
-          "updatedAt",
-          "_component"
+          "updatedAt"
         ]
       },
       "contentobject": {
@@ -2168,9 +2160,9 @@
           "updatedAt"
         ]
       },
-      "block": {
+      "component": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "block",
+        "$anchor": "component",
         "description": "The base schema inherited by all other schemas",
         "type": "object",
         "properties": {
@@ -2213,7 +2205,7 @@
             "type": "string",
             "title": "Display title",
             "description": "When viewing an element - this is the title that will be displayed on the page",
-            "default": "",
+            "default": "Untitled",
             "_adapt": {
               "translatable": true
             },
@@ -2387,33 +2379,41 @@
             },
             "_backboneForms": "Tags"
           },
-          "_trackingId": {
-            "type": "number",
-            "title": "Tracking id",
-            "default": 0
+          "_component": {
+            "type": "string",
+            "title": "Component"
           },
-          "layoutOptions": {
-            "type": "array",
-            "title": "Layout options",
-            "default": [],
-            "_adapt": {
-              "editorOnly": true
-            }
+          "_layout": {
+            "type": "string",
+            "title": "Layout",
+            "default": ""
           },
-          "_requireCompletionOf": {
-            "type": "number",
-            "title": "Number of components required for completion",
-            "description": "The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed",
-            "default": -1,
+          "_isResetOnRevisit": {
+            "type": "string",
+            "title": "Reset state on revisit",
+            "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+            "default": "false",
+            "enum": [
+              "false",
+              "soft",
+              "hard"
+            ],
             "_adapt": {
               "isSetting": true
-            }
+            },
+            "_backboneForms": "Select"
+          },
+          "properties": {
+            "type": "object",
+            "title": "Properties",
+            "default": {}
           }
         },
         "required": [
           "createdAt",
           "createdBy",
-          "updatedAt"
+          "updatedAt",
+          "_component"
         ]
       },
       "course": {
