@@ -1,5 +1,5 @@
 # Core module list
-The following modules are included in Adapt authoring v1.0.0-rc.4 core package of modules, and are supported by the core dev team.
+The following modules are included in Adapt authoring v1.0.0-rc.6 core package of modules, and are supported by the core dev team.
 
 | Name | Version | Description |
 | - | :-: | - |
