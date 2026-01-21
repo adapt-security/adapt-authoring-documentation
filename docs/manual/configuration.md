@@ -65,7 +65,32 @@ export default {
     // Default repository to use for asset storage
     defaultAssetRepository: "local", // string, optional
     // File types allowed for upload
-    expectedFileTypes: ["application/msword","application/pdf","application/rtf","application/vnd.ms-excel","application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/x-subrip","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/html","text/vtt","video/mp4","video/ogg","video/webm"], // array, optional
+    expectedFileTypes: [
+      "application/msword",
+      "application/pdf",
+      "application/rtf",
+      "application/vnd.ms-excel",
+      "application/vnd.ms-powerpoint",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/x-subrip",
+      "application/zip",
+      "audio/mpeg",
+      "audio/wav",
+      "font/woff",
+      "font/woff2",
+      "image/gif",
+      "image/jpeg",
+      "image/png",
+      "image/svg+xml",
+      "image/webp",
+      "text/html",
+      "text/vtt",
+      "video/mp4",
+      "video/ogg",
+      "video/webm"
+    ], // array, optional
     // Maximum asset file upload size
     assetMaxFileSize: "50mb", // string, optional
     // Location of local thumbs dir
@@ -137,7 +162,30 @@ export default {
     // Path to store documentation build files
     outputDir: "$TEMP/docs-build", // string, optional
     // Sections for categorising documentation manual pages
-    manualSections: {"getting-started":{"title":"Getting started"},"basics":{"title":"The basics"},"advanced":{"title":"Advanced topics"},"ui":{"title":"Front-end app"},"other-guides":{"title":"Other guides","default":true},"contributing":{"title":"Contributing"},"reference":{"title":"Reference"}}, // object, optional
+    manualSections: {
+      "getting-started": {
+        "title": "Getting started"
+      },
+      "basics": {
+        "title": "The basics"
+      },
+      "advanced": {
+        "title": "Advanced topics"
+      },
+      "ui": {
+        "title": "Front-end app"
+      },
+      "other-guides": {
+        "title": "Other guides",
+        "default": true
+      },
+      "contributing": {
+        "title": "Contributing"
+      },
+      "reference": {
+        "title": "Reference"
+      }
+    }, // object, optional
   },
   'adapt-authoring-jsonschema': {
     // Whether schema data should be cached
@@ -155,7 +203,14 @@ export default {
   },
   'adapt-authoring-logger': {
     // Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).
-    levels: ["error","warn","success","info","debug","verbose"], // array, optional
+    levels: [
+      "error",
+      "warn",
+      "success",
+      "info",
+      "debug",
+      "verbose"
+    ], // array, optional
     // Whether to mute log messages
     mute: false, // boolean,string, optional
     // The date format to use
@@ -175,7 +230,9 @@ export default {
   },
   'adapt-authoring-middleware': {
     // Content types the API accepts (may use MIME types or extension names)
-    acceptedTypes: ["application/json"], // array, optional
+    acceptedTypes: [
+      "application/json"
+    ], // array, optional
     // The number of API requests allowed by a single IP within the specified time limit
     apiRequestLimit: 50, // number, optional
     // Amount of time before the request count is reset
@@ -197,9 +254,52 @@ export default {
   },
   'adapt-authoring-roles': {
     // List of defined roles to be loaded on app start
-    roleDefinitions: [{"shortName":"authuser","displayName":"Authenticated user","scopes":["clear:session","read:config","read:lang","read:me","write:me","disavow:auth"]},{"shortName":"contentcreator","displayName":"Content creator","extends":"authuser","scopes":["export:adapt","import:adapt","preview:adapt","publish:adapt","read:assets","write:assets","read:content","write:content","read:contentplugins","read:roles","read:schema","read:tags","write:tags","read:users"]},{"shortName":"superuser","displayName":"Super user","scopes":["*:*"]}], // array, optional
+    roleDefinitions: [
+      {
+        "shortName": "authuser",
+        "displayName": "Authenticated user",
+        "scopes": [
+          "clear:session",
+          "read:config",
+          "read:lang",
+          "read:me",
+          "write:me",
+          "disavow:auth"
+        ]
+      },
+      {
+        "shortName": "contentcreator",
+        "displayName": "Content creator",
+        "extends": "authuser",
+        "scopes": [
+          "export:adapt",
+          "import:adapt",
+          "preview:adapt",
+          "publish:adapt",
+          "read:assets",
+          "write:assets",
+          "read:content",
+          "write:content",
+          "read:contentplugins",
+          "read:roles",
+          "read:schema",
+          "read:tags",
+          "write:tags",
+          "read:users"
+        ]
+      },
+      {
+        "shortName": "superuser",
+        "displayName": "Super user",
+        "scopes": [
+          "*:*"
+        ]
+      }
+    ], // array, optional
     // The roles which are applied by default to new users (expects role shortname)
-    defaultRoles: ["authuser"], // array, optional
+    defaultRoles: [
+      "authuser"
+    ], // array, optional
     // Same as defaultRoles, but allows different roles to be specified for different auth types
     defaultRolesForAuthTypes: {}, // object, optional
   },
@@ -353,7 +453,32 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">expectedFileTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">File types allowed for upload</div>
-<div class="default"><span class="label">Default</span>: <pre>["application/msword","application/pdf","application/rtf","application/vnd.ms-excel","application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/x-subrip","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/html","text/vtt","video/mp4","video/ogg","video/webm"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>[
+      "application/msword",
+      "application/pdf",
+      "application/rtf",
+      "application/vnd.ms-excel",
+      "application/vnd.ms-powerpoint",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/x-subrip",
+      "application/zip",
+      "audio/mpeg",
+      "audio/wav",
+      "font/woff",
+      "font/woff2",
+      "image/gif",
+      "image/jpeg",
+      "image/png",
+      "image/svg+xml",
+      "image/webp",
+      "text/html",
+      "text/vtt",
+      "video/mp4",
+      "video/ogg",
+      "video/webm"
+    ]</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -592,7 +717,30 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">manualSections</span> (object, optional)</div>
 <div class="inner">
 <div class="description">Sections for categorising documentation manual pages</div>
-<div class="default"><span class="label">Default</span>: <pre>{"getting-started":{"title":"Getting started"},"basics":{"title":"The basics"},"advanced":{"title":"Advanced topics"},"ui":{"title":"Front-end app"},"other-guides":{"title":"Other guides","default":true},"contributing":{"title":"Contributing"},"reference":{"title":"Reference"}}</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>{
+      "getting-started": {
+        "title": "Getting started"
+      },
+      "basics": {
+        "title": "The basics"
+      },
+      "advanced": {
+        "title": "Advanced topics"
+      },
+      "ui": {
+        "title": "Front-end app"
+      },
+      "other-guides": {
+        "title": "Other guides",
+        "default": true
+      },
+      "contributing": {
+        "title": "Contributing"
+      },
+      "reference": {
+        "title": "Reference"
+      }
+    }</pre></div>
 </div>
 </div>
 </div>
@@ -649,7 +797,14 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">levels</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).</div>
-<div class="default"><span class="label">Default</span>: <pre>["error","warn","success","info","debug","verbose"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>[
+      "error",
+      "warn",
+      "success",
+      "info",
+      "debug",
+      "verbose"
+    ]</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -715,7 +870,9 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">acceptedTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Content types the API accepts (may use MIME types or extension names)</div>
-<div class="default"><span class="label">Default</span>: <pre>["application/json"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>[
+      "application/json"
+    ]</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -785,14 +942,57 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">roleDefinitions</span> (array, optional)</div>
 <div class="inner">
 <div class="description">List of defined roles to be loaded on app start</div>
-<div class="default"><span class="label">Default</span>: <pre>[{"shortName":"authuser","displayName":"Authenticated user","scopes":["clear:session","read:config","read:lang","read:me","write:me","disavow:auth"]},{"shortName":"contentcreator","displayName":"Content creator","extends":"authuser","scopes":["export:adapt","import:adapt","preview:adapt","publish:adapt","read:assets","write:assets","read:content","write:content","read:contentplugins","read:roles","read:schema","read:tags","write:tags","read:users"]},{"shortName":"superuser","displayName":"Super user","scopes":["*:*"]}]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>[
+      {
+        "shortName": "authuser",
+        "displayName": "Authenticated user",
+        "scopes": [
+          "clear:session",
+          "read:config",
+          "read:lang",
+          "read:me",
+          "write:me",
+          "disavow:auth"
+        ]
+      },
+      {
+        "shortName": "contentcreator",
+        "displayName": "Content creator",
+        "extends": "authuser",
+        "scopes": [
+          "export:adapt",
+          "import:adapt",
+          "preview:adapt",
+          "publish:adapt",
+          "read:assets",
+          "write:assets",
+          "read:content",
+          "write:content",
+          "read:contentplugins",
+          "read:roles",
+          "read:schema",
+          "read:tags",
+          "write:tags",
+          "read:users"
+        ]
+      },
+      {
+        "shortName": "superuser",
+        "displayName": "Super user",
+        "scopes": [
+          "*:*"
+        ]
+      }
+    ]</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">defaultRoles</span> (array, optional)</div>
 <div class="inner">
 <div class="description">The roles which are applied by default to new users (expects role shortname)</div>
-<div class="default"><span class="label">Default</span>: <pre>["authuser"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>[
+      "authuser"
+    ]</pre></div>
 </div>
 </div>
 <div class="attribute">

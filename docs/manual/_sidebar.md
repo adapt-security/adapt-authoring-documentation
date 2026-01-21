@@ -3,6 +3,7 @@
 <ul class="header"><li>Getting started</li></ul>
 
   - [Configuring your environment](configure-environment.md)
+  - [Folder structure](folder-structure.md)
   - [Installation](install.md)
   - [Running the application](run.md)
   - [Running automated tests](running-tests.md)
@@ -13,11 +14,9 @@
 
   - [Utilities (at-utils)](at-utils.md)
   - [Building the docs](building-docs.md)
-  - [The data folder](data-folder.md)
-  - [Defining module configuration](defining-config.md)
   - [Error handling](error-handling.md)
+  - [Hooks](hooks.md)
   - [Introduction to schemas](schemas-introduction.md)
-  - [The temp folder](temp-folder.md)
   - [Using MongoDB](using-mongodb.md)
   - [Writing a module](writing-a-module.md)
   - [Writing a schema](writing-a-schema.md)
@@ -26,6 +25,7 @@
 
 <ul class="header"><li>Advanced topics</li></ul>
 
+  - [Creating auth plugins](creating-auth-plugins.md)
   - [Writing custom documentation plugins](custom-documentation-plugins.md)
   - [Customising the application](customising.md)
   - [Handling server requests](server-requests.md)
@@ -41,8 +41,6 @@
 <ul class="header"><li>Other guides</li></ul>
 
   - [Authentication and permissions](auth-permissions.md)
-  - [Creating auth plugins](creating-auth-plugins.md)
-  - [Hooks](hooks.md)
 
 
 <ul class="header"><li>Contributing</li></ul>
