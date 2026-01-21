@@ -38,6 +38,13 @@
   - [Extending the UI](ui-extensions.md)
 
 
+<ul class="header"><li>Other guides</li></ul>
+
+  - [Authentication and permissions](auth-permissions.md)
+  - [Creating auth plugins](creating-auth-plugins.md)
+  - [Hooks](hooks.md)
+
+
 <ul class="header"><li>Contributing</li></ul>
 
   - [Contributing to the project](contributing.md)

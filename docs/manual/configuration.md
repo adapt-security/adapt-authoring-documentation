@@ -58,10 +58,14 @@ export default {
   'adapt-authoring-assets': {
     // Assets repository location
     assetDir: "$DATA/assets", // string, optional
+    // Custom command to run the ffmpeg CLI
+    customFfmpegCommand: undefined, // string, optional
+    // Custom command to run the ffprobe CLI
+    customFfprobeCommand: undefined, // string, optional
     // Default repository to use for asset storage
     defaultAssetRepository: "local", // string, optional
     // File types allowed for upload
-    expectedFileTypes: ["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/vtt","video/mp4"], // array, optional
+    expectedFileTypes: ["application/msword","application/pdf","application/rtf","application/vnd.ms-excel","application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/x-subrip","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/html","text/vtt","video/mp4","video/ogg","video/webm"], // array, optional
     // Maximum asset file upload size
     assetMaxFileSize: "50mb", // string, optional
     // Location of local thumbs dir
@@ -151,7 +155,7 @@ export default {
   },
   'adapt-authoring-logger': {
     // Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).
-    levels: ["error","warn","success","info","debug"], // array, optional
+    levels: ["error","warn","success","info","debug","verbose"], // array, optional
     // Whether to mute log messages
     mute: false, // boolean,string, optional
     // The date format to use
@@ -208,8 +212,6 @@ export default {
     url: undefined, // string, required
     // Whether to trust the client's x-Forwarded-For header for the request IP address. Only enable if using your own trusted reverse proxy
     trustProxy: 0, // number,boolean, optional
-    // Will log the execution time of each request
-    debugRequestTime: false, // boolean, optional
     // Whether to log errors in their entirety
     verboseErrorLogging: false, // boolean, optional
   },
@@ -327,6 +329,20 @@ See below for a full list of available configuration options.
 </div>
 </div>
 <div class="attribute">
+<div class="title"><span class="main">customFfmpegCommand</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Custom command to run the ffmpeg CLI</div>
+<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">customFfprobeCommand</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Custom command to run the ffprobe CLI</div>
+<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+</div>
+</div>
+<div class="attribute">
 <div class="title"><span class="main">defaultAssetRepository</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Default repository to use for asset storage</div>
@@ -337,7 +353,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">expectedFileTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">File types allowed for upload</div>
-<div class="default"><span class="label">Default</span>: <pre>["application/pdf","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/vtt","video/mp4"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>["application/msword","application/pdf","application/rtf","application/vnd.ms-excel","application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/x-subrip","application/zip","audio/mpeg","audio/wav","font/woff","font/woff2","image/gif","image/jpeg","image/png","image/svg+xml","image/webp","text/html","text/vtt","video/mp4","video/ogg","video/webm"]</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -633,7 +649,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">levels</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).</div>
-<div class="default"><span class="label">Default</span>: <pre>["error","warn","success","info","debug"]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre>["error","warn","success","info","debug","verbose"]</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -814,13 +830,6 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">Whether to trust the client's x-Forwarded-For header for the request IP address. Only enable if using your own trusted reverse proxy</div>
 <div class="default"><span class="label">Default</span>: <pre>0</pre></div>
-</div>
-</div>
-<div class="attribute">
-<div class="title"><span class="main">debugRequestTime</span> (boolean, optional)</div>
-<div class="inner">
-<div class="description">Will log the execution time of each request</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
 </div>
 </div>
 <div class="attribute">

@@ -12,6 +12,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=ACCOUNT_LOCKED_TEMP">ACCOUNT_LOCKED_TEMP</a></li>
 <li><a href="#/errorsref?id=ACCOUNT_NOT_LOCALAUTHD">ACCOUNT_NOT_LOCALAUTHD</a></li>
 <li><a href="#/errorsref?id=API_MODULE_INVALID_CLASS">API_MODULE_INVALID_CLASS</a></li>
+<li><a href="#/errorsref?id=ASSET_NO_PATH">ASSET_NO_PATH</a></li>
 <li><a href="#/errorsref?id=ASSET_TYPE_EXISTS">ASSET_TYPE_EXISTS</a></li>
 <li><a href="#/errorsref?id=ASSET_TYPE_INVALID">ASSET_TYPE_INVALID</a></li>
 <li><a href="#/errorsref?id=ASSET_TYPE_UNKNOWN">ASSET_TYPE_UNKNOWN</a></li>
@@ -45,6 +46,8 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=ENDPOINT_NOT_FOUND">ENDPOINT_NOT_FOUND</a></li>
 <li><a href="#/errorsref?id=ENOENT">ENOENT</a></li>
 <li><a href="#/errorsref?id=ENOTEMPTY">ENOTEMPTY</a></li>
+<li><a href="#/errorsref?id=FFMPEG">FFMPEG</a></li>
+<li><a href="#/errorsref?id=FFPROBE">FFPROBE</a></li>
 <li><a href="#/errorsref?id=FILE_EXCEEDS_MAX_SIZE">FILE_EXCEEDS_MAX_SIZE</a></li>
 <li><a href="#/errorsref?id=FILE_SYNTAX_ERROR">FILE_SYNTAX_ERROR</a></li>
 <li><a href="#/errorsref?id=FUNC_DISABLED">FUNC_DISABLED</a></li>
@@ -99,6 +102,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=NO_ROOT_OR_ROUTER_DEF">NO_ROOT_OR_ROUTER_DEF</a></li>
 <li><a href="#/errorsref?id=NO_ROUTES_DEF">NO_ROUTES_DEF</a></li>
 <li><a href="#/errorsref?id=NO_SCHEMA_DEF">NO_SCHEMA_DEF</a></li>
+<li><a href="#/errorsref?id=PARSE_EXT">PARSE_EXT</a></li>
 <li><a href="#/errorsref?id=RATE_LIMIT_EXCEEDED">RATE_LIMIT_EXCEEDED</a></li>
 <li><a href="#/errorsref?id=REPO_NOT_FOUND">REPO_NOT_FOUND</a></li>
 <li><a href="#/errorsref?id=RESOURCE_IN_USE">RESOURCE_IN_USE</a></li>
@@ -106,7 +110,9 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=SCHEMA_LOAD_FAILED">SCHEMA_LOAD_FAILED</a></li>
 <li><a href="#/errorsref?id=SERVER_ERROR">SERVER_ERROR</a></li>
 <li><a href="#/errorsref?id=SERVER_START">SERVER_START</a></li>
+<li><a href="#/errorsref?id=SPAWN">SPAWN</a></li>
 <li><a href="#/errorsref?id=SUPER_USER_EXISTS">SUPER_USER_EXISTS</a></li>
+<li><a href="#/errorsref?id=TOO_MANY_RESULTS">TOO_MANY_RESULTS</a></li>
 <li><a href="#/errorsref?id=UNAUTHENTICATED">UNAUTHENTICATED</a></li>
 <li><a href="#/errorsref?id=UNAUTHORISED">UNAUTHORISED</a></li>
 <li><a href="#/errorsref?id=UNEXPECTED_FILE_TYPES">UNEXPECTED_FILE_TYPES</a></li>
@@ -126,6 +132,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `ACCOUNT_LOCKED_TEMP` | User account has been temporarily locked | 401 | <ul><li>`remaining`: The amount of time remaining before account is unlocked</li></ul> |
 | `ACCOUNT_NOT_LOCALAUTHD` | Specified account is not authenticated with local auth | 400 | <ul></ul> |
 | `API_MODULE_INVALID_CLASS` | Module does not extend AbstractApiModule | 500 | <ul><li>`name`: Name of the module</li></ul> |
+| `ASSET_NO_PATH` | Asset doesn't have a path specified | 500 | <ul><li>`title`: Asset title</li></ul> |
 | `ASSET_TYPE_EXISTS` | An asset type with this name already exists | 500 | <ul><li>`name`: Repo name</li></ul> |
 | `ASSET_TYPE_INVALID` | Asset type does not extend AbstractAsset | 500 | <ul><li>`name`: Asset type</li></ul> |
 | `ASSET_TYPE_UNKNOWN` | Asset type is not registered | 500 | <ul><li>`name`: Asset type</li></ul> |
@@ -159,6 +166,8 @@ Supplemental data can be used at the point that errors are translated to provide
 | `ENDPOINT_NOT_FOUND` | API endpoint does not exist | 404 | <ul><li>`endpoint`: The missing endpoint</li><li>`method`: The HTTP method</li></ul> |
 | `ENOENT` | No entity (file or directory) could be found by the given path | 500 | <ul><li>`path`: Path to target file or directory</li></ul> |
 | `ENOTEMPTY` | A directory with entries was the target of an operation that requires an empty directory | 500 | <ul><li>`path`: Path to target file or directory</li></ul> |
+| `FFMPEG` | ffmpeg command failed | 500 | <ul><li>`error`: Error message</li><li>`command`: The ffmpeg command</li><li>`cwd`: The command's current working directory</li></ul> |
+| `FFPROBE` | ffprobe command failed | 500 | <ul><li>`error`: Error message</li><li>`command`: The ffprobe command</li><li>`cwd`: The command's current working directory</li></ul> |
 | `FILE_EXCEEDS_MAX_SIZE` | Uploaded file exceeds the size limit | 413 | <ul><li>`maxSize`: The maximum file size</li><li>`size`: Size of file</li></ul> |
 | `FILE_SYNTAX_ERROR` | File contains a syntax error | 500 | <ul><li>`path`: Path to the invalid file</li><li>`message`: The error message</li></ul> |
 | `FUNC_DISABLED` | Function has been disabled | 500 | <ul><li>`name`: The name of the function</li></ul> |
@@ -213,6 +222,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `NO_ROOT_OR_ROUTER_DEF` | module is missing both a root and router definition | 500 | <ul></ul> |
 | `NO_ROUTES_DEF` | module is missing API routes definition | 500 | <ul></ul> |
 | `NO_SCHEMA_DEF` | No json schema has been defined | 404 | <ul></ul> |
+| `PARSE_EXT` | Failed to parse file extension from the file name | 500 | <ul><li>`file`: File name</li></ul> |
 | `RATE_LIMIT_EXCEEDED` | API rate limit has been exceeded | 429 | <ul></ul> |
 | `REPO_NOT_FOUND` | The requested asset repository doesn't exist | 500 | <ul><li>`name`: Repo name</li></ul> |
 | `RESOURCE_IN_USE` | Resource is currently being using in courses | 400 | <ul><li>`type`: Type of resource</li><li>`courses`: Courses using the resource</li></ul> |
@@ -220,7 +230,9 @@ Supplemental data can be used at the point that errors are translated to provide
 | `SCHEMA_LOAD_FAILED` | Failed to load a JSON schema | 500 | <ul><li>`schemaName`: Schema name</li></ul> |
 | `SERVER_ERROR` | Generic server error | 500 | <ul><li>`error`: The original error</li></ul> |
 | `SERVER_START` | Failed to start server | 500 | <ul><li>`error`: The error</li></ul> |
+| `SPAWN` | Error occurred spawning command | 500 | <ul><li>`cmd`: The command</li><li>`cwd`: Current working directory for command</li><li>`error`: The error message</li></ul> |
 | `SUPER_USER_EXISTS` | A Super Admin account already exists | 400 | <ul></ul> |
+| `TOO_MANY_RESULTS` | Too many results were returned | 500 | <ul><li>`actual`: Number of actual results</li><li>`expected`: Number of expected results</li><li>`query`: The query</li></ul> |
 | `UNAUTHENTICATED` | Request is not authenticated for access to the API | 401 | <ul></ul> |
 | `UNAUTHORISED` | Request is not authorised to perform the required operation | 403 | <ul><li>`method`: The request HTTP method</li><li>`url`: The request URL</li></ul> |
 | `UNEXPECTED_FILE_TYPES` | Recieved unexpected file types | 400 | <ul><li>`expectedFileTypes`: The list of expected file types</li><li>`invalidFiles`: The list of invalid files</li></ul> |
