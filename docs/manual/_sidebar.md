@@ -13,6 +13,7 @@
 <ul class="header"><li>The basics</li></ul>
 
   - [Utilities (at-utils)](at-utils.md)
+  - [Authentication and permissions](auth-permissions.md)
   - [Building the docs](building-docs.md)
   - [Error handling](error-handling.md)
   - [Hooks](hooks.md)
@@ -36,11 +37,6 @@
 
   - [Migrating from legacy](migrating-from-legacy.md)
   - [Extending the UI](ui-extensions.md)
-
-
-<ul class="header"><li>Other guides</li></ul>
-
-  - [Authentication and permissions](auth-permissions.md)
 
 
 <ul class="header"><li>Contributing</li></ul>
