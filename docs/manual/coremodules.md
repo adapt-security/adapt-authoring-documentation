@@ -33,6 +33,6 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-spoortracking](https://github.com/adapt-security/adapt-authoring-spoortracking) | 1.0.1 | Module for making course content compatible with spoor |
 | [adapt-authoring-tags](https://github.com/adapt-security/adapt-authoring-tags) | 1.0.1 | Module for managing tags |
 | [adapt-authoring-testing](https://github.com/adapt-security/adapt-authoring-testing) | 0.0.1 | Module for running automated tests on the Adapt authoring tool |
-| [adapt-authoring-ui](https://github.com/adapt-security/adapt-authoring-ui) | 1.5.4 | Front-end application for the Adapt authoring tool |
+| [adapt-authoring-ui](https://github.com/adapt-security/adapt-authoring-ui) | 1.5.5 | Front-end application for the Adapt authoring tool |
 | [adapt-authoring-users](https://github.com/adapt-security/adapt-authoring-users) | 1.0.1 | Module for managing system users |
 | [at-utils](https://github.com/adapt-security/at-utils#readme) | 0.10.1 | A collection of CLI helper utilities for maintaining installations of the Adapt authoring tool. |
