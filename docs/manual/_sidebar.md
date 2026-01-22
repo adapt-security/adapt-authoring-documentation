@@ -5,7 +5,6 @@
   - [Configuring your environment](configure-environment.md)
   - [Folder structure](folder-structure.md)
   - [Installation](install.md)
-  - [Running the application](run.md)
   - [Running automated tests](running-tests.md)
   - [Updating](update.md)
 
@@ -41,11 +40,6 @@
 
 <ul class="header"><li>Contributing</li></ul>
 
-  - [Contributing to the project](contributing.md)
-  - [Git process](git.md)
-  - [Peer code review](peer-review.md)
-  - [Publishing a release](releasing.md)
-  - [Semantic version numbers](semver.md)
   - [Writing core code](writing-core-code.md)
   - [Writing documentation](writing-documentation.md)
 
