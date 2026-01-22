@@ -204,13 +204,13 @@ export default {
   'adapt-authoring-logger': {
     // Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).
     levels: [
-      "error",
-      "warn",
-      "success",
-      "info",
-      "debug",
-      "verbose"
-    ], // array, optional
+  "error",
+  "warn",
+  "success",
+  "info",
+  "debug",
+  "verbose"
+], // array, optional
     // Whether to mute log messages
     mute: false, // boolean,string, optional
     // The date format to use
@@ -231,8 +231,8 @@ export default {
   'adapt-authoring-middleware': {
     // Content types the API accepts (may use MIME types or extension names)
     acceptedTypes: [
-      "application/json"
-    ], // array, optional
+  "application/json"
+], // array, optional
     // The number of API requests allowed by a single IP within the specified time limit
     apiRequestLimit: 50, // number, optional
     // Amount of time before the request count is reset
@@ -298,8 +298,8 @@ export default {
     ], // array, optional
     // The roles which are applied by default to new users (expects role shortname)
     defaultRoles: [
-      "authuser"
-    ], // array, optional
+  "authuser"
+], // array, optional
     // Same as defaultRoles, but allows different roles to be specified for different auth types
     defaultRolesForAuthTypes: {}, // object, optional
   },
@@ -352,42 +352,42 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">buildDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Path to the folder where framework builds will be generated</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/framework-builds"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/framework-builds"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">buildLifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">How long a build should remain valid for. Expects an amount followed by a space and then the unit (e.g. 5 hours)</div>
-<div class="default"><span class="label">Default</span>: <pre>"7d"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"7d"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">enableUpdateApi</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the Adapt framework can be updated via the REST API</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">frameworkDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Path to the adapt_framework source folder</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/adapt_framework"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/adapt_framework"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">frameworkRepository</span> (string, optional)</div>
 <div class="inner">
 <div class="description">URL of the Adapt framework git repository to install</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">undefined</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">importMaxFileSize</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Maximum file upload size for course imports</div>
-<div class="default"><span class="label">Default</span>: <pre>"1gb"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"1gb"</pre></div>
 </div>
 </div>
 </div>
@@ -399,21 +399,21 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">defaultCacheLifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Default lifespan of data cache</div>
-<div class="default"><span class="label">Default</span>: <pre>"5s"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"5s"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">defaultPageSize</span> (number, optional)</div>
 <div class="inner">
 <div class="description">Default size of page</div>
-<div class="default"><span class="label">Default</span>: <pre>100</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">100</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">maxPageSize</span> (number, optional)</div>
 <div class="inner">
 <div class="description">Maximum page size</div>
-<div class="default"><span class="label">Default</span>: <pre>250</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">250</pre></div>
 </div>
 </div>
 </div>
@@ -425,35 +425,35 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">assetDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Assets repository location</div>
-<div class="default"><span class="label">Default</span>: <pre>"$DATA/assets"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$DATA/assets"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">customFfmpegCommand</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Custom command to run the ffmpeg CLI</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">undefined</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">customFfprobeCommand</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Custom command to run the ffprobe CLI</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">undefined</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">defaultAssetRepository</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Default repository to use for asset storage</div>
-<div class="default"><span class="label">Default</span>: <pre>"local"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"local"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">expectedFileTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">File types allowed for upload</div>
-<div class="default"><span class="label">Default</span>: <pre>[
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">[
       "application/msword",
       "application/pdf",
       "application/rtf",
@@ -485,28 +485,28 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">assetMaxFileSize</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Maximum asset file upload size</div>
-<div class="default"><span class="label">Default</span>: <pre>"50mb"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"50mb"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">thumbnailDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Location of local thumbs dir</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/asset-thumbs"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/asset-thumbs"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">thumbnailExt</span> (string, optional)</div>
 <div class="inner">
 <div class="description">File extension for thumbnails</div>
-<div class="default"><span class="label">Default</span>: <pre>".png"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">".png"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">thumbnailWidth</span> (number, optional)</div>
 <div class="inner">
 <div class="description">Maximum width for thumbnails</div>
-<div class="default"><span class="label">Default</span>: <pre>320</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">320</pre></div>
 </div>
 </div>
 </div>
@@ -518,28 +518,28 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">isEnabled</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Enables auth (note: this has no effect in production environments)</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">defaultTokenLifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">How long a token should remain valid for</div>
-<div class="default"><span class="label">Default</span>: <pre>"7d"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"7d"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">logMissingPermissions</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">In enabled, a warning is logged on app start for any routes with missing permissions (note: any routes without defined permissions are inaccessible)</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">secureTokenGeneration</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether a user must be authenticated to generate an API auth token</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -552,7 +552,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">tokenIssuer</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The identity of the issuer of the token</div>
-<div class="default"><span class="label">Default</span>: <pre>"adapt"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"adapt"</pre></div>
 </div>
 </div>
 </div>
@@ -564,84 +564,84 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">saltRounds</span> (number, optional)</div>
 <div class="inner">
 <div class="description">The number of rounds performed when generating a password hash</div>
-<div class="default"><span class="label">Default</span>: <pre>10</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">10</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">failsUntilTemporaryLock</span> (number, optional)</div>
 <div class="inner">
 <div class="description">The number of failed login attempts allowed before the account is locked for a short period of time</div>
-<div class="default"><span class="label">Default</span>: <pre>5</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">5</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">failsUntilPermanentLock</span> (number, optional)</div>
 <div class="inner">
 <div class="description">The number of failed login attempts allowed before the account is permanently locked</div>
-<div class="default"><span class="label">Default</span>: <pre>20</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">20</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">temporaryLockDuration</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The amount of time a locked user must wait before attempting to log in again</div>
-<div class="default"><span class="label">Default</span>: <pre>"1m"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"1m"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">resetTokenLifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The amount of time a password reset token remains valid for</div>
-<div class="default"><span class="label">Default</span>: <pre>"24h"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"24h"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">inviteTokenLifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The amount of time an invite password reset token remains valid for</div>
-<div class="default"><span class="label">Default</span>: <pre>"7d"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"7d"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">minPasswordLength</span> (number, optional)</div>
 <div class="inner">
 <div class="description">Minimum password length</div>
-<div class="default"><span class="label">Default</span>: <pre>8</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">8</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">passwordMustHaveNumber</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the password must contain at least one number</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">passwordMustHaveUppercase</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the password must contain at least one uppercase character</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">passwordMustHaveLowercase</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the password must contain at least one lowercase character</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">passwordMustHaveSpecial</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the password must contain at least one special character</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">blacklistedPasswordValues</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Values which cannot be used in passwords</div>
-<div class="default"><span class="label">Default</span>: <pre>[]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">[]</pre></div>
 </div>
 </div>
 </div>
@@ -653,14 +653,14 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">runOnBuild</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the browserslist DB should be updated prior to each framework build</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">updateInterval</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.</div>
-<div class="default"><span class="label">Default</span>: <pre>"0"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"0"</pre></div>
 </div>
 </div>
 </div>
@@ -672,7 +672,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">pluginDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Location of locally installed plugins</div>
-<div class="default"><span class="label">Default</span>: <pre>"$DATA/contentplugins"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$DATA/contentplugins"</pre></div>
 </div>
 </div>
 </div>
@@ -684,21 +684,21 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">isProduction</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether this app configuration is a production environment</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">dataDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Directory for persistant application data</div>
-<div class="default"><span class="label">Default</span>: <pre>"$ROOT/APP_DATA/data"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$ROOT/APP_DATA/data"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">tempDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Temporary directory for application data</div>
-<div class="default"><span class="label">Default</span>: <pre>"$ROOT/APP_DATA/temp"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$ROOT/APP_DATA/temp"</pre></div>
 </div>
 </div>
 </div>
@@ -710,14 +710,14 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">outputDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Path to store documentation build files</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/docs-build"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/docs-build"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">manualSections</span> (object, optional)</div>
 <div class="inner">
 <div class="description">Sections for categorising documentation manual pages</div>
-<div class="default"><span class="label">Default</span>: <pre>{
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">{
       "getting-started": {
         "title": "Getting started"
       },
@@ -752,28 +752,28 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">enableCache</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether schema data should be cached</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">formatOverrides</span> (object, optional)</div>
 <div class="inner">
 <div class="description">Custom RegExp overrides for Ajv string formats</div>
-<div class="default"><span class="label">Default</span>: <pre>{}</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">{}</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">xssWhitelist</span> (object, optional)</div>
 <div class="inner">
 <div class="description">Attributes which should be whitelisted when run through the XSS sanitiser.</div>
-<div class="default"><span class="label">Default</span>: <pre>{}</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">{}</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">xssWhitelistOverride</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">If set to false, the xssWhitelist value will EXTEND the default XSS whitelist. If set to true, it will REPLACE it.</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 </div>
@@ -785,7 +785,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">defaultLang</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The default language used by the server</div>
-<div class="default"><span class="label">Default</span>: <pre>"en"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"en"</pre></div>
 </div>
 </div>
 </div>
@@ -797,35 +797,35 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">levels</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Configures which log levels of log should be shown. Accepts generic levels, module-specific levels and not logic (e.g. 'debug', 'debug.core' and '!debug' respectively).</div>
-<div class="default"><span class="label">Default</span>: <pre>[
-      "error",
-      "warn",
-      "success",
-      "info",
-      "debug",
-      "verbose"
-    ]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">[
+  "error",
+  "warn",
+  "success",
+  "info",
+  "debug",
+  "verbose"
+]</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">mute</span> (boolean,string, optional)</div>
 <div class="inner">
 <div class="description">Whether to mute log messages</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">dateFormat</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The date format to use</div>
-<div class="default"><span class="label">Default</span>: <pre>"iso"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"iso"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">showTimestamp</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether to prepend a timestamp to each log message</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 </div>
@@ -837,28 +837,28 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">isEnabled</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether the mailer module is enabled</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">transport</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Mail transport to use</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">undefined</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">connectionUrl</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Connection URL for the SMTP service</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">undefined</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">defaultSenderAddress</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Default email address to use as the sender</div>
-<div class="default"><span class="label">Default</span>: <pre>undefined</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">undefined</pre></div>
 </div>
 </div>
 </div>
@@ -870,37 +870,37 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">acceptedTypes</span> (array, optional)</div>
 <div class="inner">
 <div class="description">Content types the API accepts (may use MIME types or extension names)</div>
-<div class="default"><span class="label">Default</span>: <pre>[
-      "application/json"
-    ]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">[
+  "application/json"
+]</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">apiRequestLimit</span> (number, optional)</div>
 <div class="inner">
 <div class="description">The number of API requests allowed by a single IP within the specified time limit</div>
-<div class="default"><span class="label">Default</span>: <pre>50</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">50</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">apiRequestLimitDuration</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Amount of time before the request count is reset</div>
-<div class="default"><span class="label">Default</span>: <pre>"1s"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"1s"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">fileUploadMaxFileSize</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Default file size limit for uploaded files. Note that other modules may specify their own limits, please check full config documentation for details.</div>
-<div class="default"><span class="label">Default</span>: <pre>"50mb"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"50mb"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">uploadTempDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Temporary directory for file uploads</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/file-uploads"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/file-uploads"</pre></div>
 </div>
 </div>
 </div>
@@ -923,14 +923,14 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">logInternalErrors</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether errors in the MongoDBLoggerModule module should be logged using the default logger. Can cause mass logs in some cases.</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">maxLogCount</span> (number, optional)</div>
 <div class="inner">
 <div class="description">The maximum number of logs stored at any one time (the oldest logs will be replaced first).</div>
-<div class="default"><span class="label">Default</span>: <pre>5000</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">5000</pre></div>
 </div>
 </div>
 </div>
@@ -942,7 +942,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">roleDefinitions</span> (array, optional)</div>
 <div class="inner">
 <div class="description">List of defined roles to be loaded on app start</div>
-<div class="default"><span class="label">Default</span>: <pre>[
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">[
       {
         "shortName": "authuser",
         "displayName": "Authenticated user",
@@ -990,16 +990,16 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">defaultRoles</span> (array, optional)</div>
 <div class="inner">
 <div class="description">The roles which are applied by default to new users (expects role shortname)</div>
-<div class="default"><span class="label">Default</span>: <pre>[
-      "authuser"
-    ]</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">[
+  "authuser"
+]</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">defaultRolesForAuthTypes</span> (object, optional)</div>
 <div class="inner">
 <div class="description">Same as defaultRoles, but allows different roles to be specified for different auth types</div>
-<div class="default"><span class="label">Default</span>: <pre>{}</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">{}</pre></div>
 </div>
 </div>
 </div>
@@ -1029,14 +1029,14 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">trustProxy</span> (number,boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether to trust the client's x-Forwarded-For header for the request IP address. Only enable if using your own trusted reverse proxy</div>
-<div class="default"><span class="label">Default</span>: <pre>0</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">0</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">verboseErrorLogging</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Whether to log errors in their entirety</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 </div>
@@ -1048,28 +1048,28 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">collectionName</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Name of the database collection used to store user session data</div>
-<div class="default"><span class="label">Default</span>: <pre>"usersessions"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"usersessions"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">lifespan</span> (string, optional)</div>
 <div class="inner">
 <div class="description">The amount of time a session should remain valid</div>
-<div class="default"><span class="label">Default</span>: <pre>"1h"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"1h"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">rolling</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">Determines whether sessions should only expire after a period of inactivity (max age determined by the lifespan option)</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">sameSite</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Asserts that a cookie must not be sent with cross-origin requests</div>
-<div class="default"><span class="label">Default</span>: <pre>"strict"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"strict"</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -1082,7 +1082,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">secure</span> (boolean,string, optional)</div>
 <div class="inner">
 <div class="description">If true, cookie is only sent to the server when a request is made with the https scheme</div>
-<div class="default"><span class="label">Default</span>: <pre>false</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">false</pre></div>
 </div>
 </div>
 </div>
@@ -1094,14 +1094,14 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">buildDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Location of UI build files</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/ui-build"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/ui-build"</pre></div>
 </div>
 </div>
 <div class="attribute">
 <div class="title"><span class="main">srcDir</span> (string, optional)</div>
 <div class="inner">
 <div class="description">Location of UI source files</div>
-<div class="default"><span class="label">Default</span>: <pre>"$TEMP/ui-src"</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"$TEMP/ui-src"</pre></div>
 </div>
 </div>
 </div>
@@ -1113,7 +1113,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">forceLowerCaseEmail</span> (boolean, optional)</div>
 <div class="inner">
 <div class="description">If true, all user emails will be converted to lower-case</div>
-<div class="default"><span class="label">Default</span>: <pre>true</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
 </div>
 </div>
 </div>
