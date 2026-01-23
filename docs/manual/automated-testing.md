@@ -1,9 +1,27 @@
-# Writing automated tests
+# Automated testing
+
+## Running the tests
+
+> NOTE: The testing suite is currently undergoung maintenance, so cannot be run at present.
+
+Each core module in the Adapt authoring tool comes with a suite of automated tests to verify it functions as designed. We also encourage developers of third-party modules to include tests for their own code.
+
+The Adapt authoring tool comes with a CLI wrapper to make running each module's set of tests easy.
+
+To perform the included tests, simply run the following from a command-line prompt:
+
+```
+npx at-test
+```
+
+The tool will then run through the full test suite and report on any results.
+
+## Writing tests
 All 'core-supported' code is covered by a suite automated tests to ensure modules function as expected, and reduces the likelihood of 'regression' bugs.
 
 We use the [Mocha.js](https://mochajs.org) framework for  defining tests, and the [Should.js](http://shouldjs.github.io/) assertion library to make the tests more 'human-readable'.
 
-## What to cover
+### What to cover
 Generally speaking, automated tests are split into three camps:
 - **Unit tests**: cover very specific 'chunks' of code, often individual functions (or even parts of functions).
 - **Integration tests**: a level of complexity up from unit tests, they cover the _interaction_ between the individual 'chunks' of code, and test more complex behaviour than unit tests.
@@ -15,7 +33,7 @@ As a general rule, you should at least aim to cover the following:
 - Aim to cover as many edge-cases as you can foresee at the time of writing (adding more any time you see them/have time).
 - Add tests to cover any bugs you find _before_ you fix them.
 
-## Enabling tests
+### Enabling tests
 Before any tests in your module are included when the authoring tool test suite is run, you must add some extra config to your module's `package.json`:
 ```javascript
 {
@@ -28,14 +46,14 @@ Before any tests in your module are included when the authoring tool test suite 
 ```
 The above assumes that your tests are in a folder named `tests`, and named according to the pattern `*.spec.js` (e.g. `lib.spec.js`).
 
-## Defining tests
+### Defining tests
 The tests themselves are written in JavaScript, and thanks to `Should.js` are easy to read.
 
 _If you're completely new to Mocha, their [documentation](https://mochajs.org/#table-of-contents) has a bunch of quick guides on getting up-to-speed._
 
 Some general tips on writing your own tests:
 
-### Be descriptive with definition names
+#### Be descriptive with definition names
 This helps give others a good idea of what you're covering with your test without the need to read the code. also be aware that these descriptions will be shown in the test output.
 Although it's completely up to you as to how you group your tests, a good starting point is to group your tests by file, and then function:
 ```javascript
@@ -57,7 +75,7 @@ MyClass
 1 passing (1ms)
 ```
 
-### Make use of `Should.js` for readable tests
+#### Make use of `Should.js` for readable tests
 `Should.js` makes it really easy to write expressive, human-readable tests, and generally looks a lot nicer than the standard assertion library (although there's nothing to say you can't use that if you _really_ want).
 
 Here are a few examples (see the [API docs](http://shouldjs.github.io) for the full reference):
