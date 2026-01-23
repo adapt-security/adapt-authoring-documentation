@@ -20,7 +20,6 @@ See the [official npx docs](https://docs.npmjs.com/cli/v7/commands/npx) for more
 <h2 class="script" id="at-docserve">at-docserve <span class="module">from adapt-authoring-docs</span></h2><div class="details"><p class="description">Generates an HTTP server for viewing the local copy of the documentation (note these must be build first with `at-docgen`)</p>
 <h2 class="script" id="at-langcheck">at-langcheck <span class="module">from adapt-authoring-lang</span></h2><div class="details"><p class="description">Checks for unused and missing language strings</p>
 <h2 class="script" id="at-schemacheck">at-schemacheck <span class="module">from adapt-authoring-jsonschema</span></h2><div class="details"><p class="description">Checks for duplicate schema properties</p>
-<h2 class="script" id="at-test">at-test <span class="module">from adapt-authoring-testing</span></h2><div class="details"><p class="description">Runs the automated testing suite.</p><p><b>Params</b><ul><li><code>--modules=[modules...]</code> Comma separated list specifying which modules should be tested (all modules are tested by default).</li></ul></p>
 
 <style>
   h2.script {

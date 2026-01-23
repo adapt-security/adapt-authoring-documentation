@@ -4,8 +4,7 @@
 
   - [Configuring your environment](configure-environment.md)
   - [Folder structure](folder-structure.md)
-  - [Installing and updating](install.md)
-  - [Running the application](run.md)
+  - [Installing, updating, and running](install-update-run.md)
 
 
 <ul class="header"><li>Concepts</li></ul>
@@ -13,6 +12,7 @@
   - [Authentication and permissions](auth-permissions.md)
   - [Error handling](error-handling.md)
   - [Hooks](hooks.md)
+  - [Custom request and response data](request-response.md)
   - [Introduction to schemas](schemas-introduction.md)
   - [Handling server requests](server-requests.md)
 
@@ -39,11 +39,9 @@
 
 <ul class="header"><li>Contributing</li></ul>
 
+  - [Contributing code](contributing-code.md)
   - [Contributing to the project](contributing.md)
-  - [Git process](git.md)
-  - [Peer code review](peer-review.md)
   - [Releasing](releasing.md)
-  - [Writing core code](writing-core-code.md)
 
 
 <ul class="header"><li>Reference</li></ul>
@@ -60,7 +58,4 @@
 
 <ul class="header"><li>Other guides</li></ul>
 
-  - [Automated testing](automated-testing.md)
   - [cover-manual.md](cover-manual.md)
-  - [Adapt Authoring Tool Developer guides](index-manual.md)
-  - [Custom request and response data](request-response.md)

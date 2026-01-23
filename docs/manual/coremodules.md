@@ -13,7 +13,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-config](https://github.com/adapt-security/adapt-authoring-config) | 1.1.2 | A configuration module for the Adapt authoring tool. |
 | [adapt-authoring-content](https://github.com/adapt-security/adapt-authoring-content) | 1.2.2 | Module for managing Adapt content |
 | [adapt-authoring-contentplugin](https://github.com/adapt-security/adapt-authoring-contentplugin) | 1.0.4 | Module for managing framework plugins |
-| [adapt-authoring-core](https://github.com/adapt-security/adapt-authoring-core) | 1.3.4 | A bundle of reusable 'core' functionality |
+| [adapt-authoring-core](https://github.com/adapt-security/adapt-authoring-core) | 1.3.5 | A bundle of reusable 'core' functionality |
 | [adapt-authoring-courseassets](https://github.com/deltanetdan/adapt-authoring-courseassets) | 1.0.2 | Module for managing courseassets |
 | [adapt-authoring-coursetheme](https://github.com/adapt-security/adapt-authoring-coursetheme) | 1.0.1 | Module for managing course theming |
 | [adapt-authoring-defaultplugins](https://github.com/adapt-security/adapt-authoring-defaultplugins) | 1.0.1 | Allows specified content plugins to be added to every new course by default |
@@ -32,7 +32,6 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-sessions](https://github.com/adapt-security/adapt-authoring-sessions) | 1.0.1 | Module which stores users sessions in the MongoDB |
 | [adapt-authoring-spoortracking](https://github.com/adapt-security/adapt-authoring-spoortracking) | 1.0.1 | Module for making course content compatible with spoor |
 | [adapt-authoring-tags](https://github.com/adapt-security/adapt-authoring-tags) | 1.0.1 | Module for managing tags |
-| [adapt-authoring-testing](https://github.com/adapt-security/adapt-authoring-testing) | 0.0.1 | Module for running automated tests on the Adapt authoring tool |
 | [adapt-authoring-ui](https://github.com/adapt-security/adapt-authoring-ui) | 1.5.6 | Front-end application for the Adapt authoring tool |
 | [adapt-authoring-users](https://github.com/adapt-security/adapt-authoring-users) | 1.0.1 | Module for managing system users |
 | [at-utils](https://github.com/adapt-security/at-utils#readme) | 0.10.1 | A collection of CLI helper utilities for maintaining installations of the Adapt authoring tool. |
