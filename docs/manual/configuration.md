@@ -163,27 +163,14 @@ export default {
     outputDir: "$TEMP/docs-build", // string, optional
     // Sections for categorising documentation manual pages
     manualSections: {
-      "getting-started": {
-        "title": "Getting started"
-      },
-      "basics": {
-        "title": "The basics"
-      },
-      "advanced": {
-        "title": "Advanced topics"
-      },
-      "ui": {
-        "title": "Front-end app"
-      },
+      "getting-started": {},
+      "concepts": {},
+      "development": {},
+      "documentation": {},
+      "contributing": {},
+      "reference": {},
       "other-guides": {
-        "title": "Other guides",
         "default": true
-      },
-      "contributing": {
-        "title": "Contributing"
-      },
-      "reference": {
-        "title": "Reference"
       }
     }, // object, optional
   },
@@ -718,27 +705,14 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">Sections for categorising documentation manual pages</div>
 <div class="default"><span class="label">Default</span>: <pre class="no-bg">{
-      "getting-started": {
-        "title": "Getting started"
-      },
-      "basics": {
-        "title": "The basics"
-      },
-      "advanced": {
-        "title": "Advanced topics"
-      },
-      "ui": {
-        "title": "Front-end app"
-      },
+      "getting-started": {},
+      "concepts": {},
+      "development": {},
+      "documentation": {},
+      "contributing": {},
+      "reference": {},
       "other-guides": {
-        "title": "Other guides",
         "default": true
-      },
-      "contributing": {
-        "title": "Contributing"
-      },
-      "reference": {
-        "title": "Reference"
       }
     }</pre></div>
 </div>

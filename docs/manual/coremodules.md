@@ -6,18 +6,18 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-adaptframework](https://github.com/adapt-security/adapt-authoring-adaptframework) | 1.9.2 | Adapt framework integration for the Adapt authoring tool |
 | [adapt-authoring-api](https://github.com/adapt-security/adapt-authoring-api) | 1.3.2 | Abstract module for creating APIs |
 | [adapt-authoring-assets](https://github.com/adapt-security/adapt-authoring-assets) | 1.2.1 | Assets API for Adapt Authoring Tool |
-| [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 1.0.1 | Authentication + authorisation module for the Adapt authoring tool |
+| [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 1.0.3 | Authentication + authorisation module for the Adapt authoring tool |
 | [adapt-authoring-auth-local](https://github.com/adapt-security/adapt-authoring-auth-local) | 1.0.2 | Module which implements username/password (local) authentication |
 | [adapt-authoring-authored](https://github.com/adapt-security/adapt-authoring-authored) | 1.1.0 | Adds extra authoring attributes to data |
 | [adapt-authoring-browserslist](https://github.com/adapt-security/adapt-authoring-browserslist) | 1.2.0 | Handles updating of browserslist for the framework building process |
 | [adapt-authoring-config](https://github.com/adapt-security/adapt-authoring-config) | 1.1.2 | A configuration module for the Adapt authoring tool. |
 | [adapt-authoring-content](https://github.com/adapt-security/adapt-authoring-content) | 1.2.2 | Module for managing Adapt content |
 | [adapt-authoring-contentplugin](https://github.com/adapt-security/adapt-authoring-contentplugin) | 1.0.4 | Module for managing framework plugins |
-| [adapt-authoring-core](https://github.com/adapt-security/adapt-authoring-core) | 1.3.2 | A bundle of reusable 'core' functionality |
+| [adapt-authoring-core](https://github.com/adapt-security/adapt-authoring-core) | 1.3.4 | A bundle of reusable 'core' functionality |
 | [adapt-authoring-courseassets](https://github.com/deltanetdan/adapt-authoring-courseassets) | 1.0.2 | Module for managing courseassets |
 | [adapt-authoring-coursetheme](https://github.com/adapt-security/adapt-authoring-coursetheme) | 1.0.1 | Module for managing course theming |
 | [adapt-authoring-defaultplugins](https://github.com/adapt-security/adapt-authoring-defaultplugins) | 1.0.1 | Allows specified content plugins to be added to every new course by default |
-| [adapt-authoring-docs](https://github.com/adapt-security/adapt-authoring-docs) | 1.1.1 | Tools for auto-generating documentation for the Adapt authoring tool |
+| [adapt-authoring-docs](https://github.com/adapt-security/adapt-authoring-docs) | 1.2.1 | Tools for auto-generating documentation for the Adapt authoring tool |
 | [adapt-authoring-errors](https://github.com/adapt-security/adapt-authoring-errors) | 1.1.1 | Error handling for the Adapt authoring tool |
 | [adapt-authoring-jsonschema](https://github.com/adapt-security/adapt-authoring-jsonschema) | 1.1.4 | Module to add support for the JSON schema specification |
 | [adapt-authoring-lang](https://github.com/taylortom/adapt-authoring-lang) | 1.0.5 | Localisation for the Adapt authoring tool |
@@ -33,6 +33,6 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-spoortracking](https://github.com/adapt-security/adapt-authoring-spoortracking) | 1.0.1 | Module for making course content compatible with spoor |
 | [adapt-authoring-tags](https://github.com/adapt-security/adapt-authoring-tags) | 1.0.1 | Module for managing tags |
 | [adapt-authoring-testing](https://github.com/adapt-security/adapt-authoring-testing) | 0.0.1 | Module for running automated tests on the Adapt authoring tool |
-| [adapt-authoring-ui](https://github.com/adapt-security/adapt-authoring-ui) | 1.5.5 | Front-end application for the Adapt authoring tool |
+| [adapt-authoring-ui](https://github.com/adapt-security/adapt-authoring-ui) | 1.5.6 | Front-end application for the Adapt authoring tool |
 | [adapt-authoring-users](https://github.com/adapt-security/adapt-authoring-users) | 1.0.1 | Module for managing system users |
 | [at-utils](https://github.com/adapt-security/at-utils#readme) | 0.10.1 | A collection of CLI helper utilities for maintaining installations of the Adapt authoring tool. |
