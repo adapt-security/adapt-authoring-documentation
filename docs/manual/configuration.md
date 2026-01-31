@@ -221,7 +221,7 @@ export default {
   "application/json"
 ], // array, optional
     // The number of API requests allowed by a single IP within the specified time limit
-    apiRequestLimit: 50, // number, optional
+    apiRequestLimit: 250, // number, optional
     // Amount of time before the request count is reset
     apiRequestLimitDuration: "1s", // string, optional
     // Default file size limit for uploaded files. Note that other modules may specify their own limits, please check full config documentation for details.
@@ -853,7 +853,7 @@ See below for a full list of available configuration options.
 <div class="title"><span class="main">apiRequestLimit</span> (number, optional)</div>
 <div class="inner">
 <div class="description">The number of API requests allowed by a single IP within the specified time limit</div>
-<div class="default"><span class="label">Default</span>: <pre class="no-bg">50</pre></div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">250</pre></div>
 </div>
 </div>
 <div class="attribute">

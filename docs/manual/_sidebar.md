@@ -59,3 +59,4 @@
 <ul class="header"><li>Other guides</li></ul>
 
   - [cover-manual.md](cover-manual.md)
+  - [Adapt Authoring Tool Developer guides](index-manual.md)
