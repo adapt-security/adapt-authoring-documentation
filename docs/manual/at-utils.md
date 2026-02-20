@@ -5,6 +5,8 @@ The `at-utils` package is a bundle of utilities which aim to make application in
 ### Quick navigation
 
 <ul class="toc">
+<li><a href="#/at-utils?id=deps-check">deps-check</a></li>
+<li><a href="#/at-utils?id=deps-gen">deps-gen</a></li>
 <li><a href="#/at-utils?id=install">install</a></li>
 <li><a href="#/at-utils?id=mail-test">mail-test</a></li>
 <li><a href="#/at-utils?id=register-super">register-super</a></li>
@@ -31,6 +33,29 @@ npx adapt-security/utils [COMMAND] [...OPTIONS] [ARGUMENTS]
 > Looking at the above example again, `--no-ui` and `--prerelease` are both options, and `/home/user/adapt` is the only argument.
 
 Below is a full reference of the commands available as part of **at-utils**.
+
+***
+
+## `deps-check`
+
+Checks dependencies and peerDependencies against source code analysis
+
+#### Options
+
+- `--recursive`: Check all AAT modules in child directories
+
+
+***
+
+## `deps-gen`
+
+Generates correct dependencies and peerDependencies from source code analysis
+
+#### Options
+
+- `--recursive`: Process all AAT modules in child directories
+- `--write`: Write changes to package.json files
+
 
 ***
 

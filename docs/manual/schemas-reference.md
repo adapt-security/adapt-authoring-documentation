@@ -6622,6 +6622,96 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>Set the alignment of the article instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.</td>
 </tr>
 <tr class="">
+<td>_vanilla._articleHeader</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundImage</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundImage._xlarge</td>
+<td>string</td>
+<td></td>
+<td>Extra large background image, e.g. hd laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundImage._large</td>
+<td>string</td>
+<td></td>
+<td>Large background image, e.g. laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundImage._medium</td>
+<td>string</td>
+<td></td>
+<td>Medium background image, e.g. tablet devices</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundImage._small</td>
+<td>string</td>
+<td></td>
+<td>Small background image, e.g. mobile / cellphones</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundStyles</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundStyles._backgroundRepeat</td>
+<td>string</td>
+<td><pre>"no-repeat"</pre></td>
+<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundStyles._backgroundSize</td>
+<td>string</td>
+<td><pre>"cover"</pre></td>
+<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._backgroundStyles._backgroundPosition</td>
+<td>string</td>
+<td><pre>"center top"</pre></td>
+<td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._minimumHeights</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._minimumHeights._xlarge</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._minimumHeights._large</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._minimumHeights._medium</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices</td>
+</tr>
+<tr class="">
+<td>_vanilla._articleHeader._minimumHeights._small</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones</td>
+</tr>
+<tr class="">
 <td>_vanilla._backgroundImage</td>
 <td>object</td>
 <td><pre>{}</pre></td>
@@ -6792,6 +6882,96 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>"center top"</pre></td>
 <td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundImage</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundImage._xlarge</td>
+<td>string</td>
+<td></td>
+<td>Extra large background image, e.g. hd laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundImage._large</td>
+<td>string</td>
+<td></td>
+<td>Large background image, e.g. laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundImage._medium</td>
+<td>string</td>
+<td></td>
+<td>Medium background image, e.g. tablet devices</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundImage._small</td>
+<td>string</td>
+<td></td>
+<td>Small background image, e.g. mobile / cellphones</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundStyles</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundStyles._backgroundRepeat</td>
+<td>string</td>
+<td><pre>"no-repeat"</pre></td>
+<td>Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundStyles._backgroundSize</td>
+<td>string</td>
+<td><pre>"cover"</pre></td>
+<td>Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._backgroundStyles._backgroundPosition</td>
+<td>string</td>
+<td><pre>"center top"</pre></td>
+<td>The first value is the horizontal position and the second value is the vertical</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._minimumHeights</td>
+<td>object</td>
+<td><pre>{}</pre></td>
+<td> </td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._minimumHeights._xlarge</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._minimumHeights._large</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._minimumHeights._medium</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices</td>
+</tr>
+<tr class="">
+<td>_vanilla._blockHeader._minimumHeights._small</td>
+<td>number</td>
+<td><pre>0</pre></td>
+<td>Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones</td>
 </tr>
 <tr class="">
 <td>_vanilla._minimumHeights</td>
@@ -7804,6 +7984,12 @@ This page documents all schemas defined in the authoring tool core bundle. Where
 <td>string</td>
 <td><pre>""</pre></td>
 <td>Defines the notify text colour. Should be a colour that provides good contrast against the notify colour.</td>
+</tr>
+<tr class="">
+<td>_notify.notify-title-color</td>
+<td>string</td>
+<td><pre>""</pre></td>
+<td>Defines the notify title text colour. Should be a colour that provides good contrast against the notify colour.</td>
 </tr>
 <tr class="">
 <td>_notify.notify-link</td>

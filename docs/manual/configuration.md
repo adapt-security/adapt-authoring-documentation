@@ -10,6 +10,7 @@ This page lists all configuration options supported by the [core bundle](coremod
 <li><a href="#/configuration?id=adapt-authoring-auth">adapt-authoring-auth</a></li>
 <li><a href="#/configuration?id=adapt-authoring-auth-local">adapt-authoring-auth-local</a></li>
 <li><a href="#/configuration?id=adapt-authoring-browserslist">adapt-authoring-browserslist</a></li>
+<li><a href="#/configuration?id=adapt-authoring-content">adapt-authoring-content</a></li>
 <li><a href="#/configuration?id=adapt-authoring-contentplugin">adapt-authoring-contentplugin</a></li>
 <li><a href="#/configuration?id=adapt-authoring-core">adapt-authoring-core</a></li>
 <li><a href="#/configuration?id=adapt-authoring-docs">adapt-authoring-docs</a></li>
@@ -146,6 +147,12 @@ export default {
     // The amount of time to wait in between browserslist DB rebuilds. Setting to 0 will disable this feature.
     updateInterval: "0", // string, optional
   },
+  'adapt-authoring-content': {
+    // Default size of page
+    defaultPageSize: 500, // number, optional
+    // Maximum page size
+    maxPageSize: 500, // number, optional
+  },
   'adapt-authoring-contentplugin': {
     // Location of locally installed plugins
     pluginDir: "$DATA/contentplugins", // string, optional
@@ -153,6 +160,8 @@ export default {
   'adapt-authoring-core': {
     // Whether this app configuration is a production environment
     isProduction: true, // boolean, optional
+    // Amount of time to wait for a module to load before erroring
+    moduleLoadTimeout: "1m", // string, optional
     // Directory for persistant application data
     dataDir: "$ROOT/APP_DATA/data", // string, optional
     // Temporary directory for application data
@@ -259,8 +268,6 @@ export default {
         "displayName": "Content creator",
         "extends": "authuser",
         "scopes": [
-          "export:adapt",
-          "import:adapt",
           "preview:adapt",
           "publish:adapt",
           "read:assets",
@@ -652,6 +659,25 @@ See below for a full list of available configuration options.
 </div>
 </div>
 
+<h3 id="adapt-authoring-content" class="dep">adapt-authoring-content</h3>
+
+<div class="options">
+<div class="attribute">
+<div class="title"><span class="main">defaultPageSize</span> (number, optional)</div>
+<div class="inner">
+<div class="description">Default size of page</div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">500</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">maxPageSize</span> (number, optional)</div>
+<div class="inner">
+<div class="description">Maximum page size</div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">500</pre></div>
+</div>
+</div>
+</div>
+
 <h3 id="adapt-authoring-contentplugin" class="dep">adapt-authoring-contentplugin</h3>
 
 <div class="options">
@@ -672,6 +698,13 @@ See below for a full list of available configuration options.
 <div class="inner">
 <div class="description">Whether this app configuration is a production environment</div>
 <div class="default"><span class="label">Default</span>: <pre class="no-bg">true</pre></div>
+</div>
+</div>
+<div class="attribute">
+<div class="title"><span class="main">moduleLoadTimeout</span> (string, optional)</div>
+<div class="inner">
+<div class="description">Amount of time to wait for a module to load before erroring</div>
+<div class="default"><span class="label">Default</span>: <pre class="no-bg">"1m"</pre></div>
 </div>
 </div>
 <div class="attribute">
@@ -934,8 +967,6 @@ See below for a full list of available configuration options.
         "displayName": "Content creator",
         "extends": "authuser",
         "scopes": [
-          "export:adapt",
-          "import:adapt",
           "preview:adapt",
           "publish:adapt",
           "read:assets",

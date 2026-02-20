@@ -60,3 +60,4 @@
 
   - [cover-manual.md](cover-manual.md)
   - [Adapt Authoring Tool Developer guides](index-manual.md)
+  - [Writing tests](writing-tests.md)

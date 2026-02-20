@@ -61,13 +61,16 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=FW_IMPORT_INVALID">FW_IMPORT_INVALID</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_INVALID_CONTENT">FW_IMPORT_INVALID_CONTENT</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_INVALID_COURSE">FW_IMPORT_INVALID_COURSE</a></li>
+<li><a href="#/errorsref?id=FW_IMPORT_MIGRATION_FAILED">FW_IMPORT_MIGRATION_FAILED</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_MISSING_PLUGINS">FW_IMPORT_MISSING_PLUGINS</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_PLUGINS_FAILED">FW_IMPORT_PLUGINS_FAILED</a></li>
 <li><a href="#/errorsref?id=FW_IMPORT_UNEXPECTED_STRUCTURE">FW_IMPORT_UNEXPECTED_STRUCTURE</a></li>
 <li><a href="#/errorsref?id=FW_INCOMPAT_PLUGIN_DEP">FW_INCOMPAT_PLUGIN_DEP</a></li>
 <li><a href="#/errorsref?id=FW_INSTALL_FAILED">FW_INSTALL_FAILED</a></li>
 <li><a href="#/errorsref?id=FW_INVALID_VERSION">FW_INVALID_VERSION</a></li>
+<li><a href="#/errorsref?id=FW_LATEST_VERSION_FAILED">FW_LATEST_VERSION_FAILED</a></li>
 <li><a href="#/errorsref?id=FW_MISSING_PLUGIN_DEP">FW_MISSING_PLUGIN_DEP</a></li>
+<li><a href="#/errorsref?id=FW_UPDATE_FAILED">FW_UPDATE_FAILED</a></li>
 <li><a href="#/errorsref?id=GENERATE_THUMB_FAIL">GENERATE_THUMB_FAIL</a></li>
 <li><a href="#/errorsref?id=HTTP_METHOD_NOT_SUPPORTED">HTTP_METHOD_NOT_SUPPORTED</a></li>
 <li><a href="#/errorsref?id=INCORRECT_PASSWORD">INCORRECT_PASSWORD</a></li>
@@ -86,6 +89,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=LOAD_ERROR">LOAD_ERROR</a></li>
 <li><a href="#/errorsref?id=MAIL_NOT_ENABLED">MAIL_NOT_ENABLED</a></li>
 <li><a href="#/errorsref?id=MAIL_SEND_FAILED">MAIL_SEND_FAILED</a></li>
+<li><a href="#/errorsref?id=METHOD_NOT_ALLOWED">METHOD_NOT_ALLOWED</a></li>
 <li><a href="#/errorsref?id=MISSING_ASSETS">MISSING_ASSETS</a></li>
 <li><a href="#/errorsref?id=MISSING_AUTH_HEADER">MISSING_AUTH_HEADER</a></li>
 <li><a href="#/errorsref?id=MISSING_SCHEMA">MISSING_SCHEMA</a></li>
@@ -175,19 +179,22 @@ Supplemental data can be used at the point that errors are translated to provide
 | `FW_BUILD_NOT_FOUND` | Framework build could not be found in the database | 404 | <ul><li>`_id`: Database document _id value for the missing course build</li></ul> |
 | `FW_CLI_BUILD_FAILED` | Framework build using the adapt-cli failed | 500 | <ul><li>`cmd`: The command that caused the error</li><li>`raw`: The raw error output</li></ul> |
 | `FW_CLI_UNKNOWN_CMD` | Framework build using the adapt-cli failed | 500 | <ul><li>`command`: The command</li></ul> |
-| `FW_IMPORT_CONTENT_FAILED` | Import of framework content failed | 400 | <ul><li>`errors`: Accompanying errors</li></ul> |
+| `FW_IMPORT_CONTENT_FAILED` | Import of framework content failed | 400 | <ul><li>`errors`: Array of accompanying errors, each with either { schemaName, id, errors } or { message }</li></ul> |
 | `FW_IMPORT_FAILED` | Import of framework course failed | 400 | <ul><li>`error`: The error</li></ul> |
 | `FW_IMPORT_INCOMPAT` | Course for import uses a framework version incompatible with that installed | 400 | <ul><li>`import`: Framework version used in import course</li><li>`installed`: Framework version currently installed on the server</li></ul> |
-| `FW_IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul></ul> |
+| `FW_IMPORT_INVALID` | An invalid import zip has been provided | 400 | <ul><li>`reason`: The reason the import zip was considered invalid</li></ul> |
 | `FW_IMPORT_INVALID_CONTENT` | An invalid content item has been found in import data | 400 | <ul><li>`item`: The invalid content item</li></ul> |
-| `FW_IMPORT_INVALID_COURSE` | An invalid course has been provided | 400 | <ul></ul> |
+| `FW_IMPORT_INVALID_COURSE` | An invalid course has been provided | 400 | <ul><li>`reason`: The reason the course was considered invalid</li></ul> |
+| `FW_IMPORT_MIGRATION_FAILED` | Migration of course content failed | 500 | <ul><li>`reason`: The reason the migration failed</li></ul> |
 | `FW_IMPORT_MISSING_PLUGINS` | Course for import uses plugins which are missing from the server | 400 | <ul></ul> |
 | `FW_IMPORT_PLUGINS_FAILED` | Import of framework plugins failed | 500 | <ul></ul> |
 | `FW_IMPORT_UNEXPECTED_STRUCTURE` | Unable to generate valid course structure from input JSON data | 500 | <ul></ul> |
 | `FW_INCOMPAT_PLUGIN_DEP` | Plugin is incompatible | 500 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
-| `FW_INSTALL_FAILED` | Installation of the framework failed | 500 | <ul></ul> |
+| `FW_INSTALL_FAILED` | Installation of the framework failed | 500 | <ul><li>`reason`: The reason the installation failed</li></ul> |
 | `FW_INVALID_VERSION` | Invalid version specified | 400 | <ul><li>`name`: Incompatible plugin name</li><li>`version`: Incompatible plugin version</li></ul> |
+| `FW_LATEST_VERSION_FAILED` | Failed to retrieve the latest framework version | 500 | <ul><li>`reason`: The reason the version check failed</li></ul> |
 | `FW_MISSING_PLUGIN_DEP` | Plugin is missing a dependency | 500 | <ul><li>`name`: Missing plugin name</li></ul> |
+| `FW_UPDATE_FAILED` | Update of the framework failed | 500 | <ul><li>`reason`: The reason the update failed</li></ul> |
 | `GENERATE_THUMB_FAIL` | Failed to generate asset thumbnail | 500 | <ul><li>`error`: Error message</li></ul> |
 | `HTTP_METHOD_NOT_SUPPORTED` | HTTP method for a given request is not supported | 404 | <ul><li>`method`: The invalid HTTP method</li></ul> |
 | `INCORRECT_PASSWORD` | Provided password does not match that stored | 401 | <ul></ul> |
@@ -206,6 +213,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `LOAD_ERROR` | Config failed to load | 500 | <ul></ul> |
 | `MAIL_NOT_ENABLED` | Email functionality is not enabled | 500 | <ul></ul> |
 | `MAIL_SEND_FAILED` | Failed to send error email | 500 | <ul></ul> |
+| `METHOD_NOT_ALLOWED` | HTTP method not allowed for this endpoint | 405 | <ul><li>`endpoint`: The endpoint</li><li>`method`: The HTTP method</li><li>`allowedMethods`: The allowed HTTP methods</li></ul> |
 | `MISSING_ASSETS` | Assets are missing | 500 | <ul><li>`errors`: The errors</li></ul> |
 | `MISSING_AUTH_HEADER` | Authorization headers are missing from request | 401 | <ul></ul> |
 | `MISSING_SCHEMA` | Schema is not registered in the cache | 500 | <ul><li>`schemaName`: Schema name</li></ul> |
