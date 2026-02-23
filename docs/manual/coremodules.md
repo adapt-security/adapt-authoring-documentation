@@ -12,7 +12,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-browserslist](https://github.com/adapt-security/adapt-authoring-browserslist) | 1.3.5 | Handles updating of browserslist for the framework building process |
 | [adapt-authoring-config](https://github.com/adapt-security/adapt-authoring-config) | 1.4.2 | A configuration module for the Adapt authoring tool. |
 | [adapt-authoring-content](https://github.com/adapt-security/adapt-authoring-content) | 2.0.3 | Module for managing Adapt content |
-| [adapt-authoring-contentplugin](https://github.com/adapt-security/adapt-authoring-contentplugin) | 1.2.2 | Module for managing framework plugins |
+| [adapt-authoring-contentplugin](https://github.com/adapt-security/adapt-authoring-contentplugin) | 1.2.3 | Module for managing framework plugins |
 | [adapt-authoring-core](https://github.com/adapt-security/adapt-authoring-core) | 2.1.1 | A bundle of reusable 'core' functionality |
 | [adapt-authoring-courseassets](https://github.com/deltanetdan/adapt-authoring-courseassets) | 1.2.2 | Module for managing courseassets |
 | [adapt-authoring-coursetheme](https://github.com/adapt-security/adapt-authoring-coursetheme) | 1.2.1 | Module for managing course theming |
