@@ -3,10 +3,10 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 
 | Name | Version | Description |
 | - | :-: | - |
-| [adapt-authoring-adaptframework](https://github.com/adapt-security/adapt-authoring-adaptframework) | 2.0.2 | Adapt framework integration for the Adapt authoring tool |
+| [adapt-authoring-adaptframework](https://github.com/adapt-security/adapt-authoring-adaptframework) | 2.0.3 | Adapt framework integration for the Adapt authoring tool |
 | [adapt-authoring-api](https://github.com/adapt-security/adapt-authoring-api) | 2.0.3 | Abstract module for creating APIs |
 | [adapt-authoring-assets](https://github.com/adapt-security/adapt-authoring-assets) | 1.4.3 | Assets API for Adapt Authoring Tool |
-| [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 2.0.1 | Authentication + authorisation module for the Adapt authoring tool |
+| [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 2.0.2 | Authentication + authorisation module for the Adapt authoring tool |
 | [adapt-authoring-auth-local](https://github.com/adapt-security/adapt-authoring-auth-local) | 2.0.2 | Module which implements username/password (local) authentication |
 | [adapt-authoring-authored](https://github.com/adapt-security/adapt-authoring-authored) | 1.2.2 | Adds extra authoring attributes to data |
 | [adapt-authoring-browserslist](https://github.com/adapt-security/adapt-authoring-browserslist) | 1.3.5 | Handles updating of browserslist for the framework building process |
@@ -27,7 +27,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-middleware](https://github.com/adapt-security/adapt-authoring-middleware) | 1.2.2 | Express middleware to be added to the server |
 | [adapt-authoring-mongodb](https://github.com/adapt-security/adapt-authoring-mongodb) | 2.0.1 | Module for saving to a MongoDB instance |
 | [adapt-authoring-mongodblogger](https://github.com/adapt-security/adapt-authoring-mongodblogger) | 1.2.1 | Stores application log messages to the MongoDBModule instance |
-| [adapt-authoring-roles](https://github.com/adapt-security/adapt-authoring-roles) | 1.3.2 | Module for managing user roles |
+| [adapt-authoring-roles](https://github.com/adapt-security/adapt-authoring-roles) | 1.3.4 | Module for managing user roles |
 | [adapt-authoring-server](https://github.com/adapt-security/adapt-authoring-server) | 2.0.1 | Provides an Express application routing and more |
 | [adapt-authoring-sessions](https://github.com/adapt-security/adapt-authoring-sessions) | 1.1.2 | Module which stores users sessions in the MongoDB |
 | [adapt-authoring-spoortracking](https://github.com/adapt-security/adapt-authoring-spoortracking) | 1.1.3 | Module for making course content compatible with spoor |
