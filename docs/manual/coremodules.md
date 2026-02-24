@@ -3,12 +3,12 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 
 | Name | Version | Description |
 | - | :-: | - |
-| [adapt-authoring-adaptframework](https://github.com/adapt-security/adapt-authoring-adaptframework) | 2.0.7 | Adapt framework integration for the Adapt authoring tool |
-| [adapt-authoring-api](https://github.com/adapt-security/adapt-authoring-api) | 2.1.0 | Abstract module for creating APIs |
+| [adapt-authoring-adaptframework](https://github.com/adapt-security/adapt-authoring-adaptframework) | 2.0.8 | Adapt framework integration for the Adapt authoring tool |
+| [adapt-authoring-api](https://github.com/adapt-security/adapt-authoring-api) | 2.1.1 | Abstract module for creating APIs |
 | [adapt-authoring-assets](https://github.com/adapt-security/adapt-authoring-assets) | 1.4.3 | Assets API for Adapt Authoring Tool |
-| [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 2.0.3 | Authentication + authorisation module for the Adapt authoring tool |
+| [adapt-authoring-auth](https://github.com/adaptlearning/adapt-authoring-auth) | 2.0.4 | Authentication + authorisation module for the Adapt authoring tool |
 | [adapt-authoring-auth-local](https://github.com/adapt-security/adapt-authoring-auth-local) | 2.1.0 | Module which implements username/password (local) authentication |
-| [adapt-authoring-authored](https://github.com/adapt-security/adapt-authoring-authored) | 1.3.0 | Adds extra authoring attributes to data |
+| [adapt-authoring-authored](https://github.com/adapt-security/adapt-authoring-authored) | 1.3.1 | Adds extra authoring attributes to data |
 | [adapt-authoring-browserslist](https://github.com/adapt-security/adapt-authoring-browserslist) | 1.3.5 | Handles updating of browserslist for the framework building process |
 | [adapt-authoring-config](https://github.com/adapt-security/adapt-authoring-config) | 1.4.3 | A configuration module for the Adapt authoring tool. |
 | [adapt-authoring-content](https://github.com/adapt-security/adapt-authoring-content) | 2.1.0 | Module for managing Adapt content |
@@ -24,7 +24,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-langpack-en](https://github.com/adapt-security/adapt-authoring-langpack-en) | 1.1.5 | English language pack for the Adapt authoring tool |
 | [adapt-authoring-logger](https://github.com/adapt-security/adapt-authoring-logger) | 1.3.1 | Basic logger for the Adapt authoring tool |
 | [adapt-authoring-mailer](https://github.com/adapt-security/adapt-authoring-mailer) | 1.2.3 | Basic mailer for the Adapt authoring tool |
-| [adapt-authoring-middleware](https://github.com/adapt-security/adapt-authoring-middleware) | 1.3.0 | Express middleware to be added to the server |
+| [adapt-authoring-middleware](https://github.com/adapt-security/adapt-authoring-middleware) | 1.3.1 | Express middleware to be added to the server |
 | [adapt-authoring-mongodb](https://github.com/adapt-security/adapt-authoring-mongodb) | 3.0.0 | Module for saving to a MongoDB instance |
 | [adapt-authoring-mongodblogger](https://github.com/adapt-security/adapt-authoring-mongodblogger) | 1.3.0 | Stores application log messages to the MongoDBModule instance |
 | [adapt-authoring-roles](https://github.com/adapt-security/adapt-authoring-roles) | 1.4.0 | Module for managing user roles |
