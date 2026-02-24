@@ -10,7 +10,7 @@ The following modules are included in Adapt authoring v1.0.0-rc.6 core package o
 | [adapt-authoring-auth-local](https://github.com/adapt-security/adapt-authoring-auth-local) | 2.0.2 | Module which implements username/password (local) authentication |
 | [adapt-authoring-authored](https://github.com/adapt-security/adapt-authoring-authored) | 1.2.2 | Adds extra authoring attributes to data |
 | [adapt-authoring-browserslist](https://github.com/adapt-security/adapt-authoring-browserslist) | 1.3.5 | Handles updating of browserslist for the framework building process |
-| [adapt-authoring-config](https://github.com/adapt-security/adapt-authoring-config) | 1.4.2 | A configuration module for the Adapt authoring tool. |
+| [adapt-authoring-config](https://github.com/adapt-security/adapt-authoring-config) | 1.4.3 | A configuration module for the Adapt authoring tool. |
 | [adapt-authoring-content](https://github.com/adapt-security/adapt-authoring-content) | 2.0.4 | Module for managing Adapt content |
 | [adapt-authoring-contentplugin](https://github.com/adapt-security/adapt-authoring-contentplugin) | 1.3.0 | Module for managing framework plugins |
 | [adapt-authoring-core](https://github.com/adapt-security/adapt-authoring-core) | 2.1.1 | A bundle of reusable 'core' functionality |
