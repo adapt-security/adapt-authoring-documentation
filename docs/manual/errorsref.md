@@ -38,6 +38,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=DESTROY_SESSION_FAIL">DESTROY_SESSION_FAIL</a></li>
 <li><a href="#/errorsref?id=DUPL_AUTHORED_MODULE_NAME">DUPL_AUTHORED_MODULE_NAME</a></li>
 <li><a href="#/errorsref?id=DUPL_AUTH_PLUGIN_REG">DUPL_AUTH_PLUGIN_REG</a></li>
+<li><a href="#/errorsref?id=DUPL_FRIENDLY_ID">DUPL_FRIENDLY_ID</a></li>
 <li><a href="#/errorsref?id=DUPL_USER">DUPL_USER</a></li>
 <li><a href="#/errorsref?id=EACCES">EACCES</a></li>
 <li><a href="#/errorsref?id=EADDRINUSE">EADDRINUSE</a></li>
@@ -162,6 +163,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `DESTROY_SESSION_FAIL` | Failed to terminate user session | 500 | <ul><li>`error`: The error message</li></ul> |
 | `DUPL_AUTHORED_MODULE_NAME` | Function must be overridden in child class | 500 | <ul></ul> |
 | `DUPL_AUTH_PLUGIN_REG` | An auth plugin is already registered with the same name | 500 | <ul></ul> |
+| `DUPL_FRIENDLY_ID` | A content item with this _friendlyId already exists in this course | 409 | <ul><li>`_friendlyId`: The duplicate friendly ID</li><li>`_courseId`: The course ID</li></ul> |
 | `DUPL_USER` | A user already exists with the passed email address | 400 | <ul><li>`email`: Email address of the user</li></ul> |
 | `EACCES` | An attempt was made to access a file in a way forbidden by its file access permissions | 500 | <ul></ul> |
 | `EADDRINUSE` | An attempt to bind a server to a local address failed due to another server on the local system already occupying that address | 500 | <ul></ul> |
