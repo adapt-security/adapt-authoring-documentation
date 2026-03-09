@@ -76,6 +76,7 @@ Supplemental data can be used at the point that errors are translated to provide
 <li><a href="#/errorsref?id=HTTP_METHOD_NOT_SUPPORTED">HTTP_METHOD_NOT_SUPPORTED</a></li>
 <li><a href="#/errorsref?id=INCORRECT_PASSWORD">INCORRECT_PASSWORD</a></li>
 <li><a href="#/errorsref?id=INVALID_ASSET_URL">INVALID_ASSET_URL</a></li>
+<li><a href="#/errorsref?id=INVALID_CREATED_BY">INVALID_CREATED_BY</a></li>
 <li><a href="#/errorsref?id=INVALID_LOGIN_DETAILS">INVALID_LOGIN_DETAILS</a></li>
 <li><a href="#/errorsref?id=INVALID_OBJECTID">INVALID_OBJECTID</a></li>
 <li><a href="#/errorsref?id=INVALID_PARAMS">INVALID_PARAMS</a></li>
@@ -201,6 +202,7 @@ Supplemental data can be used at the point that errors are translated to provide
 | `HTTP_METHOD_NOT_SUPPORTED` | HTTP method for a given request is not supported | 404 | <ul><li>`method`: The invalid HTTP method</li></ul> |
 | `INCORRECT_PASSWORD` | Provided password does not match that stored | 401 | <ul></ul> |
 | `INVALID_ASSET_URL` | Invalid URL has been specified for external asset | 400 | <ul><li>`url`: The asset URL</li></ul> |
+| `INVALID_CREATED_BY` | The specified createdBy user does not exist | 400 | <ul></ul> |
 | `INVALID_LOGIN_DETAILS` | Invalid login details were provided | 401 | <ul></ul> |
 | `INVALID_OBJECTID` | Not a valid ObjectId | 400 | <ul><li>`value`: The value</li></ul> |
 | `INVALID_PARAMS` | Invalid parameters have been provided | 400 | <ul><li>`params`: The invalid params</li></ul> |

@@ -53,12 +53,10 @@
   - [Errors Reference](errorsref.md)
   - [Licensing](licensing.md)
   - [Schema examples](schema-examples.md)
-  - [Schemas reference](schemas-reference.md)
 
 
 <ul class="header"><li>Other guides</li></ul>
 
-  - [Adapt Authoring Tool — Architecture](architecture.md)
   - [cover-manual.md](cover-manual.md)
   - [Adapt Authoring Tool Developer guides](index-manual.md)
   - [Writing tests](writing-tests.md)

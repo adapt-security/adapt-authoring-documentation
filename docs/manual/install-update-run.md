@@ -22,7 +22,7 @@ Regardless of which installation method you choose, the Adapt authoring tool has
 
 - [git >=2](https://git-scm.com/downloads): for getting the latest code changes
 - [MongoDB 4+](https://www.mongodb.com/try/download/community): for storing all of your data
-- [Node.js 22](https://nodejs.org/en/download/): for running the code
+- [Node.js 24](https://nodejs.org/en/download/): for running the code
 - [npm 10](https://nodejs.org/en/download/): for managing dependencies
 
 > We strongly recommend using a version manager to install Node.js and npm like [nvm](https://github.com/nvm-sh/nvm) (Linux/Mac OS) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (Windows). This makes it very easy to switch versions later.
@@ -97,7 +97,7 @@ Getting the latest version of the Adapt authoring tool is as simple as running t
 npx adapt-security/at-utils update [DIRECTORY]
 ```
 
-The update utility accepts the same parameters and flags as the installer, so see the [installation instructions](http://localhost:9003/#/install?id=installer-options) for information.
+The update utility accepts the same parameters and flags as the installer, so see the [installation instructions](#install) for information.
 
 > #### Updating a dev install
 >

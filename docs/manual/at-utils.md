@@ -10,7 +10,9 @@ The `at-utils` package is a bundle of utilities which aim to make application in
 <li><a href="#/at-utils?id=install">install</a></li>
 <li><a href="#/at-utils?id=mail-test">mail-test</a></li>
 <li><a href="#/at-utils?id=register-super">register-super</a></li>
+<li><a href="#/at-utils?id=release-notes">release-notes</a></li>
 <li><a href="#/at-utils?id=update">update</a></li>
+<li><a href="#/at-utils?id=version-check">version-check</a></li>
 </ul>
 
 
@@ -19,7 +21,7 @@ The `at-utils` package is a bundle of utilities which aim to make application in
 All of the commands listed below are run using **npx**, which is a task runner utility which comes bundled with **npm**.
 
 ```bash
-npx adapt-security/utils [COMMAND] [...OPTIONS] [ARGUMENTS]
+npx adapt-security/at-utils [COMMAND] [...OPTIONS] [ARGUMENTS]
 ```
 > #### Arguments, options and flags - oh my! :astonished:
 > There's a lot of terminology here which is confusing to anyone new to running commands in a command-line interface (CLI). If we look at the following as an example:
@@ -43,6 +45,7 @@ Checks dependencies and peerDependencies against source code analysis
 #### Options
 
 - `--recursive`: Check all AAT modules in child directories
+- `--versions-only`: Only check dependency versions are up to date (skip code analysis)
 
 
 ***
@@ -55,6 +58,7 @@ Generates correct dependencies and peerDependencies from source code analysis
 
 - `--recursive`: Process all AAT modules in child directories
 - `--write`: Write changes to package.json files
+- `--versions-only`: Only update dependency versions (skip code analysis)
 
 
 ***
@@ -112,6 +116,18 @@ Registers a super user account
 
 ***
 
+## `release-notes`
+
+Fetches GitHub release notes for all changed dependencies since the last git tag
+
+#### Options
+
+- `--cwd <path>`: Path to the git repository
+- `--json`: Output results as JSON
+
+
+***
+
 ## `update`
 
 Updates the application in destination directory
@@ -127,10 +143,24 @@ Updates the application in destination directory
 - `--tag <tag>`: A specific git tag to use
 - `--v --verbose`: Include extra debug messages
 - `-d --dry-run`: Check for update without performing any update actions
+- `--patch-only`: Only show patch releases
+- `--minor-only`: Only show patch and minor releases
 
 #### Arguments
 
 - `destination`: The destination folder for the source code
+
+
+***
+
+## `version-check`
+
+Compares dependency versions between the last git tag and now, and recommends a semver bump
+
+#### Options
+
+- `--cwd <path>`: Path to the git repository
+- `--json`: Output results as JSON
 
 
 ***
