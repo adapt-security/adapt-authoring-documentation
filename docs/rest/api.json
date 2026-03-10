@@ -336,39 +336,6 @@
           "text"
         ]
       },
-      "authored": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "authored",
-        "description": "Adds properties relating to authoring",
-        "$merge": {
-          "with": {
-            "properties": {
-              "createdAt": {
-                "description": "Date that the data was created",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true
-              },
-              "createdBy": {
-                "description": "Author of the data",
-                "type": "string",
-                "isObjectId": true
-              },
-              "updatedAt": {
-                "description": "Date that the data was last modified",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true
-              }
-            },
-            "required": [
-              "createdAt",
-              "createdBy",
-              "updatedAt"
-            ]
-          }
-        }
-      },
       "asset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "asset",
@@ -397,30 +364,6 @@
         "required": [
           "title",
           "description"
-        ]
-      },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
         ]
       },
       "localpassword": {
@@ -483,6 +426,63 @@
             ]
           }
         }
+      },
+      "authored": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "authored",
+        "description": "Adds properties relating to authoring",
+        "$merge": {
+          "with": {
+            "properties": {
+              "createdAt": {
+                "description": "Date that the data was created",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true
+              },
+              "createdBy": {
+                "description": "Author of the data",
+                "type": "string",
+                "isObjectId": true
+              },
+              "updatedAt": {
+                "description": "Date that the data was last modified",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true
+              }
+            },
+            "required": [
+              "createdAt",
+              "createdBy",
+              "updatedAt"
+            ]
+          }
+        }
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
+        ]
       },
       "courseasset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -550,25 +550,6 @@
           "level"
         ]
       },
-      "defaultplugins": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "defaultplugins",
-        "description": "Defines whether plugins should be added as default",
-        "$patch": {
-          "source": {
-            "$ref": "contentplugin"
-          },
-          "with": {
-            "properties": {
-              "isAddedByDefault": {
-                "description": "Whether the plugin should be added by default for new courses",
-                "type": "boolean",
-                "default": false
-              }
-            }
-          }
-        }
-      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -627,6 +608,25 @@
           "version",
           "isLocalInstall"
         ]
+      },
+      "defaultplugins": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "defaultplugins",
+        "description": "Defines whether plugins should be added as default",
+        "$patch": {
+          "source": {
+            "$ref": "contentplugin"
+          },
+          "with": {
+            "properties": {
+              "isAddedByDefault": {
+                "description": "Whether the plugin should be added by default for new courses",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        }
       },
       "adaptbuild": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
