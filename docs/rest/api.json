@@ -399,30 +399,6 @@
           }
         }
       },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
-        ]
-      },
       "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "localpassword",
@@ -484,32 +460,28 @@
           }
         }
       },
-      "courseasset": {
+      "coursethemepreset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "courseasset",
-        "description": "Metadata related to where an asset is used in a course",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
         "type": "object",
         "properties": {
-          "courseId": {
-            "description": "Course record unique ID",
-            "type": "string",
-            "isObjectId": true
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
           },
-          "contentId": {
-            "description": "The ID for the content record that uses this asset",
-            "type": "string",
-            "isObjectId": true
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
           },
-          "assetId": {
-            "description": "Asset record unique ID",
-            "type": "string",
-            "isObjectId": true
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
           }
         },
         "required": [
-          "courseId",
-          "contentId",
-          "assetId"
+          "displayName",
+          "parentTheme"
         ]
       },
       "log": {
@@ -548,6 +520,34 @@
         },
         "required": [
           "level"
+        ]
+      },
+      "courseasset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "courseasset",
+        "description": "Metadata related to where an asset is used in a course",
+        "type": "object",
+        "properties": {
+          "courseId": {
+            "description": "Course record unique ID",
+            "type": "string",
+            "isObjectId": true
+          },
+          "contentId": {
+            "description": "The ID for the content record that uses this asset",
+            "type": "string",
+            "isObjectId": true
+          },
+          "assetId": {
+            "description": "Asset record unique ID",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "courseId",
+          "contentId",
+          "assetId"
         ]
       },
       "contentplugin": {
