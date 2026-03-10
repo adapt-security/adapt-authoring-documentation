@@ -69,34 +69,6 @@
           "title"
         ]
       },
-      "user": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "user",
-        "description": "A system user",
-        "type": "object",
-        "properties": {
-          "email": {
-            "description": "Email address for the user",
-            "type": "string",
-            "isSearchable": true
-          },
-          "firstName": {
-            "description": "First name of the user",
-            "type": "string",
-            "default": "Adapt",
-            "isSearchable": true
-          },
-          "lastName": {
-            "description": "Last name of the user",
-            "type": "string",
-            "default": "User",
-            "isSearchable": true
-          }
-        },
-        "required": [
-          "email"
-        ]
-      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -151,6 +123,34 @@
             }
           }
         }
+      },
+      "user": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "user",
+        "description": "A system user",
+        "type": "object",
+        "properties": {
+          "email": {
+            "description": "Email address for the user",
+            "type": "string",
+            "isSearchable": true
+          },
+          "firstName": {
+            "description": "First name of the user",
+            "type": "string",
+            "default": "Adapt",
+            "isSearchable": true
+          },
+          "lastName": {
+            "description": "Last name of the user",
+            "type": "string",
+            "default": "User",
+            "isSearchable": true
+          }
+        },
+        "required": [
+          "email"
+        ]
       },
       "userroles": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
