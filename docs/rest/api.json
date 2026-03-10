@@ -609,6 +609,25 @@
           "isLocalInstall"
         ]
       },
+      "defaultplugins": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "defaultplugins",
+        "description": "Defines whether plugins should be added as default",
+        "$patch": {
+          "source": {
+            "$ref": "contentplugin"
+          },
+          "with": {
+            "properties": {
+              "isAddedByDefault": {
+                "description": "Whether the plugin should be added by default for new courses",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        }
+      },
       "adaptbuild": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "adaptbuild",
@@ -650,25 +669,6 @@
           "expiresAt",
           "createdBy"
         ]
-      },
-      "defaultplugins": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "defaultplugins",
-        "description": "Defines whether plugins should be added as default",
-        "$patch": {
-          "source": {
-            "$ref": "contentplugin"
-          },
-          "with": {
-            "properties": {
-              "isAddedByDefault": {
-                "description": "Whether the plugin should be added by default for new courses",
-                "type": "boolean",
-                "default": false
-              }
-            }
-          }
-        }
       }
     }
   },
