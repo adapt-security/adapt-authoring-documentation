@@ -336,6 +336,36 @@
           "text"
         ]
       },
+      "asset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
+            "type": "string",
+            "isSearchable": true
+          },
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
+          },
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ]
+      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -369,36 +399,6 @@
           }
         }
       },
-      "asset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
-        "type": "object",
-        "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
-            "type": "string",
-            "isSearchable": true
-          },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
-          },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": [
-          "title",
-          "description"
-        ]
-      },
       "coursethemepreset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "coursethemepreset",
@@ -422,6 +422,67 @@
           "displayName",
           "parentTheme"
         ]
+      },
+      "localpassword": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localpassword",
+        "description": "Local authentication password",
+        "properties": {
+          "password": {
+            "description": "Password value",
+            "type": "string",
+            "password": "password"
+          }
+        },
+        "required": [
+          "password"
+        ]
+      },
+      "localauthuser": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localauthuser",
+        "description": "Local authentication user",
+        "$merge": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "isTempLocked": {
+                "description": "Whether the user account has been temporarily locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "isPermLocked": {
+                "description": "Whether the user account has been permanently locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "password": {
+                "description": "Password for the user",
+                "type": "string",
+                "isInternal": true
+              },
+              "failedLoginAttempts": {
+                "description": "The number of failed login attempts",
+                "type": "number",
+                "default": 0
+              },
+              "lastFailedLoginAttempt": {
+                "description": "Timestamp of the last failed login attempt",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true,
+                "isReadOnly": true
+              }
+            },
+            "required": [
+              "password"
+            ]
+          }
+        }
       },
       "courseasset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -488,67 +549,6 @@
         "required": [
           "level"
         ]
-      },
-      "localpassword": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localpassword",
-        "description": "Local authentication password",
-        "properties": {
-          "password": {
-            "description": "Password value",
-            "type": "string",
-            "password": "password"
-          }
-        },
-        "required": [
-          "password"
-        ]
-      },
-      "localauthuser": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localauthuser",
-        "description": "Local authentication user",
-        "$merge": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "isTempLocked": {
-                "description": "Whether the user account has been temporarily locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "isPermLocked": {
-                "description": "Whether the user account has been permanently locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "password": {
-                "description": "Password for the user",
-                "type": "string",
-                "isInternal": true
-              },
-              "failedLoginAttempts": {
-                "description": "The number of failed login attempts",
-                "type": "number",
-                "default": 0
-              },
-              "lastFailedLoginAttempt": {
-                "description": "Timestamp of the last failed login attempt",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true,
-                "isReadOnly": true
-              }
-            },
-            "required": [
-              "password"
-            ]
-          }
-        }
       },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
