@@ -336,6 +336,36 @@
           "text"
         ]
       },
+      "asset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
+            "type": "string",
+            "isSearchable": true
+          },
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
+          },
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ]
+      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -369,34 +399,28 @@
           }
         }
       },
-      "asset": {
+      "coursethemepreset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
         "type": "object",
         "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
-            "type": "string",
-            "isSearchable": true
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
           },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
           },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
           }
         },
         "required": [
-          "title",
-          "description"
+          "displayName",
+          "parentTheme"
         ]
       },
       "localpassword": {
@@ -459,30 +483,6 @@
             ]
           }
         }
-      },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
-        ]
       },
       "courseasset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
