@@ -336,36 +336,6 @@
           "text"
         ]
       },
-      "asset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
-        "type": "object",
-        "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
-            "type": "string",
-            "isSearchable": true
-          },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
-          },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": [
-          "title",
-          "description"
-        ]
-      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -398,6 +368,126 @@
             ]
           }
         }
+      },
+      "asset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
+            "type": "string",
+            "isSearchable": true
+          },
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
+          },
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ]
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
+        ]
+      },
+      "courseasset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "courseasset",
+        "description": "Metadata related to where an asset is used in a course",
+        "type": "object",
+        "properties": {
+          "courseId": {
+            "description": "Course record unique ID",
+            "type": "string",
+            "isObjectId": true
+          },
+          "contentId": {
+            "description": "The ID for the content record that uses this asset",
+            "type": "string",
+            "isObjectId": true
+          },
+          "assetId": {
+            "description": "Asset record unique ID",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "courseId",
+          "contentId",
+          "assetId"
+        ]
+      },
+      "log": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "log",
+        "description": "A system log message",
+        "type": "object",
+        "properties": {
+          "level": {
+            "description": "The priority level of the log message",
+            "type": "string",
+            "enum": [
+              "verbose",
+              "debug",
+              "info",
+              "success",
+              "warn",
+              "error",
+              "fatal"
+            ]
+          },
+          "module": {
+            "description": "Module responsible for creating the log",
+            "type": "string"
+          },
+          "timestamp": {
+            "description": "Time log was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "data": {
+            "description": "The data to be logged",
+            "type": "array"
+          }
+        },
+        "required": [
+          "level"
+        ]
       },
       "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -460,58 +550,6 @@
           }
         }
       },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
-        ]
-      },
-      "courseasset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "courseasset",
-        "description": "Metadata related to where an asset is used in a course",
-        "type": "object",
-        "properties": {
-          "courseId": {
-            "description": "Course record unique ID",
-            "type": "string",
-            "isObjectId": true
-          },
-          "contentId": {
-            "description": "The ID for the content record that uses this asset",
-            "type": "string",
-            "isObjectId": true
-          },
-          "assetId": {
-            "description": "Asset record unique ID",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "courseId",
-          "contentId",
-          "assetId"
-        ]
-      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -569,44 +607,6 @@
           "type",
           "version",
           "isLocalInstall"
-        ]
-      },
-      "log": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "log",
-        "description": "A system log message",
-        "type": "object",
-        "properties": {
-          "level": {
-            "description": "The priority level of the log message",
-            "type": "string",
-            "enum": [
-              "verbose",
-              "debug",
-              "info",
-              "success",
-              "warn",
-              "error",
-              "fatal"
-            ]
-          },
-          "module": {
-            "description": "Module responsible for creating the log",
-            "type": "string"
-          },
-          "timestamp": {
-            "description": "Time log was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "data": {
-            "description": "The data to be logged",
-            "type": "array"
-          }
-        },
-        "required": [
-          "level"
         ]
       },
       "defaultplugins": {
