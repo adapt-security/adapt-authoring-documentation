@@ -484,6 +484,34 @@
           "parentTheme"
         ]
       },
+      "courseasset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "courseasset",
+        "description": "Metadata related to where an asset is used in a course",
+        "type": "object",
+        "properties": {
+          "courseId": {
+            "description": "Course record unique ID",
+            "type": "string",
+            "isObjectId": true
+          },
+          "contentId": {
+            "description": "The ID for the content record that uses this asset",
+            "type": "string",
+            "isObjectId": true
+          },
+          "assetId": {
+            "description": "Asset record unique ID",
+            "type": "string",
+            "isObjectId": true
+          }
+        },
+        "required": [
+          "courseId",
+          "contentId",
+          "assetId"
+        ]
+      },
       "log": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "log",
@@ -520,34 +548,6 @@
         },
         "required": [
           "level"
-        ]
-      },
-      "courseasset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "courseasset",
-        "description": "Metadata related to where an asset is used in a course",
-        "type": "object",
-        "properties": {
-          "courseId": {
-            "description": "Course record unique ID",
-            "type": "string",
-            "isObjectId": true
-          },
-          "contentId": {
-            "description": "The ID for the content record that uses this asset",
-            "type": "string",
-            "isObjectId": true
-          },
-          "assetId": {
-            "description": "Asset record unique ID",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "courseId",
-          "contentId",
-          "assetId"
         ]
       },
       "contentplugin": {
