@@ -336,36 +336,6 @@
           "text"
         ]
       },
-      "asset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
-        "type": "object",
-        "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
-            "type": "string",
-            "isSearchable": true
-          },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
-          },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": [
-          "title",
-          "description"
-        ]
-      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -398,6 +368,36 @@
             ]
           }
         }
+      },
+      "asset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
+            "type": "string",
+            "isSearchable": true
+          },
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
+          },
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ]
       },
       "coursethemepreset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -550,6 +550,25 @@
           "level"
         ]
       },
+      "defaultplugins": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "defaultplugins",
+        "description": "Defines whether plugins should be added as default",
+        "$patch": {
+          "source": {
+            "$ref": "contentplugin"
+          },
+          "with": {
+            "properties": {
+              "isAddedByDefault": {
+                "description": "Whether the plugin should be added by default for new courses",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        }
+      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -608,25 +627,6 @@
           "version",
           "isLocalInstall"
         ]
-      },
-      "defaultplugins": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "defaultplugins",
-        "description": "Defines whether plugins should be added as default",
-        "$patch": {
-          "source": {
-            "$ref": "contentplugin"
-          },
-          "with": {
-            "properties": {
-              "isAddedByDefault": {
-                "description": "Whether the plugin should be added by default for new courses",
-                "type": "boolean",
-                "default": false
-              }
-            }
-          }
-        }
       },
       "adaptbuild": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
