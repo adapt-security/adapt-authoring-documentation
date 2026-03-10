@@ -152,6 +152,61 @@
           "email"
         ]
       },
+      "userroles": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "userroles",
+        "description": "Extra user properties for specifying roles",
+        "$patch": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "roles": {
+                "description": "Roles assigned to this user",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "isObjectId": true
+                },
+                "default": []
+              }
+            }
+          }
+        }
+      },
+      "role": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "role",
+        "description": "A user role",
+        "type": "object",
+        "properties": {
+          "shortName": {
+            "description": "Short name for the role",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "Human-readable representation of the role",
+            "type": "string"
+          },
+          "extends": {
+            "description": "The parent role that this role should inherit scopes from",
+            "type": "string"
+          },
+          "scopes": {
+            "description": "Scopes relevant to this role",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "shortName",
+          "displayName",
+          "scopes"
+        ]
+      },
       "routes": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "routes",
@@ -279,61 +334,6 @@
           "from",
           "subject",
           "text"
-        ]
-      },
-      "userroles": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "userroles",
-        "description": "Extra user properties for specifying roles",
-        "$patch": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "roles": {
-                "description": "Roles assigned to this user",
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "isObjectId": true
-                },
-                "default": []
-              }
-            }
-          }
-        }
-      },
-      "role": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "role",
-        "description": "A user role",
-        "type": "object",
-        "properties": {
-          "shortName": {
-            "description": "Short name for the role",
-            "type": "string"
-          },
-          "displayName": {
-            "description": "Human-readable representation of the role",
-            "type": "string"
-          },
-          "extends": {
-            "description": "The parent role that this role should inherit scopes from",
-            "type": "string"
-          },
-          "scopes": {
-            "description": "Scopes relevant to this role",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "shortName",
-          "displayName",
-          "scopes"
         ]
       },
       "asset": {
@@ -512,44 +512,6 @@
           "assetId"
         ]
       },
-      "log": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "log",
-        "description": "A system log message",
-        "type": "object",
-        "properties": {
-          "level": {
-            "description": "The priority level of the log message",
-            "type": "string",
-            "enum": [
-              "verbose",
-              "debug",
-              "info",
-              "success",
-              "warn",
-              "error",
-              "fatal"
-            ]
-          },
-          "module": {
-            "description": "Module responsible for creating the log",
-            "type": "string"
-          },
-          "timestamp": {
-            "description": "Time log was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "data": {
-            "description": "The data to be logged",
-            "type": "array"
-          }
-        },
-        "required": [
-          "level"
-        ]
-      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -607,6 +569,44 @@
           "type",
           "version",
           "isLocalInstall"
+        ]
+      },
+      "log": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "log",
+        "description": "A system log message",
+        "type": "object",
+        "properties": {
+          "level": {
+            "description": "The priority level of the log message",
+            "type": "string",
+            "enum": [
+              "verbose",
+              "debug",
+              "info",
+              "success",
+              "warn",
+              "error",
+              "fatal"
+            ]
+          },
+          "module": {
+            "description": "Module responsible for creating the log",
+            "type": "string"
+          },
+          "timestamp": {
+            "description": "Time log was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "data": {
+            "description": "The data to be logged",
+            "type": "array"
+          }
+        },
+        "required": [
+          "level"
         ]
       },
       "defaultplugins": {
