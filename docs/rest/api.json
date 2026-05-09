@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "version": "1.0.0-rc.6"
+    "version": "1.0.0-rc.7"
   },
   "components": {
     "schemas": {
@@ -207,39 +207,6 @@
           "scopes"
         ]
       },
-      "maildata": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "maildata",
-        "description": "Email data",
-        "properties": {
-          "to": {
-            "description": "Recipient email address",
-            "type": "string"
-          },
-          "from": {
-            "description": "Sender email address",
-            "type": "string"
-          },
-          "subject": {
-            "description": "Email subject",
-            "type": "string"
-          },
-          "text": {
-            "description": "Email text content",
-            "type": "string"
-          },
-          "html": {
-            "description": "Email HTML content",
-            "type": "string"
-          }
-        },
-        "required": [
-          "to",
-          "from",
-          "subject",
-          "text"
-        ]
-      },
       "routes": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "routes",
@@ -336,6 +303,63 @@
           "handlers"
         ]
       },
+      "maildata": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "maildata",
+        "description": "Email data",
+        "properties": {
+          "to": {
+            "description": "Recipient email address",
+            "type": "string"
+          },
+          "from": {
+            "description": "Sender email address",
+            "type": "string"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "text": {
+            "description": "Email text content",
+            "type": "string"
+          },
+          "html": {
+            "description": "Email HTML content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "from",
+          "subject",
+          "text"
+        ]
+      },
+      "contentassets": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
+          }
+        }
+      },
       "asset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "asset",
@@ -395,67 +419,6 @@
               "createdAt",
               "createdBy",
               "updatedAt"
-            ]
-          }
-        }
-      },
-      "localpassword": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localpassword",
-        "description": "Local authentication password",
-        "properties": {
-          "password": {
-            "description": "Password value",
-            "type": "string",
-            "password": "password"
-          }
-        },
-        "required": [
-          "password"
-        ]
-      },
-      "localauthuser": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localauthuser",
-        "description": "Local authentication user",
-        "$merge": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "isTempLocked": {
-                "description": "Whether the user account has been temporarily locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "isPermLocked": {
-                "description": "Whether the user account has been permanently locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "password": {
-                "description": "Password for the user",
-                "type": "string",
-                "isInternal": true
-              },
-              "failedLoginAttempts": {
-                "description": "The number of failed login attempts",
-                "type": "number",
-                "default": 0
-              },
-              "lastFailedLoginAttempt": {
-                "description": "Timestamp of the last failed login attempt",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true,
-                "isReadOnly": true
-              }
-            },
-            "required": [
-              "password"
             ]
           }
         }
@@ -522,34 +485,6 @@
           "level"
         ]
       },
-      "courseasset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "courseasset",
-        "description": "Metadata related to where an asset is used in a course",
-        "type": "object",
-        "properties": {
-          "courseId": {
-            "description": "Course record unique ID",
-            "type": "string",
-            "isObjectId": true
-          },
-          "contentId": {
-            "description": "The ID for the content record that uses this asset",
-            "type": "string",
-            "isObjectId": true
-          },
-          "assetId": {
-            "description": "Asset record unique ID",
-            "type": "string",
-            "isObjectId": true
-          }
-        },
-        "required": [
-          "courseId",
-          "contentId",
-          "assetId"
-        ]
-      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -599,6 +534,11 @@
           "pluginDependencies": {
             "description": "",
             "type": "object"
+          },
+          "isAddedByDefault": {
+            "description": "Whether the plugin should be added by default for new courses",
+            "type": "boolean",
+            "default": false
           }
         },
         "required": [
@@ -609,22 +549,64 @@
           "isLocalInstall"
         ]
       },
-      "defaultplugins": {
+      "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "defaultplugins",
-        "description": "Defines whether plugins should be added as default",
-        "$patch": {
+        "$anchor": "localpassword",
+        "description": "Local authentication password",
+        "properties": {
+          "password": {
+            "description": "Password value",
+            "type": "string",
+            "password": "password"
+          }
+        },
+        "required": [
+          "password"
+        ]
+      },
+      "localauthuser": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localauthuser",
+        "description": "Local authentication user",
+        "$merge": {
           "source": {
-            "$ref": "contentplugin"
+            "$ref": "user"
           },
           "with": {
             "properties": {
-              "isAddedByDefault": {
-                "description": "Whether the plugin should be added by default for new courses",
+              "isTempLocked": {
+                "description": "Whether the user account has been temporarily locked",
                 "type": "boolean",
-                "default": false
+                "default": false,
+                "isReadOnly": true
+              },
+              "isPermLocked": {
+                "description": "Whether the user account has been permanently locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "password": {
+                "description": "Password for the user",
+                "type": "string",
+                "isInternal": true
+              },
+              "failedLoginAttempts": {
+                "description": "The number of failed login attempts",
+                "type": "number",
+                "default": 0
+              },
+              "lastFailedLoginAttempt": {
+                "description": "Timestamp of the last failed login attempt",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true,
+                "isReadOnly": true
               }
-            }
+            },
+            "required": [
+              "password"
+            ]
           }
         }
       },
@@ -673,6 +655,218 @@
     }
   },
   "paths": {
+    "/api/adapt": {
+      "post": {
+        "summary": "Insert a new adapt document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/adapt"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created adapt document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/adapt"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>write:adapt</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:adapt"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all adapt documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of adapt documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/adapt"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>read:adapt</span>",
+        "security": {
+          "roles": [
+            "read:adapt"
+          ]
+        }
+      }
+    },
+    "/api/adapt/:_id": {
+      "put": {
+        "summary": "Replace an existing adapt document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/adapt"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated adapt document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/adapt"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>write:adapt</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:adapt"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing adapt document",
+        "responses": {
+          "200": {
+            "description": "The adapt document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/adapt"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>read:adapt</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:adapt"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing adapt document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/adapt"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated adapt document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/adapt"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>write:adapt</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:adapt"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing adapt document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>write:adapt</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:adapt"
+          ]
+        }
+      }
+    },
     "/api/adapt/export/:id": {
       "post": {
         "summary": "Create an export zip of an Adapt course",
@@ -967,6 +1161,62 @@
         }
       }
     },
+    "/api/adapt/query": {
+      "post": {
+        "summary": "Query all adapt",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of adapt documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/adapt"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>read:adapt</span>",
+        "security": {
+          "roles": [
+            "read:adapt"
+          ]
+        }
+      }
+    },
+    "/api/adapt/schema": {
+      "get": {
+        "summary": "Retrieve adapt schema",
+        "tags": [
+          "adapt"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
+          ]
+        }
+      }
+    },
     "/api/adapt/update": {
       "post": {
         "summary": "Updates the installed framework",
@@ -1026,11 +1276,279 @@
         "tags": [
           "adapt"
         ],
-        "description": "Required scopes: <span>update:adapt</span>",
+        "description": "Required scopes: <span>read:adapt</span>",
         "parameters": [],
         "security": {
           "roles": [
-            "update:adapt"
+            "read:adapt"
+          ]
+        }
+      }
+    },
+    "/api/assets": {
+      "post": {
+        "summary": "Insert a new assets document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/assets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created assets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/assets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>write:assets</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:assets"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all assets documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of assets documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/assets"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:assets</span>",
+        "security": {
+          "roles": [
+            "read:assets"
+          ]
+        }
+      }
+    },
+    "/api/assets/:_id": {
+      "put": {
+        "summary": "Replace an existing assets document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/assets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated assets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/assets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>write:assets</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:assets"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing assets document",
+        "responses": {
+          "200": {
+            "description": "The assets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/assets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:assets</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:assets"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing assets document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/assets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated assets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/assets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>write:assets</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:assets"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing assets document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>write:assets</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:assets"
+          ]
+        }
+      }
+    },
+    "/api/assets/query": {
+      "post": {
+        "summary": "Query all assets",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of assets documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/assets"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:assets</span>",
+        "security": {
+          "roles": [
+            "read:assets"
+          ]
+        }
+      }
+    },
+    "/api/assets/schema": {
+      "get": {
+        "summary": "Retrieve assets schema",
+        "tags": [
+          "assets"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
           ]
         }
       }
@@ -1070,6 +1588,755 @@
         "security": {
           "roles": [
             "read:assets"
+          ]
+        }
+      }
+    },
+    "/api/auth/check": {
+      "get": {
+        "summary": "Checks current authentication status",
+        "description": "Route requires no authentication<br/><br/>A HTTP status code of 200 will be returned if request could be authenticated successfully, otherwise an error will be returned.",
+        "responses": {
+          "200": {
+            "description": "User authentication data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "scopes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "isSuper": {
+                      "type": "boolean"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "roles": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "parameters": [],
+        "security": {
+          "roles": []
+        }
+      }
+    },
+    "/api/auth/disavow": {
+      "post": {
+        "summary": "De-authenticates the current user from the API",
+        "responses": {
+          "204": {}
+        },
+        "tags": [
+          "auth"
+        ],
+        "description": "Required scopes: <span>disavow:auth</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "disavow:auth"
+          ]
+        }
+      }
+    },
+    "/api/auth/generatetoken": {
+      "post": {
+        "summary": "Creates a new authentication token",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "lifespan": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "description": "Required scopes: <span>generatetoken:auth</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "generatetoken:auth"
+          ]
+        }
+      }
+    },
+    "/api/auth/local": {
+      "post": {
+        "summary": "Authenticate with the API",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "persistSession": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
+        "tags": [
+          "auth local"
+        ],
+        "description": "Route requires no authentication",
+        "parameters": [],
+        "security": {
+          "roles": []
+        }
+      }
+    },
+    "/api/auth/local/changepass": {
+      "post": {
+        "summary": "Change the password of a user",
+        "description": "Route requires no authentication<br/><br/>Can be used with or without authentication. If authenticated, an email/password combination will be acepted. If unauthenticated, a valid reset token and password must be specified.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "token": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
+        "tags": [
+          "auth local"
+        ],
+        "parameters": [],
+        "security": {
+          "roles": []
+        }
+      }
+    },
+    "/api/auth/local/disable": {
+      "post": {
+        "summary": "Disable user account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
+        "tags": [
+          "auth local"
+        ],
+        "description": "Required scopes: <span>write:users</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:users"
+          ]
+        }
+      }
+    },
+    "/api/auth/local/enable": {
+      "post": {
+        "summary": "Enable user account",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
+        "tags": [
+          "auth local"
+        ],
+        "description": "Required scopes: <span>write:users</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:users"
+          ]
+        }
+      }
+    },
+    "/api/auth/local/forgotpass": {
+      "post": {
+        "summary": "Trigger a password reset",
+        "description": "Route requires no authentication<br/><br/>Generates a password reset and emails this to the user with instructions on updating their password.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth local"
+        ],
+        "parameters": [],
+        "security": {
+          "roles": []
+        }
+      }
+    },
+    "/api/auth/local/invite": {
+      "post": {
+        "summary": "Invite a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {}
+        },
+        "tags": [
+          "auth local"
+        ],
+        "description": "Required scopes: <span>register:users</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "register:users"
+          ]
+        }
+      }
+    },
+    "/api/auth/local/register": {
+      "post": {
+        "summary": "Register a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "firstName": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "roles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/localauthuser"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth local"
+        ],
+        "description": "Required scopes: <span>register:users</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "register:users"
+          ]
+        }
+      }
+    },
+    "/api/auth/local/registersuper": {
+      "post": {
+        "summary": "Register a new super user",
+        "description": "ROUTE IS ONLY ACCESSIBLE FROM LOCALHOST.<br/><br/>Route requires no authentication<br/><br/>Only one user can be registered in this way, and if a super user already exists the request will fail.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#components/schemas/localauthuser"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth local"
+        ],
+        "parameters": [],
+        "security": {
+          "roles": []
+        }
+      }
+    },
+    "/api/auth/local/validatepass": {
+      "post": {
+        "summary": "Validate password",
+        "description": "Required scopes: <span>read:me</span><br/><br/>Checks that a password passes the required complexity specified in the application's configuration settings.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "type": "object",
+                "properties": {
+                  "password": {
+                    "type": "string",
+                    "required": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth local"
+        ],
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:me"
+          ]
+        }
+      }
+    },
+    "/api/auth/tokens": {
+      "get": {
+        "summary": "Retrieve all authentication tokens for current user",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "userId": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "string"
+                      },
+                      "usedAt": {
+                        "type": "string"
+                      },
+                      "authType": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "description": "Required scopes: <span>read:me</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:me"
+          ]
+        }
+      }
+    },
+    "/api/content": {
+      "post": {
+        "summary": "Insert a new content document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/content"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created content document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all content documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of content documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/content"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>read:content</span>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
+        }
+      }
+    },
+    "/api/content/:_id": {
+      "put": {
+        "summary": "Replace an existing content document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/content"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated content document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing content document",
+        "responses": {
+          "200": {
+            "description": "The content document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>read:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:content"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing content document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/content"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated content document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing content document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:content"
           ]
         }
       }
@@ -1148,6 +2415,168 @@
         "security": {
           "roles": [
             "write:content"
+          ]
+        }
+      }
+    },
+    "/api/content/query": {
+      "post": {
+        "summary": "Query all content",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of content documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/content"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>read:content</span>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
+        }
+      }
+    },
+    "/api/content/schema": {
+      "get": {
+        "summary": "Retrieve content schema",
+        "tags": [
+          "content"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
+          ]
+        }
+      }
+    },
+    "/api/content/tree/:_courseId": {
+      "get": {
+        "summary": "Get lightweight content tree for a course",
+        "description": "Required scopes: <span>read:content</span><br/><br/>Returns a projected subset of fields for all content items in a course, suitable for rendering tree views without fetching full documents. Supports If-Modified-Since for conditional requests — returns 304 if the course has not been modified since the given date.",
+        "parameters": [
+          {
+            "name": "_courseId",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "_courseId",
+            "in": "path",
+            "description": "The course _id",
+            "required": true
+          },
+          {
+            "name": "If-Modified-Since",
+            "in": "header",
+            "description": "Return 304 if the course has not been modified since this date",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of projected content items",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string"
+                      },
+                      "_parentId": {
+                        "type": "string"
+                      },
+                      "_courseId": {
+                        "type": "string"
+                      },
+                      "_type": {
+                        "type": "string"
+                      },
+                      "_sortOrder": {
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "displayTitle": {
+                        "type": "string"
+                      },
+                      "_friendlyId": {
+                        "type": "string"
+                      },
+                      "_component": {
+                        "type": "string"
+                      },
+                      "_layout": {
+                        "type": "string"
+                      },
+                      "_menu": {
+                        "type": "string"
+                      },
+                      "_theme": {
+                        "type": "string"
+                      },
+                      "_enabledPlugins": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "_children": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "Course has not been modified since the If-Modified-Since date"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "security": {
+          "roles": [
+            "read:content"
           ]
         }
       }
@@ -1341,9 +2770,43 @@
         }
       }
     },
-    "/api/courseassets/query": {
+    "/api/coursethemepresets": {
       "post": {
-        "summary": "Query all courseassets",
+        "summary": "Insert a new coursethemepresets document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/coursethemepresets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created coursethemepresets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/coursethemepresets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all coursethemepresets documents",
         "parameters": [
           {
             "name": "limit",
@@ -1358,13 +2821,13 @@
         ],
         "responses": {
           "200": {
-            "description": "List of courseasset documents",
+            "description": "List of coursethemepresets documents",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/courseasset"
+                    "$ref": "#/components/schemas/coursethemepresets"
                   }
                 }
               }
@@ -1372,12 +2835,149 @@
           }
         },
         "tags": [
-          "courseassets"
+          "coursethemepresets"
         ],
-        "description": "Required scopes: <span>read:courseassets</span>",
+        "description": "Required scopes: <span>read:content</span>",
         "security": {
           "roles": [
-            "read:courseassets"
+            "read:content"
+          ]
+        }
+      }
+    },
+    "/api/coursethemepresets/:_id": {
+      "put": {
+        "summary": "Replace an existing coursethemepresets document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/coursethemepresets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated coursethemepresets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/coursethemepresets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing coursethemepresets document",
+        "responses": {
+          "200": {
+            "description": "The coursethemepresets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/coursethemepresets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>read:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:content"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing coursethemepresets document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/coursethemepresets"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated coursethemepresets document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/coursethemepresets"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:content"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing coursethemepresets document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>write:content</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:content"
           ]
         }
       }
@@ -1440,24 +3040,59 @@
         }
       }
     },
-    "/api/lang/{:lang}": {
-      "get": {
-        "summary": "Retrieve lang strings for single locale",
+    "/api/coursethemepresets/query": {
+      "post": {
+        "summary": "Query all coursethemepresets",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Lang strings for the specified locale",
+            "description": "List of coursethemepresets documents",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/coursethemepresets"
+                  }
+                }
+              }
             }
           }
         },
         "tags": [
-          "lang"
+          "coursethemepresets"
         ],
-        "description": "Route requires no authentication",
+        "description": "Required scopes: <span>read:content</span>",
+        "security": {
+          "roles": [
+            "read:content"
+          ]
+        }
+      }
+    },
+    "/api/coursethemepresets/schema": {
+      "get": {
+        "summary": "Retrieve coursethemepresets schema",
+        "tags": [
+          "coursethemepresets"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
         "parameters": [],
         "security": {
-          "roles": []
+          "roles": [
+            "read:schema"
+          ]
         }
       }
     },
@@ -1672,6 +3307,274 @@
         }
       }
     },
+    "/api/mailer": {
+      "post": {
+        "summary": "Insert a new mailer document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/mailer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created mailer document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/mailer"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>write:mailer</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:mailer"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all mailer documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of mailer documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mailer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>read:mailer</span>",
+        "security": {
+          "roles": [
+            "read:mailer"
+          ]
+        }
+      }
+    },
+    "/api/mailer/:_id": {
+      "put": {
+        "summary": "Replace an existing mailer document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/mailer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated mailer document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/mailer"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>write:mailer</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:mailer"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing mailer document",
+        "responses": {
+          "200": {
+            "description": "The mailer document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/mailer"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>read:mailer</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:mailer"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing mailer document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/mailer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated mailer document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/mailer"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>write:mailer</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:mailer"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing mailer document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>write:mailer</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:mailer"
+          ]
+        }
+      }
+    },
+    "/api/mailer/query": {
+      "post": {
+        "summary": "Query all mailer",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of mailer documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mailer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>read:mailer</span>",
+        "security": {
+          "roles": [
+            "read:mailer"
+          ]
+        }
+      }
+    },
+    "/api/mailer/schema": {
+      "get": {
+        "summary": "Retrieve mailer schema",
+        "tags": [
+          "mailer"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
+          ]
+        }
+      }
+    },
     "/api/mailer/test": {
       "post": {
         "summary": "Send test email",
@@ -1685,6 +3588,527 @@
         "parameters": [],
         "security": {
           "roles": []
+        }
+      }
+    },
+    "/api/roles": {
+      "post": {
+        "summary": "Insert a new roles document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/roles"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created roles document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roles"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>write:roles</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:roles"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all roles documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of roles documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/roles"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>read:roles</span>",
+        "security": {
+          "roles": [
+            "read:roles"
+          ]
+        }
+      }
+    },
+    "/api/roles/:_id": {
+      "put": {
+        "summary": "Replace an existing roles document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/roles"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated roles document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roles"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>write:roles</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:roles"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing roles document",
+        "responses": {
+          "200": {
+            "description": "The roles document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roles"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>read:roles</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:roles"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing roles document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/roles"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated roles document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roles"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>write:roles</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:roles"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing roles document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>write:roles</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:roles"
+          ]
+        }
+      }
+    },
+    "/api/roles/query": {
+      "post": {
+        "summary": "Query all roles",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of roles documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/roles"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>read:roles</span>",
+        "security": {
+          "roles": [
+            "read:roles"
+          ]
+        }
+      }
+    },
+    "/api/roles/schema": {
+      "get": {
+        "summary": "Retrieve roles schema",
+        "tags": [
+          "roles"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
+          ]
+        }
+      }
+    },
+    "/api/spoortracking": {
+      "post": {
+        "summary": "Insert a new spoortracking document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/spoortracking"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created spoortracking document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/spoortracking"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>write:spoortracking</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:spoortracking"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all spoortracking documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of spoortracking documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/spoortracking"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>read:spoortracking</span>",
+        "security": {
+          "roles": [
+            "read:spoortracking"
+          ]
+        }
+      }
+    },
+    "/api/spoortracking/:_id": {
+      "put": {
+        "summary": "Replace an existing spoortracking document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/spoortracking"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated spoortracking document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/spoortracking"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>write:spoortracking</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:spoortracking"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing spoortracking document",
+        "responses": {
+          "200": {
+            "description": "The spoortracking document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/spoortracking"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>read:spoortracking</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:spoortracking"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing spoortracking document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/spoortracking"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated spoortracking document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/spoortracking"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>write:spoortracking</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:spoortracking"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing spoortracking document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>write:spoortracking</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:spoortracking"
+          ]
+        }
+      }
+    },
+    "/api/spoortracking/query": {
+      "post": {
+        "summary": "Query all spoortracking",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of spoortracking documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/spoortracking"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>read:spoortracking</span>",
+        "security": {
+          "roles": [
+            "read:spoortracking"
+          ]
         }
       }
     },
@@ -1712,10 +4136,237 @@
         }
       }
     },
+    "/api/spoortracking/schema": {
+      "get": {
+        "summary": "Retrieve spoortracking schema",
+        "tags": [
+          "spoortracking"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
+          ]
+        }
+      }
+    },
+    "/api/tags": {
+      "post": {
+        "summary": "Insert a new tags document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/tags"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created tags document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tags"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>write:tags</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "write:tags"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve all tags documents",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of tags documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/tags"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>read:tags</span>",
+        "security": {
+          "roles": [
+            "read:tags"
+          ]
+        }
+      }
+    },
+    "/api/tags/:_id": {
+      "put": {
+        "summary": "Replace an existing tags document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/tags"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated tags document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tags"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>write:tags</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:tags"
+          ]
+        }
+      },
+      "get": {
+        "summary": "Retrieve an existing tags document",
+        "responses": {
+          "200": {
+            "description": "The tags document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tags"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>read:tags</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "read:tags"
+          ]
+        }
+      },
+      "patch": {
+        "summary": "Update an existing tags document",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/tags"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated tags document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tags"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>write:tags</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:tags"
+          ]
+        }
+      },
+      "delete": {
+        "summary": "Delete an existing tags document",
+        "responses": {
+          "204": {
+            "description": "Document deleted successfully"
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>write:tags</span>",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "security": {
+          "roles": [
+            "write:tags"
+          ]
+        }
+      }
+    },
     "/api/tags/autocomplete": {
       "get": {
         "summary": "Retrieve tags for UI autocomplete",
-        "description": "Required scopes: <span>read:content</span><br/><br/>A streamlined query API to allow searching of tag data.",
+        "description": "Required scopes: <span>read:tags</span><br/><br/>A streamlined query API to allow searching of tag data.",
         "parameters": [
           {
             "name": "term",
@@ -1754,7 +4405,63 @@
         ],
         "security": {
           "roles": [
-            "read:content"
+            "read:tags"
+          ]
+        }
+      }
+    },
+    "/api/tags/query": {
+      "post": {
+        "summary": "Query all tags",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many results to return"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of tags documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/tags"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>read:tags</span>",
+        "security": {
+          "roles": [
+            "read:tags"
+          ]
+        }
+      }
+    },
+    "/api/tags/schema": {
+      "get": {
+        "summary": "Retrieve tags schema",
+        "tags": [
+          "tags"
+        ],
+        "description": "Required scopes: <span>read:schema</span>",
+        "parameters": [],
+        "security": {
+          "roles": [
+            "read:schema"
           ]
         }
       }

@@ -5,12 +5,15 @@ The `at-utils` package is a bundle of utilities which aim to make application in
 ### Quick navigation
 
 <ul class="toc">
+<li><a href="#/at-utils?id=conf-gen">conf-gen</a></li>
 <li><a href="#/at-utils?id=deps-check">deps-check</a></li>
 <li><a href="#/at-utils?id=deps-gen">deps-gen</a></li>
 <li><a href="#/at-utils?id=install">install</a></li>
+<li><a href="#/at-utils?id=lang-check">lang-check</a></li>
 <li><a href="#/at-utils?id=mail-test">mail-test</a></li>
 <li><a href="#/at-utils?id=register-super">register-super</a></li>
 <li><a href="#/at-utils?id=release-notes">release-notes</a></li>
+<li><a href="#/at-utils?id=schema-check">schema-check</a></li>
 <li><a href="#/at-utils?id=update">update</a></li>
 <li><a href="#/at-utils?id=version-check">version-check</a></li>
 </ul>
@@ -35,6 +38,20 @@ npx adapt-security/at-utils [COMMAND] [...OPTIONS] [ARGUMENTS]
 > Looking at the above example again, `--no-ui` and `--prerelease` are both options, and `/home/user/adapt` is the only argument.
 
 Below is a full reference of the commands available as part of **at-utils**.
+
+***
+
+## `conf-gen`
+
+Generates a template config file which can be populated with required values
+
+#### Options
+
+- `--env <environment>`: The environment to write the config for (defaults to NODE_ENV)
+- `--defaults`: Include default values
+- `--replace`: Override any existing values
+- `--update`: Update existing configuration with any missing values
+
 
 ***
 
@@ -69,20 +86,26 @@ Installs the application into destination directory
 
 #### Options
 
-- `--branches --include-branches`: Whether to include git branches THIS COULD BE DANGEROUS
-- `--dev --dev-mode`: Developer installation NOT FOR PRODUCTION
+- `--branches --include-branches`: Whether to include branches THIS COULD BE DANGEROUS
 - `--drafts --include-drafts`: Whether to include draft releases THIS COULD BE DANGEROUS
 - `--ignore-prereqs`: Whether to skip the prerequisites check. Warning this could result in expected errors
 - `--prerelease --include-prereleases`: Whether to include prereleases THIS COULD BE DANGEROUS
 - `--no-ui`: Run in CLI-only mode
-- `--tag <tag>`: A specific git tag to use
+- `--repo <repo>`: GitHub repository to use (owner/name format)
+- `--tag <tag>`: A specific release tag to use
 - `--v --verbose`: Include extra debug messages
 - `-e --super-email <email>`: The admin user email address
-- `-p --pipe-passwd`: Whether the admin password will be piped into the script
 
 #### Arguments
 
 - `destination`: The destination folder for the install
+
+
+***
+
+## `lang-check`
+
+Checks for unused and missing language strings
 
 
 ***
@@ -128,19 +151,26 @@ Fetches GitHub release notes for all changed dependencies since the last git tag
 
 ***
 
+## `schema-check`
+
+Checks for duplicate schema properties
+
+
+***
+
 ## `update`
 
 Updates the application in destination directory
 
 #### Options
 
-- `--branches --include-branches`: Whether to include git branches THIS COULD BE DANGEROUS
-- `--dev --dev-mode`: Developer installation NOT FOR PRODUCTION
+- `--branches --include-branches`: Whether to include branches THIS COULD BE DANGEROUS
 - `--drafts --include-drafts`: Whether to include draft releases THIS COULD BE DANGEROUS
 - `--ignore-prereqs`: Whether to skip the prerequisites check. Warning this could result in expected errors
 - `--prerelease --include-prereleases`: Whether to include prereleases THIS COULD BE DANGEROUS
 - `--no-ui`: Run in CLI-only mode
-- `--tag <tag>`: A specific git tag to use
+- `--repo <repo>`: GitHub repository to use (owner/name format)
+- `--tag <tag>`: A specific release tag to use
 - `--v --verbose`: Include extra debug messages
 - `-d --dry-run`: Check for update without performing any update actions
 - `--patch-only`: Only show patch releases
