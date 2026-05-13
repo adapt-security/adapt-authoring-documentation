@@ -207,6 +207,39 @@
           "scopes"
         ]
       },
+      "maildata": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "maildata",
+        "description": "Email data",
+        "properties": {
+          "to": {
+            "description": "Recipient email address",
+            "type": "string"
+          },
+          "from": {
+            "description": "Sender email address",
+            "type": "string"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "text": {
+            "description": "Email text content",
+            "type": "string"
+          },
+          "html": {
+            "description": "Email HTML content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "from",
+          "subject",
+          "text"
+        ]
+      },
       "routes": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "routes",
@@ -333,39 +366,6 @@
           "description"
         ]
       },
-      "maildata": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "maildata",
-        "description": "Email data",
-        "properties": {
-          "to": {
-            "description": "Recipient email address",
-            "type": "string"
-          },
-          "from": {
-            "description": "Sender email address",
-            "type": "string"
-          },
-          "subject": {
-            "description": "Email subject",
-            "type": "string"
-          },
-          "text": {
-            "description": "Email text content",
-            "type": "string"
-          },
-          "html": {
-            "description": "Email HTML content",
-            "type": "string"
-          }
-        },
-        "required": [
-          "to",
-          "from",
-          "subject",
-          "text"
-        ]
-      },
       "contentassets": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentassets",
@@ -419,67 +419,6 @@
               "createdAt",
               "createdBy",
               "updatedAt"
-            ]
-          }
-        }
-      },
-      "localpassword": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localpassword",
-        "description": "Local authentication password",
-        "properties": {
-          "password": {
-            "description": "Password value",
-            "type": "string",
-            "password": "password"
-          }
-        },
-        "required": [
-          "password"
-        ]
-      },
-      "localauthuser": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localauthuser",
-        "description": "Local authentication user",
-        "$merge": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "isTempLocked": {
-                "description": "Whether the user account has been temporarily locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "isPermLocked": {
-                "description": "Whether the user account has been permanently locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "password": {
-                "description": "Password for the user",
-                "type": "string",
-                "isInternal": true
-              },
-              "failedLoginAttempts": {
-                "description": "The number of failed login attempts",
-                "type": "number",
-                "default": 0
-              },
-              "lastFailedLoginAttempt": {
-                "description": "Timestamp of the last failed login attempt",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true,
-                "isReadOnly": true
-              }
-            },
-            "required": [
-              "password"
             ]
           }
         }
@@ -651,6 +590,67 @@
           "expiresAt",
           "createdBy"
         ]
+      },
+      "localpassword": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localpassword",
+        "description": "Local authentication password",
+        "properties": {
+          "password": {
+            "description": "Password value",
+            "type": "string",
+            "password": "password"
+          }
+        },
+        "required": [
+          "password"
+        ]
+      },
+      "localauthuser": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localauthuser",
+        "description": "Local authentication user",
+        "$merge": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "isTempLocked": {
+                "description": "Whether the user account has been temporarily locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "isPermLocked": {
+                "description": "Whether the user account has been permanently locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "password": {
+                "description": "Password for the user",
+                "type": "string",
+                "isInternal": true
+              },
+              "failedLoginAttempts": {
+                "description": "The number of failed login attempts",
+                "type": "number",
+                "default": 0
+              },
+              "lastFailedLoginAttempt": {
+                "description": "Timestamp of the last failed login attempt",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true,
+                "isReadOnly": true
+              }
+            },
+            "required": [
+              "password"
+            ]
+          }
+        }
       }
     }
   },
