@@ -207,6 +207,39 @@
           "scopes"
         ]
       },
+      "maildata": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "maildata",
+        "description": "Email data",
+        "properties": {
+          "to": {
+            "description": "Recipient email address",
+            "type": "string"
+          },
+          "from": {
+            "description": "Sender email address",
+            "type": "string"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "text": {
+            "description": "Email text content",
+            "type": "string"
+          },
+          "html": {
+            "description": "Email HTML content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "from",
+          "subject",
+          "text"
+        ]
+      },
       "routes": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "routes",
@@ -303,39 +336,6 @@
           "handlers"
         ]
       },
-      "maildata": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "maildata",
-        "description": "Email data",
-        "properties": {
-          "to": {
-            "description": "Recipient email address",
-            "type": "string"
-          },
-          "from": {
-            "description": "Sender email address",
-            "type": "string"
-          },
-          "subject": {
-            "description": "Email subject",
-            "type": "string"
-          },
-          "text": {
-            "description": "Email text content",
-            "type": "string"
-          },
-          "html": {
-            "description": "Email HTML content",
-            "type": "string"
-          }
-        },
-        "required": [
-          "to",
-          "from",
-          "subject",
-          "text"
-        ]
-      },
       "asset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "asset",
@@ -389,6 +389,63 @@
             }
           }
         }
+      },
+      "authored": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "authored",
+        "description": "Adds properties relating to authoring",
+        "$merge": {
+          "with": {
+            "properties": {
+              "createdAt": {
+                "description": "Date that the data was created",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true
+              },
+              "createdBy": {
+                "description": "Author of the data",
+                "type": "string",
+                "isObjectId": true
+              },
+              "updatedAt": {
+                "description": "Date that the data was last modified",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true
+              }
+            },
+            "required": [
+              "createdAt",
+              "createdBy",
+              "updatedAt"
+            ]
+          }
+        }
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
+        ]
       },
       "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -451,63 +508,6 @@
           }
         }
       },
-      "authored": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "authored",
-        "description": "Adds properties relating to authoring",
-        "$merge": {
-          "with": {
-            "properties": {
-              "createdAt": {
-                "description": "Date that the data was created",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true
-              },
-              "createdBy": {
-                "description": "Author of the data",
-                "type": "string",
-                "isObjectId": true
-              },
-              "updatedAt": {
-                "description": "Date that the data was last modified",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true
-              }
-            },
-            "required": [
-              "createdAt",
-              "createdBy",
-              "updatedAt"
-            ]
-          }
-        }
-      },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
-        ]
-      },
       "log": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "log",
@@ -544,6 +544,48 @@
         },
         "required": [
           "level"
+        ]
+      },
+      "adaptbuild": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "adaptbuild",
+        "description": "An Adapt course build instance",
+        "type": "object",
+        "properties": {
+          "action": {
+            "description": "The course _id",
+            "type": "string"
+          },
+          "courseId": {
+            "description": "The course _id",
+            "type": "string"
+          },
+          "location": {
+            "description": "Location of the course preview",
+            "type": "string"
+          },
+          "expiresAt": {
+            "description": "When the preview should be purged from the server",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "User which initiated the build",
+            "type": "string",
+            "isObjectId": true
+          },
+          "versions": {
+            "description": "Versions of framework and plugins used in the build",
+            "type": "object"
+          }
+        },
+        "required": [
+          "action",
+          "courseId",
+          "location",
+          "expiresAt",
+          "createdBy"
         ]
       },
       "contentplugin": {
@@ -608,48 +650,6 @@
           "type",
           "version",
           "isLocalInstall"
-        ]
-      },
-      "adaptbuild": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "adaptbuild",
-        "description": "An Adapt course build instance",
-        "type": "object",
-        "properties": {
-          "action": {
-            "description": "The course _id",
-            "type": "string"
-          },
-          "courseId": {
-            "description": "The course _id",
-            "type": "string"
-          },
-          "location": {
-            "description": "Location of the course preview",
-            "type": "string"
-          },
-          "expiresAt": {
-            "description": "When the preview should be purged from the server",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "User which initiated the build",
-            "type": "string",
-            "isObjectId": true
-          },
-          "versions": {
-            "description": "Versions of framework and plugins used in the build",
-            "type": "object"
-          }
-        },
-        "required": [
-          "action",
-          "courseId",
-          "location",
-          "expiresAt",
-          "createdBy"
         ]
       }
     }
