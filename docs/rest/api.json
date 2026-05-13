@@ -124,6 +124,34 @@
           }
         }
       },
+      "user": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "user",
+        "description": "A system user",
+        "type": "object",
+        "properties": {
+          "email": {
+            "description": "Email address for the user",
+            "type": "string",
+            "isSearchable": true
+          },
+          "firstName": {
+            "description": "First name of the user",
+            "type": "string",
+            "default": "Adapt",
+            "isSearchable": true
+          },
+          "lastName": {
+            "description": "Last name of the user",
+            "type": "string",
+            "default": "User",
+            "isSearchable": true
+          }
+        },
+        "required": [
+          "email"
+        ]
+      },
       "userroles": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "userroles",
@@ -177,34 +205,6 @@
           "shortName",
           "displayName",
           "scopes"
-        ]
-      },
-      "user": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "user",
-        "description": "A system user",
-        "type": "object",
-        "properties": {
-          "email": {
-            "description": "Email address for the user",
-            "type": "string",
-            "isSearchable": true
-          },
-          "firstName": {
-            "description": "First name of the user",
-            "type": "string",
-            "default": "Adapt",
-            "isSearchable": true
-          },
-          "lastName": {
-            "description": "Last name of the user",
-            "type": "string",
-            "default": "User",
-            "isSearchable": true
-          }
-        },
-        "required": [
-          "email"
         ]
       },
       "routes": {
@@ -390,39 +390,6 @@
           }
         }
       },
-      "authored": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "authored",
-        "description": "Adds properties relating to authoring",
-        "$merge": {
-          "with": {
-            "properties": {
-              "createdAt": {
-                "description": "Date that the data was created",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true
-              },
-              "createdBy": {
-                "description": "Author of the data",
-                "type": "string",
-                "isObjectId": true
-              },
-              "updatedAt": {
-                "description": "Date that the data was last modified",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true
-              }
-            },
-            "required": [
-              "createdAt",
-              "createdBy",
-              "updatedAt"
-            ]
-          }
-        }
-      },
       "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "localpassword",
@@ -480,6 +447,39 @@
             },
             "required": [
               "password"
+            ]
+          }
+        }
+      },
+      "authored": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "authored",
+        "description": "Adds properties relating to authoring",
+        "$merge": {
+          "with": {
+            "properties": {
+              "createdAt": {
+                "description": "Date that the data was created",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true
+              },
+              "createdBy": {
+                "description": "Author of the data",
+                "type": "string",
+                "isObjectId": true
+              },
+              "updatedAt": {
+                "description": "Date that the data was last modified",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true
+              }
+            },
+            "required": [
+              "createdAt",
+              "createdBy",
+              "updatedAt"
             ]
           }
         }
