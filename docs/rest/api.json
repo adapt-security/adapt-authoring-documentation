@@ -5,32 +5,6 @@
   },
   "components": {
     "schemas": {
-      "apiroutes": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "apiroutes",
-        "$merge": {
-          "source": {
-            "$ref": "routes"
-          },
-          "with": {
-            "properties": {
-              "schemaName": {
-                "type": "string",
-                "description": "Schema name for the module's data model"
-              },
-              "collectionName": {
-                "type": "string",
-                "description": "MongoDB collection name"
-              },
-              "useDefaultRoutes": {
-                "type": "boolean",
-                "description": "Whether to generate default CRUD routes",
-                "default": true
-              }
-            }
-          }
-        }
-      },
       "tags": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "tags",
@@ -67,6 +41,87 @@
         },
         "required": [
           "title"
+        ]
+      },
+      "apiroutes": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "apiroutes",
+        "$merge": {
+          "source": {
+            "$ref": "routes"
+          },
+          "with": {
+            "properties": {
+              "schemaName": {
+                "type": "string",
+                "description": "Schema name for the module's data model"
+              },
+              "collectionName": {
+                "type": "string",
+                "description": "MongoDB collection name"
+              },
+              "useDefaultRoutes": {
+                "type": "boolean",
+                "description": "Whether to generate default CRUD routes",
+                "default": true
+              }
+            }
+          }
+        }
+      },
+      "userroles": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "userroles",
+        "description": "Extra user properties for specifying roles",
+        "$patch": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "roles": {
+                "description": "Roles assigned to this user",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "isObjectId": true
+                },
+                "default": []
+              }
+            }
+          }
+        }
+      },
+      "role": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "role",
+        "description": "A user role",
+        "type": "object",
+        "properties": {
+          "shortName": {
+            "description": "Short name for the role",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "Human-readable representation of the role",
+            "type": "string"
+          },
+          "extends": {
+            "description": "The parent role that this role should inherit scopes from",
+            "type": "string"
+          },
+          "scopes": {
+            "description": "Scopes relevant to this role",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "shortName",
+          "displayName",
+          "scopes"
         ]
       },
       "authuser": {
@@ -150,61 +205,6 @@
         },
         "required": [
           "email"
-        ]
-      },
-      "userroles": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "userroles",
-        "description": "Extra user properties for specifying roles",
-        "$patch": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "roles": {
-                "description": "Roles assigned to this user",
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "isObjectId": true
-                },
-                "default": []
-              }
-            }
-          }
-        }
-      },
-      "role": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "role",
-        "description": "A user role",
-        "type": "object",
-        "properties": {
-          "shortName": {
-            "description": "Short name for the role",
-            "type": "string"
-          },
-          "displayName": {
-            "description": "Human-readable representation of the role",
-            "type": "string"
-          },
-          "extends": {
-            "description": "The parent role that this role should inherit scopes from",
-            "type": "string"
-          },
-          "scopes": {
-            "description": "Scopes relevant to this role",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "shortName",
-          "displayName",
-          "scopes"
         ]
       },
       "maildata": {
@@ -423,30 +423,6 @@
           }
         }
       },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
-        ]
-      },
       "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "localpassword",
@@ -507,6 +483,30 @@
             ]
           }
         }
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
+        ]
       },
       "log": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
