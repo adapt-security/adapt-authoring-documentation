@@ -5,6 +5,32 @@
   },
   "components": {
     "schemas": {
+      "apiroutes": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "apiroutes",
+        "$merge": {
+          "source": {
+            "$ref": "routes"
+          },
+          "with": {
+            "properties": {
+              "schemaName": {
+                "type": "string",
+                "description": "Schema name for the module's data model"
+              },
+              "collectionName": {
+                "type": "string",
+                "description": "MongoDB collection name"
+              },
+              "useDefaultRoutes": {
+                "type": "boolean",
+                "description": "Whether to generate default CRUD routes",
+                "default": true
+              }
+            }
+          }
+        }
+      },
       "tags": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "tags",
@@ -41,87 +67,6 @@
         },
         "required": [
           "title"
-        ]
-      },
-      "apiroutes": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "apiroutes",
-        "$merge": {
-          "source": {
-            "$ref": "routes"
-          },
-          "with": {
-            "properties": {
-              "schemaName": {
-                "type": "string",
-                "description": "Schema name for the module's data model"
-              },
-              "collectionName": {
-                "type": "string",
-                "description": "MongoDB collection name"
-              },
-              "useDefaultRoutes": {
-                "type": "boolean",
-                "description": "Whether to generate default CRUD routes",
-                "default": true
-              }
-            }
-          }
-        }
-      },
-      "userroles": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "userroles",
-        "description": "Extra user properties for specifying roles",
-        "$patch": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "roles": {
-                "description": "Roles assigned to this user",
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "isObjectId": true
-                },
-                "default": []
-              }
-            }
-          }
-        }
-      },
-      "role": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "role",
-        "description": "A user role",
-        "type": "object",
-        "properties": {
-          "shortName": {
-            "description": "Short name for the role",
-            "type": "string"
-          },
-          "displayName": {
-            "description": "Human-readable representation of the role",
-            "type": "string"
-          },
-          "extends": {
-            "description": "The parent role that this role should inherit scopes from",
-            "type": "string"
-          },
-          "scopes": {
-            "description": "Scopes relevant to this role",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "shortName",
-          "displayName",
-          "scopes"
         ]
       },
       "authuser": {
@@ -207,37 +152,59 @@
           "email"
         ]
       },
-      "maildata": {
+      "userroles": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "maildata",
-        "description": "Email data",
+        "$anchor": "userroles",
+        "description": "Extra user properties for specifying roles",
+        "$patch": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "roles": {
+                "description": "Roles assigned to this user",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "isObjectId": true
+                },
+                "default": []
+              }
+            }
+          }
+        }
+      },
+      "role": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "role",
+        "description": "A user role",
+        "type": "object",
         "properties": {
-          "to": {
-            "description": "Recipient email address",
+          "shortName": {
+            "description": "Short name for the role",
             "type": "string"
           },
-          "from": {
-            "description": "Sender email address",
+          "displayName": {
+            "description": "Human-readable representation of the role",
             "type": "string"
           },
-          "subject": {
-            "description": "Email subject",
+          "extends": {
+            "description": "The parent role that this role should inherit scopes from",
             "type": "string"
           },
-          "text": {
-            "description": "Email text content",
-            "type": "string"
-          },
-          "html": {
-            "description": "Email HTML content",
-            "type": "string"
+          "scopes": {
+            "description": "Scopes relevant to this role",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": [
-          "to",
-          "from",
-          "subject",
-          "text"
+          "shortName",
+          "displayName",
+          "scopes"
         ]
       },
       "routes": {
@@ -334,6 +301,39 @@
         "required": [
           "route",
           "handlers"
+        ]
+      },
+      "maildata": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "maildata",
+        "description": "Email data",
+        "properties": {
+          "to": {
+            "description": "Recipient email address",
+            "type": "string"
+          },
+          "from": {
+            "description": "Sender email address",
+            "type": "string"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "text": {
+            "description": "Email text content",
+            "type": "string"
+          },
+          "html": {
+            "description": "Email HTML content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "from",
+          "subject",
+          "text"
         ]
       },
       "asset": {
@@ -546,48 +546,6 @@
           "level"
         ]
       },
-      "adaptbuild": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "adaptbuild",
-        "description": "An Adapt course build instance",
-        "type": "object",
-        "properties": {
-          "action": {
-            "description": "The course _id",
-            "type": "string"
-          },
-          "courseId": {
-            "description": "The course _id",
-            "type": "string"
-          },
-          "location": {
-            "description": "Location of the course preview",
-            "type": "string"
-          },
-          "expiresAt": {
-            "description": "When the preview should be purged from the server",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "User which initiated the build",
-            "type": "string",
-            "isObjectId": true
-          },
-          "versions": {
-            "description": "Versions of framework and plugins used in the build",
-            "type": "object"
-          }
-        },
-        "required": [
-          "action",
-          "courseId",
-          "location",
-          "expiresAt",
-          "createdBy"
-        ]
-      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -650,6 +608,48 @@
           "type",
           "version",
           "isLocalInstall"
+        ]
+      },
+      "adaptbuild": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "adaptbuild",
+        "description": "An Adapt course build instance",
+        "type": "object",
+        "properties": {
+          "action": {
+            "description": "The course _id",
+            "type": "string"
+          },
+          "courseId": {
+            "description": "The course _id",
+            "type": "string"
+          },
+          "location": {
+            "description": "Location of the course preview",
+            "type": "string"
+          },
+          "expiresAt": {
+            "description": "When the preview should be purged from the server",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "User which initiated the build",
+            "type": "string",
+            "isObjectId": true
+          },
+          "versions": {
+            "description": "Versions of framework and plugins used in the build",
+            "type": "object"
+          }
+        },
+        "required": [
+          "action",
+          "courseId",
+          "location",
+          "expiresAt",
+          "createdBy"
         ]
       }
     }
