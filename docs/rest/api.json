@@ -31,44 +31,6 @@
           }
         }
       },
-      "tags": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tags",
-        "description": "Extra properties to define tags",
-        "$merge": {
-          "with": {
-            "properties": {
-              "tags": {
-                "title": "Tags",
-                "description": "Add tags by entering one or more words, separated with a comma (,)",
-                "type": "array",
-                "default": [],
-                "uniqueItems": true,
-                "items": {
-                  "type": "string",
-                  "isObjectId": true
-                },
-                "_backboneForms": "Tags"
-              }
-            }
-          }
-        }
-      },
-      "tag": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "tag",
-        "description": "Tag metadata applied to other objects",
-        "type": "object",
-        "properties": {
-          "title": {
-            "description": "The tag title",
-            "type": "string"
-          }
-        },
-        "required": [
-          "title"
-        ]
-      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -124,32 +86,42 @@
           }
         }
       },
-      "user": {
+      "tags": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "user",
-        "description": "A system user",
+        "$anchor": "tags",
+        "description": "Extra properties to define tags",
+        "$merge": {
+          "with": {
+            "properties": {
+              "tags": {
+                "title": "Tags",
+                "description": "Add tags by entering one or more words, separated with a comma (,)",
+                "type": "array",
+                "default": [],
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "isObjectId": true
+                },
+                "_backboneForms": "Tags"
+              }
+            }
+          }
+        }
+      },
+      "tag": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "tag",
+        "description": "Tag metadata applied to other objects",
         "type": "object",
         "properties": {
-          "email": {
-            "description": "Email address for the user",
-            "type": "string",
-            "isSearchable": true
-          },
-          "firstName": {
-            "description": "First name of the user",
-            "type": "string",
-            "default": "Adapt",
-            "isSearchable": true
-          },
-          "lastName": {
-            "description": "Last name of the user",
-            "type": "string",
-            "default": "User",
-            "isSearchable": true
+          "title": {
+            "description": "The tag title",
+            "type": "string"
           }
         },
         "required": [
-          "email"
+          "title"
         ]
       },
       "userroles": {
@@ -205,6 +177,34 @@
           "shortName",
           "displayName",
           "scopes"
+        ]
+      },
+      "user": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "user",
+        "description": "A system user",
+        "type": "object",
+        "properties": {
+          "email": {
+            "description": "Email address for the user",
+            "type": "string",
+            "isSearchable": true
+          },
+          "firstName": {
+            "description": "First name of the user",
+            "type": "string",
+            "default": "Adapt",
+            "isSearchable": true
+          },
+          "lastName": {
+            "description": "Last name of the user",
+            "type": "string",
+            "default": "User",
+            "isSearchable": true
+          }
+        },
+        "required": [
+          "email"
         ]
       },
       "routes": {
@@ -366,30 +366,6 @@
           "description"
         ]
       },
-      "contentassets": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentassets",
-        "description": "Tracks asset IDs referenced by content items",
-        "$merge": {
-          "with": {
-            "properties": {
-              "_assetIds": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "default": [],
-                "_adapt": {
-                  "editorOnly": true
-                },
-                "_backboneForms": {
-                  "showInUi": false
-                }
-              }
-            }
-          }
-        }
-      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -420,6 +396,30 @@
               "createdBy",
               "updatedAt"
             ]
+          }
+        }
+      },
+      "contentassets": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
           }
         }
       },
@@ -506,6 +506,48 @@
         "required": [
           "displayName",
           "parentTheme"
+        ]
+      },
+      "adaptbuild": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "adaptbuild",
+        "description": "An Adapt course build instance",
+        "type": "object",
+        "properties": {
+          "action": {
+            "description": "The course _id",
+            "type": "string"
+          },
+          "courseId": {
+            "description": "The course _id",
+            "type": "string"
+          },
+          "location": {
+            "description": "Location of the course preview",
+            "type": "string"
+          },
+          "expiresAt": {
+            "description": "When the preview should be purged from the server",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "createdBy": {
+            "description": "User which initiated the build",
+            "type": "string",
+            "isObjectId": true
+          },
+          "versions": {
+            "description": "Versions of framework and plugins used in the build",
+            "type": "object"
+          }
+        },
+        "required": [
+          "action",
+          "courseId",
+          "location",
+          "expiresAt",
+          "createdBy"
         ]
       },
       "log": {
@@ -608,48 +650,6 @@
           "type",
           "version",
           "isLocalInstall"
-        ]
-      },
-      "adaptbuild": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "adaptbuild",
-        "description": "An Adapt course build instance",
-        "type": "object",
-        "properties": {
-          "action": {
-            "description": "The course _id",
-            "type": "string"
-          },
-          "courseId": {
-            "description": "The course _id",
-            "type": "string"
-          },
-          "location": {
-            "description": "Location of the course preview",
-            "type": "string"
-          },
-          "expiresAt": {
-            "description": "When the preview should be purged from the server",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "createdBy": {
-            "description": "User which initiated the build",
-            "type": "string",
-            "isObjectId": true
-          },
-          "versions": {
-            "description": "Versions of framework and plugins used in the build",
-            "type": "object"
-          }
-        },
-        "required": [
-          "action",
-          "courseId",
-          "location",
-          "expiresAt",
-          "createdBy"
         ]
       }
     }
