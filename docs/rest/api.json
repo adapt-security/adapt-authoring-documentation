@@ -303,6 +303,36 @@
           "handlers"
         ]
       },
+      "asset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
+            "type": "string",
+            "isSearchable": true
+          },
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
+          },
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ]
+      },
       "maildata": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "maildata",
@@ -336,35 +366,29 @@
           "text"
         ]
       },
-      "asset": {
+      "contentassets": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
-        "type": "object",
-        "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
-            "type": "string",
-            "isSearchable": true
-          },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
-          },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
           }
-        },
-        "required": [
-          "title",
-          "description"
-        ]
+        }
       },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -396,30 +420,6 @@
               "createdBy",
               "updatedAt"
             ]
-          }
-        }
-      },
-      "contentassets": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentassets",
-        "description": "Tracks asset IDs referenced by content items",
-        "$merge": {
-          "with": {
-            "properties": {
-              "_assetIds": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "default": [],
-                "_adapt": {
-                  "editorOnly": true
-                },
-                "_backboneForms": {
-                  "showInUi": false
-                }
-              }
-            }
           }
         }
       },

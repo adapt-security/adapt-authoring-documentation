@@ -17,14 +17,14 @@ You can view more information on the GNU General Public License v3.0 license in 
 
 ## Third-party dependencies
 
-The Adapt authoring tool makes use of 751 third-party Node.js modules. These include transient dependencies (i.e. dependencies not directly imported by the authoring tool code, but used by its dependencies). Each module has its own license which must be taken into consideration when building a business around Adapt products. 
+The Adapt authoring tool makes use of 752 third-party Node.js modules. These include transient dependencies (i.e. dependencies not directly imported by the authoring tool code, but used by its dependencies). Each module has its own license which must be taken into consideration when building a business around Adapt products. 
 
 The below table lists all licenses used, as well as the number of dependencies which use each license.
 
 | License | Modules using license |
 | - | :-: |
 | 0BSD | 2 |
-| Apache-2.0 | 22 |
+| Apache-2.0 | 23 |
 | BSD-2-Clause | 17 |
 | BSD-3-Clause | 14 |
 | BlueOak-1.0.0 | 8 |
@@ -46,38 +46,29 @@ The below table lists all licenses used, as well as the number of dependencies w
 Listed below are all licenses used by the Adapt authoring tool and its dependencies. Click each heading to view detailed information, including the full licenses themselves.
 
 <details>
-<summary>The Unlicense (Unlicense)</summary>
-<p>A license with no conditions whatsoever which dedicates works to the public domain. Unlicensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
+<summary>ISC License (ISC)</summary>
+<p>A permissive license lets people do anything with your code with proper attribution and without warranty. The ISC license is functionally equivalent to the <a href="/licenses/bsd-2-clause/">BSD 2-Clause</a> and <a href="/licenses/mit/">MIT</a> licenses, removing some language that is no longer necessary.</p>
 <p>This license allows the following:
-<ul><li>Private use</li>
-<li>Commercial use</li>
+<ul><li>Commercial use</li>
+<li>Distribution</li>
 <li>Modifications</li>
-<li>Distribution</li></ul></p>
+<li>Private use</li></ul></p>
 <p>The original license text is as follows:</p>
-<pre>This is free and unencumbered software released into the public domain.
+<pre>ISC License
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+Copyright (c) [year] [fullname]
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-
-For more information, please refer to <https://unlicense.org>
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 </pre>
 </details>
 
@@ -115,29 +106,38 @@ SOFTWARE.
 </details>
 
 <details>
-<summary>ISC License (ISC)</summary>
-<p>A permissive license lets people do anything with your code with proper attribution and without warranty. The ISC license is functionally equivalent to the <a href="/licenses/bsd-2-clause/">BSD 2-Clause</a> and <a href="/licenses/mit/">MIT</a> licenses, removing some language that is no longer necessary.</p>
+<summary>The Unlicense (Unlicense)</summary>
+<p>A license with no conditions whatsoever which dedicates works to the public domain. Unlicensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
 <p>This license allows the following:
-<ul><li>Commercial use</li>
-<li>Distribution</li>
+<ul><li>Private use</li>
+<li>Commercial use</li>
 <li>Modifications</li>
-<li>Private use</li></ul></p>
+<li>Distribution</li></ul></p>
 <p>The original license text is as follows:</p>
-<pre>ISC License
+<pre>This is free and unencumbered software released into the public domain.
 
-Copyright (c) [year] [fullname]
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
 
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://unlicense.org>
 </pre>
 </details>
 
@@ -2786,7 +2786,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>ret</td><td>0.2.2</td><td>MIT</td><td>Tokenizes a string that represents a regular expression.</tr>
 <tr><td><a href="https://github.com/mcollina/reusify#readme" target="_blank">reusify</a></td><td>1.1.0</td><td>MIT</td><td>Reuse objects and functions with style</tr>
 <tr><td>rimraf</td><td>3.0.2</td><td>ISC</td><td>A deep deletion module for node (like `rm -rf`)</tr>
-<tr><td><a href="https://rollupjs.org/" target="_blank">rollup</a></td><td>2.80.0</td><td>MIT</td><td>Next-generation ES module bundler</tr>
+<tr><td><a href="https://rollupjs.org/" target="_blank">rollup</a></td><td>4.61.1</td><td>MIT</td><td>Next-generation ES module bundler</tr>
 <tr><td><a href="https://github.com/badcafe/rollup-plugin-inject-process-env#readme" target="_blank">rollup-plugin-inject-process-env</a></td><td>1.3.1</td><td>MIT</td><td>Inject environment variables in process.env with Rollup</tr>
 <tr><td>router</td><td>2.2.0</td><td>MIT</td><td>Simple middleware-style router</tr>
 <tr><td>run-async</td><td>2.4.1</td><td>MIT</td><td>Utility method to run function either synchronously or asynchronously using the common `this.async()` style.</tr>
@@ -2939,6 +2939,7 @@ Click the heading below to view a complete list of all third-party dependencies.
 <tr><td>widest-line</td><td>3.1.0</td><td>MIT</td><td>Get the visual width of the widest line in a string - the number of columns required to display it</tr>
 <tr><td><a href="https://github.com/jonschlinkert/word-wrap" target="_blank">word-wrap</a></td><td>1.2.5</td><td>MIT</td><td>Wrap words to a specified length.</tr>
 <tr><td>wordwrap</td><td>1.0.0</td><td>MIT</td><td>Wrap those words. Show them at what columns to start and stop.</tr>
+<tr><td><a href="https://github.com/josdejong/workerpool" target="_blank">workerpool</a></td><td>9.3.4</td><td>Apache-2.0</td><td>Offload tasks to a pool of workers on node.js and in the browser</tr>
 <tr><td>wrap-ansi</td><td>7.0.0</td><td>MIT</td><td>Wordwrap a string with ANSI escape codes</tr>
 <tr><td>wrap-ansi</td><td>6.2.0</td><td>MIT</td><td>Wordwrap a string with ANSI escape codes</tr>
 <tr><td><a href="https://github.com/npm/wrappy" target="_blank">wrappy</a></td><td>1.0.2</td><td>ISC</td><td>Callback wrapping utility</tr>
