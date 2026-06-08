@@ -336,60 +336,6 @@
           "text"
         ]
       },
-      "asset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
-        "type": "object",
-        "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
-            "type": "string",
-            "isSearchable": true
-          },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
-          },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": [
-          "title",
-          "description"
-        ]
-      },
-      "contentassets": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentassets",
-        "description": "Tracks asset IDs referenced by content items",
-        "$merge": {
-          "with": {
-            "properties": {
-              "_assetIds": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "default": [],
-                "_adapt": {
-                  "editorOnly": true
-                },
-                "_backboneForms": {
-                  "showInUi": false
-                }
-              }
-            }
-          }
-        }
-      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -423,66 +369,97 @@
           }
         }
       },
-      "localpassword": {
+      "contentassets": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localpassword",
-        "description": "Local authentication password",
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "asset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
         "properties": {
-          "password": {
-            "description": "Password value",
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
             "type": "string",
-            "password": "password"
+            "isSearchable": true
+          },
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
+          },
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
           }
         },
         "required": [
-          "password"
+          "title",
+          "description"
         ]
       },
-      "localauthuser": {
+      "log": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localauthuser",
-        "description": "Local authentication user",
-        "$merge": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "isTempLocked": {
-                "description": "Whether the user account has been temporarily locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "isPermLocked": {
-                "description": "Whether the user account has been permanently locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "password": {
-                "description": "Password for the user",
-                "type": "string",
-                "isInternal": true
-              },
-              "failedLoginAttempts": {
-                "description": "The number of failed login attempts",
-                "type": "number",
-                "default": 0
-              },
-              "lastFailedLoginAttempt": {
-                "description": "Timestamp of the last failed login attempt",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true,
-                "isReadOnly": true
-              }
-            },
-            "required": [
-              "password"
+        "$anchor": "log",
+        "description": "A system log message",
+        "type": "object",
+        "properties": {
+          "level": {
+            "description": "The priority level of the log message",
+            "type": "string",
+            "enum": [
+              "verbose",
+              "debug",
+              "info",
+              "success",
+              "warn",
+              "error",
+              "fatal"
             ]
+          },
+          "module": {
+            "description": "Module responsible for creating the log",
+            "type": "string"
+          },
+          "timestamp": {
+            "description": "Time log was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "data": {
+            "description": "The data to be logged",
+            "type": "array"
           }
-        }
+        },
+        "required": [
+          "level"
+        ]
       },
       "coursethemepreset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -572,43 +549,66 @@
           "isLocalInstall"
         ]
       },
-      "log": {
+      "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "log",
-        "description": "A system log message",
-        "type": "object",
+        "$anchor": "localpassword",
+        "description": "Local authentication password",
         "properties": {
-          "level": {
-            "description": "The priority level of the log message",
+          "password": {
+            "description": "Password value",
             "type": "string",
-            "enum": [
-              "verbose",
-              "debug",
-              "info",
-              "success",
-              "warn",
-              "error",
-              "fatal"
-            ]
-          },
-          "module": {
-            "description": "Module responsible for creating the log",
-            "type": "string"
-          },
-          "timestamp": {
-            "description": "Time log was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "data": {
-            "description": "The data to be logged",
-            "type": "array"
+            "password": "password"
           }
         },
         "required": [
-          "level"
+          "password"
         ]
+      },
+      "localauthuser": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localauthuser",
+        "description": "Local authentication user",
+        "$merge": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "isTempLocked": {
+                "description": "Whether the user account has been temporarily locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "isPermLocked": {
+                "description": "Whether the user account has been permanently locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "password": {
+                "description": "Password for the user",
+                "type": "string",
+                "isInternal": true
+              },
+              "failedLoginAttempts": {
+                "description": "The number of failed login attempts",
+                "type": "number",
+                "default": 0
+              },
+              "lastFailedLoginAttempt": {
+                "description": "Timestamp of the last failed login attempt",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true,
+                "isReadOnly": true
+              }
+            },
+            "required": [
+              "password"
+            ]
+          }
+        }
       },
       "adaptbuild": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
