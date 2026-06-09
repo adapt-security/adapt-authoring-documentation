@@ -69,6 +69,34 @@
           "title"
         ]
       },
+      "user": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "user",
+        "description": "A system user",
+        "type": "object",
+        "properties": {
+          "email": {
+            "description": "Email address for the user",
+            "type": "string",
+            "isSearchable": true
+          },
+          "firstName": {
+            "description": "First name of the user",
+            "type": "string",
+            "default": "Adapt",
+            "isSearchable": true
+          },
+          "lastName": {
+            "description": "Last name of the user",
+            "type": "string",
+            "default": "User",
+            "isSearchable": true
+          }
+        },
+        "required": [
+          "email"
+        ]
+      },
       "authuser": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authuser",
@@ -124,34 +152,6 @@
           }
         }
       },
-      "user": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "user",
-        "description": "A system user",
-        "type": "object",
-        "properties": {
-          "email": {
-            "description": "Email address for the user",
-            "type": "string",
-            "isSearchable": true
-          },
-          "firstName": {
-            "description": "First name of the user",
-            "type": "string",
-            "default": "Adapt",
-            "isSearchable": true
-          },
-          "lastName": {
-            "description": "Last name of the user",
-            "type": "string",
-            "default": "User",
-            "isSearchable": true
-          }
-        },
-        "required": [
-          "email"
-        ]
-      },
       "userroles": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "userroles",
@@ -205,6 +205,39 @@
           "shortName",
           "displayName",
           "scopes"
+        ]
+      },
+      "maildata": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "maildata",
+        "description": "Email data",
+        "properties": {
+          "to": {
+            "description": "Recipient email address",
+            "type": "string"
+          },
+          "from": {
+            "description": "Sender email address",
+            "type": "string"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "text": {
+            "description": "Email text content",
+            "type": "string"
+          },
+          "html": {
+            "description": "Email HTML content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "from",
+          "subject",
+          "text"
         ]
       },
       "routes": {
@@ -303,38 +336,59 @@
           "handlers"
         ]
       },
-      "maildata": {
+      "asset": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "maildata",
-        "description": "Email data",
+        "$anchor": "asset",
+        "description": "Asset metadata",
+        "type": "object",
         "properties": {
-          "to": {
-            "description": "Recipient email address",
-            "type": "string"
+          "description": {
+            "title": "Description",
+            "description": "The asset description",
+            "type": "string",
+            "isSearchable": true
           },
-          "from": {
-            "description": "Sender email address",
-            "type": "string"
+          "title": {
+            "title": "Title",
+            "description": "The asset title",
+            "type": "string",
+            "isSearchable": true
           },
-          "subject": {
-            "description": "Email subject",
-            "type": "string"
-          },
-          "text": {
-            "description": "Email text content",
-            "type": "string"
-          },
-          "html": {
-            "description": "Email HTML content",
-            "type": "string"
+          "url": {
+            "title": "URL",
+            "description": "If using an external asset, this should be the URL to the asset",
+            "type": "string",
+            "format": "uri"
           }
         },
         "required": [
-          "to",
-          "from",
-          "subject",
-          "text"
+          "title",
+          "description"
         ]
+      },
+      "contentassets": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
+          }
+        }
       },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -369,58 +423,89 @@
           }
         }
       },
-      "contentassets": {
+      "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentassets",
-        "description": "Tracks asset IDs referenced by content items",
-        "$merge": {
-          "with": {
-            "properties": {
-              "_assetIds": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "default": [],
-                "_adapt": {
-                  "editorOnly": true
-                },
-                "_backboneForms": {
-                  "showInUi": false
-                }
-              }
-            }
-          }
-        }
-      },
-      "asset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "asset",
-        "description": "Asset metadata",
-        "type": "object",
+        "$anchor": "localpassword",
+        "description": "Local authentication password",
         "properties": {
-          "description": {
-            "title": "Description",
-            "description": "The asset description",
+          "password": {
+            "description": "Password value",
             "type": "string",
-            "isSearchable": true
-          },
-          "title": {
-            "title": "Title",
-            "description": "The asset title",
-            "type": "string",
-            "isSearchable": true
-          },
-          "url": {
-            "title": "URL",
-            "description": "If using an external asset, this should be the URL to the asset",
-            "type": "string",
-            "format": "uri"
+            "password": "password"
           }
         },
         "required": [
-          "title",
-          "description"
+          "password"
+        ]
+      },
+      "localauthuser": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "localauthuser",
+        "description": "Local authentication user",
+        "$merge": {
+          "source": {
+            "$ref": "user"
+          },
+          "with": {
+            "properties": {
+              "isTempLocked": {
+                "description": "Whether the user account has been temporarily locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "isPermLocked": {
+                "description": "Whether the user account has been permanently locked",
+                "type": "boolean",
+                "default": false,
+                "isReadOnly": true
+              },
+              "password": {
+                "description": "Password for the user",
+                "type": "string",
+                "isInternal": true
+              },
+              "failedLoginAttempts": {
+                "description": "The number of failed login attempts",
+                "type": "number",
+                "default": 0
+              },
+              "lastFailedLoginAttempt": {
+                "description": "Timestamp of the last failed login attempt",
+                "type": "string",
+                "format": "date-time",
+                "isDate": true,
+                "isReadOnly": true
+              }
+            },
+            "required": [
+              "password"
+            ]
+          }
+        }
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
         ]
       },
       "log": {
@@ -459,30 +544,6 @@
         },
         "required": [
           "level"
-        ]
-      },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
         ]
       },
       "contentplugin": {
@@ -548,67 +609,6 @@
           "version",
           "isLocalInstall"
         ]
-      },
-      "localpassword": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localpassword",
-        "description": "Local authentication password",
-        "properties": {
-          "password": {
-            "description": "Password value",
-            "type": "string",
-            "password": "password"
-          }
-        },
-        "required": [
-          "password"
-        ]
-      },
-      "localauthuser": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "localauthuser",
-        "description": "Local authentication user",
-        "$merge": {
-          "source": {
-            "$ref": "user"
-          },
-          "with": {
-            "properties": {
-              "isTempLocked": {
-                "description": "Whether the user account has been temporarily locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "isPermLocked": {
-                "description": "Whether the user account has been permanently locked",
-                "type": "boolean",
-                "default": false,
-                "isReadOnly": true
-              },
-              "password": {
-                "description": "Password for the user",
-                "type": "string",
-                "isInternal": true
-              },
-              "failedLoginAttempts": {
-                "description": "The number of failed login attempts",
-                "type": "number",
-                "default": 0
-              },
-              "lastFailedLoginAttempt": {
-                "description": "Timestamp of the last failed login attempt",
-                "type": "string",
-                "format": "date-time",
-                "isDate": true,
-                "isReadOnly": true
-              }
-            },
-            "required": [
-              "password"
-            ]
-          }
-        }
       },
       "adaptbuild": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
