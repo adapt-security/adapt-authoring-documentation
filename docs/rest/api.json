@@ -366,30 +366,6 @@
           "description"
         ]
       },
-      "contentassets": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentassets",
-        "description": "Tracks asset IDs referenced by content items",
-        "$merge": {
-          "with": {
-            "properties": {
-              "_assetIds": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "default": [],
-                "_adapt": {
-                  "editorOnly": true
-                },
-                "_backboneForms": {
-                  "showInUi": false
-                }
-              }
-            }
-          }
-        }
-      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -422,30 +398,6 @@
             ]
           }
         }
-      },
-      "coursethemepreset": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "coursethemepreset",
-        "description": "A reusable collection of theme settings",
-        "type": "object",
-        "properties": {
-          "displayName": {
-            "description": "User-friendly name for the settings",
-            "type": "string"
-          },
-          "parentTheme": {
-            "description": "Name of the theme these settings should be applied to",
-            "type": "string"
-          },
-          "properties": {
-            "description": "The theme settings",
-            "type": "object"
-          }
-        },
-        "required": [
-          "displayName",
-          "parentTheme"
-        ]
       },
       "localpassword": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -507,6 +459,54 @@
             ]
           }
         }
+      },
+      "contentassets": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "coursethemepreset": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "coursethemepreset",
+        "description": "A reusable collection of theme settings",
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "description": "User-friendly name for the settings",
+            "type": "string"
+          },
+          "parentTheme": {
+            "description": "Name of the theme these settings should be applied to",
+            "type": "string"
+          },
+          "properties": {
+            "description": "The theme settings",
+            "type": "object"
+          }
+        },
+        "required": [
+          "displayName",
+          "parentTheme"
+        ]
       },
       "log": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
