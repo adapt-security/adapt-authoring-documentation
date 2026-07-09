@@ -366,6 +366,30 @@
           "description"
         ]
       },
+      "contentassets": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "contentassets",
+        "description": "Tracks asset IDs referenced by content items",
+        "$merge": {
+          "with": {
+            "properties": {
+              "_assetIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [],
+                "_adapt": {
+                  "editorOnly": true
+                },
+                "_backboneForms": {
+                  "showInUi": false
+                }
+              }
+            }
+          }
+        }
+      },
       "authored": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "authored",
@@ -396,30 +420,6 @@
               "createdBy",
               "updatedAt"
             ]
-          }
-        }
-      },
-      "contentassets": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "contentassets",
-        "description": "Tracks asset IDs referenced by content items",
-        "$merge": {
-          "with": {
-            "properties": {
-              "_assetIds": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "default": [],
-                "_adapt": {
-                  "editorOnly": true
-                },
-                "_backboneForms": {
-                  "showInUi": false
-                }
-              }
-            }
           }
         }
       },
@@ -508,44 +508,6 @@
           "parentTheme"
         ]
       },
-      "log": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$anchor": "log",
-        "description": "A system log message",
-        "type": "object",
-        "properties": {
-          "level": {
-            "description": "The priority level of the log message",
-            "type": "string",
-            "enum": [
-              "verbose",
-              "debug",
-              "info",
-              "success",
-              "warn",
-              "error",
-              "fatal"
-            ]
-          },
-          "module": {
-            "description": "Module responsible for creating the log",
-            "type": "string"
-          },
-          "timestamp": {
-            "description": "Time log was created",
-            "type": "string",
-            "format": "date-time",
-            "isDate": true
-          },
-          "data": {
-            "description": "The data to be logged",
-            "type": "array"
-          }
-        },
-        "required": [
-          "level"
-        ]
-      },
       "contentplugin": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$anchor": "contentplugin",
@@ -608,6 +570,44 @@
           "type",
           "version",
           "isLocalInstall"
+        ]
+      },
+      "log": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$anchor": "log",
+        "description": "A system log message",
+        "type": "object",
+        "properties": {
+          "level": {
+            "description": "The priority level of the log message",
+            "type": "string",
+            "enum": [
+              "verbose",
+              "debug",
+              "info",
+              "success",
+              "warn",
+              "error",
+              "fatal"
+            ]
+          },
+          "module": {
+            "description": "Module responsible for creating the log",
+            "type": "string"
+          },
+          "timestamp": {
+            "description": "Time log was created",
+            "type": "string",
+            "format": "date-time",
+            "isDate": true
+          },
+          "data": {
+            "description": "The data to be logged",
+            "type": "array"
+          }
+        },
+        "required": [
+          "level"
         ]
       },
       "adaptbuild": {
